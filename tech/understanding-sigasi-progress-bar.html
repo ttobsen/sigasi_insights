@@ -138,7 +138,22 @@ img.emoji {
 <div id="site-loading" class="three-bounce"><div class="spinner "><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div></div><div id="mobile-menu-wrap" class="menu-is-right">
 <form method="get" class="mobile-search-form" action="http://sigasi.wpengine.com/"><input type="text" placeholder="Enter text to search" name="s" autocomplete="off" /></form>
 <nav id="mobile-menu" class="clearfix">
-<div class="menu-main-container"><ul id="menu-main" class="menu">
+<div class="menu-main_eng-container"><ul id="menu-main_eng" class="menu">
+    <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page   ">
+      <a href="http://www.sigasi.com"><span class="menu-item-text">Home</span></a>
+    </li>
+    <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page   ">
+      <a href="http://www.sigasi.com/about"><span class="menu-item-text">About</span></a>
+    </li>
+    <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page   ">
+      <a href="http://www.sigasi.com/products"><span class="menu-item-text">Products</span></a>
+    </li>
+    <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page   ">
+      <a href="http://www.sigasi.com/contact"><span class="menu-item-text">Contact</span></a>
+    </li>
+    <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page   ">
+      <a href="http://insights.sigasi.com"><span class="menu-item-text">Insights</span></a>
+    </li>
 </ul></div></nav>
 </div>
 
@@ -176,7 +191,7 @@ img.emoji {
 
 <div class="float-menu container">
 <nav id="main-navigation" class="std-menu clearfix">
-<div class="menu-main-container"><ul id="menu-main-1" class="menu">
+<div class="menu-main_eng-container"><ul id="menu-main_eng-1" class="menu">
     <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page sf-std-menu " >
     	<a href="http://www.sigasi.com"><span class="menu-item-text">Home</span></a>
     </li>
@@ -335,8 +350,8 @@ img.emoji {
 
 
         
-        <div class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix">
-        <div class="navbar-collapse collapse">
+        <div> <!-- class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix"> -->
+        <div> <!-- class="navbar-collapse collapse"> -->
           <ul class="nav navbar-nav navbar-left">
             <li class="dropdown">
               <a href="/manual/" class="dropdown-toggle" data-toggle="dropdown">Manual <b class="caret"></b></a>
@@ -433,23 +448,23 @@ img.emoji {
       <div class="col-md-9" role="main">
         <p>In a previous post (<a href="/tech/magic-sigasi-type-time-compiler.html" title="The magic of Sigasi's type-time compiler. Part 1: Models">The magic of Sigasi's type-time compiler. Part 1: Models</a>), I explained about the different Models (internal representations) that Sigasi builds to provide all the exciting Sigasi features. Today, I will explain the different phases of how these models are build. I also added screenshots of the progress view in the different phases. This should help you understand what is going on.</p>
 <h3 id="multiple-pass-builder">Multiple pass builder</h3>
-<p>Sigasi builds the Model by iterating over all your VHDL files in multiple passes. During the <em>first pass</em> Sigasi parses each VHDL file separately. From the parse results Sigasi constructs a <mark>Meta Model</mark>. And from this <mark>Meta Model</mark> Sigasi derives the information that needs to be added to the <mark>Global Index</mark>. During a <em>second pass</em> each file is analyzed in more detail. This results in syntactical and semantic problem markers in your files. In a <em>third pass</em> each file is iterated once more to extract even more information.</p>
+<p>Sigasi builds the Model by iterating over all your VHDL files in multiple passes. During the <em>first pass</em> Sigasi parses each VHDL file separately. From the parse results Sigasi constructs a <em>Meta Model</em>. And from this <em>Meta Model</em> Sigasi derives the information that needs to be added to the <em>Global Index</em>. During a <em>second pass</em> each file is analyzed in more detail. This results in syntactical and semantic problem markers in your files. In a <em>third pass</em> each file is iterated once more to extract even more information.</p>
 <p><strong>Note:</strong> Sigasi uses the <a href="http://www.eclipse.org/articles/Article-Builders/builders.html">Eclipse builder mechanism</a> to build the model. Make sure it is enabled (<strong>Project &gt; Build Automatically</strong>), otherwise the Model will not be updated.</p>
 <h4 id="first-pass-building-the-global-index">First pass: Building the Global Index</h4>
-<p>During the first pass Sigasi parses each file and constructs a <mark>Meta Model</mark>. This Model is queried for globally visible VHDL objects and these are added to the <mark>Global Index</mark>.</p>
+<p>During the first pass Sigasi parses each file and constructs a <em>Meta Model</em>. This Model is queried for globally visible VHDL objects and these are added to the <em>Global Index</em>.</p>
 <p><img alt="Phase 1 : Building the Global Index" src="images/phase1-global-index.png" /></p>
 <h4 id="second-pass-validation">Second pass: Validation</h4>
-<p>During the second pass the <mark>Meta Model</mark> of each file is analyzed in full detail. This is the most computational expensive pass. 
-This pass validates the VHDL syntax and creates problem markers for each problem it encounters. It also resolves all <mark>cross links</mark>, i.e. it checks that all references point to a valid declaration. During this validation the <mark>Global Index</mark> is used to figure out declarations in other files of your project. Often the builder has to load <mark>Meta Models</mark> of other files to find the exact declaration.</p>
+<p>During the second pass the <em>Meta Model</em> of each file is analyzed in full detail. This is the most computational expensive pass. 
+This pass validates the VHDL syntax and creates problem markers for each problem it encounters. It also resolves all <em>cross links</em>, i.e. it checks that all references point to a valid declaration. During this validation the <em>Global Index</em> is used to figure out declarations in other files of your project. Often the builder has to load <em>Meta Models</em> of other files to find the exact declaration.</p>
 <p>The second pass also runs all validation (linting) checks. For example, all port maps are checked for completeness, all case statements are checked, etc. </p>
 <p><img alt="Phase 2 : Validation" src="images/phase2-validation.png" /></p>
 <p><strong>Note:</strong> Open editors can be affected by a build. For example, an open editor could use a constant for of package that is not declared yet. So the editor will show an error marker. When the constant declaration is added in a second editor, the marker in the first editor needs to be updated. This will result in following message in the progress view:</p>
 <p><img alt="Updating editor state" src="images/update_editor_state.png" /></p>
 <h4 id="third-pass">Third pass</h4>
-<p>This phase runs a few so called <mark>builder participants</mark>, that extract more information from the Model for different purposes. One example is <a href="/manual/tools.html#external-compilers" title="Tool Integration">External Compilers</a>.</p>
+<p>This phase runs a few so called <em>builder participants</em>, that extract more information from the Model for different purposes. One example is <a href="/manual/tools.html#external-compilers" title="Tool Integration">External Compilers</a>.</p>
 <p><img alt="Phase 3 : Builder participants" src="images/builder_participants.png" /></p>
 <h3 id="conclusion">Conclusion</h3>
-<p>Only the first time a project is opened, the builder needs to build the entire project. Next the <mark>Global Index</mark> and <mark>Meta Models</mark> are updated incrementally when files are modified. The Models are loaded as needed which keeps the memory footprint low.</p>
+<p>Only the first time a project is opened, the builder needs to build the entire project. Next the <em>Global Index</em> and <em>Meta Models</em> are updated incrementally when files are modified. The Models are loaded as needed which keeps the memory footprint low.</p>
 <p>Sigasi uses some very clever algorithms to build and query all VHDL information about your design. Sigasi is architected to be economical with memory, while being fast enough to give snappy feedback.</p>
 <p>I hope this shed some light on the magic behind Sigasi. You should now be able to understand what is going on, and what the progress messages exactly mean.</p>
 

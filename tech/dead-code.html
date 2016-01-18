@@ -138,7 +138,22 @@ img.emoji {
 <div id="site-loading" class="three-bounce"><div class="spinner "><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div></div><div id="mobile-menu-wrap" class="menu-is-right">
 <form method="get" class="mobile-search-form" action="http://sigasi.wpengine.com/"><input type="text" placeholder="Enter text to search" name="s" autocomplete="off" /></form>
 <nav id="mobile-menu" class="clearfix">
-<div class="menu-main-container"><ul id="menu-main" class="menu">
+<div class="menu-main_eng-container"><ul id="menu-main_eng" class="menu">
+    <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page   ">
+      <a href="http://www.sigasi.com"><span class="menu-item-text">Home</span></a>
+    </li>
+    <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page   ">
+      <a href="http://www.sigasi.com/about"><span class="menu-item-text">About</span></a>
+    </li>
+    <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page   ">
+      <a href="http://www.sigasi.com/products"><span class="menu-item-text">Products</span></a>
+    </li>
+    <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page   ">
+      <a href="http://www.sigasi.com/contact"><span class="menu-item-text">Contact</span></a>
+    </li>
+    <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page   ">
+      <a href="http://insights.sigasi.com"><span class="menu-item-text">Insights</span></a>
+    </li>
 </ul></div></nav>
 </div>
 
@@ -176,7 +191,7 @@ img.emoji {
 
 <div class="float-menu container">
 <nav id="main-navigation" class="std-menu clearfix">
-<div class="menu-main-container"><ul id="menu-main-1" class="menu">
+<div class="menu-main_eng-container"><ul id="menu-main_eng-1" class="menu">
     <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page sf-std-menu " >
     	<a href="http://www.sigasi.com"><span class="menu-item-text">Home</span></a>
     </li>
@@ -335,8 +350,8 @@ img.emoji {
 
 
         
-        <div class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix">
-        <div class="navbar-collapse collapse">
+        <div> <!-- class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix"> -->
+        <div> <!-- class="navbar-collapse collapse"> -->
           <ul class="nav navbar-nav navbar-left">
             <li class="dropdown">
               <a href="/manual/" class="dropdown-toggle" data-toggle="dropdown">Manual <b class="caret"></b></a>
@@ -446,10 +461,10 @@ img.emoji {
 <h4 id="comments">Comments</h4>
 <p>Comments are meant to clarify things. If they are written well, they have their value. Keep useful comments.</p>
 <h4 id="unused-declarations">Unused declarations</h4>
-<p>Declarations of signals, data types, constants or other things that are never used later on have no value. They are confusing to the reader (<mark>Why is this here?</mark>) and should be avoided or removed from your code.</p>
+<p>Declarations of signals, data types, constants or other things that are never used later on have no value. They are confusing to the reader (<em>Why is this here?</em>) and should be avoided or removed from your code.</p>
 <h4 id="superfluous-others-in-case-statements">Superfluous "others" in case statements</h4>
-<p>In a state machine with enumerated states you usually cover all states explicitly in a <mark>case</mark> statement. If you do this, there is <a href="/tech/vhdl-case-statements-can-do-without-others.html">very little reason to add a <code>when others</code> clause</a>.
-The only reason for writing <code>when others</code> is your synthesis tool uses this information for recovering from an illegal state <mark>and</mark> you need this recovery for some reason. Ask yourself these questions: Does my design need to recover from an illegal state (usually military, safety-critical or radiation sensitive application)? Does my synthesis tool use the "others" clause for recovering? (Some do, some don't – read the documentation and/or inspect the synthesis results!). If you find yourself in a situation where you want to use a <code>when others</code> clause, make sure that there is recovery code there.</p>
+<p>In a state machine with enumerated states you usually cover all states explicitly in a <em>case</em> statement. If you do this, there is <a href="/tech/vhdl-case-statements-can-do-without-others.html">very little reason to add a <code>when others</code> clause</a>.
+The only reason for writing <code>when others</code> is your synthesis tool uses this information for recovering from an illegal state <em>and</em> you need this recovery for some reason. Ask yourself these questions: Does my design need to recover from an illegal state (usually military, safety-critical or radiation sensitive application)? Does my synthesis tool use the "others" clause for recovering? (Some do, some don't – read the documentation and/or inspect the synthesis results!). If you find yourself in a situation where you want to use a <code>when others</code> clause, make sure that there is recovery code there.</p>
 <h4 id="assertions">Assertions</h4>
 <p>Assertions are dead code if they are placed in unreachable places. This is actually a good thing. You are telling the reader that you expect that a certain condition will never occur. Even if the simulator or the synthesis tool never do anything with this code, it can be a good thing to have it there. In the following example, let's say there are six possible colors, but you expect the color of the pedestrian traffic light to be only red or green.</p>
 <div class="codehilite"><pre><span class="k">case</span> <span class="n">color</span> <span class="k">is</span>

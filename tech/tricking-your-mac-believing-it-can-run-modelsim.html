@@ -138,7 +138,22 @@ img.emoji {
 <div id="site-loading" class="three-bounce"><div class="spinner "><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div></div><div id="mobile-menu-wrap" class="menu-is-right">
 <form method="get" class="mobile-search-form" action="http://sigasi.wpengine.com/"><input type="text" placeholder="Enter text to search" name="s" autocomplete="off" /></form>
 <nav id="mobile-menu" class="clearfix">
-<div class="menu-main-container"><ul id="menu-main" class="menu">
+<div class="menu-main_eng-container"><ul id="menu-main_eng" class="menu">
+    <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page   ">
+      <a href="http://www.sigasi.com"><span class="menu-item-text">Home</span></a>
+    </li>
+    <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page   ">
+      <a href="http://www.sigasi.com/about"><span class="menu-item-text">About</span></a>
+    </li>
+    <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page   ">
+      <a href="http://www.sigasi.com/products"><span class="menu-item-text">Products</span></a>
+    </li>
+    <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page   ">
+      <a href="http://www.sigasi.com/contact"><span class="menu-item-text">Contact</span></a>
+    </li>
+    <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page   ">
+      <a href="http://insights.sigasi.com"><span class="menu-item-text">Insights</span></a>
+    </li>
 </ul></div></nav>
 </div>
 
@@ -176,7 +191,7 @@ img.emoji {
 
 <div class="float-menu container">
 <nav id="main-navigation" class="std-menu clearfix">
-<div class="menu-main-container"><ul id="menu-main-1" class="menu">
+<div class="menu-main_eng-container"><ul id="menu-main_eng-1" class="menu">
     <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page sf-std-menu " >
     	<a href="http://www.sigasi.com"><span class="menu-item-text">Home</span></a>
     </li>
@@ -335,8 +350,8 @@ img.emoji {
 
 
         
-        <div class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix">
-        <div class="navbar-collapse collapse">
+        <div> <!-- class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix"> -->
+        <div> <!-- class="navbar-collapse collapse"> -->
           <ul class="nav navbar-nav navbar-left">
             <li class="dropdown">
               <a href="/manual/" class="dropdown-toggle" data-toggle="dropdown">Manual <b class="caret"></b></a>
@@ -432,9 +447,9 @@ img.emoji {
     <div class="content">
       <div class="col-md-9" role="main">
         <p><strong>Disclaimer 1:</strong> This is in no way a crack; we're not messing with ModelSim! You'll need a legal copy and a valid license, which you can get from your Mentor Graphics sales rep, or (a limited version, free of charge) from the <a href="http://www.altera.com/products/software/quartus-ii/web-edition/qts-we-index.html">Altera website</a>.</p>
-<p><strong>Disclaimer 2:</strong> Consider this semi-advanced stuff. I'm sharing this idea because I think it will be useful to other people, it is <mark>not</mark> a supported Sigasi feature.</p>
+<p><strong>Disclaimer 2:</strong> Consider this semi-advanced stuff. I'm sharing this idea because I think it will be useful to other people, it is <em>not</em> a supported Sigasi feature.</p>
 <p><strong>Disclaimer 3:</strong> I hate disclaimers!</p>
-<p>We will need a computer with SSH acces that has a working version of ModelSim installed. I suggest you use a <mark>Linux</mark> computer because Mac OSX and Linux are both Unix-like systems. If you use a Windows compile server, you may run in to troubles with the path format (backslashes on Windows!). You can either use a remote computer, or set up a virtual machine (using something like <a href="http://www.parallels.com/products/desktop/">Parallels</a> or <a href="http://www.virtualbox.org/">VirtualBox</a> on your Mac.</p>
+<p>We will need a computer with SSH acces that has a working version of ModelSim installed. I suggest you use a <em>Linux</em> computer because Mac OSX and Linux are both Unix-like systems. If you use a Windows compile server, you may run in to troubles with the path format (backslashes on Windows!). You can either use a remote computer, or set up a virtual machine (using something like <a href="http://www.parallels.com/products/desktop/">Parallels</a> or <a href="http://www.virtualbox.org/">VirtualBox</a> on your Mac.</p>
 <p>You will need the following info:</p>
 <ul>
 <li>the host name (or IP address) of your build server</li>
@@ -495,7 +510,7 @@ ssh <span class="si">${</span><span class="nv">REMOTE_USER</span><span class="si
 
 <p>Now all you need to do, is tell Sigasi (or whatever tool you are using) to use <code>~/fakeModelSim</code> as path for the ModelSim executables.</p>
 <h3 id="other-tools-and-feedback">Other tools and Feedback</h3>
-<p>All of this will work just as well with <mark>Xilinx ISim</mark>, or with the <mark>Altera Quartus II</mark>, or for a million other EDA and non-EDA tools. You can extend the script to copy the compiled files back to your local computer, or you can use a shared folder instead of <code>rsync</code>. Feel free to improve and share.</p>
+<p>All of this will work just as well with <em>Xilinx ISim</em>, or with the <em>Altera Quartus II</em>, or for a million other EDA and non-EDA tools. You can extend the script to copy the compiled files back to your local computer, or you can use a shared folder instead of <code>rsync</code>. Feel free to improve and share.</p>
 <h3 id="setting-up-sigasi">Setting up Sigasi</h3>
 <p>If you want to let Sigasi work with Aldec RivieraPro or ModelSim, you can set up <a href="/manual/tools.html#save-time-compilation" title="Tool Integration">save-time-compilation</a> or you can generate a Makefile.</p>
 <p>Do you like this script? Do you like you Mac? Do you have a better way of designing hardware with your Mac? Talk to me in the comments section, below!</p>

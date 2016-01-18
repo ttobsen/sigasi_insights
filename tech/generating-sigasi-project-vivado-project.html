@@ -138,7 +138,22 @@ img.emoji {
 <div id="site-loading" class="three-bounce"><div class="spinner "><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div></div><div id="mobile-menu-wrap" class="menu-is-right">
 <form method="get" class="mobile-search-form" action="http://sigasi.wpengine.com/"><input type="text" placeholder="Enter text to search" name="s" autocomplete="off" /></form>
 <nav id="mobile-menu" class="clearfix">
-<div class="menu-main-container"><ul id="menu-main" class="menu">
+<div class="menu-main_eng-container"><ul id="menu-main_eng" class="menu">
+    <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page   ">
+      <a href="http://www.sigasi.com"><span class="menu-item-text">Home</span></a>
+    </li>
+    <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page   ">
+      <a href="http://www.sigasi.com/about"><span class="menu-item-text">About</span></a>
+    </li>
+    <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page   ">
+      <a href="http://www.sigasi.com/products"><span class="menu-item-text">Products</span></a>
+    </li>
+    <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page   ">
+      <a href="http://www.sigasi.com/contact"><span class="menu-item-text">Contact</span></a>
+    </li>
+    <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page   ">
+      <a href="http://insights.sigasi.com"><span class="menu-item-text">Insights</span></a>
+    </li>
 </ul></div></nav>
 </div>
 
@@ -176,7 +191,7 @@ img.emoji {
 
 <div class="float-menu container">
 <nav id="main-navigation" class="std-menu clearfix">
-<div class="menu-main-container"><ul id="menu-main-1" class="menu">
+<div class="menu-main_eng-container"><ul id="menu-main_eng-1" class="menu">
     <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page sf-std-menu " >
     	<a href="http://www.sigasi.com"><span class="menu-item-text">Home</span></a>
     </li>
@@ -335,8 +350,8 @@ img.emoji {
 
 
         
-        <div class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix">
-        <div class="navbar-collapse collapse">
+        <div> <!-- class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix"> -->
+        <div> <!-- class="navbar-collapse collapse"> -->
           <ul class="nav navbar-nav navbar-left">
             <li class="dropdown">
               <a href="/manual/" class="dropdown-toggle" data-toggle="dropdown">Manual <b class="caret"></b></a>
@@ -433,7 +448,7 @@ img.emoji {
     <div class="content">
       <div class="col-md-9" role="main">
         <p>I have blogged before on how to import Xilinx ISE projects in Sigasi before (<a href="/tech/importing-xilinx-ise-project-sigasi.html" title="Importing a Xilinx ISE project in Sigasi">Importing a Xilinx ISE project in Sigasi</a>). In this blog post I show how you can import an existing Vivado project into Sigasi.</p>
-<p>If you have a Vivado project which uses one or more IP cores, the project becomes complex quickly. Vivado generates different sources for <mark>Simulation</mark> and <mark>Synthesis</mark>. And although VHDL has elegant support for this –entities can have multiple architectures–, Vivado generates duplicate entities instead. This forces you to switch between two complete different views on your project. If you have multiple IP cores this is really annoying.</p>
+<p>If you have a Vivado project which uses one or more IP cores, the project becomes complex quickly. Vivado generates different sources for <em>Simulation</em> and <em>Synthesis</em>. And although VHDL has elegant support for this –entities can have multiple architectures–, Vivado generates duplicate entities instead. This forces you to switch between two complete different views on your project. If you have multiple IP cores this is really annoying.</p>
 <p>To make it easier to use Sigasi in combination with Vivado projects, we added a Vivado tcl script to our <a href="https://github.com/sigasi/SigasiProjectCreator">SigasiProjectCreator Github project</a>. This Vivado <a href="https://github.com/sigasi/SigasiProjectCreator/blob/master/convertVivadoProjectToCsv.tcl">tcl script</a> creates a list of all HDL source files in your Vivado project and writes this list together with the HDL library name to a CSV-file. This CSV-file can be converted to a Sigasi project with the existing <a href="https://github.com/sigasi/SigasiProjectCreator/blob/master/convertCsvFileToTree.py">convertCsvFileToTree.py</a> script:</p>
 <h2 id="how-to-generate-a-sigasi-project-from-a-vivado-project">How to generate a Sigasi project from a Vivado project?</h2>
 <h3 id="1-extract-a-list-of-source-files-from-your-vivado-project-with-tcl">1. Extract a list of source files from your Vivado project with TCL:</h3>
@@ -441,7 +456,7 @@ img.emoji {
 </pre></div>
 
 
-<p>This TCL scripts creates a file <code>vivado_files.csv</code> which contains a list of VHDL and Verilog source files and their library information. When you inspect the source of <a href="https://github.com/sigasi/SigasiProjectCreator/blob/master/convertVivadoProjectToCsv.tcl">this TCL script</a>, you will see that we filter for <mark>Simulation</mark> source files only. You can switch to synthesis by replacing <code>USED_IN_SIMULATION</code> with <code>USED_IN_SYNTHESIS</code>.</p>
+<p>This TCL scripts creates a file <code>vivado_files.csv</code> which contains a list of VHDL and Verilog source files and their library information. When you inspect the source of <a href="https://github.com/sigasi/SigasiProjectCreator/blob/master/convertVivadoProjectToCsv.tcl">this TCL script</a>, you will see that we filter for <em>Simulation</em> source files only. You can switch to synthesis by replacing <code>USED_IN_SIMULATION</code> with <code>USED_IN_SYNTHESIS</code>.</p>
 <h4 id="2-generate-the-sigasi-project-files-from-the-csv-files">2. Generate the Sigasi project files from the csv-files</h4>
 <div class="codehilite"><pre>~/git/SigasiProjectCreator/convertCsvFileToTree.py project_1 vivado_files.csv
 </pre></div>
@@ -450,7 +465,7 @@ img.emoji {
 <p>This scripts generates the <code>.project</code> and <code>.library_mapping.xml</code> files that define the Sigasi project.</p>
 <h2 id="notes">Notes</h2>
 <p>When you make changes to your Vivado project, you need to re-run this script. Take care that you also regenerate the VHDL and Verilog sources of your IP cores when you make changes. Vivado does this lazily.</p>
-<p>Note that Sigasi cannot decrypt the <strong>encrypted</strong> Xilinx IP cores. For some IP cores, even the interface (for example, the entity declaration) is encrypted. Since we do not have permission to decrypt this, you may see some <mark>unknown declaration errors</mark> in your designs.</p>
+<p>Note that Sigasi cannot decrypt the <strong>encrypted</strong> Xilinx IP cores. For some IP cores, even the interface (for example, the entity declaration) is encrypted. Since we do not have permission to decrypt this, you may see some <em>unknown declaration errors</em> in your designs.</p>
 
       </div>
     </div>

@@ -138,7 +138,22 @@ img.emoji {
 <div id="site-loading" class="three-bounce"><div class="spinner "><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div></div><div id="mobile-menu-wrap" class="menu-is-right">
 <form method="get" class="mobile-search-form" action="http://sigasi.wpengine.com/"><input type="text" placeholder="Enter text to search" name="s" autocomplete="off" /></form>
 <nav id="mobile-menu" class="clearfix">
-<div class="menu-main-container"><ul id="menu-main" class="menu">
+<div class="menu-main_eng-container"><ul id="menu-main_eng" class="menu">
+    <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page   ">
+      <a href="http://www.sigasi.com"><span class="menu-item-text">Home</span></a>
+    </li>
+    <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page   ">
+      <a href="http://www.sigasi.com/about"><span class="menu-item-text">About</span></a>
+    </li>
+    <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page   ">
+      <a href="http://www.sigasi.com/products"><span class="menu-item-text">Products</span></a>
+    </li>
+    <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page   ">
+      <a href="http://www.sigasi.com/contact"><span class="menu-item-text">Contact</span></a>
+    </li>
+    <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page   ">
+      <a href="http://insights.sigasi.com"><span class="menu-item-text">Insights</span></a>
+    </li>
 </ul></div></nav>
 </div>
 
@@ -176,7 +191,7 @@ img.emoji {
 
 <div class="float-menu container">
 <nav id="main-navigation" class="std-menu clearfix">
-<div class="menu-main-container"><ul id="menu-main-1" class="menu">
+<div class="menu-main_eng-container"><ul id="menu-main_eng-1" class="menu">
     <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page sf-std-menu " >
     	<a href="http://www.sigasi.com"><span class="menu-item-text">Home</span></a>
     </li>
@@ -335,8 +350,8 @@ img.emoji {
 
 
         
-        <div class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix">
-        <div class="navbar-collapse collapse">
+        <div> <!-- class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix"> -->
+        <div> <!-- class="navbar-collapse collapse"> -->
           <ul class="nav navbar-nav navbar-left">
             <li class="dropdown">
               <a href="/manual/" class="dropdown-toggle" data-toggle="dropdown">Manual <b class="caret"></b></a>
@@ -434,7 +449,7 @@ img.emoji {
       <div class="col-md-9" role="main">
         <p>It is useful to analyze code that is only partly finished, code that still has errors in it. Analyzing broken code helps people understand, improve and complete the code. In order to perform such an analysis, you need a parser that recovers after it encounters an error. In the world of hardware design, hardly any recovering parsers exist and engineers are left out in the cold. All but a few EDA tools fail miserably at parsing incorrect VHDL code.</p>
 <h3 id="your-code-is-almost-never-correct">Your code is (almost) never correct</h3>
-<p>When you write VHDL code, it is broken 99% of the time. While you are adding or removing code, while you are typing new statements your code is not syntactically correct. Only when you save and press compile, your VHDL code is correct (or so you hope). This means that traditional parsers are useless for your code <mark>most</mark> of the time.</p>
+<p>When you write VHDL code, it is broken 99% of the time. While you are adding or removing code, while you are typing new statements your code is not syntactically correct. Only when you save and press compile, your VHDL code is correct (or so you hope). This means that traditional parsers are useless for your code <em>most</em> of the time.</p>
 <h3 id="why-compile-broken-vhdl-code">Why compile broken VHDL code?</h3>
 <p>There are two use cases why you would want to compile incomplete or broken code. First (as I've just mentioned), you can compile code while you are still working on it. This is useful because it allows you to use a wide range of features without having to bring your code to a "correct" state. You can navigate to declaration, hover to see extra information, have semantic highlighting, autocomplete record fields, see a file outline and chip hierarchy and much more. </p>
 <p>Second, if you dig up an old project (for bug fixing or for reusing VHDL code), chances are that you can't get it to compile right away. Even if your team always stores projects with perfect build scripts, you may inherit a project from another team that does not adhere to the same standards. </p>

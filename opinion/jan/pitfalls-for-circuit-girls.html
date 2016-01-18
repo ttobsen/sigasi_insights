@@ -138,7 +138,22 @@ img.emoji {
 <div id="site-loading" class="three-bounce"><div class="spinner "><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div></div><div id="mobile-menu-wrap" class="menu-is-right">
 <form method="get" class="mobile-search-form" action="http://sigasi.wpengine.com/"><input type="text" placeholder="Enter text to search" name="s" autocomplete="off" /></form>
 <nav id="mobile-menu" class="clearfix">
-<div class="menu-main-container"><ul id="menu-main" class="menu">
+<div class="menu-main_eng-container"><ul id="menu-main_eng" class="menu">
+    <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page   ">
+      <a href="http://www.sigasi.com"><span class="menu-item-text">Home</span></a>
+    </li>
+    <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page   ">
+      <a href="http://www.sigasi.com/about"><span class="menu-item-text">About</span></a>
+    </li>
+    <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page   ">
+      <a href="http://www.sigasi.com/products"><span class="menu-item-text">Products</span></a>
+    </li>
+    <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page   ">
+      <a href="http://www.sigasi.com/contact"><span class="menu-item-text">Contact</span></a>
+    </li>
+    <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page   ">
+      <a href="http://insights.sigasi.com"><span class="menu-item-text">Insights</span></a>
+    </li>
 </ul></div></nav>
 </div>
 
@@ -176,7 +191,7 @@ img.emoji {
 
 <div class="float-menu container">
 <nav id="main-navigation" class="std-menu clearfix">
-<div class="menu-main-container"><ul id="menu-main-1" class="menu">
+<div class="menu-main_eng-container"><ul id="menu-main_eng-1" class="menu">
     <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page sf-std-menu " >
     	<a href="http://www.sigasi.com"><span class="menu-item-text">Home</span></a>
     </li>
@@ -335,8 +350,8 @@ img.emoji {
 
 
         
-        <div class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix">
-        <div class="navbar-collapse collapse">
+        <div> <!-- class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix"> -->
+        <div> <!-- class="navbar-collapse collapse"> -->
           <ul class="nav navbar-nav navbar-left">
             <li class="dropdown">
               <a href="/manual/" class="dropdown-toggle" data-toggle="dropdown">Manual <b class="caret"></b></a>
@@ -487,7 +502,7 @@ img.emoji {
 <p><strong>One problem with nondeterminism, as with bugs in general, is that it is impossible to prove its absence by simulation.</strong> To  complicate matters further, your simulator may hide  the nondeterminism in the original example. The reason is that some simulators, including the original Verilog simulator and its descendants from Cadence, handle ports in a special way. However, don’t be misled by this. The Verilog standard scheduling algorithm has no special provisions for ports . Other simulators, such as Synopsys VCS,  have exploited this characteristic by implementing “optimizations” that will reveal the nondeterminism.</p>
 <p>As you may recall from previous posts, the problem with the flip-flop code is the use of a blocking assignment <code>=</code> for synchronous communication.  This coding error is made systematically throughout the whole blue book. The fix would be to use non-blocking assignments <code>&lt;=</code>  in such cases instead.</p>
 <p>According to Jeri Ellsworth, the blue book is very popular. This suggests that many companies follow its coding style.  As a result, there may be  a lot of fragile Verilog legacy code out there: code that has “always worked” but that suddenly will stop working with a new version or brand of the Verilog simulator.</p>
-<p>I am puzzled by the fact that the blue book was never corrected. The author certainly was aware of non-blocking assignments. In some examples he uses them for their parallel semantics in a single thread of code. Perhaps he was not aware of their main purpose, but others could have told him. According to the foreword, <mark>"[the book’s] accuracy has been verified by leading industry experts"</mark>.  Perhaps the issue was not yet clear to them in the first edition of 1996. However, my  copy of the book is the ninth printing from July 2001.  It seems there was ample expertise and time available for corrections, but for some reason they were not made. I have <a href="http://stackoverflow.com/questions/4914074/have-the-errors-in-hdl-chip-design-by-douglas-smith-ever-been-corrected">no indication</a> of later editions that may have fixed the problem.</p>
+<p>I am puzzled by the fact that the blue book was never corrected. The author certainly was aware of non-blocking assignments. In some examples he uses them for their parallel semantics in a single thread of code. Perhaps he was not aware of their main purpose, but others could have told him. According to the foreword, <em>"[the book’s] accuracy has been verified by leading industry experts"</em>.  Perhaps the issue was not yet clear to them in the first edition of 1996. However, my  copy of the book is the ninth printing from July 2001.  It seems there was ample expertise and time available for corrections, but for some reason they were not made. I have <a href="http://stackoverflow.com/questions/4914074/have-the-errors-in-hdl-chip-design-by-douglas-smith-ever-been-corrected">no indication</a> of later editions that may have fixed the problem.</p>
 <h3 id="how-to-fix-it">How to fix it</h3>
 <p>One factor may be that the required corrections are not trivial. We certainly don’t want to substitute all blocking assignments by non-blocking assignments, as their semantics are completely different. Only assignments used for communication  should be considered. However, we don’t want to subsitute all of those either. For combinatorial logic, there is no issue with nondeterminism, and Verilog designers typically prefer blocking assignments in this case. In summary, we only want to substitute assignments used for communication and  controlled by a clock edge.</p>
 <p>What I have just described is a typical example of a <em>refactoring</em>. By definition,  a refactoring is a code transformation intended to improve the code while keeping its intended behavior intact. As can be seen from this example,  interesting refactorings are often non-trivial. No matter how desirable, manual refactorings are often avoided because there is a significant risk to introduce new errors in the process.</p>
