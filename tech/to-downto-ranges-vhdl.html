@@ -350,8 +350,8 @@ img.emoji {
 
 
         
-        <div> <!-- class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix"> -->
-        <div> <!-- class="navbar-collapse collapse"> -->
+        <div class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix">
+        <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-left">
             <li class="dropdown">
               <a href="/manual/" class="dropdown-toggle" data-toggle="dropdown">Manual <b class="caret"></b></a>
@@ -500,7 +500,7 @@ A typical examples is  <code>std_ulogic_vector</code>:</p>
 </pre></div>
 
 
-<p>This defines <code>std_ulogic_vector</code> as an array type with indexes of type natural. The bounds can be specified via <em>object</em> creation or via a <em>subtype</em>.</p>
+<p>This defines <code>std_ulogic_vector</code> as an array type with indexes of type natural. The bounds can be specified via <mark>object</mark> creation or via a <mark>subtype</mark>.</p>
 <div class="codehilite"><pre><span class="k">subtype</span> <span class="n">myarray</span> <span class="k">is</span> <span class="kt">std_ulogic_vector</span><span class="p">(</span><span class="mi">7</span> <span class="k">downto</span> <span class="mi">0</span><span class="p">);</span>
 <span class="k">constant</span> <span class="n">myconst</span> <span class="o">:</span> <span class="kt">std_ulogic_vector</span><span class="p">(</span><span class="mi">7</span> <span class="k">downto</span> <span class="mi">0</span><span class="p">)</span> <span class="o">:=</span> <span class="p">(</span><span class="k">others</span> <span class="o">=&gt;</span> <span class="sc">&#39;0&#39;</span><span class="p">);</span>
 </pre></div>

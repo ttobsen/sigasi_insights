@@ -350,8 +350,8 @@ img.emoji {
 
 
         
-        <div> <!-- class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix"> -->
-        <div> <!-- class="navbar-collapse collapse"> -->
+        <div class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix">
+        <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-left">
             <li class="dropdown">
               <a href="/manual/" class="dropdown-toggle" data-toggle="dropdown">Manual <b class="caret"></b></a>
@@ -448,12 +448,12 @@ img.emoji {
 
     <div class="content">
       <div class="col-md-9" role="main">
-        <p>Sigasi allows you to split your design in multiple projects (<a href="/tech/one-ip-block-project.html" title="One IP block per project">One IP block per project</a>). This is an efficient way to deal with with big designs. Moreover, it is the <em>recommended</em> way if you work with reuse libraries between different designs.</p>
+        <p>Sigasi allows you to split your design in multiple projects (<a href="/tech/one-ip-block-project.html" title="One IP block per project">One IP block per project</a>). This is an efficient way to deal with with big designs. Moreover, it is the <mark>recommended</mark> way if you work with reuse libraries between different designs.</p>
 <p>However, in its current form (<a href="/releasenotes/sigasi-2.15.html" title="Sigasi 2.15">Sigasi 2.15</a>), this does not work together well with the <a href="/manual/tools.html#external-compilers" title="Tool Integration">External Compilers</a>.</p>
 <p>In the current approach Sigasi calls the external compiler for each file in the project itself and also for each file of other projects that the current project depends on.  So if <code>Project2</code> depends on <code>Project1</code>, the files of <code>Project1</code> will be compiled twice by the external compiler. The deeper your dependencies are nested, the worse this problem becomes.</p>
 <p><img alt="Sigasi Project Dependencies and vcom: current approach" src="images/now_a.png" /></p>
 <p>The current approach also has problems keeping track on which files needs to be (incrementally) recompiled in which project, when files are changed.</p>
-<p><em>So for the new Sigasi release we are looking for a better way to use external compilers on projects with dependencies. I would like to hear your feedback on the proposed improvement below</em></p>
+<p><mark>So for the new Sigasi release we are looking for a better way to use external compilers on projects with dependencies. I would like to hear your feedback on the proposed improvement below</mark></p>
 <h3 id="vmap-to-the-rescue"><code>VMAP</code> to the rescue</h3>
 <p>External compilers offer more tools than just the <code>vcom</code> compiler. They also offer a <code>vmap</code> command that can be used to define the mapping between a VHDL library and a directory with the compilation results. <code>vmap</code> allows to directly refer to the compilation results of another project. This removes the need to recompile files from required projects in dependent projects. As a result each file is compiled only once, which greatly reduces the compilation time.</p>
 <p><img alt="Sigasi Project Dependencies and vcom: proposed vmap approach" src="images/planned_a.png" /></p>

@@ -350,8 +350,8 @@ img.emoji {
 
 
         
-        <div> <!-- class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix"> -->
-        <div> <!-- class="navbar-collapse collapse"> -->
+        <div class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix">
+        <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-left">
             <li class="dropdown">
               <a href="/manual/" class="dropdown-toggle" data-toggle="dropdown">Manual <b class="caret"></b></a>
@@ -462,7 +462,7 @@ c:\projectdir2\com\sigasi\example\HelloWorld.java
 </pre></div>
 
 
-<p>The only thing a Java tool needs to know to process this aggregated project, is the root directories of each subproject. In this case <code>c:\projectdir1</code> and <code>c:\projectdir1</code>. This way, you do not have to list which files should be included or excluded in your build. The convention is simple: <em>all</em> files will be compiled.</p>
+<p>The only thing a Java tool needs to know to process this aggregated project, is the root directories of each subproject. In this case <code>c:\projectdir1</code> and <code>c:\projectdir1</code>. This way, you do not have to list which files should be included or excluded in your build. The convention is simple: <mark>all</mark> files will be compiled.</p>
 <p>Note that package names start with internet domain names, in inverse order (here: <code>sigasi.com</code>). This avoids name clashes, since each organization can create its own package structure within its own domain.</p>
 <h4 id="improvement-source-and-binary-dirs">Improvement: source and binary dirs</h4>
 <p>When compiling the previous examples with a standard Java tool, the binaries (class files, in Java-speak) will be in the same directory as the source files: <code>c:\projectdir1\com\sigasi\reusable\HelloUtils.java</code></p>

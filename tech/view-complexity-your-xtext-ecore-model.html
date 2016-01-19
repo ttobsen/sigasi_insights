@@ -350,8 +350,8 @@ img.emoji {
 
 
         
-        <div> <!-- class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix"> -->
-        <div> <!-- class="navbar-collapse collapse"> -->
+        <div class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix">
+        <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-left">
             <li class="dropdown">
               <a href="/manual/" class="dropdown-toggle" data-toggle="dropdown">Manual <b class="caret"></b></a>
@@ -457,19 +457,19 @@ R2: a=A | b=B | c=C;
 </pre></div>
 
 
-<p>However, the resulting number of objects, once a resource is actually parsed, is quite different.  For example, suppose we have an input string that can be parsed by grammar rule <code>A</code>.  If we present that string as input to rule <code>R1</code> it will result in the production of <em>one</em> EMF object of <code>EClass A</code>.  Rule <code>R2</code> will produce a little tree containing an EMF object of <code>EClass R2</code> with three fields, <code>a</code>, <code>b</code> and <code>c</code>.  Fields <code>b</code> and <code>c</code> will be <code>null</code> while field <code>a</code> will point to an object of <code>EClass A</code>.  </p>
+<p>However, the resulting number of objects, once a resource is actually parsed, is quite different.  For example, suppose we have an input string that can be parsed by grammar rule <code>A</code>.  If we present that string as input to rule <code>R1</code> it will result in the production of <mark>one</mark> EMF object of <code>EClass A</code>.  Rule <code>R2</code> will produce a little tree containing an EMF object of <code>EClass R2</code> with three fields, <code>a</code>, <code>b</code> and <code>c</code>.  Fields <code>b</code> and <code>c</code> will be <code>null</code> while field <code>a</code> will point to an object of <code>EClass A</code>.  </p>
 <p>Why would you care?  "It works!  Doesn't it?".  Indeed it does.  Nevertheless, keeping your ecore model in check can be very beneficial to the overall performance of your application!  Having a messy ecore model may result in EMF classes with many more fields than you would actually need.  That will make things somewhat slower and more memory hungry.  Not to mention that the semantics of those classes becomes unclear.  More importantly, having parser rules that generate much more objects than you need will definitely slow things down noticeably and consume a lot more memory.  Not a good thing. </p>
 <p>In order to avoid such mishaps in the future we need to improve the visibility of the generated ecore model and the resulting resources.  Then, at least, we will be aware of the problem and can start thinking about a fix.  One way to get a better view on things is to use the "Sample Reflective Ecore Model Editor".  You get at it from <strong>project explorer &gt; open with &gt; ...</strong>.  That's a great tool to inspect your model but it does not give you the overview you need to see how "big" your model is. </p>
 <p>So I present to you <a href="https://github.com/mark-christiaens/EMF-Statistics-View">a few classes</a> I've slapped together to help you keep an eye on things.  A picture says more than a thousand words:</p>
 <p><img alt="" src="images/emf_stats.png" /></p>
 <p><a href="https://github.com/mark-christiaens/EMF-Statistics-View">These classes, available at GitHub,</a> implement a little "EMF Stats" view that shows statistics for the active (Xtext) editor.  The view shows three things:</p>
 <ol>
-<li><em>Class name</em>: The name of the <code>EClass</code>,</li>
-<li><em>Instance count</em>: The number of objects of this <code>EClass</code>,</li>
-<li><em>Feature count</em>: The number of features of the <code>EClass</code>,</li>
-<li><em>Feature load</em>: The product of the <em>instance</em> and the <em>feature count</em>.</li>
+<li><mark>Class name</mark>: The name of the <code>EClass</code>,</li>
+<li><mark>Instance count</mark>: The number of objects of this <code>EClass</code>,</li>
+<li><mark>Feature count</mark>: The number of features of the <code>EClass</code>,</li>
+<li><mark>Feature load</mark>: The product of the <mark>instance</mark> and the <mark>feature count</mark>.</li>
 </ol>
-<p>The most interesting statistic is the <em>instance count</em>.  Optimizing my grammar, I was able to reduce the total instance count by 50%.  The <em>feature count</em> tells you which <code>EClass</code>es are "fat" i.e., contain a lot of fields.  I originally had introduced many inefficiencies in my grammar that caused <code>EClass</code>es to contain features that where not relevant.  By cleaning up, I reduced the total number of features by at least another 50%.  The impact was not as big as the <em>feature count</em> but still noticeable.  Finally, the <em>feature load</em> tells you which <code>EClass</code>es carry the most weight dynamically.  You can focus primarily on those with a high <em>feature load</em> and ignore the infrequently used ones.</p>
+<p>The most interesting statistic is the <mark>instance count</mark>.  Optimizing my grammar, I was able to reduce the total instance count by 50%.  The <mark>feature count</mark> tells you which <code>EClass</code>es are "fat" i.e., contain a lot of fields.  I originally had introduced many inefficiencies in my grammar that caused <code>EClass</code>es to contain features that where not relevant.  By cleaning up, I reduced the total number of features by at least another 50%.  The impact was not as big as the <mark>feature count</mark> but still noticeable.  Finally, the <mark>feature load</mark> tells you which <code>EClass</code>es carry the most weight dynamically.  You can focus primarily on those with a high <mark>feature load</mark> and ignore the infrequently used ones.</p>
 <p>To finish, just a quick note about the supplied classes.  It's a standard view that needs to be enabled in your UI <code>plugin.xml</code>:</p>
 <div class="codehilite"><pre><span class="nt">&lt;extension</span>
       <span class="na">point=</span><span class="s">&quot;org.eclipse.ui.views&quot;</span><span class="nt">&gt;</span>

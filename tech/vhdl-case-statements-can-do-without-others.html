@@ -350,8 +350,8 @@ img.emoji {
 
 
         
-        <div> <!-- class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix"> -->
-        <div> <!-- class="navbar-collapse collapse"> -->
+        <div class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix">
+        <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-left">
             <li class="dropdown">
               <a href="/manual/" class="dropdown-toggle" data-toggle="dropdown">Manual <b class="caret"></b></a>
@@ -449,7 +449,7 @@ img.emoji {
     <div class="content">
       <div class="col-md-9" role="main">
         <p>I was talking to some engineering students the other day, as they were doing a VHDL lab. I noticed a VHDL case statement for state machine with named states (enumerated data type). All states were handled in their VHDL case statement, and still they put an <code>others</code> section in their code. I had a hard time explaining that this clause was useless. The students mumbled something about their professor eating them alive if they'd forget the <code>others</code> and problems with uninitialized stated and high-impedance state. As you might know, these concepts are related to the <code>std_ulogic</code> and <code>std_logic</code> type, but not to enumerated types. </p>
-<p>The VHDL language will force you to cover all cases. If you do not account for all cases, you are required to write a fallback case (<code>when others</code>), and that is what usually happens if you use <code>std_logic</code> types, because you don't want to enumerate all the meta-values. You <em>need</em> <code>others</code>, or your compiler will mark an error. In the case of enumerated data types, however, you can leave the <code>others</code> out.</p>
+<p>The VHDL language will force you to cover all cases. If you do not account for all cases, you are required to write a fallback case (<code>when others</code>), and that is what usually happens if you use <code>std_logic</code> types, because you don't want to enumerate all the meta-values. You <mark>need</mark> <code>others</code>, or your compiler will mark an error. In the case of enumerated data types, however, you can leave the <code>others</code> out.</p>
 <div class="codehilite"><pre><span class="k">type</span> <span class="n">state_t</span> <span class="k">is</span> <span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">,</span> <span class="n">s3</span><span class="p">);</span>
 </pre></div>
 
@@ -473,8 +473,8 @@ img.emoji {
 
 <p>In my mission to bust VHDL myths, I set up an experiment to demonstrate my case. I typed a <a href="resources/fsm2.vhd">piece of code with</a> and <a href="resources/fsm1.vhd">without</a> an <code>others</code> part in the VHDL case statement. The synthesis results are identical (as expected). To demonstrate even more clearly, I have created an output pin that would become <code>'1'</code> in the case of <code>others</code>. After synthesis, this output pin is clearly always <code>'0'</code>.</p>
 <p><img alt="Netlist demonstrates that Others has no effect" src="images/fsm2.png" /></p>
-<p><em>Conclusion:</em> if you have <em>not</em> covered all possible cases you need <code>others</code>. If you <em>have</em> covered all cases, leaving out <code>others</code> has no effect on the synthesis (or simulation) results. </p>
-<p>I did not try <em>all possible settings</em> on <em>all possible synthesis tools</em>. If you have found a case that proves me wrong, please let us know.</p>
+<p><em>Conclusion:</em> if you have <mark>not</mark> covered all possible cases you need <code>others</code>. If you <mark>have</mark> covered all cases, leaving out <code>others</code> has no effect on the synthesis (or simulation) results. </p>
+<p>I did not try <mark>all possible settings</mark> on <mark>all possible synthesis tools</mark>. If you have found a case that proves me wrong, please let us know.</p>
 <h3 id="update-precision-synthesis-uses-others">Update: Precision Synthesis uses "others"</h3>
 <p>On <a href="http://electronics.stackexchange.com/questions/21317/vhdl-synthesis-optimization-counters-in-statemachines/21318#21318">StackExchange</a>, David Kessner explains that the Precision Synthesis (Mentor Graphics) does in fact use the <code>others</code> part to recover from illegal states. 
 Check out <a href="http://courses.engr.illinois.edu/ece412/references/precision/precisionRTL_style.pdf">the manual</a> on page 210.</p>

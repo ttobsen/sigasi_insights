@@ -350,8 +350,8 @@ img.emoji {
 
 
         
-        <div> <!-- class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix"> -->
-        <div> <!-- class="navbar-collapse collapse"> -->
+        <div class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix">
+        <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-left">
             <li class="dropdown">
               <a href="/manual/" class="dropdown-toggle" data-toggle="dropdown">Manual <b class="caret"></b></a>
@@ -448,17 +448,17 @@ img.emoji {
 
     <div class="content">
       <div class="col-md-9" role="main">
-        <p>Tycho, the new Maven base Eclipse build system, was recently accepted as an <a href="http://www.eclipse.org/tycho/">Eclipse project</a>. In the latest, <a href="http://dev.eclipse.org/mhonarc/lists/tycho-user/msg00102.html">0.12.0 release</a>, the namespace was updated from <em>org.sonatype.tycho</em> to <em>org.eclipse.tycho</em>. This results in lots of changes to your pom.xml files.</p>
+        <p>Tycho, the new Maven base Eclipse build system, was recently accepted as an <a href="http://www.eclipse.org/tycho/">Eclipse project</a>. In the latest, <a href="http://dev.eclipse.org/mhonarc/lists/tycho-user/msg00102.html">0.12.0 release</a>, the namespace was updated from <mark>org.sonatype.tycho</mark> to <mark>org.eclipse.tycho</mark>. This results in lots of changes to your pom.xml files.</p>
 <p>I used following script to update; it might save you some time too:</p>
 <div class="codehilite"><pre><span class="k">for</span> i in pom.xml */pom.xml
 <span class="k">do</span>
-    sed -i -e <span class="s1">&#39;s/org.sonatype.tycho/org.eclipse.tycho/g&#39;</span> <span class="nv">$i</span><span class="p">;</span>
-    sed -i -e <span class="s1">&#39;s/maven-osgi-compiler-plugin/tycho-compiler-plugin/g&#39;</span> <span class="nv">$i</span><span class="p">;</span>
-    sed -i -e <span class="s1">&#39;s/maven-osgi-packaging-plugin/tycho-packaging-plugin/g&#39;</span> <span class="nv">$i</span><span class="p">;</span>
-    sed -i -e <span class="s1">&#39;s/maven-osgi-source-plugin/tycho-source-plugin/g&#39;</span> <span class="nv">$i</span><span class="p">;</span>
-    sed -i -e <span class="s1">&#39;s/maven-osgi-test-plugin/tycho-surefire-plugin/g&#39;</span> <span class="nv">$i</span><span class="p">;</span>
-    sed -i -e <span class="s1">&#39;s/maven-tycho-plugin/tycho-pomgenerator-plugin/g&#39;</span> <span class="nv">$i</span><span class="p">;</span>
-    sed -i -e <span class="s1">&#39;s$&lt;tycho-version&gt;0.11.0&lt;/tycho-version&gt;$&lt;tycho-version&gt;0.12.0&lt;/tycho-version&gt;$g&#39;</span> <span class="nv">$i</span><span class="p">;</span>
+    sed -i -e <span class="s1">&#39;s/org.sonatype.tycho/org.eclipse.tycho/g&#39;</span> $i<span class="p">;</span>
+    sed -i -e <span class="s1">&#39;s/maven-osgi-compiler-plugin/tycho-compiler-plugin/g&#39;</span> $i<span class="p">;</span>
+    sed -i -e <span class="s1">&#39;s/maven-osgi-packaging-plugin/tycho-packaging-plugin/g&#39;</span> $i<span class="p">;</span>
+    sed -i -e <span class="s1">&#39;s/maven-osgi-source-plugin/tycho-source-plugin/g&#39;</span> $i<span class="p">;</span>
+    sed -i -e <span class="s1">&#39;s/maven-osgi-test-plugin/tycho-surefire-plugin/g&#39;</span> $i<span class="p">;</span>
+    sed -i -e <span class="s1">&#39;s/maven-tycho-plugin/tycho-pomgenerator-plugin/g&#39;</span> $i<span class="p">;</span>
+    sed -i -e <span class="s1">&#39;s$&lt;tycho-version&gt;0.11.0&lt;/tycho-version&gt;$&lt;tycho-version&gt;0.12.0&lt;/tycho-version&gt;$g&#39;</span> $i<span class="p">;</span>
 <span class="k">done</span>
 </pre></div>
 

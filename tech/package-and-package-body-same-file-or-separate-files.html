@@ -350,8 +350,8 @@ img.emoji {
 
 
         
-        <div> <!-- class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix"> -->
-        <div> <!-- class="navbar-collapse collapse"> -->
+        <div class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix">
+        <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-left">
             <li class="dropdown">
               <a href="/manual/" class="dropdown-toggle" data-toggle="dropdown">Manual <b class="caret"></b></a>
@@ -448,22 +448,22 @@ img.emoji {
       <div class="col-md-9" role="main">
         <p>Some coding guidelines require that a package and its body should be in the same file. Other guidelines require two separate files, often with rules about the file names. What is the reason for this?</p>
 <h3 id="one-file">One File</h3>
-<p>The case for putting the package and package body in the same file, is <em>simplicity</em>. 
+<p>The case for putting the package and package body in the same file, is <mark>simplicity</mark>. 
 <em> Every package has one package body, and you will know where to find it: at the bottom of the file. 
 </em> Since both are in the same file, there is less chance of introducing inconsistencies. 
 <em> If you mail someone the package, they also get the body. 
-</em> There are less files in your project, so there is less <em>clutter</em>.</p>
+</em> There are less files in your project, so there is less <mark>clutter</mark>.</p>
 <h3 id="separate-files">Separate Files</h3>
 <p>There might also be good reasons to put the package and the package body in separate files. The filenames will (almost) always be easy to infer, so that everybody can easily find the implementation (in the body) when they are reading declarations (in the package).  File names might be structured like <code>foobar_p.vhd</code> and <code>foobar_pb.vhd</code>. Anything works, as long as it is consistent throughout the project.</p>
-<p>One reason to separate interface and implementation (package and body) in two files, is to not create false dependencies. Let's say <code>entity e</code> uses <code>package p</code>. The compiler needs to analyse the package <em>before</em> it can analyse the entity. But the implementation (the package body) can be compiled at a later time. If the package and package body are in two separate files, you could change the implementation (body) without having to recompile <code>e</code>. One possible advantage here is increased speed for partial recompilations!</p>
+<p>One reason to separate interface and implementation (package and body) in two files, is to not create false dependencies. Let's say <code>entity e</code> uses <code>package p</code>. The compiler needs to analyse the package <mark>before</mark> it can analyse the entity. But the implementation (the package body) can be compiled at a later time. If the package and package body are in two separate files, you could change the implementation (body) without having to recompile <code>e</code>. One possible advantage here is increased speed for partial recompilations!</p>
 <p>Another reason to use two files is because this underlines the separation of concerns: one file is the interface, the contract with the user. The other is the implementation, and is really none of the user's business.</p>
 <p>The main reasons for using separate files are:
 <em> No false dependencies
 </em> Possibility to expose only the interface and keep implementation hidden (IP protection)
 <em> Possible to offer several implementations for the same package
-</em> Easier to make two separate deliverables: package is written <em>earlier</em>, perhaps by a different team.</p>
+</em> Easier to make two separate deliverables: package is written <mark>earlier</mark>, perhaps by a different team.</p>
 <h3 id="conclusion">Conclusion</h3>
-<p>Looking at these benefits, my conclusion is that both choices would be <a href="/tech/coding-conventions.html#useful" title="Coding conventions">useful</a>. Any naming conventions for the files are <a href="/tech/coding-conventions.html#arbitrary" title="Coding conventions">arbitrary</a>. (Remember: <em>arbitrary</em> does not mean you should get rid of this convention. It just means that any naming scheme can be as good as the next.)</p>
+<p>Looking at these benefits, my conclusion is that both choices would be <a href="/tech/coding-conventions.html#useful" title="Coding conventions">useful</a>. Any naming conventions for the files are <a href="/tech/coding-conventions.html#arbitrary" title="Coding conventions">arbitrary</a>. (Remember: <mark>arbitrary</mark> does not mean you should get rid of this convention. It just means that any naming scheme can be as good as the next.)</p>
 <p>Can you think of other practical reasons in favor of either coding style? Which style do you use? Let us know in the comments section below!</p>
 
       </div>

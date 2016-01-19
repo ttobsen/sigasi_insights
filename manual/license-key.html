@@ -350,8 +350,8 @@ img.emoji {
 
 
         
-        <div> <!-- class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix"> -->
-        <div> <!-- class="navbar-collapse collapse"> -->
+        <div class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix">
+        <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-left">
             <li class="active" class="dropdown">
               <a href="/manual/" class="dropdown-toggle" data-toggle="dropdown">Manual <b class="caret"></b></a>
@@ -510,10 +510,10 @@ Note that if you want to use the environment variable, you can not enter a path 
 <p>You can change the ports and servername without breaking the signature.</p>
 <h4 id="starting-the-flexnet-and-sigasi-daemon-on-linux">Starting the Flexnet and Sigasi Daemon on Linux</h4>
 <p>the easiest way to start the Sigasi Flexnet Daemon is like this (on Linux)</p>
-<div class="codehilite"><pre><span class="c">#!/bin/sh</span>
+<div class="codehilite"><pre><span class="ch">#!/bin/sh</span>
 <span class="nb">echo</span> <span class="s2">&quot;Starting the Sigasi floating license server&quot;</span>
 <span class="nv">LOCATION</span><span class="o">=</span>/home/flex/flexnet-sigasi
-<span class="nv">$LOCATION</span>/lmgrd -c <span class="nv">$LOCATION</span>/sigasi.lic -l <span class="nv">$LOCATION</span>/debug.log
+$LOCATION/lmgrd -c $LOCATION/sigasi.lic -l $LOCATION/debug.log
 </pre></div>
 
 
@@ -551,7 +551,7 @@ Note that if you want to use the environment variable, you can not enter a path 
 <p><img alt="" src="images/flexnet_windows_2.png" /></p>
 <h3 id="floating-license-options">Floating License options</h3>
 <h4 id="release-a-floating-license">Release a floating license</h4>
-<p>You can release a floating license (<em>check a license in</em>) without closing your Sigasi application or Eclipse application. This is useful if you use Eclipse to edit other files than VHDL files, like C or Tcl.</p>
+<p>You can release a floating license (<mark>check a license in</mark>) without closing your Sigasi application or Eclipse application. This is useful if you use Eclipse to edit other files than VHDL files, like C or Tcl.</p>
 <p>First, make sure that all VHDL and Verilog files are closed and all VHDL and Verilog projects are closed. Next select  <strong>Help &gt; Sigasi &gt; Floating license &gt; Release Sigasi Floating Licenses</strong></p>
 <p>To get the license back (to check the license out), open the license dialog <strong>Help &gt; Sigasi &gt; Configure License...</strong> and press <strong>Apply</strong>.</p>
 <p>Similarly a floating Sigasi XL Doc addon license can be released via: <strong>Help &gt; Sigasi &gt; Floating license &gt; Release Sigasi Studio XL Doc Floating Licenses</strong>.</p>

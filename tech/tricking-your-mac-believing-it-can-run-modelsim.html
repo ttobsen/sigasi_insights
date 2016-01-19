@@ -350,8 +350,8 @@ img.emoji {
 
 
         
-        <div> <!-- class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix"> -->
-        <div> <!-- class="navbar-collapse collapse"> -->
+        <div class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix">
+        <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-left">
             <li class="dropdown">
               <a href="/manual/" class="dropdown-toggle" data-toggle="dropdown">Manual <b class="caret"></b></a>
@@ -447,9 +447,9 @@ img.emoji {
     <div class="content">
       <div class="col-md-9" role="main">
         <p><strong>Disclaimer 1:</strong> This is in no way a crack; we're not messing with ModelSim! You'll need a legal copy and a valid license, which you can get from your Mentor Graphics sales rep, or (a limited version, free of charge) from the <a href="http://www.altera.com/products/software/quartus-ii/web-edition/qts-we-index.html">Altera website</a>.</p>
-<p><strong>Disclaimer 2:</strong> Consider this semi-advanced stuff. I'm sharing this idea because I think it will be useful to other people, it is <em>not</em> a supported Sigasi feature.</p>
+<p><strong>Disclaimer 2:</strong> Consider this semi-advanced stuff. I'm sharing this idea because I think it will be useful to other people, it is <mark>not</mark> a supported Sigasi feature.</p>
 <p><strong>Disclaimer 3:</strong> I hate disclaimers!</p>
-<p>We will need a computer with SSH acces that has a working version of ModelSim installed. I suggest you use a <em>Linux</em> computer because Mac OSX and Linux are both Unix-like systems. If you use a Windows compile server, you may run in to troubles with the path format (backslashes on Windows!). You can either use a remote computer, or set up a virtual machine (using something like <a href="http://www.parallels.com/products/desktop/">Parallels</a> or <a href="http://www.virtualbox.org/">VirtualBox</a> on your Mac.</p>
+<p>We will need a computer with SSH acces that has a working version of ModelSim installed. I suggest you use a <mark>Linux</mark> computer because Mac OSX and Linux are both Unix-like systems. If you use a Windows compile server, you may run in to troubles with the path format (backslashes on Windows!). You can either use a remote computer, or set up a virtual machine (using something like <a href="http://www.parallels.com/products/desktop/">Parallels</a> or <a href="http://www.virtualbox.org/">VirtualBox</a> on your Mac.</p>
 <p>You will need the following info:</p>
 <ul>
 <li>the host name (or IP address) of your build server</li>
@@ -468,57 +468,57 @@ ln -s  remote_modelsim.sh vlib
 
 
 <p>The fakeModelSim script copies the files to the build server and executes the specified ModelSim command. </p>
-<div class="codehilite"><pre><span class="c">#!/bin/sh</span>
+<div class="codehilite"><pre><span class="ch">#!/bin/sh</span>
 
-<span class="c">#configuration</span>
+<span class="c1">#configuration</span>
 <span class="nv">REMOTE_USER</span><span class="o">=</span>john.doe
 <span class="nv">REMOTE_HOST</span><span class="o">=</span>122.22.22.221
 <span class="nv">REMOTE_HOME</span><span class="o">=</span><span class="s1">&#39;/home/john.doe&#39;</span>
 <span class="nv">REMOTE_MODELSIM_DIR</span><span class="o">=</span><span class="s1">&#39;/opt/altera/10.0/modelsim_ase/bin&#39;</span>
 
 <span class="nv">COMMAND</span><span class="o">=</span><span class="sb">`</span>basename <span class="nv">$0</span><span class="sb">`</span>
-<span class="c"># calculate the arguments, with proper quotes around each argument</span>
+<span class="c1"># calculate the arguments, with proper quotes around each argument</span>
 <span class="k">for</span> ARG in <span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span>
 <span class="k">do</span>
-        <span class="nv">ARGS</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$ARGS</span><span class="s2"> \&quot;</span><span class="nv">$ARG</span><span class="s2">\&quot;&quot;</span>
+        <span class="nv">ARGS</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$A</span><span class="s2">RGS \&quot;</span><span class="nv">$A</span><span class="s2">RG\&quot;&quot;</span>
 <span class="k">done</span>
 
-<span class="c"># Calculate a directory on the remote build server, where we can put our data</span>
+<span class="c1"># Calculate a directory on the remote build server, where we can put our data</span>
 <span class="nv">HASH</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="si">${</span><span class="nv">PWD</span><span class="si">}</span> <span class="si">${</span><span class="nv">HOSTNAME</span><span class="si">}</span> <span class="si">${</span><span class="nv">USER</span><span class="si">}</span> <span class="p">|</span> shasum <span class="p">|</span> cut -c1-32<span class="k">)</span>
 <span class="nv">REMOTE_DIR</span><span class="o">=</span><span class="si">${</span><span class="nv">REMOTE_HOME</span><span class="si">}</span>/remote_compilation/<span class="si">${</span><span class="nv">HASH</span><span class="si">}</span>
 
-<span class="c"># sync the project directory. You don&#39;t need this if you are using a network shared folder.</span>
+<span class="c1"># sync the project directory. You don&#39;t need this if you are using a network shared folder.</span>
 <span class="k">function</span> try_rsync<span class="o">(){</span>
     rsync -r <span class="si">${</span><span class="nv">PWD</span><span class="si">}</span>/* <span class="si">${</span><span class="nv">REMOTE_USER</span><span class="si">}</span>@<span class="si">${</span><span class="nv">REMOTE_HOST</span><span class="si">}</span>:<span class="si">${</span><span class="nv">REMOTE_DIR</span><span class="si">}</span>
 <span class="o">}</span>
 <span class="k">function</span> createRemoteDir<span class="o">(){</span>
-    <span class="nb">echo</span> <span class="s2">&quot;rsync failed, probably because the remote directory </span><span class="nv">$REMOTE_DIR</span><span class="s2"> did not exits. Retrying.&quot;</span> &gt;<span class="p">&amp;</span>2
+    <span class="nb">echo</span> <span class="s2">&quot;rsync failed, probably because the remote directory </span>$<span class="s2">REMOTE_DIR did not exits. Retrying.&quot;</span> &gt;<span class="p">&amp;</span>2
     ssh <span class="si">${</span><span class="nv">REMOTE_USER</span><span class="si">}</span>@<span class="si">${</span><span class="nv">REMOTE_HOST</span><span class="si">}</span> <span class="s2">&quot;mkdir -p </span><span class="si">${</span><span class="nv">REMOTE_DIR</span><span class="si">}</span><span class="s2">&quot;</span>
 <span class="o">}</span>
 try_rsync <span class="o">||</span> <span class="o">(</span> createRemoteDir <span class="o">&amp;&amp;</span> try_rsync <span class="o">)</span> <span class="o">||</span> <span class="nb">exit</span> -1
-<span class="c"># end sync</span>
+<span class="c1"># end sync</span>
 
 <span class="nv">REMOTE_SCRIPT</span><span class="o">=</span><span class="se">\</span>
 <span class="s2">&quot;cd </span><span class="si">${</span><span class="nv">REMOTE_DIR</span><span class="si">}</span><span class="s2">; &quot;</span><span class="se">\</span>
 <span class="s2">&quot;MODELSIM_DIR=/opt/altera/10.0/modelsim_ase/bin ; &quot;</span><span class="se">\</span>
-<span class="s2">&quot;/opt/altera/10.0/modelsim_ase/bin/</span><span class="nv">$COMMAND</span><span class="s2"> </span><span class="nv">$ARGS</span><span class="s2">&quot;</span>
+<span class="s2">&quot;/opt/altera/10.0/modelsim_ase/bin/</span><span class="nv">$C</span><span class="s2">OMMAND </span><span class="nv">$A</span><span class="s2">RGS&quot;</span>
 
-<span class="c"># echo &quot;# Running remote command $REMOTE_SCRIPT&quot;</span>
-ssh <span class="si">${</span><span class="nv">REMOTE_USER</span><span class="si">}</span>@<span class="si">${</span><span class="nv">REMOTE_HOST</span><span class="si">}</span>  <span class="nv">$REMOTE_SCRIPT</span>
+<span class="c1"># echo &quot;# Running remote command $REMOTE_SCRIPT&quot;</span>
+ssh <span class="si">${</span><span class="nv">REMOTE_USER</span><span class="si">}</span>@<span class="si">${</span><span class="nv">REMOTE_HOST</span><span class="si">}</span>  $REMOTE_SCRIPT
 </pre></div>
 
 
 <p>Now all you need to do, is tell Sigasi (or whatever tool you are using) to use <code>~/fakeModelSim</code> as path for the ModelSim executables.</p>
 <h3 id="other-tools-and-feedback">Other tools and Feedback</h3>
-<p>All of this will work just as well with <em>Xilinx ISim</em>, or with the <em>Altera Quartus II</em>, or for a million other EDA and non-EDA tools. You can extend the script to copy the compiled files back to your local computer, or you can use a shared folder instead of <code>rsync</code>. Feel free to improve and share.</p>
+<p>All of this will work just as well with <mark>Xilinx ISim</mark>, or with the <mark>Altera Quartus II</mark>, or for a million other EDA and non-EDA tools. You can extend the script to copy the compiled files back to your local computer, or you can use a shared folder instead of <code>rsync</code>. Feel free to improve and share.</p>
 <h3 id="setting-up-sigasi">Setting up Sigasi</h3>
 <p>If you want to let Sigasi work with Aldec RivieraPro or ModelSim, you can set up <a href="/manual/tools.html#save-time-compilation" title="Tool Integration">save-time-compilation</a> or you can generate a Makefile.</p>
 <p>Do you like this script? Do you like you Mac? Do you have a better way of designing hardware with your Mac? Talk to me in the comments section, below!</p>
 <h2 id="update">Update</h2>
 <p>I'm running Linux on a virtual machine (on Parallels, but you can also use VirtualBox). I am mounting the Mac user's home dir in the same location on the virtual machine, so that I don't have to translate the paths of my VHDL files. This simplifies the script a lot: no path translation, no rsync. Again: no guarantees, but I hope this is useful for you.</p>
-<div class="codehilite"><pre><span class="c">#!/bin/sh</span>
+<div class="codehilite"><pre><span class="ch">#!/bin/sh</span>
 
-<span class="c">#configuration</span>
+<span class="c1">#configuration</span>
 <span class="nv">REMOTE_USER</span><span class="o">=</span>john.doe
 <span class="nv">REMOTE_HOST</span><span class="o">=</span>10.211.55.6 
 <span class="nv">REMOTE_HOME</span><span class="o">=</span><span class="s1">&#39;/Users/john.doe&#39;</span>
@@ -526,19 +526,19 @@ ssh <span class="si">${</span><span class="nv">REMOTE_USER</span><span class="si
 
 <span class="nv">COMMAND</span><span class="o">=</span><span class="sb">`</span>basename <span class="nv">$0</span><span class="sb">`</span>
 
-<span class="c"># calculate the arguments, with proper quotes around each argument</span>
+<span class="c1"># calculate the arguments, with proper quotes around each argument</span>
 <span class="k">for</span> ARG in <span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span>
 <span class="k">do</span>
-        <span class="nv">ARGS</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$ARGS</span><span class="s2"> \&quot;</span><span class="nv">$ARG</span><span class="s2">\&quot;&quot;</span>
+        <span class="nv">ARGS</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$A</span><span class="s2">RGS \&quot;</span><span class="nv">$A</span><span class="s2">RG\&quot;&quot;</span>
 <span class="k">done</span>
 
 <span class="nv">REMOTE_DIR</span><span class="o">=</span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>
 
 <span class="nv">REMOTE_SCRIPT</span><span class="o">=</span><span class="se">\</span>
 <span class="s2">&quot;cd </span><span class="si">${</span><span class="nv">REMOTE_DIR</span><span class="si">}</span><span class="s2">; &quot;</span><span class="se">\</span>
-<span class="s2">&quot;MODELSIM_DIR=</span><span class="nv">$REMOTE_MODELSIM_DIR</span><span class="s2"> ; &quot;</span><span class="se">\</span>
-<span class="s2">&quot;</span><span class="nv">$REMOTE_MODELSIM_DIR</span><span class="s2">/</span><span class="nv">$COMMAND</span><span class="s2"> </span><span class="nv">$ARGS</span><span class="s2"> ; &quot;</span>
-ssh <span class="si">${</span><span class="nv">REMOTE_USER</span><span class="si">}</span>@<span class="si">${</span><span class="nv">REMOTE_HOST</span><span class="si">}</span>  <span class="nv">$REMOTE_SCRIPT</span>
+<span class="s2">&quot;MODELSIM_DIR=</span>$<span class="s2">REMOTE_MODELSIM_DIR ; &quot;</span><span class="se">\</span>
+<span class="s2">&quot;</span>$<span class="s2">REMOTE_MODELSIM_DIR/</span><span class="nv">$C</span><span class="s2">OMMAND </span><span class="nv">$A</span><span class="s2">RGS ; &quot;</span>
+ssh <span class="si">${</span><span class="nv">REMOTE_USER</span><span class="si">}</span>@<span class="si">${</span><span class="nv">REMOTE_HOST</span><span class="si">}</span>  $REMOTE_SCRIPT
 </pre></div>
 
       </div>

@@ -350,8 +350,8 @@ img.emoji {
 
 
         
-        <div> <!-- class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix"> -->
-        <div> <!-- class="navbar-collapse collapse"> -->
+        <div class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix">
+        <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-left">
             <li class="dropdown">
               <a href="/manual/" class="dropdown-toggle" data-toggle="dropdown">Manual <b class="caret"></b></a>
@@ -450,9 +450,9 @@ img.emoji {
         <h2 id="what-are-deprecated-ieee-libraries">What are deprecated IEEE libraries?</h2>
 <p>Don't use <code>ieee.std_logic_unsigned</code> and similar libraries because they are not standardized. 
 Instead, <strong>use ieee.numeric_std.all</strong>.</p>
-<p><em>Note</em>: if you want to <strong>disable</strong> warnings for this in the Sigasi tool, select <strong>Window &gt; Preferences &gt; Sigasi&gt; VHDL &gt; Errors/Warnings</strong> and at the bottom of that page, set the severity of <strong>"Deprecated IEEE packages"</strong> to <strong>ignore</strong>.</p>
+<p><mark>Note</mark>: if you want to <strong>disable</strong> warnings for this in the Sigasi tool, select <strong>Window &gt; Preferences &gt; Sigasi&gt; VHDL &gt; Errors/Warnings</strong> and at the bottom of that page, set the severity of <strong>"Deprecated IEEE packages"</strong> to <strong>ignore</strong>.</p>
 <h2 id="why-is-that">Why is that?</h2>
-<p><em>This article was originally published at <a href="http://tams-www.informatik.uni-hamburg.de/vhdl/doc/faq/FAQ1.html#4.11">http://tams-www.informatik.uni-hamburg.de/vhdl/doc/faq/FAQ1.html#4.11</a></em></p>
+<p><mark>This article was originally published at <a href="http://tams-www.informatik.uni-hamburg.de/vhdl/doc/faq/FAQ1.html#4.11">http://tams-www.informatik.uni-hamburg.de/vhdl/doc/faq/FAQ1.html#4.11</a></mark></p>
 <p>The IEEE did not, originally, define a standard set of types and overloaded functions to handle vectors which contained coded numeric values. This meant that individual vendors were free to define their own types and functions.
 Synopsys produced three packages - std_logic_arith, std_logic_signed, and std_logic_unsigned. std_logic_signed/std_logic_unsigned operated on type std_logic_vector, and gave an implicit meaning to the contents of the vector. std_logic_arith, however, defined two new types, SIGNED and UNSIGNED, and operated on these types only. Unfortunately, Synopsys decided that these packages should be compiled into library IEEE. Other vendors, including Cadence and Mentor, now produced their own versions of std_logic_arith, which were not the same as Synopsys's. They also required their packages to be placed in library IEEE.</p>
 <p>Finally, the IEEE decided to standardize this situation, and produced packages numeric_bit and numeric_std (see Section 4.8 on how to obtain numeric_bit and numeric_std). numeric_bit is based on type bit, numeric_std on on type std_logic. Both packages followed Synopsys in defining new types, SIGNED and UNSIGNED. However, the package functions did not have the same names, or parameters, as the Synopsys functions.</p>

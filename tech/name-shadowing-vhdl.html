@@ -350,8 +350,8 @@ img.emoji {
 
 
         
-        <div> <!-- class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix"> -->
-        <div> <!-- class="navbar-collapse collapse"> -->
+        <div class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix">
+        <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-left">
             <li class="dropdown">
               <a href="/manual/" class="dropdown-toggle" data-toggle="dropdown">Manual <b class="caret"></b></a>
@@ -441,7 +441,7 @@ img.emoji {
 
     <div class="content">
       <div class="col-md-9" role="main">
-        <p>Like many other languages, it is possible in VHDL to perform <em>name scoping</em>. This happens if you declare a new object in a nested scope that reuses the name of an object that was already declared. This is not an error in VHDL, but it can be confusing and it can cause errors. In general, I would advice against name scoping unless you have a very good reason. Even then, it would be best if you document (comment) your code so that everybody understands what is going on.</p>
+        <p>Like many other languages, it is possible in VHDL to perform <mark>name scoping</mark>. This happens if you declare a new object in a nested scope that reuses the name of an object that was already declared. This is not an error in VHDL, but it can be confusing and it can cause errors. In general, I would advice against name scoping unless you have a very good reason. Even then, it would be best if you document (comment) your code so that everybody understands what is going on.</p>
 <p>This is a straightforward example of name shadowing:</p>
 <div class="codehilite"><pre><span class="k">entity</span> <span class="nc">e0</span> <span class="k">is</span>
 <span class="k">end</span> <span class="k">entity</span> <span class="nc">e0</span><span class="p">;</span>

@@ -350,8 +350,8 @@ img.emoji {
 
 
         
-        <div> <!-- class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix"> -->
-        <div> <!-- class="navbar-collapse collapse"> -->
+        <div class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix">
+        <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-left">
             <li class="dropdown">
               <a href="/manual/" class="dropdown-toggle" data-toggle="dropdown">Manual <b class="caret"></b></a>
@@ -448,17 +448,17 @@ img.emoji {
       <div class="col-md-9" role="main">
         <p>There are two largely accepted ways to detect clock edges, and many style books prescribe or prefer one over the other. 
 Let's investigate.</p>
-<p>This article deals with edge detection in <em>synthesizable</em> code, not with behavioral code as found in test benches and behavioral models.</p>
+<p>This article deals with edge detection in <mark>synthesizable</mark> code, not with behavioral code as found in test benches and behavioral models.</p>
 <h3 id="old-style">Old style</h3>
 <p>What I call the old style is:</p>
 <div class="codehilite"><pre><span class="k">if</span> <span class="n">clk</span><span class="na">&#39;event</span> <span class="k">and</span> <span class="n">clk</span><span class="o">=</span><span class="sc">&#39;1&#39;</span> <span class="k">then</span> <span class="c1">-- old style: outdated</span>
 </pre></div>
 
 
-<p>This coding style is accepted by the <em>IEEE Standard for VHDL Register Transfer Level (RTL) Synthesis</em> (IEEE 1076.6-1999), so all compliant synthesis tools should be able to handle this. However, there are some loopholes for simulators. This condition will also trigger when the <code>clk</code> signal changes from <code>'U'</code> to <code>'1'</code>, or even from <code>'H'</code> to <code>'1'</code>. These events have no meaning in physical hardware, but they are perfectly legal in simulated VHDL code. Hence, this coding style introduces a discrepancy between simulation and synthesized hardware. </p>
-<p>Another argument against the old style edge detection is that it does not clearly express the intent of the VHDL designer. Checking for an <em>event</em> makes sense in the domain of discrete event simulators, but is utter nonsense both in the (more low-level) domain physical electronics and in the (more high-level) domain of interacting state machines. Code is more readable when you use the <code>rising_edge</code> and <code>falling_edge</code> functions for edge detection.</p>
+<p>This coding style is accepted by the <mark>IEEE Standard for VHDL Register Transfer Level (RTL) Synthesis</mark> (IEEE 1076.6-1999), so all compliant synthesis tools should be able to handle this. However, there are some loopholes for simulators. This condition will also trigger when the <code>clk</code> signal changes from <code>'U'</code> to <code>'1'</code>, or even from <code>'H'</code> to <code>'1'</code>. These events have no meaning in physical hardware, but they are perfectly legal in simulated VHDL code. Hence, this coding style introduces a discrepancy between simulation and synthesized hardware. </p>
+<p>Another argument against the old style edge detection is that it does not clearly express the intent of the VHDL designer. Checking for an <mark>event</mark> makes sense in the domain of discrete event simulators, but is utter nonsense both in the (more low-level) domain physical electronics and in the (more high-level) domain of interacting state machines. Code is more readable when you use the <code>rising_edge</code> and <code>falling_edge</code> functions for edge detection.</p>
 <p>In VHDL 87, this was the only way to detect edges. VHDL 93 has introduced the <code>rising_edge</code> and <code>falling_edge</code> functions for edge detection.
-For more than twenty years, the <em>old style</em> edge detection has been <a href="/tech/coding-conventions.html#adverse">outdated</a>.</p>
+For more than twenty years, the <mark>old style</mark> edge detection has been <a href="/tech/coding-conventions.html#adverse">outdated</a>.</p>
 <h3 id="rising_edge-and-falling_edge">Rising_edge and Falling_edge</h3>
 <p>In the VHDL 93 standard, the IEEE introduced two functions which are meant to be used for clock edge detection: <code>rising_edge</code> and <code>falling_edge</code>. </p>
 <div class="codehilite"><pre><span class="k">if</span> <span class="n">rising_edge</span><span class="p">(</span><span class="n">clk</span><span class="p">)</span> <span class="k">then</span> <span class="c1">-- recommended since 1993</span>
@@ -475,7 +475,7 @@ For more than twenty years, the <em>old style</em> edge detection has been <a hr
 
 <h3 id="rising-or-falling">Rising or falling?</h3>
 <p>If you use a single edge, by convention, you should use the <em>rising edge</em>. This is <a href="/tech/coding-conventions.html#arbitrary">arbitrary</a>, but universally accepted. If you make a different choice, people will be surprised and confused.
-Of course, if you have a design with two clock edges, you also need the falling edge. If your process uses both edges (to instantiate <em>dual edge triggered</em> flip-flops), you should write:</p>
+Of course, if you have a design with two clock edges, you also need the falling edge. If your process uses both edges (to instantiate <mark>dual edge triggered</mark> flip-flops), you should write:</p>
 <div class="codehilite"><pre><span class="k">if</span> <span class="n">rising_edge</span><span class="p">(</span><span class="n">clk</span><span class="p">)</span> <span class="k">or</span> <span class="n">falling_edge</span><span class="p">(</span><span class="n">clk</span><span class="p">)</span> <span class="k">then</span>
 </pre></div>
 

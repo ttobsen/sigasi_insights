@@ -350,8 +350,8 @@ img.emoji {
 
 
         
-        <div> <!-- class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix"> -->
-        <div> <!-- class="navbar-collapse collapse"> -->
+        <div class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix">
+        <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-left">
             <li class="dropdown">
               <a href="/manual/" class="dropdown-toggle" data-toggle="dropdown">Manual <b class="caret"></b></a>
@@ -456,7 +456,7 @@ img.emoji {
 </blockquote>
 <p>Short and powerful: no "but", no "caveat". Synthesis works fine if, even signals have a physical type or if  there are computations on physical types. If you have access to a (modern) VHDL synthesis tool and you can try this out for yourself. If not, nobody will be interested in your uninformed opinion. </p>
 <h3 id="side-note-about-vhdl-synthesis">Side note: about VHDL synthesis</h3>
-<p>There are dozens of constructs that are marked as <em>not for synthesis</em> in traditional courseware, including:</p>
+<p>There are dozens of constructs that are marked as <mark>not for synthesis</mark> in traditional courseware, including:</p>
 <ul>
 <li>bits, booleans and integers </li>
 <li>configurations</li>
@@ -467,10 +467,10 @@ img.emoji {
 <li>initial values of signals</li>
 <li>and much more...</li>
 </ul>
-<p>My first step will be to demonstrate which (none, some or all?) of them them are wrong. When I do that, a lot of traditionalists will argue that: "OK, it might work for you, but it's still bad practice because <em>blah blah blah</em>." When that happens, the discussion has shifted from "the tools can't handle it" to "the humans don't want to handle it." We can then get to the <em>reasons why</em> humans don't want to handle those particular constructs. We can have an informed discussion on a case by case basis to see if there is a valid argument to be made. </p>
+<p>My first step will be to demonstrate which (none, some or all?) of them them are wrong. When I do that, a lot of traditionalists will argue that: "OK, it might work for you, but it's still bad practice because <mark>blah blah blah</mark>." When that happens, the discussion has shifted from "the tools can't handle it" to "the humans don't want to handle it." We can then get to the <mark>reasons why</mark> humans don't want to handle those particular constructs. We can have an informed discussion on a case by case basis to see if there is a valid argument to be made. </p>
 <p>I don't want to force anybody in to using any of these constructs. I'm just worried that VHDL educators are scaring people away from useful and powerful VHDL language features that could save engineers a lot of work.</p>
 <h3 id="back-to-physical-types">Back to physical types</h3>
-<p>But for now, let's focus on physical types. To pin everybody to the <em>facts</em>, here is a <a href="/opinion/vetsmod-get-better-feedback-your-vhdl-code-snippets.html" title="VETSMOD: Get better feedback from your VHDL code snippets">VETSMOD: Get better feedback from your VHDL code snippets</a> example of physical types in action:</p>
+<p>But for now, let's focus on physical types. To pin everybody to the <mark>facts</mark>, here is a <a href="/opinion/vetsmod-get-better-feedback-your-vhdl-code-snippets.html" title="VETSMOD: Get better feedback from your VHDL code snippets">VETSMOD: Get better feedback from your VHDL code snippets</a> example of physical types in action:</p>
 <div class="codehilite"><pre><span class="k">library</span> <span class="nn">ieee</span><span class="p">;</span>
 
 <span class="k">use</span> <span class="nn">ieee.std_logic_1164.all</span><span class="p">;</span>

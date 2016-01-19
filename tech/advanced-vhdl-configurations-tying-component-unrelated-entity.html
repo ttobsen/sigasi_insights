@@ -350,8 +350,8 @@ img.emoji {
 
 
         
-        <div> <!-- class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix"> -->
-        <div> <!-- class="navbar-collapse collapse"> -->
+        <div class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix">
+        <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-left">
             <li class="dropdown">
               <a href="/manual/" class="dropdown-toggle" data-toggle="dropdown">Manual <b class="caret"></b></a>
@@ -470,7 +470,7 @@ img.emoji {
 </pre></div>
 
 
-<p>As I will explain in another blog post, these objects have no relation whatsoever, except that the <em>default binding</em> for <code>component dut</code> is the <code>entity dut</code>.
+<p>As I will explain in another blog post, these objects have no relation whatsoever, except that the <mark>default binding</mark> for <code>component dut</code> is the <code>entity dut</code>.
 So if you type an instantiation:</p>
 <div class="codehilite"><pre>    <span class="n">dut_inst</span> <span class="o">:</span> <span class="k">component</span> <span class="nc">dut</span>
         <span class="k">port</span> <span class="k">map</span><span class="p">(</span><span class="n">a</span> <span class="o">=&gt;</span> <span class="n">a</span><span class="p">,</span>
@@ -479,7 +479,7 @@ So if you type an instantiation:</p>
 </pre></div>
 
 
-<p>The VHDL elaborator will instantiate <code>entity dut</code> by default, unless it is told otherwise. Here is where <em>VHDL configurations</em> come in.</p>
+<p>The VHDL elaborator will instantiate <code>entity dut</code> by default, unless it is told otherwise. Here is where <mark>VHDL configurations</mark> come in.</p>
 <p>You can configure this to instantiate a completely <code>unrelated</code> entity, with an unrelated entity name, and unrelated port names. Even a different number of ports:</p>
 <div class="codehilite"><pre>  <span class="k">configuration</span> <span class="nc">c2</span> <span class="k">of</span> <span class="nc">testbench</span> <span class="k">is</span>
     <span class="k">for</span> <span class="n">str</span>

@@ -350,8 +350,8 @@ img.emoji {
 
 
         
-        <div> <!-- class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix"> -->
-        <div> <!-- class="navbar-collapse collapse"> -->
+        <div class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix">
+        <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-left">
             <li class="dropdown">
               <a href="/manual/" class="dropdown-toggle" data-toggle="dropdown">Manual <b class="caret"></b></a>
@@ -446,10 +446,10 @@ img.emoji {
 
     <div class="content">
       <div class="col-md-9" role="main">
-        <p>Last week, I talked about that there is <a href="/opinion/emacs/no-vhdl-rename-emacs-vhdl-mode.html" title="No VHDL Rename in Emacs VHDL mode">No VHDL Rename in Emacs VHDL mode</a>. Rename is just the tip of the iceberg when it comes to code modifications or <em>refactorings</em> (<a href="/tech/hardware_refactoring.html" title="What is hardware refactoring?">What is hardware refactoring?</a>). There are dozens of well documented and automated code refactorings... in the world of <em>software</em> engineering. In hardware land, however, only a few refactoring tools exist. (You're lucky: Sigasi is one of them!) And all the hardware refactoring tools put together still look pale compared to Eclipse JDT, <em>the</em> weapon of choice for many Java refactorers.</p>
+        <p>Last week, I talked about that there is <a href="/opinion/emacs/no-vhdl-rename-emacs-vhdl-mode.html" title="No VHDL Rename in Emacs VHDL mode">No VHDL Rename in Emacs VHDL mode</a>. Rename is just the tip of the iceberg when it comes to code modifications or <mark>refactorings</mark> (<a href="/tech/hardware_refactoring.html" title="What is hardware refactoring?">What is hardware refactoring?</a>). There are dozens of well documented and automated code refactorings... in the world of <mark>software</mark> engineering. In hardware land, however, only a few refactoring tools exist. (You're lucky: Sigasi is one of them!) And all the hardware refactoring tools put together still look pale compared to Eclipse JDT, <mark>the</mark> weapon of choice for many Java refactorers.</p>
 <p>Cutting to the chase: nobody is going to build a decent automated refactoring tool, based on regular expressions. Or on LISP, or on Emacs. That's just not the right tool for the job. If you stick with a development environment that comes with a built-in VHDL parser, you're betting on the right horse. This technology is ready for some extra innovative fireworks. </p>
 <p>At Sigasi, we have some refactorings implemented and shipped to our customers: rename, add port, encapsulate statements. </p>
-<p>Doing any of these refactorings by hand can easily take half an hour to several hours. With the right tool (and Emacs VHDL is <em>not</em> it!) in your hands, it will only take a minute.</p>
+<p>Doing any of these refactorings by hand can easily take half an hour to several hours. With the right tool (and Emacs VHDL is <mark>not</mark> it!) in your hands, it will only take a minute.</p>
 
       </div>
     </div>

@@ -350,8 +350,8 @@ img.emoji {
 
 
         
-        <div> <!-- class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix"> -->
-        <div> <!-- class="navbar-collapse collapse"> -->
+        <div class="inner-page-wrap has-no-sidebar no-bottom-spacing no-top-spacing clearfix">
+        <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-left">
             <li class="dropdown">
               <a href="/manual/" class="dropdown-toggle" data-toggle="dropdown">Manual <b class="caret"></b></a>
@@ -481,7 +481,7 @@ img.emoji {
 
 
 <p>These options force the java virtual machine to aggressively give back memory to the operating system. While compiling your entire project, memory usage can still spike to ~1 GB, but afterwards it should be reduced to 200 (up to 300) MB, depending on the size of the project &amp; the size of the files your are editing.</p>
-<p>These options do cause some slowdown (I'm guessing ~30%), you can reduce the slowdown by removing the <code>-XX:MinHeapFreeRatio</code> and <code>-XX:MaxHeapFreeRatio</code> options, but then less memory will be returned to the OS. We don't use these options by default because these garbage collectors are so called <em>"stop the world"</em> garbage collectors, while the garbage collector runs, the application may become unresponsive (for a few 100 ms in the worst case).</p>
+<p>These options do cause some slowdown (I'm guessing ~30%), you can reduce the slowdown by removing the <code>-XX:MinHeapFreeRatio</code> and <code>-XX:MaxHeapFreeRatio</code> options, but then less memory will be returned to the OS. We don't use these options by default because these garbage collectors are so called <mark>"stop the world"</mark> garbage collectors, while the garbage collector runs, the application may become unresponsive (for a few 100 ms in the worst case).</p>
 
       </div>
     </div>
