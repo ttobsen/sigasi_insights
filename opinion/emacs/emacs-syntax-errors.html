@@ -193,19 +193,28 @@ img.emoji {
 <nav id="main-navigation" class="std-menu clearfix">
 <div class="menu-main_eng-container"><ul id="menu-main_eng-1" class="menu">
     <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page sf-std-menu " >
-    	<a href="http://www.sigasi.com"><span class="menu-item-text">Home</span></a>
+      <a href="http://www.sigasi.com"><span class="menu-item-text">Home</span></a>
     </li>
     <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page sf-std-menu " >
-    	<a href="http://www.sigasi.com/about"><span class="menu-item-text">About</span></a>
+      <a href="http://www.sigasi.com/about"><span class="menu-item-text">About</span></a>
     </li>
     <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page sf-std-menu " >
-    	<a href="http://www.sigasi.com/products"><span class="menu-item-text">Products</span></a>
+      <a href="http://www.sigasi.com/products"><span class="menu-item-text">Products</span></a>
     </li>
     <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page sf-std-menu " >
-    	<a href="http://www.sigasi.com/contact"><span class="menu-item-text">Contact</span></a>
+      <a href="http://www.sigasi.com/contact"><span class="menu-item-text">Contact</span></a>
     </li>
     <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page sf-std-menu current-menu-item page_item page-item-11858 current_page_item" >
-    	<a href="http://insights.sigasi.com"><span class="menu-item-text">Insights</span></a>
+      <a href="http://insights.sigasi.com"><span class="menu-item-text">Insights</span></a>
+        <ul class="sub-menu" style="top: 100px; display: none;">
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/manual/">Manual</a></li>
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/faq.html">FAQ</a></li>
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/releasenotes/">Release Notes</a></li>
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/screencasts/">Screencasts</a></li>
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/tech/">Tech Articles</a></li>
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/opinion/">Opinion</a></li>
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/support.html">Support</a></li>
+        </ul>
     </li>
 </ul></div></nav>
 
@@ -453,7 +462,9 @@ VHDL mode was created. Because of the processing power and the memory
 available at that time, compilation was a slow process which was best
 handled by specialized tools. So Emacs uses a simulator (like ModelSim)
 to check the syntax of VHDL code.</p>
-<h3 id="batch-compilation">Batch compilation</h3>
+<p>Batch compilation
+comments: true</p>
+<hr />
 <p>Let’s assume you have installed ModelSim and configured Emacs
 accordingly (I won’t go into that). Syntax checking would go something
 like this:</p>
@@ -470,7 +481,9 @@ like this:</p>
 </ul>
 </li>
 </ul>
-<h3 id="type-time-compilation">Type time compilation</h3>
+<p>Type time compilation
+comments: true</p>
+<hr />
 <p>Modern development environment, including Sigasi HDT 2.0 have type time
 compilation. A first class of errors (syntax errors and undefined
 identifiers) will be marked <em>as you type</em>. More complex errors
@@ -484,7 +497,9 @@ performed, much like Emacs does it, only when the user requests them.</p>
     fix the error easily.</li>
 </ul>
 <p><img alt="Type-time error checking in Sigasi HDT 2.0" src="images/type_time_error.png" /></p>
-<h3 id="feedback-loop-and-word-processors">Feedback loop and word processors</h3>
+<p>Feedback loop and word processors
+comments: true</p>
+<hr />
 <p>The difference between the ways of working lies in the shorter feedback
 loop. As soon as you type an error, you get a chance to fix it. This
 takes less time and effort because you do not need to make a mental
@@ -504,26 +519,20 @@ typing this blog post!</p>
 <p>If professional writers use <strong>instant feedback</strong> technology to help them
 do their jobs, then why don’t hardware design engineers?</p>
 
-      </div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+var disqus_shortname = 'sigasi';
+var disqus_developer = 1;
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>      </div>
     </div>
 
-    <div class="col-md-3" role="complementary">
-      <nav class="hidden-print hidden-xs hidden-sm">
-        <div class="sidebar" data-spy="affix" data-offset-top="510" >
-          <div class="well">
-            <a href="#"><strong>Emacs Syntax errors</strong></a>
-            <div class="toc">
-<ul>
-<li><a href="#batch-compilation">Batch compilation</a></li>
-<li><a href="#type-time-compilation">Type time compilation</a></li>
-<li><a href="#feedback-loop-and-word-processors">Feedback loop and word processors</a></li>
-</ul>
-</div>
-
-          </div>
-        </div>
-      </nav>
-    </div>
 
   </div>
 

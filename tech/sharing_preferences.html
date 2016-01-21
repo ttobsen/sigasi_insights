@@ -193,19 +193,28 @@ img.emoji {
 <nav id="main-navigation" class="std-menu clearfix">
 <div class="menu-main_eng-container"><ul id="menu-main_eng-1" class="menu">
     <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page sf-std-menu " >
-    	<a href="http://www.sigasi.com"><span class="menu-item-text">Home</span></a>
+      <a href="http://www.sigasi.com"><span class="menu-item-text">Home</span></a>
     </li>
     <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page sf-std-menu " >
-    	<a href="http://www.sigasi.com/about"><span class="menu-item-text">About</span></a>
+      <a href="http://www.sigasi.com/about"><span class="menu-item-text">About</span></a>
     </li>
     <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page sf-std-menu " >
-    	<a href="http://www.sigasi.com/products"><span class="menu-item-text">Products</span></a>
+      <a href="http://www.sigasi.com/products"><span class="menu-item-text">Products</span></a>
     </li>
     <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page sf-std-menu " >
-    	<a href="http://www.sigasi.com/contact"><span class="menu-item-text">Contact</span></a>
+      <a href="http://www.sigasi.com/contact"><span class="menu-item-text">Contact</span></a>
     </li>
     <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page sf-std-menu current-menu-item page_item page-item-11858 current_page_item" >
-    	<a href="http://insights.sigasi.com"><span class="menu-item-text">Insights</span></a>
+      <a href="http://insights.sigasi.com"><span class="menu-item-text">Insights</span></a>
+        <ul class="sub-menu" style="top: 100px; display: none;">
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/manual/">Manual</a></li>
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/faq.html">FAQ</a></li>
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/releasenotes/">Release Notes</a></li>
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/screencasts/">Screencasts</a></li>
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/tech/">Tech Articles</a></li>
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/opinion/">Opinion</a></li>
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/support.html">Support</a></li>
+        </ul>
     </li>
 </ul></div></nav>
 
@@ -442,7 +451,9 @@ img.emoji {
       <div class="col-md-9" role="main">
         <p>A common problem in larger teams is how to share Sigasi preferences (configuration) in design teams. There are always some options that need to be set for Sigasi to work well, for example: the simulator path, license key, custom autocomplete templates,VHDL version.</p>
 <p>Sigasi (and the underlying Eclipse platform) does not have one single configuration file. Preferences are stored in several files. Most preferences are stored with a workspace scope and some per project. So how can you share preferences in a team?</p>
-<h3 id="option-1-corporate-wiki-and-exporting-preferences">Option 1: Corporate wiki and exporting preferences</h3>
+<p>Option 1: Corporate wiki and exporting preferences
+comments: true</p>
+<hr />
 <p>The classic approach to share preferences in teams is a Wiki or a readme file. This offers a textual description on how to setup Sigasi/Eclipse. But going through a checklist is a dull task. It is easy to make mistakes and is simply a waste of time. And what if the wiki page is updated?</p>
 <p>Eclipse offers an import/export mechanism to share preferences in Eclipse Preference Files (.epf). This solves part of the problem. But it is still a manual task and it overwrites personal tweaks.</p>
 <p>If you distribute a customized version of Sigasi internally, you can also set default preferences by making following changes in the Sigasi ZIP file.</p>
@@ -465,7 +476,9 @@ org.eclipse.ui.editors/spacesForTabs=true
 
 </li>
 </ol>
-<h3 id="option-2-fully-automated-with-workspace-mechanic">Option 2: Fully automated with Workspace Mechanic</h3>
+<p>Option 2: Fully automated with Workspace Mechanic
+comments: true</p>
+<hr />
 <p>Google also ran into this problem and solved it by developing the Workspace Mechanic plugin for Eclipse. This plugin, which also works fine in Sigasi, allows to automate the maintenance of Eclipse environments.</p>
 <p>The mechanic plugin will compare your workspace configuration with the team configuration at regular intervals. If the team configuration has changed, the Workspace Mechanic plugin offers to update the local settings. The developer can choose which updates to apply, or skip, or entirely ignore.</p>
 <p><img alt="Workspace Mechanic popup" src="./images/popup-workspace-mechanic.jpg" /></p>
@@ -481,25 +494,20 @@ org.eclipse.ui.editors/spacesForTabs=true
 <p>You can install the plugin from update site http://workspacemechanic.eclipselabs.org.codespot.com/git.update/mechanic</p>
 <p>If you need extra help using Workspace Mechanic in Sigasi, please contact us.</p>
 
-      </div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+var disqus_shortname = 'sigasi';
+var disqus_developer = 1;
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>      </div>
     </div>
 
-    <div class="col-md-3" role="complementary">
-      <nav class="hidden-print hidden-xs hidden-sm">
-        <div class="sidebar" data-spy="affix" data-offset-top="510" >
-          <div class="well">
-            <a href="#"><strong>Managing and sharing preferences for teams</strong></a>
-            <div class="toc">
-<ul>
-<li><a href="#option-1-corporate-wiki-and-exporting-preferences">Option 1: Corporate wiki and exporting preferences</a></li>
-<li><a href="#option-2-fully-automated-with-workspace-mechanic">Option 2: Fully automated with Workspace Mechanic</a></li>
-</ul>
-</div>
-
-          </div>
-        </div>
-      </nav>
-    </div>
 
   </div>
 

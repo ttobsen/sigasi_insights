@@ -193,19 +193,28 @@ img.emoji {
 <nav id="main-navigation" class="std-menu clearfix">
 <div class="menu-main_eng-container"><ul id="menu-main_eng-1" class="menu">
     <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page sf-std-menu " >
-    	<a href="http://www.sigasi.com"><span class="menu-item-text">Home</span></a>
+      <a href="http://www.sigasi.com"><span class="menu-item-text">Home</span></a>
     </li>
     <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page sf-std-menu " >
-    	<a href="http://www.sigasi.com/about"><span class="menu-item-text">About</span></a>
+      <a href="http://www.sigasi.com/about"><span class="menu-item-text">About</span></a>
     </li>
     <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page sf-std-menu " >
-    	<a href="http://www.sigasi.com/products"><span class="menu-item-text">Products</span></a>
+      <a href="http://www.sigasi.com/products"><span class="menu-item-text">Products</span></a>
     </li>
     <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page sf-std-menu " >
-    	<a href="http://www.sigasi.com/contact"><span class="menu-item-text">Contact</span></a>
+      <a href="http://www.sigasi.com/contact"><span class="menu-item-text">Contact</span></a>
     </li>
     <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page sf-std-menu current-menu-item page_item page-item-11858 current_page_item" >
-    	<a href="http://insights.sigasi.com"><span class="menu-item-text">Insights</span></a>
+      <a href="http://insights.sigasi.com"><span class="menu-item-text">Insights</span></a>
+        <ul class="sub-menu" style="top: 100px; display: none;">
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/manual/">Manual</a></li>
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/faq.html">FAQ</a></li>
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/releasenotes/">Release Notes</a></li>
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/screencasts/">Screencasts</a></li>
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/tech/">Tech Articles</a></li>
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/opinion/">Opinion</a></li>
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/support.html">Support</a></li>
+        </ul>
     </li>
 </ul></div></nav>
 
@@ -479,7 +488,9 @@ project, like the <code>XilinxCoreLib</code> or <code>Altera_MF</code> files.</p
 </pre></div>
 
 
-<h3 id="setting-it-up">Setting it up</h3>
+<p>Setting it up
+comments: true</p>
+<hr />
 <p>First, we will <strong>create a Sigasi project</strong> that lives in the directory
 where you have your files.</p>
 <ol>
@@ -507,7 +518,9 @@ to compile your project.</p>
 library name</strong>. Right-click the altera_mf directory in your Sigasi
 project explorer and select <strong>Library Mapping &gt; New Library ...</strong>.
 Now give the correct library name, in this case: <code>altera_mf</code>.</p>
-<h3 id="building-your-project">Building your project</h3>
+<p>Building your project
+comments: true</p>
+<hr />
 <p>Make sure your project is set to build automatically: <strong>Project &gt; Build Automatically</strong>.
 If you have VHDL files in the project folder that are not really a part
 of the folder, you should unmap them from your VHDL libraries. Read more
@@ -515,7 +528,9 @@ about <a href="/faq.html#junk-files" title="FAQ">junk-files</a>. Your project sh
 errors (red markers). If it does, try to figure out what went wrong: Is
 it a legacy junk file? Is there a bug in your VHDL code? Did you forget
 to add a library?</p>
-<h3 id="extra-tips">Extra tips</h3>
+<p>Extra tips
+comments: true</p>
+<hr />
 <p>Sigasi creates a few hidden files in your project directory. If you use
 a revision control system, we recommend you check in these files:</p>
 <ul>
@@ -523,12 +538,16 @@ a revision control system, we recommend you check in these files:</p>
 <li><code>.library_mapping.xml</code></li>
 <li><code>.settings</code> (This directory is only created when you have configured extra options.)</li>
 </ul>
-<h3 id="pros-and-cons">Pros and Cons</h3>
+<p>Pros and Cons
+comments: true</p>
+<hr />
 <p>This is a relatively easy way of organizing your project. There is some
 extra effort in setting up a project, but that should only take a few
 minutes. If your files are not neatly organized in a single folder, or
 if you have a bunch of junk files in your folder,</p>
-<h3 id="when-to-use">When to use</h3>
+<p>When to use
+comments: true</p>
+<hr />
 <p>If you are just learning to use Sigasi, or if you are studying VHDL, we
 strongly recommend the <strong>one design – one folder</strong> approach.
 We also recommended it for small and moderate sized projects:</p>
@@ -541,28 +560,20 @@ We also recommended it for small and moderate sized projects:</p>
 files are stored in locations across your hard drives or network drives,
 we recommend you use <a href="/tech/one-ip-block-project.html" title="One IP block per project">One IP block per project</a>.</p>
 
-      </div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+var disqus_shortname = 'sigasi';
+var disqus_developer = 1;
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>      </div>
     </div>
 
-    <div class="col-md-3" role="complementary">
-      <nav class="hidden-print hidden-xs hidden-sm">
-        <div class="sidebar" data-spy="affix" data-offset-top="510" >
-          <div class="well">
-            <a href="#"><strong>One design in one folder</strong></a>
-            <div class="toc">
-<ul>
-<li><a href="#setting-it-up">Setting it up</a></li>
-<li><a href="#building-your-project">Building your project</a></li>
-<li><a href="#extra-tips">Extra tips</a></li>
-<li><a href="#pros-and-cons">Pros and Cons</a></li>
-<li><a href="#when-to-use">When to use</a></li>
-</ul>
-</div>
-
-          </div>
-        </div>
-      </nav>
-    </div>
 
   </div>
 

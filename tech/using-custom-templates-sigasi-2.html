@@ -193,19 +193,28 @@ img.emoji {
 <nav id="main-navigation" class="std-menu clearfix">
 <div class="menu-main_eng-container"><ul id="menu-main_eng-1" class="menu">
     <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page sf-std-menu " >
-    	<a href="http://www.sigasi.com"><span class="menu-item-text">Home</span></a>
+      <a href="http://www.sigasi.com"><span class="menu-item-text">Home</span></a>
     </li>
     <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page sf-std-menu " >
-    	<a href="http://www.sigasi.com/about"><span class="menu-item-text">About</span></a>
+      <a href="http://www.sigasi.com/about"><span class="menu-item-text">About</span></a>
     </li>
     <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page sf-std-menu " >
-    	<a href="http://www.sigasi.com/products"><span class="menu-item-text">Products</span></a>
+      <a href="http://www.sigasi.com/products"><span class="menu-item-text">Products</span></a>
     </li>
     <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page sf-std-menu " >
-    	<a href="http://www.sigasi.com/contact"><span class="menu-item-text">Contact</span></a>
+      <a href="http://www.sigasi.com/contact"><span class="menu-item-text">Contact</span></a>
     </li>
     <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page sf-std-menu current-menu-item page_item page-item-11858 current_page_item" >
-    	<a href="http://insights.sigasi.com"><span class="menu-item-text">Insights</span></a>
+      <a href="http://insights.sigasi.com"><span class="menu-item-text">Insights</span></a>
+        <ul class="sub-menu" style="top: 100px; display: none;">
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/manual/">Manual</a></li>
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/faq.html">FAQ</a></li>
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/releasenotes/">Release Notes</a></li>
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/screencasts/">Screencasts</a></li>
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/tech/">Tech Articles</a></li>
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/opinion/">Opinion</a></li>
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/support.html">Support</a></li>
+        </ul>
     </li>
 </ul></div></nav>
 
@@ -453,7 +462,9 @@ explain how to customize these templates and how to create your own.
 Chances are high that the pre-defined templates slightly differ from
 your preferred style or that you have your own standard pieces of code
 that you use on a regular basis.</p>
-<h3 id="edit-existing-templates">Edit existing templates</h3>
+<p>Edit existing templates
+comments: true</p>
+<hr />
 <p>To demonstrate the power of custom templates I will tailor the
 <code>process</code>-template of the example in my previous post to a
 different style. In my previous post, I demonstrated how to
@@ -481,7 +492,9 @@ default names for the clock and reset signals have changed.</p>
 <p><img alt="" src="images/customtemplate_3.png" /></p>
 <p>Feel free to experiment with more customizations to the templates like
 adding default comments or changing white space and indentation.</p>
-<h3 id="create-new-templates">Create new templates</h3>
+<p>Create new templates
+comments: true</p>
+<hr />
 <p>Creating new templates is the evident next step. In the Templates
 Preference Page (<strong>Window &gt; Preferences &gt; VHDL &gt; Templates</strong>), simply press <strong>New...</strong>.</p>
 <p>First you have to specify a <strong>Name</strong> for your new template. Choose it
@@ -508,32 +521,28 @@ template. Note that you can use <strong>Ctrl+Space</strong> to auto-complete the
 pre-defined variables when you are editing the template.</p>
 <p>Useful examples of custom templates are file headers, default library
 and use clauses, <code>(others=&gt;'0')</code>, ...</p>
-<h3 id="conclusion">Conclusion</h3>
+<p>Conclusion
+comments: true</p>
+<hr />
 <p>Custom templates can really help you improve you coding speed by
 assisting you in typing faster, especially for verbose VHDL constructs.
 Templates are really flexible and can be customized to really suit your
 needs.</p>
 
-      </div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+var disqus_shortname = 'sigasi';
+var disqus_developer = 1;
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>      </div>
     </div>
 
-    <div class="col-md-3" role="complementary">
-      <nav class="hidden-print hidden-xs hidden-sm">
-        <div class="sidebar" data-spy="affix" data-offset-top="510" >
-          <div class="well">
-            <a href="#"><strong>Using Custom Templates in Sigasi 2</strong></a>
-            <div class="toc">
-<ul>
-<li><a href="#edit-existing-templates">Edit existing templates</a></li>
-<li><a href="#create-new-templates">Create new templates</a></li>
-<li><a href="#conclusion">Conclusion</a></li>
-</ul>
-</div>
-
-          </div>
-        </div>
-      </nav>
-    </div>
 
   </div>
 

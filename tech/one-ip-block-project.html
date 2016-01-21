@@ -193,19 +193,28 @@ img.emoji {
 <nav id="main-navigation" class="std-menu clearfix">
 <div class="menu-main_eng-container"><ul id="menu-main_eng-1" class="menu">
     <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page sf-std-menu " >
-    	<a href="http://www.sigasi.com"><span class="menu-item-text">Home</span></a>
+      <a href="http://www.sigasi.com"><span class="menu-item-text">Home</span></a>
     </li>
     <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page sf-std-menu " >
-    	<a href="http://www.sigasi.com/about"><span class="menu-item-text">About</span></a>
+      <a href="http://www.sigasi.com/about"><span class="menu-item-text">About</span></a>
     </li>
     <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page sf-std-menu " >
-    	<a href="http://www.sigasi.com/products"><span class="menu-item-text">Products</span></a>
+      <a href="http://www.sigasi.com/products"><span class="menu-item-text">Products</span></a>
     </li>
     <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page sf-std-menu " >
-    	<a href="http://www.sigasi.com/contact"><span class="menu-item-text">Contact</span></a>
+      <a href="http://www.sigasi.com/contact"><span class="menu-item-text">Contact</span></a>
     </li>
     <li  class="menu-item-11838 menu-item menu-item-type-post_type menu-item-object-page sf-std-menu current-menu-item page_item page-item-11858 current_page_item" >
-    	<a href="http://insights.sigasi.com"><span class="menu-item-text">Insights</span></a>
+      <a href="http://insights.sigasi.com"><span class="menu-item-text">Insights</span></a>
+        <ul class="sub-menu" style="top: 100px; display: none;">
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/manual/">Manual</a></li>
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/faq.html">FAQ</a></li>
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/releasenotes/">Release Notes</a></li>
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/screencasts/">Screencasts</a></li>
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/tech/">Tech Articles</a></li>
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/opinion/">Opinion</a></li>
+          <li class="menu-item-11957 menu-item menu-item-type-custom menu-item-object-custom sf-std-menu"><a href="/support.html">Support</a></li>
+        </ul>
     </li>
 </ul></div></nav>
 
@@ -455,7 +464,9 @@ reminder:</p>
 <li><a href="/tech/one-design-one-folder.html" title="One design in one folder">One design in one folder</a></li>
 <li>Aggregation of reusable projects (described in this article)</li>
 </ol>
-<h3 id="what-is-a-reusable-project">What is a reusable project?</h3>
+<p>What is a reusable project?
+comments: true</p>
+<hr />
 <p>If you have a set of VHDL files, which may include packages, entities
 and architectures, we will call this a <em>reusable project</em>. The files are
 closely related and serve a single purpose. Often, these reusable
@@ -463,7 +474,9 @@ projects take the form of an IP library (like the IEEE libraries), or an
 IP core (like a processor core or a memory controller). If you are
 working on large projects, such as a System on Chip (SoC) design, you
 are using IP cores.</p>
-<h3 id="setting-it-up-std-and-ieee">Setting it up: STD and IEEE</h3>
+<p>Setting it up: STD and IEEE
+comments: true</p>
+<hr />
 <p><em>You can turn off the automatic builder while you are setting up your
 projects: <strong>Project &gt; Build automatically</strong>. This will keep the
 compiler from starting before you have set things up correctly.</em></p>
@@ -478,7 +491,9 @@ from that project. Next create a project called IEEE and remove the STD
 folders from that project. Now you need to make IEEE depend on STD:
 <strong>Project &gt; Properties &gt; Project References</strong> and select STD as a
 project reference for IEEE.</p>
-<h3 id="adding-your-own-libraries">Adding your own libraries</h3>
+<p>Adding your own libraries
+comments: true</p>
+<hr />
 <p>Now that you have the first two libraries, it is time to add your own
 library. Select <strong>File &gt; New &gt; Empty VHDL Project</strong>. Clear the
 <strong>Use default location</strong> mark and select the location of your library.
@@ -508,12 +523,16 @@ project structure.</p>
 <p><em>Don't forget to turn the autobuilder back on. <strong>Project &gt; Build
 automatically</strong></em></p>
 <p><img alt="Setting up GRLIB as a multi-project" src="images/multi-project.png" /></p>
-<h3 id="pros-and-cons">Pros and Cons</h3>
+<p>Pros and Cons
+comments: true</p>
+<hr />
 <p>This is a robust way of organizing large projects. Setting projects up
 takes extra time, say about half an hour for larger projects. Having
 separate reusable blocks in separate projects makes it easier to work in
 teams and to deal with third party IP.</p>
-<h3 id="when-to-use">When to use</h3>
+<p>When to use
+comments: true</p>
+<hr />
 <p>If you are working on a serious industrial design, with reusable
 in-house IP and/or third party IP, we would recommend the <strong>one IP block
 per project</strong> approach.
@@ -524,7 +543,9 @@ We especially recommended it for any mid or large scale project, or:</p>
 <li>If you are working on several designs with shared libraries and
     IP blocks.</li>
 </ul>
-<h3 id="real-life-grlib">Real life: GRLIB</h3>
+<p>Real life: GRLIB
+comments: true</p>
+<hr />
 <p>To show you an example of how to get started, I have created <a href="/screencasts/organizing-grlib-one-project-library.html">a video
 where I set up the first few
 libraries</a> in the open
@@ -535,29 +556,20 @@ Use <strong>File &gt; Import... &gt; General &gt; Existing Projects into
 Workspace</strong>. Then <strong>Select archive file</strong>, <strong>Select All</strong> and click
 <strong>Finish</strong>. Importing and compiling everything will take a few minutes.</p>
 
-      </div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+var disqus_shortname = 'sigasi';
+var disqus_developer = 1;
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>      </div>
     </div>
 
-    <div class="col-md-3" role="complementary">
-      <nav class="hidden-print hidden-xs hidden-sm">
-        <div class="sidebar" data-spy="affix" data-offset-top="510" >
-          <div class="well">
-            <a href="#"><strong>One IP block per project</strong></a>
-            <div class="toc">
-<ul>
-<li><a href="#what-is-a-reusable-project">What is a reusable project?</a></li>
-<li><a href="#setting-it-up-std-and-ieee">Setting it up: STD and IEEE</a></li>
-<li><a href="#adding-your-own-libraries">Adding your own libraries</a></li>
-<li><a href="#pros-and-cons">Pros and Cons</a></li>
-<li><a href="#when-to-use">When to use</a></li>
-<li><a href="#real-life-grlib">Real life: GRLIB</a></li>
-</ul>
-</div>
-
-          </div>
-        </div>
-      </nav>
-    </div>
 
   </div>
 
