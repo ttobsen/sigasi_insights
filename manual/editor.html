@@ -566,6 +566,13 @@ example a column of a table or all port names in a port map.</p>
 <p><img alt="Block selection" src="images/block-select.png" title="Block selection Mode" /></p>
 <p>To toggle between normal and block selection modes use <strong>Alt+Shift+A</strong>
 or press the <strong>Toggle Block Selection</strong> icon in the tool bar.</p>
+<h4 id="structured-selection">Structured selection</h4>
+<p>Structured Select enables you to select VHDL or Verilog code, based on its <em>syntactic structure</em>. (Screencast: "<a href="/screencasts/structured-select.html" title="Select code, based on its structure">Select code, based on its structure</a>")</p>
+<ul>
+<li><strong>Shift+Alt+Up</strong>, expands the selection to the smallest syntax element that contains the current selection. You can then further expand the selection by invoking the action again.</li>
+<li><strong>Shift+Alt+Down</strong>, contracts the current selection to the nested syntax expression that still contains the current cursor position. You can then further contract the selection by invoking the action again.</li>
+<li><strong>Shift+Alt+Left</strong>, adds the syntax element left of the current selection to the selection. You can then further expand the selection by invoking the action again. You can also expand the selection in the other direction with <strong>Shift+Alt+Right</strong></li>
+</ul>
 <h4 id="show-whitespace">Show whitespace</h4>
 <h4 id="move-lines">Move and Duplicate lines</h4>
 <p>You can easily <em>move</em> lines up and down by pressing: <strong>Alt+Up</strong> and
@@ -779,6 +786,7 @@ according to your preferences. </p>
 <li><a href="#code-folding">Code folding</a></li>
 <li><a href="#full-screen-view">Full screen view</a></li>
 <li><a href="#block-select">Block selection</a></li>
+<li><a href="#structured-selection">Structured selection</a></li>
 <li><a href="#show-whitespace">Show whitespace</a></li>
 <li><a href="#move-lines">Move and Duplicate lines</a></li>
 <li><a href="#configure-key-bindings">Configure key bindings</a></li>
