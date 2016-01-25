@@ -449,13 +449,13 @@ img.emoji {
     <div class="content">
       <div class="col-md-9" role="main">
         <h3 id="ts-unresponsive">The user interface is unresponsive</h3>
-<p>If the user interface of Sigasi HDT is unresponsive, you can interrupt the internal compilation process by pressing the <strong>stop</strong> button in the progress view. To activate the progress view, select <strong>Window &gt; Show View &gt; Other... &gt; General &gt; Progress</strong>, or click the tiny conveyor belt icon <img alt="" src="icons/progressicon.png" />, on the right side of the status bar.</p>
+<p>If the user interface of Sigasi Studio is unresponsive, you can interrupt the internal compilation process by pressing the <strong>stop</strong> button in the progress view. To activate the progress view, select <strong>Window &gt; Show View &gt; Other... &gt; General &gt; Progress</strong>, or click the tiny conveyor belt icon <img alt="" src="icons/progressicon.png" />, on the right side of the status bar.</p>
 <h3 id="ts-refresh-editor">The editor displays old contents of a file</h3>
-<p>If you edit a file outside of HDT with an external editor, Sigasi will normally notice the changes and ask if you want to load the changes. If
+<p>If you edit a file outside of Sigasi Studio with an external editor, Sigasi will normally notice the changes and ask if you want to load the changes. If
 it doesn’t, you can refresh the editor’s content by pressing <strong>F5</strong> or by right-clicking a file or a project in the project explorer and
 selecting <strong>Refresh</strong>.</p>
 <h3 id="how-much-local-history-will-be-stored">How much local history will be stored?</h3>
-<p>Sigasi HDT stores the history of your file so that you can compare your current version with the version you saved an hour ago.</p>
+<p>Sigasi Studio stores the history of your file so that you can compare your current version with the version you saved an hour ago.</p>
 <p>You can define how much disk space is used for storing local history in <strong>Windows &gt; Preferences</strong>, select <strong>General &gt; Workspace &gt; Local History</strong>.</p>
 <p>For more information on local history, check out <a href="http://help.eclipse.org/help32/index.jsp?topic=/org.eclipse.platform.doc.user/gettingStarted/qs-55.htm">this page</a>.</p>
 <h3 id="i-see-hundreds-or-thousands-of-errors">I see hundreds or thousands of errors</h3>
@@ -506,12 +506,12 @@ selecting <strong>Refresh</strong>.</p>
 </ul>
 <p>Cause: Common libraries are not configured correctly.</p>
 <p>Resolution: Reset the common libraries: <strong>right-click the project &gt; Library Mapping &gt; Reset Library Mapping</strong></p>
-<h3 id="ts-stale-files">HDT analyzes HDL files that I do not need</h3>
-<p>By default, Sigasi assumes that all VHDL or Verilog files are part of the project. However, some projects may contain multiple files with older or alternative definitions of a VHDL object. We call these <em>stale</em> files, because they are no longer used. In such a case you will want HDT to ignore certain files.</p>
+<h3 id="ts-stale-files">Sigasi Studio analyzes HDL files that I do not need</h3>
+<p>By default, Sigasi assumes that all VHDL or Verilog files are part of the project. However, some projects may contain multiple files with older or alternative definitions of a VHDL object. We call these <em>stale</em> files, because they are no longer used. In such a case you will want Sigasi Studio to ignore certain files.</p>
 <p>To exclude files (or directories) from analysis, consult the <a href="/manual/libraries.html" title="Libraries">Libraries</a>.</p>
 <p>Ignored resources are decorated with a <img alt="" src="icons/ignoreicon.png" /> icon in the project explorer view.</p>
 <h3 id="ts-updates">I do not get automatic updates</h3>
-<p>If the updates are not automatically fetched from the Sigasi update server you are probably behind a firewall or proxy server. You can configure HDT’s proxy settings in <strong>Window &gt; Preferences &gt; General &gt; Network connections</strong>. If you can not add a firewall exception for our update site, the fall back solution is to download the complete application from our website. You can completely replace your old installation; all settings are stored in your workspace (the default is
+<p>If the updates are not automatically fetched from the Sigasi update server you are probably behind a firewall or proxy server. You can configure Sigasi Studio’s proxy settings in <strong>Window &gt; Preferences &gt; General &gt; Network connections</strong>. If you can not add a firewall exception for our update site, the fall back solution is to download the complete application from our website. You can completely replace your old installation; all settings are stored in your workspace (the default is
 <code>workspaceSigasi</code> in your home directory).</p>
 <h3 id="sigasi-startup-fails-could-not-create-the-java-virtual-machine">Sigasi startup fails: "Could not create the Java virtual machine"</h3>
 <p>On some computers, the standalone version of Sigasi will fail to start with an error message similar to: "Could not create the Java virtual machine." This happens especially on 32-bit Windows machines with less than 2GB of physical memory. The reason is that the Java virtual machine tries to allocate more much memory than what is available.</p>
@@ -578,7 +578,7 @@ Is it OK to upgrade the project to match the installed version of Quartus II? </
 <li><a href="#ts-vhdl-support">Project does not have VHDL support</a></li>
 <li><a href="#ts-missing-library-mapping-informatino">Project does not have a Library Mapping Information</a></li>
 <li><a href="#ts-commonlib">Project does not have Common Libraries</a></li>
-<li><a href="#ts-stale-files">HDT analyzes HDL files that I do not need</a></li>
+<li><a href="#ts-stale-files">Sigasi Studio analyzes HDL files that I do not need</a></li>
 <li><a href="#ts-updates">I do not get automatic updates</a></li>
 <li><a href="#sigasi-startup-fails-could-not-create-the-java-virtual-machine">Sigasi startup fails: "Could not create the Java virtual machine"</a></li>
 <li><a href="#ts-clean">I want a clean restart</a><ul>
