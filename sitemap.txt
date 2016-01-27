@@ -91,6 +91,7 @@ http://insights.sigasi.com/opinion/why-use-eclipse-embedded-software-development
 http://insights.sigasi.com/opinion/xilinx-slowly-dumping-modelsim.html
 http://insights.sigasi.com/opinion/you-cant-write-vhdl-code-without-intelligent-editor.html
 http://insights.sigasi.com/opinion/your-mileage-may-vary-lot.html
+http://insights.sigasi.com/outdated.html
 http://insights.sigasi.com/releasenotes/index.html
 http://insights.sigasi.com/releasenotes/sigasi-2.0.html
 http://insights.sigasi.com/releasenotes/sigasi-2.1.html
