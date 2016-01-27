@@ -519,10 +519,10 @@ Note that if you want to use the environment variable, you can not enter a path 
 <p>You can change the ports and servername without breaking the signature.</p>
 <h4 id="starting-the-flexnet-and-sigasi-daemon-on-linux">Starting the Flexnet and Sigasi Daemon on Linux</h4>
 <p>the easiest way to start the Sigasi Flexnet Daemon is like this (on Linux)</p>
-<div class="codehilite"><pre><span class="ch">#!/bin/sh</span>
+<div class="codehilite"><pre><span class="c">#!/bin/sh</span>
 <span class="nb">echo</span> <span class="s2">&quot;Starting the Sigasi floating license server&quot;</span>
 <span class="nv">LOCATION</span><span class="o">=</span>/home/flex/flexnet-sigasi
-$LOCATION/lmgrd -c $LOCATION/sigasi.lic -l $LOCATION/debug.log
+<span class="nv">$LOCATION</span>/lmgrd -c <span class="nv">$LOCATION</span>/sigasi.lic -l <span class="nv">$LOCATION</span>/debug.log
 </pre></div>
 
 
