@@ -115,16 +115,18 @@ img.emoji {
                                     </style>
 <meta name="generator" content="Powered by Slider Revolution 5.0.8.5 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
 
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    
-      ga('create', 'UA-2852630-4', 'auto');
-      ga('send', 'pageview');
-    
-    </script>
+<!-- BEGIN GADWP v4.9.0.1 Universal Tracking - https://deconf.com/google-analytics-dashboard-wordpress/ -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37021776-11', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<!-- END GADWP Universal Tracking -->
+
 <style type="text/css" title="dynamic-css" class="options-output">#logo h1, #logo h2, #mobile-logo h1{font-family:Lato;font-weight:700;font-style:normal;color:#ffffff;font-size:18px;}body,p{font-family:"Open Sans";line-height:26px;font-weight:400;font-style:normal;font-size:16px;}h1,.impact-text,.impact-text-large{font-family:"Open Sans";line-height:40px;font-weight:600;font-style:normal;font-size:30px;}h2,.blog-item .quote-excerpt{font-family:"Open Sans";line-height:44px;letter-spacing:0px;font-weight:400;font-style:normal;font-size:38px;}h3{font-family:"Open Sans";line-height:30px;letter-spacing:0px;font-weight:600;font-style:normal;font-size:25px;}h4{font-family:"Open Sans";line-height:26px;font-weight:600;font-style:normal;font-size:20px;}h5{font-family:"Open Sans";line-height:18px;font-weight:600;font-style:normal;font-size:14px;}h6{font-family:"Open Sans";line-height:16px;letter-spacing:0px;font-weight:400;font-style:normal;font-size:12px;}#main-nav, #header nav, #vertical-nav nav, .header-9#header-section #main-nav, #overlay-menu nav, #mobile-menu, #one-page-nav li .hover-caption, .mobile-search-form input[type="text"]{font-family:"Open Sans";letter-spacing:1px;font-weight:700;font-style:normal;font-size:14px;}</style>
 <link href="/css/override.css" rel="stylesheet" media="screen">
     <!--// CLOSE HEAD //-->
@@ -466,7 +468,7 @@ img.emoji {
 <h2 id="usb-blaster-setup">USB-Blaster setup</h2>
 <p>Setting the USB-blaster was a bit harder:
 As described <a href="http://www.altera.com/download/drivers/dri-usb_b-lnx.html">here</a> you need to create an extra udev rule (<code>sudo vim /etc/udev/rules.d/51-usbblaster.rules</code>) with following content:</p>
-<div class="codehilite"><pre><span class="c"># USB-Blaster</span>
+<div class="codehilite"><pre><span class="c1"># USB-Blaster</span>
 <span class="nv">BUS</span><span class="o">==</span><span class="s2">&quot;usb&quot;</span>, SYSFS<span class="o">{</span>idVendor<span class="o">}==</span><span class="s2">&quot;09fb&quot;</span>, SYSFS<span class="o">{</span>idProduct<span class="o">}==</span><span class="s2">&quot;6001&quot;</span>, <span class="nv">MODE</span><span class="o">=</span><span class="s2">&quot;0666&quot;</span>, <span class="nv">PROGRAM</span><span class="o">=</span><span class="s2">&quot;/bin/sh -c &#39;K=%k; K=</span><span class="nv">$$</span><span class="s2">{K#usbdev}; printf /proc/bus/usb/%%03i/%%03i</span><span class="nv">$$</span><span class="s2">{K%%%%.*} </span><span class="nv">$$</span><span class="s2">{K#*.}&#39;&quot;</span>, RUN+<span class="o">=</span><span class="s2">&quot;/bin/chmod 0666 %c&quot;</span>
 </pre></div>
 
@@ -483,7 +485,7 @@ touch ~/.jtag.conf
 
 
 <p>Next, I appended following lines to my to my <code>/etc/rc.local</code> file:</p>
-<div class="codehilite"><pre><span class="nb">echo </span><span class="m">356</span> <span class="m">40000</span> <span class="m">32</span> <span class="m">32000</span> &gt; /proc/sys/kernel/sem
+<div class="codehilite"><pre><span class="nb">echo</span> <span class="m">356</span> <span class="m">40000</span> <span class="m">32</span> <span class="m">32000</span> &gt; /proc/sys/kernel/sem
 /opt/altera/10.1/quartus/bin/jtagd
 </pre></div>
 

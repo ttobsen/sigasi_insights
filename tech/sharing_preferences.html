@@ -115,16 +115,18 @@ img.emoji {
                                     </style>
 <meta name="generator" content="Powered by Slider Revolution 5.0.8.5 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
 
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    
-      ga('create', 'UA-2852630-4', 'auto');
-      ga('send', 'pageview');
-    
-    </script>
+<!-- BEGIN GADWP v4.9.0.1 Universal Tracking - https://deconf.com/google-analytics-dashboard-wordpress/ -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37021776-11', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<!-- END GADWP Universal Tracking -->
+
 <style type="text/css" title="dynamic-css" class="options-output">#logo h1, #logo h2, #mobile-logo h1{font-family:Lato;font-weight:700;font-style:normal;color:#ffffff;font-size:18px;}body,p{font-family:"Open Sans";line-height:26px;font-weight:400;font-style:normal;font-size:16px;}h1,.impact-text,.impact-text-large{font-family:"Open Sans";line-height:40px;font-weight:600;font-style:normal;font-size:30px;}h2,.blog-item .quote-excerpt{font-family:"Open Sans";line-height:44px;letter-spacing:0px;font-weight:400;font-style:normal;font-size:38px;}h3{font-family:"Open Sans";line-height:30px;letter-spacing:0px;font-weight:600;font-style:normal;font-size:25px;}h4{font-family:"Open Sans";line-height:26px;font-weight:600;font-style:normal;font-size:20px;}h5{font-family:"Open Sans";line-height:18px;font-weight:600;font-style:normal;font-size:14px;}h6{font-family:"Open Sans";line-height:16px;letter-spacing:0px;font-weight:400;font-style:normal;font-size:12px;}#main-nav, #header nav, #vertical-nav nav, .header-9#header-section #main-nav, #overlay-menu nav, #mobile-menu, #one-page-nav li .hover-caption, .mobile-search-form input[type="text"]{font-family:"Open Sans";letter-spacing:1px;font-weight:700;font-style:normal;font-size:14px;}</style>
 <link href="/css/override.css" rel="stylesheet" media="screen">
     <!--// CLOSE HEAD //-->
@@ -449,9 +451,7 @@ img.emoji {
       <div class="col-md-9" role="main">
         <p>A common problem in larger teams is how to share Sigasi preferences (configuration) in design teams. There are always some options that need to be set for Sigasi to work well, for example: the simulator path, license key, custom autocomplete templates,VHDL version.</p>
 <p>Sigasi (and the underlying Eclipse platform) does not have one single configuration file. Preferences are stored in several files. Most preferences are stored with a workspace scope and some per project. So how can you share preferences in a team?</p>
-<p>Option 1: Corporate wiki and exporting preferences
-comments: true</p>
-<hr />
+<h3 id="option-1-corporate-wiki-and-exporting-preferences">Option 1: Corporate wiki and exporting preferences</h3>
 <p>The classic approach to share preferences in teams is a Wiki or a readme file. This offers a textual description on how to setup Sigasi/Eclipse. But going through a checklist is a dull task. It is easy to make mistakes and is simply a waste of time. And what if the wiki page is updated?</p>
 <p>Eclipse offers an import/export mechanism to share preferences in Eclipse Preference Files (.epf). This solves part of the problem. But it is still a manual task and it overwrites personal tweaks.</p>
 <p>If you distribute a customized version of Sigasi internally, you can also set default preferences by making following changes in the Sigasi ZIP file.</p>
@@ -474,9 +474,7 @@ org.eclipse.ui.editors/spacesForTabs=true
 
 </li>
 </ol>
-<p>Option 2: Fully automated with Workspace Mechanic
-comments: true</p>
-<hr />
+<h3 id="option-2-fully-automated-with-workspace-mechanic">Option 2: Fully automated with Workspace Mechanic</h3>
 <p>Google also ran into this problem and solved it by developing the Workspace Mechanic plugin for Eclipse. This plugin, which also works fine in Sigasi, allows to automate the maintenance of Eclipse environments.</p>
 <p>The mechanic plugin will compare your workspace configuration with the team configuration at regular intervals. If the team configuration has changed, the Workspace Mechanic plugin offers to update the local settings. The developer can choose which updates to apply, or skip, or entirely ignore.</p>
 <p><img alt="Workspace Mechanic popup" src="./images/popup-workspace-mechanic.jpg" /></p>
@@ -506,6 +504,22 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 <noscript>Please enable JavaScript to view the comments.</noscript>      </div>
     </div>
 
+    <div class="col-md-3" role="complementary">
+      <nav class="hidden-print hidden-xs hidden-sm">
+        <div class="sidebar" data-spy="affix" data-offset-top="510" >
+          <div class="well">
+            <a href="#"><strong>Managing and sharing preferences for teams</strong></a>
+            <div class="toc">
+<ul>
+<li><a href="#option-1-corporate-wiki-and-exporting-preferences">Option 1: Corporate wiki and exporting preferences</a></li>
+<li><a href="#option-2-fully-automated-with-workspace-mechanic">Option 2: Fully automated with Workspace Mechanic</a></li>
+</ul>
+</div>
+
+          </div>
+        </div>
+      </nav>
+    </div>
 
   </div>
 
