@@ -68,7 +68,6 @@ http://insights.sigasi.com/opinion/jan/vhdls-crown-jewel.html
 http://insights.sigasi.com/opinion/jan/wasting-real-time-zero-time.html
 http://insights.sigasi.com/opinion/jan/your-favorite-mistake.html
 http://insights.sigasi.com/opinion/lacking-open-source-vhdl-simulator.html
-http://insights.sigasi.com/opinion/learning-leon3grlib.html
 http://insights.sigasi.com/opinion/neither-vi-nor-emacs-are-most-popular-vhdl-editor.html
 http://insights.sigasi.com/opinion/new-eda-20-company-plunify.html
 http://insights.sigasi.com/opinion/opening-our-documentation.html
@@ -197,7 +196,6 @@ http://insights.sigasi.com/tag/autocomplete/index.html
 http://insights.sigasi.com/tag/BeMicro/index.html
 http://insights.sigasi.com/tag/best practices/index.html
 http://insights.sigasi.com/tag/block selection/index.html
-http://insights.sigasi.com/tag/book/index.html
 http://insights.sigasi.com/tag/bookmark/index.html
 http://insights.sigasi.com/tag/case/index.html
 http://insights.sigasi.com/tag/case statement/index.html
@@ -222,15 +220,12 @@ http://insights.sigasi.com/tag/eclipse/index.html
 http://insights.sigasi.com/tag/EDA/index.html
 http://insights.sigasi.com/tag/EDA2.0/index.html
 http://insights.sigasi.com/tag/editor/index.html
-http://insights.sigasi.com/tag/educational license/index.html
+http://insights.sigasi.com/tag/editors/index.html
 http://insights.sigasi.com/tag/eetimes/index.html
 http://insights.sigasi.com/tag/Emacs/index.html
 http://insights.sigasi.com/tag/emf/index.html
 http://insights.sigasi.com/tag/empty range/index.html
-http://insights.sigasi.com/tag/EPL/index.html
 http://insights.sigasi.com/tag/external file/index.html
-http://insights.sigasi.com/tag/external tools/index.html
-http://insights.sigasi.com/tag/feedback/index.html
 http://insights.sigasi.com/tag/file structure/index.html
 http://insights.sigasi.com/tag/FPGA/index.html
 http://insights.sigasi.com/tag/GHDL/index.html
@@ -238,21 +233,16 @@ http://insights.sigasi.com/tag/GitHub/index.html
 http://insights.sigasi.com/tag/Guest Blog/index.html
 http://insights.sigasi.com/tag/gVIM/index.html
 http://insights.sigasi.com/tag/hdt-2.0/index.html
-http://insights.sigasi.com/tag/helios/index.html
-http://insights.sigasi.com/tag/hover/index.html
 http://insights.sigasi.com/tag/howto/index.html
 http://insights.sigasi.com/tag/IDE/index.html
 http://insights.sigasi.com/tag/IEEE/index.html
 http://insights.sigasi.com/tag/indent/index.html
 http://insights.sigasi.com/tag/index.html
 http://insights.sigasi.com/tag/innovation/index.html
-http://insights.sigasi.com/tag/Install/index.html
-http://insights.sigasi.com/tag/invited talk/index.html
 http://insights.sigasi.com/tag/JanHDL/index.html
 http://insights.sigasi.com/tag/java/index.html
 http://insights.sigasi.com/tag/keyboard shortcuts/index.html
 http://insights.sigasi.com/tag/libraries/index.html
-http://insights.sigasi.com/tag/library/index.html
 http://insights.sigasi.com/tag/linting/index.html
 http://insights.sigasi.com/tag/Mac/index.html
 http://insights.sigasi.com/tag/matrix/index.html
@@ -261,74 +251,50 @@ http://insights.sigasi.com/tag/memory/index.html
 http://insights.sigasi.com/tag/modelsim/index.html
 http://insights.sigasi.com/tag/mythbuster/index.html
 http://insights.sigasi.com/tag/naming conventions/index.html
-http://insights.sigasi.com/tag/open source/index.html
 http://insights.sigasi.com/tag/operators/index.html
 http://insights.sigasi.com/tag/others/index.html
 http://insights.sigasi.com/tag/performance/index.html
 http://insights.sigasi.com/tag/philosophical/index.html
 http://insights.sigasi.com/tag/planeteclipse/index.html
-http://insights.sigasi.com/tag/Plunify/index.html
 http://insights.sigasi.com/tag/poll/index.html
 http://insights.sigasi.com/tag/ports/index.html
 http://insights.sigasi.com/tag/pragma/index.html
 http://insights.sigasi.com/tag/presentation/index.html
 http://insights.sigasi.com/tag/project/index.html
 http://insights.sigasi.com/tag/project management/index.html
-http://insights.sigasi.com/tag/psychology/index.html
-http://insights.sigasi.com/tag/public beta/index.html
 http://insights.sigasi.com/tag/Python/index.html
 http://insights.sigasi.com/tag/Quartus/index.html
 http://insights.sigasi.com/tag/quickfix/index.html
 http://insights.sigasi.com/tag/recovering VHDL parser/index.html
-http://insights.sigasi.com/tag/Refactoring/index.html
 http://insights.sigasi.com/tag/Register mapping/index.html
 http://insights.sigasi.com/tag/rtl/index.html
-http://insights.sigasi.com/tag/scieneric/index.html
 http://insights.sigasi.com/tag/Screencast/index.html
-http://insights.sigasi.com/tag/scripts/index.html
-http://insights.sigasi.com/tag/SEO/index.html
 http://insights.sigasi.com/tag/Sigasi/index.html
-http://insights.sigasi.com/tag/simulation/index.html
-http://insights.sigasi.com/tag/social media/index.html
 http://insights.sigasi.com/tag/source code/index.html
 http://insights.sigasi.com/tag/strategy/index.html
 http://insights.sigasi.com/tag/Synopsys/index.html
-http://insights.sigasi.com/tag/tape-out/index.html
-http://insights.sigasi.com/tag/tcl/index.html
 http://insights.sigasi.com/tag/templates/index.html
-http://insights.sigasi.com/tag/translation/index.html
-http://insights.sigasi.com/tag/tutorial/index.html
 http://insights.sigasi.com/tag/tycho/index.html
-http://insights.sigasi.com/tag/ultraedit/index.html
-http://insights.sigasi.com/tag/use/index.html
-http://insights.sigasi.com/tag/vcom/index.html
 http://insights.sigasi.com/tag/verilog/index.html
 http://insights.sigasi.com/tag/version control/index.html
 http://insights.sigasi.com/tag/VHDL/index.html
 http://insights.sigasi.com/tag/vhdl 2008/index.html
+http://insights.sigasi.com/tag/VHDL code/index.html
 http://insights.sigasi.com/tag/VHDL compiler/index.html
 http://insights.sigasi.com/tag/VHDL editor/index.html
 http://insights.sigasi.com/tag/VHDL IDE/index.html
-http://insights.sigasi.com/tag/VHDL IEEE/index.html
 http://insights.sigasi.com/tag/VHDL Libraries/index.html
-http://insights.sigasi.com/tag/VHDL packages/index.html
 http://insights.sigasi.com/tag/VHDL Parser/index.html
 http://insights.sigasi.com/tag/VHDL simulator/index.html
+http://insights.sigasi.com/tag/VHDL syntax/index.html
 http://insights.sigasi.com/tag/VHDL synthesis/index.html
 http://insights.sigasi.com/tag/VI/index.html
 http://insights.sigasi.com/tag/VIM/index.html
-http://insights.sigasi.com/tag/visualization/index.html
 http://insights.sigasi.com/tag/VITAL/index.html
 http://insights.sigasi.com/tag/Vivado/index.html
-http://insights.sigasi.com/tag/vmap/index.html
-http://insights.sigasi.com/tag/webinar/index.html
-http://insights.sigasi.com/tag/when-else/index.html
 http://insights.sigasi.com/tag/whitepaper/index.html
-http://insights.sigasi.com/tag/with-select/index.html
 http://insights.sigasi.com/tag/Xilinx/index.html
-http://insights.sigasi.com/tag/xtend/index.html
 http://insights.sigasi.com/tag/Xtext/index.html
-http://insights.sigasi.com/tag/yakindu/index.html
 http://insights.sigasi.com/tech/7-segment-display.html
 http://insights.sigasi.com/tech/adding-custom-code-checkers-your-project.html
 http://insights.sigasi.com/tech/advanced-vhdl-configurations-tying-component-unrelated-entity.html
