@@ -187,6 +187,7 @@ http://insights.sigasi.com/screencasts/verilog-smart-indent.html
 http://insights.sigasi.com/screencasts/vhdl_code_comprehension.html
 http://insights.sigasi.com/screencasts/writing_finite_state_machines_in_vhdl.html
 http://insights.sigasi.com/screencasts/writing_state_machines.html
+http://insights.sigasi.com/slide.html
 http://insights.sigasi.com/support.html
 http://insights.sigasi.com/tag/advanced/index.html
 http://insights.sigasi.com/tag/Aldec/index.html

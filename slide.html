@@ -3,7 +3,7 @@
 	<!--// OPEN HEAD //-->
 	<head>
 		<!--// SITE TITLE //-->
-		<title>Sigasi Studio Editor - Sigasi</title>
+		<title>Slide example - Sigasi</title>
 		<link rel="stylesheet" href="http://www.sigasi.com/wp-content/plugins/sitepress-multilingual-cms/res/css/language-selector.css?v=3.2.7" type="text/css" media="all" />
 		<!--// SITE META //-->
 		<meta charset="UTF-8"/>
@@ -25,14 +25,14 @@
 			}
 		</script>
 		<!-- This site is optimized with the Yoast SEO plugin v3.0.6 - https://yoast.com/wordpress/plugins/seo/ -->
-		<link rel="canonical" href="http://insights.sigasi.com//manual/editor.html" />
+		<link rel="canonical" href="http://insights.sigasi.com//slide.html" />
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="Sigasi Studio Editor - Sigasi" />
-		<meta property="og:url" content="http://insights.sigasi.com//manual/editor.html" />
+		<meta property="og:title" content="Slide example - Sigasi" />
+		<meta property="og:url" content="http://insights.sigasi.com//slide.html" />
 		<meta property="og:site_name" content="Sigasi" />
 		<meta name="twitter:card" content="summary"/>
-		<meta name="twitter:title" content="Sigasi Studio Editor - Sigasi"/>
+		<meta name="twitter:title" content="Slide example - Sigasi"/>
 		<!-- / Yoast SEO plugin. -->
 		<script type="text/javascript">
 			window._wpemojiSettings = {
@@ -1774,7 +1774,7 @@
 <div class="page-heading page-heading-hidden clearfix">
 	<div class="container">
 		<div class="heading-text">
-			<h1 class="entry-title" >Sigasi Studio Editor</h1>
+			<h1 class="entry-title" >Slide example</h1>
 		</div>
 	</div>
 </div>
@@ -1783,7 +1783,7 @@
 				</div>
 <div class="navbar-collapse collapse">
 	<ul class="nav navbar-nav navbar-left">
-		<li class="active" class="dropdown">
+		<li class="dropdown">
 			<a href="/manual/" class="dropdown-toggle" data-toggle="dropdown">Manual <b class="caret"></b></a>
 			<ul class="dropdown-menu">
 				<li>
@@ -1964,7 +1964,7 @@
 <div class="container">
   <div class="page-header">
     <div>
-        <h1 style="margin-bottom: 0px;margin-top: 30px;">Sigasi Studio Editor</h1>
+        <h1 style="margin-bottom: 0px;margin-top: 30px;">Slide example</h1>
     </div>
         
     <div style="margin: 10px 0 10px">
@@ -1979,398 +1979,14 @@
 
     <div class="content">
       <div class="col-md-9" role="main">
-        <p>The Editor shows the content of files, and allows you to edit
-files. It is a tabbed view so that multiple files can be open for
-editing simultaneously. The currently selected file is the active file.</p>
-<h2 id="vhdl-and-verilog-editor">VHDL and Verilog Editor</h2>
-<p>The VHDL and Verilog editors are optimized to help you browse and edit VHDL and Verilog code. Most browsing and editing features are similar for both languages.</p>
-<p><em>Language specific features</em> are explained in "<a href="/manual/editor.html#vhdl-specific" title="Sigasi Studio Editor">VHDL Specific</a>" and "<a href="/manual/editor.html#verilog-specific" title="Sigasi Studio Editor">Verilog Specific</a>".</p>
-<h3 id="code-highlighting-syntax-coloring">Code highlighting (syntax coloring)</h3>
-<p>As all editors, Sigasi colors your code to make the structure more
-clear. Unlike other tools, Sigasi offers coloring based on the
-<strong>meaning</strong> of a word, rather than just the syntax.</p>
-<p>Sigasi supports both <strong>syntax highlighting</strong> and <strong>semantic
-highlighting</strong>. Syntax highlighting colors pieces of code according to
-the lexical class the code belongs to, such as a <em>keyword</em> or <em>string</em>.
-Semantic highlighting means that code gets colored according to their
-<em>meaning</em>. For example a <em>constant</em> is shown in another color than a
-<em>signal</em>.</p>
-<p>Code highlighting is fully configurable. <strong>Color</strong>, <strong>background</strong>,
-<strong>style</strong> and <strong>font</strong> can be customized. Learn more about configuring <a href="/manual/config.html#configure-colors" title="Configuring Your Design Environment">configure-colors</a></p>
-<h3 id="gui-navigate">Project exploration and navigation</h3>
-<p>Sigasi offers powerful techniques to explore a file or project, and navigate through it. This section covers: hovering, Occurrence Highlighting, Open Declaration and Find References.</p>
-<h4 id="occurrence-highlighting">Occurrence Highlighting</h4>
-<p>If you click on an identifier, it is highlighted. In addition, all other occurrences of the identifier that refer to the same object are highlighted. Note that this occurrence highlighting is intelligent: it is not based on the identifier’s string value, but on the object that the identifier refers to.</p>
-<p>You can turn occurrence highlighting on or off. Click the "Toggle Mark Occurences" icon <img alt="Mark Occurences" src="icons/mark_occurences_icon.png" title="Mark Occurences" /> in the toolbar.</p>
-<h4 id="find-references">Find References</h4>
-<p>To look for occurrences of a given identifier in different files, place your cursor on the identifier and right-click. Now select <strong>Search References</strong>.</p>
-<p>A search window will appear on the bottom of your workbench, displaying all occurrences of the selected identifier. You can easily navigate through all occurrences by clicking the <strong>Show Next Match</strong> arrow <img alt="" src="icons/shownextmatch.png" />
-and the <strong>Show Previous Match</strong> arrow <img alt="" src="icons/showpreviousmatch.png" /> in the search result view. Note that all occurrences are highlighted and marked with a small arrow at the left border of the editor for easy recognition.</p>
-<h4 id="open-declaration-and-hyperlinks">Open Declaration and Hyperlinks</h4>
-<p><strong>Open Declaration</strong> You can easily navigate to the declaration of any 
-port, signal, entity, etc. Place the cursor on the identifier,
-right-click and select <strong>Open Declaration</strong>. The editor immediately
-switches to the line that declares the object. Since this operation is
-so commonly used, it is assigned to the shortcut key <strong>F3</strong>.</p>
-<p><strong>Hyperlinks</strong> You can also navigate your code like a web browser by
-clicking hyperlinks. If you press and hold the <strong>Ctrl</strong> key, hyperlinks will appear in your editor. If you click the link (while holding the <strong>Ctrl</strong> key), you will navigate to the target of the link.
-Sigasi offers following links:</p>
-<ul>
-<li>Link to <strong>Declaration</strong>: this has the same behaviour as <strong>Open Declaration</strong> (<strong>F3</strong>)</li>
-<li>Link to <strong>Matching Entity</strong> [VHDL]: this links a <strong>component</strong> declaration of instantiation to the matching entity declaration. This also works for component <strong>generics</strong> and <strong>ports</strong>.</li>
-<li>Link to <strong>Matching When Clause</strong> [VHDL]: in finite state machines (FSMs) you can jump directly to the matching <em>when</em> part of your case statement from state transitions.</li>
-<li>URLs in <strong>comments</strong></li>
-</ul>
-<h3 id="hover">Hover</h3>
-<p>To learn more about the declaration of a given identifier, hold your
-mouse pointer over it. After about a second, a popup shows you the name and datatype of the signal. This technique is called hovering.</p>
-<p>In the hover pop-up, can show different kinds of information:</p>
-<ul>
-<li>datatype</li>
-<li>comments: inline documentation written at the declaration</li>
-<li>value: the value of constants</li>
-<li>errors or warnings: a message, if the given identifier has an error or warning associated to it</li>
-<li>binary / decimal conversion: for hexadecimal, octal or binary values, the decimal equivalent</li>
-</ul>
-<h4 id="comment-association">Comment Association</h4>
-<p>Comments in HDL code are used to add extra information or documentation to that code. Sigasi uses certain rules to determine which comment belongs to which code. This is important for documentation hovers, refactoring, formatting,...
-Which comment belongs to which exact code is subjective.</p>
-<p>Sigasi associates comments with HDL declarations with following rules:</p>
-<ul>
-<li>If there is a declaration before a comment and in the same line, the comment is associated with this declaration.</li>
-<li>In all other cases, the comment is associated with the next following declaration.</li>
-</ul>
-<h3 id="auto-complete-and-content-assist">Auto-complete and Content Assist</h3>
-<p>Sigasi Studio provides powerful autocompletion capabilities. This means
-that the tool can help you to complete identifiers and constructs as you are working on the code. Like other tools, the tool provides
-autocompletion based on the VHDL language. However, it goes much
-further. It also provides autocompletion based on the design context. It can provide this additional level of intelligence as it knows all
-objects that have been declared in the design.</p>
-<h4 id="autocompletion-interface">Autocompletion interface</h4>
-<p>Autocompletions may come from different sources, as will be discussed in the following sections. However, the user interface to initiate them is always the same. At any point as you are entering code, you can press <strong>CTRL+SPACE</strong> and the tool will suggest appropriate autocompletions.</p>
-<p>Some autocompletions are templates which require further user input. In such a case, the editor goes into a special <em>template editing</em> mode after the autocompletion has been performed. You can use TAB to cycle through the items that have to be modified or completed. When done, you can press ENTER to return to the normal editing mode. The cursor will be placed at an appropriate position to continue working.</p>
-<h4 id="based-on-templates">Based on templates</h4>
-<p>Sigasi can help you to declare VHDL and Verilog objects, using autocompletion based on templates. Sigasi comes preconfigured with templates for all common declarations and statements, including (for VHDL):</p>
-<ul>
-<li>function, procedure</li>
-<li>process</li>
-<li>type: enum, file, range, array, record</li>
-<li>signal, constant, variable</li>
-<li>component</li>
-<li>entity</li>
-<li>architecture</li>
-<li>entity/architecture pair</li>
-<li>package/package body pair</li>
-<li>and much more</li>
-</ul>
-<p>After the autocompletion, the editor will be into templating editing
-mode. You can also configure your own templates.</p>
-<h4 id="based-on-the-design-context">Based on the design context</h4>
-<p>Sigasi Studio uses its knowledge of the design to provide intelligent
-autocompletions that can boost productivity tremendously.</p>
-<p>The tool knows which objects are appropriate and which identifiers are
-visible at any given point in the code. As you start typing and ask for
-an autocompletion, it will suggest the appropriate identifiers as
-autocompletion candidates.</p>
-<p>The tool provides help to autocomplete:</p>
-<ul>
-<li>component declarations</li>
-<li>component instantiations</li>
-<li>entity instantiations</li>
-<li>case statements (based on variables/signals with an enumeration type)</li>
-</ul>
-<h3 id="other-editor-features">Other editor features</h3>
-<h4 id="code-folding">Code folding</h4>
-<p>If you work with large files, you might want to hide certain pieces of your code. This can be done with code folding. Certain constructs, such as if-statements or process-statements can be folded so that they use a single line in the editor view. You can do this by clicking the little <strong>"+"</strong> symbol next to the statement.</p>
-<p><img alt="Code Folding" src="images/code_folding.png" /></p>
-<p>You can also enable/disable code folding and perform other actions by right-clicking in the gutter (the small column to the left of your code) and selecting <strong>Folding</strong>.</p>
-<p><img alt="Configure Code Folding" src="images/configure_folding.png" /></p>
-<h4 id="full-screen-view">Full screen view</h4>
-<h4 id="block-select">Block selection</h4>
-<p><strong>Note:</strong> In other tools, this feature may be known as <em>column editing</em>
-or <em>column select</em>.</p>
-<p>Block selection is an alternative for standard (paragraph) selection.
-Block selection mode differs from standard selection mode in that it
-allows to select rectangular regions, or to set the cursor over multiple
-lines. Block selection is ideal for selecting vertical regions, for
-example a column of a table or all port names in a port map.</p>
-<p><img alt="Block selection" src="images/block-select.png" title="Block selection Mode" /></p>
-<p>To toggle between normal and block selection modes use <strong>Alt+Shift+A</strong>
-or press the <strong>Toggle Block Selection</strong> icon in the tool bar.</p>
-<h4 id="structured-selection">Structured selection</h4>
-<p>Structured Select enables you to select VHDL or Verilog code, based on its <em>syntactic structure</em>. (Screencast: "<a href="/screencasts/structured-select.html" title="Select code, based on its structure">Select code, based on its structure</a>")</p>
-<ul>
-<li><strong>Shift+Alt+Up</strong>, expands the selection to the smallest syntax element that contains the current selection. You can then further expand the selection by invoking the action again.</li>
-<li><strong>Shift+Alt+Down</strong>, contracts the current selection to the nested syntax expression that still contains the current cursor position. You can then further contract the selection by invoking the action again.</li>
-<li><strong>Shift+Alt+Left</strong>, adds the syntax element left of the current selection to the selection. You can then further expand the selection by invoking the action again. You can also expand the selection in the other direction with <strong>Shift+Alt+Right</strong></li>
-</ul>
-<h4 id="show-whitespace">Show whitespace</h4>
-<h4 id="move-lines">Move and Duplicate lines</h4>
-<p>You can easily <em>move</em> lines up and down by pressing: <strong>Alt+Up</strong> and
-<strong>Alt+Down</strong>.</p>
-<p>You can <em>duplicate</em> your current line, or the lines of the current
-selection by pressing: <strong>Ctrl+Alt+Down</strong>.</p>
-<h4 id="configure-key-bindings">Configure key bindings</h4>
-<p>See <a href="/manual/keyshortcuts.html" title="Keyboard Shortcuts">Keyboard Shortcuts</a></p>
-<h4 id="emacsvi-emulation-mode">Emacs/VI emulation mode</h4>
-<p>See <a href="/manual/plugins.html#vi-and-emacs" title="Third party plugins">VI-and-Emacs</a></p>
-<h4 id="trailing-whitespace">Remove Trailing Whitespace</h4>
-<p>The action to remove trailing whitespace is hidden by default. You can access it by pressing <strong>Ctrl+3</strong>, type <strong>RTW</strong> and then select the correct action. Alternatively, you can bind this action to <a href="/manual/keyshortcuts.html" title="Keyboard Shortcuts">Keyboard Shortcuts</a> of your preference.</p>
-<h4 id="customize-color-preferences">Customize color preferences</h4>
-<h4 id="multiple-screen-support">Multiple Screen Support</h4>
-<h4 id="side-by-side-diff">Side-by-side Diff</h4>
-<ul>
-<li>Previous versions (local history or version control)</li>
-<li>Comparing two files</li>
-</ul>
-<h2 id="vhdl-specific">VHDL Specific</h2>
-<p>In addition to the powerful features of an Eclipse editor, the VHDL
-editor that comes with Sigasi supports a number of advanced editing
-features which are specifically useful for VHDL editing. These are
-described in this chapter.</p>
-<h3 id="code-highlighting">Code highlighting</h3>
-<p>Highlighting Classes for VHDL:</p>
-<ul>
-<li><em>Syntax</em>  :  Comment, Keyword, Number, String, Task tag </li>
-<li><em>Semantic</em> :  Constant, Port, Signal, Type, Variable, Attribute, Function/Procedure </li>
-</ul>
-<h3 id="vhdl-specific-autocompletes">VHDL specific autocompletes</h3>
-<h4 id="instantiating-an-entity">Instantiating an entity</h4>
-<p><strong>Note:</strong> In other tools this feature may be know as <em>paste as
-instantiation</em> or <em>port translation</em>.</p>
-<p>Sigasi Studio knows all entities in the design and their interfaces, and
-can therefore automate much of the instantiation process. At the point
-in the code where you normally enter the entity name, you can use
-autocompletion instead to suggest a list of possible entities. Upon
-selection, the tool will complete the instantiation with a generic map
-and a port map with named associations. As an initial suggestion, each
-actual parameter will have the same name as its formal parameter. Of
-course, the actual parameter names need to be reviewed and edited by the
-user. Therefore, the editor will go into template editing mode after the
-autocompletion.</p>
-<p><img alt="" src="images/entity_instantiation.png" /></p>
-<p>Instantiating a <em>component</em> is similar to instantiating an entity. Note
-that components will only be shown if they are visible in the current
-scope.</p>
-<h4 id="declaring-a-component">Declaring a component</h4>
-<p><strong>Note:</strong> In other tools this feature may be know as <em>paste as
-component</em> or <em>port translation</em>.</p>
-<p>If you want to use instantiation based on a component (as opposed to
-direct instantiation) you need to associate an entity with a component.
-Sigasi can automatically declare a component for an existing entity. At
-the point where you normally enter the component name, you can use
-autocompletion instead to show the list of available entities. Upon
-selection, the tool will automatically complete the component
-declaration.</p>
-<h4 id="type-conversion">Type Conversion</h4>
-<p>In VHDL design you need to do a lot of type conversions. Sigasi’s
-autocomplete functionality can help you with those. Put a dot (<code>.</code>)
-after the element you want to convert, and the autocomplete suggestions
-will appear. The conversion functions have descriptions like “convert
-type” and “convert to …”.</p>
-<h3 id="stuttering">Stuttering</h3>
-<p>Stuttering is an editing technique popularized by Emacs, that lets you
-type certain things really fast. Stuttering means that you tap a certain
-key twice and it expands to something more complex. For example, press
-the period key <strong>.</strong> twice, and the editor will expand it to a right
-arrow <code>=&gt;</code>. Stuttering works like double clicking: if you type keys
-<strong>slowly</strong>, the stuttering mechanism will not be triggered.</p>
-<p>The following stuttering keys are available:</p>
-<table class="table">
-<thead>
-<tr>
-<th>Keys</th>
-<th>Effect</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>,,</strong></td>
-<td><code>&lt;=</code></td>
-</tr>
-<tr>
-<td><strong>..</strong></td>
-<td><code>=&gt;</code></td>
-</tr>
-<tr>
-<td><strong>::</strong></td>
-<td><code>:=</code></td>
-</tr>
-</tbody>
-</table>
-<p>Stuttering can be disabled or enabled in <strong>Window > Preferences > VHDL > Enable Stuttering</strong>.</p>
-<h3 id="smartindent-vhdl">Smart Indentation</h3>
-<p>When you press enter, Sigasi automatically adjusts the indentation of
-current and the new line. Depending on the content of the preceding
-line, Sigasi will automatically increase or decrease the indentation
-level. E.g. an extra indent after and <code>if</code>-statement and remove an
-indent for the matching <code>else</code>-clause.</p>
-<p>You can enable/disable this feature via <strong>Window > Preferences >
-Sigasi > VHDL</strong> by toggling the <strong>“Enter adjusts indentation on current
-and next line”</strong> setting.</p>
-<p><strong>Tabs vs. spaces:</strong> This features inserts tabs characters or spaces,
-according to your preferences. </p>
-<ul>
-<li>See also: <a href="/manual/config.html#tabs-and-spaces" title="Tabs and Spaces">Tabs and Spaces</a></li>
-</ul>
-<p><a href="//fast.wistia.net/embed/iframe/asr4pf7p8e?popover=true" class="wistia-popover\[height=533,playerColor=7b796a,width=800\]"><img src="https://embed-ssl.wistia.com/deliveries/85b4fd88af9a4430f70df330bb8409bc8557da2f.jpg?image_play_button=true&image_play_button_color=7b796ae0&image_crop_resized=200x133" alt="" /></a></p>
-<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js">
-</script>
-
-<h3 id="vhdl-code-formatting">VHDL code formatting</h3>
-<p>Press CTRL+SHIFT+F to format your current VHDL file.</p>
-<p>This includes:</p>
-<ul>
-<li>indentation</li>
-<li>vertical alignment of certain symbols like “&lt;=”</li>
-<li>wrapping lines that are too long</li>
-</ul>
-<h4 id="configuration">Configuration</h4>
-<p>You can set your preferences for Tabs or spaces under <strong>Window >
-Preferences > General > Editors > Text Editors > Insert Spaces for
-Tabs.</strong></p>
-<p>Other preferences for code formatting are part of <a href="editions.html#xl" title="Sigasi Studio XL">Sigasi Studio XL</a>. You
-can configure them at <strong>Window &gt; Preferences &gt; Sigasi &gt; VHDL &gt; Formatting</strong>
-Configurable settings currently include:</p>
-<ul>
-<li>Preserve newline characters</li>
-<li>Upper case for VHDL keywords</li>
-<li>Alignment column for trailing comments</li>
-</ul>
-<h3 id="lightweight-editor-for-large-vhdl-files">Lightweight editor for large VHDL files</h3>
-<p>Sometimes you have to deal with very large VHDL files such as large
-concatenated library files and generated files. Unfortunately the Sigasi
-VHDL editor can not cope with huge VHDL files yet. Large files stress
-the interactive compiler too much to give timely feedback.</p>
-<p>To allow you to edit large VHDL files the Sigasi IDE contains a
-lightweight VHDL editor that can handle all files without problems. This
-editor does not analyze your files a type time. It only offers syntax
-highlighting and the default Eclipse editing features. The lightweight
-VHDL editor will check for errors when you save your file.</p>
-<p>The current threshold VHDL file size that is used to switch to the
-lightweight editor is 1 MB.</p>
-<h2 id="verilog-specific">Verilog Specific</h2>
-<p>In addition to the powerful features of an Eclipse editor, the Verilog
-editor that comes with Sigasi supports a number of advanced editing
-features which are specifically useful for Verilog editing. These are
-described in this chapter.</p>
-<h3 id="type-time-syntax-error-reporting">Type-time Syntax error reporting</h3>
-<p>Sigasi Studio marks Verilog syntax errors while you type.</p>
-<p>These markers can be <a href="#disable-errors">disabled</a>.</p>
-<h3 id="verilog-version">Verilog version</h3>
-<p>You can configure the Verilog version (Verilog or SystemVerilog) via <strong>Window &gt; Preferences</strong>, <strong>Sigasi &gt; Verilog</strong> and <strong>Verilog version</strong>.</p>
-<h4 id="disable-verilog-error-markers">Disable Verilog Error Markers</h4>
-<p><mark>Note that Sigasi Studio does not cover the entire SystemVerilog grammar yet. So if you are using </mark>'unsupported'<mark> syntax, you will see lots of incorrect <a href="#type-time-syntax-error-reporting">syntax error markers</a>. You can disable these error markers by pressing <strong>Ctrl-3</strong> and typing <code>Toggle Verilog error markers</code>. Next close and re-open all open Verilog editors to force a refresh.</mark></p>
-<h3 id="smartindent-verilog">Smart Indentation</h3>
-<p>When you press enter, Sigasi automatically adjusts the indentation of
-current and the new line. Depending on the content of the preceding
-line, Sigasi will automatically increase or decrease the indentation
-level. E.g. an extra indent after a <code>module</code> and remove an indent for
-the matching <code>endmodule</code>.</p>
-<p>You can enable/disable this feature via <strong>Window > Preferences >
-Sigasi > Verilog</strong> by toggling the <strong>“Enter adjusts indentation on
-current and next line”</strong> setting.</p>
-<p><strong>Tabs vs. spaces:</strong> This features inserts tabs characters or spaces,
-according to your preferences. </p>
-<p>See also:</p>
-<ul>
-<li><a href="/manual/config.html#tabs-and-spaces" title="Tabs and Spaces">Tabs and Spaces</a>.</li>
-<li>Screencast : <a href="/screencasts/verilog-smart-indent.html" title="Smart Indentation for Verilog">Smart Indentation for Verilog</a></li>
-</ul>
-<h3 id="verilog-preprocessingmacros">Verilog Preprocessing/Macros</h3>
-<p>When you hover over a Verilog preprocessor directive (e.g. <code>include ...</code>), Sigasi presents you the preprocessed text. This hover also shows you, at the bottom, a convenient link to open the <a href="/manual/views.html#preprocessor-view" title="Views">Preprocessor View</a>.</p>
-<p><img alt="" src="images/preprocessor-hover.png" /></p>
-<p>In the <a href="/manual/views.html#preprocessor-view" title="Views">Preprocessor View</a>, you can preview the expanded version of your preprocessed Verilog source files.</p>
-<p>You can configure the include paths of your Verilog projects in the Verilog Preprocessor Property page. You can open this page by right clicking your Verilog project and selecting <strong>Properties &gt; Verilog Preprocessor</strong>.</p>
-<p><img alt="" src="images/preprocessor-property-page.png" /></p>
-<p>You can specify multiple include paths by separating them with a <code>;</code>. All paths are relative to the project folder.</p>
+        <iframe src="http://www.slideshare.net/sigasi/slideshelf" width="490px" height="470px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:none;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>
 
       </div>
     </div>
 
-    <div class="col-md-3" role="complementary">
-      <nav class="hidden-print hidden-xs hidden-sm">
-        <div class="sidebar" data-spy="affix" data-offset-top="510" >
-          <div class="well">
-            <a href="#"><strong>Sigasi Studio Editor</strong></a>
-            <div class="toc">
-<ul>
-<li><a href="#vhdl-and-verilog-editor">VHDL and Verilog Editor</a><ul>
-<li><a href="#code-highlighting-syntax-coloring">Code highlighting (syntax coloring)</a></li>
-<li><a href="#gui-navigate">Project exploration and navigation</a><ul>
-<li><a href="#occurrence-highlighting">Occurrence Highlighting</a></li>
-<li><a href="#find-references">Find References</a></li>
-<li><a href="#open-declaration-and-hyperlinks">Open Declaration and Hyperlinks</a></li>
-</ul>
-</li>
-<li><a href="#hover">Hover</a><ul>
-<li><a href="#comment-association">Comment Association</a></li>
-</ul>
-</li>
-<li><a href="#auto-complete-and-content-assist">Auto-complete and Content Assist</a><ul>
-<li><a href="#autocompletion-interface">Autocompletion interface</a></li>
-<li><a href="#based-on-templates">Based on templates</a></li>
-<li><a href="#based-on-the-design-context">Based on the design context</a></li>
-</ul>
-</li>
-<li><a href="#other-editor-features">Other editor features</a><ul>
-<li><a href="#code-folding">Code folding</a></li>
-<li><a href="#full-screen-view">Full screen view</a></li>
-<li><a href="#block-select">Block selection</a></li>
-<li><a href="#structured-selection">Structured selection</a></li>
-<li><a href="#show-whitespace">Show whitespace</a></li>
-<li><a href="#move-lines">Move and Duplicate lines</a></li>
-<li><a href="#configure-key-bindings">Configure key bindings</a></li>
-<li><a href="#emacsvi-emulation-mode">Emacs/VI emulation mode</a></li>
-<li><a href="#trailing-whitespace">Remove Trailing Whitespace</a></li>
-<li><a href="#customize-color-preferences">Customize color preferences</a></li>
-<li><a href="#multiple-screen-support">Multiple Screen Support</a></li>
-<li><a href="#side-by-side-diff">Side-by-side Diff</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#vhdl-specific">VHDL Specific</a><ul>
-<li><a href="#code-highlighting">Code highlighting</a></li>
-<li><a href="#vhdl-specific-autocompletes">VHDL specific autocompletes</a><ul>
-<li><a href="#instantiating-an-entity">Instantiating an entity</a></li>
-<li><a href="#declaring-a-component">Declaring a component</a></li>
-<li><a href="#type-conversion">Type Conversion</a></li>
-</ul>
-</li>
-<li><a href="#stuttering">Stuttering</a></li>
-<li><a href="#smartindent-vhdl">Smart Indentation</a></li>
-<li><a href="#vhdl-code-formatting">VHDL code formatting</a><ul>
-<li><a href="#configuration">Configuration</a></li>
-</ul>
-</li>
-<li><a href="#lightweight-editor-for-large-vhdl-files">Lightweight editor for large VHDL files</a></li>
-</ul>
-</li>
-<li><a href="#verilog-specific">Verilog Specific</a><ul>
-<li><a href="#type-time-syntax-error-reporting">Type-time Syntax error reporting</a></li>
-<li><a href="#verilog-version">Verilog version</a><ul>
-<li><a href="#disable-verilog-error-markers">Disable Verilog Error Markers</a></li>
-</ul>
-</li>
-<li><a href="#smartindent-verilog">Smart Indentation</a></li>
-<li><a href="#verilog-preprocessingmacros">Verilog Preprocessing/Macros</a></li>
-</ul>
-</li>
-</ul>
-</div>
-
-          </div>
-        </div>
-      </nav>
-    </div>
 
   </div>
 
-  <ul class="pager">
-    <li class="previous"><a href="/manual/views.html">&larr; Views</a></li>
-    <li class="next"><a href="/manual/mixed.html">Mixed language projects &rarr;</a></li>
-  </ul>
       
 </div>
 

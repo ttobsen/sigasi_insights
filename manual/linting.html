@@ -2240,7 +2240,7 @@ syntax</a></p>
 omitted.</p>
 <p><strong>Example:</strong> to enforce a style where all variables have a <code>_v</code> suffix,
 you whould specify <code>.*_v</code> pattern in the <strong>Variable name</strong> field.</p>
-<h2 id="project-specific-linting-settings">Project specific Linting settings</h2>
+<h3 id="project-specific-linting-settings">Project specific Linting settings</h3>
 <p>The default way to configure the severity of the Sigasi linting checks is to set their severity in the <strong>Errors/Warnings</strong> preference page.
 You can override these setting by creating a settings file for your projects. </p>
 <p>In each project, you can override the coding rules settings. You can override rules for the <strong>entire project</strong>, for <strong>folders</strong> in the project, or for individual <strong>files</strong>.</p>
@@ -2280,6 +2280,139 @@ You can override these setting by creating a settings file for your projects. </
 all/severity/&lt;project&gt;=IGNORE
 </pre></div>
 
+
+<h4 id="validation-ids">Validation IDs</h4>
+<table class="table">
+<thead>
+<tr>
+<th>Validation ID</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>50</td>
+<td>Library is not available</td>
+</tr>
+<tr>
+<td>64</td>
+<td>Duplicate design units</td>
+</tr>
+<tr>
+<td>84</td>
+<td>Report encrypted files</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Deprecated IEEE packages</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Non-standard packages</td>
+</tr>
+<tr>
+<td>38</td>
+<td>A process must either have a sensitivity list or contain one or more wait statements</td>
+</tr>
+<tr>
+<td>47</td>
+<td>There has to be a whitespace before physical units</td>
+</tr>
+<tr>
+<td>49</td>
+<td>Superfluous library clause</td>
+</tr>
+<tr>
+<td>55</td>
+<td>Find unused declarations</td>
+</tr>
+<tr>
+<td>57</td>
+<td>Bitstrings may only contain std_logic metavalues</td>
+</tr>
+<tr>
+<td>67</td>
+<td>Find unused ports</td>
+</tr>
+<tr>
+<td>68</td>
+<td>Find unused generics</td>
+</tr>
+<tr>
+<td>72</td>
+<td>Find incomplete sensitivity lists</td>
+</tr>
+<tr>
+<td>73</td>
+<td>Find superfluous signals in sensitivity lists</td>
+</tr>
+<tr>
+<td>85</td>
+<td>Find duplicate signals in sensitivity lists</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Null range: The left argument is strictly larger than the right</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Case alternative contains redundant choices</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Case statement contains all choices explicitly. You can safely remove the redundant 'others'</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Infinite loop. Loop is missing a wait</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Null range: The left argument is strictly smaller than the right</td>
+</tr>
+<tr>
+<td>48</td>
+<td>Unbound component instantiations</td>
+</tr>
+<tr>
+<td>71</td>
+<td>Find dead states in state machines</td>
+</tr>
+<tr>
+<td>79</td>
+<td>Find dead code</td>
+</tr>
+<tr>
+<td>88</td>
+<td>Detect signals and variables that are never written</td>
+</tr>
+<tr>
+<td>89</td>
+<td>Detect signals and variables that are never read</td>
+</tr>
+<tr>
+<td>92</td>
+<td>Check naming conventions</td>
+</tr>
+<tr>
+<td>94</td>
+<td>Incomplete port map or generic map</td>
+</tr>
+<tr>
+<td>144</td>
+<td>Array assignment validation</td>
+</tr>
+<tr>
+<td>163</td>
+<td>All references must have the same capitalization as their declaration</td>
+</tr>
+<tr>
+<td>164</td>
+<td>Check for positional associations in instantiations</td>
+</tr>
+</tbody>
+</table>
+
       </div>
     </div>
 
@@ -2316,9 +2449,12 @@ all/severity/&lt;project&gt;=IGNORE
 <li><a href="#space-before-the-physical-unit">Space Before the Physical Unit</a></li>
 <li><a href="#capitalization-of-identifiers">Capitalization of Identifiers</a></li>
 <li><a href="#naming-conventions">Naming Conventions</a></li>
+<li><a href="#project-specific-linting-settings">Project specific Linting settings</a><ul>
+<li><a href="#validation-ids">Validation IDs</a></li>
 </ul>
 </li>
-<li><a href="#project-specific-linting-settings">Project specific Linting settings</a></li>
+</ul>
+</li>
 </ul>
 </div>
 
