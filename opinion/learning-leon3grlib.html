@@ -3,7 +3,7 @@
 	<!--// OPEN HEAD //-->
 	<head>
 		<!--// SITE TITLE //-->
-		<title>Getting started with the Altera BeMicro SDK on Linux - Sigasi</title>
+		<title>Learning from LEON3/GRLIB - Sigasi</title>
 		<link rel="stylesheet" href="http://www.sigasi.com/wp-content/plugins/sitepress-multilingual-cms/res/css/language-selector.css?v=3.2.7" type="text/css" media="all" />
 		<!--// SITE META //-->
 		<meta charset="UTF-8"/>
@@ -25,14 +25,14 @@
 			}
 		</script>
 		<!-- This site is optimized with the Yoast SEO plugin v3.0.6 - https://yoast.com/wordpress/plugins/seo/ -->
-		<link rel="canonical" href="http://insights.sigasi.com//tech/getting-started-altera-bemicro-sdk-linux.html" />
+		<link rel="canonical" href="http://insights.sigasi.com//opinion/learning-leon3grlib.html" />
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="Getting started with the Altera BeMicro SDK on Linux - Sigasi" />
-		<meta property="og:url" content="http://insights.sigasi.com//tech/getting-started-altera-bemicro-sdk-linux.html" />
+		<meta property="og:title" content="Learning from LEON3/GRLIB - Sigasi" />
+		<meta property="og:url" content="http://insights.sigasi.com//opinion/learning-leon3grlib.html" />
 		<meta property="og:site_name" content="Sigasi" />
 		<meta name="twitter:card" content="summary"/>
-		<meta name="twitter:title" content="Getting started with the Altera BeMicro SDK on Linux - Sigasi"/>
+		<meta name="twitter:title" content="Learning from LEON3/GRLIB - Sigasi"/>
 		<!-- / Yoast SEO plugin. -->
 		<script type="text/javascript">
 			window._wpemojiSettings = {
@@ -1774,7 +1774,7 @@
 <div class="page-heading page-heading-hidden clearfix">
 	<div class="container">
 		<div class="heading-text">
-			<h1 class="entry-title" >Getting started with the Altera BeMicro SDK on Linux</h1>
+			<h1 class="entry-title" >Learning from LEON3/GRLIB</h1>
 		</div>
 	</div>
 </div>
@@ -1944,9 +1944,9 @@
 			</li>
 			<li>
 				<a href="/screencasts/">Screencasts</a></li>
-			<li class="active">
-				<a href="/tech/">Tech Articles</a></li>
 			<li>
+				<a href="/tech/">Tech Articles</a></li>
+			<li class="active">
 				<a href="/opinion/">Opinion</a></li>
 			<li>
 				<a href="/support.html">Support</a></li>
@@ -1964,19 +1964,17 @@
 <div class="container">
   <div class="page-header">
     <div>
-        <h1 style="margin-bottom: 0px;margin-top: 30px;">Getting started with the Altera BeMicro SDK on Linux</h1>
+        <h1 style="margin-bottom: 0px;margin-top: 30px;">Learning from LEON3/GRLIB</h1>
     </div>
         
     <div style="margin: 10px 0 10px">
         <span>
-          Posted on 2011&#8209;01&#8209;07
-            by Hendrik Eeckhaut
+          Posted on 2010&#8209;02&#8209;07
+            by Philippe Faes
         </span>
         <span style="padding-left:50px">
         Tagged as: 
-              <a href="/tag/Altera/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">Altera</a>
-              <a href="/tag/BeMicro/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">BeMicro</a>
-              <a href="/tag/FPGA/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">FPGA</a>
+              <a href="/tag/webinar/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">webinar</a>
         </span>
     </div>
   </div>
@@ -1987,59 +1985,18 @@
 
     <div class="content">
       <div class="col-md-9" role="main">
-        <p><mark>I recently got an FPGA-on-a-USB-stick as a Christmas present: an <a href="http://www.altera.com/b/bemicro-sdk.html&quot;">Altera/Arrow BeMicro SDK</a>. Fun to play with and ideal to refresh my hardware design skills... I thought... Immediately I was confronted again with how much work it is to set up all necessary hardware design tools.</mark></p>
-<p>The system requirements states that you need Windows, but fortunately I got it working on Linux (Fedora release 13 (Goddard)). Installing Altera Quartus and Nios II went flawlessly. Finding out how to get JTAG with the USB blaster to work was a bit harder.</p>
-<h2 id="install-altera-tools">Install Altera tools</h2>
-<p>The Altera Quartus 10.1 installation was slow because of the huge 6GB download but it finished without issues; no <a href="http://fpga4u.epfl.ch/wiki/Install_Quartus_II">special tricks</a> that were required for earlier versions.</p>
-<p>If your Linux machine has SE Linux enabled, run:</p>
-<div class="codehilite"><pre>sudo chcon -t textrel_shlib_t /opt/altera/10.1/quartus/linux/*.so
-</pre></div>
-
-
-<h2 id="usb-blaster-setup">USB-Blaster setup</h2>
-<p>Setting the USB-blaster was a bit harder:
-As described <a href="http://www.altera.com/download/drivers/dri-usb_b-lnx.html">here</a> you need to create an extra udev rule (<code>sudo vim /etc/udev/rules.d/51-usbblaster.rules</code>) with following content:</p>
-<div class="codehilite"><pre><span class="c1"># USB-Blaster</span>
-<span class="nv">BUS</span><span class="o">==</span><span class="s2">&quot;usb&quot;</span>, SYSFS<span class="o">{</span>idVendor<span class="o">}==</span><span class="s2">&quot;09fb&quot;</span>, SYSFS<span class="o">{</span>idProduct<span class="o">}==</span><span class="s2">&quot;6001&quot;</span>, <span class="nv">MODE</span><span class="o">=</span><span class="s2">&quot;0666&quot;</span>, <span class="nv">PROGRAM</span><span class="o">=</span><span class="s2">&quot;/bin/sh -c &#39;K=%k; K=</span><span class="nv">$$</span><span class="s2">{K#usbdev}; printf /proc/bus/usb/%%03i/%%03i</span><span class="nv">$$</span><span class="s2">{K%%%%.*} </span><span class="nv">$$</span><span class="s2">{K#*.}&#39;&quot;</span>, RUN+<span class="o">=</span><span class="s2">&quot;/bin/chmod 0666 %c&quot;</span>
-</pre></div>
-
-
-<p>You can load this new rule by running <code>sudo udevadm control --reload-rules</code></p>
-<h2 id="jtag-daemon-configuration">JTAG daemon configuration</h2>
-<p>Based on the description on <a href="http://alterawiki.com/wiki/Quartus_for_Linux">http://alterawiki.com/wiki/Quartus_for_Linux</a>, I created two
-configuration files:</p>
-<div class="codehilite"><pre>sudo mkdir /etc/jtagd
-sudo cp /opt/altera/10.1/quartus/linux/pgm_parts.txt
-/etc/jtagd/jtagd.pgm_parts
-touch ~/.jtag.conf
-</pre></div>
-
-
-<p>Next, I appended following lines to my to my <code>/etc/rc.local</code> file:</p>
-<div class="codehilite"><pre><span class="nb">echo</span> <span class="m">356</span> <span class="m">40000</span> <span class="m">32</span> <span class="m">32000</span> &gt; /proc/sys/kernel/sem
-/opt/altera/10.1/quartus/bin/jtagd
-</pre></div>
-
-
-<p>And I started the jtagd daemon by running rc.local:</p>
-<div class="codehilite"><pre>sudo /etc/rc.local
-</pre></div>
-
-
-<h2 id="check">Check</h2>
-<p>You can easily verify that Everything is working with following procedure:</p>
+        <p>The LEON3/GRLIB project from <a href="http://www.gaisler.com">Airoflex Gaisler</a> (formerly Gaisler Research) is one of the largest <em>open source VHDL projects</em>. It contains almost 700 VHDL files, for a total of 600.000 lines of code. The project is based on the <a href="http://en.wikipedia.org/wiki/Advanced_Microcontroller_Bus_Architecture">AMBA</a> on-chip bus and serves as a framework for building <a href="http://en.wikipedia.org/wiki/System_on_Chip">SoCs</a>. It is used in consumer electronics, automotive and aerospace applications.</p>
+<p>LEON3/GRLIB can be intimidating at first. But once you get your feet wet, there is a lot to be learned. A lot more than from reading that book that's lying on your desk! </p>
+<p>Some interesting questions are: 
 <ul>
-<li> Plug in your BeMicro SDK stick
-<li> Start Quartus II
-<li> Select Tools > Programmer
-<li> Click the “Hardware Setup...” button, double click on “USB-Blaster” and click close
-<li> If you now press the “Autodetect” button, two devices should be visible: EP3C25 and EP4CE22 (this is the Altera Cyclone 4 FPGA). If you see those it means that everything is OK.
-</ul>
-
-<p><img alt="Altera Programmer BeMicroSDK" src="images/altera_programmer.png" /></p>
-<h2 id="run-the-tutorial">Run the tutorial</h2>
-<p>Now you are ready to run the
-<a href="http://www.arrownac.com/offers/altera-corporation/altera-bemicro/getting_started.html">BeMicro SDK tutorial</a></p>
+<li>Should I use libraries? How can I organize them? 
+<li>Can I make my code portable across different ASIC technologies and FPGA families?
+<li>How do I configure different versions of my hardware design?
+<li>How can I organize an on-chip bus structure?
+<li>Which naming conventions could I use?
+</ul></p>
+<p>In this webinar, Sigasi's founder and CEO, <em>Philippe Faes</em> will teach you how to navigate and understand complex hardware designs using Sigasi HDT. He will explain the basic structure of LEON3/GRLIB and point out the naming conventions used. </p>
+<p>This webinar is recommended for hardware designers and project managers working on SoCs or large digital designs. It starts on Wednesday, <a href="http://www.wolframalpha.com/input/?i=2010-02-17+15%3A00+Brussels">2010-02-17 at 15:00 CET</a> and it will take about 45 minutes.</p>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -2055,29 +2012,12 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 <noscript>Please enable JavaScript to view the comments.</noscript>      </div>
     </div>
 
-    <div class="col-md-3" role="complementary">
-      <nav class="hidden-print hidden-xs hidden-sm">
-        <div class="sidebar" data-spy="affix" data-offset-top="510" >
-          <div class="well">
-            <a href="#"><strong>Getting started with the Altera BeMicro SDK on Linux</strong></a>
-            <div class="toc">
-<ul>
-<li><a href="#install-altera-tools">Install Altera tools</a></li>
-<li><a href="#usb-blaster-setup">USB-Blaster setup</a></li>
-<li><a href="#jtag-daemon-configuration">JTAG daemon configuration</a></li>
-<li><a href="#check">Check</a></li>
-<li><a href="#run-the-tutorial">Run the tutorial</a></li>
-</ul>
-</div>
-
-          </div>
-        </div>
-      </nav>
-    </div>
 
   </div>
 
   <ul class="pager">
+    <li class="previous"><a href="/opinion/why-use-eclipse-embedded-software-development.html">&larr; Why use Eclipse for embedded software development?</a></li>
+    <li class="next"><a href="/opinion/copyright-policy-ieee.html">Copyright policy of IEEE &rarr;</a></li>
   </ul>
       
 </div>
