@@ -68,7 +68,6 @@ http://insights.sigasi.com/opinion/jan/vhdls-crown-jewel.html
 http://insights.sigasi.com/opinion/jan/wasting-real-time-zero-time.html
 http://insights.sigasi.com/opinion/jan/your-favorite-mistake.html
 http://insights.sigasi.com/opinion/lacking-open-source-vhdl-simulator.html
-http://insights.sigasi.com/opinion/learning-leon3grlib.html
 http://insights.sigasi.com/opinion/neither-vi-nor-emacs-are-most-popular-vhdl-editor.html
 http://insights.sigasi.com/opinion/new-eda-20-company-plunify.html
 http://insights.sigasi.com/opinion/opening-our-documentation.html
@@ -293,7 +292,6 @@ http://insights.sigasi.com/tag/VI/index.html
 http://insights.sigasi.com/tag/VIM/index.html
 http://insights.sigasi.com/tag/VITAL/index.html
 http://insights.sigasi.com/tag/Vivado/index.html
-http://insights.sigasi.com/tag/webinar/index.html
 http://insights.sigasi.com/tag/whitepaper/index.html
 http://insights.sigasi.com/tag/Xilinx/index.html
 http://insights.sigasi.com/tag/Xtext/index.html
