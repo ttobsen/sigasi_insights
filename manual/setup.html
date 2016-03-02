@@ -2045,7 +2045,7 @@ workspace for you:</p>
 <p><img alt="Choose workspace" src="images/chooseworkspace2.png" /></p>
 <p>Although you can work with multiple workspaces, we recommend to use a
 single workspace for all your projects.</p>
-<h2 id="software-updates">Software updates</h2>
+<h3 id="software-updates">Software updates</h3>
 <p>Sigasi has an automated update system. When updates are available, you
 are notified by a pop-up window called <strong>Updates Available</strong> in the
 bottom right corner:</p>
@@ -2056,8 +2056,15 @@ After a few seconds, a new window will appear with further instructions.</p>
 updates at any time by clicking the
 <img alt="Update icon" src="icons/updatesavailableicon.png" />-icon in the status bar
 at the bottom of the screen.</p>
-<p>Consult the <a href="/manual/trouble.html#ts-updates" title="Troubleshooting">ts-updates</a> if the update
-does not start automatically.</p>
+<p>It is good practice to first create a backup of your installation folder before running an update. This can be done by simply compressing the <code>eclipse</code> or the <code>sigasi</code> folder in an archive (zip file)</p>
+<h4 id="sigasi-app_1">Sigasi App</h4>
+<p>If you run Sigasi as a <strong>standalone application</strong>, the automated update system will periodically check for <a href="/manual/setup.html#software-updates" title="Setting Up Sigasi">software-updates</a>.</p>
+<h4 id="sigasi-eclipse-plugin_1">Sigasi Eclipse plugin</h4>
+<p>If you run Sigasi as an <strong>Eclipse plugin</strong>, you may need to check for updates manually, by clicking <strong>Help &gt; Check for Updates</strong>.</p>
+<p>You can enable automatic updates by opening this preference page : <strong>Install/Update &gt; Automatic Updates</strong>. Next enable <strong>Automatically find new updates and notify me</strong>. Feel free to modify any of the available options.</p>
+<h4 id="firewalls-and-proxies">Firewalls and Proxies</h4>
+<p>If the updates are not automatically fetched from the Sigasi update server you are probably behind a firewall or proxy server. You can configure Sigasi Studio’s proxy settings in <strong>Window &gt; Preferences &gt; General &gt; Network connections</strong>. If you can not add a firewall exception for our update site, the fall back solution is to download the complete application from our website. You can completely replace your old installation; all settings are stored in your workspace (the default is
+<code>workspaceSigasi</code> in your home directory).</p>
 
       </div>
     </div>
@@ -2082,7 +2089,12 @@ does not start automatically.</p>
 </li>
 <li><a href="#licensing">Licensing</a></li>
 <li><a href="#configuration">Configuration</a></li>
-<li><a href="#software-updates">Software updates</a></li>
+<li><a href="#software-updates">Software updates</a><ul>
+<li><a href="#sigasi-app_1">Sigasi App</a></li>
+<li><a href="#sigasi-eclipse-plugin_1">Sigasi Eclipse plugin</a></li>
+<li><a href="#firewalls-and-proxies">Firewalls and Proxies</a></li>
+</ul>
+</li>
 </ul>
 </div>
 

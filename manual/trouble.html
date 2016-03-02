@@ -2041,9 +2041,6 @@ selecting <strong>Refresh</strong>.</p>
 <p>By default, Sigasi assumes that all VHDL or Verilog files are part of the project. However, some projects may contain multiple files with older or alternative definitions of a VHDL object. We call these <em>stale</em> files, because they are no longer used. In such a case you will want Sigasi Studio to ignore certain files.</p>
 <p>To exclude files (or directories) from analysis, consult the <a href="/manual/libraries.html" title="Libraries">Libraries</a>.</p>
 <p>Ignored resources are decorated with a <img alt="" src="icons/ignoreicon.png" /> icon in the project explorer view.</p>
-<h3 id="ts-updates">I do not get automatic updates</h3>
-<p>If the updates are not automatically fetched from the Sigasi update server you are probably behind a firewall or proxy server. You can configure Sigasi Studio’s proxy settings in <strong>Window &gt; Preferences &gt; General &gt; Network connections</strong>. If you can not add a firewall exception for our update site, the fall back solution is to download the complete application from our website. You can completely replace your old installation; all settings are stored in your workspace (the default is
-<code>workspaceSigasi</code> in your home directory).</p>
 <h3 id="sigasi-startup-fails-could-not-create-the-java-virtual-machine">Sigasi startup fails: "Could not create the Java virtual machine"</h3>
 <p>On some computers, the standalone version of Sigasi will fail to start with an error message similar to: "Could not create the Java virtual machine." This happens especially on 32-bit Windows machines with less than 2GB of physical memory. The reason is that the Java virtual machine tries to allocate more much memory than what is available.</p>
 <p>In order to solve this, you can decrease the default heap size settings. You can do this by adding following lines to <code>sigasi.ini</code> or <code>eclipse.ini</code> in your Sigasi installation folder:</p>
@@ -2110,7 +2107,6 @@ Is it OK to upgrade the project to match the installed version of Quartus II? </
 <li><a href="#ts-missing-library-mapping-informatino">Project does not have a Library Mapping Information</a></li>
 <li><a href="#ts-commonlib">Project does not have Common Libraries</a></li>
 <li><a href="#ts-stale-files">Sigasi Studio analyzes HDL files that I do not need</a></li>
-<li><a href="#ts-updates">I do not get automatic updates</a></li>
 <li><a href="#sigasi-startup-fails-could-not-create-the-java-virtual-machine">Sigasi startup fails: "Could not create the Java virtual machine"</a></li>
 <li><a href="#ts-clean">I want a clean restart</a><ul>
 <li><a href="#force-a-clean-compilation">Force a clean compilation</a></li>
