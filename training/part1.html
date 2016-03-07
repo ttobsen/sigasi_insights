@@ -3,7 +3,7 @@
 	<!--// OPEN HEAD //-->
 	<head>
 		<!--// SITE TITLE //-->
-		<title>Installing Quartus on a 64-bit Linux system - Sigasi</title>
+		<title>File based editing - Sigasi</title>
 		<link rel="stylesheet" href="http://www.sigasi.com/wp-content/plugins/sitepress-multilingual-cms/res/css/language-selector.css?v=3.2.7" type="text/css" media="all" />
 		<!--// SITE META //-->
 		<meta charset="UTF-8"/>
@@ -25,14 +25,14 @@
 			}
 		</script>
 		<!-- This site is optimized with the Yoast SEO plugin v3.0.6 - https://yoast.com/wordpress/plugins/seo/ -->
-		<link rel="canonical" href="http://insights.sigasi.com//tech/installing-quartus-64-bit-linux-system.html" />
+		<link rel="canonical" href="http://insights.sigasi.com//training/part1.html" />
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="Installing Quartus on a 64-bit Linux system - Sigasi" />
-		<meta property="og:url" content="http://insights.sigasi.com//tech/installing-quartus-64-bit-linux-system.html" />
+		<meta property="og:title" content="File based editing - Sigasi" />
+		<meta property="og:url" content="http://insights.sigasi.com//training/part1.html" />
 		<meta property="og:site_name" content="Sigasi" />
 		<meta name="twitter:card" content="summary"/>
-		<meta name="twitter:title" content="Installing Quartus on a 64-bit Linux system - Sigasi"/>
+		<meta name="twitter:title" content="File based editing - Sigasi"/>
 		<!-- / Yoast SEO plugin. -->
 		<script type="text/javascript">
 			window._wpemojiSettings = {
@@ -1774,7 +1774,7 @@
 <div class="page-heading page-heading-hidden clearfix">
 	<div class="container">
 		<div class="heading-text">
-			<h1 class="entry-title" >Installing Quartus on a 64-bit Linux system</h1>
+			<h1 class="entry-title" >File based editing</h1>
 		</div>
 	</div>
 </div>
@@ -1944,7 +1944,7 @@
 			</li>
 			<li>
 				<a href="/screencasts/">Screencasts</a></li>
-			<li class="active">
+			<li>
 				<a href="/tech/">Tech Articles</a></li>
 			<li>
 				<a href="/opinion/">Opinion</a></li>
@@ -1964,17 +1964,11 @@
 <div class="container">
   <div class="page-header">
     <div>
-        <h1 style="margin-bottom: 0px;margin-top: 30px;">Installing Quartus on a 64-bit Linux system</h1>
+        <h1 style="margin-bottom: 0px;margin-top: 30px;">File based editing</h1>
     </div>
         
     <div style="margin: 10px 0 10px">
         <span>
-          Posted on 2012&#8209;06&#8209;23
-            by Philippe Faes
-        </span>
-        <span style="padding-left:50px">
-        Tagged as: 
-              <a href="/tag/Quartus/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">Quartus</a>
         </span>
     </div>
   </div>
@@ -1985,19 +1979,67 @@
 
     <div class="content">
       <div class="col-md-9" role="main">
-        <p>When you try to install Altera Quartus on a 64-bit Linux system (like Fedora or RedHat RHEL), you will get error messages about missing libraries. The Quartus installer actually looks for the 32-bit versions of these libraries. Here is the list of libraries that I ran in to and had to install:</p>
-<div class="codehilite"><pre>yum install libXext.i686 freetype.i686 fontconfig.i686 linpng.i686 libSM.i6866
-</pre></div>
-
-
-<p>More info about running Quartus in 64-bit mode: <a href="http://quartushelp.altera.com/11.1/mergedProjects/global/install/install_pro_64bit.htm">http://quartushelp.altera.com/11.1/mergedProjects/global/install/install_pro_64bit.htm</a></p>
-<p>If you are having troubles with SELinux, run:</p>
-<div class="codehilite"><pre>sh altera_installer.external.sh --confirm
-<span class="nb">cd </span>10.0sp1_quartus_free_linux/altera_installer
-rm bin/libX11.so.6
-sudo ./setup
-sudo chcon -t textrel_shlib_t /opt/altera/10.0sp1/quartus/linux/*.so
-</pre></div>
+        <p>The goal of the first part is to get comfortable with the Sigasi Studio VHDL editor. By the end you will be able to <mark>easily detect and fix VHDL syntax issues</mark>, <mark>customize editor preferences</mark> and <mark>know the basic keyboard shortcuts</mark>.</p>
+<h4 id="edit">Edit</h4>
+<ul>
+<li>Open file <code>part1_edit.vhd</code> via <strong>File &gt; Open File...</strong></li>
+<li>Make the editor <mark>full screen</mark> (Double click on the tab)</li>
+<li>Double click again to exit <mark>full screen</mark> mode</li>
+<li>Format the VHDL code (<strong>Ctrl+Shift+F</strong>, <mark>Make sure that no text is selected</mark>)</li>
+<li>Fix all VHDL syntax issues, use the QuickFix where possible (When in doubt, <strong>Hover</strong> over the error Marker)</li>
+<li>Delete a line with <strong>Ctrl+D</strong></li>
+<li>Comment a line with <strong>Ctrl+/</strong></li>
+<li>Move a line up and down with <strong>Alt+Up</strong> and <strong>Alt+Down</strong></li>
+<li>Autocomplete (<strong>Ctrl+Space</strong>)<ul>
+<li>Name</li>
+<li>Constant declaration  </li>
+<li><code>if</code> statement in a <code>process</code> (Use <strong>enter</strong> to exit the <mark>template mode</mark>)</li>
+<li><code>if generate</code> in an <code>architecture</code>  </li>
+</ul>
+</li>
+<li>Block select (<strong>Shift+Alt+A</strong>, or button in toolbar)<ul>
+<li>Delete a Block</li>
+<li>Add content on multiple lines </li>
+</ul>
+</li>
+<li>Enable <mark>Show whitespace</mark> (¶-button) and type some <mark>tabs</mark> and <mark>spaces</mark> to see the difference</li>
+<li>Find &amp; Replace  <ul>
+<li>Experiment with <strong>Ctrl+F</strong>, e.g. find all <code>TODO</code>'s</li>
+<li>Use <strong>Ctrl+K</strong> to find the next occurrence of the current selection</li>
+<li>Use <strong>Ctrl+J</strong> (and start typing) for an inline, incremental search. <mark>Look at the status bar to see what you have already typed</mark>.</li>
+</ul>
+</li>
+<li>Use <strong>Quick Access</strong> to convert an identifier to UpperCase (Select the identifier, type <code>upper</code> in the Quick Access Field in the Toolbar and confirm with <strong>Enter</strong>)</li>
+<li>Mess up the indentation of a part of the source code, select it and <strong>format only the selection</strong>.</li>
+</ul>
+<h4 id="navigate">Navigate</h4>
+<ul>
+<li>Open file <code>part1_navigate.vhd</code> via <strong>File &gt; Open File...</strong></li>
+<li>Open Declaration  (<strong>F3</strong>)</li>
+<li>Move back to last location (<strong>Alt+Left</strong>)</li>
+<li>Go to Line  (<strong>Ctrl+L</strong>)</li>
+<li>Navigate to errors with the gutter (Click red rectangles in scroll bar)</li>
+<li>Navigate to next problem marker (<strong>Ctrl+.</strong>)</li>
+<li>Navigate with the <em>Outline view</em></li>
+</ul>
+<h4 id="customize-settings">Customize settings</h4>
+<p>Preferences can be set via <strong>Window &gt; Preferences</strong>.</p>
+<ul>
+<li>Open file <code>part1_custom.vhd</code></li>
+<li>Switch to VHDL 2008 (<strong>Preferences &gt; Sigasi &gt; VHDL</strong>) and note that the syntax error get resolved</li>
+<li>Tabs or spaces ( Use the search box in the preference dialog and type <code>tab</code>) Use <mark>Show whitespace</mark> to check.</li>
+<li>Uppercase keywords (<strong>Preferences &gt; Sigasi &gt; VHDL &gt; Formatting</strong>) (Use <mark>format</mark> to check)</li>
+</ul>
+<h4 id="optional-extra-tasks">Optional Extra tasks</h4>
+<ul>
+<li>Open file <code>part1_extra.vhd</code></li>
+<li><em>Stuttering</em> (in the editor, double tap the <code>.</code>, <code>;</code> or <code>,</code> key)</li>
+<li>Try <em>structured select</em> <a href="http://insights.sigasi.com/manual/editor.html#structured-selection">http://insights.sigasi.com/manual/editor.html#structured-selection</a></li>
+<li>Drag and drop a file from your file explorer in the Editor part of Sigasi Studio</li>
+<li>Create a new file  (<strong>File &gt; New External File</strong>)</li>
+<li>Outline: Figure out what <em>Link with editor</em> button (⇆) does</li>
+<li>Add a keyboard shortcut preference for <mark>show whitespace</mark> (Search for the <strong>Keys</strong> preference page)</li>
+</ul>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -2013,11 +2055,27 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 <noscript>Please enable JavaScript to view the comments.</noscript>      </div>
     </div>
 
+    <div class="col-md-3" role="complementary">
+      <nav class="hidden-print hidden-xs hidden-sm">
+        <div class="sidebar" data-spy="affix" data-offset-top="510" >
+          <div class="well">
+            <a href="#"><strong>File based editing</strong></a>
+            <div class="toc">
+<ul>
+<li><a href="#edit">Edit</a></li>
+<li><a href="#navigate">Navigate</a></li>
+<li><a href="#customize-settings">Customize settings</a></li>
+<li><a href="#optional-extra-tasks">Optional Extra tasks</a></li>
+</ul>
+</div>
+
+          </div>
+        </div>
+      </nav>
+    </div>
 
   </div>
 
-  <ul class="pager">
-  </ul>
       
 </div>
 

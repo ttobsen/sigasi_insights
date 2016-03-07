@@ -187,6 +187,7 @@ http://insights.sigasi.com/screencasts/verilog-smart-indent.html
 http://insights.sigasi.com/screencasts/vhdl_code_comprehension.html
 http://insights.sigasi.com/screencasts/writing_finite_state_machines_in_vhdl.html
 http://insights.sigasi.com/screencasts/writing_state_machines.html
+http://insights.sigasi.com/slide.html
 http://insights.sigasi.com/support.html
 http://insights.sigasi.com/tag/advanced/index.html
 http://insights.sigasi.com/tag/Aldec/index.html
@@ -278,7 +279,6 @@ http://insights.sigasi.com/tag/tycho/index.html
 http://insights.sigasi.com/tag/verilog/index.html
 http://insights.sigasi.com/tag/version control/index.html
 http://insights.sigasi.com/tag/VHDL/index.html
-http://insights.sigasi.com/tag/vhdl 2008/index.html
 http://insights.sigasi.com/tag/VHDL code/index.html
 http://insights.sigasi.com/tag/VHDL compiler/index.html
 http://insights.sigasi.com/tag/VHDL editor/index.html
@@ -288,6 +288,7 @@ http://insights.sigasi.com/tag/VHDL Parser/index.html
 http://insights.sigasi.com/tag/VHDL simulator/index.html
 http://insights.sigasi.com/tag/VHDL syntax/index.html
 http://insights.sigasi.com/tag/VHDL synthesis/index.html
+http://insights.sigasi.com/tag/VHDL-2008/index.html
 http://insights.sigasi.com/tag/VI/index.html
 http://insights.sigasi.com/tag/VIM/index.html
 http://insights.sigasi.com/tag/VITAL/index.html
@@ -460,4 +461,11 @@ http://insights.sigasi.com/tech/work-not-vhdl-library.html
 http://insights.sigasi.com/tech/work-with-gaislers-leon3-sparc-processor.html
 http://insights.sigasi.com/tech/xtext-resource-caching-loading-resources-5-times-faster.html
 http://insights.sigasi.com/todo_.html
+http://insights.sigasi.com/training/everything.html
+http://insights.sigasi.com/training/index.html
+http://insights.sigasi.com/training/part1.html
+http://insights.sigasi.com/training/part2.html
+http://insights.sigasi.com/training/part3.html
+http://insights.sigasi.com/training/part4.html
+http://insights.sigasi.com/training/requirements.html
 http://insights.sigasi.com/tutorial.html

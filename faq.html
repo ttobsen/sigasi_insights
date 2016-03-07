@@ -2032,6 +2032,7 @@
 <li><a href="#how-can-i-check-the-version-numbers-of-sigasi-plugins">How can I check the version numbers of Sigasi Plugins?</a></li>
 <li><a href="#eclipse-ini">What is the eclipse.ini file and where can I find it?</a></li>
 <li><a href="#which-free-vhdl-simulator-can-i-use">Which free VHDL simulator can I use?</a></li>
+<li><a href="#does-sigasi-studio-support-vhdl-2008">Does Sigasi Studio support VHDL-2008?</a></li>
 </ul>
 </div>
 
@@ -2418,6 +2419,14 @@ More information about this file can be found at <a href="http://wiki.eclipse.or
 We have not had good results with FreeHDL or with Green Mountain VHDL. It seems that these two projects may have been terminated.</p>
 <p>You need a VHDL editor too</p>
 <p>After you choose your simulator, you need a VHDL editor too. Sigasi has a <a href="http://www.sigasi.com/sigasi-starter-edition">free starter edition</a> of its popular VHDL development environment.</p>
+<h3 id="does-sigasi-studio-support-vhdl-2008">Does Sigasi Studio support VHDL-2008?</h3>
+<p>Sigasi Studio supports VHDL-2008 features, except:</p>
+<ul>
+<li>Inline PSL (not supported, but PSL in comments is safely ignored)</li>
+<li>New generics on packages: type generics (to be released in Sigasi Studio 3.1)</li>
+<li>New generics on packages: subprogram generics (not supported)</li>
+<li>New generics on subprograms (not supported)</li>
+</ul>
       </div>
     </div>
 

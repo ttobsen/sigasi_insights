@@ -1992,13 +1992,13 @@
 <p>I used following script to update; it might save you some time too:</p>
 <div class="codehilite"><pre><span class="k">for</span> i in pom.xml */pom.xml
 <span class="k">do</span>
-    sed -i -e <span class="s1">&#39;s/org.sonatype.tycho/org.eclipse.tycho/g&#39;</span> $i<span class="p">;</span>
-    sed -i -e <span class="s1">&#39;s/maven-osgi-compiler-plugin/tycho-compiler-plugin/g&#39;</span> $i<span class="p">;</span>
-    sed -i -e <span class="s1">&#39;s/maven-osgi-packaging-plugin/tycho-packaging-plugin/g&#39;</span> $i<span class="p">;</span>
-    sed -i -e <span class="s1">&#39;s/maven-osgi-source-plugin/tycho-source-plugin/g&#39;</span> $i<span class="p">;</span>
-    sed -i -e <span class="s1">&#39;s/maven-osgi-test-plugin/tycho-surefire-plugin/g&#39;</span> $i<span class="p">;</span>
-    sed -i -e <span class="s1">&#39;s/maven-tycho-plugin/tycho-pomgenerator-plugin/g&#39;</span> $i<span class="p">;</span>
-    sed -i -e <span class="s1">&#39;s$&lt;tycho-version&gt;0.11.0&lt;/tycho-version&gt;$&lt;tycho-version&gt;0.12.0&lt;/tycho-version&gt;$g&#39;</span> $i<span class="p">;</span>
+    sed -i -e <span class="s1">&#39;s/org.sonatype.tycho/org.eclipse.tycho/g&#39;</span> <span class="nv">$i</span><span class="p">;</span>
+    sed -i -e <span class="s1">&#39;s/maven-osgi-compiler-plugin/tycho-compiler-plugin/g&#39;</span> <span class="nv">$i</span><span class="p">;</span>
+    sed -i -e <span class="s1">&#39;s/maven-osgi-packaging-plugin/tycho-packaging-plugin/g&#39;</span> <span class="nv">$i</span><span class="p">;</span>
+    sed -i -e <span class="s1">&#39;s/maven-osgi-source-plugin/tycho-source-plugin/g&#39;</span> <span class="nv">$i</span><span class="p">;</span>
+    sed -i -e <span class="s1">&#39;s/maven-osgi-test-plugin/tycho-surefire-plugin/g&#39;</span> <span class="nv">$i</span><span class="p">;</span>
+    sed -i -e <span class="s1">&#39;s/maven-tycho-plugin/tycho-pomgenerator-plugin/g&#39;</span> <span class="nv">$i</span><span class="p">;</span>
+    sed -i -e <span class="s1">&#39;s$&lt;tycho-version&gt;0.11.0&lt;/tycho-version&gt;$&lt;tycho-version&gt;0.12.0&lt;/tycho-version&gt;$g&#39;</span> <span class="nv">$i</span><span class="p">;</span>
 <span class="k">done</span>
 </pre></div>
 

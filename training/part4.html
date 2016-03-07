@@ -3,7 +3,7 @@
 	<!--// OPEN HEAD //-->
 	<head>
 		<!--// SITE TITLE //-->
-		<title>Installing Quartus on a 64-bit Linux system - Sigasi</title>
+		<title>Hierarchy, Graphics and documentation - Sigasi</title>
 		<link rel="stylesheet" href="http://www.sigasi.com/wp-content/plugins/sitepress-multilingual-cms/res/css/language-selector.css?v=3.2.7" type="text/css" media="all" />
 		<!--// SITE META //-->
 		<meta charset="UTF-8"/>
@@ -25,14 +25,14 @@
 			}
 		</script>
 		<!-- This site is optimized with the Yoast SEO plugin v3.0.6 - https://yoast.com/wordpress/plugins/seo/ -->
-		<link rel="canonical" href="http://insights.sigasi.com//tech/installing-quartus-64-bit-linux-system.html" />
+		<link rel="canonical" href="http://insights.sigasi.com//training/part4.html" />
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="Installing Quartus on a 64-bit Linux system - Sigasi" />
-		<meta property="og:url" content="http://insights.sigasi.com//tech/installing-quartus-64-bit-linux-system.html" />
+		<meta property="og:title" content="Hierarchy, Graphics and documentation - Sigasi" />
+		<meta property="og:url" content="http://insights.sigasi.com//training/part4.html" />
 		<meta property="og:site_name" content="Sigasi" />
 		<meta name="twitter:card" content="summary"/>
-		<meta name="twitter:title" content="Installing Quartus on a 64-bit Linux system - Sigasi"/>
+		<meta name="twitter:title" content="Hierarchy, Graphics and documentation - Sigasi"/>
 		<!-- / Yoast SEO plugin. -->
 		<script type="text/javascript">
 			window._wpemojiSettings = {
@@ -1774,7 +1774,7 @@
 <div class="page-heading page-heading-hidden clearfix">
 	<div class="container">
 		<div class="heading-text">
-			<h1 class="entry-title" >Installing Quartus on a 64-bit Linux system</h1>
+			<h1 class="entry-title" >Hierarchy, Graphics and documentation</h1>
 		</div>
 	</div>
 </div>
@@ -1944,7 +1944,7 @@
 			</li>
 			<li>
 				<a href="/screencasts/">Screencasts</a></li>
-			<li class="active">
+			<li>
 				<a href="/tech/">Tech Articles</a></li>
 			<li>
 				<a href="/opinion/">Opinion</a></li>
@@ -1964,17 +1964,11 @@
 <div class="container">
   <div class="page-header">
     <div>
-        <h1 style="margin-bottom: 0px;margin-top: 30px;">Installing Quartus on a 64-bit Linux system</h1>
+        <h1 style="margin-bottom: 0px;margin-top: 30px;">Hierarchy, Graphics and documentation</h1>
     </div>
         
     <div style="margin: 10px 0 10px">
         <span>
-          Posted on 2012&#8209;06&#8209;23
-            by Philippe Faes
-        </span>
-        <span style="padding-left:50px">
-        Tagged as: 
-              <a href="/tag/Quartus/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">Quartus</a>
         </span>
     </div>
   </div>
@@ -1985,19 +1979,72 @@
 
     <div class="content">
       <div class="col-md-9" role="main">
-        <p>When you try to install Altera Quartus on a 64-bit Linux system (like Fedora or RedHat RHEL), you will get error messages about missing libraries. The Quartus installer actually looks for the 32-bit versions of these libraries. Here is the list of libraries that I ran in to and had to install:</p>
-<div class="codehilite"><pre>yum install libXext.i686 freetype.i686 fontconfig.i686 linpng.i686 libSM.i6866
-</pre></div>
+        <p>In Part 4 you will learn how to use the Hierarchy View. You will also learn how to use and export Graphics and Documentation with Sigasi Studio.</p>
+<h4 id="hierarchy-view">Hierarchy View</h4>
+<ul>
+<li>Import project <code>part4</code> (and close unrelated projects)</li>
+<li>Open <code>testbench.vhd</code></li>
+<li>Right click the <code>STR</code> architecture and select <strong>Set as Top Level</strong></li>
+<li>Explore the resulting tree in the Hierarchy View:</li>
+<li>Inspect the value of generics (Notice how the value in <code>dut_instance</code> differs from its default value)</li>
+<li>Change the value of a generic and note how the Hierarchy View refreshes when you save the file.</li>
+<li>Add a syntax error in a file and note that Sigasi Studio is able to recover and still show valid content in the Hierarchy View.</li>
+<li>Disable the <strong>Toggle Hierarchy Refresh</strong> toggle button, and note Sigasi Studio no longer auto-updates the hierarchy when edit your files. (This is useful for big hierarchies)</li>
+</ul>
+<h4 id="block-diagram-view">Block Diagram View</h4>
+<ul>
+<li>Open <code>testbench.vhd</code></li>
+<li>Right click the VHDL editor and select <strong>Show in &gt; Block Diagram</strong></li>
+<li>Double click ports or connections to navigate to the corresponding VHDL code. (This also works the other way around by clicking <strong>Show in &gt; Block Diagram</strong> on ports in the VHDL code)</li>
+<li>Make some changes in the VHDL code and note how the Block Diagram updates when you save your file.</li>
+<li>Select <code>dut_instance</code> in the diagram, right click and select <strong>Open Entity Declaration</strong> to navigate to the corresponding entity, <code>dut</code>.</li>
+<li>Click the save icon 💾, and export the diagram to a PNG or SVG file.</li>
+</ul>
+<h4 id="state-machine-view">State Machine View</h4>
+<ul>
+<li>Click <strong>Window &gt; Show View &gt; State Machines</strong> to open the State Machine view</li>
+<li>Open <code>dut.vhd</code></li>
+<li>Double click on a few nodes and transitions in to navigate to the corresponding VHDL code.</li>
+<li>Change the VHDL code of the state machine and notice how the view updates (See the TODO tag)</li>
+<li>Add a comment to the <code>when idle: state := preparing;</code> transition. For example: <code>-- start preparing</code><br />
+  Notice how the transition labels update</li>
+<li>Toggle the (Aa)-button to show/hide the transition labels.</li>
+<li>Click the save icon 💾 to export the diagram to file.</li>
+</ul>
+<h4 id="documentation">Documentation</h4>
+<ul>
+<li>Import project <code>Sigasi_doc</code></li>
+<li>Open the Documentation View</li>
+<li>Open file <code>testbench.vhd</code></li>
+<li>Edit comments and note how the documentation is updated:</li>
+<li>Document a port (by adding a comment)</li>
+<li>Document a generic</li>
+<li>Document an architecture</li>
+<li>Document an entity</li>
+<li>Export PDF</li>
+<li>Inspect the DocBook file</li>
+</ul>
+<h4 id="optional-extra-tasks">Optional Extra tasks</h4>
+<ul>
+<li>Try out <strong>Net search</strong> in <code>stimgen.vhd</code> (Project <code>part4</code>)</li>
+<li>State Machine View: Add a second state machine in <code>dut.vhd</code> and note how it is displayed in a new tab.</li>
+<li>Finish the documentation of the Project to get a clean and complete PDF.</li>
+</ul>
+<!--
+* Modify the documentation templates:
+  * Copy the templates from the Installation (`<installation folder>/plugins/com.sigasi.hdt.docgen.resources_.../templates`) to your workspace (`<workspace folder>/sigasi-templates`)
+  * Modify the `preview.xml` template and inspect the result in the **Documentation View**
+-->
 
+<p style="page-break-after:always;"></p>
 
-<p>More info about running Quartus in 64-bit mode: <a href="http://quartushelp.altera.com/11.1/mergedProjects/global/install/install_pro_64bit.htm">http://quartushelp.altera.com/11.1/mergedProjects/global/install/install_pro_64bit.htm</a></p>
-<p>If you are having troubles with SELinux, run:</p>
-<div class="codehilite"><pre>sh altera_installer.external.sh --confirm
-<span class="nb">cd </span>10.0sp1_quartus_free_linux/altera_installer
-rm bin/libX11.so.6
-sudo ./setup
-sudo chcon -t textrel_shlib_t /opt/altera/10.0sp1/quartus/linux/*.so
-</pre></div>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<ul>
+<li>Where are my views? → <strong>Window &gt; Perspective &gt; Reset perspective</strong></li>
+<li>Unexpected error markers? → <strong>Project &gt; Clean...</strong></li>
+<li>Error markers are not updated? → Make sure <strong>Automatic build</strong> is enabled</li>
+<li>More on <a href="http://insights.sigasi.com/manual/trouble.html">http://insights.sigasi.com/manual/trouble.html</a></li>
+</ul>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -2013,11 +2060,29 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 <noscript>Please enable JavaScript to view the comments.</noscript>      </div>
     </div>
 
+    <div class="col-md-3" role="complementary">
+      <nav class="hidden-print hidden-xs hidden-sm">
+        <div class="sidebar" data-spy="affix" data-offset-top="510" >
+          <div class="well">
+            <a href="#"><strong>Hierarchy, Graphics and documentation</strong></a>
+            <div class="toc">
+<ul>
+<li><a href="#hierarchy-view">Hierarchy View</a></li>
+<li><a href="#block-diagram-view">Block Diagram View</a></li>
+<li><a href="#state-machine-view">State Machine View</a></li>
+<li><a href="#documentation">Documentation</a></li>
+<li><a href="#optional-extra-tasks">Optional Extra tasks</a></li>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</div>
+
+          </div>
+        </div>
+      </nav>
+    </div>
 
   </div>
 
-  <ul class="pager">
-  </ul>
       
 </div>
 

@@ -3,7 +3,7 @@
 	<!--// OPEN HEAD //-->
 	<head>
 		<!--// SITE TITLE //-->
-		<title>Installing Quartus on a 64-bit Linux system - Sigasi</title>
+		<title>Linting and other features - Sigasi</title>
 		<link rel="stylesheet" href="http://www.sigasi.com/wp-content/plugins/sitepress-multilingual-cms/res/css/language-selector.css?v=3.2.7" type="text/css" media="all" />
 		<!--// SITE META //-->
 		<meta charset="UTF-8"/>
@@ -25,14 +25,14 @@
 			}
 		</script>
 		<!-- This site is optimized with the Yoast SEO plugin v3.0.6 - https://yoast.com/wordpress/plugins/seo/ -->
-		<link rel="canonical" href="http://insights.sigasi.com//tech/installing-quartus-64-bit-linux-system.html" />
+		<link rel="canonical" href="http://insights.sigasi.com//training/part3.html" />
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="Installing Quartus on a 64-bit Linux system - Sigasi" />
-		<meta property="og:url" content="http://insights.sigasi.com//tech/installing-quartus-64-bit-linux-system.html" />
+		<meta property="og:title" content="Linting and other features - Sigasi" />
+		<meta property="og:url" content="http://insights.sigasi.com//training/part3.html" />
 		<meta property="og:site_name" content="Sigasi" />
 		<meta name="twitter:card" content="summary"/>
-		<meta name="twitter:title" content="Installing Quartus on a 64-bit Linux system - Sigasi"/>
+		<meta name="twitter:title" content="Linting and other features - Sigasi"/>
 		<!-- / Yoast SEO plugin. -->
 		<script type="text/javascript">
 			window._wpemojiSettings = {
@@ -1774,7 +1774,7 @@
 <div class="page-heading page-heading-hidden clearfix">
 	<div class="container">
 		<div class="heading-text">
-			<h1 class="entry-title" >Installing Quartus on a 64-bit Linux system</h1>
+			<h1 class="entry-title" >Linting and other features</h1>
 		</div>
 	</div>
 </div>
@@ -1944,7 +1944,7 @@
 			</li>
 			<li>
 				<a href="/screencasts/">Screencasts</a></li>
-			<li class="active">
+			<li>
 				<a href="/tech/">Tech Articles</a></li>
 			<li>
 				<a href="/opinion/">Opinion</a></li>
@@ -1964,17 +1964,11 @@
 <div class="container">
   <div class="page-header">
     <div>
-        <h1 style="margin-bottom: 0px;margin-top: 30px;">Installing Quartus on a 64-bit Linux system</h1>
+        <h1 style="margin-bottom: 0px;margin-top: 30px;">Linting and other features</h1>
     </div>
         
     <div style="margin: 10px 0 10px">
         <span>
-          Posted on 2012&#8209;06&#8209;23
-            by Philippe Faes
-        </span>
-        <span style="padding-left:50px">
-        Tagged as: 
-              <a href="/tag/Quartus/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">Quartus</a>
         </span>
     </div>
   </div>
@@ -1985,19 +1979,61 @@
 
     <div class="content">
       <div class="col-md-9" role="main">
-        <p>When you try to install Altera Quartus on a 64-bit Linux system (like Fedora or RedHat RHEL), you will get error messages about missing libraries. The Quartus installer actually looks for the 32-bit versions of these libraries. Here is the list of libraries that I ran in to and had to install:</p>
-<div class="codehilite"><pre>yum install libXext.i686 freetype.i686 fontconfig.i686 linpng.i686 libSM.i6866
-</pre></div>
-
-
-<p>More info about running Quartus in 64-bit mode: <a href="http://quartushelp.altera.com/11.1/mergedProjects/global/install/install_pro_64bit.htm">http://quartushelp.altera.com/11.1/mergedProjects/global/install/install_pro_64bit.htm</a></p>
-<p>If you are having troubles with SELinux, run:</p>
-<div class="codehilite"><pre>sh altera_installer.external.sh --confirm
-<span class="nb">cd </span>10.0sp1_quartus_free_linux/altera_installer
-rm bin/libX11.so.6
-sudo ./setup
-sudo chcon -t textrel_shlib_t /opt/altera/10.0sp1/quartus/linux/*.so
-</pre></div>
+        <p>In Part 3 you will learn about VHDL linting (code checks) and how you can get to zero warnings.</p>
+<p>We will also explore other features that are not specific to VHDL.</p>
+<h4 id="linting">Linting</h4>
+<ul>
+<li>Import Project <code>part3</code></li>
+<li>Close unrelated projects (Right Click project in Project Explorer)</li>
+<li>Fix all <strong>Errors</strong> (Track your progress in the Problems View)</li>
+<li>Fix all <code>--TODO: fix</code> <strong>Warnings</strong> (Track your progress in the Task View). We will get to the other warnings later.</li>
+<li>Change the severity of the <strong>Check for position associations in instantiations</strong> linting via the Preferences (<strong>Sigasi &gt; VHDL &gt; Errors/Warnings</strong>). Set to severity to <strong>Error</strong>. Note that this warning in the code is now an error.</li>
+</ul>
+<h4 id="waive-specific-warnings">Waive specific warnings</h4>
+<ul>
+<li>Open <code>waive.vhd</code></li>
+<li>Suppress the <em>Null Range</em> warning by adding
+ <code>-- @suppress</code><br />
+<strong>Note:</strong> You need to save the file before the warnings disappears.</li>
+<li>Note that the warning marker is removed from the <strong>Problems View</strong></li>
+<li>Explicitly specify which warning you suppress by adding the warning message prefix:
+ <code>-- @suppress "Null Range"</code></li>
+<li>Note that the warning marker re-appears when you type another prefix</li>
+<li>Now also explain why you suppress the warning by adding an explanation:
+ <code>-- @suppress "Null Range" Ok here, see http://...</code></li>
+</ul>
+<h4 id="other-features">Other features</h4>
+<ul>
+<li>Project Explorer</li>
+<li>Show hidden files (Click <strong>▿</strong>, <strong>Customize view</strong>, disable the <code>.* resources</code>)</li>
+<li>Delete a file from your project. Next, restore this file from local history (Right click, <strong>Restore from Local History...</strong>)</li>
+<li>Bookmarks:</li>
+<li>Right click a line number and select <strong>Add Bookmark</strong></li>
+<li>Open the bookmark view (<strong>Window &gt; Show View</strong>)</li>
+<li>Multiple screen support</li>
+<li>Open a new Window (<strong>Window &gt; New Window</strong>)</li>
+<li>Drag the new windows to a different screen</li>
+<li>Customize Autocomplete templates: Add a custom header to the <code>entity/architecture pair</code> template:</li>
+<li><strong>Window &gt; Preferences &gt; Sigasi &gt; VHDL &gt; Templates</strong></li>
+<li>Select <strong>entity/architecture pair</strong></li>
+<li>Click <strong>Edit...</strong></li>
+<li>Add a custom header (e.g. <code>-- Confidential, Copyright 2016</code>)</li>
+<li>Confirm with <strong>OK</strong></li>
+<li>Create a new VHDL and select your customized template (<strong>File &gt; New &gt; VHDL file</strong>, choose a name, <strong>Next</strong> and choose the <code>entity/architecture pair</code> template)</li>
+</ul>
+<h4 id="optional-extra-tasks">Optional Extra tasks</h4>
+<ul>
+<li>Customize your perspective:</li>
+<li><strong>Window &gt; Perspective &gt; Customize Perspective...</strong></li>
+<li>Enable the <strong>Print</strong> button in <strong>File</strong></li>
+<li>Configure the <strong>Naming Convention</strong> settings to check for <em>Uppercase</em> constants (<code>[A-Z_]+</code>)</li>
+<li>Open and explore the Properties Page (Right click file, <strong>Properties</strong>)</li>
+<li>Multiple Search Views</li>
+<li>Run a first search (e.g. Find Reference on <code>std_logic</code>)</li>
+<li>Click the <strong>Pin the Search View</strong> button</li>
+<li>Start a new search. This search will open in a new <mark>Search View</mark></li>
+<li>Configure project specific settings <a href="http://insights.sigasi.com/manual/linting.html#project-specific-linting-settings">http://insights.sigasi.com/manual/linting.html#project-specific-linting-settings</a></li>
+</ul>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -2013,11 +2049,27 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 <noscript>Please enable JavaScript to view the comments.</noscript>      </div>
     </div>
 
+    <div class="col-md-3" role="complementary">
+      <nav class="hidden-print hidden-xs hidden-sm">
+        <div class="sidebar" data-spy="affix" data-offset-top="510" >
+          <div class="well">
+            <a href="#"><strong>Linting and other features</strong></a>
+            <div class="toc">
+<ul>
+<li><a href="#linting">Linting</a></li>
+<li><a href="#waive-specific-warnings">Waive specific warnings</a></li>
+<li><a href="#other-features">Other features</a></li>
+<li><a href="#optional-extra-tasks">Optional Extra tasks</a></li>
+</ul>
+</div>
+
+          </div>
+        </div>
+      </nav>
+    </div>
 
   </div>
 
-  <ul class="pager">
-  </ul>
       
 </div>
 

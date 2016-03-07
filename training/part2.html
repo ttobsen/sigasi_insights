@@ -3,7 +3,7 @@
 	<!--// OPEN HEAD //-->
 	<head>
 		<!--// SITE TITLE //-->
-		<title>vhdl 2008 - Sigasi</title>
+		<title>VHDL projects - Sigasi</title>
 		<link rel="stylesheet" href="http://www.sigasi.com/wp-content/plugins/sitepress-multilingual-cms/res/css/language-selector.css?v=3.2.7" type="text/css" media="all" />
 		<!--// SITE META //-->
 		<meta charset="UTF-8"/>
@@ -25,14 +25,14 @@
 			}
 		</script>
 		<!-- This site is optimized with the Yoast SEO plugin v3.0.6 - https://yoast.com/wordpress/plugins/seo/ -->
-		<link rel="canonical" href="http://insights.sigasi.com//tag/vhdl 2008/" />
+		<link rel="canonical" href="http://insights.sigasi.com//training/part2.html" />
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="vhdl 2008 - Sigasi" />
-		<meta property="og:url" content="http://insights.sigasi.com//tag/vhdl 2008/" />
+		<meta property="og:title" content="VHDL projects - Sigasi" />
+		<meta property="og:url" content="http://insights.sigasi.com//training/part2.html" />
 		<meta property="og:site_name" content="Sigasi" />
 		<meta name="twitter:card" content="summary"/>
-		<meta name="twitter:title" content="vhdl 2008 - Sigasi"/>
+		<meta name="twitter:title" content="VHDL projects - Sigasi"/>
 		<!-- / Yoast SEO plugin. -->
 		<script type="text/javascript">
 			window._wpemojiSettings = {
@@ -1774,7 +1774,7 @@
 <div class="page-heading page-heading-hidden clearfix">
 	<div class="container">
 		<div class="heading-text">
-			<h1 class="entry-title" >vhdl 2008</h1>
+			<h1 class="entry-title" >VHDL projects</h1>
 		</div>
 	</div>
 </div>
@@ -1961,36 +1961,153 @@
 									<div class="spb_content_element col-sm-12 spb_raw_html">
 										<div class="spb-asset-content">
 
-
-    <section class="container">
-      <div class="row">
-        <div class="spb_content_element col-sm-12 spb_text_column">
-          <div class="spb-asset-content" style="padding-top:0%;padding-bottom:0%;padding-left:0%;padding-right:0%;text-align: center;">
-<h1>Articles about : vhdl 2008</h1>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div style="margin: 10px 0 10px">
-    </div>
-
 <div class="container">
-    
-    <div class="row">
-      <div class="col-md-offset-0 col-md-6" >
-        <p style="margin-bottom: 10px"><a href="/tech/how-well-does-your-compiler-support-vhdl-2008.html" title="How well does your compiler support VHDL 2008?">How well does your compiler support VHDL 2008?</a>
-          <small>2012&#8209;10&#8209;23</small>
-        </p>
-      </div>
-      <div class="col-md-offset-0 col-md-6" >
-        <p style="margin-bottom: 10px"><a href="/tech/how-use-new-vhdl-2008-libraries-sigasi.html" title="How to use the new VHDL 2008 libraries in Sigasi">How to use the new VHDL 2008 libraries in Sigasi</a>
-          <small>2012&#8209;02&#8209;08</small>
-        </p>
-      </div>
+  <div class="page-header">
+    <div>
+        <h1 style="margin-bottom: 0px;margin-top: 30px;">VHDL projects</h1>
     </div>
+        
+    <div style="margin: 10px 0 10px">
+        <span>
+        </span>
+    </div>
+  </div>
+  
+  
+
+  <div class="row">
+
+    <div class="content">
+      <div class="col-md-9" role="main">
+        <p>The goal of Part 2 is to understand what a project is, why you want projects and how to set one up. You will learn how to add files to your projects and make sure the VHDL library is set up correctly.</p>
+<p>As an extra, you will learn how to efficiently work with Finite State Machines.</p>
+<h4 id="setup">Setup</h4>
+<ul>
+<li>Switch to the <strong>Sigasi</strong> perspective (Button in top right) </li>
+<li>Import project <code>part2_vhdl_project</code></li>
+<li><strong>File &gt; Import...</strong></li>
+<li><strong>Existing project into Workspace</strong>, <strong>Next</strong></li>
+<li><strong>Browse</strong> to <code>part2_vhdl_project</code></li>
+<li><strong>Finish</strong></li>
+<li>Close unrelated projects (Right Click on the project in Project Explorer and select <strong>Close Unrelated Projects</strong>)</li>
+</ul>
+<h4 id="navigation">Navigation</h4>
+<ul>
+<li>Open <code>navigation.vhd</code> with <strong>Open Resource</strong> (<strong>Ctrl+Shift+R</strong>) or via the Project Explorer</li>
+<li>Project Explorer: Enable the <em>Link with editor</em> button (⇆)</li>
+<li>Hover over <code>MAX_COUNT</code></li>
+<li>Open declaration of <code>std_logic</code> and other declarations</li>
+<li>
+<p>Navigate back (<strong>Alt+Left</strong>)</p>
+</li>
+<li>
+<p>Open <code>components.vhd</code></p>
+</li>
+<li>Navigate from the component instantiation to the matching entity: press and hold the <strong>Ctrl</strong> key and hover over the component to see a menu with hyperlinks. Click the link to open it.</li>
+<li>Find References of port <code>rst</code></li>
+<li>
+<p>Open two editors side by side (Drag editor tab)</p>
+</li>
+<li>
+<p>Navigate through the project with the following Views: (If they are not visible, open them with <strong>Quick Access</strong>)</p>
+</li>
+<li>Libraries View</li>
+<li>Problems View</li>
+<li>Task View</li>
+<li>Dependencies View</li>
+</ul>
+<h4 id="edit">Edit</h4>
+<ul>
+<li>Open file <code>edit.vhd</code></li>
+<li>Use Quickfix to fix the invalid sensitivity list</li>
+<li>Remove trailing whitespace (Use <strong>Quick Access</strong> to find and run this action)</li>
+</ul>
+<h4 id="libraries">Libraries</h4>
+<ul>
+<li>Open <code>libraries.vhd</code></li>
+<li>Set folder <code>my_lib</code> to library <code>my_lib</code> (Project explorer: <strong>Set Library</strong>)</li>
+</ul>
+<h4 id="state-machines">State machines:</h4>
+<ul>
+<li>Open file <code>fsm.vhd</code></li>
+<li>Declare enum type <code>state_type</code>: (<code>init</code>, <code>running</code>, <code>ready</code>)</li>
+<li>Declare variable <code>state</code> of <code>state_type</code></li>
+<li>Autocomplete <code>case statement</code></li>
+<li>Add some transitions</li>
+<li>Add case choice <code>when idle</code> and use quickfix to add enum literal to enum type (QuickFix)</li>
+<li>Remove case choice <code>when idle</code> and use the quickfix on <code>case state</code> to add it again.</li>
+<li><strong>Ctrl+Hover</strong> on a state assignment and select <strong>Open Matching when Clause</strong>. </li>
+</ul>
+<h4 id="rename">Rename</h4>
+<ul>
+<li>Open file <code>rename.vhd</code></li>
+<li>Manual rename: Change (edit) <code>port_1</code> to <code>port_1a</code> and manually update the matching instantiations</li>
+<li>Rename (<strong>Refactor &gt; Rename element</strong>) port <code>port_a</code> to <code>port_aa</code></li>
+<li>Compare file with <em>Local history</em> (Right-click on file, <strong>Compare With &gt; Local History...</strong>) and inspect the changes you made</li>
+</ul>
+<h4 id="import-non-sigasi-project-setup-libraries">Import (non-Sigasi) project + setup libraries</h4>
+<ul>
+<li>First: Check that your are in VHDL 2008 mode</li>
+<li><strong>File &gt; Import...</strong></li>
+<li><strong>Sigasi &gt; Import a VHDL project</strong>, <strong>Next ></strong></li>
+<li><strong>Browse...</strong> to <code>vunit_example</code>, <strong>Finish</strong></li>
+<li>Set the project to library <code>uart_lib</code> (right click, <strong>Set Library</strong>)<br />
+  Check the library annotations in the project explorer</li>
+<li>Add library <code>vunit_lib</code>:</li>
+<li>Drag and drop the <code>vunit_lib</code> folder from you File System Explorer (e.g.: Windows Explorer, Mac Finder, Nautilus) into the <code>Common Libraries</code> folder (in the Project explorer). Choose the option to <mark>link to files and folders</mark>.</li>
+<li>Set the library to <code>vunit_lib</code>  </li>
+<li>Set the library for the test files (<code>uart/src/test</code>). Read the source code for the library name.</li>
+<li>One more library is not correctly set. Try to fix this. (Tip: the sources are already in the project)</li>
+</ul>
+<h4 id="optional-extra-tasks">Optional Extra Tasks</h4>
+<ul>
+<li>Select <code>edit.vhd</code> and <code>navigate.vhd</code> and compare them via the right click menu.</li>
+<li>Configure and enable an External Compiler (See <code>extra_compiler.vhd</code>)</li>
+<li>Set the top level and start the Simulator (See <code>extra_compiler.vhd</code>)</li>
+<li>Export a CSV file with all files in your project (<strong>File &gt; Export... &gt; Sigasi &gt; CSV file</strong>)</li>
+</ul>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+var disqus_shortname = 'sigasi';
+var disqus_developer = 1;
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>      </div>
+    </div>
+
+    <div class="col-md-3" role="complementary">
+      <nav class="hidden-print hidden-xs hidden-sm">
+        <div class="sidebar" data-spy="affix" data-offset-top="510" >
+          <div class="well">
+            <a href="#"><strong>VHDL projects</strong></a>
+            <div class="toc">
+<ul>
+<li><a href="#setup">Setup</a></li>
+<li><a href="#navigation">Navigation</a></li>
+<li><a href="#edit">Edit</a></li>
+<li><a href="#libraries">Libraries</a></li>
+<li><a href="#state-machines">State machines:</a></li>
+<li><a href="#rename">Rename</a></li>
+<li><a href="#import-non-sigasi-project-setup-libraries">Import (non-Sigasi) project + setup libraries</a></li>
+<li><a href="#optional-extra-tasks">Optional Extra Tasks</a></li>
+</ul>
 </div>
 
+          </div>
+        </div>
+      </nav>
+    </div>
+
+  </div>
+
+      
+</div>
 
 										</div>
 									</div>
