@@ -2145,7 +2145,13 @@ INCREMENT com.sigasi.hdt sigasi 2.0 18-nov-2012 4 \
 <li>Make sure the environment variable is correct: SIGASI_LM_LICENSE_FILE=<port number>@<servername></li>
 <li>Verify that your server meets the <a href="/faq.html#what-are-the-system-requirements" title="FAQ">what-are-the-system-requirements</a>. Contact us for options if it does not.</li>
 <li>You can easily check the status of your license via the License Key preference page : <strong>Preferences &gt; Sigasi &gt; License Key</strong>. At the bottom of this preference page you can see the type and expiration date of your license.</li>
+<li>Sigasi Studio pre-emptively tries to check out certain license features. As a result, you might see warning message like this in your server log. These messages can be safely ignored.</li>
 </ul>
+<div class="codehilite"><pre>9:14:47 (sigasi) UNSUPPORTED: &quot;com.sigasi.hdt.custom&quot; (PORT_AT_HOST_PLUS   ) testuser@testmachine  (License server system does not support this feature. (-18,327:10054 &quot;&quot;))
+9:14:47 (sigasi) UNSUPPORTED: &quot;com.sigasi.hdt.preview&quot; (PORT_AT_HOST_PLUS   ) testuser@testmachine  (License server system does not support this feature. (-18,327:10054 &quot;&quot;))  
+</pre></div>
+
+
 <p>If the steps above do not help, feel free to <a href="mailto:sales@sigasi.com" title="contact us">contact us</a> and send us a <strong>screenshot of the license dialog</strong> with the error message.</p>
 
       </div>
