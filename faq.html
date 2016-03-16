@@ -2033,6 +2033,7 @@
 <li><a href="#eclipse-ini">What is the eclipse.ini file and where can I find it?</a></li>
 <li><a href="#which-free-vhdl-simulator-can-i-use">Which free VHDL simulator can I use?</a></li>
 <li><a href="#does-sigasi-studio-support-vhdl-2008">Does Sigasi Studio support VHDL-2008?</a></li>
+<li><a href="#show-in-system-explorer-does-not-work-on-red-hat-linux-6">"Show In -&gt; System Explorer" does not work on Red Hat Linux 6</a></li>
 </ul>
 </div>
 
@@ -2427,6 +2428,9 @@ We have not had good results with FreeHDL or with Green Mountain VHDL. It seems 
 <li>New generics on packages: subprogram generics (not supported)</li>
 <li>New generics on subprograms (not supported)</li>
 </ul>
+<h3 id="show-in-system-explorer-does-not-work-on-red-hat-linux-6">"Show In -&gt; System Explorer" does not work on Red Hat Linux 6</h3>
+<p>On preference page <strong>General &gt; Workspace</strong> you can configure the command that is used to open files with the System Explorer. The default Linux command does not work on older linux systems. 
+On RedHat 6 linux, you can use the nautilus command: <code>nautilus "${selected_resource_parent_loc}"</code> (<a href="http://help.eclipse.org/mars/index.jsp?topic=%2Forg.eclipse.platform.doc.user%2Freference%2Fref-9.htm">More info</a>).</p>
       </div>
     </div>
 
