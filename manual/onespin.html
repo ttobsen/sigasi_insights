@@ -3,7 +3,7 @@
 	<!--// OPEN HEAD //-->
 	<head>
 		<!--// SITE TITLE //-->
-		<title>Tool Integration - Sigasi</title>
+		<title>OneSpin Integration - Sigasi</title>
 		<link rel="stylesheet" href="http://www.sigasi.com/wp-content/plugins/sitepress-multilingual-cms/res/css/language-selector.css?v=3.2.7" type="text/css" media="all" />
 		<!--// SITE META //-->
 		<meta charset="UTF-8"/>
@@ -25,14 +25,14 @@
 			}
 		</script>
 		<!-- This site is optimized with the Yoast SEO plugin v3.0.6 - https://yoast.com/wordpress/plugins/seo/ -->
-		<link rel="canonical" href="http://insights.sigasi.com//manual/tools.html" />
+		<link rel="canonical" href="http://insights.sigasi.com//manual/onespin.html" />
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="Tool Integration - Sigasi" />
-		<meta property="og:url" content="http://insights.sigasi.com//manual/tools.html" />
+		<meta property="og:title" content="OneSpin Integration - Sigasi" />
+		<meta property="og:url" content="http://insights.sigasi.com//manual/onespin.html" />
 		<meta property="og:site_name" content="Sigasi" />
 		<meta name="twitter:card" content="summary"/>
-		<meta name="twitter:title" content="Tool Integration - Sigasi"/>
+		<meta name="twitter:title" content="OneSpin Integration - Sigasi"/>
 		<!-- / Yoast SEO plugin. -->
 		<script type="text/javascript">
 			window._wpemojiSettings = {
@@ -1774,7 +1774,7 @@
 <div class="page-heading page-heading-hidden clearfix">
 	<div class="container">
 		<div class="heading-text">
-			<h1 class="entry-title" >Tool Integration</h1>
+			<h1 class="entry-title" >OneSpin Integration</h1>
 		</div>
 	</div>
 </div>
@@ -1964,7 +1964,7 @@
 <div class="container">
   <div class="page-header">
     <div>
-        <h1 style="margin-bottom: 0px;margin-top: 30px;">Tool Integration</h1>
+        <h1 style="margin-bottom: 0px;margin-top: 30px;">OneSpin Integration</h1>
     </div>
         
     <div style="margin: 10px 0 10px">
@@ -1979,375 +1979,27 @@
 
     <div class="content">
       <div class="col-md-9" role="main">
-        <p>Sigasi supports a number of ways to work with external tools such as
-simulators. Different techniques offer varying degrees of flexibility
-and automation.</p>
-<p>Most people will want to set up their <a href="/manual/tools.html#external-compilers" title="Tool Integration">External Compilers</a> 
-so that Sigasi can use
-them to compile and start simulations. This is currently supported only
-for <code>vcom</code>-style simulators, Aldec Riviera-PRO and Mentor Graphics
-ModelSim and QuestaSim; and <code>isim</code> from Xilinx. Learn about <a href="/manual/tools.html#external-compilers" title="Tool Integration">External Compilers</a>.</p>
-<p>Another way to compile your project is to export your project in one of
-two formats. The first format is a Makefile for compiling your project
-with ModelSim. The second format is a CSV (comma separated values) list
-of all the files in your project, in the correct compilation order.
-Learn more about how to <a href="/manual/tools.html#export" title="Tool Integration">Export</a> your project's file list.</p>
-<p>The third, and more advanced way of working with compilers or simulators
-is to use the standard Eclipse mechanisms of <em>builders</em> and <em>external
-tools</em>. </p>
-<p>By <a href="/manual/tools.html#creating-a-builder" title="Tool Integration">Creating a builder</a>,
-you can arrange for an external tool to be run automatically when a
-Sigasi project is rebuilt. By default, this happens each time you save a
-file. <a href="/manual/tools.html#external-tools-configuration" title="Tool Integration">External Tools Configuration</a>
-allow you to call any program or script from within the Sigasi GUI. You
-have to write and maintain the scripts yourself, but you have complete
-flexibility as to what is in the scripts.</p>
-<h3 id="external-compilers">External Compilers</h3>
-<p>If you have a simulator or lint tool installed, you can use this for two
-purposes:</p>
+        <p>Since Sigasi 3.1</p>
+<h3 id="onespin-setup">OneSpin Setup</h3>
+<p>Before you can run OneSpin as external tool in Sigasi, it needs to be correctly set up.</p>
+<ul>
+<li>Make sure the environment variable <code>ONESPINROOT</code> is set, and points to the root folder of your OneSpin installation</li>
+<li>Make sure the FlexNet environment variable <code>LM_LICENSE_FILE</code> is set, and points to a valid OneSpin License server.</li>
+</ul>
+<h3 id="running-onespin-in-sigasi">Running Onespin in Sigasi</h3>
+<p>If the <code>ONESPINROOT</code> environment variable is set, <strong>OneSpin</strong> will be available on the <strong>Sigasi &gt; Toolchains</strong> Preference page.</p>
+<p>Once OneSpin is selected as external compiler, Sigasi will automatically run <code>read_vhdl</code> and <code>read_verilog</code> on your HDL source files. All OneSpin output will logged to the <mark>Console View</mark>. All warnings and errors will be shown as problem markers in the Sigasi editor.</p>
+<p><img alt="OneSpin compilation results" src="images/onespin_compilation.png" /></p>
+<h3 id="consistency-checks">Consistency checks</h3>
+<p>You can also run the OneSpin <strong>Consistency Checks</strong> on your design:</p>
 <ol>
-<li><a href="/manual/tools.html#save-time-compilation" title="Tool Integration">Save-time Compilation</a>: Compile and
-    check your files each time you save. Any errors or warnings will
-    show up in the file, on the line number of the problrem</li>
-<li><a href="/manual/tools.html#launch-simulator" title="Tool Integration">Launch Simulator</a>: Start the
-    simulator in its own window, ready to run a simulation.</li>
+<li>Set the toplevel in the <a href="/manual/views.html#hierarchy" title="Views">hierarchy</a> (<strong>Set Top</strong>)</li>
+<li>Run OneSpin by clicking the <strong>OneSpin</strong> icon in the Hierarchy View</li>
 </ol>
-<p>Learn about <a href="#list-of-toolchains">which external compilers are supported</a>
-and how to <a href="/manual/tools.html#configure-external-compiler" title="Tool Integration">Configure external compiler</a>.</p>
-<h4 id="launch-simulator">Launch simulator</h4>
-<p><a href="editions.html#vhdl" title="[Only for VHDL]">[Only for VHDL]</a></p>
-<p>If an external compiler is enabled, you can also start a simulation from
-Sigasi. You can start a simulation by first selecting your <em>top level</em>
-in the <a href="/manual/views.html#hierarchy" title="Views">hierarchy</a> view. Next click the
-<strong>Simulate</strong> button <img alt="" src="icons/run_exc.gif" /> in the hierarchy
-view to launch the simulator gui with an elaborated design ready for
-simulation. Sigasi opens a new console for each simulation launch. You
-can terminate a simulation by clicking the <strong>Stop</strong> icon
-<img alt="" src="icons/stop.png" /> .</p>
-<h4 id="configure-external-compiler">Configure external compiler</h4>
-<p>You can configure the external compiler settings by clicking <strong>Window >
-Preferences > Sigasi > Toolchains</strong>. There is a sub-page for each
-supported toolchain. Before you can enable a toolchain on the main page,
-you must specify its installation path. Clicking <strong>Restore Defaults</strong> on
-a Toolchain page will automatically fill in the installation path if
-your toolchain is installed on a default location. After you press
-<strong>Apply</strong>, you can select your toolchain on the <strong>Sigasi > Toolchains</strong>
-page.</p>
-<p><img alt="" src="images/toolchains-settings.png" /></p>
-<p>For some toolchains you can specify extra command line arguments. Note
-that these preference pages support <a href="http://help.eclipse.org/indigo/topic/org.eclipse.platform.doc.user/concepts/concepts-exttools.htm">Eclipse
-Variables</a>
-which allow you to more easily share settings in a team.</p>
-<p><img alt="" src="images/toolchains-settings-rivierapro.png" /></p>
-<h4 id="list-of-toolchains">List of toolchains</h4>
-<p>By “toolchains”, we mean any tool or set of tools that processes VHDL or
-Verilog code, and that is supported by Sigasi. At this time, external
-compiler include simulators and lint tools, but in the future it could
-also include synthesis tools.</p>
-<p>For each toolchain Sigasi can support any combination of the following:</p>
-<ul>
-<li><a href="/manual/tools.html#save-time-compilation" title="Tool Integration">Save-time compilation</a></li>
-<li><a href="/manual/tools.html#launch-simulator" title="Tool Integration">Launch Simulator</a></li>
-<li><a href="/manual/linting.html#quickfix-for-third-party-libraries" title="Linting and Quickfixes">Quickfix for third party libraries</a></li>
-<li><a href="/manual/tools.html#open-a-quartus-ii-project-in-sigasi" title="Tool Integration">Open a Quartus II Project in Sigasi</a></li>
-</ul>
-<p>Currently the following external compilers are supported:</p>
-<table class="table">
-<thead>
-<tr>
-<th>Toolchain</th>
-<th>save-time compilation</th>
-<th>start simulation</th>
-<th>import third party libraries</th>
-<th>import project from third party tool</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Aldec Riviera-PRO</td>
-<td>true</td>
-<td>true</td>
-<td>false</td>
-<td>false</td>
-</tr>
-<tr>
-<td>Aldec Active-HDL</td>
-<td>true</td>
-<td>false</td>
-<td>false</td>
-<td>false</td>
-</tr>
-<tr>
-<td>Aldec ALINT</td>
-<td>true</td>
-<td>false</td>
-<td>false</td>
-<td>false</td>
-</tr>
-<tr>
-<td>Altera Quartus II</td>
-<td>false</td>
-<td>false</td>
-<td>false</td>
-<td>true</td>
-</tr>
-<tr>
-<td>ModelSim / QuestaSim</td>
-<td>true</td>
-<td>true</td>
-<td>false</td>
-<td>false</td>
-</tr>
-<tr>
-<td>Xilinx ISE</td>
-<td>true</td>
-<td>true</td>
-<td>false</td>
-<td>false</td>
-</tr>
-<tr>
-<td>Xilinx Vivado</td>
-<td>true</td>
-<td>false</td>
-<td>false</td>
-<td>false</td>
-</tr>
-<tr>
-<td>Cadence Incisive</td>
-<td>true</td>
-<td>false</td>
-<td>false</td>
-<td>false</td>
-</tr>
-<tr>
-<td><a href="/manual/onespin.html" title="OneSpin Integration">OneSpin Integration</a></td>
-<td>true</td>
-<td>false</td>
-<td>false</td>
-<td>false</td>
-</tr>
-</tbody>
-</table>
-<h4 id="save-time-compilation">Save-time compilation</h4>
-<p>Sigasi can use an external VHDL or Verilog compiler for additional code validation. At this time, Sigasi supports:</p>
-<ul>
-<li><code>vcom</code> / <code>vlog</code> / <code>vsim</code> style compilers. These compilers include Aldec Riviera-PRO and from Mentor Graphics ModelSim and QuestaSim.</li>
-<li><code>isim</code> compiler from Xilinx. </li>
-<li><code>ncsim</code> compiler from Cadence Incisive.</li>
-</ul>
-<p>Catching bugs earlier is cheaper than catching them late. Traditionally,
-the first errors are found when the hardware designer decides to run a
-simulation. At this time, the simulator’s compiler tool will detect
-errors and fail. At Sigasi we think that this is too late. Problems
-should be detected as soon as possible.</p>
-<p>Sigasi adds two extra layers of error detection to catch problems
-earlier. First, there is the <strong>type-time</strong> error detector. As soon as
-the designer writes an error, it is marked in the text much like a spell
-checker in a word processor. Second, as soon as you <strong>save</strong> a file,
-Sigasi calls the external compiler for further analysis. All errors that
-the external compiler finds are marked inside your file, so that you can
-find and fix them easily. Sigasi intelligently controls the external
-compiler incrementally and only recompiles design files that need
-recompilation.</p>
-<p>All output from external compilers is logged in Sigasi’s console view
-for your convenience. Paths to your design files are automatically
-converted to hyperlinks to ease naviation.</p>
-<p><img alt="" src="images/vcom-console.png" /></p>
-<p>The table below lists some examples of VHDL errors that are detected in
-Sigasi at type time, at save time and with the external compiler
-integration.</p>
-<table class="table">
-<thead>
-<tr>
-<th>Check</th>
-<th>Type time</th>
-<th>Save time</th>
-<th>Save time compile</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Syntax errors</td>
-<td>yes</td>
-<td>yes</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Undeclared signals</td>
-<td>yes</td>
-<td>yes</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Multiple files</td>
-<td>no</td>
-<td>yes</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Data type mismatch</td>
-<td>no</td>
-<td>no</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Multiple drivers</td>
-<td>no</td>
-<td>no</td>
-<td>yes</td>
-</tr>
-</tbody>
-</table>
-<h4 id="libraries">Libraries</h4>
-<p>Libraries are fully supported. But note that Sigasi does not send common
-libraries to the external compiler for compilation. These libraries are
-expected to be pre-compiled . Contact support@sigasi.com if you want to
-add more libraries to this list.</p>
-<p>If your project contains a <code>modelsim.ini</code> file , Sigasi will add this
-file to the <code>vcom</code> command with <code>-modelsimini</code>. This allows you to
-configure custom settings for Mentor’s <code>vcom</code>.</p>
-<h3 id="external-tools-configuration">External Tools Configuration</h3>
-<p>Select <strong>Run > External tools > External Tools Configurations</strong> to get
-started, or use the <img alt="" src="icons/externaltool.png" /> icon.</p>
-<p>To create a new configuration, first select
-<img alt="" src="icons/externaltool.png" /> <strong>Program</strong>, then click
-<img alt="" src="icons/newconfiguration.png" /> .</p>
-<p>Enter all necessary information to start your external tool:</p>
-<ul>
-<li><strong>Name</strong>: The name for this configuration.</li>
-<li><strong>Location</strong>: The location of the executable. You can browse for programs and scripts in your workspace or programs on your file system.</li>
-<li><strong>Working Directory</strong>: The working directory for your program.</li>
-<li><strong>Arguments</strong>: The arguments, if any, to your program.</li>
-</ul>
-<p>You can test your tool configuration with the <strong>Run</strong> button.</p>
-<p>The following example screenshot shows how to set up configuration to
-run a <code>simulate.sh</code> script from within Sigasi Pro.</p>
-<p><img alt="" src="images/tutorialconfiguration.png" /></p>
-<p>The following example screenshot shows how to set up a configuration to
-run <code>make clean</code> on a Linux machine.</p>
-<p><img alt="" src="images/makeconfiguration.png" /></p>
-<p>To run the external tool just select the configuration from the dropdown
-menu on the <img alt="" src="icons/externaltool.png" />-icon. You can rerun the
-last configuration by simply clicking
-<img alt="" src="icons/externaltool.png" />.</p>
-<h4 id="creating-a-builder">Creating a Builder</h4>
-<p>An external tool configuration as described in the previous section
-makes it easy to run an external tool, but you still have to do so
-explicitly. For some programs, such as the <code>make</code> utility, it makes
-sense instead to do this automatically upon a change in your project.
-This functionality can be accomplished by a builder. We will show how to
-create a builder for a Modelsim Makefile as an example.</p>
-<p>To create a builder, right-click your project and select <strong>Properties >
-Builders</strong>.</p>
-<p>Click <strong>New…</strong> and the builder configuration window will pop up:</p>
-<p><img alt="" src="images/makefiles_buildersoverview.png" /></p>
-<p>You will be asked to select a configuration type:
-select <img alt="" src="icons/externaltool.png" /> <strong>Program</strong>.</p>
-<p>Next, configure the builder in a configuration window pop up window:</p>
-<ul>
-<li><strong>Name</strong>: The name of your builder, e.g. <code>ModelSim</code>.</li>
-<li><strong>Location</strong>: The location of the program, e.g. <code>/usr/bin/make</code>.</li>
-<li><strong>Working Directory</strong>: The working directory for your program. For example, click <strong>Browse Workspace…</strong> and select the root folder of your project.</li>
-<li><strong>Arguments</strong>: The arguments to your program, e.g.  <code>--makefile=Makefile.vsim all</code>.</li>
-</ul>
-<p><img alt="" src="images/makefiles_builderconfigurationmain.png" /></p>
-<p>With the default settings the ModelSim Makefile will only be run during
-a manual build or after a “Clean”. To make sure Sigasi Studio runs <code>make</code>
-every time you save a change to a file, click the <strong>Build Options</strong> tab
-and check the <strong>During auto builds</strong> checkbox.</p>
-<p><img alt="" src="images/makefiles_builderconfigurationoptions.png" /></p>
-<p>After configuration, the new builder will appear in the builder list.</p>
-<p><img alt="" src="images/makefiles_buildersoverview.png" /></p>
-<p>When you close the builder configuration dialog windows, the new builder
-will automatically be run. In our example of a Modelsim Makefile,
-Modelsim’s messages will appear in the console view.</p>
-<p><img alt="" src="images/makefiles_consoleoutput.png" /></p>
-<p>For the specific case of Modelsim, warnings and error messages in the
-console are made clickable. When you click a message, the corresponding
-location will automatically be opened in the Editor view.</p>
-<p>You can add as many extra builders as you want. This can be useful for
-additional linting tools or code generators.</p>
-<h3 id="altera-quartus-ii-integration">Altera Quartus II integration</h3>
-<p>If you are using Altera Quartus II 12.1 , you can use Sigasi Studio as
-preferred HDL editor.</p>
-<p>If you use the Sigasi Studio/ Altera Quartus II integration, you can
-easily open VHDL files by double clicking on them in Quartus II. Sigasi
-Pro will be aware of the entire Quartus II project, so that you can
-perform project-wide searches and navigation actions in Sigasi.
-Furthermore, if you add or remove files in the Quartus II project, these
-changes are automatically applied in Sigasi Pro.</p>
-<p>*Note:_ If you want to set up a project independent of Altera Quartus
-II, please read the documentation on <a href="/manual/projectsetup.html" title="Setting Up a Project">Setting Up a Project</a>.</p>
-<h4 id="setting-the-preferred-editor">Setting the preferred editor</h4>
-<p>To open a Quartus Project in Sigasi, you first have to configure Sigasi
-Pro as preferred editor in <a href="/manual/opening.html#altera-quartus-ii" title="Opening Files">Altera Quartus II</a>.</p>
-<h4 id="open-a-quartus-ii-project-in-sigasi">Open a Quartus II Project in Sigasi</h4>
-<p>After you have configured Sigasi Studio to be the preferred editor in
-Quartus II, you can open files by double clicking on them in Quartus II.</p>
-<p>Sigasi Studio will import entire Quartus II project and your file will open
-in the Sigasi editor view. If you make changes to your Quartus II
-project (like adding or removing files), these changes are reflected in
-Sigasi as well.</p>
-<p>The first time you import your project, it may take a few minutes. After
-that, you can leave Sigasi Studio open and double-click other files in
-Quartus II to open them in the Sigasi Studio editor view.</p>
-<p>If your Quartus II Project File (<strong>.QPF file</strong>) contains a reference to a
-file that does not exist, Sigasi will show an icon for that file with
-the <em>broken link</em> icon <img alt="" src="icons/brokenlink.png" /> .</p>
-<h4 id="quartus-ii-preferences">Quartus II Preferences</h4>
-<p>The first time you import a Quartus II project, Sigasi will ask for the
-Quartus II installation location. Sigasi needs this path to find the
-Quartus II libraries. You can change the Quartus II installation
-location by selecting<strong>Window > Preferences > Sigasi > Toolchains</strong>.</p>
-<h4 id="add-files-to-your-quartus-ii-project-in-sigasi">Add files to your Quartus II project in Sigasi</h4>
-<p>To add a file to your Quartus II project, you can use the default<strong>New
-VHDL file* wizard of Sigasi (</strong>File > New > VHDL File**).</p>
-<p><img alt="Add a new VHDL file to a Altera Quartus II project in Sigasi" src="images/quartusnewfile.png" title="Add a new VHDL file to a Altera Quartus II project in Sigasi" /></p>
-<p>Note that Quartus II does not automatically update its UI after you add
-files to your project. In order to update the files list, you should run
-a workflow action in Quartus II, like starting a compilation.</p>
-<h3 id="xilinx-integration">Xilinx integration</h3>
-<h4 id="setting-the-preferred-editor_1">Setting the preferred editor</h4>
-<p>To open the Sigasi editor from Xilinx, you first have to configure Sigasi as preferred editor in <a href="/manual/opening.html#xilinx-vivado" title="Opening Files">Xilinx Vivado</a> or <a href="/manual/opening.html#xilinx-ise" title="Opening Files">Xilinx ISE</a>.</p>
-<h4 id="importing-xilinx-projects-in-sigasi">Importing Xilinx Projects in Sigasi</h4>
-<h5 id="vivado">Vivado</h5>
-<p>The process of importing a Xilinx Vivado project is explained in <a href="/tech/generating-sigasi-project-vivado-project.html" title="Generating a Sigasi project from a Vivado project">Generating a Sigasi project from a Vivado project</a></p>
-<h5 id="ise">ISE</h5>
-<p>The process of importing a Xilinx ISE project is explained in <a href="/tech/importing-xilinx-ise-project-sigasi.html" title="Importing a Xilinx ISE project in Sigasi">Importing a Xilinx ISE project in Sigasi</a></p>
-<h4 id="xilinx-preferences">Xilinx Preferences</h4>
-<h5 id="vivado_1">Vivado</h5>
-<p>You can change the Xilinx Vivado installation location by selecting <strong>Window &gt; Preferences &gt; Sigasi &gt; Toolchains &gt; Xilinx Vivado</strong>.
-Sigasi needs this path to find the Xilinx Vivado libraries. </p>
-<h5 id="ise_1">ISE</h5>
-<p>You can change the Xilinx ISE installation location by selecting <strong>Window &gt; Preferences &gt; Sigasi &gt; Toolchains &gt; Xilinx ISE</strong>.
-Sigasi needs this path to find the Xilinx Vivado libraries and to run the ISim compiler and simulator.</p>
-<h3 id="export">Export</h3>
-<p>You can export a list of all VHDL files in your project, sorted in the correct compilation order.
-You can use your own simple scripts to manipulate such list and run any EDA tool, including simulators, synthesis and linter tools.</p>
-<p>To export a comma separated value (CSV) list of files in your project, right-click your project and select <strong>Export</strong>. In the <strong>Sigasi</strong> category, select <strong>CSV File</strong>. As a result, you get a file named <code>compilation_order.csv</code>, which lists the VHDL files in your project in a valid compile order.</p>
-<p>Example (for the tutorial project):</p>
-<div class="codehilite"><pre>work, dut.vhd
-work, clock_generator.vhd
-work, testbench.vhd
-</pre></div>
-
-
-<p>You can also configure Sigasi Studio to <strong>auto-export</strong> this CSV file, every time the dependencies change.</p>
-<p>In the project you want to auto-export, create a file <code>.settings/com.sigasi.hdt.vhdl.ui.prefs</code> with following content: </p>
-<div class="codehilite"><pre>eclipse.preferences.version=1
-autoexport=csv
-</pre></div>
-
-
-<p>If you only want to export the dependencies of the top level, set the content of <code>.settings/com.sigasi.hdt.vhdl.ui.prefs</code> to:</p>
-<div class="codehilite"><pre>eclipse.preferences.version=1
-autoexport=csv_top_level
-autoexport.top_level=work.testbench(STR)
-</pre></div>
-
-
-<p>Where <code>work.testbench(STR)</code> is the name of your top level.</p>
-<p>If you omit the <code>autoexport.top_level</code>, Sigasi will try to use the current toplevel in the <a href="/manual/views.html#hierarchy" title="Views">hierarchy</a> as input (if it belongs to this project).</p>
+<p><img alt="Run OneSpin consistency checks" src="images/onespin_run.png" /></p>
+<p>All OneSpin output will logged to a new tab in the <mark>Console View</mark>. All warnings and errors will be shown as problem markers in the Sigasi editor.</p>
+<p><img alt="OneSpin consistency checks result" src="images/onespin_consistency.png" /></p>
+<p>Running the OneSpin Consistency Checks can be a long process. It can be canceled by clicking the stop button in the <mark>Progress View</mark>.</p>
 
       </div>
     </div>
@@ -2356,43 +2008,12 @@ autoexport.top_level=work.testbench(STR)
       <nav class="hidden-print hidden-xs hidden-sm">
         <div class="sidebar" data-spy="affix" data-offset-top="510" >
           <div class="well">
-            <a href="#"><strong>Tool Integration</strong></a>
+            <a href="#"><strong>OneSpin Integration</strong></a>
             <div class="toc">
 <ul>
-<li><a href="#external-compilers">External Compilers</a><ul>
-<li><a href="#launch-simulator">Launch simulator</a></li>
-<li><a href="#configure-external-compiler">Configure external compiler</a></li>
-<li><a href="#list-of-toolchains">List of toolchains</a></li>
-<li><a href="#save-time-compilation">Save-time compilation</a></li>
-<li><a href="#libraries">Libraries</a></li>
-</ul>
-</li>
-<li><a href="#external-tools-configuration">External Tools Configuration</a><ul>
-<li><a href="#creating-a-builder">Creating a Builder</a></li>
-</ul>
-</li>
-<li><a href="#altera-quartus-ii-integration">Altera Quartus II integration</a><ul>
-<li><a href="#setting-the-preferred-editor">Setting the preferred editor</a></li>
-<li><a href="#open-a-quartus-ii-project-in-sigasi">Open a Quartus II Project in Sigasi</a></li>
-<li><a href="#quartus-ii-preferences">Quartus II Preferences</a></li>
-<li><a href="#add-files-to-your-quartus-ii-project-in-sigasi">Add files to your Quartus II project in Sigasi</a></li>
-</ul>
-</li>
-<li><a href="#xilinx-integration">Xilinx integration</a><ul>
-<li><a href="#setting-the-preferred-editor_1">Setting the preferred editor</a></li>
-<li><a href="#importing-xilinx-projects-in-sigasi">Importing Xilinx Projects in Sigasi</a><ul>
-<li><a href="#vivado">Vivado</a></li>
-<li><a href="#ise">ISE</a></li>
-</ul>
-</li>
-<li><a href="#xilinx-preferences">Xilinx Preferences</a><ul>
-<li><a href="#vivado_1">Vivado</a></li>
-<li><a href="#ise_1">ISE</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#export">Export</a></li>
+<li><a href="#onespin-setup">OneSpin Setup</a></li>
+<li><a href="#running-onespin-in-sigasi">Running Onespin in Sigasi</a></li>
+<li><a href="#consistency-checks">Consistency checks</a></li>
 </ul>
 </div>
 
@@ -2404,8 +2025,6 @@ autoexport.top_level=work.testbench(STR)
   </div>
 
   <ul class="pager">
-    <li class="previous"><a href="/manual/linting.html">&larr; Linting and Quickfixes</a></li>
-    <li class="next"><a href="/manual/plugins.html">Third party plugins &rarr;</a></li>
   </ul>
       
 </div>

@@ -11,6 +11,7 @@ http://insights.sigasi.com/manual/libraries.html
 http://insights.sigasi.com/manual/license-key.html
 http://insights.sigasi.com/manual/linting.html
 http://insights.sigasi.com/manual/mixed.html
+http://insights.sigasi.com/manual/onespin.html
 http://insights.sigasi.com/manual/opening.html
 http://insights.sigasi.com/manual/plugins.html
 http://insights.sigasi.com/manual/projectsetup.html
