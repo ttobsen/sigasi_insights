@@ -326,6 +326,7 @@ http://insights.sigasi.com/tech/four-and-half-ways-write-vhdl-instantiations.htm
 http://insights.sigasi.com/tech/generate-vhdl-doxygen-documentation-sigasi.html
 http://insights.sigasi.com/tech/generating-sigasi-project-vivado-project.html
 http://insights.sigasi.com/tech/getting-started-altera-bemicro-sdk-linux.html
+http://insights.sigasi.com/tech/glance.html
 http://insights.sigasi.com/tech/guest-blog-scineric-and-ears-hippo.html
 http://insights.sigasi.com/tech/hardware_refactoring.html
 http://insights.sigasi.com/tech/hdl-language-design-and-library-design.html
