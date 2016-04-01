@@ -353,6 +353,7 @@ http://insights.sigasi.com/tech/installing-translations-eclipse.html
 http://insights.sigasi.com/tech/jedit-f3.html
 http://insights.sigasi.com/tech/keep-track-google-positions-your-keywords.html
 http://insights.sigasi.com/tech/list-known-vhdl-metacomment-pragmas.html
+http://insights.sigasi.com/tech/local_hosting.html
 http://insights.sigasi.com/tech/magic-sigasi-type-time-compiler.html
 http://insights.sigasi.com/tech/make-eclipse-open-files-command-line.html
 http://insights.sigasi.com/tech/microsoft-visual-source-safe.html

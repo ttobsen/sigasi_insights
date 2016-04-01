@@ -3,7 +3,7 @@
 	<!--// OPEN HEAD //-->
 	<head>
 		<!--// SITE TITLE //-->
-		<title>Scripting Sigasi project creation - Sigasi</title>
+		<title>Hosting the Sigasi documentation in your secure and closed network - Sigasi</title>
 		<link rel="stylesheet" href="http://www.sigasi.com/wp-content/plugins/sitepress-multilingual-cms/res/css/language-selector.css?v=3.2.7" type="text/css" media="all" />
 		<!--// SITE META //-->
 		<meta charset="UTF-8"/>
@@ -25,14 +25,14 @@
 			}
 		</script>
 		<!-- This site is optimized with the Yoast SEO plugin v3.0.6 - https://yoast.com/wordpress/plugins/seo/ -->
-		<link rel="canonical" href="http://insights.sigasi.com//tech/scripting-sigasi-project-creation.html" />
+		<link rel="canonical" href="http://insights.sigasi.com//tech/local_hosting.html" />
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="Scripting Sigasi project creation - Sigasi" />
-		<meta property="og:url" content="http://insights.sigasi.com//tech/scripting-sigasi-project-creation.html" />
+		<meta property="og:title" content="Hosting the Sigasi documentation in your secure and closed network - Sigasi" />
+		<meta property="og:url" content="http://insights.sigasi.com//tech/local_hosting.html" />
 		<meta property="og:site_name" content="Sigasi" />
 		<meta name="twitter:card" content="summary"/>
-		<meta name="twitter:title" content="Scripting Sigasi project creation - Sigasi"/>
+		<meta name="twitter:title" content="Hosting the Sigasi documentation in your secure and closed network - Sigasi"/>
 		<!-- / Yoast SEO plugin. -->
 		<script type="text/javascript">
 			window._wpemojiSettings = {
@@ -1774,7 +1774,7 @@
 <div class="page-heading page-heading-hidden clearfix">
 	<div class="container">
 		<div class="heading-text">
-			<h1 class="entry-title" >Scripting Sigasi project creation</h1>
+			<h1 class="entry-title" >Hosting the Sigasi documentation in your secure and closed network</h1>
 		</div>
 	</div>
 </div>
@@ -1964,21 +1964,16 @@
 <div class="container">
   <div class="page-header">
     <div>
-        <h1 style="margin-bottom: 0px;margin-top: 30px;">Scripting Sigasi project creation</h1>
+        <h1 style="margin-bottom: 0px;margin-top: 30px;">Hosting the Sigasi documentation in your secure and closed network</h1>
     </div>
         
     <div style="margin: 10px 0 10px">
         <span>
-          Posted on 2013&#8209;10&#8209;17
-            by Hendrik Eeckhaut
+          Posted on 2016&#8209;04&#8209;01
         </span>
         <span style="padding-left:50px">
         Tagged as: 
-              <a href="/tag/hdt-2.0/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">hdt-2.0</a>
-              <a href="/tag/project/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">project</a>
-              <a href="/tag/project management/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">project management</a>
-              <a href="/tag/Python/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">Python</a>
-              <a href="/tag/Sigasi/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">Sigasi</a>
+              <a href="/tag/howto/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">howto</a>
         </span>
     </div>
   </div>
@@ -1989,12 +1984,35 @@
 
     <div class="content">
       <div class="col-md-9" role="main">
-        <p>When you start using Sigasi, the first thing you have to do is <a href="/manual/projectsetup.html" title="Setting Up a Project">Setting Up a Project</a>. This consists of two steps: <mark>(1) selecting the VHDL files that you want in your project</mark> and <mark>(2) configuring in which VHDL library these files must be mapped</mark>. In most cases you already have this information in one form or another. For example in a makefile, in a Tcl simulation script, or in the project descriptor file of a third-party EDA tool.</p>
-<p>Because there are so many different formats to describe this information, we cannot offer one universal solution. But to make the import process easier, we have developed <a href="https://github.com/sigasi/SigasiProjectCreator">Python scripts</a> that make it easy for you to convert your own project description into a Sigasi project description.</p>
-<p>The <a href="https://github.com/sigasi/SigasiProjectCreator/blob/master/convertCsvFileToLinks.py"><code>convertCsvFileToLinks.py</code> script</a> converts a CSV file (<a href="https://github.com/sigasi/SigasiProjectCreator/blob/master/test-files/compilation_order.csv">example file</a>) into a Sigasi Project. This scripts adds a link to each file in the list and maps it to the corresponding library. </p>
-<p>All scripts are open sourced under a <a href="https://github.com/sigasi/SigasiProjectCreator/blob/master/LICENSE">BSD license</a>. So you can freely customize them to your specific needs. Feel free to suggest or contribute improvements.</p>
-<p>Of course we can help you write your scripts. <a href="mailto:sales@sigasi.com" title="contact us">contact us</a> for more info.</p>
-<p><strong>P.S.</strong>: You can also <a href="/manual/opening.html#files-command-line" title="Opening Files">files-command-line</a> with a script. Simply start Sigasi with parameter <code>-p &lt;path to your project folder&gt;</code></p>
+        <p>Some development teams are completely disconnected from the public internet, for security reasons. Engineers in these teams can still access the documentation on <a href="http://insights.sigasi.com">Sigasi Insights</a>, using one of the procedures below.</p>
+<p>Some things will not work if you view this website offline:</p>
+<ul>
+<li>Video's are hosted separately, and will not be available</li>
+<li>External links will be broken</li>
+<li>The comments sections use and external service and will not be available</li>
+</ul>
+<h3 id="quick-method">Quick method</h3>
+<p>You can <a href="https://github.com/sigasi/sigasi_insights/archive/gh-pages.zip">download the entire Insights website</a> including all html, css, png files, etc. All internal links in this site are "root-relative", which means that you can serve them at the root directory of your local webserver, for example at <a href="http://localhost:8000">http://localhost:8000</a> so that the tech section would be available at <a href="http://localhost:8000/tech">http://localhost:8000/tech</a>.</p>
+<h4 id="relative-paths">Relative paths</h4>
+<p>The above won't work if you need to serve the documentation in some non-root directory, for example at <code>http://your.example.com/sigasi</code>, or if you want to browse the files directly from your file system.</p>
+<p>In this case, you need to change the links to relative paths. You can use the following Unix commands to do this:</p>
+<div class="codehilite"><pre>sed -i -e <span class="s1">&#39;s|&lt;a href=&quot;/|&lt;a href=&quot;./|&#39;</span> *.html
+sed -i -e <span class="s1">&#39;s|&lt;a href=&quot;/|&lt;a href=&quot;./../|&#39;</span> */*.html
+sed -i -e <span class="s1">&#39;s|&lt;a href=&quot;/|&lt;a href=&quot;./../../|&#39;</span> */*/*.html
+sed -i -e <span class="s1">&#39;s|&lt;a href=&quot;/|&lt;a href=&quot;./../../../|&#39;</span> */*/*/*.html
+</pre></div>
+
+
+<h3 id="local-build-with-python-and-urubu">Local build with Python and Urubu</h3>
+<p>You can also generate the Sigasi insights page locally:</p>
+<ol>
+<li>Download the source code of the Sigasi Insights website from GitHub: <a href="https://github.com/sigasi/sigasi_insights">https://github.com/sigasi/sigasi_insights</a></li>
+<li>Make sure Python is installed</li>
+<li>Install the necessary python Python packages: <code>pip install urubu</code></li>
+<li>Generate the html code: <code>make build</code></li>
+<li>Host the documentation on your local machine with <code>make serve</code></li>
+<li>Visit <a href="http://localhost:8000">http://localhost:8000</a> to see the documentation</li>
+</ol>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -2010,6 +2028,25 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 <noscript>Please enable JavaScript to view the comments.</noscript>      </div>
     </div>
 
+    <div class="col-md-3" role="complementary">
+      <nav class="hidden-print hidden-xs hidden-sm">
+        <div class="sidebar" data-spy="affix" data-offset-top="510" >
+          <div class="well">
+            <a href="#"><strong>Hosting the Sigasi documentation in your secure and closed network</strong></a>
+            <div class="toc">
+<ul>
+<li><a href="#quick-method">Quick method</a><ul>
+<li><a href="#relative-paths">Relative paths</a></li>
+</ul>
+</li>
+<li><a href="#local-build-with-python-and-urubu">Local build with Python and Urubu</a></li>
+</ul>
+</div>
+
+          </div>
+        </div>
+      </nav>
+    </div>
 
   </div>
 
