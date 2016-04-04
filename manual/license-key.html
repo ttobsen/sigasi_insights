@@ -2035,7 +2035,7 @@ INCREMENT com.sigasi.hdt sigasi 2.0 18-nov-2012 4 \
 </li>
 <li>Windows (Windows 7 or newer):<ul>
 <li><a href="http://download.sigasi.com/flexnet/sigasi-flexnet-win64.zip">Windows 64 bit</a></li>
-<li><a href="http://download.sigasi.com/flexnet/sigasi-flexnet-win32.zip">Windows 32 bit</a> (works on Windows Server 2003 too)</li>
+<li><a href="http://download.sigasi.com/flexnet/sigasi-flexnet-win32.zip">Windows 32 bit</a></li>
 </ul>
 </li>
 <li>Solaris (on SPARC):<ul>
@@ -2050,10 +2050,10 @@ INCREMENT com.sigasi.hdt sigasi 2.0 18-nov-2012 4 \
 <p>You can change the ports and servername without breaking the signature.</p>
 <h4 id="starting-the-flexnet-and-sigasi-daemon-on-linux">Starting the Flexnet and Sigasi Daemon on Linux</h4>
 <p>the easiest way to start the Sigasi Flexnet Daemon is like this (on Linux)</p>
-<div class="codehilite"><pre><span class="c">#!/bin/sh</span>
+<div class="codehilite"><pre><span class="ch">#!/bin/sh</span>
 <span class="nb">echo</span> <span class="s2">&quot;Starting the Sigasi floating license server&quot;</span>
 <span class="nv">LOCATION</span><span class="o">=</span>/home/flex/flexnet-sigasi
-<span class="nv">$LOCATION</span>/lmgrd -c <span class="nv">$LOCATION</span>/sigasi.lic -l <span class="nv">$LOCATION</span>/debug.log
+$LOCATION/lmgrd -c $LOCATION/sigasi.lic -l $LOCATION/debug.log
 </pre></div>
 
 
