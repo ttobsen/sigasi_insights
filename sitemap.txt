@@ -127,8 +127,6 @@ http://insights.sigasi.com/releasenotes/sigasi-2.8.html
 http://insights.sigasi.com/releasenotes/sigasi-2.9.html
 http://insights.sigasi.com/releasenotes/sigasi-3.00.html
 http://insights.sigasi.com/screencasts/add_ieee_quickfix.html
-http://insights.sigasi.com/screencasts/adding_ports.html
-http://insights.sigasi.com/screencasts/block_diagram_view.html
 http://insights.sigasi.com/screencasts/block_selection_mode.html
 http://insights.sigasi.com/screencasts/bookmarks.html
 http://insights.sigasi.com/screencasts/code_generation_scripts.html
@@ -138,7 +136,6 @@ http://insights.sigasi.com/screencasts/custom_linting.html
 http://insights.sigasi.com/screencasts/datatype-checks-while-you-type.html
 http://insights.sigasi.com/screencasts/direct_feedback.html
 http://insights.sigasi.com/screencasts/documentation_view.html
-http://insights.sigasi.com/screencasts/edit_vhdl_without_project.html
 http://insights.sigasi.com/screencasts/hex-values.html
 http://insights.sigasi.com/screencasts/hierarchy_view.html
 http://insights.sigasi.com/screencasts/how-use-your-own-ieee-libraries.html
@@ -226,7 +223,6 @@ http://insights.sigasi.com/tag/eetimes/index.html
 http://insights.sigasi.com/tag/Emacs/index.html
 http://insights.sigasi.com/tag/emf/index.html
 http://insights.sigasi.com/tag/empty range/index.html
-http://insights.sigasi.com/tag/external file/index.html
 http://insights.sigasi.com/tag/file structure/index.html
 http://insights.sigasi.com/tag/FPGA/index.html
 http://insights.sigasi.com/tag/GHDL/index.html
@@ -258,7 +254,6 @@ http://insights.sigasi.com/tag/performance/index.html
 http://insights.sigasi.com/tag/philosophical/index.html
 http://insights.sigasi.com/tag/planeteclipse/index.html
 http://insights.sigasi.com/tag/poll/index.html
-http://insights.sigasi.com/tag/ports/index.html
 http://insights.sigasi.com/tag/pragma/index.html
 http://insights.sigasi.com/tag/presentation/index.html
 http://insights.sigasi.com/tag/project/index.html
