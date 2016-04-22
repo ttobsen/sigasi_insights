@@ -3,7 +3,7 @@
 	<!--// OPEN HEAD //-->
 	<head>
 		<!--// SITE TITLE //-->
-		<title>Why you need good documentation for your VHDL and Verilog code - Sigasi</title>
+		<title>Linting and other features - Sigasi</title>
 		<link rel="stylesheet" href="http://www.sigasi.com/wp-content/plugins/sitepress-multilingual-cms/res/css/language-selector.css?v=3.2.7" type="text/css" media="all" />
 		<!--// SITE META //-->
 		<meta charset="UTF-8"/>
@@ -25,14 +25,14 @@
 			}
 		</script>
 		<!-- This site is optimized with the Yoast SEO plugin v3.0.6 - https://yoast.com/wordpress/plugins/seo/ -->
-		<link rel="canonical" href="http://insights.sigasi.com//tech/why-you-need-good-documentation-your-vhdl-and-verilog-code.html" />
+		<link rel="canonical" href="http://insights.sigasi.com//training/part3.html" />
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="Why you need good documentation for your VHDL and Verilog code - Sigasi" />
-		<meta property="og:url" content="http://insights.sigasi.com//tech/why-you-need-good-documentation-your-vhdl-and-verilog-code.html" />
+		<meta property="og:title" content="Linting and other features - Sigasi" />
+		<meta property="og:url" content="http://insights.sigasi.com//training/part3.html" />
 		<meta property="og:site_name" content="Sigasi" />
 		<meta name="twitter:card" content="summary"/>
-		<meta name="twitter:title" content="Why you need good documentation for your VHDL and Verilog code - Sigasi"/>
+		<meta name="twitter:title" content="Linting and other features - Sigasi"/>
 		<!-- / Yoast SEO plugin. -->
 		<script type="text/javascript">
 			window._wpemojiSettings = {
@@ -1774,7 +1774,7 @@
 <div class="page-heading page-heading-hidden clearfix">
 	<div class="container">
 		<div class="heading-text">
-			<h1 class="entry-title" >Why you need good documentation for your VHDL and Verilog code</h1>
+			<h1 class="entry-title" >Linting and other features</h1>
 		</div>
 	</div>
 </div>
@@ -1944,7 +1944,7 @@
 			</li>
 			<li>
 				<a href="/screencasts/">Screencasts</a></li>
-			<li class="active">
+			<li>
 				<a href="/tech/">Tech Articles</a></li>
 			<li>
 				<a href="/opinion/">Opinion</a></li>
@@ -1964,18 +1964,11 @@
 <div class="container">
   <div class="page-header">
     <div>
-        <h1 style="margin-bottom: 0px;margin-top: 30px;">Why you need good documentation for your VHDL and Verilog code</h1>
+        <h1 style="margin-bottom: 0px;margin-top: 30px;">Linting and other features</h1>
     </div>
         
     <div style="margin: 10px 0 10px">
         <span>
-          Posted on 2013&#8209;11&#8209;10
-            by Smrita
-        </span>
-        <span style="padding-left:50px">
-        Tagged as: 
-              <a href="/tag/Guest Blog/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">Guest Blog</a>
-              <a href="/tag/documentation/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">documentation</a>
         </span>
     </div>
   </div>
@@ -1986,126 +1979,61 @@
 
     <div class="content">
       <div class="col-md-9" role="main">
-        <p><em>In this blog series, guest blogger Smrita talks about the need for
-<a href="http://www.sigasi.com/sigasi-doc">documentation for complex RTL designs</a>. </em></p>
-<p>In engineering, <a href="http://en.wikipedia.org/wiki/Technical_documentation">technical documentation</a>
-refers to any type of documentation that describes handling,
-functionality and architecture of a technical product or a product under
-development or use. The intended recipient for product technical
-documentation is both the (proficient) end user as well as the
-administrator, service or maintenance technician. In contrast to a mere
-"cookbook" manual, technical documentation aims at providing enough
-information for a user to understand inner and outer dependencies of the
-product at hand. The technical documentation is intended to help the
-maintainers of the system (the people who need to keep the system
-running smoothly, fix problems, etc.) The maintainers are usually
-technical people, who need to know <a href="http://www.igcseict.info/theory/8/docs/index.html">exactly how the system
-works</a>.</p>
-<p>In other words, Technical documentation is quite simply the compilation
-of documents which aim to <a href="http://www.tetras.sk/en/stranka/what-is-technical-documentation">describe a technical
-product</a>.
-Technical documentation is characterised by its systematic and
-structured framework.</p>
-<h3 id="introduction">Introduction</h3>
-<p>Code documentation is an important aspect of both software and hardware
-projects and all general principles of software engineering can be
-applied to text-based (or: RTL-based) hardware design in such languages
-as VHDL, Verilog and SystemVerilog.
-Scott Ambler describes a software document as “any artifact external to
-source code whose purpose is to convey information in a persistent
-manner”. When engineering software or hardware, the code alone is insufficient.
-There must be text along with it to describe various aspects of its
-intended operation.
-It is important for the code documents to be thorough, but not so
-verbose that it becomes difficult to maintain them. Several How-to and
-overview documentation are found specific to the software application or
-software product being documented by API Writers. This documentation may
-be used by developers, testers and also the end customers or clients
-using this software application. Today, we see lot of high end
-applications in the field of power, energy, transportation, networks,
-aerospace, safety, security, industry automation and a variety of other
-domains. Technical documentation has become important within such
-organizations as the basic and advanced level of information may change
-over a period of time with architecture changes. Hence, technical
-documentation has gained lot of importance in recent times, <a href="http://en.wikipedia.org/wiki/Software_documentation#Technical_documentation">especially
-in the software
-field</a>.</p>
-<h3 id="benefits-of-documentation-for-software-and-hardware-code">Benefits of documentation for software and hardware code</h3>
-<p>By definition a <em>complex</em> hardware design is <a href="http://davidlongstreet.wordpress.com/2009/09/09/benefits-to-documentation-yes-there-are-some/">difficult to
-understand</a>
-and needs to be documented well.
-The purpose of technical RTL documentation is to help the intended
-audience understand the product and accomplish various tasks. For
-example, the purpose of a document can be to help the audience install
-the product, use the product, or administer the product.
-The main focus lies in the step-by-step process to deliver the
-technically complex information in a clear, concise, simple, consistent
-and usable manner. This helps <a href="http://www.hcltech.com/blogs/engineering-and-rd-services/technical-documentation-benefits-and-significance">inform the target audience about the
-technology</a>
-in the most appropriate format.</p>
-<p>We have <a href="http://www.hcltech.com/blogs/engineering-and-rd-services/technical-documentation-benefits-and-significance">all been frustrated at times</a>
-when we are not able to understand the features of a product, or when
-the user interface layout is not explained well enough. One problem with
-unorganized information is it can’t be found, so there is a lot wasted
-time spent pecking around looking for the right document or trying to
-find the right person to talk to. Another problem is if your
-documentation can’t be found, then redundant functionality is often
-created, that result in waste of time.</p>
-<p>The real benefit to the organization of documentation is reducing wasted
-time and spending more productive time on projects. This, of course,
-improves profitability.</p>
-<p>Another benefit to organized documents is the ability to <a href="http://davidlongstreet.wordpress.com/2009/09/09/benefits-to-documentation-yes-there-are-some/">reuse parts of the application documentation</a>.</p>
-<p>Other benefits of documentation for RTL hardware designs can be listed
-as follows:</p>
+        <p>In Part 3 you will learn about VHDL linting (code checks) and how you can get to zero warnings.</p>
+<p>We will also explore other features that are not specific to VHDL.</p>
+<h4 id="linting">Linting</h4>
 <ul>
-<li><strong>Doesn't change over time:</strong> This is one of the primary drives for
-    creating documentation.</li>
-<li><strong>Person independent:</strong> You do not need to have access to a
-    particular person with the right knowledge to retrieve the
-    documentation; you can just look it up.</li>
-<li><strong>Scalable:</strong> In a pure person-to-person approach to information
-    sharing, you'll quickly find a small subset of project members using
-    a great deal of their time explaining project aspects to other
-    project members. This can be alleviated somewhat by first attempting
-    to looking information up in the project documentation, before
-    turning to the project oracle in the particular area of interest.</li>
-<li><strong>Geographical invariant:</strong> If a project team or stakeholders aren't
-    all placed at the same location, the barrier to person-to-person
-    information exchange rises significantly, thereby making
-    documentation based information exchange more attractive. This is of
-    course only the case if the documentation is accessible at all
-    relevant sites, eg. properly Internet based, or at least
-    intranet based.</li>
-<li><strong>24/7 accessibility:</strong> Documentation based information can be
-    access all the time. So even when project members have different
-    working hours, vacations etc. they will still (in principle) have
-    access to information generated during their absence.</li>
-<li><strong>Reference information:</strong> Where person-to-person information
-    exchange usually varies according to the context it is used in,
-    documentation based information never changes unless somebody
-    actively updates the documentation. This makes documentation a more
-    stable reference platform, than person based information, which has
-    a tendency to vary more depending on who is delivering the
-    information when. The <a href="http://mikisseth.blogspot.in/2009/06/cost-and-benefits-of-documentation.html">variations in the information consumers
-    interpretation</a>
-    of the information provided is of course another matter.</li>
+<li>Import Project <code>part3</code></li>
+<li>Close unrelated projects (Right Click project in Project Explorer)</li>
+<li>Fix all <strong>Errors</strong> (Track your progress in the Problems View)</li>
+<li>Fix all <code>--TODO: fix</code> <strong>Warnings</strong> (Track your progress in the Task View). We will get to the other warnings later.</li>
+<li>Change the severity of the <strong>Check for position associations in instantiations</strong> linting via the Preferences (<strong>Sigasi &gt; VHDL &gt; Errors/Warnings</strong>). Set to severity to <strong>Error</strong>. Note that this warning in the code is now an error.</li>
 </ul>
-<p>Technical documentation is beneficial for the organization too. It
-creates a good impression on new customers because this is the
-customer’s first touch point after the sale. It helps the customer make
-decisions related to the purchase of the full product or its features,
-and informs the customer about the instructions and troubleshooting tips
-that are essential for ensuring a great customer experience, which can
-reduce customer support costs. Also, technical documentation provides
-good product knowledge to the customer that increases chances of finding
-greater functionality in the product, and enables customers to avoid
-errors, thanks to accurate and <a href="http://www.hcltech.com/blogs/engineering-and-rd-services/technical-documentation-benefits-and-significance">clearly-written
-procedures</a>.</p>
-<p>Hence, good technical documentation is very essential. It can provide a
-better understanding of the product and prevent customer errors, making
-business processes more reliable.</p>
-<h3 id="coming-up">Coming up</h3>
-<p>Next week we'll discuss: <a href="/tech/how-much-time-spent-writing-documentation-versus-developing-rtl-code.html" title="How much time is spent on writing documentation versus developing RTL code?">How much time is spent on writing documentation versus developing RTL code?</a></p>
+<h4 id="waive-specific-warnings">Waive specific warnings</h4>
+<ul>
+<li>Open <code>waive.vhd</code></li>
+<li>Suppress the <em>Null Range</em> warning by adding
+ <code>-- @suppress</code><br />
+<strong>Note:</strong> You need to save the file before the warnings disappears.</li>
+<li>Note that the warning marker is removed from the <strong>Problems View</strong></li>
+<li>Explicitly specify which warning you suppress by adding the warning message prefix:
+ <code>-- @suppress "Null Range"</code></li>
+<li>Note that the warning marker re-appears when you type another prefix</li>
+<li>Now also explain why you suppress the warning by adding an explanation:
+ <code>-- @suppress "Null Range" Ok here, see http://...</code></li>
+</ul>
+<h4 id="other-features">Other features</h4>
+<ul>
+<li>Project Explorer</li>
+<li>Show hidden files (Click <strong>▿</strong>, <strong>Customize view</strong>, disable the <code>.* resources</code>)</li>
+<li>Delete a file from your project. Next, restore this file from local history (Right click, <strong>Restore from Local History...</strong>)</li>
+<li>Bookmarks:</li>
+<li>Right click a line number and select <strong>Add Bookmark</strong></li>
+<li>Open the bookmark view (<strong>Window &gt; Show View</strong>)</li>
+<li>Multiple screen support</li>
+<li>Open a new Window (<strong>Window &gt; New Window</strong>)</li>
+<li>Drag the new windows to a different screen</li>
+<li>Customize Autocomplete templates: Add a custom header to the <code>entity/architecture pair</code> template:</li>
+<li><strong>Window &gt; Preferences &gt; Sigasi &gt; VHDL &gt; Templates</strong></li>
+<li>Select <strong>entity/architecture pair</strong></li>
+<li>Click <strong>Edit...</strong></li>
+<li>Add a custom header (e.g. <code>-- Confidential, Copyright 2016</code>)</li>
+<li>Confirm with <strong>OK</strong></li>
+<li>Create a new VHDL and select your customized template (<strong>File &gt; New &gt; VHDL file</strong>, choose a name, <strong>Next</strong> and choose the <code>entity/architecture pair</code> template)</li>
+</ul>
+<h4 id="optional-extra-tasks">Optional Extra tasks</h4>
+<ul>
+<li>Customize your perspective:</li>
+<li><strong>Window &gt; Perspective &gt; Customize Perspective...</strong></li>
+<li>Enable the <strong>Print</strong> button in <strong>File</strong></li>
+<li>Configure the <strong>Naming Convention</strong> settings to check for <em>Uppercase</em> constants (<code>[A-Z_]+</code>)</li>
+<li>Open and explore the Properties Page (Right click file, <strong>Properties</strong>)</li>
+<li>Multiple Search Views</li>
+<li>Run a first search (e.g. Find Reference on <code>std_logic</code>)</li>
+<li>Click the <strong>Pin the Search View</strong> button</li>
+<li>Start a new search. This search will open in a new <mark>Search View</mark></li>
+<li>Configure project specific settings <a href="http://insights.sigasi.com/manual/linting.html#project-specific-linting-settings">http://insights.sigasi.com/manual/linting.html#project-specific-linting-settings</a></li>
+</ul>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -2125,12 +2053,13 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
       <nav class="hidden-print hidden-xs hidden-sm">
         <div class="sidebar" data-spy="affix" data-offset-top="510" >
           <div class="well">
-            <a href="#"><strong>Why you need good documentation for your VHDL and Verilog code</strong></a>
+            <a href="#"><strong>Linting and other features</strong></a>
             <div class="toc">
 <ul>
-<li><a href="#introduction">Introduction</a></li>
-<li><a href="#benefits-of-documentation-for-software-and-hardware-code">Benefits of documentation for software and hardware code</a></li>
-<li><a href="#coming-up">Coming up</a></li>
+<li><a href="#linting">Linting</a></li>
+<li><a href="#waive-specific-warnings">Waive specific warnings</a></li>
+<li><a href="#other-features">Other features</a></li>
+<li><a href="#optional-extra-tasks">Optional Extra tasks</a></li>
 </ul>
 </div>
 
@@ -2141,8 +2070,6 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 
   </div>
 
-  <ul class="pager">
-  </ul>
       
 </div>
 

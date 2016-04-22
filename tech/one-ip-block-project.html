@@ -1995,9 +1995,7 @@ reminder:</p>
 <li><a href="/tech/one-design-one-folder.html" title="One design in one folder">One design in one folder</a></li>
 <li>Aggregation of reusable projects (described in this article)</li>
 </ol>
-<p>What is a reusable project?
-comments: true</p>
-<hr />
+<h3 id="what-is-a-reusable-project">What is a reusable project?</h3>
 <p>If you have a set of VHDL files, which may include packages, entities
 and architectures, we will call this a <em>reusable project</em>. The files are
 closely related and serve a single purpose. Often, these reusable
@@ -2005,9 +2003,7 @@ projects take the form of an IP library (like the IEEE libraries), or an
 IP core (like a processor core or a memory controller). If you are
 working on large projects, such as a System on Chip (SoC) design, you
 are using IP cores.</p>
-<p>Setting it up: STD and IEEE
-comments: true</p>
-<hr />
+<h3 id="setting-it-up-std-and-ieee">Setting it up: STD and IEEE</h3>
 <p><em>You can turn off the automatic builder while you are setting up your
 projects: <strong>Project &gt; Build automatically</strong>. This will keep the
 compiler from starting before you have set things up correctly.</em></p>
@@ -2022,9 +2018,7 @@ from that project. Next create a project called IEEE and remove the STD
 folders from that project. Now you need to make IEEE depend on STD:
 <strong>Project &gt; Properties &gt; Project References</strong> and select STD as a
 project reference for IEEE.</p>
-<p>Adding your own libraries
-comments: true</p>
-<hr />
+<h3 id="adding-your-own-libraries">Adding your own libraries</h3>
 <p>Now that you have the first two libraries, it is time to add your own
 library. Select <strong>File &gt; New &gt; Empty VHDL Project</strong>. Clear the
 <strong>Use default location</strong> mark and select the location of your library.
@@ -2054,16 +2048,12 @@ project structure.</p>
 <p><em>Don't forget to turn the autobuilder back on. <strong>Project &gt; Build
 automatically</strong></em></p>
 <p><img alt="Setting up GRLIB as a multi-project" src="images/multi-project.png" /></p>
-<p>Pros and Cons
-comments: true</p>
-<hr />
+<h3 id="pros-and-cons">Pros and Cons</h3>
 <p>This is a robust way of organizing large projects. Setting projects up
 takes extra time, say about half an hour for larger projects. Having
 separate reusable blocks in separate projects makes it easier to work in
 teams and to deal with third party IP.</p>
-<p>When to use
-comments: true</p>
-<hr />
+<h3 id="when-to-use">When to use</h3>
 <p>If you are working on a serious industrial design, with reusable
 in-house IP and/or third party IP, we would recommend the <strong>one IP block
 per project</strong> approach.
@@ -2074,9 +2064,7 @@ We especially recommended it for any mid or large scale project, or:</p>
 <li>If you are working on several designs with shared libraries and
     IP blocks.</li>
 </ul>
-<p>Real life: GRLIB
-comments: true</p>
-<hr />
+<h3 id="real-life-grlib">Real life: GRLIB</h3>
 <p>To show you an example of how to get started, I have created <a href="/screencasts/organizing-grlib-one-project-library.html">a video
 where I set up the first few
 libraries</a> in the open
@@ -2101,6 +2089,26 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 <noscript>Please enable JavaScript to view the comments.</noscript>      </div>
     </div>
 
+    <div class="col-md-3" role="complementary">
+      <nav class="hidden-print hidden-xs hidden-sm">
+        <div class="sidebar" data-spy="affix" data-offset-top="510" >
+          <div class="well">
+            <a href="#"><strong>One IP block per project</strong></a>
+            <div class="toc">
+<ul>
+<li><a href="#what-is-a-reusable-project">What is a reusable project?</a></li>
+<li><a href="#setting-it-up-std-and-ieee">Setting it up: STD and IEEE</a></li>
+<li><a href="#adding-your-own-libraries">Adding your own libraries</a></li>
+<li><a href="#pros-and-cons">Pros and Cons</a></li>
+<li><a href="#when-to-use">When to use</a></li>
+<li><a href="#real-life-grlib">Real life: GRLIB</a></li>
+</ul>
+</div>
+
+          </div>
+        </div>
+      </nav>
+    </div>
 
   </div>
 

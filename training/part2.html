@@ -3,7 +3,7 @@
 	<!--// OPEN HEAD //-->
 	<head>
 		<!--// SITE TITLE //-->
-		<title>Why you need good documentation for your VHDL and Verilog code - Sigasi</title>
+		<title>VHDL projects - Sigasi</title>
 		<link rel="stylesheet" href="http://www.sigasi.com/wp-content/plugins/sitepress-multilingual-cms/res/css/language-selector.css?v=3.2.7" type="text/css" media="all" />
 		<!--// SITE META //-->
 		<meta charset="UTF-8"/>
@@ -25,14 +25,14 @@
 			}
 		</script>
 		<!-- This site is optimized with the Yoast SEO plugin v3.0.6 - https://yoast.com/wordpress/plugins/seo/ -->
-		<link rel="canonical" href="http://insights.sigasi.com//tech/why-you-need-good-documentation-your-vhdl-and-verilog-code.html" />
+		<link rel="canonical" href="http://insights.sigasi.com//training/part2.html" />
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="Why you need good documentation for your VHDL and Verilog code - Sigasi" />
-		<meta property="og:url" content="http://insights.sigasi.com//tech/why-you-need-good-documentation-your-vhdl-and-verilog-code.html" />
+		<meta property="og:title" content="VHDL projects - Sigasi" />
+		<meta property="og:url" content="http://insights.sigasi.com//training/part2.html" />
 		<meta property="og:site_name" content="Sigasi" />
 		<meta name="twitter:card" content="summary"/>
-		<meta name="twitter:title" content="Why you need good documentation for your VHDL and Verilog code - Sigasi"/>
+		<meta name="twitter:title" content="VHDL projects - Sigasi"/>
 		<!-- / Yoast SEO plugin. -->
 		<script type="text/javascript">
 			window._wpemojiSettings = {
@@ -1774,7 +1774,7 @@
 <div class="page-heading page-heading-hidden clearfix">
 	<div class="container">
 		<div class="heading-text">
-			<h1 class="entry-title" >Why you need good documentation for your VHDL and Verilog code</h1>
+			<h1 class="entry-title" >VHDL projects</h1>
 		</div>
 	</div>
 </div>
@@ -1944,7 +1944,7 @@
 			</li>
 			<li>
 				<a href="/screencasts/">Screencasts</a></li>
-			<li class="active">
+			<li>
 				<a href="/tech/">Tech Articles</a></li>
 			<li>
 				<a href="/opinion/">Opinion</a></li>
@@ -1964,18 +1964,11 @@
 <div class="container">
   <div class="page-header">
     <div>
-        <h1 style="margin-bottom: 0px;margin-top: 30px;">Why you need good documentation for your VHDL and Verilog code</h1>
+        <h1 style="margin-bottom: 0px;margin-top: 30px;">VHDL projects</h1>
     </div>
         
     <div style="margin: 10px 0 10px">
         <span>
-          Posted on 2013&#8209;11&#8209;10
-            by Smrita
-        </span>
-        <span style="padding-left:50px">
-        Tagged as: 
-              <a href="/tag/Guest Blog/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">Guest Blog</a>
-              <a href="/tag/documentation/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">documentation</a>
         </span>
     </div>
   </div>
@@ -1986,126 +1979,93 @@
 
     <div class="content">
       <div class="col-md-9" role="main">
-        <p><em>In this blog series, guest blogger Smrita talks about the need for
-<a href="http://www.sigasi.com/sigasi-doc">documentation for complex RTL designs</a>. </em></p>
-<p>In engineering, <a href="http://en.wikipedia.org/wiki/Technical_documentation">technical documentation</a>
-refers to any type of documentation that describes handling,
-functionality and architecture of a technical product or a product under
-development or use. The intended recipient for product technical
-documentation is both the (proficient) end user as well as the
-administrator, service or maintenance technician. In contrast to a mere
-"cookbook" manual, technical documentation aims at providing enough
-information for a user to understand inner and outer dependencies of the
-product at hand. The technical documentation is intended to help the
-maintainers of the system (the people who need to keep the system
-running smoothly, fix problems, etc.) The maintainers are usually
-technical people, who need to know <a href="http://www.igcseict.info/theory/8/docs/index.html">exactly how the system
-works</a>.</p>
-<p>In other words, Technical documentation is quite simply the compilation
-of documents which aim to <a href="http://www.tetras.sk/en/stranka/what-is-technical-documentation">describe a technical
-product</a>.
-Technical documentation is characterised by its systematic and
-structured framework.</p>
-<h3 id="introduction">Introduction</h3>
-<p>Code documentation is an important aspect of both software and hardware
-projects and all general principles of software engineering can be
-applied to text-based (or: RTL-based) hardware design in such languages
-as VHDL, Verilog and SystemVerilog.
-Scott Ambler describes a software document as “any artifact external to
-source code whose purpose is to convey information in a persistent
-manner”. When engineering software or hardware, the code alone is insufficient.
-There must be text along with it to describe various aspects of its
-intended operation.
-It is important for the code documents to be thorough, but not so
-verbose that it becomes difficult to maintain them. Several How-to and
-overview documentation are found specific to the software application or
-software product being documented by API Writers. This documentation may
-be used by developers, testers and also the end customers or clients
-using this software application. Today, we see lot of high end
-applications in the field of power, energy, transportation, networks,
-aerospace, safety, security, industry automation and a variety of other
-domains. Technical documentation has become important within such
-organizations as the basic and advanced level of information may change
-over a period of time with architecture changes. Hence, technical
-documentation has gained lot of importance in recent times, <a href="http://en.wikipedia.org/wiki/Software_documentation#Technical_documentation">especially
-in the software
-field</a>.</p>
-<h3 id="benefits-of-documentation-for-software-and-hardware-code">Benefits of documentation for software and hardware code</h3>
-<p>By definition a <em>complex</em> hardware design is <a href="http://davidlongstreet.wordpress.com/2009/09/09/benefits-to-documentation-yes-there-are-some/">difficult to
-understand</a>
-and needs to be documented well.
-The purpose of technical RTL documentation is to help the intended
-audience understand the product and accomplish various tasks. For
-example, the purpose of a document can be to help the audience install
-the product, use the product, or administer the product.
-The main focus lies in the step-by-step process to deliver the
-technically complex information in a clear, concise, simple, consistent
-and usable manner. This helps <a href="http://www.hcltech.com/blogs/engineering-and-rd-services/technical-documentation-benefits-and-significance">inform the target audience about the
-technology</a>
-in the most appropriate format.</p>
-<p>We have <a href="http://www.hcltech.com/blogs/engineering-and-rd-services/technical-documentation-benefits-and-significance">all been frustrated at times</a>
-when we are not able to understand the features of a product, or when
-the user interface layout is not explained well enough. One problem with
-unorganized information is it can’t be found, so there is a lot wasted
-time spent pecking around looking for the right document or trying to
-find the right person to talk to. Another problem is if your
-documentation can’t be found, then redundant functionality is often
-created, that result in waste of time.</p>
-<p>The real benefit to the organization of documentation is reducing wasted
-time and spending more productive time on projects. This, of course,
-improves profitability.</p>
-<p>Another benefit to organized documents is the ability to <a href="http://davidlongstreet.wordpress.com/2009/09/09/benefits-to-documentation-yes-there-are-some/">reuse parts of the application documentation</a>.</p>
-<p>Other benefits of documentation for RTL hardware designs can be listed
-as follows:</p>
+        <p>The goal of Part 2 is to understand what a project is, why you want projects and how to set one up. You will learn how to add files to your projects and make sure the VHDL library is set up correctly.</p>
+<p>As an extra, you will learn how to efficiently work with Finite State Machines.</p>
+<h4 id="setup">Setup</h4>
 <ul>
-<li><strong>Doesn't change over time:</strong> This is one of the primary drives for
-    creating documentation.</li>
-<li><strong>Person independent:</strong> You do not need to have access to a
-    particular person with the right knowledge to retrieve the
-    documentation; you can just look it up.</li>
-<li><strong>Scalable:</strong> In a pure person-to-person approach to information
-    sharing, you'll quickly find a small subset of project members using
-    a great deal of their time explaining project aspects to other
-    project members. This can be alleviated somewhat by first attempting
-    to looking information up in the project documentation, before
-    turning to the project oracle in the particular area of interest.</li>
-<li><strong>Geographical invariant:</strong> If a project team or stakeholders aren't
-    all placed at the same location, the barrier to person-to-person
-    information exchange rises significantly, thereby making
-    documentation based information exchange more attractive. This is of
-    course only the case if the documentation is accessible at all
-    relevant sites, eg. properly Internet based, or at least
-    intranet based.</li>
-<li><strong>24/7 accessibility:</strong> Documentation based information can be
-    access all the time. So even when project members have different
-    working hours, vacations etc. they will still (in principle) have
-    access to information generated during their absence.</li>
-<li><strong>Reference information:</strong> Where person-to-person information
-    exchange usually varies according to the context it is used in,
-    documentation based information never changes unless somebody
-    actively updates the documentation. This makes documentation a more
-    stable reference platform, than person based information, which has
-    a tendency to vary more depending on who is delivering the
-    information when. The <a href="http://mikisseth.blogspot.in/2009/06/cost-and-benefits-of-documentation.html">variations in the information consumers
-    interpretation</a>
-    of the information provided is of course another matter.</li>
+<li>Switch to the <strong>Sigasi</strong> perspective (Button in top right) </li>
+<li>Import project <code>part2_vhdl_project</code></li>
+<li><strong>File &gt; Import...</strong></li>
+<li><strong>Existing project into Workspace</strong>, <strong>Next</strong></li>
+<li><strong>Browse</strong> to <code>part2_vhdl_project</code></li>
+<li><strong>Finish</strong></li>
+<li>Close unrelated projects (Right Click on the project in Project Explorer and select <strong>Close Unrelated Projects</strong>)</li>
 </ul>
-<p>Technical documentation is beneficial for the organization too. It
-creates a good impression on new customers because this is the
-customer’s first touch point after the sale. It helps the customer make
-decisions related to the purchase of the full product or its features,
-and informs the customer about the instructions and troubleshooting tips
-that are essential for ensuring a great customer experience, which can
-reduce customer support costs. Also, technical documentation provides
-good product knowledge to the customer that increases chances of finding
-greater functionality in the product, and enables customers to avoid
-errors, thanks to accurate and <a href="http://www.hcltech.com/blogs/engineering-and-rd-services/technical-documentation-benefits-and-significance">clearly-written
-procedures</a>.</p>
-<p>Hence, good technical documentation is very essential. It can provide a
-better understanding of the product and prevent customer errors, making
-business processes more reliable.</p>
-<h3 id="coming-up">Coming up</h3>
-<p>Next week we'll discuss: <a href="/tech/how-much-time-spent-writing-documentation-versus-developing-rtl-code.html" title="How much time is spent on writing documentation versus developing RTL code?">How much time is spent on writing documentation versus developing RTL code?</a></p>
+<h4 id="navigation">Navigation</h4>
+<ul>
+<li>Open <code>navigation.vhd</code> with <strong>Open Resource</strong> (<strong>Ctrl+Shift+R</strong>) or via the Project Explorer</li>
+<li>Project Explorer: Enable the <em>Link with editor</em> button (⇆)</li>
+<li>Hover over <code>MAX_COUNT</code></li>
+<li>Open declaration of <code>std_logic</code> and other declarations</li>
+<li>
+<p>Navigate back (<strong>Alt+Left</strong>)</p>
+</li>
+<li>
+<p>Open <code>components.vhd</code></p>
+</li>
+<li>Navigate from the component instantiation to the matching entity: press and hold the <strong>Ctrl</strong> key and hover over the component to see a menu with hyperlinks. Click the link to open it.</li>
+<li>Find References of port <code>rst</code></li>
+<li>
+<p>Open two editors side by side (Drag editor tab)</p>
+</li>
+<li>
+<p>Navigate through the project with the following Views: (If they are not visible, open them with <strong>Quick Access</strong>)</p>
+</li>
+<li>Libraries View</li>
+<li>Problems View</li>
+<li>Task View</li>
+<li>Dependencies View</li>
+</ul>
+<h4 id="edit">Edit</h4>
+<ul>
+<li>Open file <code>edit.vhd</code></li>
+<li>Use Quickfix to fix the invalid sensitivity list</li>
+<li>Remove trailing whitespace (Use <strong>Quick Access</strong> to find and run this action)</li>
+</ul>
+<h4 id="libraries">Libraries</h4>
+<ul>
+<li>Open <code>libraries.vhd</code></li>
+<li>Set folder <code>my_lib</code> to library <code>my_lib</code> (Project explorer: <strong>Set Library</strong>)</li>
+</ul>
+<h4 id="state-machines">State machines:</h4>
+<ul>
+<li>Open file <code>fsm.vhd</code></li>
+<li>Declare enum type <code>state_type</code>: (<code>init</code>, <code>running</code>, <code>ready</code>)</li>
+<li>Declare variable <code>state</code> of <code>state_type</code></li>
+<li>Autocomplete <code>case statement</code></li>
+<li>Add some transitions</li>
+<li>Add case choice <code>when idle</code> and use quickfix to add enum literal to enum type (QuickFix)</li>
+<li>Remove case choice <code>when idle</code> and use the quickfix on <code>case state</code> to add it again.</li>
+<li><strong>Ctrl+Hover</strong> on a state assignment and select <strong>Open Matching when Clause</strong>. </li>
+</ul>
+<h4 id="rename">Rename</h4>
+<ul>
+<li>Open file <code>rename.vhd</code></li>
+<li>Manual rename: Change (edit) <code>port_1</code> to <code>port_1a</code> and manually update the matching instantiations</li>
+<li>Rename (<strong>Refactor &gt; Rename element</strong>) port <code>port_a</code> to <code>port_aa</code></li>
+<li>Compare file with <em>Local history</em> (Right-click on file, <strong>Compare With &gt; Local History...</strong>) and inspect the changes you made</li>
+</ul>
+<h4 id="import-non-sigasi-project-setup-libraries">Import (non-Sigasi) project + setup libraries</h4>
+<ul>
+<li>First: Check that your are in VHDL 2008 mode</li>
+<li><strong>File &gt; Import...</strong></li>
+<li><strong>Sigasi &gt; Import a VHDL project</strong>, <strong>Next ></strong></li>
+<li><strong>Browse...</strong> to <code>vunit_example</code>, <strong>Finish</strong></li>
+<li>Set the project to library <code>uart_lib</code> (right click, <strong>Set Library</strong>)<br />
+  Check the library annotations in the project explorer</li>
+<li>Add library <code>vunit_lib</code>:</li>
+<li>Drag and drop the <code>vunit_lib</code> folder from you File System Explorer (e.g.: Windows Explorer, Mac Finder, Nautilus) into the <code>Common Libraries</code> folder (in the Project explorer). Choose the option to <mark>link to files and folders</mark>.</li>
+<li>Set the library to <code>vunit_lib</code>  </li>
+<li>Set the library for the test files (<code>uart/src/test</code>). Read the source code for the library name.</li>
+<li>One more library is not correctly set. Try to fix this. (Tip: the sources are already in the project)</li>
+</ul>
+<h4 id="optional-extra-tasks">Optional Extra Tasks</h4>
+<ul>
+<li>Select <code>edit.vhd</code> and <code>navigate.vhd</code> and compare them via the right click menu.</li>
+<li>Configure and enable an External Compiler (See <code>extra_compiler.vhd</code>)</li>
+<li>Set the top level and start the Simulator (See <code>extra_compiler.vhd</code>)</li>
+<li>Export a CSV file with all files in your project (<strong>File &gt; Export... &gt; Sigasi &gt; CSV file</strong>)</li>
+</ul>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -2125,12 +2085,17 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
       <nav class="hidden-print hidden-xs hidden-sm">
         <div class="sidebar" data-spy="affix" data-offset-top="510" >
           <div class="well">
-            <a href="#"><strong>Why you need good documentation for your VHDL and Verilog code</strong></a>
+            <a href="#"><strong>VHDL projects</strong></a>
             <div class="toc">
 <ul>
-<li><a href="#introduction">Introduction</a></li>
-<li><a href="#benefits-of-documentation-for-software-and-hardware-code">Benefits of documentation for software and hardware code</a></li>
-<li><a href="#coming-up">Coming up</a></li>
+<li><a href="#setup">Setup</a></li>
+<li><a href="#navigation">Navigation</a></li>
+<li><a href="#edit">Edit</a></li>
+<li><a href="#libraries">Libraries</a></li>
+<li><a href="#state-machines">State machines:</a></li>
+<li><a href="#rename">Rename</a></li>
+<li><a href="#import-non-sigasi-project-setup-libraries">Import (non-Sigasi) project + setup libraries</a></li>
+<li><a href="#optional-extra-tasks">Optional Extra Tasks</a></li>
 </ul>
 </div>
 
@@ -2141,8 +2106,6 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 
   </div>
 
-  <ul class="pager">
-  </ul>
       
 </div>
 

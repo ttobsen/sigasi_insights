@@ -458,4 +458,11 @@ http://insights.sigasi.com/tech/work-not-vhdl-library.html
 http://insights.sigasi.com/tech/work-with-gaislers-leon3-sparc-processor.html
 http://insights.sigasi.com/tech/xtext-resource-caching-loading-resources-5-times-faster.html
 http://insights.sigasi.com/todo_.html
+http://insights.sigasi.com/training/everything.html
+http://insights.sigasi.com/training/index.html
+http://insights.sigasi.com/training/part1.html
+http://insights.sigasi.com/training/part2.html
+http://insights.sigasi.com/training/part3.html
+http://insights.sigasi.com/training/part4.html
+http://insights.sigasi.com/training/requirements.html
 http://insights.sigasi.com/tutorial.html

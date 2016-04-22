@@ -1989,9 +1989,7 @@
       <div class="col-md-9" role="main">
         <p>In my series of how Sigasi is <a href="/opinion/emacs/index.html" title="Sigasi vs than Emacs VHDL mode">Sigasi vs than Emacs VHDL mode</a>, this entry
 deals with code reuse, more specifically with <strong>renaming</strong>.</p>
-<p>Code Reuse
-comments: true</p>
-<hr />
+<h3 id="code-reuse">Code Reuse</h3>
 <p>The situation where you write code once, produce a chip and never look
 at that code again is pretty rare. Usually, there is going to be a
 follow-up project. You might build an improved version of the chip, or
@@ -2012,9 +2010,7 @@ that you will need in order to be efficient at reusing your legacy code.
 Then there is the act of modifying the code. There are three things I
 want to talk about: naming conventions, cleaning up code layout and code
 encapsulation. For today, let’s stick to naming conventions.</p>
-<p>Global Rename
-comments: true</p>
-<hr />
+<h3 id="global-rename">Global Rename</h3>
 <p>Suppose you have some legacy code that uses the signal <code>clock</code> instead
 of your corporate standard <code>clk</code>. It would be better for all of the code
 to have a uniform look, so you want to fix this. Even more importantly,
@@ -2043,9 +2039,7 @@ script a new elisp command and send it to
 <a href="http://www.iis.ee.ethz.ch/~zimmi/emacs/vhdl-mode.html">Reto</a> to be
 incorporated in the next update of the Emacs VHDL mode. Let’s see if
 your new improvement would solve the next problem.</p>
-<p>Specific Renaming
-comments: true</p>
-<hr />
+<h3 id="specific-renaming">Specific Renaming</h3>
 <p>Reusing legacy code, you could be facing a design where all modules name
 their main input signal <code>data_in</code>. This is not helpful if you try to
 read it. You want to change these names to something like:
@@ -2061,9 +2055,7 @@ problem. There’s a <strong>two minute screencast</strong>, <a href="/screencas
 demonstrates our rename refactoring. We can do this because Sigasi HDT
 analyzes the entire VHDL project and tries to find the declaration for
 every name it encounters.</p>
-<p>Not Just a Missing Feature
-comments: true</p>
-<hr />
+<h3 id="not-just-a-missing-feature">Not Just a Missing Feature</h3>
 <p>As I did in most of my <a href=".">previous posts on Emacs VHDL</a>, I have
 pointed out a <em>fundamental</em> limitation in Emacs, not just a missing
 feature. Certain extremely useful operations, like navigation and
@@ -2072,9 +2064,7 @@ long way using regular expressions. It is indeed surprising to see how
 many cool things Reto was able to pull of with regex matching. But it
 will be hard to take this technology one step further. And it will be
 impossible to take it two or three steps further.</p>
-<p>Disclaimer
-comments: true</p>
-<hr />
+<h3 id="disclaimer">Disclaimer</h3>
 <p>Sigasi’s rename refactoring is still inaccurate in some cases: for
 functions, procedures and enumeration literals. This is because these
 elements can have their names
@@ -2096,6 +2086,25 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 <noscript>Please enable JavaScript to view the comments.</noscript>      </div>
     </div>
 
+    <div class="col-md-3" role="complementary">
+      <nav class="hidden-print hidden-xs hidden-sm">
+        <div class="sidebar" data-spy="affix" data-offset-top="510" >
+          <div class="well">
+            <a href="#"><strong>No VHDL Rename in Emacs VHDL mode</strong></a>
+            <div class="toc">
+<ul>
+<li><a href="#code-reuse">Code Reuse</a></li>
+<li><a href="#global-rename">Global Rename</a></li>
+<li><a href="#specific-renaming">Specific Renaming</a></li>
+<li><a href="#not-just-a-missing-feature">Not Just a Missing Feature</a></li>
+<li><a href="#disclaimer">Disclaimer</a></li>
+</ul>
+</div>
+
+          </div>
+        </div>
+      </nav>
+    </div>
 
   </div>
 

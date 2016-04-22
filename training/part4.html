@@ -3,7 +3,7 @@
 	<!--// OPEN HEAD //-->
 	<head>
 		<!--// SITE TITLE //-->
-		<title>Why you need good documentation for your VHDL and Verilog code - Sigasi</title>
+		<title>Hierarchy, Graphics and documentation - Sigasi</title>
 		<link rel="stylesheet" href="http://www.sigasi.com/wp-content/plugins/sitepress-multilingual-cms/res/css/language-selector.css?v=3.2.7" type="text/css" media="all" />
 		<!--// SITE META //-->
 		<meta charset="UTF-8"/>
@@ -25,14 +25,14 @@
 			}
 		</script>
 		<!-- This site is optimized with the Yoast SEO plugin v3.0.6 - https://yoast.com/wordpress/plugins/seo/ -->
-		<link rel="canonical" href="http://insights.sigasi.com//tech/why-you-need-good-documentation-your-vhdl-and-verilog-code.html" />
+		<link rel="canonical" href="http://insights.sigasi.com//training/part4.html" />
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="Why you need good documentation for your VHDL and Verilog code - Sigasi" />
-		<meta property="og:url" content="http://insights.sigasi.com//tech/why-you-need-good-documentation-your-vhdl-and-verilog-code.html" />
+		<meta property="og:title" content="Hierarchy, Graphics and documentation - Sigasi" />
+		<meta property="og:url" content="http://insights.sigasi.com//training/part4.html" />
 		<meta property="og:site_name" content="Sigasi" />
 		<meta name="twitter:card" content="summary"/>
-		<meta name="twitter:title" content="Why you need good documentation for your VHDL and Verilog code - Sigasi"/>
+		<meta name="twitter:title" content="Hierarchy, Graphics and documentation - Sigasi"/>
 		<!-- / Yoast SEO plugin. -->
 		<script type="text/javascript">
 			window._wpemojiSettings = {
@@ -1774,7 +1774,7 @@
 <div class="page-heading page-heading-hidden clearfix">
 	<div class="container">
 		<div class="heading-text">
-			<h1 class="entry-title" >Why you need good documentation for your VHDL and Verilog code</h1>
+			<h1 class="entry-title" >Hierarchy, Graphics and documentation</h1>
 		</div>
 	</div>
 </div>
@@ -1944,7 +1944,7 @@
 			</li>
 			<li>
 				<a href="/screencasts/">Screencasts</a></li>
-			<li class="active">
+			<li>
 				<a href="/tech/">Tech Articles</a></li>
 			<li>
 				<a href="/opinion/">Opinion</a></li>
@@ -1964,18 +1964,11 @@
 <div class="container">
   <div class="page-header">
     <div>
-        <h1 style="margin-bottom: 0px;margin-top: 30px;">Why you need good documentation for your VHDL and Verilog code</h1>
+        <h1 style="margin-bottom: 0px;margin-top: 30px;">Hierarchy, Graphics and documentation</h1>
     </div>
         
     <div style="margin: 10px 0 10px">
         <span>
-          Posted on 2013&#8209;11&#8209;10
-            by Smrita
-        </span>
-        <span style="padding-left:50px">
-        Tagged as: 
-              <a href="/tag/Guest Blog/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">Guest Blog</a>
-              <a href="/tag/documentation/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">documentation</a>
         </span>
     </div>
   </div>
@@ -1986,126 +1979,72 @@
 
     <div class="content">
       <div class="col-md-9" role="main">
-        <p><em>In this blog series, guest blogger Smrita talks about the need for
-<a href="http://www.sigasi.com/sigasi-doc">documentation for complex RTL designs</a>. </em></p>
-<p>In engineering, <a href="http://en.wikipedia.org/wiki/Technical_documentation">technical documentation</a>
-refers to any type of documentation that describes handling,
-functionality and architecture of a technical product or a product under
-development or use. The intended recipient for product technical
-documentation is both the (proficient) end user as well as the
-administrator, service or maintenance technician. In contrast to a mere
-"cookbook" manual, technical documentation aims at providing enough
-information for a user to understand inner and outer dependencies of the
-product at hand. The technical documentation is intended to help the
-maintainers of the system (the people who need to keep the system
-running smoothly, fix problems, etc.) The maintainers are usually
-technical people, who need to know <a href="http://www.igcseict.info/theory/8/docs/index.html">exactly how the system
-works</a>.</p>
-<p>In other words, Technical documentation is quite simply the compilation
-of documents which aim to <a href="http://www.tetras.sk/en/stranka/what-is-technical-documentation">describe a technical
-product</a>.
-Technical documentation is characterised by its systematic and
-structured framework.</p>
-<h3 id="introduction">Introduction</h3>
-<p>Code documentation is an important aspect of both software and hardware
-projects and all general principles of software engineering can be
-applied to text-based (or: RTL-based) hardware design in such languages
-as VHDL, Verilog and SystemVerilog.
-Scott Ambler describes a software document as “any artifact external to
-source code whose purpose is to convey information in a persistent
-manner”. When engineering software or hardware, the code alone is insufficient.
-There must be text along with it to describe various aspects of its
-intended operation.
-It is important for the code documents to be thorough, but not so
-verbose that it becomes difficult to maintain them. Several How-to and
-overview documentation are found specific to the software application or
-software product being documented by API Writers. This documentation may
-be used by developers, testers and also the end customers or clients
-using this software application. Today, we see lot of high end
-applications in the field of power, energy, transportation, networks,
-aerospace, safety, security, industry automation and a variety of other
-domains. Technical documentation has become important within such
-organizations as the basic and advanced level of information may change
-over a period of time with architecture changes. Hence, technical
-documentation has gained lot of importance in recent times, <a href="http://en.wikipedia.org/wiki/Software_documentation#Technical_documentation">especially
-in the software
-field</a>.</p>
-<h3 id="benefits-of-documentation-for-software-and-hardware-code">Benefits of documentation for software and hardware code</h3>
-<p>By definition a <em>complex</em> hardware design is <a href="http://davidlongstreet.wordpress.com/2009/09/09/benefits-to-documentation-yes-there-are-some/">difficult to
-understand</a>
-and needs to be documented well.
-The purpose of technical RTL documentation is to help the intended
-audience understand the product and accomplish various tasks. For
-example, the purpose of a document can be to help the audience install
-the product, use the product, or administer the product.
-The main focus lies in the step-by-step process to deliver the
-technically complex information in a clear, concise, simple, consistent
-and usable manner. This helps <a href="http://www.hcltech.com/blogs/engineering-and-rd-services/technical-documentation-benefits-and-significance">inform the target audience about the
-technology</a>
-in the most appropriate format.</p>
-<p>We have <a href="http://www.hcltech.com/blogs/engineering-and-rd-services/technical-documentation-benefits-and-significance">all been frustrated at times</a>
-when we are not able to understand the features of a product, or when
-the user interface layout is not explained well enough. One problem with
-unorganized information is it can’t be found, so there is a lot wasted
-time spent pecking around looking for the right document or trying to
-find the right person to talk to. Another problem is if your
-documentation can’t be found, then redundant functionality is often
-created, that result in waste of time.</p>
-<p>The real benefit to the organization of documentation is reducing wasted
-time and spending more productive time on projects. This, of course,
-improves profitability.</p>
-<p>Another benefit to organized documents is the ability to <a href="http://davidlongstreet.wordpress.com/2009/09/09/benefits-to-documentation-yes-there-are-some/">reuse parts of the application documentation</a>.</p>
-<p>Other benefits of documentation for RTL hardware designs can be listed
-as follows:</p>
+        <p>In Part 4 you will learn how to use the Hierarchy View. You will also learn how to use and export Graphics and Documentation with Sigasi Studio.</p>
+<h4 id="hierarchy-view">Hierarchy View</h4>
 <ul>
-<li><strong>Doesn't change over time:</strong> This is one of the primary drives for
-    creating documentation.</li>
-<li><strong>Person independent:</strong> You do not need to have access to a
-    particular person with the right knowledge to retrieve the
-    documentation; you can just look it up.</li>
-<li><strong>Scalable:</strong> In a pure person-to-person approach to information
-    sharing, you'll quickly find a small subset of project members using
-    a great deal of their time explaining project aspects to other
-    project members. This can be alleviated somewhat by first attempting
-    to looking information up in the project documentation, before
-    turning to the project oracle in the particular area of interest.</li>
-<li><strong>Geographical invariant:</strong> If a project team or stakeholders aren't
-    all placed at the same location, the barrier to person-to-person
-    information exchange rises significantly, thereby making
-    documentation based information exchange more attractive. This is of
-    course only the case if the documentation is accessible at all
-    relevant sites, eg. properly Internet based, or at least
-    intranet based.</li>
-<li><strong>24/7 accessibility:</strong> Documentation based information can be
-    access all the time. So even when project members have different
-    working hours, vacations etc. they will still (in principle) have
-    access to information generated during their absence.</li>
-<li><strong>Reference information:</strong> Where person-to-person information
-    exchange usually varies according to the context it is used in,
-    documentation based information never changes unless somebody
-    actively updates the documentation. This makes documentation a more
-    stable reference platform, than person based information, which has
-    a tendency to vary more depending on who is delivering the
-    information when. The <a href="http://mikisseth.blogspot.in/2009/06/cost-and-benefits-of-documentation.html">variations in the information consumers
-    interpretation</a>
-    of the information provided is of course another matter.</li>
+<li>Import project <code>part4</code> (and close unrelated projects)</li>
+<li>Open <code>testbench.vhd</code></li>
+<li>Right click the <code>STR</code> architecture and select <strong>Set as Top Level</strong></li>
+<li>Explore the resulting tree in the Hierarchy View:</li>
+<li>Inspect the value of generics (Notice how the value in <code>dut_instance</code> differs from its default value)</li>
+<li>Change the value of a generic and note how the Hierarchy View refreshes when you save the file.</li>
+<li>Add a syntax error in a file and note that Sigasi Studio is able to recover and still show valid content in the Hierarchy View.</li>
+<li>Disable the <strong>Toggle Hierarchy Refresh</strong> toggle button, and note Sigasi Studio no longer auto-updates the hierarchy when edit your files. (This is useful for big hierarchies)</li>
 </ul>
-<p>Technical documentation is beneficial for the organization too. It
-creates a good impression on new customers because this is the
-customer’s first touch point after the sale. It helps the customer make
-decisions related to the purchase of the full product or its features,
-and informs the customer about the instructions and troubleshooting tips
-that are essential for ensuring a great customer experience, which can
-reduce customer support costs. Also, technical documentation provides
-good product knowledge to the customer that increases chances of finding
-greater functionality in the product, and enables customers to avoid
-errors, thanks to accurate and <a href="http://www.hcltech.com/blogs/engineering-and-rd-services/technical-documentation-benefits-and-significance">clearly-written
-procedures</a>.</p>
-<p>Hence, good technical documentation is very essential. It can provide a
-better understanding of the product and prevent customer errors, making
-business processes more reliable.</p>
-<h3 id="coming-up">Coming up</h3>
-<p>Next week we'll discuss: <a href="/tech/how-much-time-spent-writing-documentation-versus-developing-rtl-code.html" title="How much time is spent on writing documentation versus developing RTL code?">How much time is spent on writing documentation versus developing RTL code?</a></p>
+<h4 id="block-diagram-view">Block Diagram View</h4>
+<ul>
+<li>Open <code>testbench.vhd</code></li>
+<li>Right click the VHDL editor and select <strong>Show in &gt; Block Diagram</strong></li>
+<li>Double click ports or connections to navigate to the corresponding VHDL code. (This also works the other way around by clicking <strong>Show in &gt; Block Diagram</strong> on ports in the VHDL code)</li>
+<li>Make some changes in the VHDL code and note how the Block Diagram updates when you save your file.</li>
+<li>Select <code>dut_instance</code> in the diagram, right click and select <strong>Open Entity Declaration</strong> to navigate to the corresponding entity, <code>dut</code>.</li>
+<li>Click the save icon 💾, and export the diagram to a PNG or SVG file.</li>
+</ul>
+<h4 id="state-machine-view">State Machine View</h4>
+<ul>
+<li>Click <strong>Window &gt; Show View &gt; State Machines</strong> to open the State Machine view</li>
+<li>Open <code>dut.vhd</code></li>
+<li>Double click on a few nodes and transitions in to navigate to the corresponding VHDL code.</li>
+<li>Change the VHDL code of the state machine and notice how the view updates (See the TODO tag)</li>
+<li>Add a comment to the <code>when idle: state := preparing;</code> transition. For example: <code>-- start preparing</code><br />
+  Notice how the transition labels update</li>
+<li>Toggle the (Aa)-button to show/hide the transition labels.</li>
+<li>Click the save icon 💾 to export the diagram to file.</li>
+</ul>
+<h4 id="documentation">Documentation</h4>
+<ul>
+<li>Import project <code>Sigasi_doc</code></li>
+<li>Open the Documentation View</li>
+<li>Open file <code>testbench.vhd</code></li>
+<li>Edit comments and note how the documentation is updated:</li>
+<li>Document a port (by adding a comment)</li>
+<li>Document a generic</li>
+<li>Document an architecture</li>
+<li>Document an entity</li>
+<li>Export PDF</li>
+<li>Inspect the DocBook file</li>
+</ul>
+<h4 id="optional-extra-tasks">Optional Extra tasks</h4>
+<ul>
+<li>Try out <strong>Net search</strong> in <code>stimgen.vhd</code> (Project <code>part4</code>)</li>
+<li>State Machine View: Add a second state machine in <code>dut.vhd</code> and note how it is displayed in a new tab.</li>
+<li>Finish the documentation of the Project to get a clean and complete PDF.</li>
+</ul>
+<!--
+* Modify the documentation templates:
+  * Copy the templates from the Installation (`<installation folder>/plugins/com.sigasi.hdt.docgen.resources_.../templates`) to your workspace (`<workspace folder>/sigasi-templates`)
+  * Modify the `preview.xml` template and inspect the result in the **Documentation View**
+-->
+
+<p style="page-break-after:always;"></p>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+<ul>
+<li>Where are my views? → <strong>Window &gt; Perspective &gt; Reset perspective</strong></li>
+<li>Unexpected error markers? → <strong>Project &gt; Clean...</strong></li>
+<li>Error markers are not updated? → Make sure <strong>Automatic build</strong> is enabled</li>
+<li>More on <a href="http://insights.sigasi.com/manual/trouble.html">http://insights.sigasi.com/manual/trouble.html</a></li>
+</ul>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -2125,12 +2064,15 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
       <nav class="hidden-print hidden-xs hidden-sm">
         <div class="sidebar" data-spy="affix" data-offset-top="510" >
           <div class="well">
-            <a href="#"><strong>Why you need good documentation for your VHDL and Verilog code</strong></a>
+            <a href="#"><strong>Hierarchy, Graphics and documentation</strong></a>
             <div class="toc">
 <ul>
-<li><a href="#introduction">Introduction</a></li>
-<li><a href="#benefits-of-documentation-for-software-and-hardware-code">Benefits of documentation for software and hardware code</a></li>
-<li><a href="#coming-up">Coming up</a></li>
+<li><a href="#hierarchy-view">Hierarchy View</a></li>
+<li><a href="#block-diagram-view">Block Diagram View</a></li>
+<li><a href="#state-machine-view">State Machine View</a></li>
+<li><a href="#documentation">Documentation</a></li>
+<li><a href="#optional-extra-tasks">Optional Extra tasks</a></li>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
 </ul>
 </div>
 
@@ -2141,8 +2083,6 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 
   </div>
 
-  <ul class="pager">
-  </ul>
       
 </div>
 
