@@ -341,7 +341,6 @@ http://insights.sigasi.com/tech/how-well-does-your-compiler-support-vhdl-2008.ht
 http://insights.sigasi.com/tech/importing-xilinx-ise-project-sigasi.html
 http://insights.sigasi.com/tech/index.html
 http://insights.sigasi.com/tech/install-plugins-from-existing-installation.html
-http://insights.sigasi.com/tech/install-sigasi-beta-features.html
 http://insights.sigasi.com/tech/installing-modelsim-64-bit-linux-machine.html
 http://insights.sigasi.com/tech/installing-quartus-64-bit-linux-system.html
 http://insights.sigasi.com/tech/installing-translations-eclipse.html
