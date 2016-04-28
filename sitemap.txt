@@ -78,6 +78,7 @@ http://insights.sigasi.com/opinion/psychology-and-engineering-what-right-feedbac
 http://insights.sigasi.com/opinion/reasons-love-vhdl-reasons-hate-vhdl.html
 http://insights.sigasi.com/opinion/state-logic-design-internet-communities.html
 http://insights.sigasi.com/opinion/too-smart-accept-any-help.html
+http://insights.sigasi.com/opinion/urubu.html
 http://insights.sigasi.com/opinion/vetsmod-get-better-feedback-your-vhdl-code-snippets.html
 http://insights.sigasi.com/opinion/vhdl-editors-vs-vhdl-editors.html
 http://insights.sigasi.com/opinion/vhdl-why-oh-why-must-it-be-way.html
@@ -126,6 +127,7 @@ http://insights.sigasi.com/releasenotes/sigasi-2.7.html
 http://insights.sigasi.com/releasenotes/sigasi-2.8.html
 http://insights.sigasi.com/releasenotes/sigasi-2.9.html
 http://insights.sigasi.com/releasenotes/sigasi-3.00.html
+http://insights.sigasi.com/releasenotes/sigasi-3.01.html
 http://insights.sigasi.com/screencasts/add_ieee_quickfix.html
 http://insights.sigasi.com/screencasts/block_selection_mode.html
 http://insights.sigasi.com/screencasts/bookmarks.html

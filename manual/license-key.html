@@ -1842,6 +1842,9 @@
 			<a href="/releasenotes/" class="dropdown-toggle" data-toggle="dropdown">Release Notes <b class="caret"></b></a>
 			<ul class="dropdown-menu">
 				<li>
+					<a href="/releasenotes/sigasi-3.01.html">Sigasi 3.1</a>
+				</li>
+				<li>
 					<a href="/releasenotes/sigasi-3.00.html">Sigasi 3.0</a>
 				</li>
 				<li>
@@ -2026,7 +2029,7 @@ INCREMENT com.sigasi.hdt sigasi 2.0 18-nov-2012 4 \
 
 
 <h3 id="license-server-setup">License server setup</h3>
-<h4 id="download-the-flexnet-daemons">Download the FlexNet daemons</h4>
+<h4 id="download-flexnet-daemons">Download the FlexNet daemons</h4>
 <ul>
 <li>Linux:<ul>
 <li><a href="http://download.sigasi.com/flexnet/sigasi-flexnet-linux64.zip">Linux 64 bit</a></li>
@@ -2050,10 +2053,10 @@ INCREMENT com.sigasi.hdt sigasi 2.0 18-nov-2012 4 \
 <p>You can change the ports and servername without breaking the signature.</p>
 <h4 id="starting-the-flexnet-and-sigasi-daemon-on-linux">Starting the Flexnet and Sigasi Daemon on Linux</h4>
 <p>the easiest way to start the Sigasi Flexnet Daemon is like this (on Linux)</p>
-<div class="codehilite"><pre><span class="c">#!/bin/sh</span>
+<div class="codehilite"><pre><span class="ch">#!/bin/sh</span>
 <span class="nb">echo</span> <span class="s2">&quot;Starting the Sigasi floating license server&quot;</span>
 <span class="nv">LOCATION</span><span class="o">=</span>/home/flex/flexnet-sigasi
-<span class="nv">$LOCATION</span>/lmgrd -c <span class="nv">$LOCATION</span>/sigasi.lic -l <span class="nv">$LOCATION</span>/debug.log
+$LOCATION/lmgrd -c $LOCATION/sigasi.lic -l $LOCATION/debug.log
 </pre></div>
 
 
@@ -2126,7 +2129,15 @@ INCREMENT com.sigasi.hdt sigasi 2.0 18-nov-2012 4 \
 <p>If your floating license server does not function properly, try the following steps:</p>
 <ul>
 <li>Start the FlexLM daemon with the <code>-z</code> option to see what is going wrong</li>
-<li>Make sure the server name in the license key file is correct</li>
+<li>You can check that the FlexNet daemon is running as expected by following these steps:<ul>
+<li><a href="/manual/license-key.html#download-flexnet-daemons" title="License Key Management">Download</a> the daemon zip file on the client machine</li>
+<li>Run
+<code>bash
+lmutil[.exe] lmdiag -c "&lt;port&gt;@&lt;server&gt;" -n</code></li>
+<li>If the server is running correctly, you should see a description of the valid FlexNet features served by you license server. </li>
+</ul>
+</li>
+<li>Make sure the server name in the license key file is correct.</li>
 <li><strong>Firewall</strong> problems:<ul>
 <li>make sure that the port for the Sigasi FlexLM license daemon is open</li>
 <li>you can force the port for the Sigasi license daemon by adding USE_SERVER and DAEMON sigasi port=<port number>to your license key</li>
@@ -2142,7 +2153,7 @@ INCREMENT com.sigasi.hdt sigasi 2.0 18-nov-2012 4 \
 <li>You can not have spaces in the daemon path.</li>
 <li>Some users reported that specifying an arbitrary absolute path for the Sigasi daemon on Windows (e.g. <code>DAEMON sigasi C:\\sigasi.exe port=27021</code>) does not work. It only works if the sigasi daemon is in the <code>C:\Sigasi</code> folder.
   Other users have reported that you are <em>not</em> allowed to have the directory name being the same as the daemon name. For example: <code>c:\flexlm\sigasi\sigasi.exe</code> is invalid, but <code>c:\flexlm\vhdl_editor\sigasi.exe</code> works fine.</li>
-<li>Make sure the environment variable is correct: SIGASI_LM_LICENSE_FILE=<port number>@<servername></li>
+<li>Make sure the environment variable is correct: <code>SIGASI_LM_LICENSE_FILE=&lt;port number&gt;@&lt;servername&gt;</code></li>
 <li>Verify that your server meets the <a href="/faq.html#what-are-the-system-requirements" title="FAQ">what-are-the-system-requirements</a>. Contact us for options if it does not.</li>
 <li>You can easily check the status of your license via the License Key preference page : <strong>Preferences &gt; Sigasi &gt; License Key</strong>. At the bottom of this preference page you can see the type and expiration date of your license.</li>
 <li>Sigasi Studio pre-emptively tries to check out certain license features. As a result, you might see warning message like this in your server log. These messages can be safely ignored.</li>
@@ -2169,7 +2180,7 @@ INCREMENT com.sigasi.hdt sigasi 2.0 18-nov-2012 4 \
 <li><a href="#floating-licenses">Floating licenses</a><ul>
 <li><a href="#configuring-floating-license-in-sigasi-studio-flexnet-client">Configuring Floating license in Sigasi Studio (Flexnet Client)</a></li>
 <li><a href="#license-server-setup">License server setup</a><ul>
-<li><a href="#download-the-flexnet-daemons">Download the FlexNet daemons</a></li>
+<li><a href="#download-flexnet-daemons">Download the FlexNet daemons</a></li>
 <li><a href="#customize-license-server-settings">Customize License Server settings</a></li>
 <li><a href="#starting-the-flexnet-and-sigasi-daemon-on-linux">Starting the Flexnet and Sigasi Daemon on Linux</a></li>
 <li><a href="#starting-the-flexnet-and-sigasi-daemon-on-windows">Starting the Flexnet and Sigasi Daemon on Windows</a></li>
