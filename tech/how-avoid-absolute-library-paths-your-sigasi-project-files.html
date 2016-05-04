@@ -1993,21 +1993,25 @@
 avoid system dependent, absolute paths in your project files.</p>
 <p>The default way to add a third party library (e.g. <code>modelsim_lib</code>) to
 your project is as follows:</p>
+<ol>
+<li>
+<p>Add files to project</p>
 <ul>
-<li>Add files to project<ul>
 <li><strong>File &gt; New &gt; Folder</strong></li>
 <li><strong>Advanced</strong></li>
 <li><strong>Link to alternate location (Linked Folder)</strong></li>
-<li>Enter location. In my case this is<br />
-<code>/home/heeckhau/altera/15.0/modelsim_ase/vhdl_src/modelsim_lib</code></li>
+<li>Enter location. In my case this is
+    <code>/home/heeckhau/altera/12.1/modelsim_ase/vhdl_src/modelsim_lib</code></li>
 </ul>
 </li>
-<li>Map library<ul>
+<li>
+<p>Map library</p>
+<ul>
 <li><strong>right-click</strong></li>
 <li><strong>Library Mapping &gt; Library modelsim_lib</strong></li>
 </ul>
 </li>
-</ul>
+</ol>
 <p><img alt="" src="images/modelsimlib.png" /></p>
 <p>The disadvantage of this procedure is that this leads to an absolute
 path in the project file

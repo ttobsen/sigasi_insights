@@ -2002,7 +2002,7 @@
 <h2 id="usb-blaster-setup">USB-Blaster setup</h2>
 <p>Setting the USB-blaster was a bit harder:
 As described <a href="http://www.altera.com/download/drivers/dri-usb_b-lnx.html">here</a> you need to create an extra udev rule (<code>sudo vim /etc/udev/rules.d/51-usbblaster.rules</code>) with following content:</p>
-<div class="codehilite"><pre><span class="c1"># USB-Blaster</span>
+<div class="codehilite"><pre><span class="c"># USB-Blaster</span>
 <span class="nv">BUS</span><span class="o">==</span><span class="s2">&quot;usb&quot;</span>, SYSFS<span class="o">{</span>idVendor<span class="o">}==</span><span class="s2">&quot;09fb&quot;</span>, SYSFS<span class="o">{</span>idProduct<span class="o">}==</span><span class="s2">&quot;6001&quot;</span>, <span class="nv">MODE</span><span class="o">=</span><span class="s2">&quot;0666&quot;</span>, <span class="nv">PROGRAM</span><span class="o">=</span><span class="s2">&quot;/bin/sh -c &#39;K=%k; K=</span><span class="nv">$$</span><span class="s2">{K#usbdev}; printf /proc/bus/usb/%%03i/%%03i</span><span class="nv">$$</span><span class="s2">{K%%%%.*} </span><span class="nv">$$</span><span class="s2">{K#*.}&#39;&quot;</span>, RUN+<span class="o">=</span><span class="s2">&quot;/bin/chmod 0666 %c&quot;</span>
 </pre></div>
 
@@ -2019,7 +2019,7 @@ touch ~/.jtag.conf
 
 
 <p>Next, I appended following lines to my to my <code>/etc/rc.local</code> file:</p>
-<div class="codehilite"><pre><span class="nb">echo</span> <span class="m">356</span> <span class="m">40000</span> <span class="m">32</span> <span class="m">32000</span> &gt; /proc/sys/kernel/sem
+<div class="codehilite"><pre><span class="nb">echo </span><span class="m">356</span> <span class="m">40000</span> <span class="m">32</span> <span class="m">32000</span> &gt; /proc/sys/kernel/sem
 /opt/altera/10.1/quartus/bin/jtagd
 </pre></div>
 
