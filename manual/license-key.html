@@ -2138,6 +2138,7 @@ lmutil[.exe] lmdiag -c "&lt;port&gt;@&lt;server&gt;" -n</code></li>
 </ul>
 </li>
 <li>Make sure the server name in the license key file is correct.</li>
+<li>Make sure both the Sigasi and Flexnet Daemon are the same version (i.e. from the same zip-file from the Sigasi download server).   </li>
 <li><strong>Firewall</strong> problems:<ul>
 <li>make sure that the port for the Sigasi FlexLM license daemon is open</li>
 <li>you can force the port for the Sigasi license daemon by adding USE_SERVER and DAEMON sigasi port=<port number>to your license key</li>
@@ -2164,6 +2165,27 @@ lmutil[.exe] lmdiag -c "&lt;port&gt;@&lt;server&gt;" -n</code></li>
 
 
 <p>If the steps above do not help, feel free to <a href="mailto:sales@sigasi.com" title="contact us">contact us</a> and send us a <strong>screenshot of the license dialog</strong> with the error message.</p>
+<h3 id="typical-error-messages">Typical error messages</h3>
+<p>Check the content of the Sigasi License preference page via : <strong>Window &gt; Preferences</strong> and <strong>Sigasi &gt; License Key</strong></p>
+<blockquote>
+<p>No license</p>
+</blockquote>
+<ul>
+<li>Is a valid <mark>license key path</mark> configured (or are valid environment variables used)?</li>
+<li>Is the user trying to use a Sigasi Studio 3 license in Sigasi 2.x?</li>
+</ul>
+<blockquote>
+<p>Internal Flexlm Error</p>
+</blockquote>
+<ul>
+<li>Check version number of FlexNet daemon, it is probably outdated. If not, check the daemon log on the license server</li>
+</ul>
+<blockquote>
+<p>Invalid Message Received From License Server</p>
+</blockquote>
+<ul>
+<li>Check the daemon log on the license server</li>
+</ul>
 
       </div>
     </div>
@@ -2196,6 +2218,7 @@ lmutil[.exe] lmdiag -c "&lt;port&gt;@&lt;server&gt;" -n</code></li>
 </li>
 <li><a href="#troubleshooting">Troubleshooting</a><ul>
 <li><a href="#floating-licenses_1">Floating licenses</a></li>
+<li><a href="#typical-error-messages">Typical error messages</a></li>
 </ul>
 </li>
 </ul>
