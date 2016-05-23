@@ -320,6 +320,7 @@ http://insights.sigasi.com/tech/evaluating-xtext.html
 http://insights.sigasi.com/tech/even-more-performance-improvements.html
 http://insights.sigasi.com/tech/export-vhdl-project-archive-file.html
 http://insights.sigasi.com/tech/four-and-half-ways-write-vhdl-instantiations.html
+http://insights.sigasi.com/tech/generate-vhdl-documentation-sigasi.html
 http://insights.sigasi.com/tech/generate-vhdl-doxygen-documentation-sigasi.html
 http://insights.sigasi.com/tech/generating-sigasi-project-vivado-project.html
 http://insights.sigasi.com/tech/getting-started-altera-bemicro-sdk-linux.html
