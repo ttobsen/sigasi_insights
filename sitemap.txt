@@ -2,6 +2,7 @@ http://insights.sigasi.com/empty.html
 http://insights.sigasi.com/eula.html
 http://insights.sigasi.com/faq.html
 http://insights.sigasi.com/index.html
+http://insights.sigasi.com/LICENSE.html
 http://insights.sigasi.com/manual/config.html
 http://insights.sigasi.com/manual/editions.html
 http://insights.sigasi.com/manual/editor.html
@@ -157,7 +158,7 @@ http://insights.sigasi.com/screencasts/quick_intro_to_sigasi.html
 http://insights.sigasi.com/screencasts/record_autocomplete.html
 http://insights.sigasi.com/screencasts/rename_refactoring.html
 http://insights.sigasi.com/screencasts/save_time_compilation.html
-http://insights.sigasi.com/screencasts/settings_shortcuts.md
+http://insights.sigasi.com/screencasts/settings_shortcuts.html
 http://insights.sigasi.com/screencasts/short_aligning_vhdl_code.html
 http://insights.sigasi.com/screencasts/short_autocomplete_for_conversion_functions.html
 http://insights.sigasi.com/screencasts/short_entity_component_instantiation.html
@@ -305,6 +306,7 @@ http://insights.sigasi.com/tech/code-comprehension-without-clicking-your-mouse-h
 http://insights.sigasi.com/tech/code-review.html
 http://insights.sigasi.com/tech/coding-conventions.html
 http://insights.sigasi.com/tech/coding-styles.html
+http://insights.sigasi.com/tech/contribute-to-insights.html
 http://insights.sigasi.com/tech/creating-e-books-eclipse.html
 http://insights.sigasi.com/tech/dead-code.html
 http://insights.sigasi.com/tech/deprecated-ieee-libraries.html
