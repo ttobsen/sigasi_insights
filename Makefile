@@ -43,7 +43,9 @@ build_offline: build
 	sed -i -e 's|"\\/css\\/|"css\\/|g'        _build_offline/*.html
 	sed -i -e 's|"\\/css\\/|"..\\/css\\/|g'     _build_offline/*/*.html
 	sed -i -e 's|"\\/css\\/|"..\\/..\\/css\\/|g'  _build_offline/*/*/*.html
-
+	sed -i -e "s|'/css/font|'css/font|g"        _build_offline/*.html
+	sed -i -e "s|'/css/font|'../css/font|g"        _build_offline/*/*.html
+	sed -i -e "s|'/css/font|'../../css/font|g"        _build_offline/*/*/*.html
 	sed -i -e 's|http\:\/\/insights.sigasi.com|.|g'        _build_offline/*.html
 	sed -i -e 's|http\:\/\/insights.sigasi.com|./..|g'     _build_offline/*/*.html
 	sed -i -e 's|http\:\/\/insights.sigasi.com|./../..|g'  _build_offline/*/*/*.html
