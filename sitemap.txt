@@ -74,6 +74,7 @@ http://insights.sigasi.com/opinion/neither-vi-nor-emacs-are-most-popular-vhdl-ed
 http://insights.sigasi.com/opinion/new-eda-20-company-plunify.html
 http://insights.sigasi.com/opinion/opening-our-documentation.html
 http://insights.sigasi.com/opinion/opinion-why-ides-hardware-design-fail-published-ee-times.html
+http://insights.sigasi.com/opinion/poc-a-pile-of-cores.html
 http://insights.sigasi.com/opinion/project-management-and-team-collaboration.html
 http://insights.sigasi.com/opinion/psychology-and-engineering-what-right-feedback.html
 http://insights.sigasi.com/opinion/reasons-love-vhdl-reasons-hate-vhdl.html
@@ -239,6 +240,7 @@ http://insights.sigasi.com/tag/IEEE/index.html
 http://insights.sigasi.com/tag/indent/index.html
 http://insights.sigasi.com/tag/index.html
 http://insights.sigasi.com/tag/innovation/index.html
+http://insights.sigasi.com/tag/IP Core Library/index.html
 http://insights.sigasi.com/tag/JanHDL/index.html
 http://insights.sigasi.com/tag/java/index.html
 http://insights.sigasi.com/tag/keyboard shortcuts/index.html
@@ -256,6 +258,7 @@ http://insights.sigasi.com/tag/others/index.html
 http://insights.sigasi.com/tag/performance/index.html
 http://insights.sigasi.com/tag/philosophical/index.html
 http://insights.sigasi.com/tag/planeteclipse/index.html
+http://insights.sigasi.com/tag/PoC/index.html
 http://insights.sigasi.com/tag/poll/index.html
 http://insights.sigasi.com/tag/pragma/index.html
 http://insights.sigasi.com/tag/presentation/index.html
