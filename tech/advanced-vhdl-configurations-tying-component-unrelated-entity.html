@@ -1971,7 +1971,7 @@
       <div class="col-md-9" role="main">
         <p>Usually, people use VHDL configurations to select a given architecture for their component, or even to set generics that were not set in the instantiation. But you can also do more advanced stuff with configurations: you can tie a component to a completely unrelated entity. You can even re-wire the signals!</p>
 <p>For a short recap. Normally, you'd see a component that looks exactly like an entity:</p>
-<div class="codehilite"><pre><span class="c1">-- entity</span>
+<div class="codehilite"><pre><span></span><span class="c1">-- entity</span>
 <span class="k">entity</span> <span class="nc">dut</span> <span class="k">is</span>
 <span class="k">port</span><span class="p">(</span>
     <span class="n">a</span> <span class="o">:</span> <span class="k">in</span> <span class="kt">string</span><span class="p">;</span>
@@ -1993,7 +1993,7 @@
 
 <p>As I will explain in another blog post, these objects have no relation whatsoever, except that the <mark>default binding</mark> for <code>component dut</code> is the <code>entity dut</code>.
 So if you type an instantiation:</p>
-<div class="codehilite"><pre>    <span class="n">dut_inst</span> <span class="o">:</span> <span class="k">component</span> <span class="nc">dut</span>
+<div class="codehilite"><pre><span></span>    <span class="n">dut_inst</span> <span class="o">:</span> <span class="k">component</span> <span class="nc">dut</span>
         <span class="k">port</span> <span class="k">map</span><span class="p">(</span><span class="n">a</span> <span class="o">=&gt;</span> <span class="n">a</span><span class="p">,</span>
                  <span class="n">b</span> <span class="o">=&gt;</span> <span class="n">b</span><span class="p">,</span>
                  <span class="n">c</span> <span class="o">=&gt;</span> <span class="n">c</span><span class="p">);</span>
@@ -2002,10 +2002,10 @@ So if you type an instantiation:</p>
 
 <p>The VHDL elaborator will instantiate <code>entity dut</code> by default, unless it is told otherwise. Here is where <mark>VHDL configurations</mark> come in.</p>
 <p>You can configure this to instantiate a completely <code>unrelated</code> entity, with an unrelated entity name, and unrelated port names. Even a different number of ports:</p>
-<div class="codehilite"><pre>  <span class="k">configuration</span> <span class="nc">c2</span> <span class="k">of</span> <span class="nc">testbench</span> <span class="k">is</span>
+<div class="codehilite"><pre><span></span>  <span class="k">configuration</span> <span class="nc">c2</span> <span class="k">of</span> <span class="nc">testbench</span> <span class="k">is</span>
     <span class="k">for</span> <span class="n">str</span>
         <span class="k">for</span> <span class="n">dut_inst</span> <span class="o">:</span> <span class="n">dut</span>
-            <span class="k">use</span> <span class="k">entity</span> <span class="n">work</span><span class="p">.</span><span class="n">unrelated</span><span class="p">(</span><span class="n">rtl</span><span class="p">)</span>
+            <span class="k">use</span> <span class="k">entity</span> <span class="nn">work</span><span class="p">.</span><span class="n">unrelated</span><span class="p">(</span><span class="n">rtl</span><span class="p">)</span>
                 <span class="k">port</span> <span class="k">map</span><span class="p">(</span>
                     <span class="n">port1</span> <span class="o">=&gt;</span> <span class="n">a</span><span class="p">,</span>
                     <span class="n">port2</span> <span class="o">=&gt;</span> <span class="n">b</span><span class="p">,</span>
@@ -2019,10 +2019,10 @@ So if you type an instantiation:</p>
 
 
 <p>Or you can instantiate the entity with the same name, but rewire the port names completely:</p>
-<div class="codehilite"><pre> <span class="k">configuration</span> <span class="nc">c3</span> <span class="k">of</span> <span class="nc">testbench</span> <span class="k">is</span>
+<div class="codehilite"><pre><span></span> <span class="k">configuration</span> <span class="nc">c3</span> <span class="k">of</span> <span class="nc">testbench</span> <span class="k">is</span>
     <span class="k">for</span> <span class="n">str</span>
         <span class="k">for</span> <span class="n">dut_inst</span> <span class="o">:</span> <span class="n">dut</span>
-            <span class="k">use</span> <span class="k">entity</span> <span class="n">work</span><span class="p">.</span><span class="n">dut</span><span class="p">(</span><span class="n">rtl</span><span class="p">)</span>
+            <span class="k">use</span> <span class="k">entity</span> <span class="nn">work</span><span class="p">.</span><span class="n">dut</span><span class="p">(</span><span class="n">rtl</span><span class="p">)</span>
                 <span class="k">port</span> <span class="k">map</span><span class="p">(</span>
                     <span class="n">a</span> <span class="o">=&gt;</span> <span class="n">b</span><span class="p">,</span> <span class="c1">-- Note we are binding to other ports here!</span>
                     <span class="n">b</span> <span class="o">=&gt;</span> <span class="n">c</span><span class="p">,</span>
@@ -2036,7 +2036,7 @@ So if you type an instantiation:</p>
 
 <p>So why is this useful? Well, that's a good question. I haven't seen configurations being used like this in "real life" code. But knowing this will help you realize that components and entities are really completely different things. They are only connected during elaboration (that's when you give the <code>vsim</code> command). And they can be connect in very flexible ways. </p>
 <p>I've put the code fragments in a <a href="/opinion/vetsmod-get-better-feedback-your-vhdl-code-snippets.html" title="VETSMOD">VETSMOD</a> project that you can <a href="resources/configurations.tgz">download here</a>. You can play around with it and run it on your favorite simulator. The code reports which architecture you use and which ports are actually connected to what:</p>
-<div class="codehilite"><pre># Loading std.standard
+<div class="codehilite"><pre><span></span># Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading work.c3
@@ -2093,7 +2093,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2016-07-19 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2016-07-20 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

@@ -1970,7 +1970,7 @@
         <p>The example in my previous post (<a href="/opinion/jan/wasting-real-time-zero-time.html" title="Wasting real time in zero time">Wasting real time in zero time</a>) has triggered some interesting responses, providing more than enough material for a follow-up post. VHDL designers beware, hardcore Verilog stuff ahead!</p>
 <h3 id="the-example-revisited">The example revisited</h3>
 <p>The essence of the example can be captured in the following Verilog-like pseudo-code:</p>
-<div class="codehilite"><pre>    <span class="nl">DUT:</span> <span class="k">begin</span>
+<div class="codehilite"><pre><span></span>    <span class="nl">DUT:</span> <span class="k">begin</span>
         <span class="p">...</span>
         <span class="n">ready</span> <span class="o">&lt;=</span> <span class="mh">1</span><span class="p">;</span>
         <span class="n">result</span> <span class="o">&lt;=</span> <span class="mh">5</span><span class="p">;</span>
@@ -1989,7 +1989,7 @@
 <p>A Verilog simulator handles this as follows. The <code>DUT</code> process puts the update events for <code>ready</code> and <code>result</code> on the nonblocking event queue. Later in the simulation cycle, those events are taken from the queue in the order of entry. However, after <code>ready</code> is updated the engine has  two options:  handle the next event and  update  <code>result</code>, or wake up the <code>TEST</code> process  first. Clearly, the assertion’s behavior will depend on the path taken. Therefore, the code is nondeterministic.</p>
 <h3 id="how-not-to-fix-it">How (not) to fix it</h3>
 <p>One way to fix the nondeterminism is by reversing the assignment order in the <code>DUT</code>:</p>
-<div class="codehilite"><pre>    <span class="nl">DUT:</span> <span class="k">begin</span>
+<div class="codehilite"><pre><span></span>    <span class="nl">DUT:</span> <span class="k">begin</span>
         <span class="p">...</span>
         <span class="n">result</span> <span class="o">&lt;=</span> <span class="mh">5</span><span class="p">;</span>
         <span class="n">ready</span> <span class="o">&lt;=</span> <span class="mh">1</span><span class="p">;</span>
@@ -2001,7 +2001,7 @@
 <p>Now, when <code>ready</code> is updated, we are sure that <code>result</code> already has been updated before. The assertion is now guaranteed to pass.</p>
 <p>However, this fix is unsatisfactory. First, having to control the order of "concurrent" assignments is awkward. More importantly, this fix is not applicable in practice. The <code>DUT</code> designer will often, and even preferably, be a different person than the <code>TEST</code> designer. She may use any particular statement order based coding style concerns. The <code>TEST</code> designer should treat the <code>DUT</code> as a black box and not rely on some particular order.</p>
 <p>Therefore, the <code>TEST</code> designer has to deal with the issue. He can do so by suspending the process  to make sure all nonblocking update events have been processed before the assertion executes. For an RTL-style <code>DUT</code> triggered by a clock, one possibility is to wait on a clock edge in the <code>TEST</code> process. Alternatively, if you want to have a  “behavioral” test bench without clocks (as in my case originally) you can use a delay:</p>
-<div class="codehilite"><pre>    <span class="nl">TEST:</span> <span class="k">begin</span>
+<div class="codehilite"><pre><span></span>    <span class="nl">TEST:</span> <span class="k">begin</span>
         <span class="p">...</span>
         <span class="p">@(</span><span class="k">posedge</span> <span class="n">ready</span><span class="p">);</span>
         <span class="p">#</span><span class="mh">1</span><span class="p">;</span>
@@ -2026,7 +2026,7 @@
 <p>First, the nonblocking assignments were there for a good reason that can be inferred from the context. The original <code>DUT</code> was a synthesizable FSM. For  RTL-style FSM modeling in a clocked process, nonblocking assignments to the output ports are mandatory. Note that writing testbenches for that kind of Verilog modules is a very common situation.</p>
 <p>Typically, nonblocking assignments are used in conjunction with a clock. (Actually, the fact that they <mark>only</mark> work reliably with a clock is exactly what I am complaining about.) By simplifying the <code>DUT</code> code so much that it doesn’t use a clock, I may have caused some confusion. However, let me be clear: the Verilog simulation algorithm does not know about clocks. It puts nonblocking update events in a separate queue, that is all.</p>
 <p>Even if blocking assignments were an option, they would not fix the issue. The <code>DUT</code> code would become:</p>
-<div class="codehilite"><pre>    <span class="nl">DUT:</span> <span class="k">begin</span>
+<div class="codehilite"><pre><span></span>    <span class="nl">DUT:</span> <span class="k">begin</span>
         <span class="p">...</span>
         <span class="n">ready</span> <span class="o">=</span> <span class="mh">1</span><span class="p">;</span>
         <span class="n">result</span> <span class="o">=</span> <span class="mh">5</span><span class="p">;</span>
@@ -2042,7 +2042,7 @@
 </ul>
 <p>See <mark>"Thomas &amp; Moorby’s, The Verilog Hardware Description Language, 5th edition, p. 225"</mark></p>
 <p>One simulation scenario that complies with these rules is:</p>
-<div class="codehilite"><pre>    <span class="no">DUT</span><span class="o">+</span><span class="nl">TEST_1:</span>
+<div class="codehilite"><pre><span></span>    <span class="no">DUT</span><span class="o">+</span><span class="nl">TEST_1:</span>
     <span class="p">...</span>
     <span class="n">ready</span> <span class="o">=</span> <span class="mh">1</span><span class="p">;</span>
     <span class="n">result</span> <span class="o">=</span> <span class="mh">5</span><span class="p">;</span>
@@ -2053,7 +2053,7 @@
 
 
 <p>Another one is:</p>
-<div class="codehilite"><pre>    <span class="no">DUT</span><span class="o">+</span><span class="nl">TEST_2:</span>
+<div class="codehilite"><pre><span></span>    <span class="no">DUT</span><span class="o">+</span><span class="nl">TEST_2:</span>
     <span class="p">...</span>
     <span class="n">ready</span> <span class="o">=</span> <span class="mh">1</span><span class="p">;</span>
     <span class="p">@(</span><span class="k">posedge</span> <span class="n">ready</span><span class="p">);</span>
@@ -2133,7 +2133,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2016-07-19 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2016-07-20 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

@@ -1973,7 +1973,7 @@
 <p>This extension point allows to contribute a splash handler in which you can add custom behavior to the splash screen.
 In this extension you have to specify a <code>splashHandler</code> and a <code>splashHandlerProductBinding</code>. In <code>splashHandler</code> you specify the class that implements the custom behaviour. In <code>splashHandlerProductBinding</code> you bind your <code>splashHandler</code> to your RCP application (you could also customize the behaviour of Eclipse's splash screen).</p>
 <p>For our product this is:</p>
-<div class="codehilite"><pre>   <span class="nt">&lt;extension</span> <span class="na">point=</span><span class="s">&quot;org.eclipse.ui.splashHandlers&quot;</span><span class="nt">&gt;</span>
+<div class="codehilite"><pre><span></span>   <span class="nt">&lt;extension</span> <span class="na">point=</span><span class="s">&quot;org.eclipse.ui.splashHandlers&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;splashHandler</span>
             <span class="na">class=</span><span class="s">&quot;com.sigasi.hdt.ui.SplashHandler&quot;</span>
             <span class="na">id=</span><span class="s">&quot;com.sigasi.hdt.ui.splashHandler&quot;</span><span class="nt">&gt;</span>
@@ -1988,7 +1988,7 @@ In this extension you have to specify a <code>splashHandler</code> and a <code>s
 
 <p>The only thing left to do, is to implement the <code>splashHandler</code> (The quick fix in the Plugin Manifest Editor is a real time saver).</p>
 <p>I extended the <code>EclipseSplashHandler</code> (org.eclipse.ui.internal.splash) and just overrided <code>init</code> to superpose a png image in top right corner. </p>
-<div class="codehilite"><pre><span class="kn">package</span> <span class="nn">com.sigasi.hdt.ui</span><span class="o">;</span>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nn">com.sigasi.hdt.ui</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">com.sigasi.hdt.HdtPlugin</span><span class="o">;</span>
 
@@ -2080,7 +2080,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2016-07-19 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2016-07-20 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

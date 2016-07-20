@@ -1974,12 +1974,12 @@
 <p>The two ways in which you can give compiler directives in VHDL are through attributes or in comments. A compiler directive in a VHDL comment is sometimes called a <em>metacomment</em>.</p>
 <p>Attributes are an elegant way of conveying extra information to a synthesis tool. While each tool has its own semantics for attribute compiler directives, the syntax is defined as part of the VHDL language. VHDL analysis tools can easily process the attributes, without knowledge of the specific meaning of the such attributes.</p>
 <p>The following example tells the Synopsys Design Compiler that the component labeled as INSTANCE should not be optimized.</p>
-<div class="codehilite"><pre><span class="k">attribute</span> <span class="n">DONT_TOUCH</span> <span class="k">of</span> <span class="n">INSTANCE</span> <span class="o">:</span> <span class="k">label</span> <span class="k">is</span> <span class="n">TRUE</span><span class="p">;</span>
+<div class="codehilite"><pre><span></span><span class="k">attribute</span> <span class="n">DONT_TOUCH</span> <span class="k">of</span> <span class="n">INSTANCE</span> <span class="o">:</span> <span class="k">label</span> <span class="k">is</span> <span class="n">TRUE</span><span class="p">;</span>
 </pre></div>
 
 
 <p>Metacomments, on the other hand are not elegant at all. Metacomments consist of text in VHDL comments, which makes them live effectively outside the VHDL language. The rest of this blog post deals with metacomments.</p>
-<div class="codehilite"><pre><span class="c1">-- synthesis off</span>
+<div class="codehilite"><pre><span></span><span class="c1">-- synthesis off</span>
 </pre></div>
 
 
@@ -1987,7 +1987,7 @@
 <p>As some of you know, I love to complain, but I also try to be helpful. So I'm did some research about metacomments in VHDL and I'm sharing it with the world, so that other people would not have to waste their time on this again.</p>
 <h3 id="ieee">IEEE</h3>
 <p>When I said that metacomments are not standardized, I lied. The <a href="http://ieeexplore.ieee.org/servlet/opac?punumber=9308">VHDL RTL standard</a> defines two (and only two) metacomments:</p>
-<div class="codehilite"><pre><span class="c1">-- RTL_SYNTHESIS OFF</span>
+<div class="codehilite"><pre><span></span><span class="c1">-- RTL_SYNTHESIS OFF</span>
 <span class="c1">-- RTL_SYNTHESIS ON</span>
 </pre></div>
 
@@ -2055,7 +2055,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2016-07-19 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2016-07-20 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

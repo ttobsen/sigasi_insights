@@ -1970,7 +1970,7 @@
 <ol>
 <li>
 <p>Create a <code>plugin_customization.ini</code> file with the customized settings. E.g. following lines will hide linenumbers, use spaces for tabs and use uppercase VHDL keywords:</p>
-<div class="codehilite"><pre>com.sigasi.hdt.vhdl.Vhdl/formatting.upperCaseKeywords=true
+<div class="codehilite"><pre><span></span>com.sigasi.hdt.vhdl.Vhdl/formatting.upperCaseKeywords=true
 org.eclipse.ui.editors/lineNumberRuler=false
 org.eclipse.ui.editors/spacesForTabs=true
 </pre></div>
@@ -1979,7 +1979,7 @@ org.eclipse.ui.editors/spacesForTabs=true
 </li>
 <li>
 <p>Add these two lines to the <code>sigasi.ini</code> file (before the <code>-vmargs</code>):</p>
-<div class="codehilite"><pre>    -pluginCustomization
+<div class="codehilite"><pre><span></span>    -pluginCustomization
     plugin_customization.ini
 </pre></div>
 
@@ -1991,7 +1991,7 @@ org.eclipse.ui.editors/spacesForTabs=true
 <p>The mechanic plugin will compare your workspace configuration with the team configuration at regular intervals. If the team configuration has changed, the Workspace Mechanic plugin offers to update the local settings. The developer can choose which updates to apply, or skip, or entirely ignore.</p>
 <p><img alt="Workspace Mechanic popup" src="./images/popup-workspace-mechanic.jpg" /></p>
 <p>As a small example following mechanic task will configure Sigasi to use VHDL 2008: </p>
-<div class="codehilite"><pre># @title Set VHDL version to VHDL 2008
+<div class="codehilite"><pre><span></span># @title Set VHDL version to VHDL 2008
 # @description Configure Sigasi to use VHDL 2008.
 # @task_type RECONCILE
 /instance/com.sigasi.hdt.vhdl.Vhdl/vhdlVersion=V08
@@ -2057,7 +2057,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2016-07-19 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2016-07-20 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

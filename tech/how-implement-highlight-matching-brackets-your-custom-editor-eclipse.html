@@ -1969,7 +1969,7 @@
       <div class="col-md-9" role="main">
         <p>For our <a href="http://www.sigasi.com/product">VHDL editor view</a> I wanted to implement <em>highlight matching bracket</em> like it exists in <a href="http://www.eclipse.org/jdt/">JDT</a>. I had to dig a lot longer in the JDT code than anticipated to find out how JDT implements this functionality. As so often is the case in Eclipse development, in the end this turned out to be really easy. It was again a matter of finding with few lines to add...</p>
 <p>The key is to override the <code>configureSourceViewerDecorationSupport</code> method from <code>AbstractDecoratedTextEditor</code> in your editor class and call the <code>setMatchingCharacterPainterPreferenceKeys</code> method. Note that the method name contains <em>character</em> and not <em>bracket</em>, which explains why I had to look so hard to find it.</p>
-<div class="codehilite"><pre><span class="kd">public</span> <span class="kd">final</span> <span class="kd">static</span> <span class="n">String</span> <span class="n">EDITOR_MATCHING_BRACKETS</span> <span class="o">=</span> <span class="s">&quot;matchingBrackets&quot;</span><span class="o">;</span>
+<div class="codehilite"><pre><span></span><span class="kd">public</span> <span class="kd">final</span> <span class="kd">static</span> <span class="n">String</span> <span class="n">EDITOR_MATCHING_BRACKETS</span> <span class="o">=</span> <span class="s">&quot;matchingBrackets&quot;</span><span class="o">;</span>
 <span class="kd">public</span> <span class="kd">final</span> <span class="kd">static</span> <span class="n">String</span> <span class="n">EDITOR_MATCHING_BRACKETS_COLOR</span><span class="o">=</span> <span class="s">&quot;matchingBracketsColor&quot;</span><span class="o">;</span>
 
 <span class="nd">@Override</span>
@@ -2033,7 +2033,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2016-07-19 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2016-07-20 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

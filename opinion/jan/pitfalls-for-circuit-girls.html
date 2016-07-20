@@ -1972,7 +1972,7 @@
 <h3 id="checking-out-the-blue-book">Checking out the blue book</h3>
 <p>The blue book is rather intimidating, if only for its size. One definite plus is that it discusses both VHDL and Verilog.  Moreover, the foreword promises that it will be “a beacon in your quest for perfect HDL design”.  While glancing over it, I got the impression that it contains a lot of useful information. However, my first action was to look for errors and bad advice. That is what I always do when I  get my hands on a book about HDL design. I suppose the reason is a mixture of bad character and experience. Anyway, I did not have to look very hard.</p>
 <p>On page 174, the author demonstrates  how to describe flip-flops.  According to the book, a simple D flip-flop without reset would be described in Verilog like so:</p>
-<div class="codehilite"><pre><span class="k">module</span> <span class="n">ff</span><span class="p">(</span><span class="n">clock</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+<div class="codehilite"><pre><span></span><span class="k">module</span> <span class="n">ff</span><span class="p">(</span><span class="n">clock</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
     <span class="k">input</span> <span class="n">clock</span><span class="p">;</span>
     <span class="k">input</span> <span class="n">a</span><span class="p">;</span>
     <span class="k">output</span> <span class="n">y</span><span class="p">;</span>
@@ -1988,7 +1988,7 @@
 <p>In a stand-alone simulation, your simulator may tell you that this is indeed a  flip-flop, as may your synthesis tool. However, let me be clear: it is not. At least not always. Only when you are lucky.</p>
 <h3 id="the-problem">The problem</h3>
 <p>A flip-flop is a building block for more complex circuitry. For example, consider a simple two-stage delay line:</p>
-<div class="codehilite"><pre><span class="k">module</span> <span class="n">delay_line</span><span class="p">(</span><span class="n">clock</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+<div class="codehilite"><pre><span></span><span class="k">module</span> <span class="n">delay_line</span><span class="p">(</span><span class="n">clock</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
     <span class="k">input</span> <span class="n">clock</span><span class="p">;</span>
     <span class="k">input</span> <span class="n">a</span><span class="p">;</span>
     <span class="k">output</span> <span class="n">y</span><span class="p">;</span>
@@ -2003,7 +2003,7 @@
 
 <p>With the models as presented, this model may behave as the intended two-stage delay line, or as an unintended single stage. There is nothing in Verilog to prefer one behavior over the other. It depends on your simulator brand. Or version. Or on source code order. Or on some random, unpredictable event.  Both outcomes are equally valid. This is <a href="/opinion/jan/verilogs-major-flaw.html">nondeterminism</a> in practice.</p>
 <p>To see the problem more clearly, consider the following code, which is equivalent from the point of view of the Verilog scheduling algorithm:</p>
-<div class="codehilite"><pre><span class="k">module</span> <span class="n">delay_line</span><span class="p">(</span><span class="n">clock</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+<div class="codehilite"><pre><span></span><span class="k">module</span> <span class="n">delay_line</span><span class="p">(</span><span class="n">clock</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
     <span class="k">input</span> <span class="n">clock</span><span class="p">;</span>
     <span class="k">input</span> <span class="n">a</span><span class="p">;</span>
     <span class="k">output</span> <span class="n">y</span><span class="p">;</span>
@@ -2091,7 +2091,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2016-07-19 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2016-07-20 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

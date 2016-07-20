@@ -1972,7 +1972,7 @@
 <p>When used in arrays, <code>downto</code> corresponds to <a href="http://en.wikipedia.org/wiki/Endianness">little endian</a>. This means that the least significant bit is stored at the lowest position. So in <code>L downto R</code>, <code>L</code> corresponds to the Most Significant Bit (MSB) and <code>R</code> to the Least Significant Bit (LSB).
 <code>to</code> corresponds to <a href="http://en.wikipedia.org/wiki/Endianness">big endian</a>. So in <code>L to R</code>, <code>L</code> is the LSB and <code>R</code> the MSB.</p>
 <p>In the VHDL snippet below, <code>little_endian</code> is initially <code>"0000_0001"</code> and <code>big_endian</code> is initially <code>"1000_0000"</code>:</p>
-<div class="codehilite"><pre><span class="k">signal</span> <span class="n">big_endian</span> <span class="o">:</span> <span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">0</span> <span class="k">to</span> <span class="mi">7</span><span class="p">)</span> <span class="o">:=</span> <span class="p">(</span> <span class="mi">0</span> <span class="o">=&gt;</span> <span class="sc">&#39;1&#39;</span><span class="p">,</span> <span class="k">others</span> <span class="o">=&gt;</span> <span class="sc">&#39;0&#39;</span><span class="p">);</span>
+<div class="codehilite"><pre><span></span><span class="k">signal</span> <span class="n">big_endian</span> <span class="o">:</span> <span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">0</span> <span class="k">to</span> <span class="mi">7</span><span class="p">)</span> <span class="o">:=</span> <span class="p">(</span> <span class="mi">0</span> <span class="o">=&gt;</span> <span class="sc">&#39;1&#39;</span><span class="p">,</span> <span class="k">others</span> <span class="o">=&gt;</span> <span class="sc">&#39;0&#39;</span><span class="p">);</span>
 <span class="k">signal</span> <span class="n">little_endian</span> <span class="o">:</span> <span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">7</span> <span class="k">downto</span> <span class="mi">0</span><span class="p">)</span> <span class="o">:=</span> <span class="p">(</span> <span class="mi">0</span> <span class="o">=&gt;</span> <span class="sc">&#39;1&#39;</span><span class="p">,</span> <span class="k">others</span> <span class="o">=&gt;</span> <span class="sc">&#39;0&#39;</span><span class="p">);</span>
 </pre></div>
 
@@ -1981,7 +1981,7 @@
 <h4 id="assigning-arrays">Assigning arrays</h4>
 <p>There are multiple ways to assign values to arrays, with varying degrees of elegance.</p>
 <p>If have summarized a few ways below for following declaration: <code>signal my_array : std_logic_vector(7 downto 0);</code></p>
-<div class="codehilite"><pre><span class="c1">-- assign to element</span>
+<div class="codehilite"><pre><span></span><span class="c1">-- assign to element</span>
 <span class="n">my_array</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>          <span class="o">&lt;=</span> <span class="sc">&#39;0&#39;</span><span class="p">;</span>
 <span class="c1">-- assign slice</span>
 <span class="n">my_array</span><span class="p">(</span><span class="mi">3</span> <span class="k">downto</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="s">&quot;0001&quot;</span><span class="p">;</span>
@@ -2001,12 +2001,12 @@
 <p>A range is called a <em>null range</em>, when it specifies a empty subset. For descending ranges (<code>L downto R</code>), this is when <code>L &lt; R</code>. For ascending ranges (<code>L to R</code>) this is when <code>L &gt; R</code>. This sometimes happens for certain function parameters or generics. Your simulator should handle this without problems. </p>
 <h4 id="single-element-ranges">Single element ranges</h4>
 <p>A typical special case is a range with just one element:</p>
-<div class="codehilite"><pre><span class="k">signal</span> <span class="n">single_element_array</span> <span class="o">:</span> <span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">0</span> <span class="k">downto</span> <span class="mi">0</span><span class="p">);</span>
+<div class="codehilite"><pre><span></span><span class="k">signal</span> <span class="n">single_element_array</span> <span class="o">:</span> <span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">0</span> <span class="k">downto</span> <span class="mi">0</span><span class="p">);</span>
 </pre></div>
 
 
 <p>Be careful with assignments:</p>
-<div class="codehilite"><pre><span class="n">single_element_array</span> <span class="o">&lt;=</span> <span class="sc">&#39;0&#39;</span><span class="p">;</span> <span class="c1">--illegal, single_element_array is still an array</span>
+<div class="codehilite"><pre><span></span><span class="n">single_element_array</span> <span class="o">&lt;=</span> <span class="sc">&#39;0&#39;</span><span class="p">;</span> <span class="c1">--illegal, single_element_array is still an array</span>
 <span class="n">single_element_array</span> <span class="o">&lt;=</span> <span class="p">(</span><span class="sc">&#39;0&#39;</span><span class="p">);</span> <span class="c1">--also illegal, the optional parentheses do not turn this into an array</span>
 <span class="n">single_element_array</span> <span class="o">&lt;=</span> <span class="p">(</span><span class="mi">0</span> <span class="o">=&gt;</span> <span class="sc">&#39;0&#39;</span><span class="p">);</span> <span class="c1">-- OK</span>
 <span class="n">single_element_array</span> <span class="o">&lt;=</span> <span class="p">(</span><span class="k">others</span> <span class="o">=&gt;</span> <span class="sc">&#39;0&#39;</span><span class="p">);</span> <span class="c1">-- OK</span>
@@ -2017,19 +2017,19 @@
 <h4 id="unconstrained-ranges">Unconstrained ranges</h4>
 <p>VHDL also allows you to define <em>unconstrained arrays</em>, which are array declarations where the <em>type</em> of the index values is specified, but not the <em>bounds</em>.
 A typical examples is  <code>std_ulogic_vector</code>:</p>
-<div class="codehilite"><pre><span class="k">type</span> <span class="kt">std_ulogic_vector</span> <span class="k">is</span> <span class="k">array</span> <span class="p">(</span> <span class="kt">natural</span> <span class="k">range</span> <span class="o">&lt;&gt;</span> <span class="p">)</span> <span class="k">of</span> <span class="kt">std_ulogic</span><span class="p">;</span>
+<div class="codehilite"><pre><span></span><span class="k">type</span> <span class="kt">std_ulogic_vector</span> <span class="k">is</span> <span class="k">array</span> <span class="p">(</span> <span class="kt">natural</span> <span class="k">range</span> <span class="o">&lt;&gt;</span> <span class="p">)</span> <span class="k">of</span> <span class="kt">std_ulogic</span><span class="p">;</span>
 </pre></div>
 
 
 <p>This defines <code>std_ulogic_vector</code> as an array type with indexes of type natural. The bounds can be specified via <mark>object</mark> creation or via a <mark>subtype</mark>.</p>
-<div class="codehilite"><pre><span class="k">subtype</span> <span class="n">myarray</span> <span class="k">is</span> <span class="kt">std_ulogic_vector</span><span class="p">(</span><span class="mi">7</span> <span class="k">downto</span> <span class="mi">0</span><span class="p">);</span>
+<div class="codehilite"><pre><span></span><span class="k">subtype</span> <span class="n">myarray</span> <span class="k">is</span> <span class="kt">std_ulogic_vector</span><span class="p">(</span><span class="mi">7</span> <span class="k">downto</span> <span class="mi">0</span><span class="p">);</span>
 <span class="k">constant</span> <span class="n">myconst</span> <span class="o">:</span> <span class="kt">std_ulogic_vector</span><span class="p">(</span><span class="mi">7</span> <span class="k">downto</span> <span class="mi">0</span><span class="p">)</span> <span class="o">:=</span> <span class="p">(</span><span class="k">others</span> <span class="o">=&gt;</span> <span class="sc">&#39;0&#39;</span><span class="p">);</span>
 </pre></div>
 
 
 <h4 id="non-integer-ranges">Non integer ranges</h4>
 <p>The index type of ranges does not need to be numeric, but it has to be discrete. For example: you can specify ranges for enumeration values, and use them to specify arrays.</p>
-<div class="codehilite"><pre><span class="k">type</span> <span class="n">myEnum</span> <span class="k">is</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">e</span><span class="p">);</span>
+<div class="codehilite"><pre><span></span><span class="k">type</span> <span class="n">myEnum</span> <span class="k">is</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">e</span><span class="p">);</span>
 <span class="k">type</span> <span class="n">myArray</span> <span class="k">is</span> <span class="k">array</span><span class="p">(</span><span class="n">a</span> <span class="k">to</span> <span class="n">d</span><span class="p">)</span> <span class="k">of</span> <span class="kt">integer</span><span class="p">;</span>
 <span class="k">constant</span> <span class="n">myArrayConstant</span> <span class="o">:</span> <span class="n">myArray</span> <span class="o">:=</span> <span class="p">(</span><span class="n">a</span> <span class="o">=&gt;</span> <span class="mi">42</span><span class="p">,</span> <span class="k">others</span> <span class="o">=&gt;</span> <span class="mi">0</span><span class="p">);</span>
 </pre></div>
@@ -2098,7 +2098,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2016-07-19 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2016-07-20 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

@@ -1977,19 +1977,19 @@
 <p>Another common approach is to use this style in combination with the first or the second style: put most of the component declarations in a component package (or in the architecture) and a few in a global package.</p>
 <h3 id="four-vhdl-entity-instantiations">Four: VHDL Entity Instantiations</h3>
 <p>Since VHDL'93, you really don't need VHDL components any more. You can instantiate the entity directly:</p>
-<div class="codehilite"><pre><span class="n">labelname</span><span class="o">:</span> <span class="k">entity</span> <span class="nc">work</span><span class="p">.</span><span class="n">entityName</span><span class="p">(</span><span class="n">architectureName</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><span class="n">labelname</span><span class="o">:</span> <span class="k">entity</span> <span class="nc">work</span><span class="p">.</span><span class="n">entityName</span><span class="p">(</span><span class="n">architectureName</span><span class="p">)</span>
 </pre></div>
 
 
 <p>instead of the old</p>
-<div class="codehilite"><pre><span class="n">labelname</span><span class="o">:</span> <span class="n">componentName</span>
+<div class="codehilite"><pre><span></span><span class="n">labelname</span><span class="o">:</span> <span class="n">componentName</span>
 </pre></div>
 
 
 <p>This saves you a lot of typing. One downside: entity instantiations will not let you work with VHDL configurations. You either specify the architecture explicitly, or if you don't the compile order determines which architecture is selected.</p>
 <h3 id="four-and-a-half">Four-and-a-half</h3>
 <p>To distinguish between component instantiations and entity instantiations, you can also use the word <code>component</code> explicitly in options 1 through 3, like this:</p>
-<div class="codehilite"><pre><span class="n">labelname</span><span class="o">:</span> <span class="k">component</span> <span class="nc">componentName</span>
+<div class="codehilite"><pre><span></span><span class="n">labelname</span><span class="o">:</span> <span class="k">component</span> <span class="nc">componentName</span>
 </pre></div>
 
 
@@ -2056,7 +2056,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2016-07-19 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2016-07-20 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

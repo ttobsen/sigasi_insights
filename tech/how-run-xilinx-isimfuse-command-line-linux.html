@@ -1996,7 +1996,7 @@ dir (<code lang="bash">/opt/Xilinx/11.1/ISE/bin/lin</code> in my case).</p>
 entry for each file, plus its library.
 For the <a href="http://www.opencores.org">Dirac OpenCores project</a>
 that ships with Sigasi HDT, this is (<code>Dirac.prj</code>):</p>
-<div class="codehilite"><pre>vhdl work src/testbench/DECODERTESTBENCH.VHD
+<div class="codehilite"><pre><span></span>vhdl work src/testbench/DECODERTESTBENCH.VHD
 vhdl work src/testbench/ArithmeticCoderTestbench.vhd
 vhdl work src/encoder/FOLLOW_COUNTER.vhd
 vhdl work src/encoder/OUTPUT_UNIT.vhd
@@ -2032,27 +2032,27 @@ view. <code lang="bash">-incremental</code> tells Fuse to only compile
 those files that have changed since the last compile; but I do not have
 the impression this really works.</p>
 <p>My complete command is:</p>
-<div class="codehilite"><pre>/opt/Xilinx/11.1/ISE/bin/lin/fuse -intstyle ise -incremental -o Dirac -prj Dirac.prj DECODERTESTBENCH
+<div class="codehilite"><pre><span></span>/opt/Xilinx/11.1/ISE/bin/lin/fuse -intstyle ise -incremental -o Dirac -prj Dirac.prj DECODERTESTBENCH
 </pre></div>
 
 
 <h3 id="run-the-simulation">Run the simulation</h3>
 <p>Initially when I tried to run the generated executable
 (<code lang="bash">Dirac</code>), I always got:</p>
-<div class="codehilite"><pre>Segmentation fault
+<div class="codehilite"><pre><span></span>Segmentation fault
 </pre></div>
 
 
 <p>The solution was to set some environment variables:</p>
-<div class="codehilite"><pre><span class="nb">export</span> <span class="nv">XILINX</span><span class="o">=</span>/opt/Xilinx/11.1/ISE
+<div class="codehilite"><pre><span></span><span class="nb">export</span> <span class="nv">XILINX</span><span class="o">=</span>/opt/Xilinx/11.1/ISE
 <span class="nb">export</span> <span class="nv">PLATFORM</span><span class="o">=</span>lin
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>$PATH:<span class="si">${</span><span class="nv">XILINX</span><span class="si">}</span>/bin/<span class="si">${</span><span class="nv">PLATFORM</span><span class="si">}</span>
+<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="si">${</span><span class="nv">XILINX</span><span class="si">}</span>/bin/<span class="si">${</span><span class="nv">PLATFORM</span><span class="si">}</span>
 <span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">XILINX</span><span class="si">}</span>/lib/<span class="si">${</span><span class="nv">PLATFORM</span><span class="si">}</span>
 </pre></div>
 
 
 <p>Now you can run Dirac:</p>
-<div class="codehilite"><pre>[heeckhau@elvis Dirac]$ ./Dirac
+<div class="codehilite"><pre><span></span>[heeckhau@elvis Dirac]$ ./Dirac
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a
 full ISim license.
@@ -2083,7 +2083,7 @@ and it has been converted to 0.
 
 
 <p>You can also start the gui from the command line:</p>
-<div class="codehilite"><pre>./Dirac -gui
+<div class="codehilite"><pre><span></span>./Dirac -gui
 </pre></div>
 
 
@@ -2091,12 +2091,12 @@ and it has been converted to 0.
 station. I did not find out why yet, but it is probably due to Xilinx
 using an older version of GLIBC.</p>
 <p>You can also start ISim with a tcl-script, such as:</p>
-<div class="codehilite"><pre>./Dirac -tclbatch isim.cmd
+<div class="codehilite"><pre><span></span>./Dirac -tclbatch isim.cmd
 </pre></div>
 
 
 <p>where <code>iscim.cmd</code> is for example:</p>
-<div class="codehilite"><pre>wave add DECODERTESTBENCH
+<div class="codehilite"><pre><span></span>wave add DECODERTESTBENCH
 run <span class="m">10</span> ns
 </pre></div>
 
@@ -2173,7 +2173,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2016-07-19 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2016-07-20 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

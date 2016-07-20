@@ -1971,14 +1971,14 @@
 <p>I just <em>lost two hours struggling with VHDL simulators</em>, while in fact I wrote a silly error in my VHDL code. If I write a simple VHDL error, I expect a simple error message. Now, the error I made was a function call with infinite recursion. Granted, most VHDL designers avoid recursion all together, but that is beside the point. Recursion makes it easy to express an algorithm, and is is fully supported in the VHDL standard. There should be no reason to avoid it (at least not in behavioral code).</p>
 <h3 id="proper-behavior">Proper behavior</h3>
 <p>Other languages provide decent error messages when you write infinite recursion:</p>
-<div class="codehilite"><pre><span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
    <span class="k">return</span> <span class="n">foo</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">foo</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 
 
 <p>Running this code in Python will get you a long stack trace that ends with:</p>
-<div class="codehilite"><pre>File &quot;test.py&quot;, line 2, in foo
+<div class="codehilite"><pre><span></span>File &quot;test.py&quot;, line 2, in foo
 RuntimeError: maximum recursion depth exceeded
 </pre></div>
 
@@ -1989,7 +1989,7 @@ RuntimeError: maximum recursion depth exceeded
 <p>I did a similar thing in VHDL. I wrote a textbook algorithm, the <a href="http://en.wikipedia.org/wiki/Factorial">factorial</a> function, using recursion. I wrote a small error which caused the function to recurse infinitely. Silly me.</p>
 <p>The tools, however, were not helpful. Mentor Graphics Modelsim just froze. That gives me very little information. I didn't know whether there was a bug in Modelsim, if my system was set up incorrectly or if there was an error in my design. That's a lot of place to look for an error.</p>
 <p>I couldn't help but try the same on Xilinx ISim. ISim did not freeze, but its error message was less than helpful:</p>
-<div class="codehilite"><pre>ISim log file
+<div class="codehilite"><pre><span></span>ISim log file
 Running: /home/philippe.faes/workspace-sigasi/factorial/factorial -gui -tclbatch isim.cmd 
 INFO: There is another simulation running in the same directory. Using database file name isim1.wdb.
 ISim M.70d (signature 0x61e1bd6e)
@@ -2070,7 +2070,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2016-07-19 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2016-07-20 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

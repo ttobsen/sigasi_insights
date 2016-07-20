@@ -1973,12 +1973,12 @@
 <p>The basic design unit in Java is the Java Class. Each Java class has its own file, with the file name identical to the class name, and the extentions <code>.java</code>. Java classes are further organized in Java packages, which are visible in the source code. Java packages correspond directly to the directory structure of a Java project. The convention for package naming is that package names correspond to the domain name of the organization that provides the package.</p>
 <p>An trivial example will make things clear. I've created a trivial hello-world example in the folder <code>c:\projectdir\</code>. The example consists of a single class HelloWorld (naming convention in Java is that class names start with a capital, and use <a href=http://en.wikipedia.org/wiki/CamelCase>CamelCase</a>) in the package <code>com.sigasi.example</code>.</p>
 <p>The only file we need for this project is:</p>
-<div class="codehilite"><pre>c:\projectdir\com\sigasi\example\HelloWorld.java&lt;/pre&gt;
+<div class="codehilite"><pre><span></span>c:\projectdir\com\sigasi\example\HelloWorld.java&lt;/pre&gt;
 </pre></div>
 
 
 <p>When several subprojects are aggregated, each project has to conform to the directory structure:</p>
-<div class="codehilite"><pre>c:\projectdir1\com\sigasi\reusable\HelloUtils.java
+<div class="codehilite"><pre><span></span>c:\projectdir1\com\sigasi\reusable\HelloUtils.java
 c:\projectdir2\com\sigasi\example\HelloWorld.java
 </pre></div>
 
@@ -1987,7 +1987,7 @@ c:\projectdir2\com\sigasi\example\HelloWorld.java
 <p>Note that package names start with internet domain names, in inverse order (here: <code>sigasi.com</code>). This avoids name clashes, since each organization can create its own package structure within its own domain.</p>
 <h4 id="improvement-source-and-binary-dirs">Improvement: source and binary dirs</h4>
 <p>When compiling the previous examples with a standard Java tool, the binaries (class files, in Java-speak) will be in the same directory as the source files: <code>c:\projectdir1\com\sigasi\reusable\HelloUtils.java</code></p>
-<div class="codehilite"><pre>c:\projectdir1\com\sigasi\reusable\HelloUtils.java
+<div class="codehilite"><pre><span></span>c:\projectdir1\com\sigasi\reusable\HelloUtils.java
 c:\projectdir1\com\sigasi\reusable\HelloUtils.class
 c:\projectdir2\com\sigasi\example\HelloWorld.java
 c:\projectdir2\com\sigasi\example\HelloWorld.class
@@ -1996,7 +1996,7 @@ c:\projectdir2\com\sigasi\example\HelloWorld.class
 
 <p>This is not desirable. First, when you share the source files (e.g. in a version control system, or a tarball) you do not want the binaries. Conversely when shipping the binaries to a customer, you probably do not want them to see your source code.</p>
 <p>Most Java projects nowadays split the source and binary files in a separate directory, typically <code>src</code> and <code>bin</code>:</p>
-<div class="codehilite"><pre>c:\projectdir1\src\com\sigasi\reusable\HelloUtils.java
+<div class="codehilite"><pre><span></span>c:\projectdir1\src\com\sigasi\reusable\HelloUtils.java
 c:\projectdir1\bin\com\sigasi\reusable\HelloUtils.class
 c:\projectdir2\src\com\sigasi\example\HelloWorld.java
 c:\projectdir2\bin\com\sigasi\example\HelloWorld.class
@@ -2070,7 +2070,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2016-07-19 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2016-07-20 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

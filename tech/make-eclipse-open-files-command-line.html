@@ -1973,7 +1973,7 @@
 <p>My goal is to be able to write <code>./myapplication the_path_to/afile.txt</code> on the command line to open a file in my Eclipse application. We can achieve this quickly if the entrypoint of your application extends the <code>IDEApplication</code> class. Unfortunately <code>IDEApplication</code> is not a part of the public Eclipse API, it’s a class in an internal package. I use it to get things working without having to write pages of code, you can replace it later with your own implementation.</p>
 <p>There are two things left to configure.</p>
 <p>First you need to be careful with the name of your application and it's executable. The <code>appName</code> property in your <code>plugin.xml</code> file and the filename of your executable have to match. If the name of your executable is <code>myapplication</code> (or <code>myapplication.exe</code> on windows) then the <code>appName</code> property should be capitalized, so it becomes <code>Myapplication</code>.</p>
-<div class="codehilite"><pre><span class="nt">&lt;extension</span> <span class="na">id=</span><span class="s">&quot;product&quot;</span> <span class="na">point=</span><span class="s">&quot;org.eclipse.core.runtime.products&quot;</span><span class="nt">&gt;</span>
+<div class="codehilite"><pre><span></span><span class="nt">&lt;extension</span> <span class="na">id=</span><span class="s">&quot;product&quot;</span> <span class="na">point=</span><span class="s">&quot;org.eclipse.core.runtime.products&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;product</span> <span class="na">application=</span><span class="s">&quot;com.sigasi.myapplication.rcp.application&quot;</span> <span class="na">name=</span><span class="s">&quot;Sigasi&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;appName&quot;</span> <span class="na">value=</span><span class="s">&quot;Myapplication&quot;</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;/product&gt;</span>
@@ -1982,12 +1982,12 @@
 
 
 <p>Now you should be able to open files in your Eclipse application using</p>
-<div class="codehilite"><pre>./myapplication --launcher.openFile the_path_to/afile.txt
+<div class="codehilite"><pre><span></span>./myapplication --launcher.openFile the_path_to/afile.txt
 </pre></div>
 
 
 <p>The last step is to eliminate the commandline option <code>--launcher.openFile</code>. You can do this by adding the following snippet to the ini-file of your Eclipse application.</p>
-<div class="codehilite"><pre>--launcher.defaultAction
+<div class="codehilite"><pre><span></span>--launcher.defaultAction
 openFile
 </pre></div>
 
@@ -2030,7 +2030,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2016-07-19 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2016-07-20 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

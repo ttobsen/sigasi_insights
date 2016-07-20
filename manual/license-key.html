@@ -1971,7 +1971,7 @@ Sigasi supports both <em>node-locked</em> and <em>floating</em> license keys.</p
 <li>paste your key in the dialog</li>
 </ol>
 <p>An example node-locked license looks like this. Note that the first line starts with <code>INCREMENT</code></p>
-<div class="codehilite"><pre>INCREMENT com.sigasi.hdt sigasi 2.0 18-nov-2012 uncounted \
+<div class="codehilite"><pre><span></span>INCREMENT com.sigasi.hdt sigasi 2.0 18-nov-2012 uncounted \
         VENDOR_STRING=&quot;company:www.example.com;mac:10f2dd92c5ac;name:John \
         Doe;type:trial&quot; HOSTID=ANY ISSUER=Sigasi ISSUED=21-Oct-2012 \
         START=21-Oct-2012 SIGN=&quot;0CCC 87EA 9BB6 256E 7D81 E49D B2A6 \
@@ -1983,7 +1983,7 @@ Sigasi supports both <em>node-locked</em> and <em>floating</em> license keys.</p
 <h2 id="floating-licenses">Floating licenses</h2>
 <p>If you have a floating license key, you need to configure both a license server and Sigasi Studio. </p>
 <p>An example floating license looks like this. Note that the first line starts with <code>DAEMON</code>:</p>
-<div class="codehilite"><pre>DAEMON sigasi port=27001
+<div class="codehilite"><pre><span></span>DAEMON sigasi port=27001
 SERVER your_server_name1 BD41FCF5DE27 27000
 INCREMENT com.sigasi.hdt sigasi 2.0 18-nov-2012 4 \
         VENDOR_STRING=&quot;company:www.example.com;mac:10f2dd92c5ac;name:John \
@@ -2002,7 +2002,7 @@ INCREMENT com.sigasi.hdt sigasi 2.0 18-nov-2012 4 \
 <p>You can also set your license via an environment variable. Both <code>SIGASI_LM_LICENSE_FILE</code> and <code>LM_LICENSE_FILE</code> are supported. But when <code>SIGASI_LM_LICENSE_FILE</code> is set, <code>LM_LICENSE_FILE</code> is ignored.</p>
 <p>Note that if you want to use the environment variable, you can not enter a path in the License Key preference page. The value on this page has priority over environment variables. </p>
 <p>Linux Example:</p>
-<div class="codehilite"><pre>export SIGASI_LM_LICENSE_FILE=27000@flexnet.sigasi.com
+<div class="codehilite"><pre><span></span>export SIGASI_LM_LICENSE_FILE=27000@flexnet.sigasi.com
 </pre></div>
 
 
@@ -2031,10 +2031,10 @@ INCREMENT com.sigasi.hdt sigasi 2.0 18-nov-2012 4 \
 <p>You can change the ports and servername without breaking the signature.</p>
 <h4 id="starting-the-flexnet-and-sigasi-daemon-on-linux">Starting the Flexnet and Sigasi Daemon on Linux</h4>
 <p>the easiest way to start the Sigasi Flexnet Daemon is like this (on Linux)</p>
-<div class="codehilite"><pre><span class="ch">#!/bin/sh</span>
+<div class="codehilite"><pre><span></span><span class="ch">#!/bin/sh</span>
 <span class="nb">echo</span> <span class="s2">&quot;Starting the Sigasi floating license server&quot;</span>
 <span class="nv">LOCATION</span><span class="o">=</span>/home/flex/flexnet-sigasi
-$LOCATION/lmgrd -c $LOCATION/sigasi.lic -l $LOCATION/debug.log
+<span class="nv">$LOCATION</span>/lmgrd -c <span class="nv">$LOCATION</span>/sigasi.lic -l <span class="nv">$LOCATION</span>/debug.log
 </pre></div>
 
 
@@ -2094,7 +2094,7 @@ $LOCATION/lmgrd -c $LOCATION/sigasi.lic -l $LOCATION/debug.log
 </ul>
 </li>
 </ul>
-<div class="codehilite"><pre>INCREMENT com.sigasi.hdt sigasi 2.0 18-nov-2012 uncounted \
+<div class="codehilite"><pre><span></span>INCREMENT com.sigasi.hdt sigasi 2.0 18-nov-2012 uncounted \
         VENDOR_STRING=&quot;company:www.example.com;mac:10f2dd92c5ac;name:John \
         Doe;type:trial&quot; HOSTID=ANY ISSUER=Sigasi ISSUED=21-Oct-2012 \
         START=21-Oct-2012 SIGN=&quot;0CCC 87EA 9BB6 256E 7D81 E49D B2A6 \
@@ -2137,7 +2137,7 @@ lmutil[.exe] lmdiag -c "&lt;port&gt;@&lt;server&gt;" -n</code></li>
 <li>You can easily check the status of your license via the License Key preference page : <strong>Preferences &gt; Sigasi &gt; License Key</strong>. At the bottom of this preference page you can see the type and expiration date of your license.</li>
 <li>Sigasi Studio pre-emptively tries to check out certain license features. As a result, you might see warning message like this in your server log. These messages can be safely ignored.</li>
 </ul>
-<div class="codehilite"><pre>9:14:47 (sigasi) UNSUPPORTED: &quot;com.sigasi.hdt.custom&quot; (PORT_AT_HOST_PLUS   ) testuser@testmachine  (License server system does not support this feature. (-18,327:10054 &quot;&quot;))
+<div class="codehilite"><pre><span></span>9:14:47 (sigasi) UNSUPPORTED: &quot;com.sigasi.hdt.custom&quot; (PORT_AT_HOST_PLUS   ) testuser@testmachine  (License server system does not support this feature. (-18,327:10054 &quot;&quot;))
 9:14:47 (sigasi) UNSUPPORTED: &quot;com.sigasi.hdt.preview&quot; (PORT_AT_HOST_PLUS   ) testuser@testmachine  (License server system does not support this feature. (-18,327:10054 &quot;&quot;))  
 </pre></div>
 
@@ -2233,7 +2233,7 @@ lmutil[.exe] lmdiag -c "&lt;port&gt;@&lt;server&gt;" -n</code></li>
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2016-07-19 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2016-07-20 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

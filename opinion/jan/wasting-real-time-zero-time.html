@@ -1990,8 +1990,8 @@
 <p>I work on another project, called <a href="http://www.myhdl.org">MyHDL</a>, which is a way to use Python as an HDL. Subject to restrictions, MyHDL code can be converted automatically to Verilog and VHDL, including simple testbenches. Recently, I have been using this technique to develop a set of benchmarks to compare the simulation performance of MyHDL  with Verilog and VHDL.  At some point, I found the results interesting enough to publish them.</p>
 <p>The five benchmarks run identically on five simulators and three HDLs: MyHDL, Icarus (Verilog), Modelsim Verilog, GHDL (VHDL), and Modelsim VHDL. Sounds quite robust, doesn’t it? Not so. Some days ago, I received an email from Andrew Vanvick from <a href="http://www.tachyon-da.com">Tachyon</a>. Their product is a  fast Verilog simulator called cvc. He was interested in running my benchmarks with his simulator (and it really is extremely  fast).  However, he told me he “had to make some changes” in two benchmarks. He didn’t have time to analyze the case, but he was able to temporarily fix the problem by adding some delays.</p>
 <p>Therefore, I went through the very process that I described earlier. I analyzed the problem and was able to reproduce it with cvc. As you will have guessed, after analyzing the code  it turned out that there were sources of nondeterminism in two of my benchmarks. I found a (hopefully) robust fix and designed it in. I ran the whole regression suite again to make sure everything was fine now, including with cvc. This work has not improved  the intrinisic quality of the benchmarks. They are now more robust against Verilog nondeterminism, that is all.</p>
-<p>To make the case more practical, I have developed a minimal Verilog example that exposes the problem with one of the benchmarks. Here is the code:</p>
-<div class="codehilite"><pre>    <span class="k">module</span> <span class="n">test_nondeterminism</span><span class="p">();</span>
+<p>To make the case more practical, I have developed a minimal Verilog example that exposes the problem with one of the benchmarks. Here is the code:</p>
+<div class="codehilite"><pre><span></span>    <span class="k">module</span> <span class="n">test_nondeterminism</span><span class="p">();</span>
 
     <span class="kt">reg</span> <span class="n">ready</span><span class="p">;</span>
     <span class="kt">reg</span> <span class="n">start</span><span class="p">;</span>
@@ -2086,7 +2086,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2016-07-19 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2016-07-20 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

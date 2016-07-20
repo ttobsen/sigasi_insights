@@ -1964,7 +1964,7 @@
       <div class="col-md-9" role="main">
         <p>Like many other languages, it is possible in VHDL to perform <mark>name scoping</mark>. This happens if you declare a new object in a nested scope that reuses the name of an object that was already declared. This is not an error in VHDL, but it can be confusing and it can cause errors. In general, I would advice against name scoping unless you have a very good reason. Even then, it would be best if you document (comment) your code so that everybody understands what is going on.</p>
 <p>This is a straightforward example of name shadowing:</p>
-<div class="codehilite"><pre><span class="k">entity</span> <span class="nc">e0</span> <span class="k">is</span>
+<div class="codehilite"><pre><span></span><span class="k">entity</span> <span class="nc">e0</span> <span class="k">is</span>
 <span class="k">end</span> <span class="k">entity</span> <span class="nc">e0</span><span class="p">;</span>
 <span class="k">architecture</span> <span class="nc">demo</span> <span class="k">of</span> <span class="nc">e0</span> <span class="k">is</span>
     <span class="k">constant</span> <span class="n">c</span> <span class="o">:</span> <span class="kt">integer</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">;</span>
@@ -1983,7 +1983,7 @@
 
 
 <p>It gets more confusing if you shadow names from the a standardized package:</p>
-<div class="codehilite"><pre><span class="k">architecture</span> <span class="nc">demo2</span> <span class="k">of</span> <span class="nc">e0</span> <span class="k">is</span>
+<div class="codehilite"><pre><span></span><span class="k">architecture</span> <span class="nc">demo2</span> <span class="k">of</span> <span class="nc">e0</span> <span class="k">is</span>
     <span class="k">constant</span> <span class="n">true</span> <span class="o">:</span> <span class="kt">boolean</span> <span class="o">:=</span> <span class="n">false</span><span class="p">;</span> <span class="c1">-- shadowing the name &quot;true&quot;. Bad idea!</span>
 <span class="k">begin</span>
     <span class="k">assert</span> <span class="n">false</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
@@ -1992,7 +1992,7 @@
 
 
 <p>A common misconception is that loop iterators need to be declared beforehand. They don't, because they are declared implicitly in the loop statement.</p>
-<div class="codehilite"><pre><span class="k">architecture</span> <span class="nc">demo4</span> <span class="k">of</span> <span class="nc">e0</span> <span class="k">is</span>
+<div class="codehilite"><pre><span></span><span class="k">architecture</span> <span class="nc">demo4</span> <span class="k">of</span> <span class="nc">e0</span> <span class="k">is</span>
 <span class="k">begin</span>
     <span class="k">process</span> <span class="k">is</span>
         <span class="k">variable</span> <span class="n">i</span><span class="o">:</span> <span class="kt">integer</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">;</span>
@@ -2017,7 +2017,7 @@
 
 
 <p><em>Note</em>: you can reach these shadowed names by using their expanded names:</p>
-<div class="codehilite"><pre><span class="k">entity</span> <span class="nc">fun</span> <span class="k">is</span>
+<div class="codehilite"><pre><span></span><span class="k">entity</span> <span class="nc">fun</span> <span class="k">is</span>
 <span class="k">end</span> <span class="k">entity</span><span class="p">;</span>
 
 <span class="k">architecture</span> <span class="nc">hide</span> <span class="k">of</span> <span class="nc">fun</span> <span class="k">is</span>
@@ -2037,7 +2037,7 @@
 </pre></div>
 
 
-<div class="codehilite"><pre>VSIM 1&gt; run -all
+<div class="codehilite"><pre><span></span>VSIM 1&gt; run -all
 # ** Note: x=5
 #    Time: 0 ns  Iteration: 0  Instance: /fun
 </pre></div>
@@ -2081,7 +2081,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2016-07-19 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2016-07-20 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

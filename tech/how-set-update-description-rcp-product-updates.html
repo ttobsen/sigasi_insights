@@ -1972,7 +1972,7 @@
 <p><img alt="Product description in update dialog" src="images/update_dialog.png" /></p>
 <p>Ian told the original plan was to add a field to the Product Configuration Editor, but nobody ever came around to implement it. But the good news is that you can easily set the description via a  <a href="http://wiki.eclipse.org/Equinox/p2/Customizing_Metadata">p2 advice file</a>. This file (<code>p2.inf</code>) can be added next to the product definition and is used to tweak p2 operations. Note that if you build with <a href="http://www.eclipse.org/tycho">Maven Tycho</a>, this <code>p2.inf</code> needs to be prefixed with the product configuration file name. In our case the product configuration file is <code>sigasi.product</code>, so the p2 advice file must be named <code>sigasi.p2.inf</code> (<a href="http://wiki.eclipse.org/Tycho/Packaging_Types#eclipse-repository">more details</a>).</p>
 <p>To set the product update description add following lines to your p2 advise file:</p>
-<div class="codehilite"><pre><span class="na">properties.0.name</span> <span class="o">=</span> <span class="s">org.eclipse.equinox.p2.description</span>
+<div class="codehilite"><pre><span></span><span class="na">properties.0.name</span> <span class="o">=</span> <span class="s">org.eclipse.equinox.p2.description</span>
 <span class="na">properties.0.value</span> <span class="o">=</span> <span class="s">Sigasi Standalone version update\nVisit http://www.sigasi.com/sigasi-updates for more information.</span>
 </pre></div>
 
@@ -2018,7 +2018,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2016-07-19 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2016-07-20 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

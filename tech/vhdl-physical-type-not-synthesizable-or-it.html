@@ -1977,7 +1977,7 @@
 </blockquote>
 <p>This is the kind of knowledge was somehow made up in the latter years of the Cold War and was passed down from one generation of digital design engineers to the next. </p>
 <p>Before we investigate this claim, let's examine what VHDL physical types are. A physical type is defined by a range and a number of units. For example, the pre-defined <code>time</code> type can have any integer value (the <mark>range</mark>) and has <mark>units</mark> including <code>ns</code>, <code>us</code> (microseconds) and even <code>hr</code> for hours. Internally, physical values are treated as integers, but the compiler adds some extra checks to make sure you don't mix the wrong physical values. The language definition says that adding, substracting, multiplication and division are always defined on physical types. This means you can add or subtract two values of the same physical type and you can multiply a physical value with an integer value or devide d physical value by an integer value. The result will always be a physical value. If you divide a physical value by another physical value, you get an integer:</p>
-<div class="codehilite"><pre><span class="k">assert</span> <span class="mi">1</span> <span class="n">sec</span> <span class="o">=</span> <span class="mi">1000</span> <span class="n">ms</span><span class="p">;</span> <span class="c1">-- convert units of the same physical type</span>
+<div class="codehilite"><pre><span></span><span class="k">assert</span> <span class="mi">1</span> <span class="n">sec</span> <span class="o">=</span> <span class="mi">1000</span> <span class="n">ms</span><span class="p">;</span> <span class="c1">-- convert units of the same physical type</span>
 <span class="k">assert</span> <span class="mi">1</span> <span class="n">sec</span> <span class="o">+</span> <span class="mi">20</span> <span class="n">ms</span> <span class="o">=</span> <span class="mi">1020</span> <span class="n">ms</span><span class="p">;</span> <span class="c1">-- add</span>
 <span class="k">assert</span> <span class="mi">2</span> <span class="n">sec</span> <span class="o">-</span> <span class="mi">100</span> <span class="n">ms</span> <span class="o">=</span> <span class="mi">1900</span> <span class="n">ms</span><span class="p">;</span> <span class="c1">-- subtract</span>
 <span class="k">assert</span> <span class="mi">10</span> <span class="n">sec</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">5</span> <span class="n">sec</span><span class="p">;</span> <span class="c1">-- divide by integer</span>
@@ -1988,14 +1988,14 @@
 
 <p>In essence, physical values are just integer values with some extra compiler checks. So it stands to reason that a synthesis tool would just treat these physical types as integer types. Obviously, the synthesis tool will have no clue what the units represent in the physical world – but that doesn't stop it from using physical values.</p>
 <p>Wouldn't it be great if we could write:</p>
-<div class="codehilite"><pre><span class="k">wait</span> <span class="k">for</span> <span class="mi">3</span> <span class="n">sec</span><span class="p">;</span> <span class="c1">-- not synthesizable (yet)</span>
+<div class="codehilite"><pre><span></span><span class="k">wait</span> <span class="k">for</span> <span class="mi">3</span> <span class="n">sec</span><span class="p">;</span> <span class="c1">-- not synthesizable (yet)</span>
 <span class="n">ready</span> <span class="o">&lt;=</span> <span class="sc">&#39;1&#39;</span><span class="p">;</span>
 </pre></div>
 
 
 <p>In our dreams, the synthesis tool would infer a counter that counts the number of clock ticks and lets us know when the three seconds have passed. Tough luck – no synthesis tools on the market can do this today. But they might some day!</p>
 <p>But how about this:</p>
-<div class="codehilite"><pre><span class="k">constant</span> <span class="n">c</span><span class="o">:</span> <span class="kt">integer</span> <span class="o">:=</span> <span class="n">cycles_required</span> <span class="o">=</span> <span class="mi">3</span> <span class="n">sec</span> <span class="o">/</span> <span class="n">clock_frequency</span><span class="p">;</span> <span class="c1">-- works fine!</span>
+<div class="codehilite"><pre><span></span><span class="k">constant</span> <span class="n">c</span><span class="o">:</span> <span class="kt">integer</span> <span class="o">:=</span> <span class="n">cycles_required</span> <span class="o">=</span> <span class="mi">3</span> <span class="n">sec</span> <span class="o">/</span> <span class="n">clock_frequency</span><span class="p">;</span> <span class="c1">-- works fine!</span>
 </pre></div>
 
 
@@ -2043,7 +2043,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2016-07-19 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2016-07-20 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

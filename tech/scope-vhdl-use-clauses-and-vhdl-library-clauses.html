@@ -1968,7 +1968,7 @@
       <div class="col-md-9" role="main">
         <p>When I first learned VHDL, I bumped in to quite a few language quirks. Here is one thing that I learned the hard way: the scope of VHDL use clauses.</p>
 <p>I figured out that you can put several entities or packages in the same file. Now, usually people only put design units in the same file in pairs, like entity + architecture or package + package body:</p>
-<div class="codehilite"><pre><span class="k">library</span>
+<div class="codehilite"><pre><span></span><span class="k">library</span>
 <span class="nn">use</span>
 <span class="k">entity</span>
 <span class="nc">architecture</span>
@@ -1976,7 +1976,7 @@
 
 
 <p>or</p>
-<div class="codehilite"><pre><span class="k">library</span>
+<div class="codehilite"><pre><span></span><span class="k">library</span>
 <span class="nn">use</span>
 <span class="k">package</span>
 <span class="k">package</span> <span class="k">body</span>
@@ -1985,7 +1985,7 @@
 
 <p>Note that the use clauses and library clauses are only written once at the top of the VHDL file. A naïve passer-by would assume that these clauses are valid throughout the entire file. Wrong!</p>
 <p>If you try to write a VHDL file with this structure, things will go wrong:</p>
-<div class="codehilite"><pre><span class="k">library</span>
+<div class="codehilite"><pre><span></span><span class="k">library</span>
 <span class="nn">use</span>
 <span class="k">package</span> <span class="n">one</span>
 <span class="k">package</span> <span class="n">two</span>
@@ -1996,10 +1996,10 @@
 <p>The reason is that the library and use clauses are only visible to the <mark>first</mark> design unit (entity, architecture, package,...). In case you write an entity and its corresponding architecture (or a package and its corresponding package body) the so-called <mark>secondary design unit</mark> (the architecture or package body) <strong>inherits</strong> whatever is used in the <mark>primary design unit</mark> (entity or package). Aha!
 Even if the architecture is in a different file, you don't have to repeat the use clauses.</p>
 <p>So finally, here is some <a href="/opinion/vetsmod-get-better-feedback-your-vhdl-code-snippets.html" title="VETSMOD">VETSMOD</a> VHDL code to play with:</p>
-<div class="codehilite"><pre><span class="n">comments</span><span class="o">:</span> <span class="n">true</span>
+<div class="codehilite"><pre><span></span><span class="n">comments</span><span class="o">:</span> <span class="n">true</span>
 <span class="c1">---- New &quot;Design Unit&quot; starts here ----</span>
 <span class="k">library</span> <span class="nn">ieee</span><span class="p">;</span>
-<span class="k">use</span> <span class="nn">ieee.std_logic_1164.all</span><span class="p">;</span>
+<span class="k">use</span> <span class="nn">ieee.std_logic_1164.</span><span class="k">all</span><span class="p">;</span>
 
 <span class="c1">-- the library and use clauses apply to the entity below</span>
 <span class="k">entity</span> <span class="nc">e1</span> <span class="k">is</span>
@@ -2067,7 +2067,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2016-07-19 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2016-07-20 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

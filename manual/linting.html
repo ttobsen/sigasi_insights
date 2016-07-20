@@ -2095,9 +2095,9 @@ unused declarations fast.</p>
 Different vendors have shipped different versions, with incompatible
 implementation. These packages should not be used and are flagged as
 <strong>Deprecated IEEE packages</strong>.</p>
-<div class="codehilite"><pre><span class="n">ieee</span><span class="p">.</span><span class="n">std_logic_arith</span>
-<span class="n">ieee</span><span class="p">.</span><span class="n">std_logic_signed</span>
-<span class="n">ieee</span><span class="p">.</span><span class="n">std_logic_unsigned</span>
+<div class="codehilite"><pre><span></span><span class="nn">ieee.std_logic_arith</span>
+<span class="nn">ieee.std_logic_signed</span>
+<span class="nn">ieee.std_logic_unsigned</span>
 </pre></div>
 
 
@@ -2172,8 +2172,8 @@ earlier saves time and lets you catch the problem early.</p>
 <p>The VHDL language reference manual states that:</p>
 <p><em>Every design unit except package STANDARD is assumed to contain the
 following implicit context items as part of its context clause:</em></p>
-<div class="codehilite"><pre>    <span class="k">library</span> <span class="nn">STD</span><span class="p">,</span> <span class="n">WORK</span><span class="p">;</span>
-    <span class="k">use</span> <span class="nn">STD.STANDARD.all</span><span class="p">;</span>
+<div class="codehilite"><pre><span></span>    <span class="k">library</span> <span class="nn">STD</span><span class="p">,</span> <span class="nn">WORK</span><span class="p">;</span>
+    <span class="k">use</span> <span class="nn">STD.STANDARD.</span><span class="k">all</span><span class="p">;</span>
 </pre></div>
 
 
@@ -2197,7 +2197,7 @@ We have a lint check that warns about this, even if you use constants
 <h4 id="space-before-the-physical-unit">Space Before the Physical Unit</h4>
 <p>If you type a numeric literal with a physical unit, there should be a
 space between the number and the unit.</p>
-<div class="codehilite"><pre>    <span class="n">T</span> <span class="o">:=</span> <span class="mi">25</span><span class="n">ns</span><span class="p">;</span> <span class="c1">-- ILLEGAL, but accepted by ModelSim</span>
+<div class="codehilite"><pre><span></span>    <span class="n">T</span> <span class="o">:=</span> <span class="mi">25</span><span class="n">ns</span><span class="p">;</span> <span class="c1">-- ILLEGAL, but accepted by ModelSim</span>
     <span class="n">T</span> <span class="o">:=</span> <span class="mi">25</span> <span class="n">ns</span><span class="p">;</span> <span class="c1">-- OK; according to VHDL language standard</span>
 </pre></div>
 
@@ -2229,12 +2229,12 @@ you whould specify <code>.*_v</code> pattern in the <strong>Variable name</stron
 You can override these setting by creating a settings file for your projects. </p>
 <p>In each project, you can override the coding rules settings. You can override rules for the <strong>entire project</strong>, for <strong>folders</strong> in the project, or for individual <strong>files</strong>.</p>
 <p>Project settings are stored in this settings file:</p>
-<div class="codehilite"><pre>${project location}/.settings/com.sigasi.hdt.vhdl.linting.prefs
+<div class="codehilite"><pre><span></span>${project location}/.settings/com.sigasi.hdt.vhdl.linting.prefs
 </pre></div>
 
 
 <p>To configure the severity of validations, add a line for each validation:</p>
-<div class="codehilite"><pre>${validation id}/severity/${path}=${severity}
+<div class="codehilite"><pre><span></span>${validation id}/severity/${path}=${severity}
 </pre></div>
 
 
@@ -2258,7 +2258,7 @@ You can override these setting by creating a settings file for your projects. </
 </ul>
 <p>Whitespace must be escaped with a back slash (<code>\</code>)</p>
 <p>Examples:</p>
-<div class="codehilite"><pre>72/severity/&lt;project&gt;=IGNORE
+<div class="codehilite"><pre><span></span>72/severity/&lt;project&gt;=IGNORE
 72/severity//Folder\ name/Extra\ folder=INFO
 72/severity//test/top.vhd=WARNING
 all/severity/&lt;project&gt;=IGNORE
@@ -2474,7 +2474,7 @@ all/severity/&lt;project&gt;=IGNORE
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2016-07-19 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2016-07-20 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

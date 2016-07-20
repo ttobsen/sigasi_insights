@@ -2307,7 +2307,7 @@ Sigasi needs this path to find the Xilinx Vivado libraries and to run the ISim c
 You can use your own simple scripts to manipulate such list and run any EDA tool, including simulators, synthesis and linter tools.</p>
 <p>To export a comma separated value (CSV) list of files in your project, right-click your project and select <strong>Export</strong>. In the <strong>Sigasi</strong> category, select <strong>CSV File</strong>. As a result, you get a file named <code>compilation_order.csv</code>, which lists the VHDL files in your project in a valid compile order.</p>
 <p>Example (for the tutorial project):</p>
-<div class="codehilite"><pre>work, dut.vhd
+<div class="codehilite"><pre><span></span>work, dut.vhd
 work, clock_generator.vhd
 work, testbench.vhd
 </pre></div>
@@ -2315,13 +2315,13 @@ work, testbench.vhd
 
 <p>You can also configure Sigasi Studio to <strong>auto-export</strong> this CSV file, every time the dependencies change.</p>
 <p>In the project you want to auto-export, create a file <code>.settings/com.sigasi.hdt.vhdl.ui.prefs</code> with following content: </p>
-<div class="codehilite"><pre>eclipse.preferences.version=1
+<div class="codehilite"><pre><span></span>eclipse.preferences.version=1
 autoexport=csv
 </pre></div>
 
 
 <p>If you only want to export the dependencies of the top level, set the content of <code>.settings/com.sigasi.hdt.vhdl.ui.prefs</code> to:</p>
-<div class="codehilite"><pre>eclipse.preferences.version=1
+<div class="codehilite"><pre><span></span>eclipse.preferences.version=1
 autoexport=csv_top_level
 autoexport.top_level=work.testbench(STR)
 </pre></div>
@@ -2408,7 +2408,7 @@ autoexport.top_level=work.testbench(STR)
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2016-07-19 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2016-07-20 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
