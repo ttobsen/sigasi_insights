@@ -2164,6 +2164,12 @@ lmutil[.exe] lmdiag -c "&lt;port&gt;@&lt;server&gt;" -n</code></li>
 <ul>
 <li>Check the daemon log on the license server</li>
 </ul>
+<blockquote>
+<p>Updating DACL Failed: "Service has been created but failed to update the DACL settings of FlexNet Licensing Service. It will give problem for accessing TS features. Check whether FlexNet Licensing Service is correctly installed or not and delete and create this service again."</p>
+</blockquote>
+<ul>
+<li>There seems to be a bug in <code>lmtools.exe</code> version 11 on some systems. You can work around this issue by configuring the (latest) Sigasi daemon with an older version of lmtools (e.g. version 10). </li>
+</ul>
 
       </div>
     </div>
@@ -2233,7 +2239,7 @@ lmutil[.exe] lmdiag -c "&lt;port&gt;@&lt;server&gt;" -n</code></li>
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2016-07-20 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2016-07-25 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
