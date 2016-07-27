@@ -1,3 +1,4 @@
+http://insights.sigasi.com/404.html
 http://insights.sigasi.com/empty.html
 http://insights.sigasi.com/eula.html
 http://insights.sigasi.com/faq.html
