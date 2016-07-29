@@ -1549,23 +1549,15 @@
 		<meta name="msapplication-TileImage" content="/css/cropped-site_icon-270x270.png">
 		<!-- BEGIN GADWP v4.9.0.1 Universal Tracking - https://deconf.com/google-analytics-dashboard-wordpress/ -->
 <script>
-	(function(i, s, o, g, r, a, m) {
-		i['GoogleAnalyticsObject'] = r;
-		i[r] = i[r] ||
-		function() {
-			(i[r].q = i[r].q || []).push(arguments)
-		}, i[r].l = 1 * new Date();
-		a = s.createElement(o),
-		m = s.getElementsByTagName(o)[0];
-		a.async = 1;
-		a.src = g;
-		m.parentNode.insertBefore(a, m)
-	})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
 	ga('create', 'UA-2852630-4', 'auto');
 	ga('send', 'pageview');
-
-</script>		
+</script>
+		
 	</head>
 	<!--// OPEN BODY //-->
 	<body class="page page-id-12016 page-template-default bright-design mobile-header-left-logo mhs-mobile mh-slideout responsive-fluid sticky-header-disabled page-shadow product-shadows header-standard layout-boxed page-heading-standard disable-mobile-animations  _masterslider _msp_version_2.19.0">
@@ -2075,11 +2067,20 @@ INCREMENT com.sigasi.hdt sigasi 2.0 18-nov-2012 4 \
 <p>You can release a floating license (<mark>check a license in</mark>) without closing your Sigasi application or Eclipse application. This is useful if you use Eclipse to edit other files than VHDL files, like C or Tcl.</p>
 <p>First, make sure that all VHDL and Verilog files are closed and all VHDL and Verilog projects are closed. Next select  <strong>Help &gt; Sigasi &gt; Floating license &gt; Release Sigasi Floating Licenses</strong></p>
 <p>To get the license back (to check the license out), open the license dialog <strong>Help &gt; Sigasi &gt; Configure License...</strong> and press <strong>Apply</strong>.</p>
-<p>Similarly a floating Sigasi XL Doc addon license can be released via: <strong>Help &gt; Sigasi &gt; Floating license &gt; Release Sigasi Studio XL Doc Floating Licenses</strong>.</p>
 <h4 id="how-to-block-sigasi-studio-from-checking-out-a-license">How to block Sigasi Studio from checking out a license?</h4>
 <p>If you have configured an environment variable with the location of a Flexnet license server, you can instruct Sigasi <strong>not</strong> to check out a license by setting the Sigasi Studio License key to <code>none</code>.</p>
-<h4 id="extra-floating-license-options-in-sigasi-studio">Extra floating license options in Sigasi Studio</h4>
+<h4 id="mix-of-creator-and-xl-licenses">Mix of Creator and XL licenses</h4>
 <p>If your license server serves both Sigasi Studio <strong>Creator</strong> and <strong>XL</strong> licenses, you can configure Sigasi studio to only checkout Sigasi <strong>Creator</strong> licenses (and <strong>not</strong> XL licenses) by enabling the "<strong>Do not try to checkout floating Sigasi Studio XL licenses</strong>" option on <strong>Window &gt; Preferences &gt; Sigasi &gt; License Key &gt; Floating Options</strong></p>
+<h4 id="checking-out-and-releasing-the-doc-addon-license">Checking out and releasing the Doc addon license</h4>
+<p>If you have licenses for Sigasi Studio XL Doc, this is actually licensed as Sigasi Studio XL, with a Doc add-on license. The XL license is checked out as described above.</p>
+<p>The Doc add-on is checked out automatically in the following cases:</p>
+<ul>
+<li>When you open the Block Diagram view</li>
+<li>When you open the State Machine view</li>
+<li>When you try to export PDF documentation</li>
+<li>When you click <strong>Help &gt; Sigasi &gt; Floating License &gt; Check out Sigasi Studio XL Doc license</strong></li>
+</ul>
+<p>The Doc add-on license is released via: <strong>Help &gt; Sigasi &gt; Floating license &gt; Release Sigasi Studio XL Doc Floating Licenses</strong>.</p>
 <h2 id="troubleshooting">Troubleshooting</h2>
 <p>If your license key does not work, the first things to check are:</p>
 <ul>
@@ -2195,7 +2196,8 @@ lmutil[.exe] lmdiag -c "&lt;port&gt;@&lt;server&gt;" -n</code></li>
 <li><a href="#floating-license-options">Floating License options</a><ul>
 <li><a href="#release-a-floating-license">Release a floating license</a></li>
 <li><a href="#how-to-block-sigasi-studio-from-checking-out-a-license">How to block Sigasi Studio from checking out a license?</a></li>
-<li><a href="#extra-floating-license-options-in-sigasi-studio">Extra floating license options in Sigasi Studio</a></li>
+<li><a href="#mix-of-creator-and-xl-licenses">Mix of Creator and XL licenses</a></li>
+<li><a href="#checking-out-and-releasing-the-doc-addon-license">Checking out and releasing the Doc addon license</a></li>
 </ul>
 </li>
 </ul>
@@ -2239,7 +2241,7 @@ lmutil[.exe] lmdiag -c "&lt;port&gt;@&lt;server&gt;" -n</code></li>
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2016-07-28 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2016-07-29 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
