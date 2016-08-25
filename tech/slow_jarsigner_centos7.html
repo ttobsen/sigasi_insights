@@ -3,7 +3,7 @@
 	<!--// OPEN HEAD //-->
 	<head>
 		<!--// SITE TITLE //-->
-		<title>eetimes - Sigasi</title>
+		<title>Extremely slow jarsigner on Centos7 build server - Sigasi</title>
 		<!--// SITE META //-->
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -24,14 +24,14 @@
 			}
 		</script>
 		<!-- This site is optimized with the Yoast SEO plugin v3.0.6 - https://yoast.com/wordpress/plugins/seo/ -->
-		<link rel="canonical" href="http://insights.sigasi.com//tag/eetimes/" />
+		<link rel="canonical" href="http://insights.sigasi.com//tech/slow_jarsigner_centos7.html" />
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="eetimes - Sigasi" />
-		<meta property="og:url" content="http://insights.sigasi.com//tag/eetimes/" />
+		<meta property="og:title" content="Extremely slow jarsigner on Centos7 build server - Sigasi" />
+		<meta property="og:url" content="http://insights.sigasi.com//tech/slow_jarsigner_centos7.html" />
 		<meta property="og:site_name" content="Sigasi" />
 		<meta name="twitter:card" content="summary"/>
-		<meta name="twitter:title" content="eetimes - Sigasi"/>
+		<meta name="twitter:title" content="Extremely slow jarsigner on Centos7 build server - Sigasi"/>
 		<!-- / Yoast SEO plugin. -->
 		<script type="text/javascript">
 			window._wpemojiSettings = {
@@ -1792,7 +1792,7 @@
 <div class="page-heading page-heading-hidden clearfix">
 	<div class="container">
 		<div class="heading-text">
-			<h1 class="entry-title" >eetimes</h1>
+			<h1 class="entry-title" >Extremely slow jarsigner on Centos7 build server</h1>
 		</div>
 	</div>
 </div>
@@ -1965,7 +1965,7 @@
 			</li>
 			<li>
 				<a href="/screencasts/">Screencasts</a></li>
-			<li>
+			<li class="active">
 				<a href="/tech/">Tech Articles</a></li>
 			<li>
 				<a href="/opinion/">Opinion</a></li>
@@ -1982,33 +1982,97 @@
 									<div class="spb_content_element col-sm-12 spb_raw_html">
 										<div class="spb-asset-content">
 
-
-    <section class="container">
-      <div class="row">
-        <div class="spb_content_element col-sm-12 spb_text_column">
-          <div class="spb-asset-content" style="padding-top:0%;padding-bottom:0%;padding-left:0%;padding-right:0%;text-align: center;">
-<h1>Articles about : eetimes</h1>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div style="margin: 10px 0 10px">
-    </div>
-
 <div class="container">
-    
-    <div class="row">
-      <div class="col-md-offset-0 col-md-6" >
-      </div>
-      <div class="col-md-offset-0 col-md-6" >
-        <p style="margin-bottom: 10px"><a href="/opinion/opinion-why-ides-hardware-design-fail-published-ee-times.html" title="Opinion: Why IDEs for hardware design fail [Published in EE Times]">Opinion: Why IDEs for hardware design fail [Publis...</a>
-          <small>2012&#8209;09&#8209;12</small>
-        </p>
-      </div>
+  <div class="page-header">
+    <div>
+        <h1 style="margin-bottom: 0px;margin-top: 30px;">Extremely slow jarsigner on Centos7 build server</h1>
     </div>
-</div>
+        
+    <div style="margin: 10px 0 10px">
+        <span>
+          Posted on 2016&#8209;08&#8209;18
+            by Hendrik Eeckhaut
+        </span>
+        <span style="padding-left:50px">
+        Tagged as: 
+              <a href="/tag/java/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">java</a>
+        </span>
+        
+    </div>
+  </div>
+  
+  
 
+  <div class="row">
+
+    <div class="content">
+      <div class="col-md-9" role="main">
+        <p>While I was setting up a new build server for <a href="http://www.sigasi.com/products">Sigasi Studio</a>, I noticed that the full product build script was a lot slower. <mark>A lot slower</mark> in this case is 9+ hours instead of an expected 3.5 hours. This post describes my debug quest and solution.</p>
+<p>I soon discovered the delay was caused by signing the Java Jars. For signing, Maven uses following command:</p>
+<div class="codehilite"><pre><span></span>jarsigner -keystore sigasiKeyStore -storepass <span class="s1">&#39;*****&#39;</span> -digestalg SHA1 -sigalg SHA1withRSA -tsa https://timestamp.geotrust.com/tsa -keypass <span class="s1">&#39;****&#39;</span> ./target/com.sigasi.hdt.exampleprojects-3.2.0-SNAPSHOT.jar
+</pre></div>
+
+
+<p>Removing the <code>-tsa https://timestamp.geotrust.com/tsa</code> part, removed the unexpected delay. But this tsa (Time Stamping Authority) parameter is required, so that the signature remains valid after the certicate expires. But why does this make the signing process so slow? Network? Slow server? Replacing the tsa server with other servers did not make a difference (+ the tsa server worked fine with the old build server).</p>
+<p>With <code>jstack</code>, I could see that one of threads was doing a blocking read, while reading random data. From a <a href="https://en.wikipedia.org/wiki//dev/random">quick internet search</a>, I learned that <code>/dev/random</code> is a <strong>blocking</strong> pseudorandom number generator. It blocks when there is not enough entropy. And it will block until enough additional environmental noise is gathered to resume.</p>
+<p>Checking the speed of <code>/dev/random</code> revealed this:</p>
+<div class="codehilite"><pre><span></span><span class="o">[</span>heeckhau@bilal ~<span class="o">]</span>$ <span class="nb">time</span> dd <span class="k">if</span><span class="o">=</span>/dev/random <span class="nv">bs</span><span class="o">=</span>1k <span class="nv">count</span><span class="o">=</span><span class="m">1</span> 
+Q�P���0+1 records in
+0+1 records out
+<span class="m">6</span> bytes <span class="o">(</span><span class="m">6</span> B<span class="o">)</span> copied, 115.772 s, 0.0 kB/s
+
+real    1m55.773s
+user    0m0.000s
+sys     0m0.001s
+</pre></div>
+
+
+<p>and running <code>cat /proc/sys/kernel/random/entropy_avail</code> showed values around 55. I found the culprit.</p>
+<p>So the reason for the slow jarsigner was that the build server did not have enough entropy to generate random data quickly.</p>
+<p>Applying one of the solutions from <a href="http://stackoverflow.com/questions/4819359/dev-random-extremely-slow">this StackOverflow questions</a> solved the issue for me:</p>
+<div class="codehilite"><pre><span></span>yum -y install rng-tools
+service rngd start
+systemctl <span class="nb">enable</span> rngd.service
+</pre></div>
+
+
+<p>New result of <code>time dd if=/dev/random bs=1k count=1</code>:</p>
+<div class="codehilite"><pre><span></span><span class="nb">time</span> dd <span class="k">if</span><span class="o">=</span>/dev/random <span class="nv">bs</span><span class="o">=</span>1k <span class="nv">count</span><span class="o">=</span>1
+&gt;�a���5��C⬸�NHh��%�<span class="o">[</span>�dL����w
+                            �#�/��?Ṡ��▒y:T�4�Y<span class="o">}{</span>pWdn&gt;<span class="o">)</span><span class="p">;</span>�F�*0+1 records in
+0+1 records out
+<span class="m">78</span> bytes <span class="o">(</span><span class="m">78</span> B<span class="o">)</span> copied, 7.3129e-05 s, 1.1 MB/s
+
+real    0m0.001s
+user    0m0.000s
+sys     0m0.001s
+</pre></div>
+
+
+<p>and <code>/proc/sys/kernel/random/entropy_avail</code> now shows a value bigger than 3000. At last, issue solved... </p>
+<p>In hindsight this makes perfect sense, but I did not see this one comming. So I spent another few hours on unexpected maintenance... I hope this post can help you save some.</p>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+var disqus_shortname = 'sigasi';
+var disqus_developer = 1;
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>      </div>
+    </div>
+
+
+  </div>
+
+  <ul class="pager">
+  </ul>
+      
+</div>
 
 										</div>
 									</div>

@@ -441,6 +441,7 @@ http://insights.sigasi.com/tech/sigasi-hangs-help.html
 http://insights.sigasi.com/tech/sigasi-keyboard-shortcuts-cheat-sheet.html
 http://insights.sigasi.com/tech/sigasi-on-mac.html
 http://insights.sigasi.com/tech/signal-assignments-vhdl-withselect-whenelse-and-case.html
+http://insights.sigasi.com/tech/slow_jarsigner_centos7.html
 http://insights.sigasi.com/tech/spell-checking.html
 http://insights.sigasi.com/tech/static-checks-vhdl-code.html
 http://insights.sigasi.com/tech/three-mistakes-three-error-markers.html
