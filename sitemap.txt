@@ -131,6 +131,7 @@ http://insights.sigasi.com/releasenotes/sigasi-2.8.html
 http://insights.sigasi.com/releasenotes/sigasi-2.9.html
 http://insights.sigasi.com/releasenotes/sigasi-3.00.html
 http://insights.sigasi.com/releasenotes/sigasi-3.01.html
+http://insights.sigasi.com/releasenotes/sigasi-3.02.html
 http://insights.sigasi.com/screencasts/add_ieee_quickfix.html
 http://insights.sigasi.com/screencasts/block_selection_mode.html
 http://insights.sigasi.com/screencasts/bookmarks.html
