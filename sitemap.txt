@@ -462,6 +462,7 @@ http://insights.sigasi.com/tech/vhdl-physical-type-not-synthesizable-or-it-part-
 http://insights.sigasi.com/tech/vhdl-physical-type-not-synthesizable-or-it.html
 http://insights.sigasi.com/tech/vhdl-pragmas.html
 http://insights.sigasi.com/tech/vhdl-recursion-and-useful-error-messages.html
+http://insights.sigasi.com/tech/vhdl2008.ebnf.html
 http://insights.sigasi.com/tech/view-complexity-your-xtext-ecore-model.html
 http://insights.sigasi.com/tech/why-you-need-good-documentation-your-vhdl-and-verilog-code.html
 http://insights.sigasi.com/tech/work-not-vhdl-library.html
