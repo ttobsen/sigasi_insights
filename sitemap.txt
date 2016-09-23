@@ -3,6 +3,7 @@ http://insights.sigasi.com/empty.html
 http://insights.sigasi.com/eula.html
 http://insights.sigasi.com/faq.html
 http://insights.sigasi.com/index.html
+http://insights.sigasi.com/index2.html
 http://insights.sigasi.com/LICENSE.html
 http://insights.sigasi.com/manual/config.html
 http://insights.sigasi.com/manual/editions.html
@@ -159,6 +160,7 @@ http://insights.sigasi.com/screencasts/organizing_views_and_windows.html
 http://insights.sigasi.com/screencasts/others_template.html
 http://insights.sigasi.com/screencasts/quick_intro_to_sigasi.html
 http://insights.sigasi.com/screencasts/record_autocomplete.html
+http://insights.sigasi.com/screencasts/release_demo_3_2.html
 http://insights.sigasi.com/screencasts/rename_refactoring.html
 http://insights.sigasi.com/screencasts/save_time_compilation.html
 http://insights.sigasi.com/screencasts/settings_shortcuts.html
@@ -271,6 +273,7 @@ http://insights.sigasi.com/tag/Quartus/index.html
 http://insights.sigasi.com/tag/quickfix/index.html
 http://insights.sigasi.com/tag/recovering VHDL parser/index.html
 http://insights.sigasi.com/tag/Register mapping/index.html
+http://insights.sigasi.com/tag/release/index.html
 http://insights.sigasi.com/tag/rtl/index.html
 http://insights.sigasi.com/tag/Screencast/index.html
 http://insights.sigasi.com/tag/Sigasi/index.html
@@ -296,6 +299,7 @@ http://insights.sigasi.com/tag/VI/index.html
 http://insights.sigasi.com/tag/VIM/index.html
 http://insights.sigasi.com/tag/VITAL/index.html
 http://insights.sigasi.com/tag/Vivado/index.html
+http://insights.sigasi.com/tag/webinar/index.html
 http://insights.sigasi.com/tag/whitepaper/index.html
 http://insights.sigasi.com/tag/Xilinx/index.html
 http://insights.sigasi.com/tag/Xtext/index.html
