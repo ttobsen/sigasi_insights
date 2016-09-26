@@ -3,7 +3,6 @@ http://insights.sigasi.com/empty.html
 http://insights.sigasi.com/eula.html
 http://insights.sigasi.com/faq.html
 http://insights.sigasi.com/index.html
-http://insights.sigasi.com/index2.html
 http://insights.sigasi.com/LICENSE.html
 http://insights.sigasi.com/manual/config.html
 http://insights.sigasi.com/manual/editions.html
