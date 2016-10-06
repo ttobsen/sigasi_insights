@@ -80,6 +80,7 @@ http://insights.sigasi.com/opinion/project-management-and-team-collaboration.htm
 http://insights.sigasi.com/opinion/psychology-and-engineering-what-right-feedback.html
 http://insights.sigasi.com/opinion/reasons-love-vhdl-reasons-hate-vhdl.html
 http://insights.sigasi.com/opinion/state-logic-design-internet-communities.html
+http://insights.sigasi.com/opinion/thesis-winand.html
 http://insights.sigasi.com/opinion/too-smart-accept-any-help.html
 http://insights.sigasi.com/opinion/urubu.html
 http://insights.sigasi.com/opinion/vetsmod-get-better-feedback-your-vhdl-code-snippets.html
@@ -280,6 +281,7 @@ http://insights.sigasi.com/tag/source code/index.html
 http://insights.sigasi.com/tag/strategy/index.html
 http://insights.sigasi.com/tag/Synopsys/index.html
 http://insights.sigasi.com/tag/templates/index.html
+http://insights.sigasi.com/tag/Thesis/index.html
 http://insights.sigasi.com/tag/tycho/index.html
 http://insights.sigasi.com/tag/verilog/index.html
 http://insights.sigasi.com/tag/version control/index.html
@@ -298,6 +300,7 @@ http://insights.sigasi.com/tag/VI/index.html
 http://insights.sigasi.com/tag/VIM/index.html
 http://insights.sigasi.com/tag/VITAL/index.html
 http://insights.sigasi.com/tag/Vivado/index.html
+http://insights.sigasi.com/tag/Wavedrom/index.html
 http://insights.sigasi.com/tag/webinar/index.html
 http://insights.sigasi.com/tag/whitepaper/index.html
 http://insights.sigasi.com/tag/Xilinx/index.html
