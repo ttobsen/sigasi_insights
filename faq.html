@@ -2448,6 +2448,15 @@ You can select these errors from the <a href="/manual/views.html#problems" title
 <h3 id="sigasieclipse-hangs-on-startup">Sigasi/Eclipse hangs on startup</h3>
 <p>If Sigasi/Eclipse hangs while the splash screen is shown during startup, you can try this to resolve the issue:</p>
 <ul>
+<li>First try to disable the Workspace preference <mark>refresh using native hooks or polling</mark>. You can do this by setting the contents of  <code>&lt;workspaceSigasi&gt;/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.core.resources.prefs</code> to:</li>
+</ul>
+<div class="codehilite"><pre><span></span>eclipse.preferences.version=1
+refresh.enabled=false
+version=1
+</pre></div>
+
+
+<ul>
 <li>In the workspace folder remove: <code>&lt;workspaceSigasi&gt;/.metadata/.plugins/org.eclipse.ui.workbench</code></li>
 <li>If this is not enough, also remove <code>&lt;workspaceSigasi&gt;/.metadata/.plugins/org.eclipse.ui.ide</code> and <code>&lt;workspaceSigasi&gt;/org.eclipse.ui.workbench.texteditor</code></li>
 <li>If this still fails remove <code>&lt;workspaceSigasi&gt;/.metadata/.plugins/org.eclipse.core.resources</code>, note that you will have to re-import your projects if remove this folder.</li>
@@ -2547,7 +2556,7 @@ We have not had good results with FreeHDL or with Green Mountain VHDL. It seems 
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2016-10-10 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2016-10-17 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
