@@ -1884,6 +1884,9 @@ Insights<span style="color:#f47920">.</span>							</p>
 			<a href="/releasenotes/" class="dropdown-toggle" data-toggle="dropdown">Release Notes <b class="caret"></b></a>
 			<ul class="dropdown-menu">
 				<li>
+					<a href="/releasenotes/sigasi-3.03.html">Sigasi Studio 3.3</a>
+				</li>
+				<li>
 					<a href="/releasenotes/sigasi-3.02.html">Sigasi Studio 3.2</a>
 				</li>
 				<li>
@@ -2058,8 +2061,9 @@ in the design. Sigasi’s VHDL linter checks for the following problems:</p>
 <li>Duplicate, conflicting design unit names</li>
 <li>Missing return statement in function bodies</li>
 <li>Missing, unnecessary and duplicate signals in the sensitivity list</li>
-<li>Port, signal, variable, constant or generic declarations that are
-    never read or written</li>
+<li>Port, signal, variable, constant or generic declarations that are never read or written</li>
+<li>Invalid port associations (incompatible port modes in instantiations)</li>
+<li>Order of generic and port associations</li>
 </ul>
 <h3 id="linting-common-libraries">No Linting for Common Libraries</h3>
 <p>Common Libraries are considered to be production ready libraries.
@@ -2072,7 +2076,7 @@ a quickfix, click the problem marker or press <strong>Ctrl-1</strong> and select
 quickfix.</p>
 <ul>
 <li>Remove unused declaration</li>
-<li>Declare signals</li>
+<li>Declare signals and constants</li>
 <li>Switch to VHDL 2008 mode</li>
 <li>Correct signal/variable assignment operator</li>
 <li>Ignore deprecated libraries</li>
@@ -2082,6 +2086,7 @@ quickfix.</p>
 <li>Correct attribute entity class in attribute specifications</li>
 <li>Add missing signals to sensitivity list</li>
 <li>Fix capitalization of identifier to correspond to its declaration</li>
+<li>Match order of generic and port associations with declaration order</li>
 </ul>
 <h3 id="linting-severity-level">Configuring the Severity Level</h3>
 <p>The Sigasi VHDL linter has reasonable defaults for the severity level of
@@ -2516,6 +2521,8 @@ all/severity/&lt;project&gt;=IGNORE
   </div>
 
   <ul class="pager">
+    <li class="previous"><a href="/manual/opening.html">&larr; Opening Files</a></li>
+    <li class="next"><a href="/manual/tools.html">Tool Integration &rarr;</a></li>
   </ul>
       
 </div>
@@ -2537,7 +2544,7 @@ all/severity/&lt;project&gt;=IGNORE
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2016-11-30 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2016-12-06 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

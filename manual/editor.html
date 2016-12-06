@@ -1884,6 +1884,9 @@ Insights<span style="color:#f47920">.</span>							</p>
 			<a href="/releasenotes/" class="dropdown-toggle" data-toggle="dropdown">Release Notes <b class="caret"></b></a>
 			<ul class="dropdown-menu">
 				<li>
+					<a href="/releasenotes/sigasi-3.03.html">Sigasi Studio 3.3</a>
+				</li>
+				<li>
 					<a href="/releasenotes/sigasi-3.02.html">Sigasi Studio 3.2</a>
 				</li>
 				<li>
@@ -2063,8 +2066,10 @@ clicking hyperlinks. If you press and hold the <strong>Ctrl</strong> key, hyperl
 Sigasi offers following links:</p>
 <ul>
 <li>Link to <strong>Declaration</strong>: this has the same behaviour as <strong>Open Declaration</strong> (<strong>F3</strong>)</li>
-<li>Link to <strong>Matching Entity</strong> [VHDL]: this links a <strong>component</strong> declaration of instantiation to the matching entity declaration. This also works for component <strong>generics</strong> and <strong>ports</strong>.</li>
-<li>Link to <strong>Matching When Clause</strong> [VHDL]: in finite state machines (FSMs) you can jump directly to the matching <em>when</em> part of your case statement from state transitions.</li>
+<li>Link to <strong>Matching Entity</strong> [VHDL]: this links a <strong>component</strong> declaration of instantiation to the matching entity declaration. This also works for component <strong>generics</strong> and <strong>ports</strong> (<strong>Shift+F3</strong>).</li>
+<li>Link to <strong>Matching When Clause</strong> [VHDL]: in finite state machines (FSMs) you can jump directly to the matching <em>when</em> part of your case statement from state transitions (<strong>Shift+F3</strong>).</li>
+<li>Link to <strong>Open Declaration in Package Body</strong> [VHDL]: in packages you can jump directly to the matching <em>declaration</em> in the package body (<strong>Shift+F3</strong>). This also works in the opposite direction, <strong>Open Declaration in Package Body</strong>.</li>
+<li>Link to <strong>Open Declaration in Protected Type Body</strong> [VHDL]: in protected types you can jump directly to the matching <em>declaration</em> in the protected type body. This also works in the opposite direction, <strong>Open Declaration in Protected Type</strong>.</li>
 <li>URLs in <strong>comments</strong></li>
 </ul>
 <h3 id="hover">Hover</h3>
@@ -2178,7 +2183,7 @@ described in this chapter.</p>
 <p>Highlighting Classes for VHDL:</p>
 <ul>
 <li><em>Syntax</em>  :  Comment, Keyword, Number, String, Task tag </li>
-<li><em>Semantic</em> :  Constant, Port, Signal, Type, Variable, Attribute, Function/Procedure </li>
+<li><em>Semantic</em> :  Constant, Port, Signal, Type, Variable, Attribute, Function/Procedure, Labels</li>
 </ul>
 <h3 id="vhdl-specific-autocompletes">VHDL specific autocompletes</h3>
 <h4 id="instantiating-an-entity">Instantiating an entity</h4>
@@ -2273,7 +2278,7 @@ according to your preferences. </p>
 </ul>
 <h4 id="context-based">Context based</h4>
 <p>Sigasi Studio's formatter is context based and tries to respect the style of the author. So depending on the original source style, the formatter might make different choices.</p>
-<p>On example is the decision to format a <mark>conditional signal assignment</mark> on one, or multiple lines. Sigasi makes this decision base on the position of the first <code>else</code> keyword. If you put the <code>else</code> keyword on the first line, the formatter will put everythin on one line. If you put the <code>else</code> keyword on a new line, the formatter will use multiple lines for the assignment.</p>
+<p>One example is the decision to format a <mark>conditional signal assignment</mark> on one, or multiple lines. Sigasi makes this decision based on the position of the first <code>else</code> keyword. If you put the <code>else</code> keyword on the first line, the formatter will put everything on one line. If you put the <code>else</code> keyword on a new line, the formatter will use multiple lines for the assignment.</p>
 <div class="codehilite"><pre><span></span>    <span class="n">demo</span> <span class="o">&lt;=</span> <span class="p">(</span><span class="k">others</span> <span class="o">=&gt;</span> <span class="sc">&#39;0&#39;</span><span class="p">)</span> <span class="k">when</span> <span class="n">enable</span> <span class="o">=</span> <span class="sc">&#39;1&#39;</span>
         <span class="k">else</span> <span class="p">(</span><span class="k">others</span> <span class="o">=&gt;</span> <span class="sc">&#39;1&#39;</span><span class="p">)</span> <span class="k">when</span> <span class="n">input</span> <span class="o">=</span> <span class="sc">&#39;1&#39;</span> <span class="c1">-- else on new line</span>
         <span class="k">else</span> <span class="p">(</span><span class="k">others</span> <span class="o">=&gt;</span> <span class="sc">&#39;X&#39;</span><span class="p">);</span>
@@ -2292,6 +2297,8 @@ Configurable settings currently include:</p>
 <li>Upper case for VHDL keywords</li>
 <li>Alignment column for trailing comments</li>
 </ul>
+<h4 id="format-code-on-save">Format code on save</h4>
+<p>You can configure Sigasi Studio to automatically format your VHDL files when you save your source files via <strong>Preferences &gt; Sigasi &gt; VHDL</strong>, next enable <strong>Enable code format on save</strong>.</p>
 <h3 id="lightweight-editor-for-large-vhdl-files">Lightweight editor for large VHDL files</h3>
 <p>Sometimes you have to deal with very large VHDL files such as large
 concatenated library files and generated files. Unfortunately the Sigasi
@@ -2398,6 +2405,7 @@ according to your preferences. </p>
 <li><a href="#vhdl-code-formatting">VHDL code formatting</a><ul>
 <li><a href="#context-based">Context based</a></li>
 <li><a href="#configuration">Configuration</a></li>
+<li><a href="#format-code-on-save">Format code on save</a></li>
 </ul>
 </li>
 <li><a href="#lightweight-editor-for-large-vhdl-files">Lightweight editor for large VHDL files</a></li>
@@ -2424,6 +2432,8 @@ according to your preferences. </p>
   </div>
 
   <ul class="pager">
+    <li class="previous"><a href="/manual/views.html">&larr; Views</a></li>
+    <li class="next"><a href="/manual/mixed.html">Mixed language projects &rarr;</a></li>
   </ul>
       
 </div>
@@ -2445,7 +2455,7 @@ according to your preferences. </p>
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2016-11-30 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2016-12-06 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
