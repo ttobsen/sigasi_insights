@@ -3,7 +3,7 @@
 	<!--// OPEN HEAD //-->
 	<head>
 		<!--// SITE TITLE //-->
-		<title>VHDL Pragmas - Sigasi</title>
+		<title>Sigasi Studio Preview (3.4) - Sigasi</title>
 		<!--// SITE META //-->
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -24,14 +24,14 @@
 			}
 		</script>
 		<!-- This site is optimized with the Yoast SEO plugin v3.0.6 - https://yoast.com/wordpress/plugins/seo/ -->
-		<link rel="canonical" href="http://insights.sigasi.com//tech/vhdl-pragmas.html" />
+		<link rel="canonical" href="http://insights.sigasi.com//tech/preview.html" />
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="VHDL Pragmas - Sigasi" />
-		<meta property="og:url" content="http://insights.sigasi.com//tech/vhdl-pragmas.html" />
+		<meta property="og:title" content="Sigasi Studio Preview (3.4) - Sigasi" />
+		<meta property="og:url" content="http://insights.sigasi.com//tech/preview.html" />
 		<meta property="og:site_name" content="Sigasi" />
 		<meta name="twitter:card" content="summary"/>
-		<meta name="twitter:title" content="VHDL Pragmas - Sigasi"/>
+		<meta name="twitter:title" content="Sigasi Studio Preview (3.4) - Sigasi"/>
 		<!-- / Yoast SEO plugin. -->
 		<script type="text/javascript">
 			window._wpemojiSettings = {
@@ -1816,7 +1816,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 <div class="page-heading page-heading-hidden clearfix">
 	<div class="container">
 		<div class="heading-text">
-			<h1 class="entry-title" >VHDL Pragmas</h1>
+			<h1 class="entry-title" >Sigasi Studio Preview (3.4)</h1>
 		</div>
 	</div>
 </div>
@@ -2015,17 +2015,10 @@ Insights<span style="color:#f47920">.</span>							</p>
 <div class="container">
   <div class="page-header">
     <div>
-        <h1 style="margin-bottom: 0px;margin-top: 30px;">VHDL Pragmas</h1>
+        <h1 style="margin-bottom: 0px;margin-top: 30px;">Sigasi Studio Preview (3.4)</h1>
     </div>
         
     <div style="margin: 10px 0 10px">
-        <span style="padding-left:50px">
-        Tagged as: 
-              <a href="/tag/VHDL/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">VHDL</a>
-              <a href="/tag/VHDL synthesis/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">VHDL synthesis</a>
-              <a href="/tag/VHDL syntax/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">VHDL syntax</a>
-              <a href="/tag/rtl/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">rtl</a>
-        </span>
     </div>
   </div>
   
@@ -2035,36 +2028,62 @@ Insights<span style="color:#f47920">.</span>							</p>
 
     <div class="content">
       <div class="col-md-9" role="main">
-        <p>In VHDL, some tools support so-called <em>compiler directives</em>. A compiler directive, or pragma is additional information that you give to the VHDL compiler (the simulator or synthesis tool). While your directive has no influence on the VHDL code itself, it changes the behavior. The IEEE, in their VHDL RTL standard, defines a pragma as <em> A generic term used to deﬁne a construct with no predeﬁned language semantics that inﬂuences how a synthesis tool will synthesize VHDL code into an equivalent hardware representation.</em></p>
-<h3 id="metacomments-and-attributes">Metacomments and Attributes</h3>
-<p>The two ways in which you can give compiler directives in VHDL are through attributes or in comments. A compiler directive in a VHDL comment is sometimes called a <em>metacomment</em>.</p>
-<p>Attributes are an elegant way of conveying extra information to a synthesis tool. While each tool has its own semantics for attribute compiler directives, the syntax is defined as part of the VHDL language. VHDL analysis tools can easily process the attributes, without knowledge of the specific meaning of the such attributes.</p>
-<p>The following example tells the Synopsys Design Compiler that the component labeled as INSTANCE should not be optimized.</p>
-<div class="codehilite"><pre><span></span><span class="k">attribute</span> <span class="n">DONT_TOUCH</span> <span class="k">of</span> <span class="n">INSTANCE</span> <span class="o">:</span> <span class="k">label</span> <span class="k">is</span> <span class="n">TRUE</span><span class="p">;</span>
+        <p>For those users who want to get early access to the features and bugfixes of upcoming Sigasi Studio releases, we have set up an extra release channel, called "<mark>Sigasi Preview</mark>".</p>
+<p>The Sigasi Preview release channel offers more frequent releases than the official releases. This page gives an introduction to the most important changes.</p>
+<p>Although these preview release are less rigorously tested than than the official releases, they are stable enough for daily use.</p>
+<p><mark>If you run into any problems, please let us know</mark>.</p>
+<h3 id="systemverilog-improvements">SystemVerilog improvements</h3>
+<p>We now process all SystemVerilog in a predictable order and keep track of all preprocessor state. This avoids problems with the <code>`ifndef ... `define  ...</code> pattern. This also allows us to offer <strong>full support for include files</strong>. You can now edit include files <mark>as if they were included in a Verilog file</mark>. This requires no extra configuration, except for <a href="/manual/editor.html#verilog-preprocessingmacros" title="Sigasi Studio Editor">setting your include paths</a>.</p>
+<div class="wistia_responsive_padding" style="padding:118.13% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><iframe src="//fast.wistia.net/embed/iframe/wu2qqrjhu0?videoFoam=true" title="Wistia video player" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="100%" height="100%"></iframe></div></div>
+
+<script src="//fast.wistia.net/assets/external/E-v1.js" async></script>
+
+<h4 id="what-features-are-already-supported">What features are already supported?</h4>
+<ul>
+<li>Syntax error feedback: <strong>All</strong> valid SystemVerilog-2012 code should be accepted as valid code. Most syntax errors should be flagged.<br />
+   This works for both <strong>SystemVerilog</strong> <mark>and</mark> <strong>Include</strong> files.</li>
+<li>Preprocessor/Macros: Macros are fully supported. You can preview the text expansion with a hover or in the “Preprocessor View”.</li>
+<li>Include paths can be specified by right clicking a project, selecting <strong>Properties</strong>, and opening the <strong>Verilog Preprocessor page</strong>. Currently, only project-relative paths are supported.</li>
+<li>Open Declaration and Find References (for regular Verilog Code)</li>
+<li>Autocomplete (Ctrl+Space):<ul>
+<li>Syntax: autocomplete for keywords and identifiers</li>
+<li>Fixed Templates: these templates can be modified</li>
+<li>Smart Templates: module instantiations</li>
+</ul>
+</li>
+<li>Integration with an external compiler (Riviera-Pro, ModelSim, NCsim)</li>
+</ul>
+<h4 id="what-systemverilog-features-are-we-currently-working-on">What SystemVerilog features are we currently working on?</h4>
+<p>We are currently implementing the scoping rules of SystemVerilog. This will result in better <strong>semantic highlighting</strong>, <strong>Find References</strong> and <strong>Open Declaration</strong> for all SystemVerilog code.</p>
+<p>We are also experimenting with SV formatting. The first feature we target is <strong>Clean Indentation</strong>.</p>
+<h3 id="new-vhdl-formatter">New VHDL formatter</h3>
+<p>For Sigasi Studio 3.4 we did a rewrite of the VHDL formatter. This fixed a lot of reported formatting issues.
+In addition, we also implemented a way to disable the formatter for custom sections of your VHDL files.</p>
+<p>To disable the formatter for a section by enclosing it between <code>-- @formatter:off</code> and a <code>-- @formatter:on</code> comment.
+E.g.:</p>
+<div class="codehilite"><pre><span></span><span class="c1">-- @formatter:off</span>
+      <span class="c1">-- skipped region</span>
+<span class="c1">-- @formatter:on</span>
 </pre></div>
 
 
-<p>Metacomments, on the other hand are not elegant at all. Metacomments consist of text in VHDL comments, which makes them live effectively outside the VHDL language. The rest of this blog post deals with metacomments.</p>
-<div class="codehilite"><pre><span></span><span class="c1">-- synthesis off</span>
-</pre></div>
-
-
-<p>I could write an entire blog post about why metacomments are a bad idea, but I'll restrict myself to a single argument. <em>metacomments are not standardized.</em> Every tool vendor has created their own dialect of pragmas and thus polluted the unofficial VHDL pragma language.</p>
-<p>As some of you know, I love to complain, but I also try to be helpful. So I'm did some research about metacomments in VHDL and I'm sharing it with the world, so that other people would not have to waste their time on this again.</p>
-<h3 id="ieee">IEEE</h3>
-<p>When I said that metacomments are not standardized, I lied. The <a href="http://ieeexplore.ieee.org/servlet/opac?punumber=9308">VHDL RTL standard</a> defines two (and only two) metacomments:</p>
-<div class="codehilite"><pre><span></span><span class="c1">-- RTL_SYNTHESIS OFF</span>
-<span class="c1">-- RTL_SYNTHESIS ON</span>
-</pre></div>
-
-
-<p>Since this standard came long after the EDA tool vendors implemented their own metacomments, this standard does not correspond with code that is written today or with the supported pragmas in EDA tools.</p>
-<p>While this is not explicitly specified, it would be reasonable to assume that:
-<em> metacomment pragmas are meant to be case insensitive, 
-</em> that whitespace can be replaced by any valid VHDL whitespace (except end-of-line characters), and 
-* that a metacomment can only occur by itself in a comment (no other text in the same comment line).</p>
-<p>If you have reason to doubt these assumptions, please talk to me in the comments section below.</p>
-<p>In my next post, <a href="/tech/list-known-vhdl-metacomment-pragmas.html" title="List of known VHDL metacomment pragma's">List of known VHDL metacomment pragma's</a>, I will list as many metacomment formats as I was able to find.</p>
+<p>In general the new formatter should format your code the same way as earlier versions of Sigasi Studio. Let us know if you see unexpected changes.</p>
+<h4 id="extras">Extras</h4>
+<p>We also added a <strong>Correct Indentation</strong> action. This action only modifies the indentation of your (selected) VHDL code. You can run via the context menu in the editor and <strong>Source &gt; Correct Indentation</strong> or via <strong>Ctrl+I</strong></p>
+<h3 id="update-or-install">Update or install?</h3>
+<p>You can download the Stand-alone version of the latest preview version from:</p>
+<ul>
+<li><a href="http://download.sigasi.com/preview/latest/com.sigasi.hdt.product-linux.gtk.x86_64.zip">http://download.sigasi.com/preview/latest/com.sigasi.hdt.product-linux.gtk.x86_64.zip</a></li>
+<li><a href="http://download.sigasi.com/preview/latest/com.sigasi.hdt.product-linux.gtk.x86.zip">http://download.sigasi.com/preview/latest/com.sigasi.hdt.product-linux.gtk.x86.zip</a></li>
+<li><a href="http://download.sigasi.com/preview/latest/com.sigasi.hdt.product-macosx.cocoa.x86_64.zip">http://download.sigasi.com/preview/latest/com.sigasi.hdt.product-macosx.cocoa.x86_64.zip</a></li>
+<li><a href="http://download.sigasi.com/preview/latest/com.sigasi.hdt.product-win32.win32.x86_64.zip">http://download.sigasi.com/preview/latest/com.sigasi.hdt.product-win32.win32.x86_64.zip</a></li>
+<li><a href="http://download.sigasi.com/preview/latest/com.sigasi.hdt.product-win32.win32.x86.zip">http://download.sigasi.com/preview/latest/com.sigasi.hdt.product-win32.win32.x86.zip</a></li>
+</ul>
+<p>You can also update from (configure via Preferences &gt; Install/Update &gt; Available Software Sites &gt; Add...) :
+  http://download.sigasi.com/preview/studio/</p>
+<p>SHA Sums (<a href="/faq.html#how-can-i-check-a-sha-sum" title="FAQ">more info</a>) can be checked via <a href="http://download.sigasi.com/preview/latest/sha1.txt">http://download.sigasi.com/preview/latest/sha1.txt</a></p>
+<h3 id="feedback">Feedback</h3>
+<p>We welcome your feedback trough the usual channels or the comments below. Note that comments are cleared after each <a href="/releasenotes/" title="Release Notes">official release</a>.</p>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -2084,24 +2103,25 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
       <nav class="hidden-print hidden-xs hidden-sm">
         <div class="sidebar" data-spy="affix" data-offset-top="510" >
           <div class="well">
-            <a href="#"><strong>VHDL Pragmas</strong></a>
+            <a href="#"><strong>Sigasi Studio Preview (3.4)</strong></a>
             <div class="toc">
 <ul>
-<li><a href="#metacomments-and-attributes">Metacomments and Attributes</a></li>
-<li><a href="#ieee">IEEE</a></li>
+<li><a href="#systemverilog-improvements">SystemVerilog improvements</a><ul>
+<li><a href="#what-features-are-already-supported">What features are already supported?</a></li>
+<li><a href="#what-systemverilog-features-are-we-currently-working-on">What SystemVerilog features are we currently working on?</a></li>
+</ul>
+</li>
+<li><a href="#new-vhdl-formatter">New VHDL formatter</a><ul>
+<li><a href="#extras">Extras</a></li>
+</ul>
+</li>
+<li><a href="#update-or-install">Update or install?</a></li>
+<li><a href="#feedback">Feedback</a></li>
 </ul>
 </div>
 
           </div>
-<a href="http://www.sigasi.com/download/?utm_source=Insights&utm_medium=Button&utm_campaign=Download">
-<div style="width:100%;background-color:#262262;color:white;padding:5px;font:lato;text-align:center">
- 	<p style="font-size:40px;font-weight:700;font:lato;padding:10px;margin:0px">
-		Free Trial?
-	</p>
-	<p style="font-size:25px;font:lato;padding:10px;line-height: 110%;">
-		Download Sigasi Studio Now.
-	</p>
-</div> </a>        </div>
+        </div>
       </nav>
     </div>
 
