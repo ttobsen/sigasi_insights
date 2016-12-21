@@ -2032,8 +2032,10 @@ Insights<span style="color:#f47920">.</span>							</p>
 <p>The Sigasi Preview release channel offers more frequent releases than the official releases. This page gives an introduction to the most important changes.</p>
 <p>Although these preview release are less rigorously tested than than the official releases, they are stable enough for daily use.</p>
 <p><mark>If you run into any problems, please let us know</mark>.</p>
+<h2 id="current-preview-release">Current preview release</h2>
+<p>These features are available in the current preview release.</p>
 <h3 id="systemverilog-improvements">SystemVerilog improvements</h3>
-<p>We now process all SystemVerilog in a predictable order and keep track of all preprocessor state. This avoids problems with the <code>`ifndef ... `define  ...</code> pattern. This also allows us to offer <strong>full support for include files</strong>. You can now edit include files <mark>as if they were included in a Verilog file</mark>. This requires no extra configuration, except for <a href="/manual/editor.html#verilog-preprocessingmacros" title="Sigasi Studio Editor">setting your include paths</a>.</p>
+<p>All SystemVerilog is processed in a predictable order and keep track of the preprocessor state. This avoids problems with the <code>`ifndef ... `define  ...</code> pattern. This also allows us to offer <strong>full support for include files</strong>. You can edit include files <mark>as if they were included in a Verilog file</mark>. This requires no extra configuration, except for <a href="/manual/editor.html#verilog-preprocessingmacros" title="Sigasi Studio Editor">setting your include paths</a>.</p>
 <div class="wistia_responsive_padding" style="padding:118.13% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><iframe src="//fast.wistia.net/embed/iframe/wu2qqrjhu0?videoFoam=true" title="Wistia video player" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="100%" height="100%"></iframe></div></div>
 
 <script src="//fast.wistia.net/assets/external/E-v1.js" async></script>
@@ -2067,10 +2069,10 @@ E.g.:</p>
 </pre></div>
 
 
-<p>In general the new formatter should format your code the same way as earlier versions of Sigasi Studio. Let us know if you see unexpected changes.</p>
+<p>The new formatter has roughly the same rules as you have seen in earlier versions of Sigasi Studio. Let us know if you see unexpected and unwanted changes.</p>
 <h4 id="extras">Extras</h4>
-<p>We also added a <strong>Correct Indentation</strong> action. This action only modifies the indentation of your (selected) VHDL code. You can run via the context menu in the editor and <strong>Source &gt; Correct Indentation</strong> or via <strong>Ctrl+I</strong></p>
-<h3 id="update-or-install">Update or install?</h3>
+<p>Sigasi Studio now has a <strong>Correct Indentation</strong> action. This action only modifies the indentation of your (selected) VHDL code. You can run via the context menu in the editor and <strong>Source &gt; Correct Indentation</strong> or via <strong>Ctrl+I</strong></p>
+<h2 id="update-or-install">Update or install?</h2>
 <p>You can download the Stand-alone version of the latest preview version from:</p>
 <ul>
 <li><a href="http://download.sigasi.com/preview/latest/com.sigasi.hdt.product-linux.gtk.x86_64.zip">http://download.sigasi.com/preview/latest/com.sigasi.hdt.product-linux.gtk.x86_64.zip</a></li>
@@ -2106,6 +2108,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
             <a href="#"><strong>Sigasi Studio Preview (3.4)</strong></a>
             <div class="toc">
 <ul>
+<li><a href="#current-preview-release">Current preview release</a><ul>
 <li><a href="#systemverilog-improvements">SystemVerilog improvements</a><ul>
 <li><a href="#what-features-are-already-supported">What features are already supported?</a></li>
 <li><a href="#what-systemverilog-features-are-we-currently-working-on">What SystemVerilog features are we currently working on?</a></li>
@@ -2115,8 +2118,12 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 <li><a href="#extras">Extras</a></li>
 </ul>
 </li>
-<li><a href="#update-or-install">Update or install?</a></li>
+</ul>
+</li>
+<li><a href="#update-or-install">Update or install?</a><ul>
 <li><a href="#feedback">Feedback</a></li>
+</ul>
+</li>
 </ul>
 </div>
 
