@@ -711,7 +711,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tech/evaluating-xtext.html</loc>
+        <loc>http://insights.sigasi.com/screencasts/short_vhdl_navigation.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1821,6 +1821,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>http://insights.sigasi.com/tech/vhdl-file-encoding.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>http://insights.sigasi.com/tag/linting/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -1996,7 +2001,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/screencasts/short_vhdl_navigation.html</loc>
+        <loc>http://insights.sigasi.com/tech/evaluating-xtext.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
