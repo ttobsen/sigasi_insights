@@ -3,7 +3,7 @@
 	<!--// OPEN HEAD //-->
 	<head>
 		<!--// SITE TITLE //-->
-		<title>PSL 1.1 BNF Grammar - Sigasi</title>
+		<title>Property Specification Language (PSL) Grammar - Sigasi</title>
 		<!--// SITE META //-->
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -27,11 +27,11 @@
 		<link rel="canonical" href="http://insights.sigasi.com//tech/psl.ebnf.html" />
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="PSL 1.1 BNF Grammar - Sigasi" />
+		<meta property="og:title" content="Property Specification Language (PSL) Grammar - Sigasi" />
 		<meta property="og:url" content="http://insights.sigasi.com//tech/psl.ebnf.html" />
 		<meta property="og:site_name" content="Sigasi" />
 		<meta name="twitter:card" content="summary"/>
-		<meta name="twitter:title" content="PSL 1.1 BNF Grammar - Sigasi"/>
+		<meta name="twitter:title" content="Property Specification Language (PSL) Grammar - Sigasi"/>
 		<!-- / Yoast SEO plugin. -->
 		<script type="text/javascript">
 			window._wpemojiSettings = {
@@ -1816,7 +1816,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 <div class="page-heading page-heading-hidden clearfix">
 	<div class="container">
 		<div class="heading-text">
-			<h1 class="entry-title" >PSL 1.1 BNF Grammar</h1>
+			<h1 class="entry-title" >Property Specification Language (PSL) Grammar</h1>
 		</div>
 	</div>
 </div>
@@ -2015,7 +2015,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 <div class="container">
   <div class="page-header">
     <div>
-        <h1 style="margin-bottom: 0px;margin-top: 30px;">PSL 1.1 BNF Grammar</h1>
+        <h1 style="margin-bottom: 0px;margin-top: 30px;">Property Specification Language (PSL) Grammar</h1>
     </div>
         
     <div style="margin: 10px 0 10px">
@@ -2028,7 +2028,8 @@ Insights<span style="color:#f47920">.</span>							</p>
 
     <div class="content">
       <div class="col-md-9" role="main">
-        <p><em>
+        <p><em> IEEE Std 1850-2010 </em>  </p>
+<p><em>
 This document is copyrighted by the IEEE. It is made available for a wide variety of both public and private uses. These include both use, by reference, in laws and regulations, and use in private self-regulation, standardization, and the promotion of engineering practices and methods. By making this document available for use and adoption by public authorities and private users, the IEEE does not waive any rights in copyright to this document.
 </em>  </p>
 <p>Get the full Language Reference Manual, at <a href="https://standards.ieee.org/findstds/standard/1850-2010.html">https://standards.ieee.org/findstds/standard/1850-2010.html</a></p>
@@ -2043,60 +2044,87 @@ This document is copyrighted by the IEEE. It is made available for a wide variet
 <dd><a href="#HDL_UNIT">HDL_UNIT</a> <br />
     | <a href="#Verification_Unit">Verification_Unit</a> </dd>
 <dt><strong id="Verification_Unit">Verification_Unit</strong></dt>
-<dd><a href="#Vunit_Type">Vunit_Type</a> <a href="#PSL_Identifier">PSL_Identifier</a>  [ <font color="purple"><b>(</b></font> <a href="#Hierarchical_HDL_Name">Hierarchical_HDL_Name</a> <font color="purple"><b>)</b></font>  ]  <font color="purple"><b>{</b></font>  { <a href="#Inherit_Spec">Inherit_Spec</a>  }   { <a href="#VUnit_Item">VUnit_Item</a>  }  <font color="purple"><b>}</b></font> </dd>
+<dd><a href="#Vunit_Type">Vunit_Type</a> <em>PSL_</em><a href="#Identifier">Identifier</a>  [ <font color="purple"><b>(</b></font> <a href="#Hierarchical_HDL_Name">Hierarchical_HDL_Name</a> <font color="purple"><b>)</b></font>  ]  <font color="purple"><b>{</b></font>  { <a href="#Inherit_Spec">Inherit_Spec</a>  }   { <a href="#Override_Spec">Override_Spec</a>  }   { <a href="#VUnit_Item">VUnit_Item</a>  }  <font color="purple"><b>}</b></font> </dd>
 <dt><strong id="Vunit_Type">Vunit_Type</strong></dt>
 <dd><font color="purple"><b>vunit</b></font> <br />
+    | <font color="purple"><b>vpkg</b></font> <br />
     | <font color="purple"><b>vprop</b></font> <br />
     | <font color="purple"><b>vmode</b></font> </dd>
-<dt><strong id="Name">Name</strong></dt>
-<dd><a href="#HDL_or_PSL_Identifier">HDL_or_PSL_Identifier</a> </dd>
+<dt><strong id="Context_Spec">Context_Spec</strong></dt>
+<dd><a href="#Binding_Spec">Binding_Spec</a> <br />
+    | <a href="#Formal_Parameter_List">Formal_Parameter_List</a> </dd>
+<dt><strong id="Binding_Spec">Binding_Spec</strong></dt>
+<dd><a href="#Hierarchical_HDL_Name">Hierarchical_HDL_Name</a> </dd>
 <dt><strong id="Hierarchical_HDL_Name">Hierarchical_HDL_Name</strong></dt>
-<dd><a href="#HDL_MOD_NAME">HDL_MOD_NAME</a>  { <a href="#Path_Separator">Path_Separator</a> <a href="#instance_Name">instance_Name</a>  }  </dd>
+<dd><a href="#HDL_Module_Name">HDL_Module_Name</a>  { <a href="#Path_Separator">Path_Separator</a> <em>instance_</em><a href="#Name">Name</a>  }  </dd>
+<dt><strong id="HDL_Module_Name">HDL_Module_Name</strong></dt>
+<dd><em>HDL_Module_</em><a href="#Name">Name</a>  [ <font color="purple"><b>(</b></font> <em>HDL_Module_</em><a href="#Name">Name</a> <font color="purple"><b>)</b></font>  ]  </dd>
 <dt><strong id="Path_Separator">Path_Separator</strong></dt>
 <dd><font color="purple"><b>.</b></font> <br />
     | <font color="purple"><b>/</b></font> </dd>
+<dt><em>Instance_</em></dt>
+<dt><strong id="Name">Name</strong></dt>
+<dd><a href="#HDL_or_PSL_Identifier">HDL_or_PSL_Identifier</a> </dd>
 <dt><strong id="Inherit_Spec">Inherit_Spec</strong></dt>
-<dd><font color="purple"><b>inherit</b></font> <a href="#vunit_Name">vunit_Name</a>  { <font color="purple"><b>,</b></font> <a href="#vunit_Name">vunit_Name</a>  }  <font color="purple"><b>;</b></font> </dd>
+<dd>[ <font color="purple"><b>nontransitive</b></font>  ]  <font color="purple"><b>inherit</b></font> <em>vunit_</em><a href="#Name">Name</a>  { <font color="purple"><b>,</b></font> <em>vunit_</em><a href="#Name">Name</a>  }  <font color="purple"><b>;</b></font> </dd>
 <dt><strong id="VUnit_Item">VUnit_Item</strong></dt>
 <dd><a href="#HDL_DECL">HDL_DECL</a> <br />
     | <a href="#HDL_STMT">HDL_STMT</a> <br />
     | <a href="#PSL_Declaration">PSL_Declaration</a> <br />
-    | <a href="#PSL_Directive">PSL_Directive</a> </dd>
+    | <a href="#PSL_Directive">PSL_Directive</a> <br />
+    | <a href="#Vunit_Instance">Vunit_Instance</a> </dd>
+<dt><strong id="Vunit_Instance">Vunit_Instance</strong></dt>
+<dd><a href="#Label">Label</a> <font color="purple"><b>:</b></font> <a href="#Vunit_Type">Vunit_Type</a> <em>vunit_</em><a href="#Name">Name</a>  [ <font color="purple"><b>(</b></font> <a href="#Actual_Parameter_List">Actual_Parameter_List</a> <font color="purple"><b>)</b></font>  ]  <font color="purple"><b>;</b></font> </dd>
+<dt><strong id="Override_Spec">Override_Spec</strong></dt>
+<dd><font color="purple"><b>override</b></font> <a href="#Name_List">Name_List</a> <font color="purple"><b>;</b></font> </dd>
+<dt><strong id="Name_List">Name_List</strong></dt>
+<dd><a href="#Name">Name</a>  { <font color="purple"><b>,</b></font> <a href="#Name">Name</a>  }  </dd>
+<dt><strong id="Formal_Parameter_List">Formal_Parameter_List</strong></dt>
+<dd><a href="#Formal_Parameter">Formal_Parameter</a>  { <font color="purple"><b>;</b></font> <a href="#Formal_Parameter">Formal_Parameter</a>  }  </dd>
 </dl>
 <h4 id="a42-psl-declarations">A.4.2 PSL declarations</h4>
 <dl class="dl-horizontal">
 <dt><strong id="PSL_Declaration">PSL_Declaration</strong></dt>
 <dd><a href="#Property_Declaration">Property_Declaration</a> <br />
     | <a href="#Sequence_Declaration">Sequence_Declaration</a> <br />
-    | <a href="#Endpoint_Declaration">Endpoint_Declaration</a> <br />
     | <a href="#Clock_Declaration">Clock_Declaration</a> </dd>
 <dt><strong id="Property_Declaration">Property_Declaration</strong></dt>
-<dd><font color="purple"><b>property</b></font> <a href="#PSL_Identifier">PSL_Identifier</a>  [ <font color="purple"><b>(</b></font> <a href="#Formal_Parameter_List">Formal_Parameter_List</a> <font color="purple"><b>)</b></font>  ]  <a href="#DEF_SYM">DEF_SYM</a> <a href="#Property">Property</a> <font color="purple"><b>;</b></font> </dd>
+<dd><font color="purple"><b>property</b></font> <em>PSL_</em><a href="#Identifier">Identifier</a>  [ <font color="purple"><b>(</b></font> <a href="#Formal_Parameter_List">Formal_Parameter_List</a> <font color="purple"><b>)</b></font>  ]  <a href="#DEF_SYM">DEF_SYM</a> <a href="#Property">Property</a> <font color="purple"><b>;</b></font> </dd>
 <dt><strong id="Formal_Parameter_List">Formal_Parameter_List</strong></dt>
 <dd><a href="#Formal_Parameter">Formal_Parameter</a>  { <font color="purple"><b>;</b></font> <a href="#Formal_Parameter">Formal_Parameter</a>  }  </dd>
 <dt><strong id="Formal_Parameter">Formal_Parameter</strong></dt>
-<dd><a href="#Param_Type">Param_Type</a> <a href="#PSL_Identifier">PSL_Identifier</a>  { <font color="purple"><b>,</b></font> <a href="#PSL_Identifier">PSL_Identifier</a>  }  </dd>
-<dt><strong id="Param_Type">Param_Type</strong></dt>
+<dd><a href="#Param_Spec">Param_Spec</a> <em>PSL_</em><a href="#Identifier">Identifier</a>  { <font color="purple"><b>,</b></font> <em>PSL_</em><a href="#Identifier">Identifier</a>  }  </dd>
+<dt><strong id="Param_Spec">Param_Spec</strong></dt>
 <dd><font color="purple"><b>const</b></font> <br />
-    | <font color="purple"><b>boolean</b></font> <br />
-    | <font color="purple"><b>property</b></font> <br />
-    | <font color="purple"><b>sequence</b></font> </dd>
+    |  [ <font color="purple"><b>const</b></font> <br />
+     | <font color="purple"><b>mutable</b></font>  ]  <a href="#Value_Parameter">Value_Parameter</a> <br />
+    | <font color="purple"><b>sequence</b></font> <br />
+    | <font color="purple"><b>property</b></font> </dd>
+<dt><strong id="Value_Parameter">Value_Parameter</strong></dt>
+<dd><a href="#HDL_Type">HDL_Type</a> <br />
+    | <a href="#PSL_Type_Class">PSL_Type_Class</a> </dd>
+<dt><strong id="HDL_Type">HDL_Type</strong></dt>
+<dd><font color="purple"><b>hdltype</b></font> <a href="#HDL_VARIABLE_TYPE">HDL_VARIABLE_TYPE</a> </dd>
+<dt><strong id="PSL_Type_Class">PSL_Type_Class</strong></dt>
+<dd><font color="purple"><b>boolean</b></font> <br />
+    | <font color="purple"><b>bit</b></font> <br />
+    | <font color="purple"><b>bitvector</b></font> <br />
+    | <font color="purple"><b>numeric</b></font> <br />
+    | <font color="purple"><b>string</b></font> </dd>
 <dt><strong id="Sequence_Declaration">Sequence_Declaration</strong></dt>
-<dd><font color="purple"><b>sequence</b></font> <a href="#PSL_Identifier">PSL_Identifier</a>  [ <font color="purple"><b>(</b></font> <a href="#Formal_Parameter_List">Formal_Parameter_List</a> <font color="purple"><b>)</b></font>  ]  <a href="#DEF_SYM">DEF_SYM</a> <a href="#Sequence">Sequence</a> <font color="purple"><b>;</b></font> </dd>
-<dt><strong id="Endpoint_Declaration">Endpoint_Declaration</strong></dt>
-<dd><font color="purple"><b>endpoint</b></font> <a href="#PSL_Identifier">PSL_Identifier</a>  [ <font color="purple"><b>(</b></font> <a href="#Formal_Parameter_List">Formal_Parameter_List</a> <font color="purple"><b>)</b></font>  ]  <a href="#DEF_SYM">DEF_SYM</a> <a href="#Sequence">Sequence</a> <font color="purple"><b>;</b></font> </dd>
+<dd><font color="purple"><b>sequence</b></font> <em>PSL_</em><a href="#Identifier">Identifier</a>  [ <font color="purple"><b>(</b></font> <a href="#Formal_Parameter_List">Formal_Parameter_List</a> <font color="purple"><b>)</b></font>  ]  <a href="#DEF_SYM">DEF_SYM</a> <a href="#Sequence">Sequence</a> <font color="purple"><b>;</b></font> </dd>
 <dt><strong id="Clock_Declaration">Clock_Declaration</strong></dt>
 <dd><font color="purple"><b>default</b></font> <font color="purple"><b>clock</b></font> <a href="#DEF_SYM">DEF_SYM</a> <a href="#Clock_Expression">Clock_Expression</a> <font color="purple"><b>;</b></font> </dd>
 <dt><strong id="Clock_Expression">Clock_Expression</strong></dt>
-<dd><a href="#boolean_Name">boolean_Name</a> <br />
-    | <a href="#boolean_Built_In_Function_Call">boolean_Built_In_Function_Call</a> <br />
-    | <a href="#Endpoint_Instance">Endpoint_Instance</a> <br />
+<dd><em>boolean_</em><a href="#Name">Name</a> <br />
+    | <em>boolean_</em><a href="#Built_In_Function_Call">Built_In_Function_Call</a> <br />
     | <font color="purple"><b>(</b></font> <a href="#Boolean">Boolean</a> <font color="purple"><b>)</b></font> <br />
     | <font color="purple"><b>(</b></font> <a href="#HDL_CLK_EXPR">HDL_CLK_EXPR</a> <font color="purple"><b>)</b></font> </dd>
 <dt><strong id="Actual_Parameter_List">Actual_Parameter_List</strong></dt>
 <dd><a href="#Actual_Parameter">Actual_Parameter</a>  { <font color="purple"><b>,</b></font> <a href="#Actual_Parameter">Actual_Parameter</a>  }  </dd>
 <dt><strong id="Actual_Parameter">Actual_Parameter</strong></dt>
-<dd><a href="#Number">Number</a> <br />
+<dd><a href="#Any_Type">Any_Type</a> <br />
+    | <a href="#Number">Number</a> <br />
     | <a href="#Boolean">Boolean</a> <br />
     | <a href="#Property">Property</a> <br />
     | <a href="#Sequence">Sequence</a> </dd>
@@ -2106,17 +2134,17 @@ This document is copyrighted by the IEEE. It is made available for a wide variet
 <dt><strong id="PSL_Directive">PSL_Directive</strong></dt>
 <dd>[ <a href="#Label">Label</a> <font color="purple"><b>:</b></font>  ]  <a href="#Verification_Directive">Verification_Directive</a> </dd>
 <dt><strong id="Label">Label</strong></dt>
-<dd><a href="#PSL_Identifier">PSL_Identifier</a> </dd>
+<dd><em>PSL_</em><a href="#Identifier">Identifier</a> </dd>
 <dt><strong id="HDL_or_PSL_Identifier">HDL_or_PSL_Identifier</strong></dt>
-<dd><a href="#SystemVerilog_Identifier">SystemVerilog_Identifier</a> <br />
-    | <a href="#Verilog_Identifier">Verilog_Identifier</a> <br />
-    | <a href="#VHDL_Identifier">VHDL_Identifier</a> <br />
-    | <a href="#GDL_Identifier">GDL_Identifier</a> <br />
-    | <a href="#PSL_Identifier">PSL_Identifier</a> </dd>
+<dd><em>SystemVerilog_</em><a href="#Identifier">Identifier</a> <br />
+    | <em>Verilog_</em><a href="#Identifier">Identifier</a> <br />
+    | <em>VHDL_</em><a href="#Identifier">Identifier</a> <br />
+    | <em>SystemC_</em><a href="#Identifier">Identifier</a> <br />
+    | <em>GDL_</em><a href="#Identifier">Identifier</a> <br />
+    | <em>PSL_</em><a href="#Identifier">Identifier</a> </dd>
 <dt><strong id="Verification_Directive">Verification_Directive</strong></dt>
 <dd><a href="#Assert_Directive">Assert_Directive</a> <br />
     | <a href="#Assume_Directive">Assume_Directive</a> <br />
-    | <a href="#Assume_Guarantee_Directive">Assume_Guarantee_Directive</a> <br />
     | <a href="#Restrict_Directive">Restrict_Directive</a> <br />
     | <a href="#Restrict_Guarantee_Directive">Restrict_Guarantee_Directive</a> <br />
     | <a href="#Cover_Directive">Cover_Directive</a> <br />
@@ -2125,85 +2153,91 @@ This document is copyrighted by the IEEE. It is made available for a wide variet
 <dd><font color="purple"><b>assert</b></font> <a href="#Property">Property</a>  [ <font color="purple"><b>report</b></font> <a href="#String">String</a>  ]  <font color="purple"><b>;</b></font> </dd>
 <dt><strong id="Assume_Directive">Assume_Directive</strong></dt>
 <dd><font color="purple"><b>assume</b></font> <a href="#Property">Property</a> <font color="purple"><b>;</b></font> </dd>
-<dt><strong id="Assume_Guarantee_Directive">Assume_Guarantee_Directive</strong></dt>
-<dd><font color="purple"><b>assume_guarantee</b></font> <a href="#Property">Property</a>  [ <font color="purple"><b>report</b></font> <a href="#String">String</a>  ]  <font color="purple"><b>;</b></font> </dd>
 <dt><strong id="Restrict_Directive">Restrict_Directive</strong></dt>
 <dd><font color="purple"><b>restrict</b></font> <a href="#Sequence">Sequence</a> <font color="purple"><b>;</b></font> </dd>
 <dt><strong id="Restrict_Guarantee_Directive">Restrict_Guarantee_Directive</strong></dt>
-<dd><font color="purple"><b>restrict_guarantee</b></font> <a href="#Sequence">Sequence</a>  [ <font color="purple"><b>report</b></font> <a href="#String">String</a>  ]  <font color="purple"><b>;</b></font> </dd>
+<dd><font color="purple"><b>restrict!</b></font> <a href="#Sequence">Sequence</a> <font color="purple"><b>;</b></font> </dd>
 <dt><strong id="Cover_Directive">Cover_Directive</strong></dt>
 <dd><font color="purple"><b>cover</b></font> <a href="#Sequence">Sequence</a>  [ <font color="purple"><b>report</b></font> <a href="#String">String</a>  ]  <font color="purple"><b>;</b></font> </dd>
 <dt><strong id="Fairness_Statement">Fairness_Statement</strong></dt>
 <dd><font color="purple"><b>fairness</b></font> <a href="#Boolean">Boolean</a> <font color="purple"><b>;</b></font> <br />
     | <font color="purple"><b>strong</b></font> <font color="purple"><b>fairness</b></font> <a href="#Boolean">Boolean</a> <font color="purple"><b>,</b></font> <a href="#Boolean">Boolean</a> <font color="purple"><b>;</b></font> </dd>
 </dl>
-<h3 id="a44-psl-properties">A.4.4 PSL properties</h3>
+<h4 id="a44-psl-properties">A.4.4 PSL properties</h4>
 <dl class="dl-horizontal">
 <dt><strong id="Property">Property</strong></dt>
 <dd><a href="#Replicator">Replicator</a> <a href="#Property">Property</a> <br />
     | <a href="#FL_Property">FL_Property</a> <br />
     | <a href="#OBE_Property">OBE_Property</a> </dd>
 <dt><strong id="Replicator">Replicator</strong></dt>
-<dd><font color="purple"><b>forall</b></font> <a href="#PSL_Identifier">PSL_Identifier</a>  [ <a href="#Index_Range">Index_Range</a>  ]  <font color="purple"><b>in</b></font> <a href="#Value_Set">Value_Set</a> <font color="purple"><b>:</b></font> </dd>
+<dd><font color="purple"><b>forall</b></font> <a href="#Parameter_Definition">Parameter_Definition</a> <font color="purple"><b>:</b></font> </dd>
 <dt><strong id="Index_Range">Index_Range</strong></dt>
-<dd><a href="#LEFT_SYM">LEFT_SYM</a> <a href="#finite_Range">finite_Range</a> <a href="#RIGHT_SYM">RIGHT_SYM</a> <br />
+<dd><a href="#LEFT_SYM">LEFT_SYM</a> <em>finite_</em><a href="#Range">Range</a> <a href="#RIGHT_SYM">RIGHT_SYM</a> <br />
     | <font color="purple"><b>(</b></font> <a href="#HDL_RANGE">HDL_RANGE</a> <font color="purple"><b>)</b></font> </dd>
 <dt><strong id="Value_Set">Value_Set</strong></dt>
 <dd><font color="purple"><b>{</b></font> <a href="#Value_Range">Value_Range</a>  { <font color="purple"><b>,</b></font> <a href="#Value_Range">Value_Range</a>  }  <font color="purple"><b>}</b></font> <br />
     | <font color="purple"><b>boolean</b></font> </dd>
 <dt><strong id="Value_Range">Value_Range</strong></dt>
 <dd><a href="#Value">Value</a> <br />
-    | <a href="#FiniteRange">FiniteRange</a> </dd>
+    | <em>finite_</em><a href="#Range">Range</a> </dd>
 <dt><strong id="Value">Value</strong></dt>
 <dd><a href="#Boolean">Boolean</a> <br />
     | <a href="#Number">Number</a> </dd>
+<dt><strong id="Proc_Block">Proc_Block</strong></dt>
+<dd><font color="purple"><b>[[</b></font> <a href="#Proc_Block_Item">Proc_Block_Item</a>  { <a href="#Proc_Block_Item">Proc_Block_Item</a>  }  <font color="purple"><b>]]</b></font> </dd>
+<dt><strong id="Proc_Block_Item">Proc_Block_Item</strong></dt>
+<dd><a href="#HDL_DECL">HDL_DECL</a> <br />
+    | <a href="#HDL_SEQ_STMT">HDL_SEQ_STMT</a> </dd>
 <dt><strong id="FL_Property">FL_Property</strong></dt>
 <dd><a href="#Boolean">Boolean</a> <br />
-    | <font color="purple"><b>(</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>)</b></font> <br />
+    | <font color="purple"><b>(</b></font>  [ <font color="purple"><b>[[</b></font> <a href="#HDL_DECL">HDL_DECL</a>  { <font color="purple"><b>,</b></font> <a href="#HDL_DECL">HDL_DECL</a>  }  <font color="purple"><b>]]</b></font>  ]  <a href="#FL_Property">FL_Property</a> <font color="purple"><b>)</b></font> <br />
     | <a href="#Sequence">Sequence</a>  [ <font color="purple"><b>!</b></font>  ]  <br />
-    | <a href="#property_Name">property_Name</a>  [ <font color="purple"><b>(</b></font> <a href="#Actual_Parameter_List">Actual_Parameter_List</a> <font color="purple"><b>)</b></font>  ]  <br />
+    | <em>FL_property_</em><a href="#Name">Name</a>  [ <font color="purple"><b>(</b></font> <a href="#Actual_Parameter_List">Actual_Parameter_List</a> <font color="purple"><b>)</b></font>  ]  <br />
     | <a href="#FL_Property">FL_Property</a> <font color="purple"><b>@</b></font> <a href="#Clock_Expression">Clock_Expression</a> <br />
     | <a href="#FL_Property">FL_Property</a> <font color="purple"><b>abort</b></font> <a href="#Boolean">Boolean</a> <br />
+    | <a href="#FL_Property">FL_Property</a> <font color="purple"><b>async_abort</b></font> <a href="#Boolean">Boolean</a> <br />
+    | <a href="#FL_Property">FL_Property</a> <font color="purple"><b>sync_abort</b></font> <a href="#Boolean">Boolean</a> <br />
+    | <a href="#Parameterized_Property">Parameterized_Property</a> <em>: Logical Operators  :</em><br />
     | <a href="#NOT_OP">NOT_OP</a> <a href="#FL_Property">FL_Property</a> <br />
     | <a href="#FL_Property">FL_Property</a> <a href="#AND_OP">AND_OP</a> <a href="#FL_Property">FL_Property</a> <br />
-    | <a href="#FL_Property">FL_Property</a> <a href="#OR_OP">OR_OP</a> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>:</b></font> <br />
+    | <a href="#FL_Property">FL_Property</a> <a href="#OR_OP">OR_OP</a> <a href="#FL_Property">FL_Property</a> <em>':'</em><br />
     | <a href="#FL_Property">FL_Property</a> <font color="purple"><b>-&gt;</b></font> <a href="#FL_Property">FL_Property</a> <br />
-    | <a href="#FL_Property">FL_Property</a> <font color="purple"><b>&lt;-&gt;</b></font> <a href="#FL_Property">FL_Property</a> <br />
+    | <a href="#FL_Property">FL_Property</a> <font color="purple"><b>&lt;-&gt;</b></font> <a href="#FL_Property">FL_Property</a> <em>: Primitive LTL Operators  :</em><br />
     | <font color="purple"><b>X</b></font> <a href="#FL_Property">FL_Property</a> <br />
     | <font color="purple"><b>X!</b></font> <a href="#FL_Property">FL_Property</a> <br />
     | <font color="purple"><b>F</b></font> <a href="#FL_Property">FL_Property</a> <br />
     | <font color="purple"><b>G</b></font> <a href="#FL_Property">FL_Property</a> <br />
     | <font color="purple"><b>[</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>U</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>]</b></font> <br />
-    | <font color="purple"><b>[</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>W</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>]</b></font> <br />
+    | <font color="purple"><b>[</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>W</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>]</b></font> <em>: Simple Temporal Operators  :</em><br />
     | <font color="purple"><b>always</b></font> <a href="#FL_Property">FL_Property</a> <br />
     | <font color="purple"><b>never</b></font> <a href="#FL_Property">FL_Property</a> <br />
     | <font color="purple"><b>next</b></font> <a href="#FL_Property">FL_Property</a> <br />
     | <font color="purple"><b>next!</b></font> <a href="#FL_Property">FL_Property</a> <br />
-    | <font color="purple"><b>eventually!</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>:</b></font> <br />
+    | <font color="purple"><b>eventually!</b></font> <a href="#FL_Property">FL_Property</a> <em>':'</em><br />
     | <a href="#FL_Property">FL_Property</a> <font color="purple"><b>until!</b></font> <a href="#FL_Property">FL_Property</a> <br />
     | <a href="#FL_Property">FL_Property</a> <font color="purple"><b>until</b></font> <a href="#FL_Property">FL_Property</a> <br />
     | <a href="#FL_Property">FL_Property</a> <font color="purple"><b>until!<mark></b></font> <a href="#FL_Property">FL_Property</a> <br />
-    | <a href="#FL_Property">FL_Property</a> <font color="purple"><b>until</mark></b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>:</b></font> <br />
+    | <a href="#FL_Property">FL_Property</a> <font color="purple"><b>until</mark></b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>:</b></font> <em>':'</em><br />
     | <a href="#FL_Property">FL_Property</a> <font color="purple"><b>before!</b></font> <a href="#FL_Property">FL_Property</a> <br />
     | <a href="#FL_Property">FL_Property</a> <font color="purple"><b>before</b></font> <a href="#FL_Property">FL_Property</a> <br />
     | <a href="#FL_Property">FL_Property</a> <font color="purple"><b>before!<mark></b></font> <a href="#FL_Property">FL_Property</a> <br />
-    | <a href="#FL_Property">FL_Property</a> <font color="purple"><b>before</mark></b></font> <a href="#FL_Property">FL_Property</a> <br />
+    | <a href="#FL_Property">FL_Property</a> <font color="purple"><b>before</mark></b></font> <a href="#FL_Property">FL_Property</a> <em>: Extended Next (Event) Operators :</em><br />
     | <font color="purple"><b>X</b></font> <font color="purple"><b>[</b></font> <a href="#Number">Number</a> <font color="purple"><b>]</b></font> <font color="purple"><b>(</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>)</b></font> <br />
     | <font color="purple"><b>X!</b></font> <font color="purple"><b>[</b></font> <a href="#Number">Number</a> <font color="purple"><b>]</b></font> <font color="purple"><b>(</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>)</b></font> <br />
     | <font color="purple"><b>next</b></font> <font color="purple"><b>[</b></font> <a href="#Number">Number</a> <font color="purple"><b>]</b></font> <font color="purple"><b>(</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>)</b></font> <br />
-    | <font color="purple"><b>next!</b></font> <font color="purple"><b>[</b></font> <a href="#Number">Number</a> <font color="purple"><b>]</b></font> <font color="purple"><b>(</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>)</b></font> <font color="purple"><b>:</b></font> <br />
-    | <font color="purple"><b>next_a</b></font> <font color="purple"><b>[</b></font> <a href="#finite_Range">finite_Range</a> <font color="purple"><b>]</b></font> <font color="purple"><b>(</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>)</b></font> <br />
-    | <font color="purple"><b>next_a!</b></font> <font color="purple"><b>[</b></font> <a href="#finite_Range">finite_Range</a> <font color="purple"><b>]</b></font> <font color="purple"><b>(</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>)</b></font> <br />
-    | <font color="purple"><b>next_e</b></font> <font color="purple"><b>[</b></font> <a href="#finite_Range">finite_Range</a> <font color="purple"><b>]</b></font> <font color="purple"><b>(</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>)</b></font> <br />
-    | <font color="purple"><b>next_e!</b></font> <font color="purple"><b>[</b></font> <a href="#finite_Range">finite_Range</a> <font color="purple"><b>]</b></font> <font color="purple"><b>(</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>)</b></font> <font color="purple"><b>:</b></font> <br />
+    | <font color="purple"><b>next!</b></font> <font color="purple"><b>[</b></font> <a href="#Number">Number</a> <font color="purple"><b>]</b></font> <font color="purple"><b>(</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>)</b></font> <em>':(see A.4.7)</em><br />
+    | <font color="purple"><b>next_a</b></font> <font color="purple"><b>[</b></font> <em>finite_</em><a href="#Range">Range</a> <font color="purple"><b>]</b></font> <font color="purple"><b>(</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>)</b></font> <br />
+    | <font color="purple"><b>next_a!</b></font> <font color="purple"><b>[</b></font> <em>finite_</em><a href="#Range">Range</a> <font color="purple"><b>]</b></font> <font color="purple"><b>(</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>)</b></font> <br />
+    | <font color="purple"><b>next_e</b></font> <font color="purple"><b>[</b></font> <em>finite_</em><a href="#Range">Range</a> <font color="purple"><b>]</b></font> <font color="purple"><b>(</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>)</b></font> <br />
+    | <font color="purple"><b>next_e!</b></font> <font color="purple"><b>[</b></font> <em>finite_</em><a href="#Range">Range</a> <font color="purple"><b>]</b></font> <font color="purple"><b>(</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>)</b></font> <em>':'</em><br />
     | <font color="purple"><b>next_event!</b></font> <font color="purple"><b>(</b></font> <a href="#Boolean">Boolean</a> <font color="purple"><b>)</b></font> <font color="purple"><b>(</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>)</b></font> <br />
     | <font color="purple"><b>next_event</b></font> <font color="purple"><b>(</b></font> <a href="#Boolean">Boolean</a> <font color="purple"><b>)</b></font> <font color="purple"><b>(</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>)</b></font> <br />
-    | <font color="purple"><b>next_event!</b></font> <font color="purple"><b>(</b></font> <a href="#Boolean">Boolean</a> <font color="purple"><b>)</b></font>  [ <a href="#positive_Number">positive_Number</a>  ]  <font color="purple"><b>(</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>)</b></font> <br />
-    | <font color="purple"><b>next_event</b></font> <font color="purple"><b>(</b></font> <a href="#Boolean">Boolean</a> <font color="purple"><b>)</b></font>  [ <a href="#positive_Number">positive_Number</a>  ]  <font color="purple"><b>(</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>)</b></font> <font color="purple"><b>:</b></font> <br />
-    | <font color="purple"><b>next_event_a!</b></font> <font color="purple"><b>(</b></font> <a href="#Boolean">Boolean</a> <font color="purple"><b>)</b></font>  [ <a href="#finite_positive_Range">finite_positive_Range</a>  ]  <font color="purple"><b>(</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>)</b></font> <br />
-    | <font color="purple"><b>next_event_a</b></font> <font color="purple"><b>(</b></font> <a href="#Boolean">Boolean</a> <font color="purple"><b>)</b></font>  [ <a href="#finite_positive_Range">finite_positive_Range</a>  ]  <font color="purple"><b>(</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>)</b></font> <br />
-    | <font color="purple"><b>next_event_e!</b></font> <font color="purple"><b>(</b></font> <a href="#Boolean">Boolean</a> <font color="purple"><b>)</b></font>  [ <a href="#finite_positive_Range">finite_positive_Range</a>  ]  <font color="purple"><b>(</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>)</b></font> <br />
-    | <font color="purple"><b>next_event_e</b></font> <font color="purple"><b>(</b></font> <a href="#Boolean">Boolean</a> <font color="purple"><b>)</b></font>  [ <a href="#finite_positive_Range">finite_positive_Range</a>  ]  <font color="purple"><b>(</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>)</b></font> <br />
+    | <font color="purple"><b>next_event!</b></font> <font color="purple"><b>(</b></font> <a href="#Boolean">Boolean</a> <font color="purple"><b>)</b></font>  [ <em>positive_</em><a href="#Number">Number</a>  ]  <font color="purple"><b>(</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>)</b></font> <br />
+    | <font color="purple"><b>next_event</b></font> <font color="purple"><b>(</b></font> <a href="#Boolean">Boolean</a> <font color="purple"><b>)</b></font>  [ <em>positive_</em><a href="#Number">Number</a>  ]  <font color="purple"><b>(</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>)</b></font> <em>':'</em><br />
+    | <font color="purple"><b>next_event_a!</b></font> <font color="purple"><b>(</b></font> <a href="#Boolean">Boolean</a> <font color="purple"><b>)</b></font>  [ <em>finite_positive_</em><a href="#Range">Range</a>  ]  <font color="purple"><b>(</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>)</b></font> <br />
+    | <font color="purple"><b>next_event_a</b></font> <font color="purple"><b>(</b></font> <a href="#Boolean">Boolean</a> <font color="purple"><b>)</b></font>  [ <em>finite_positive_</em><a href="#Range">Range</a>  ]  <font color="purple"><b>(</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>)</b></font> <br />
+    | <font color="purple"><b>next_event_e!</b></font> <font color="purple"><b>(</b></font> <a href="#Boolean">Boolean</a> <font color="purple"><b>)</b></font>  [ <em>finite_positive_</em><a href="#Range">Range</a>  ]  <font color="purple"><b>(</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>)</b></font> <br />
+    | <font color="purple"><b>next_event_e</b></font> <font color="purple"><b>(</b></font> <a href="#Boolean">Boolean</a> <font color="purple"><b>)</b></font>  [ <em>finite_positive_</em><a href="#Range">Range</a>  ]  <font color="purple"><b>(</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>)</b></font> <em>: Operators on SEREs  :</em><br />
     |  { <a href="#Sequence">Sequence</a>  }  <font color="purple"><b>(</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>)</b></font> <br />
     | <a href="#Sequence">Sequence</a> <font color="purple"><b>|-&gt;</b></font> <a href="#FL_Property">FL_Property</a> <br />
     | <a href="#Sequence">Sequence</a> <font color="purple"><b>|=&gt;</b></font> <a href="#FL_Property">FL_Property</a> </dd>
@@ -2224,15 +2258,35 @@ This document is copyrighted by the IEEE. It is made available for a wide variet
     | <a href="#Compound_SERE">Compound_SERE</a> <font color="purple"><b>|</b></font> <a href="#Compound_SERE">Compound_SERE</a> <br />
     | <a href="#Compound_SERE">Compound_SERE</a> <font color="purple"><b>&amp;</b></font> <a href="#Compound_SERE">Compound_SERE</a> <br />
     | <a href="#Compound_SERE">Compound_SERE</a> <font color="purple"><b>&amp;&amp;</b></font> <a href="#Compound_SERE">Compound_SERE</a> <br />
-    | <a href="#Compound_SERE">Compound_SERE</a> <font color="purple"><b>within</b></font> <a href="#Compound_SERE">Compound_SERE</a> </dd>
+    | <a href="#Compound_SERE">Compound_SERE</a> <font color="purple"><b>within</b></font> <a href="#Compound_SERE">Compound_SERE</a> <br />
+    | <a href="#Parameterized_SERE">Parameterized_SERE</a> </dd>
 </dl>
-<h4 id="a46-sequences">A.4.6 Sequences</h4>
+<h4 id="a46-parameterized-properties-and-seres">A.4.6 Parameterized Properties and SEREs</h4>
+<dl class="dl-horizontal">
+<dt><strong id="Parameterized_Property">Parameterized_Property</strong></dt>
+<dd><font color="purple"><b>for</b></font> <a href="#Parameters_Definition">Parameters_Definition</a> <font color="purple"><b>:</b></font> <a href="#And_Or_Property_Op">And_Or_Property_Op</a> <font color="purple"><b>(</b></font> <a href="#FL_Property">FL_Property</a> <font color="purple"><b>)</b></font> </dd>
+<dt><strong id="Parameterized_SERE">Parameterized_SERE</strong></dt>
+<dd><font color="purple"><b>for</b></font> <a href="#Parameters_Definition">Parameters_Definition</a> <font color="purple"><b>:</b></font> <a href="#And_Or_SERE_Op">And_Or_SERE_Op</a> <font color="purple"><b>{</b></font> <a href="#SERE">SERE</a> <font color="purple"><b>}</b></font> </dd>
+<dt><strong id="Parameters_Definition">Parameters_Definition</strong></dt>
+<dd><a href="#Parameter_Definition">Parameter_Definition</a>  { <a href="#Parameter_Definition">Parameter_Definition</a>  }  </dd>
+<dt><strong id="Parameter_Definition">Parameter_Definition</strong></dt>
+<dd><em>PSL_</em><a href="#Identifier">Identifier</a>  [ <a href="#Index_Range">Index_Range</a>  ]  <font color="purple"><b>in</b></font> <a href="#Value_Set">Value_Set</a> </dd>
+<dt><strong id="And_Or_Property_Op">And_Or_Property_Op</strong></dt>
+<dd><a href="#AND_OP">AND_OP</a> <br />
+    | <a href="#OR_OP">OR_OP</a> </dd>
+<dt><strong id="And_Or_SERE_Op">And_Or_SERE_Op</strong></dt>
+<dd><font color="purple"><b>&amp;&amp;</b></font> <br />
+    | <font color="purple"><b>&amp;</b></font> <br />
+    | <font color="purple"><b>|</b></font> </dd>
+</dl>
+<h4 id="a47-sequences">A.4.7 Sequences</h4>
 <dl class="dl-horizontal">
 <dt><strong id="Sequence">Sequence</strong></dt>
 <dd><a href="#Sequence_Instance">Sequence_Instance</a> <br />
     | <a href="#Repeated_SERE">Repeated_SERE</a> <br />
     | <a href="#Braced_SERE">Braced_SERE</a> <br />
-    | <a href="#Clocked_SERE">Clocked_SERE</a> </dd>
+    | <a href="#Clocked_SERE">Clocked_SERE</a> <br />
+    | <a href="#Sequence">Sequence</a> <a href="#Proc_Block">Proc_Block</a> </dd>
 <dt><strong id="Repeated_SERE">Repeated_SERE</strong></dt>
 <dd><a href="#Boolean">Boolean</a> <font color="purple"><b>[*</b></font>  [ <a href="#Count">Count</a>  ]  <font color="purple"><b>]</b></font> <br />
     | <a href="#Sequence">Sequence</a> <font color="purple"><b>[*</b></font>  [ <a href="#Count">Count</a>  ]  <font color="purple"><b>]</b></font> <br />
@@ -2241,18 +2295,19 @@ This document is copyrighted by the IEEE. It is made available for a wide variet
     | <a href="#Sequence">Sequence</a> <font color="purple"><b>[+]</b></font> <br />
     | <font color="purple"><b>[+]</b></font> <br />
     | <a href="#Boolean">Boolean</a> <font color="purple"><b>[=</b></font> <a href="#Count">Count</a> <font color="purple"><b>]</b></font> <br />
-    | <a href="#Boolean">Boolean</a> <font color="purple"><b>[-&gt;</b></font>  [ <a href="#positive_Count">positive_Count</a>  ]  <font color="purple"><b>]</b></font> </dd>
+    | <a href="#Boolean">Boolean</a> <font color="purple"><b>[-&gt;</b></font>  [ <em>positive_</em><a href="#Count">Count</a>  ]  <font color="purple"><b>]</b></font> <br />
+    | <a href="#Boolean">Boolean</a> <a href="#Proc_Block">Proc_Block</a> <br />
+    | <a href="#Sequence">Sequence</a> <a href="#Proc_Block">Proc_Block</a> </dd>
 <dt><strong id="Braced_SERE">Braced_SERE</strong></dt>
-<dd><font color="purple"><b>{</b></font> <a href="#SERE">SERE</a> <font color="purple"><b>}</b></font> </dd>
+<dd><font color="purple"><b>{</b></font>  [ <font color="purple"><b>[[</b></font> <a href="#HDL_DECL">HDL_DECL</a>  { <a href="#HDL_DECL">HDL_DECL</a>  }  <font color="purple"><b>]]</b></font>  ]  <a href="#SERE">SERE</a> <font color="purple"><b>}</b></font> <br />
+    | <font color="purple"><b>{</b></font>  [ <font color="purple"><b>free</b></font> <em>HDL_</em><a href="#Identifier">Identifier</a>  { <em>HDL_</em><a href="#Identifier">Identifier</a>  }   ]  <a href="#SERE">SERE</a> <font color="purple"><b>}</b></font> </dd>
 <dt><strong id="Sequence_Instance">Sequence_Instance</strong></dt>
-<dd><a href="#sequence_Name">sequence_Name</a>  [ <font color="purple"><b>(</b></font> <a href="#Actual_Parameter_List">Actual_Parameter_List</a> <font color="purple"><b>)</b></font>  ]  </dd>
+<dd><em>sequence_</em><a href="#Name">Name</a>  [ <font color="purple"><b>(</b></font> <a href="#Actual_Parameter_List">Actual_Parameter_List</a> <font color="purple"><b>)</b></font>  ]  </dd>
 <dt><strong id="Clocked_SERE">Clocked_SERE</strong></dt>
 <dd><a href="#Braced_SERE">Braced_SERE</a> <font color="purple"><b>@</b></font> <a href="#Clock_Expression">Clock_Expression</a> </dd>
 <dt><strong id="Count">Count</strong></dt>
 <dd><a href="#Number">Number</a> <br />
     | <a href="#Range">Range</a> </dd>
-<dt><strong id="FiniteRange">FiniteRange</strong></dt>
-<dd><a href="#Range">Range</a> </dd>
 <dt><strong id="Range">Range</strong></dt>
 <dd><a href="#Low_Bound">Low_Bound</a> <a href="#RANGE_SYM">RANGE_SYM</a> <a href="#High_Bound">High_Bound</a> </dd>
 <dt><strong id="Low_Bound">Low_Bound</strong></dt>
@@ -2262,26 +2317,25 @@ This document is copyrighted by the IEEE. It is made available for a wide variet
 <dd><a href="#Number">Number</a> <br />
     | <a href="#MAX_VAL">MAX_VAL</a> </dd>
 </dl>
-<h4 id="a47-forms-of-expression">A.4.7 Forms of expression</h4>
+<h4 id="a48-forms-of-expression">A.4.8 Forms of expression</h4>
 <dl class="dl-horizontal">
 <dt><strong id="Any_Type">Any_Type</strong></dt>
 <dd><a href="#HDL_or_PSL_Expression">HDL_or_PSL_Expression</a> </dd>
 <dt><strong id="Bit">Bit</strong></dt>
-<dd><a href="#HDL_or_PSL_Expression">HDL_or_PSL_Expression</a> </dd>
+<dd><em>bit</em><a href="#HDL_or_PSL_Expression">HDL_or_PSL_Expression</a> </dd>
 <dt><strong id="Boolean">Boolean</strong></dt>
-<dd><a href="#HDL_or_PSL_Expression">HDL_or_PSL_Expression</a> </dd>
+<dd><em>boolean</em><a href="#HDL_or_PSL_Expression">HDL_or_PSL_Expression</a> </dd>
 <dt><strong id="BitVector">BitVector</strong></dt>
-<dd><a href="#HDL_or_PSL_Expression">HDL_or_PSL_Expression</a> </dd>
+<dd><em>bitvector</em><a href="#HDL_or_PSL_Expression">HDL_or_PSL_Expression</a> </dd>
 <dt><strong id="Number">Number</strong></dt>
-<dd><a href="#numeric_HDL_or_PSL_Expression">numeric_HDL_or_PSL_Expression</a> </dd>
+<dd><em>numeric</em><a href="#HDL_or_PSL_Expression">HDL_or_PSL_Expression</a> </dd>
 <dt><strong id="String">String</strong></dt>
-<dd><a href="#string_HDL_or_PSL_Expression">string_HDL_or_PSL_Expression</a> </dd>
+<dd><em>string_</em><a href="#HDL_or_PSL_Expression">HDL_or_PSL_Expression</a> </dd>
 <dt><strong id="HDL_or_PSL_Expression">HDL_or_PSL_Expression</strong></dt>
 <dd><a href="#HDL_Expression">HDL_Expression</a> <br />
     | <a href="#PSL_Expression">PSL_Expression</a> <br />
     | <a href="#Built_In_Function_Call">Built_In_Function_Call</a> <br />
-    | <a href="#Union_Expression">Union_Expression</a> <br />
-    | <a href="#Endpoint_Instance">Endpoint_Instance</a> </dd>
+    | <a href="#Union_Expression">Union_Expression</a> </dd>
 <dt><strong id="HDL_Expression">HDL_Expression</strong></dt>
 <dd><a href="#HDL_EXPR">HDL_EXPR</a> </dd>
 <dt><strong id="PSL_Expression">PSL_Expression</strong></dt>
@@ -2293,34 +2347,38 @@ This document is copyrighted by the IEEE. It is made available for a wide variet
     | <font color="purple"><b>stable</b></font> <font color="purple"><b>(</b></font> <a href="#Any_Type">Any_Type</a> <font color="purple"><b>)</b></font> <br />
     | <font color="purple"><b>rose</b></font> <font color="purple"><b>(</b></font> <a href="#Bit">Bit</a> <font color="purple"><b>)</b></font> <br />
     | <font color="purple"><b>fell</b></font> <font color="purple"><b>(</b></font> <a href="#Bit">Bit</a> <font color="purple"><b>)</b></font> <br />
+    | <font color="purple"><b>ended</b></font> <font color="purple"><b>(</b></font> <a href="#Sequence">Sequence</a>  [ <font color="purple"><b>,</b></font> <a href="#Clock_Expression">Clock_Expression</a>  ]  <font color="purple"><b>)</b></font> <br />
     | <font color="purple"><b>isunknown</b></font> <font color="purple"><b>(</b></font> <a href="#BitVector">BitVector</a> <font color="purple"><b>)</b></font> <br />
     | <font color="purple"><b>countones</b></font> <font color="purple"><b>(</b></font> <a href="#BitVector">BitVector</a> <font color="purple"><b>)</b></font> <br />
     | <font color="purple"><b>onehot</b></font> <font color="purple"><b>(</b></font> <a href="#BitVector">BitVector</a> <font color="purple"><b>)</b></font> <br />
-    | <font color="purple"><b>onehot0</b></font> <font color="purple"><b>(</b></font> <a href="#BitVector">BitVector</a> <font color="purple"><b>)</b></font> </dd>
+    | <font color="purple"><b>onehot0</b></font> <font color="purple"><b>(</b></font> <a href="#BitVector">BitVector</a> <font color="purple"><b>)</b></font> <br />
+    | <font color="purple"><b>nondet</b></font> <font color="purple"><b>(</b></font> <a href="#Value_Set">Value_Set</a> <font color="purple"><b>)</b></font> <br />
+    | <font color="purple"><b>nondet_vector</b></font> <font color="purple"><b>(</b></font> <a href="#Number">Number</a> <font color="purple"><b>,</b></font> <a href="#Value_Set">Value_Set</a> <font color="purple"><b>)</b></font> </dd>
 <dt><strong id="Union_Expression">Union_Expression</strong></dt>
 <dd><a href="#Any_Type">Any_Type</a> <font color="purple"><b>union</b></font> <a href="#Any_Type">Any_Type</a> </dd>
-<dt><strong id="Endpoint_Instance">Endpoint_Instance</strong></dt>
-<dd><a href="#endpoint_Name">endpoint_Name</a>  [ <font color="purple"><b>(</b></font> <a href="#Actual_Parameter_List">Actual_Parameter_List</a> <font color="purple"><b>)</b></font>  ]  </dd>
 </dl>
-<h3 id="a48-optional-branching-extension">A.4.8 Optional branching extension</h3>
+<h4 id="a49-optional-branching-extension">A.4.9 Optional branching extension</h4>
 <dl class="dl-horizontal">
 <dt><strong id="OBE_Property">OBE_Property</strong></dt>
 <dd><a href="#Boolean">Boolean</a> <br />
     | <font color="purple"><b>(</b></font> <a href="#OBE_Property">OBE_Property</a> <font color="purple"><b>)</b></font> <br />
-    | <a href="#property_Name">property_Name</a>  [ <font color="purple"><b>(</b></font> <a href="#Actual_Parameter_List">Actual_Parameter_List</a> <font color="purple"><b>)</b></font>  ]  <br />
+    | <em>property_Name</em> [ <font color="purple"><b>(</b></font> <a href="#Actual_Parameter_List">Actual_Parameter_List</a> <font color="purple"><b>)</b></font>  ]  <em>: Logical Operators  :</em><br />
     | <a href="#NOT_OP">NOT_OP</a> <a href="#OBE_Property">OBE_Property</a> <br />
     | <a href="#OBE_Property">OBE_Property</a> <a href="#AND_OP">AND_OP</a> <a href="#OBE_Property">OBE_Property</a> <br />
     | <a href="#OBE_Property">OBE_Property</a> <a href="#OR_OP">OR_OP</a> <a href="#OBE_Property">OBE_Property</a> <br />
     | <a href="#OBE_Property">OBE_Property</a> <font color="purple"><b>-&gt;</b></font> <a href="#OBE_Property">OBE_Property</a> <br />
-    | <a href="#OBE_Property">OBE_Property</a> <font color="purple"><b>&lt;-&gt;</b></font> <a href="#OBE_Property">OBE_Property</a> <br />
+    | <a href="#OBE_Property">OBE_Property</a> <font color="purple"><b>&lt;-&gt;</b></font> <a href="#OBE_Property">OBE_Property</a> <em>: Universal Operators :</em><br />
     | <font color="purple"><b>AX</b></font> <a href="#OBE_Property">OBE_Property</a> <br />
     | <font color="purple"><b>AG</b></font> <a href="#OBE_Property">OBE_Property</a> <br />
     | <font color="purple"><b>AF</b></font> <a href="#OBE_Property">OBE_Property</a> <br />
-    | <font color="purple"><b>A</b></font>  [ <a href="#OBE_Property">OBE_Property</a> <font color="purple"><b>U</b></font> <a href="#OBE_Property">OBE_Property</a>  ]  <br />
+    | <font color="purple"><b>A</b></font>  [ <a href="#OBE_Property">OBE_Property</a> <font color="purple"><b>U</b></font> <a href="#OBE_Property">OBE_Property</a>  ]  <em>: Existential Operators :</em><br />
     | <font color="purple"><b>EX</b></font> <a href="#OBE_Property">OBE_Property</a> <br />
     | <font color="purple"><b>EG</b></font> <a href="#OBE_Property">OBE_Property</a> <br />
     | <font color="purple"><b>EF</b></font> <a href="#OBE_Property">OBE_Property</a> <br />
     | <font color="purple"><b>E</b></font>  [ <a href="#OBE_Property">OBE_Property</a> <font color="purple"><b>U</b></font> <a href="#OBE_Property">OBE_Property</a>  ]  </dd>
+</dl>
+<h4 id="vhdl-flavor-macros">VHDL Flavor macros</h4>
+<dl class="dl-horizontal">
 <dt><strong id="DEF_SYM">DEF_SYM</strong></dt>
 <dd><font color="purple"><b>is</b></font> </dd>
 <dt><strong id="RANGE_SYM">RANGE_SYM</strong></dt>
@@ -2331,69 +2389,32 @@ This document is copyrighted by the IEEE. It is made available for a wide variet
 <dd><font color="purple"><b>or</b></font> </dd>
 <dt><strong id="NOT_OP">NOT_OP</strong></dt>
 <dd><font color="purple"><b>not</b></font> </dd>
-<dt><strong id="string_HDL_or_PSL_Expression">string_HDL_or_PSL_Expression</strong></dt>
-<dd><a href="#Expression">Expression</a> </dd>
-<dt><strong id="VHDL_Identifier">VHDL_Identifier</strong></dt>
-<dd><a href="#Identifier">Identifier</a> </dd>
-<dt><strong id="Verilog_Identifier">Verilog_Identifier</strong></dt>
-<dd><a href="#Identifier">Identifier</a> </dd>
-<dt><strong id="PSL_Identifier">PSL_Identifier</strong></dt>
-<dd><a href="#Identifier">Identifier</a> </dd>
-<dt><strong id="SystemVerilog_Identifier">SystemVerilog_Identifier</strong></dt>
-<dd><a href="#Identifier">Identifier</a> </dd>
-<dt><strong id="GDL_Identifier">GDL_Identifier</strong></dt>
-<dd><a href="#Identifier">Identifier</a> </dd>
 <dt><strong id="MIN_VAL">MIN_VAL</strong></dt>
-<dd><em>external</em> </dd>
+<dd><font color="purple"><b>0</b></font> </dd>
 <dt><strong id="MAX_VAL">MAX_VAL</strong></dt>
-<dd><em>external</em> </dd>
+<dd><font color="purple"><b>inf</b></font> </dd>
+<dt><strong id="HDL_EXPR">HDL_EXPR</strong></dt>
+<dd><em>Extended_VHDL_Expression</em> </dd>
+<dt><strong id="HDL_CLK_EXPR">HDL_CLK_EXPR</strong></dt>
+<dd><em>external</em> <em>VHDL_</em><a href="#expression">expression</a> </dd>
 <dt><strong id="HDL_UNIT">HDL_UNIT</strong></dt>
-<dd><em>designUnit</em> </dd>
+<dd><em>external</em> <em>VHDL_</em><a href="#design_unit">design_unit</a> </dd>
 <dt><strong id="HDL_MOD_NAME">HDL_MOD_NAME</strong></dt>
-<dd><em>module</em> </dd>
+<dd><em>entity_aspect</em> </dd>
 <dt><strong id="HDL_DECL">HDL_DECL</strong></dt>
-<dd><em>DeclarativeItem</em> </dd>
+<dd><em>external</em> <em>VHDL_</em><a href="#block_declarative_item">block_declarative_item</a> </dd>
 <dt><strong id="HDL_STMT">HDL_STMT</strong></dt>
-<dd><em>ConcurrentStatement</em> </dd>
+<dd><em>external</em> <em>VHDL_</em><a href="#concurrent_statement">concurrent_statement</a> </dd>
+<dt><strong id="HDL_SEQ_STMT">HDL_SEQ_STMT</strong></dt>
+<dd><em>external</em> <em>VHDL_</em><a href="#sequential_statement">sequential_statement</a> </dd>
 <dt><strong id="HDL_RANGE">HDL_RANGE</strong></dt>
 <dd><em>range_attribute_name</em> </dd>
+<dt><strong id="HDL_VARIABLE_TYPE">HDL_VARIABLE_TYPE</strong></dt>
+<dd><em>external</em> <em>VHDL_</em><a href="#subtype_indication">subtype_indication</a> </dd>
 <dt><strong id="LEFT_SYM">LEFT_SYM</strong></dt>
 <dd><font color="purple"><b>(</b></font> </dd>
 <dt><strong id="RIGHT_SYM">RIGHT_SYM</strong></dt>
 <dd><font color="purple"><b>)</b></font> </dd>
-<dt><strong id="boolean_Built_In_Function_Call">boolean_Built_In_Function_Call</strong></dt>
-<dd><a href="#Built_In_Function_Call">Built_In_Function_Call</a> </dd>
-<dt><strong id="positive_Count">positive_Count</strong></dt>
-<dd><a href="#Count">Count</a> </dd>
-<dt><strong id="positive_Number">positive_Number</strong></dt>
-<dd><a href="#Number">Number</a> </dd>
-<dt><strong id="finite_Range">finite_Range</strong></dt>
-<dd><a href="#Range">Range</a> </dd>
-<dt><strong id="finite_positive_Range">finite_positive_Range</strong></dt>
-<dd><a href="#Range">Range</a> </dd>
-<dt><strong id="numeric_HDL_or_PSL_Expression">numeric_HDL_or_PSL_Expression</strong></dt>
-<dd><a href="#Expression">Expression</a> </dd>
-<dt><strong id="HDL_CLK_EXPR">HDL_CLK_EXPR</strong></dt>
-<dd><a href="#Expression">Expression</a> </dd>
-<dt><strong id="HDL_EXPR">HDL_EXPR</strong></dt>
-<dd><a href="#Expression">Expression</a> </dd>
-</dl>
-<h3 id="names">Names</h3>
-<dl class="dl-horizontal">
-<dt><strong id="sequence_Name">sequence_Name</strong></dt>
-<dd><a href="#Name">Name</a> </dd>
-<dt><strong id="boolean_Name">boolean_Name</strong></dt>
-<dd><a href="#Name">Name</a> </dd>
-<dt><strong id="vunit_Name">vunit_Name</strong></dt>
-<dd><a href="#Name">Name</a> </dd>
-<dt><strong id="instance_Name">instance_Name</strong></dt>
-<dd><a href="#Name">Name</a> </dd>
-<dt><strong id="endpoint_Name">endpoint_Name</strong></dt>
-<dd><a href="#Name">Name</a> </dd>
-<dt><strong id="property_Name">property_Name</strong></dt>
-<dd><a href="#Name">Name</a> </dd>
-<dt><strong id="Expression">Expression</strong></dt>
-<dd><em>Expression</em> </dd>
 <dt><strong id="Identifier">Identifier</strong></dt>
 <dd><em>ID</em> </dd>
 </dl>
@@ -2416,23 +2437,22 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
       <nav class="hidden-print hidden-xs hidden-sm">
         <div class="sidebar" data-spy="affix" data-offset-top="510" >
           <div class="well">
-            <a href="#"><strong>PSL 1.1 BNF Grammar</strong></a>
+            <a href="#"><strong>Property Specification Language (PSL) Grammar</strong></a>
             <div class="toc">
 <ul>
 <li><a href="#a4-syntax-productions">A.4 Syntax productions</a><ul>
 <li><a href="#a41-verification-units">A.4.1 Verification units</a></li>
 <li><a href="#a42-psl-declarations">A.4.2 PSL declarations</a></li>
 <li><a href="#a43-psl-directives">A.4.3 PSL directives</a></li>
-</ul>
-</li>
-<li><a href="#a44-psl-properties">A.4.4 PSL properties</a><ul>
+<li><a href="#a44-psl-properties">A.4.4 PSL properties</a></li>
 <li><a href="#a45-sequential-extended-regular-expressions-seres">A.4.5 Sequential Extended Regular Expressions (SEREs)</a></li>
-<li><a href="#a46-sequences">A.4.6 Sequences</a></li>
-<li><a href="#a47-forms-of-expression">A.4.7 Forms of expression</a></li>
+<li><a href="#a46-parameterized-properties-and-seres">A.4.6 Parameterized Properties and SEREs</a></li>
+<li><a href="#a47-sequences">A.4.7 Sequences</a></li>
+<li><a href="#a48-forms-of-expression">A.4.8 Forms of expression</a></li>
+<li><a href="#a49-optional-branching-extension">A.4.9 Optional branching extension</a></li>
+<li><a href="#vhdl-flavor-macros">VHDL Flavor macros</a></li>
 </ul>
 </li>
-<li><a href="#a48-optional-branching-extension">A.4.8 Optional branching extension</a></li>
-<li><a href="#names">Names</a></li>
 </ul>
 </div>
 
@@ -2444,8 +2464,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
   </div>
 
   <ul class="pager">
-    <li class="previous"><a href="/tech/vhdl-file-encoding.html">&larr; VHDL file encoding</a></li>
-    <li class="next"><a href="/tech/preview.html">Sigasi Studio Preview (3.4) &rarr;</a></li>
+    <li class="next"><a href="/tech/vhdl-file-encoding.html">VHDL file encoding &rarr;</a></li>
   </ul>
       
 </div>
@@ -2467,7 +2486,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2017-01-31 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2017-02-02 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
