@@ -2065,7 +2065,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 <li><a href="#configure">Configure</a><ul>
 <li><a href="#how-can-i-make-sigasi-generate-spaces-instead-of-tabs">How can I make Sigasi generate spaces instead of TAB's?</a></li>
 <li><a href="#how-can-i-change-the-font-size">How can I change the font size?</a></li>
-<li><a href="#sigasi-keeps-compiling-everything-while-i-am-trying-to-configure">Sigasi keeps compiling everything while I am trying to configure ...</a></li>
+<li><a href="#sigasi-keeps-compiling-everything-while-i-am-trying-to-configure-my-vhdl-libraries">Sigasi keeps compiling everything while I am trying to configure my VHDL Libraries</a></li>
 <li><a href="#how-can-i-change-the-default-key-bindings">How can I change the default key bindings?</a></li>
 <li><a href="#how-can-i-change-settings">How can I change settings?</a></li>
 <li><a href="#can-i-control-the-timing-of-the-hoverspopups-in-sigasi">Can I control the timing of the hovers/popups in Sigasi?</a></li>
@@ -2094,7 +2094,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 <li><a href="#troubleshooting">Troubleshooting</a><ul>
 <li><a href="#show-in-system-explorer-does-not-work-on-red-hat-linux-6">"Show In -&gt; System Explorer" does not work on Red Hat Linux 6</a></li>
 <li><a href="#sigasi-switches-my-keyboard-layout-did-i-find-a-bug">Sigasi switches my keyboard layout! Did I find a bug?</a></li>
-<li><a href="#i-dont-see-error-icons-in-the-project-explorer-or-i-dont-see-the-library-names-in-the-project-explorer">I don't see error icons in the Project Explorer, or I don't see the library names in the Project Explorer!</a></li>
+<li><a href="#i-dont-see-error-icons-in-the-project-explorer-or-i-dont-see-the-library-names-in-the-project-explorer">I don't see error icons in the Project Explorer, or I don't see the library names in the Project Explorer</a></li>
 <li><a href="#junk-files">I get lots of errors in files that are not even really a part of my project. Can I hide them?</a></li>
 <li><a href="#what-is-a-mac-address-and-how-can-i-find-it">What is a MAC address and how can I find it?</a></li>
 <li><a href="#the-internal-web-browser-does-not-work-on-linux">The internal web browser does not work on Linux</a></li>
@@ -2128,7 +2128,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 </pre></div>
 
 
-<p>by the following line: </p>
+<p>by the following line:</p>
 <div class="codehilite"><pre><span></span>eclipse.application=org.eclipse.ui.ide.workbench
 </pre></div>
 
@@ -2147,18 +2147,18 @@ Insights<span style="color:#f47920">.</span>							</p>
 <ul>
 <li>Windows: Windows 7 and Windows 8 (32 bit and 64 bit) or newer</li>
 <li>Mac OS: X Yosemite or newer</li>
-<li>Linux: RedHat Enterprise Linux RHEL 6 (64 bit) or newer.</li>
+<li>Linux: RedHat Enterprise Linux RHEL 6 (64 bit) or newer.<br />
+However, it should work on most of the recent Linux distributions, on Windows XP and up, and on Mac OS X.
+We recommend at least <strong>2GB of memory</strong>, and you need <strong>about 200MB</strong> of free disk space.</li>
 </ul>
-<p>However, it should work on most of the recent Linux distributions, on Windows XP and up, and on Mac OS X.
-We recommend at least <strong>2GB of memory</strong>, and you need <strong>about 200MB</strong> of free disk space. </p>
 </li>
 <li>
 <p>Sigasi Studio as Plugin in your own Eclipse installation:</p>
 <ul>
-<li>Eclipse 4.2 or higher</li>
-<li>Java JRE 7 or higher</li>
+<li>Eclipse 4.3 or higher</li>
+<li>Java JRE 8 or higher  </li>
+<li>And all requirements from the standalone version</li>
 </ul>
-<p>And all requirements from the standalone version:</p>
 </li>
 <li>
 <p>License servers (FlexNet):</p>
@@ -2218,18 +2218,17 @@ In order to use Eclipse without locking up a Sigasi license, you should close th
 <ul>
 <li><code>.project</code> describes all generic information on your project: which files belong to your project, …</li>
 <li><code>.library_mapping.xml</code> describes the mapping of your VHDL libraries.</li>
-<li><code>.settings</code> (if it exists) is a directory that contains additional settings </li>
+<li><code>.settings</code> (if it exists) is a directory that contains additional settings</li>
 </ul>
 <p>You can revert to older revisions of these files while Sigasi is running. Sigasi will update as soon as the files are refreshed.</p>
 <h3 id="how-can-i-hide-files-from-the-project-explorer">How can I hide files from the Project Explorer?</h3>
-<p>If the project explorer shows the hidden files in from your revision control system (.hg or .svn directory), or there are too many files from Altera Quatrus or Xilinx ISE that clutter the project explorer, you can hide those files from view:</p>
-<p>Select the View Menu (small triangle pointing down) <strong>Customize View &gt; Filters</strong>. </p>
+<p>If the project explorer shows the hidden files in from your revision control system (.hg or .svn directory), or there are too many files from Altera Quartus or Xilinx ISE that clutter the project explorer, you can hide those files from view:</p>
+<p>Select the View Menu (small triangle pointing down) <strong>Customize View &gt; Filters</strong>.</p>
 <p><img alt="" src="faq-images/customize-view.png" /></p>
 <p>Now you can filter out hidden files (<code>.* resources</code>) or <code>All non VHDL Files</code>.</p>
 <h2 id="editing">Editing</h2>
 <h3 id="what-do-you-mean-by-type-time">What do you mean by "Type-Time"?</h3>
-<p>"At type-time" means "while you type". 
-The Sigasi development environment checks your code at type-time. In other tools, your code gets checked only after you save all files and explicitly start a compiler, Sigasi has a type-time compiler. While you are typing, the Sigasi compiler checks your code and marks your errors.</p>
+<p>"At type-time" means "while you type". The Sigasi development environment checks your code at type-time. In other tools, your code gets checked only after you save all files and explicitly start a compiler, Sigasi has a type-time compiler. While you are typing, the Sigasi compiler checks your code and marks your errors.</p>
 <p>Related terms include:</p>
 <ul>
 <li>Save-time: as soon as you save your file</li>
@@ -2264,7 +2263,7 @@ You can open a new Window via <strong>Window &gt; New window</strong></p>
 <p>See <a href="/manual/config.html#tabs-and-spaces" title="Tabs and Spaces">Tabs and Spaces</a>.</p>
 <h3 id="how-can-i-change-the-font-size">How can I change the font size?</h3>
 <p>See <a href="/manual/config.html#font-size" title="Configuring Your Design Environment">Font Size</a>.</p>
-<h3 id="sigasi-keeps-compiling-everything-while-i-am-trying-to-configure">Sigasi keeps compiling everything while I am trying to configure ...</h3>
+<h3 id="sigasi-keeps-compiling-everything-while-i-am-trying-to-configure-my-vhdl-libraries">Sigasi keeps compiling everything while I am trying to configure my VHDL Libraries</h3>
 <p>While you are configuring your libraries (mapping and unmapping files), the built-in compiler may trigger a full rebuild several times. In order to avoid this, and make Sigasi more responsive while you configure your libraries, you can _turn of auto...</p>
 <h3 id="how-can-i-change-the-default-key-bindings">How can I change the default key bindings?</h3>
 <p>To change the key binding (keyboard shortcuts) within Eclipse: <strong>Window &gt; Preferences</strong> and next <strong>General &gt; Keys</strong>.</p>
@@ -2303,7 +2302,7 @@ You can open a new Window via <strong>Window &gt; New window</strong></p>
 <li>Required file headers</li>
 <li>Maximum sizes of files, processes,...</li>
 <li>How to instantiate components/entities</li>
-<li>Unused signals, constants,... </li>
+<li>Unused signals, constants,...</li>
 <li>Dead code</li>
 <li>... and much more</li>
 </ul>
@@ -2324,8 +2323,8 @@ You can open a new Window via <strong>Window &gt; New window</strong></p>
 <p>Although the procedure is not very elegant, there is a way to apply multiple Quick Fixes at the same time.</p>
 <p>Conditions:</p>
 <ol>
-<li>Make sure you are dealing with identical solutions to the same problem. 
-    For example: five "declare signal" Quick Fixes</li>
+<li>Make sure you are dealing with identical solutions to the same problem.
+   For example: five "declare signal" Quick Fixes</li>
 <li>All problems have to be in the same file</li>
 </ol>
 <p>Procedure:</p>
@@ -2367,13 +2366,13 @@ You can open a new Window via <strong>Window &gt; New window</strong></p>
 </ul>
 <h2 id="troubleshooting">Troubleshooting</h2>
 <h3 id="show-in-system-explorer-does-not-work-on-red-hat-linux-6">"Show In -&gt; System Explorer" does not work on Red Hat Linux 6</h3>
-<p>On preference page <strong>General &gt; Workspace</strong> you can configure the command that is used to open files with the System Explorer. The default Linux command does not work on older linux systems. 
+<p>On preference page <strong>General &gt; Workspace</strong> you can configure the command that is used to open files with the System Explorer. The default Linux command does not work on older linux systems.
 On RedHat 6 linux, you can use the nautilus command: <code>nautilus "${selected_resource_parent_loc}"</code> (<a href="http://help.eclipse.org/mars/index.jsp?topic=%2Forg.eclipse.platform.doc.user%2Freference%2Fref-9.htm">More info</a>).</p>
 <h3 id="sigasi-switches-my-keyboard-layout-did-i-find-a-bug">Sigasi switches my keyboard layout! Did I find a bug?</h3>
 <p>This sometimes happens on Windows. You have probably triggered a keyboard shortcut that switches your keyboard lay-out.
 Read Microsoft's documentation of the <a href="http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/langbar_keystroke_shortcuts.mspx?mfr=true" title="Language bar keyboard shortcuts">Language bar keyboard shortcuts</a>.
 If you only use your local keyboard lay-out and not the standard English lay-out, you might as well diable the language bar.</p>
-<h3 id="i-dont-see-error-icons-in-the-project-explorer-or-i-dont-see-the-library-names-in-the-project-explorer">I don't see error icons in the Project Explorer, or I don't see the library names in the Project Explorer!</h3>
+<h3 id="i-dont-see-error-icons-in-the-project-explorer-or-i-dont-see-the-library-names-in-the-project-explorer">I don't see error icons in the Project Explorer, or I don't see the library names in the Project Explorer</h3>
 <p>Normally, if your file contains an error, you will see error markers in several places, including in the Project Explorer. Those so-called <strong>label decorators</strong> can be either a red square with a white cross for errors, or a yellow triangle with an exclamation mark for warnings. Sigasi puts the decorators on the file that contains an error and all of its ancestors (the folder that contains the file, and the folder that contains that folder, all the way up to the project.</p>
 <p>Sigasi also puts the name of the library next to each HDL file and folder that is mapped to that library. In order to map files to a library, right-click on a HDL or Verilog file, or folder and select <strong>Set Library</strong>.</p>
 <p>If you cannot see the problem decorators or library decorators in the Project Explorer, there are two possible reasons:</p>
@@ -2415,10 +2414,10 @@ When Sigasi's default settings do not work on your Linux system, try the followi
 <p>Sigasi logs all internal errors to a log file. You can find this file in: <code>workspaceSigasi/.metadata/.log</code> This file is also reachable in Sigasi Studio itself via <strong>Help &gt; Sigasi &gt; Open log</strong></p>
 <p>The log file contains no sensitive information about your organization. On some occasions, the Sigasi Team may suggest to send them the log file to debug or improve the product. However, the option to do so or not remains yours.</p>
 <h3 id="why-is-sigasi-trying-to-get-through-my-firewall">Why is Sigasi trying to get through my firewall?</h3>
-<p>There can be a number of reasons why Sigasi connects to the internet. </p>
+<p>There can be a number of reasons why Sigasi connects to the internet.</p>
 <ul>
-<li>Updates: Each time you start Sigasi, the program checks to see if there are new <a href="/manual/setup.html#software-updates" title="Setting Up Sigasi">software-updates</a> from our update website (currently located at http://download.sigasi.com). Sigasi downloads the updates in the background and, when done, it asks you if it can install them.</li>
-<li><a href="http://www.sigasi.com/sigasi-talkback">Talkback</a> </li>
+<li>Updates: Each time you start Sigasi, the program checks to see if there are new <a href="/manual/setup.html#software-updates" title="Setting Up Sigasi">software-updates</a> from our update website (currently located at <a href="http://download.sigasi.com">http://download.sigasi.com</a>). Sigasi downloads the updates in the background and, when done, it asks you if it can install them.</li>
+<li><a href="http://www.sigasi.com/sigasi-talkback">Talkback</a></li>
 <li>Other Plugins: Obviously, other plugins can also connect to the internet. Some examples are plugins for revision control or issue tracking, or the built-in Eclipse web browser.</li>
 </ul>
 <p><strong>Enhanced security</strong>: Customers with strict security policies can contact us to discuss compliance with their policies.</p>
@@ -2459,8 +2458,8 @@ version=1
 <p>You can add a plugin with the UltraEdit key bindings.</p>
 <ol>
 <li>Install the <a href="https://marketplace.eclipse.org/content/ultraedit-key-bindings" title="UltraEdit Key Bindings Plugin">UltraEdit Key Bindings Plugin</a></li>
-<li>After installing, you should activate the UltraEdtit keybindings in <strong>Window &gt; Preferences &gt; General &gt; Keys</strong>. 
-Then as Scheme, select "UltraEdit".</li>
+<li>After installing, you should activate the UltraEdtit keybindings in <strong>Window &gt; Preferences &gt; General &gt; Keys</strong>.</li>
+<li>As Scheme, select "UltraEdit".</li>
 </ol>
 <h3 id="i-really-like-vi-vim-gvim-do-you-have-a-vi-emulation-mode">I really like VI / VIM / gVIM. Do you have a VI emulation mode?</h3>
 <p>If you use Sigasi HDT as a plugin (meaning: not the standalone version), you can add a VI emulator plugin, called <a href="http://vrapper.sourceforge.net/home/" title="vrapper">vrapper</a>. Surely not the same as a genuine VI clone, but it will give you a warm and familiar feeling when you type <code>:q!</code>.</p>
@@ -2549,7 +2548,7 @@ We have not had good results with FreeHDL or with Green Mountain VHDL. It seems 
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2017-02-02 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2017-02-16 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

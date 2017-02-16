@@ -2031,7 +2031,7 @@ Insights<span style="color:#f47920">.</span>							</p>
         <p>Sigasi supports a number of ways to work with external tools such as
 simulators. Different techniques offer varying degrees of flexibility
 and automation.</p>
-<p>Most people will want to set up their <a href="/manual/tools.html#external-compilers" title="Tool Integration">External Compilers</a> 
+<p>Most people will want to set up their <a href="/manual/tools.html#external-compilers" title="Tool Integration">External Compilers</a>
 so that Sigasi can use
 them to compile and start simulations. This is currently supported only
 for <code>vcom</code>-style simulators, Aldec Riviera-PRO and Mentor Graphics
@@ -2043,7 +2043,7 @@ of all the files in your project, in the correct compilation order.
 Learn more about how to <a href="/manual/tools.html#export" title="Tool Integration">Export</a> your project's file list.</p>
 <p>The third, and more advanced way of working with compilers or simulators
 is to use the standard Eclipse mechanisms of <em>builders</em> and <em>external
-tools</em>. </p>
+tools</em>.</p>
 <p>By <a href="/manual/tools.html#creating-a-builder" title="Tool Integration">Creating a builder</a>,
 you can arrange for an external tool to be run automatically when a
 Sigasi project is rebuilt. By default, this happens each time you save a
@@ -2051,7 +2051,7 @@ file. <a href="/manual/tools.html#external-tools-configuration" title="Tool Inte
 allow you to call any program or script from within the Sigasi GUI. You
 have to write and maintain the scripts yourself, but you have complete
 flexibility as to what is in the scripts.</p>
-<h3 id="external-compilers">External Compilers</h3>
+<h2 id="external-compilers">External Compilers</h2>
 <p>If you have a simulator or lint tool installed, you can use this for two
 purposes:</p>
 <ol>
@@ -2063,7 +2063,7 @@ purposes:</p>
 </ol>
 <p>Learn about <a href="#list-of-toolchains">which external compilers are supported</a>
 and how to <a href="/manual/tools.html#configure-external-compiler" title="Tool Integration">Configure external compiler</a>.</p>
-<h4 id="launch-simulator">Launch simulator</h4>
+<h3 id="launch-simulator">Launch simulator</h3>
 <p>If an external compiler is enabled, you can also start a simulation from
 Sigasi. You can start a simulation by first selecting your <em>top level</em>
 in the <a href="/manual/views.html#hierarchy" title="Views">hierarchy</a> view. Next click the
@@ -2075,7 +2075,7 @@ can terminate a simulation by clicking the <strong>Stop</strong> icon
 <p>When you launch a simulation, Sigasi opens a new console in the <a href="/manual/views.html#console-view" title="Views">Console View</a>
 You can switch between different consoles by clicking the <img alt="icon console display" src="icons/icon_con_disp_console.png" />-icon.</p>
 <p><img alt="" src="images/launch_simulation_console.png" /></p>
-<h4 id="configure-external-compiler">Configure external compiler</h4>
+<h3 id="configure-external-compiler">Configure external compiler</h3>
 <p>You can configure the external compiler settings by clicking <strong>Window >
 Preferences > Sigasi > Toolchains</strong>. There is a sub-page for each
 supported toolchain. Before you can enable a toolchain on the main page,
@@ -2090,7 +2090,7 @@ that these preference pages support <a href="http://help.eclipse.org/indigo/topi
 Variables</a>
 which allow you to more easily share settings in a team.</p>
 <p><img alt="" src="images/toolchains-settings-rivierapro.png" /></p>
-<h4 id="list-of-toolchains">List of toolchains</h4>
+<h3 id="list-of-toolchains">List of toolchains</h3>
 <p>By “toolchains”, we mean any tool or set of tools that processes VHDL or
 Verilog code, and that is supported by Sigasi. At this time, external
 compiler include simulators and lint tools, but in the future it could
@@ -2179,11 +2179,11 @@ also include synthesis tools.</p>
 </tr>
 </tbody>
 </table>
-<h4 id="save-time-compilation">Save-time compilation</h4>
+<h3 id="save-time-compilation">Save-time compilation</h3>
 <p>Sigasi can use an external VHDL or Verilog compiler for additional code validation. At this time, Sigasi supports:</p>
 <ul>
 <li><code>vcom</code> / <code>vlog</code> / <code>vsim</code> style compilers. These compilers include Aldec Riviera-PRO and from Mentor Graphics ModelSim and QuestaSim.</li>
-<li><code>isim</code> compiler from Xilinx. </li>
+<li><code>isim</code> compiler from Xilinx.</li>
 <li><code>ncsim</code> compiler from Cadence Incisive.</li>
 </ul>
 <p>Catching bugs earlier is cheaper than catching them late. Traditionally,
@@ -2249,7 +2249,7 @@ integration.</p>
 </tr>
 </tbody>
 </table>
-<h4 id="libraries">Libraries</h4>
+<h3 id="libraries">Libraries</h3>
 <p>Libraries are fully supported. But note that Sigasi does not send common
 libraries to the external compiler for compilation. These libraries are
 expected to be pre-compiled . Contact support@sigasi.com if you want to
@@ -2257,7 +2257,7 @@ add more libraries to this list.</p>
 <p>If your project contains a <code>modelsim.ini</code> file , Sigasi will add this
 file to the <code>vcom</code> command with <code>-modelsimini</code>. This allows you to
 configure custom settings for Mentor’s <code>vcom</code>.</p>
-<h3 id="external-tools-configuration">External Tools Configuration</h3>
+<h2 id="external-tools-configuration">External Tools Configuration</h2>
 <p>Select <strong>Run > External tools > External Tools Configurations</strong> to get
 started, or use the <img alt="" src="icons/externaltool.png" /> icon.</p>
 <p>To create a new configuration, first select
@@ -2281,7 +2281,7 @@ run <code>make clean</code> on a Linux machine.</p>
 menu on the <img alt="" src="icons/externaltool.png" />-icon. You can rerun the
 last configuration by simply clicking
 <img alt="" src="icons/externaltool.png" />.</p>
-<h4 id="creating-a-builder">Creating a Builder</h4>
+<h3 id="creating-a-builder">Creating a Builder</h3>
 <p>An external tool configuration as described in the previous section
 makes it easy to run an external tool, but you still have to do so
 explicitly. For some programs, such as the <code>make</code> utility, it makes
@@ -2318,7 +2318,7 @@ console are made clickable. When you click a message, the corresponding
 location will automatically be opened in the Editor view.</p>
 <p>You can add as many extra builders as you want. This can be useful for
 additional linting tools or code generators.</p>
-<h3 id="altera-quartus-ii-integration">Altera Quartus II integration</h3>
+<h2 id="altera-quartus-ii-integration">Altera Quartus II integration</h2>
 <p>If you are using Altera Quartus II 12.1 , you can use Sigasi Studio as
 preferred HDL editor.</p>
 <p>If you use the Sigasi Studio/ Altera Quartus II integration, you can
@@ -2329,10 +2329,10 @@ Furthermore, if you add or remove files in the Quartus II project, these
 changes are automatically applied in Sigasi Pro.</p>
 <p>*Note:_ If you want to set up a project independent of Altera Quartus
 II, please read the documentation on <a href="/manual/projectsetup.html" title="Setting Up a Project">Setting Up a Project</a>.</p>
-<h4 id="setting-the-preferred-editor">Setting the preferred editor</h4>
+<h3 id="setting-the-preferred-editor">Setting the preferred editor</h3>
 <p>To open a Quartus Project in Sigasi, you first have to configure Sigasi
 Pro as preferred editor in <a href="/manual/opening.html#altera-quartus-ii" title="Opening Files">Altera Quartus II</a>.</p>
-<h4 id="open-a-quartus-ii-project-in-sigasi">Open a Quartus II Project in Sigasi</h4>
+<h3 id="open-a-quartus-ii-project-in-sigasi">Open a Quartus II Project in Sigasi</h3>
 <p>After you have configured Sigasi Studio to be the preferred editor in
 Quartus II, you can open files by double clicking on them in Quartus II.</p>
 <p>Sigasi Studio will import entire Quartus II project and your file will open
@@ -2345,34 +2345,34 @@ Quartus II to open them in the Sigasi Studio editor view.</p>
 <p>If your Quartus II Project File (<strong>.QPF file</strong>) contains a reference to a
 file that does not exist, Sigasi will show an icon for that file with
 the <em>broken link</em> icon <img alt="" src="icons/brokenlink.png" /> .</p>
-<h4 id="quartus-ii-preferences">Quartus II Preferences</h4>
+<h3 id="quartus-ii-preferences">Quartus II Preferences</h3>
 <p>The first time you import a Quartus II project, Sigasi will ask for the
 Quartus II installation location. Sigasi needs this path to find the
 Quartus II libraries. You can change the Quartus II installation
 location by selecting<strong>Window > Preferences > Sigasi > Toolchains</strong>.</p>
-<h4 id="add-files-to-your-quartus-ii-project-in-sigasi">Add files to your Quartus II project in Sigasi</h4>
+<h3 id="add-files-to-your-quartus-ii-project-in-sigasi">Add files to your Quartus II project in Sigasi</h3>
 <p>To add a file to your Quartus II project, you can use the default<strong>New
 VHDL file* wizard of Sigasi (</strong>File > New > VHDL File**).</p>
 <p><img alt="Add a new VHDL file to a Altera Quartus II project in Sigasi" src="images/quartusnewfile.png" title="Add a new VHDL file to a Altera Quartus II project in Sigasi" /></p>
 <p>Note that Quartus II does not automatically update its UI after you add
 files to your project. In order to update the files list, you should run
 a workflow action in Quartus II, like starting a compilation.</p>
-<h3 id="xilinx-integration">Xilinx integration</h3>
-<h4 id="setting-the-preferred-editor_1">Setting the preferred editor</h4>
+<h2 id="xilinx-integration">Xilinx integration</h2>
+<h3 id="setting-the-preferred-editor_1">Setting the preferred editor</h3>
 <p>To open the Sigasi editor from Xilinx, you first have to configure Sigasi as preferred editor in <a href="/manual/opening.html#xilinx-vivado" title="Opening Files">Xilinx Vivado</a> or <a href="/manual/opening.html#xilinx-ise" title="Opening Files">Xilinx ISE</a>.</p>
-<h4 id="importing-xilinx-projects-in-sigasi">Importing Xilinx Projects in Sigasi</h4>
-<h5 id="vivado">Vivado</h5>
+<h3 id="importing-xilinx-projects-in-sigasi">Importing Xilinx Projects in Sigasi</h3>
+<h3 id="vivado">Vivado</h3>
 <p>The process of importing a Xilinx Vivado project is explained in <a href="/tech/generating-sigasi-project-vivado-project.html" title="Generating a Sigasi project from a Vivado project">Generating a Sigasi project from a Vivado project</a></p>
-<h5 id="ise">ISE</h5>
+<h3 id="ise">ISE</h3>
 <p>The process of importing a Xilinx ISE project is explained in <a href="/tech/importing-xilinx-ise-project-sigasi.html" title="Importing a Xilinx ISE project in Sigasi">Importing a Xilinx ISE project in Sigasi</a></p>
-<h4 id="xilinx-preferences">Xilinx Preferences</h4>
-<h5 id="vivado_1">Vivado</h5>
+<h3 id="xilinx-preferences">Xilinx Preferences</h3>
+<h3 id="vivado_1">Vivado</h3>
 <p>You can change the Xilinx Vivado installation location by selecting <strong>Window &gt; Preferences &gt; Sigasi &gt; Toolchains &gt; Xilinx Vivado</strong>.
-Sigasi needs this path to find the Xilinx Vivado libraries. </p>
-<h5 id="ise_1">ISE</h5>
+Sigasi needs this path to find the Xilinx Vivado libraries.</p>
+<h3 id="ise_1">ISE</h3>
 <p>You can change the Xilinx ISE installation location by selecting <strong>Window &gt; Preferences &gt; Sigasi &gt; Toolchains &gt; Xilinx ISE</strong>.
 Sigasi needs this path to find the Xilinx Vivado libraries and to run the ISim compiler and simulator.</p>
-<h3 id="export">Export</h3>
+<h2 id="export">Export</h2>
 <p>You can export a list of all VHDL files in your project, sorted in the correct compilation order.
 You can use your own simple scripts to manipulate such list and run any EDA tool, including simulators, synthesis and linter tools.</p>
 <p>To export a comma separated value (CSV) list of files in your project, right-click your project and select <strong>Export</strong>. In the <strong>Sigasi</strong> category, select <strong>CSV File</strong>. As a result, you get a file named <code>compilation_order.csv</code>, which lists the VHDL files in your project in a valid compile order.</p>
@@ -2383,7 +2383,7 @@ work, testbench.vhd
 </pre></div>
 
 
-<h4 id="auto-export">Auto-export</h4>
+<h3 id="auto-export">Auto-export</h3>
 <p>You can also configure Sigasi Studio to <strong>auto-export</strong> this CSV file, every time the dependencies change.</p>
 <p>Right click on the project you want to auto-export in the Project Explorer, and select <strong>Properties</strong> and <strong>VHDL auto export</strong>.</p>
 <p><img alt="Auto export CSV file with dependencies" src="images/auto_export_property_page.png" title="Auto export CSV file with dependencies" /></p>
@@ -2421,16 +2421,12 @@ work, testbench.vhd
 </li>
 <li><a href="#xilinx-integration">Xilinx integration</a><ul>
 <li><a href="#setting-the-preferred-editor_1">Setting the preferred editor</a></li>
-<li><a href="#importing-xilinx-projects-in-sigasi">Importing Xilinx Projects in Sigasi</a><ul>
+<li><a href="#importing-xilinx-projects-in-sigasi">Importing Xilinx Projects in Sigasi</a></li>
 <li><a href="#vivado">Vivado</a></li>
 <li><a href="#ise">ISE</a></li>
-</ul>
-</li>
-<li><a href="#xilinx-preferences">Xilinx Preferences</a><ul>
+<li><a href="#xilinx-preferences">Xilinx Preferences</a></li>
 <li><a href="#vivado_1">Vivado</a></li>
 <li><a href="#ise_1">ISE</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li><a href="#export">Export</a><ul>
@@ -2448,6 +2444,8 @@ work, testbench.vhd
   </div>
 
   <ul class="pager">
+    <li class="previous"><a href="/manual/linting.html">&larr; Linting and Quickfixes</a></li>
+    <li class="next"><a href="/manual/plugins.html">Third party plugins &rarr;</a></li>
   </ul>
       
 </div>
@@ -2469,7 +2467,7 @@ work, testbench.vhd
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2017-02-02 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2017-02-16 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

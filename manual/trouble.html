@@ -2028,17 +2028,17 @@ Insights<span style="color:#f47920">.</span>							</p>
 
     <div class="content">
       <div class="col-md-9" role="main">
-        <h3 id="ts-unresponsive">The user interface is unresponsive</h3>
+        <h2 id="ts-unresponsive">The user interface is unresponsive</h2>
 <p>If the user interface of Sigasi Studio is unresponsive, you can interrupt the internal compilation process by pressing the <strong>stop</strong> button in the progress view. To activate the progress view, select <strong>Window &gt; Show View &gt; Other... &gt; General &gt; Progress</strong>, or click the tiny conveyor belt icon <img alt="" src="icons/progressicon.png" />, on the right side of the status bar.</p>
-<h3 id="ts-refresh-editor">The editor displays old contents of a file</h3>
+<h2 id="ts-refresh-editor">The editor displays old contents of a file</h2>
 <p>If you edit a file outside of Sigasi Studio with an external editor, Sigasi will normally notice the changes and ask if you want to load the changes. If
 it doesn’t, you can refresh the editor’s content by pressing <strong>F5</strong> or by right-clicking a file or a project in the project explorer and
 selecting <strong>Refresh</strong>.</p>
-<h3 id="how-much-local-history-will-be-stored">How much local history will be stored?</h3>
+<h2 id="how-much-local-history-will-be-stored">How much local history will be stored?</h2>
 <p>Sigasi Studio stores the history of your file so that you can compare your current version with the version you saved an hour ago.</p>
 <p>You can define how much disk space is used for storing local history in <strong>Windows &gt; Preferences</strong>, select <strong>General &gt; Workspace &gt; Local History</strong>.</p>
 <p>For more information on local history, check out <a href="http://help.eclipse.org/help32/index.jsp?topic=/org.eclipse.platform.doc.user/gettingStarted/qs-55.htm">this page</a>.</p>
-<h3 id="i-see-hundreds-or-thousands-of-errors">I see hundreds or thousands of errors</h3>
+<h2 id="i-see-hundreds-or-thousands-of-errors">I see hundreds or thousands of errors</h2>
 <p>If you see a large number of errors, you either have very, very buggy code (not so likely) or your project is not configured correctly.</p>
 <ol>
 <li>Check that all files are mapped to the correct library.</li>
@@ -2046,17 +2046,16 @@ selecting <strong>Refresh</strong>.</p>
 <li>Check that all third party libraries are included.</li>
 <li>Make sure that automatic build is enabled.</li>
 </ol>
-<h3 id="ts-autobuild">Auto Build is not Enabled</h3>
+<h2 id="ts-autobuild">Auto Build is not Enabled</h2>
 <p>Symptoms:</p>
 <ul>
-<li>When you introduce an error in a VHDL or Verilog file and save the file, an error marker shows up in the file, but not in the problems
-    view.</li>
+<li>When you introduce an error in a VHDL or Verilog file and save the file, an error marker shows up in the file, but not in the problems view.</li>
 <li>Navigation (Find References, Open Declaration) behaves strange when it involves more than one file.</li>
 <li>Other features that involve multiple files behave incorrectly: autcomplete, refactoring, ...</li>
 </ul>
 <p>Cause: Project is not built automatically</p>
 <p>Resolution: Enable automatic project builds: <strong>Project &gt; Build Automatically</strong></p>
-<h3 id="ts-vhdl-support">Project does not have VHDL support</h3>
+<h2 id="ts-vhdl-support">Project does not have VHDL support</h2>
 <p>Symptoms:</p>
 <ul>
 <li>VHDL files contain errors, but these errors do not show up in the Problems View.</li>
@@ -2066,7 +2065,8 @@ selecting <strong>Refresh</strong>.</p>
 </ul>
 <p>Cause: The project does not have VHDL support enabled</p>
 <p>Resolution: Enable VHDL support: <strong>right-click the project &gt; Configure &gt; Add VHDL support</strong></p>
-<h3 id="ts-missing-library-mapping-informatino">Project does not have a Library Mapping Information</h3>
+<!--# Project does not have a Library Mapping Information {: #ts-missing-library-mapping-information}-->
+
 <p>Symptoms:</p>
 <ul>
 <li>All VHDL-files in the project are <strong>not mapped</strong></li>
@@ -2076,7 +2076,7 @@ selecting <strong>Refresh</strong>.</p>
 </ul>
 <p>Cause: The project does not have a (valid) VHDL library mapping information file</p>
 <p>Resolution: Reset the library mapping: <strong>right-click the project &gt; Library Mapping &gt; Reset Library Mapping</strong></p>
-<h3 id="ts-commonlib">Project does not have Common Libraries</h3>
+<h2 id="ts-commonlib">Project does not have Common Libraries</h2>
 <p>Symptoms:</p>
 <ul>
 <li>Project has many errors, in practically all files. Project build may be slow.</li>
@@ -2086,11 +2086,11 @@ selecting <strong>Refresh</strong>.</p>
 </ul>
 <p>Cause: Common libraries are not configured correctly.</p>
 <p>Resolution: Reset the common libraries: <strong>right-click the project &gt; Library Mapping &gt; Reset Library Mapping</strong></p>
-<h3 id="ts-stale-files">Sigasi Studio analyzes HDL files that I do not need</h3>
+<h2 id="ts-stale-files">Sigasi Studio analyzes HDL files that I do not need</h2>
 <p>By default, Sigasi assumes that all VHDL or Verilog files are part of the project. However, some projects may contain multiple files with older or alternative definitions of a VHDL object. We call these <em>stale</em> files, because they are no longer used. In such a case you will want Sigasi Studio to ignore certain files.</p>
 <p>To exclude files (or directories) from analysis, consult the <a href="/manual/libraries.html" title="Libraries">Libraries</a>.</p>
 <p>Ignored resources are decorated with a <img alt="" src="icons/ignoreicon.png" /> icon in the project explorer view.</p>
-<h3 id="sigasi-startup-fails-could-not-create-the-java-virtual-machine">Sigasi startup fails: "Could not create the Java virtual machine"</h3>
+<h2 id="sigasi-startup-fails-could-not-create-the-java-virtual-machine">Sigasi startup fails: "Could not create the Java virtual machine"</h2>
 <p>On some computers, the standalone version of Sigasi will fail to start with an error message similar to: "Could not create the Java virtual machine." This happens especially on 32-bit Windows machines with less than 2GB of physical memory. The reason is that the Java virtual machine tries to allocate more much memory than what is available.</p>
 <p>In order to solve this, you can decrease the default heap size settings. You can do this by adding following lines to <code>sigasi.ini</code> or <code>eclipse.ini</code> in your Sigasi installation folder:</p>
 <div class="codehilite"><pre><span></span>-vmargs
@@ -2098,18 +2098,18 @@ selecting <strong>Refresh</strong>.</p>
 </pre></div>
 
 
-<p>This sets the maximum heap size to 1000 MB (instead of the standard 1400MB). </p>
+<p>This sets the maximum heap size to 1000 MB (instead of the standard 1400MB).</p>
 <p><strong>Note:</strong> Do not use <code>eclipsec.exe</code>, as this will ignore all of the settings configured in the eclipse.ini file.</p>
-<h3 id="ts-clean">I want a clean restart</h3>
+<h2 id="ts-clean">I want a clean restart</h2>
 <p>If you ever suspect that the state of your project is inconsistent in Sigasi, you can do one or all of the following things. Consider these
 steps to be advanced usage; you should not need them during normal operation.</p>
-<h4 id="force-a-clean-compilation">Force a clean compilation</h4>
+<h3 id="force-a-clean-compilation">Force a clean compilation</h3>
 <p>You can force a completely clean compilation by selecting: <strong>Project &gt; Clean … &gt; Clean All Projects &gt; OK</strong>.</p>
-<h4 id="remove-stale-markers">Remove stale markers</h4>
+<h3 id="remove-stale-markers">Remove stale markers</h3>
 <p>Sometimes markers remain visible, even after the problem is fixed or when a file is excluded from compilation. We call these <em>stale markers</em> and they are can be caused by a crash during compilation.</p>
 <p>You can delete these stale markers from the Problems View: In the Problems View, select the markers and press <strong>DEL</strong> (or right-click and select <strong>Delete</strong>).</p>
 <p>Note that during the next build, the tool may generate new markers. If you want to suppress certain warnings, you can configure the <a href="/manual/config.html#configure-linting" title="Configuring Your Design Environment">configure-linting</a></p>
-<h4 id="remove-the-workspace-state">Remove the workspace state</h4>
+<h3 id="remove-the-workspace-state">Remove the workspace state</h3>
 <p>Much of your configuration and cached data is stored in your workspace. By default, Sigasi’s workspace is located in <code>${HOME}/workspaceSigasi</code>.
 A lot of this data is stored in the hidden <code>.metadata</code> directory. Sometimes, a part of your metadata can become corrupt. It can help to
 remove the <code>.metadata</code> directory (take a backup first!). This clears all of your workspace state.</p>
@@ -2117,15 +2117,15 @@ remove the <code>.metadata</code> directory (take a backup first!). This clears 
 <li>You will need to enter your license code again.</li>
 <li>You will need to import your projects again. <strong>Import &gt; General &gt; Existing Projects into Workspace</strong></li>
 </ul>
-<h3 id="keep-getting-reports-about-an-incompatible-version-of-quartus-ii">Keep getting reports about an "Incompatible version of Quartus II"</h3>
+<h2 id="keep-getting-reports-about-an-incompatible-version-of-quartus-ii">Keep getting reports about an "Incompatible version of Quartus II"</h2>
 <p>If you are using the integration with Altera Quartus II. Some people keep getting a dialog box that says:</p>
 <blockquote>
 <p>Incompatible version of Quartus II</p>
 <p>Project interface was created with an older, incompatible version of Quartus II.
-Is it OK to upgrade the project to match the installed version of Quartus II? </p>
+Is it OK to upgrade the project to match the installed version of Quartus II?</p>
 </blockquote>
 <p>Obviously, you should upgrade the project. If this message keeps popping up, you may want to check that Sigasi is using the correct version of Quartus II, in the Sigasi application: <strong>Window &gt; Preferences &gt; Sigasi &gt; Toolchains &gt; Altera Quartus II</strong>.</p>
-<h3 id="contact-support">Contact support</h3>
+<h2 id="contact-support">Contact support</h2>
 <p>If this troubleshooting guide did not solve your problem, please <a href="mailto:support@sigasi.com" title="send us an email">send us an email</a>.</p>
 <p>Any of the following information will help us help you:</p>
 <ul>
@@ -2153,7 +2153,6 @@ Is it OK to upgrade the project to match the installed version of Quartus II? </
 <li><a href="#i-see-hundreds-or-thousands-of-errors">I see hundreds or thousands of errors</a></li>
 <li><a href="#ts-autobuild">Auto Build is not Enabled</a></li>
 <li><a href="#ts-vhdl-support">Project does not have VHDL support</a></li>
-<li><a href="#ts-missing-library-mapping-informatino">Project does not have a Library Mapping Information</a></li>
 <li><a href="#ts-commonlib">Project does not have Common Libraries</a></li>
 <li><a href="#ts-stale-files">Sigasi Studio analyzes HDL files that I do not need</a></li>
 <li><a href="#sigasi-startup-fails-could-not-create-the-java-virtual-machine">Sigasi startup fails: "Could not create the Java virtual machine"</a></li>
@@ -2176,6 +2175,8 @@ Is it OK to upgrade the project to match the installed version of Quartus II? </
   </div>
 
   <ul class="pager">
+    <li class="previous"><a href="/manual/plugins.html">&larr; Third party plugins</a></li>
+    <li class="next"><a href="/manual/keyshortcuts.html">Keyboard Shortcuts &rarr;</a></li>
   </ul>
       
 </div>
@@ -2197,7 +2198,7 @@ Is it OK to upgrade the project to match the installed version of Quartus II? </
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2017-02-02 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2017-02-16 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

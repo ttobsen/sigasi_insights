@@ -2046,7 +2046,7 @@ typing</em> your code.</p>
 <p>VHDL code <strong>Lint</strong> is defined as code that is strictly correct according
 to the language definition, but still suspicious or problematic.
 Sigasi has a built-in VHDL linter, which provides info about code lint
-in the design. Sigasi’s VHDL linter checks for the following problems:</p>
+in the design. Sigasi’s VHDL linter checks for the following problem*</p>
 <ul>
 <li>Unused declarations</li>
 <li>Duplicate declarations</li>
@@ -2063,7 +2063,7 @@ in the design. Sigasi’s VHDL linter checks for the following problems:</p>
 <li>Missing, unnecessary and duplicate signals in the sensitivity list</li>
 <li>Port, signal, variable, constant or generic declarations that are never read or written</li>
 <li>Invalid port associations (incompatible port modes in instantiations)</li>
-<li>Order of generic and port associations</li>
+<li>Order of generic and port associatio*</li>
 </ul>
 <h3 id="linting-common-libraries">No Linting for Common Libraries</h3>
 <p>Common Libraries are considered to be production ready libraries.
@@ -2100,13 +2100,9 @@ Errors/Warnings</strong>.</p>
 <ul>
 <li>NULL_RANGE_ERROR <a href="#null-range">link</a></li>
 <li>DEPRECATED_PACKAGE <a href="#deprecated-ieee-packages-non-standard-packages">link</a>
-    <!--* REDUNDANT_CHOICES --></li>
-<li>
-<p>REDUNDANT_OTHERS <a href="#redundant-others">link</a></p>
-</li>
-<li>
-<p>Subprograms in packages (e.g. function body in a package, rather than in the package body)</p>
-</li>
+ <!--* REDUNDANT_CHOICES --></li>
+<li>REDUNDANT_OTHERS <a href="#redundant-others">link</a></li>
+<li>Subprograms in packages (e.g. function body in a package, rather than in the package body)</li>
 <li>Infinite loops in simulations:<ul>
 <li>INFINTE_LOOP_STATEMENT</li>
 <li>PROCESS_WITHOUT_SENSITIVITY_AND_WAIT</li>
@@ -2114,9 +2110,9 @@ Errors/Warnings</strong>.</p>
 </li>
 <li>NUMERIC_LITERAL_WHITESPACE_BEFORE_UNIT <a href="#space-physical-unit">link</a></li>
 <li>SUPERFLUOUS_LIBRARY <a href="#/manual/superfluous-library-clause">link</a>
-    <!-- * MISSING_LIBRARY --></li>
+ <!-- * MISSING_LIBRARY --></li>
 <li>UNUSED_DECLARATION: PORT, GENERIC, SIGNAL, ...  <a href="#dead-code-lint">link</a>
-    <!--* BITSTRING_STD_LOGIC: invalid characters in bit string--></li>
+ <!--* BITSTRING_STD_LOGIC: invalid characters in bit string--></li>
 <li>SENSITIVITY_LIST <a href="#sensitivity-list">link</a></li>
 </ul>
 <h4 id="advanced-vhdl-coding-rules">Advanced VHDL coding rules</h4>
@@ -2133,7 +2129,7 @@ Errors/Warnings</strong>.</p>
 <h2 id="list-of-vhdl-code-rules">List of VHDL code rules</h2>
 <p>This is the list of VHDL coding rules that can be checked automatically
 by Sigasi.</p>
-<h4 id="dead-code">Dead Code lint</h4>
+<h3 id="dead-code">Dead Code lint</h3>
 <p>Dead code is code that is does have any effect in your simulation or
 synthesis. Examples of dead code are signals that are never used, or
 conditions that are never triggered.</p>
@@ -2152,7 +2148,7 @@ is a form of technological debt that should be avoided.</p>
 </ul>
 <p>For unused declarations, there is also a quickfix to help you remove
 unused declarations fast.</p>
-<h4 id="deprecated-ieee-packages-non-standard-packages">Deprecated IEEE Packages, Non-Standard Packages</h4>
+<h3 id="deprecated-ieee-packages-non-standard-packages">Deprecated IEEE Packages, Non-Standard Packages</h3>
 <p>Some packages are widely spread, but were never standardized by IEEE.
 Different vendors have shipped different versions, with incompatible
 implementation. These packages should not be used and are flagged as
@@ -2167,10 +2163,10 @@ implementation. These packages should not be used and are flagged as
 <p>The package <code>ieee.std_logic_misc</code> has the same problem of not being standardized by IEEE. Contrary to the packages above, there is no consensus on how to replace this package.<br />
 Sigasi flags this package as <strong>Non-standard package</strong>.</p>
 <p>Read more in <a href="/tech/deprecated-ieee-libraries.html" title="Deprecated IEEE Libraries">Deprecated IEEE Libraries</a>.</p>
-<h4 id="incomplete-port-maps-and-generic-maps">Incomplete Port Maps and Generic Maps</h4>
+<h3 id="incomplete-port-maps-and-generic-maps">Incomplete Port Maps and Generic Maps</h3>
 <p>Available since Sigasi 2.25</p>
-<p>Sigasi warns about port maps and generic maps that are not complete:</p>
-<p><strong>Port map is using default values. Missing optional actuals: yourport</strong></p>
+<p>Sigasi warns about port maps and generic maps that are not complete:<br />
+<strong>Port map is using default values. Missing optional actuals: yourport</strong></p>
 <p>Input ports and generics need to be be assigned in your instantiation
 statement, if they don’t already have a default value. If you don’t do
 this, you are writing illegal VHDL. Sigasi will mark an error, and so
@@ -2179,11 +2175,11 @@ will all other tools.</p>
 do not need to be assigned explicitly. However, this is often not
 intended. For that reason, Sigasi can warn you about this.</p>
 <p><img alt="" src="images/warn-incomplete-map.png" /></p>
-<h4 id="posititional-association-in-instantiations">Posititional Association in Instantiations</h4>
+<h3 id="posititional-association-in-instantiations">Posititional Association in Instantiations</h3>
 <p>Available since Sigasi 2.30</p>
 <p>Most VHDL designers prefer named associations in port and generic maps in instantiations. This makes it a lot easier to spot wrong connections.
 By default Sigasi warns when positional associations are used. You can change the severity of this check via <strong>Preferences &gt; Sigasi &gt; VHDL &gt; Errors/Warnings</strong> in the <strong>Instantiation statement valiadation</strong> section.</p>
-<h4 id="quickfix-for-third-party-libraries">Quickfix for Third Party Libraries</h4>
+<h3 id="quickfix-for-third-party-libraries">Quickfix for Third Party Libraries</h3>
 <p>If you are using vendor libraries from Altera or Xilinx (ISE or Vivado),
 you do not need to set up these libraries by hand. Sigasi has a QuickFix
 to do this for you.</p>
@@ -2199,18 +2195,18 @@ component declarations. By default all entity and architecture
 declarations are not mapped (excluded). This significantly reduces the
 time for a clean build. If you use direct entity instantiations, you can
 easily map the entities you need.</p>
-<h4 id="redundant-others">Redundant "others"</h4>
+<h3 id="redundant-others">Redundant "others"</h3>
 <p>If a case statement contains all the possible choices (usually in an
-enumerated datatype), you can safely remove the “when others” clause.
+enumerated datatype), you can safely remove the <code>when others</code> clause.
 Sigasi warns about this:</p>
 <p><strong>Case statement contains all choices explicitly. You can safely remove
-the redundant “others”.</strong></p>
+the redundant <code>others</code>.</strong></p>
 <p>There is some debate on this coding rule. However, the vast majority of
-synthesis tools do not take the “others” into account if all choices are
+synthesis tools do not take the <code>others</code> into account if all choices are
 enumerated. If the synthesis tool is set up to generate fault-tolerant
 hardware, the fallback state is the same as the reset state (for most
 synthesis tools). Check the manual of your synthesis tools and run some
-experiments. 
+experiments.
 For more information, see <a href="/tech/vhdl-case-statements-can-do-without-others.html" title="VHDL case statements can do without the &quot;others&quot;">VHDL case statements can do without the "others"</a></p>
 <h4 id="sensitivity-list">Sensitivity List</h4>
 <p>VHDL requires a sensitivity list for each process (or wait statements in
@@ -2230,10 +2226,9 @@ earlier saves time and lets you catch the problem early.</p>
 <li><strong>Superfluous signals in sensitivity list</strong></li>
 <li><strong>Duplicate signals in sensitivity list</strong></li>
 </ul>
-<h4 id="superfluous-library-clause">Superfluous Library Clause</h4>
+<h3 id="superfluous-library-clause">Superfluous Library Clause</h3>
 <p>The VHDL language reference manual states that:</p>
-<p><em>Every design unit except package STANDARD is assumed to contain the
-following implicit context items as part of its context clause:</em></p>
+<p><mark>Every design unit except package STANDARD is assumed to contain the following implicit context items as part of its context clause:</mark></p>
 <div class="codehilite"><pre><span></span>    <span class="k">library</span> <span class="nn">STD</span><span class="p">,</span> <span class="nn">WORK</span><span class="p">;</span>
     <span class="k">use</span> <span class="nn">STD.STANDARD.</span><span class="k">all</span><span class="p">;</span>
 </pre></div>
@@ -2245,18 +2240,18 @@ anybody would type the use clause, but quite some people start all of
 their files with two extra library clauses. Sigasi flags this as
 warning.</p>
 <p><img alt="" src="images/warn-superfluous-library.png" /></p>
-<h4 id="dead-code-unreachable-code">Dead Code (unreachable code)</h4>
-<p>If the Sigasi analyser can determine that a condition is always false,
+<h3 id="dead-code-unreachable-code">Dead Code (unreachable code)</h3>
+<p>If the Sigasi analyzer can determine that a condition is always false,
 it will mark the if-statement because it contains dead code.</p>
 <p><img alt="" src="images/unreachable_code.png" /></p>
-<h4 id="null-range-empty-range-nullrange">Null Range (empty range) (#nullRange)</h4>
+<h3 id="null-range-empty-range-nullrange">Null Range (empty range) (#nullRange)</h3>
 <p>In VHDL, you can use ranges with <code>to</code> and <code>downto</code>. But, if you use the
 wrong direction, you get an empty range, which is usually not what you
 want: <code>7 downto 0</code> is a range of eight. <code>7 to 0</code> is an null range.
 We have a lint check that warns about this, even if you use constants
 (or some simple arithmetic).</p>
 <p><img alt="" src="images/nullrange.png" /></p>
-<h4 id="space-before-the-physical-unit">Space Before the Physical Unit</h4>
+<h3 id="space-before-the-physical-unit">Space Before the Physical Unit</h3>
 <p>If you type a numeric literal with a physical unit, there should be a
 space between the number and the unit.</p>
 <div class="codehilite"><pre><span></span>    <span class="n">T</span> <span class="o">:=</span> <span class="mi">25</span><span class="n">ns</span><span class="p">;</span> <span class="c1">-- ILLEGAL, but accepted by ModelSim</span>
@@ -2269,34 +2264,33 @@ version. As a result, some VHDL designers got used to writing the
 incorrect version, producing code that is not portable to other
 simulators. Sigasi accepts the ModelSim-style physical literals, but
 warns about this.</p>
-<h4 id="capitalization-of-identifiers">Capitalization of Identifiers</h4>
+<h3 id="capitalization-of-identifiers">Capitalization of Identifiers</h3>
 <p>Although VHDL is not case sensitive, it is recommend to always use the same capitalization when referring to the same declaration. Since version 2.30, Sigasi warns when the capitalization of a reference differs from the capitalization of the declaration. Because external libraries can have different code styles, this linting only checks references in the same library as its declaration.</p>
 <p>Since <a href="/releasenotes/sigasi-2.31.html" title="Sigasi 2.31">Sigasi 2.31</a> this can easily be fixed with a quickfix.</p>
 <p><img alt="" src="images/captalization_references.png" /></p>
-<h4 id="naming-conventions">Naming Conventions</h4>
+<h3 id="naming-conventions">Naming Conventions</h3>
 <p>On the <strong>Navigation conventions</strong> preference page (<strong>Window >
 Preferences > Sigasi > VHDL > Naming conventions</strong>) you can configure
 patterns to check correct naming of your VHDL identifiers. Patterns are
-configured with <a href="http://www.vogella.com/tutorials/JavaRegularExpressions/article.html">Java regex
-syntax</a></p>
+configured with <a href="http://www.vogella.com/tutorials/JavaRegularExpressions/article.html">Java regex syntax</a></p>
 <p>Only name with a specified pattern are checked. Empty patterns are
 omitted.</p>
 <p><strong>Example:</strong> to enforce a style where all variables have a <code>_v</code> suffix,
 you whould specify <code>.*_v</code> pattern in the <strong>Variable name</strong> field.</p>
-<h4 id="vector-width-in-assignments-and-port-maps">Vector width in assignments and port maps</h4>
+<h3 id="vector-width-in-assignments-and-port-maps">Vector width in assignments and port maps</h3>
 <p>Sigasi checks the vector size in assignments (Since <a href="/releasenotes/sigasi-2.28.html" title="Sigasi 2.28">Sigasi 2.28</a>) and port maps (Since <a href="/releasenotes/sigasi-3.01.html" title="Sigasi Studio 3.1">Sigasi Studio 3.1</a>). This check works at type-time and takes the (symbolic) value of generics into account.</p>
 <p><img alt="" src="images/linting_vector_width.png" /></p>
-<h3 id="project-specific-linting-settings">Project specific Linting settings</h3>
+<h2 id="project-specific-linting-settings">Project specific Linting settings</h2>
 <p>The default way to configure the severity of the Sigasi linting checks is to set their severity in the <strong>Errors/Warnings</strong> preference page.
-You can override these setting by creating a settings file for your projects. </p>
+You can override these setting by creating a settings file for your projects.</p>
 <p>In each project, you can override the coding rules settings. You can override rules for the <strong>entire project</strong>, for <strong>folders</strong> in the project, or for individual <strong>files</strong>.</p>
 <p>Project settings are stored in this settings file:</p>
-<div class="codehilite"><pre><span></span>${project location}/.settings/com.sigasi.hdt.vhdl.linting.prefs
+<div class="codehilite"><pre><span></span>    ${project location}/.settings/com.sigasi.hdt.vhdl.linting.prefs
 </pre></div>
 
 
 <p>To configure the severity of validations, add a line for each validation:</p>
-<div class="codehilite"><pre><span></span>${validation id}/severity/${path}=${severity}
+<div class="codehilite"><pre><span></span>    ${validation id}/severity/${path}=${severity}
 </pre></div>
 
 
@@ -2314,20 +2308,20 @@ You can override these setting by creating a settings file for your projects. </
 <p>Where <code>${severity}</code> can be:</p>
 <ul>
 <li>ERROR</li>
-<li>WARNING </li>
-<li>INFO </li>
-<li>IGNORE </li>
+<li>WARNING</li>
+<li>INFO</li>
+<li>IGNORE</li>
 </ul>
 <p>Whitespace must be escaped with a back slash (<code>\</code>). You can add comments with <code>#</code>.</p>
 <p>Examples:</p>
-<div class="codehilite"><pre><span></span>72/severity/&lt;project&gt;=IGNORE
-72/severity//Folder\ name/Extra\ folder=INFO
-72/severity//test/top.vhd=WARNING
-all/severity/&lt;project&gt;=IGNORE
+<div class="codehilite"><pre><span></span>    72/severity/&lt;project&gt;=IGNORE
+    72/severity//Folder\ name/Extra\ folder=INFO
+    72/severity//test/top.vhd=WARNING
+    all/severity/&lt;project&gt;=IGNORE
 </pre></div>
 
 
-<h4 id="validation-ids">Validation IDs</h4>
+<h3 id="validation-ids">Validation IDs</h3>
 <table class="table">
 <thead>
 <tr>
@@ -2486,8 +2480,10 @@ all/severity/&lt;project&gt;=IGNORE
 <li><a href="#incomplete-port-maps-and-generic-maps">Incomplete Port Maps and Generic Maps</a></li>
 <li><a href="#posititional-association-in-instantiations">Posititional Association in Instantiations</a></li>
 <li><a href="#quickfix-for-third-party-libraries">Quickfix for Third Party Libraries</a></li>
-<li><a href="#redundant-others">Redundant "others"</a></li>
+<li><a href="#redundant-others">Redundant "others"</a><ul>
 <li><a href="#sensitivity-list">Sensitivity List</a></li>
+</ul>
+</li>
 <li><a href="#superfluous-library-clause">Superfluous Library Clause</a></li>
 <li><a href="#dead-code-unreachable-code">Dead Code (unreachable code)</a></li>
 <li><a href="#null-range-empty-range-nullrange">Null Range (empty range) (#nullRange)</a></li>
@@ -2495,10 +2491,10 @@ all/severity/&lt;project&gt;=IGNORE
 <li><a href="#capitalization-of-identifiers">Capitalization of Identifiers</a></li>
 <li><a href="#naming-conventions">Naming Conventions</a></li>
 <li><a href="#vector-width-in-assignments-and-port-maps">Vector width in assignments and port maps</a></li>
-<li><a href="#project-specific-linting-settings">Project specific Linting settings</a><ul>
-<li><a href="#validation-ids">Validation IDs</a></li>
 </ul>
 </li>
+<li><a href="#project-specific-linting-settings">Project specific Linting settings</a><ul>
+<li><a href="#validation-ids">Validation IDs</a></li>
 </ul>
 </li>
 </ul>
@@ -2512,6 +2508,8 @@ all/severity/&lt;project&gt;=IGNORE
   </div>
 
   <ul class="pager">
+    <li class="previous"><a href="/manual/opening.html">&larr; Opening Files</a></li>
+    <li class="next"><a href="/manual/tools.html">Tool Integration &rarr;</a></li>
   </ul>
       
 </div>
@@ -2533,7 +2531,7 @@ all/severity/&lt;project&gt;=IGNORE
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2017-02-02 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2017-02-16 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
