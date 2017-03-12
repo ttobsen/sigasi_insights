@@ -2030,12 +2030,12 @@ Insights<span style="color:#f47920">.</span>							</p>
       <div class="col-md-9" role="main">
         <p>For those users who want to get early access to the features and bugfixes of upcoming Sigasi Studio releases, we have set up an extra release channel, called "<mark>Sigasi Preview</mark>".</p>
 <p>The Sigasi Preview release channel offers more frequent releases than the official releases. This page gives an introduction to the most important changes.</p>
-<p>Although these preview release are less rigorously tested than than the official releases, they are stable enough for daily use.</p>
+<p>Although these preview releases are less rigorously tested than than the official releases, they are stable enough for daily use.</p>
 <p><mark>If you run into any problems, please let us know</mark>.</p>
 <h2 id="current-preview-release">Current preview release</h2>
 <p>These features are available in the current preview release.</p>
 <h3 id="systemverilog-improvements">SystemVerilog improvements</h3>
-<p>All SystemVerilog is processed in a predictable order and keep track of the preprocessor state. This avoids problems with the <code>`ifndef ... `define  ...</code> pattern. This also allows us to offer <strong>full support for include files</strong>. You can edit include files <mark>as if they were included in a Verilog file</mark>. This requires no extra configuration, except for <a href="/manual/editor.html#verilog-preprocessingmacros" title="Sigasi Studio Editor">setting your include paths</a>.</p>
+<p>All SystemVerilog is processed in a predictable order and Sigasi keeps track of the preprocessor state. This avoids problems with the <code>`ifndef ... `define  ...</code> pattern. This also allows us to offer <strong>full support for include files</strong>. You can edit include files <mark>as if they were included in a Verilog file</mark>. This requires no extra configuration, except for <a href="/manual/editor.html#verilog-preprocessingmacros" title="Sigasi Studio Editor">setting your include paths</a>.</p>
 <div class="wistia_responsive_padding" style="padding:118.13% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><iframe src="//fast.wistia.net/embed/iframe/wu2qqrjhu0?videoFoam=true" title="Wistia video player" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="100%" height="100%"></iframe></div></div>
 
 <script src="//fast.wistia.net/assets/external/E-v1.js" async></script>
@@ -2046,22 +2046,22 @@ Insights<span style="color:#f47920">.</span>							</p>
    This works for both <strong>SystemVerilog</strong> <mark>and</mark> <strong>Include</strong> files.</li>
 <li>Preprocessor/Macros: Macros are fully supported. You can preview the text expansion with a hover or in the “Preprocessor View”.</li>
 <li>Include paths can be specified by right clicking a project, selecting <strong>Properties</strong>, and opening the <strong>Verilog Preprocessor page</strong>. Currently, only project-relative paths are supported.</li>
-<li>Open Declaration and Find References (for regular Verilog Code)</li>
+<li>Open Declaration and Find References (for regular Verilog Code).</li>
 <li>Autocomplete (Ctrl+Space):<ul>
 <li>Syntax: autocomplete for keywords and identifiers</li>
 <li>Fixed Templates: these templates can be modified</li>
 <li>Smart Templates: module instantiations</li>
 </ul>
 </li>
-<li>Integration with an external compiler (Riviera-Pro, ModelSim, NCsim)</li>
-<li>We have a first version of SV formatting. <strong>Clean Indentation</strong> (<strong>Ctrl+Shift+F</strong>). Note that this format the entire file in the editor; formatting selections is not supported yet.</li>
+<li>Integration with an external compiler (Riviera-Pro, ModelSim, NCsim).</li>
+<li>We have a first version of SV formatting. <strong>Clean Indentation</strong> (<strong>Ctrl+Shift+F</strong>). Note that this formats the entire file in the editor; formatting selections is not supported yet.</li>
 </ul>
 <h4 id="what-systemverilog-features-are-we-currently-working-on">What SystemVerilog features are we currently working on?</h4>
 <p>We are currently implementing the scoping rules of SystemVerilog. This will result in better <strong>semantic highlighting</strong>, <strong>Find References</strong> and <strong>Open Declaration</strong> for all SystemVerilog code.</p>
 <h3 id="new-vhdl-formatter">New VHDL formatter</h3>
 <p>For Sigasi Studio 3.4 we did a rewrite of the VHDL formatter. This fixed a lot of reported formatting issues.
 In addition, we also implemented a way to disable the formatter for custom sections of your VHDL files.</p>
-<p>To disable the formatter for a section by enclosing it between <code>-- @formatter:off</code> and a <code>-- @formatter:on</code> comment.
+<p>To disable the formatter for a section, enclose it between a <code>-- @formatter:off</code> and a <code>-- @formatter:on</code> comment.
 E.g.:</p>
 <div class="codehilite"><pre><span></span><span class="c1">-- @formatter:off</span>
       <span class="c1">-- skipped region</span>
@@ -2071,7 +2071,7 @@ E.g.:</p>
 
 <p>The new formatter has roughly the same rules as you have seen in earlier versions of Sigasi Studio. Let us know if you see unexpected and unwanted changes.</p>
 <h4 id="extras">Extras</h4>
-<p>Sigasi Studio now has a <strong>Correct Indentation</strong> action. This action only modifies the indentation of your (selected) VHDL code. You can run via the context menu in the editor and <strong>Source &gt; Correct Indentation</strong> or via <strong>Ctrl+I</strong></p>
+<p>Sigasi Studio now has a <strong>Correct Indentation</strong> action. This action only modifies the indentation of your (selected) VHDL code. You can run it via the context menu in the editor and <strong>Source &gt; Correct Indentation</strong> or via <strong>Ctrl+I</strong></p>
 <h2 id="update-or-install">Update or install?</h2>
 <p>You can download the Stand-alone version of the latest preview version from:</p>
 <ul>
@@ -2135,7 +2135,6 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
   </div>
 
   <ul class="pager">
-    <li class="next"><a href="/tech/psl.ebnf.html">Property Specification Language (PSL) Grammar &rarr;</a></li>
   </ul>
       
 </div>
@@ -2157,7 +2156,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2017-03-09 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2017-03-12 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
