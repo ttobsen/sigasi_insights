@@ -2080,6 +2080,18 @@ Insights<span style="color:#f47920">.</span>							</p>
 </pre></div>
 
 
+<h4 id="negative-index-ranges">Negative index ranges</h4>
+<p>Depending on index type of ranges you can use negative index values to get specific element of array.</p>
+<div class="codehilite"><pre><span></span><span class="k">type</span> <span class="n">neg_index_array</span> <span class="k">is</span> <span class="k">array</span> <span class="p">(</span><span class="o">-</span><span class="mi">5</span> <span class="k">to</span> <span class="mi">5</span><span class="p">)</span> <span class="k">of</span> <span class="kt">integer</span><span class="p">;</span>
+<span class="k">variable</span> <span class="n">my_neg_array</span> <span class="o">:</span> <span class="n">neg_index_array</span><span class="p">;</span>
+<span class="n">my_neg_array</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">)</span> <span class="o">:=</span> <span class="mi">15</span><span class="p">;</span>
+<span class="n">my_neg_array</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span> <span class="k">to</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">:=</span> <span class="mi">12</span> <span class="o">&amp;</span> <span class="mi">13</span> <span class="o">&amp;</span> <span class="mi">14</span><span class="p">;</span> <span class="c1">-- &amp; - concatenation</span>
+<span class="n">my_neg_array</span><span class="p">(</span><span class="mi">0</span> <span class="k">to</span> <span class="mi">1</span><span class="p">)</span> <span class="o">:=</span> <span class="n">my_neg_array</span><span class="p">(</span><span class="mi">4</span> <span class="k">to</span> <span class="mi">5</span><span class="p">);</span>
+<span class="c1">-- illegal, Slice range direction (downto) does not match slice prefix direction (to).</span>
+<span class="n">my_neg_array</span><span class="p">(</span><span class="mi">0</span> <span class="k">to</span> <span class="mi">1</span><span class="p">)</span> <span class="o">:=</span> <span class="n">my_neg_array</span><span class="p">(</span><span class="mi">3</span> <span class="k">downto</span> <span class="mi">2</span><span class="p">);</span>
+</pre></div>
+
+
 <h4 id="unconstrained-ranges">Unconstrained ranges</h4>
 <p>VHDL also allows you to define <em>unconstrained arrays</em>, which are array declarations where the <em>type</em> of the index values is specified, but not the <em>bounds</em>.
 A typical examples is  <code>std_ulogic_vector</code>:</p>
@@ -2128,6 +2140,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 <li><a href="#special-cases">Special cases</a><ul>
 <li><a href="#null-ranges">Null ranges</a></li>
 <li><a href="#single-element-ranges">Single element ranges</a></li>
+<li><a href="#negative-index-ranges">Negative index ranges</a></li>
 <li><a href="#unconstrained-ranges">Unconstrained ranges</a></li>
 <li><a href="#non-integer-ranges">Non integer ranges</a></li>
 </ul>
@@ -2151,6 +2164,8 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
   </div>
 
   <ul class="pager">
+    <li class="previous"><a href="/tech/spell-checking.html">&larr; Spell Checking in Sigasi/Eclipse</a></li>
+    <li class="next"><a href="/tech/eclipse_tcl_support_in_sigasi.html">Eclipse Tcl support in Sigasi &rarr;</a></li>
   </ul>
       
 </div>
@@ -2172,7 +2187,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2017-03-12 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2017-03-28 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
