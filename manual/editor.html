@@ -1884,6 +1884,9 @@ Insights<span style="color:#f47920">.</span>							</p>
 			<a href="/releasenotes/" class="dropdown-toggle" data-toggle="dropdown">Release Notes <b class="caret"></b></a>
 			<ul class="dropdown-menu">
 				<li>
+					<a href="/releasenotes/sigasi-3.04.html">Sigasi Studio 3.4</a>
+				</li>
+				<li>
 					<a href="/releasenotes/sigasi-3.03.html">Sigasi Studio 3.3</a>
 				</li>
 				<li>
@@ -2269,7 +2272,7 @@ according to your preferences.</p>
 </script>
 
 <h3 id="vhdl-code-formatting">VHDL code formatting</h3>
-<p>Press CTRL+SHIFT+F to format your current VHDL file.</p>
+<p>Press <strong>Ctrl+Shift+f</strong> to format your current VHDL file.</p>
 <p>This includes:</p>
 <ul>
 <li>indentation</li>
@@ -2294,9 +2297,20 @@ can configure them at <strong>Window &gt; Preferences &gt; Sigasi &gt; VHDL &gt;
 Configurable settings currently include:</p>
 <ul>
 <li>Preserve newline characters</li>
+<li>Vertical alignment</li>
 <li>Upper case for VHDL keywords</li>
 <li>Alignment column for trailing comments</li>
 </ul>
+<h4 id="correct-indentation-only">Correct indentation only</h4>
+<p>Sigasi Studio can also correct the indentation of your code without making any other changes.  Inside a VHDL editor, open the context menu and click <strong>Source &gt; Correct Indentation</strong>, or hit <strong>Ctrl+I</strong>. This only changes whitespace at the start of you lines.</p>
+<p>If you select code first, only the code in the selection will be indented.</p>
+<h4 id="disable-formatting-in-defined-regions">Disable formatting in defined regions</h4>
+<p>You can disable the formatter for defined regions in your VHDL source files by enclosing them by <strong>off</strong> and <strong>on</strong> tags:</p>
+<ul>
+<li><strong>off</strong> tag: <code>-- @formatter:off</code></li>
+<li><strong>on</strong> tag: <code>-- @formatter:on</code></li>
+</ul>
+<p><img alt="" src="images/formatter_off.png" /></p>
 <h4 id="format-code-on-save">Format code on save</h4>
 <p>You can configure Sigasi Studio to automatically format your VHDL files when you save your source files via <strong>Preferences &gt; Sigasi &gt; VHDL</strong>, next enable <strong>Enable code format on save</strong>.</p>
 <h3 id="lightweight-editor-for-large-vhdl-files">Lightweight editor for large VHDL files</h3>
@@ -2323,6 +2337,9 @@ described in this chapter.</p>
 <p>You can configure the Verilog version (Verilog or SystemVerilog) via <strong>Window &gt; Preferences</strong>, <strong>Sigasi &gt; Verilog</strong> and <strong>Verilog version</strong>.</p>
 <h4 id="disable-verilog-error-markers">Disable Verilog Error Markers</h4>
 <p><mark>Note that Sigasi Studio does not cover the entire SystemVerilog grammar yet. So if you are using </mark>'unsupported'<mark> syntax, you will see lots of incorrect <a href="#type-time-syntax-error-reporting">syntax error markers</a>. You can disable these error markers by pressing <strong>Ctrl-3</strong> and typing <code>Toggle Verilog error markers</code>. Next close and re-open all open Verilog editors to force a refresh.</mark></p>
+<h3 id="format">Format</h3>
+<p>Press <strong>Ctrl+Shift+F</strong> to format your current SystemVerilog file.</p>
+<p>The current formatter implementation corrects indentation only.</p>
 <h3 id="smartindent-verilog">Smart Indentation</h3>
 <p>When you press enter, Sigasi automatically adjusts the indentation of
 current and the new line. Depending on the content of the preceding
@@ -2405,6 +2422,8 @@ according to your preferences.</p>
 <li><a href="#vhdl-code-formatting">VHDL code formatting</a><ul>
 <li><a href="#context-based">Context based</a></li>
 <li><a href="#configuration">Configuration</a></li>
+<li><a href="#correct-indentation-only">Correct indentation only</a></li>
+<li><a href="#disable-formatting-in-defined-regions">Disable formatting in defined regions</a></li>
 <li><a href="#format-code-on-save">Format code on save</a></li>
 </ul>
 </li>
@@ -2417,6 +2436,7 @@ according to your preferences.</p>
 <li><a href="#disable-verilog-error-markers">Disable Verilog Error Markers</a></li>
 </ul>
 </li>
+<li><a href="#format">Format</a></li>
 <li><a href="#smartindent-verilog">Smart Indentation</a></li>
 <li><a href="#verilog-preprocessingmacros">Verilog Preprocessing/Macros</a></li>
 </ul>
@@ -2453,7 +2473,7 @@ according to your preferences.</p>
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2017-03-28 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2017-03-30 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
