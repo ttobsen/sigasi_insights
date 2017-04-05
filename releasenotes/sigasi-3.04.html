@@ -2097,6 +2097,32 @@ We changed the looks of <code>assignment</code> and <code>assert</code> statemen
 </ul>
 <h3 id="how-to-update">How to update?</h3>
 <p>If you have Sigasi Studio 3 installed, you can <a href="/faq.html#update" title="Update Sigasi">update</a> or <a href="http://www.sigasi.com/download" title="Download the Latest Version of Sigasi">download a fresh install of the latest version</a>.</p>
+<h3 id="sigasi-341-point-release">Sigasi 3.4.1 point release</h3>
+<p>We noticed in the error reports of Sigasi Studio 3.4 Talkback, that we accidentally uploaded small snippets of VHDL code that triggered a bug in the new formatter.
+We <a href="http://insights.sigasi.com/manual/talkback.html#what-kind-of-information-is-sent-through-talkback">promised we would never do this</a>, so we immediately fixed the issue in the Sigasi Studio 3.4.1 release.</p>
+<p>When was it send? If Talkback was enabled and you hit a bug in the formatter
+What was send? The VHDL source line that triggered the issue, plus some lines before and after the issue.</p>
+<p>Example:</p>
+<div class="codehilite"><pre><span></span>BugReport [
+version=3.4.0.201703291150
+pluginName=org.apache.log4j
+pluginVersion=1.2.15.v201012070815
+stacktrace=
+{}: space=&#39;&#39; at offset=6836 length=1
+[[[]]]: space=&#39; &#39; at offset=6836 length=1
+------------------------------- document snippet -------------------------------
+mem_www          : out std_logic_vector(4 - 1 downto 0);
+mem_xxx          : in  std_logic_vector(4 - 1 downto 0) := (others =&gt; &#39;0&#39;);
+mem_yyy          : in  std_logic_vector(4 - 1 downto 0) :={​{​{​[​​[​[ }​}​}​]​]​](others =&gt; &#39;0&#39;);
+mem_zzz          : in  std_logic_vector(4 - 1 downto 0) := (others =&gt; &#39;0&#39;);
+--------------------------------------------------------------------------------
+    at org.eclipse.xtext.formatting2.internal.TextSegmentSet.handleConflict(TextSegmentSet.java:83)
+    at org.eclipse.xtext.formatting2.internal.ArrayListTextSegmentSet.replaceExistingEntry(ArrayListTextSegmentSet.java:139)
+    at org.eclipse.xtext.formatting2.internal.ArrayListTextSegmentSet.add(ArrayListTextSegmentSet.java:49)
+    at org.eclipse.xtext.formatting2.internal.FormattableDocument.addReplacer(FormattableDocument.java:77)
+    at org.eclipse.xtext.formatting2.internal.FormattableDocument.set(FormattableDocument.java:326)
+    at org.eclipse.xtext.formatting2.internal.FormattableDocument.prepend(FormattableDocument.java:278)
+</pre></div>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -2129,6 +2155,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 <li><a href="#other-new-and-noteworthy-improvements">Other new and noteworthy improvements</a></li>
 <li><a href="#bug-fixes">Bug fixes</a><ul>
 <li><a href="#how-to-update">How to update?</a></li>
+<li><a href="#sigasi-341-point-release">Sigasi 3.4.1 point release</a></li>
 </ul>
 </li>
 </ul>
@@ -2163,7 +2190,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2017-04-04 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2017-04-05 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
