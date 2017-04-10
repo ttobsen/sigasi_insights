@@ -2033,19 +2033,20 @@ Insights<span style="color:#f47920">.</span>							</p>
       <div class="col-md-9" role="main">
         <p>How can you check invariants in VHDL? How can you write information to the console? That is what the VHDL assert statement and report statement are for!</p>
 <p>The basic syntax of a report statements in VHDL is:</p>
-<div class="codehilite"><pre><span></span><span class="n">report</span> <span class="o">&lt;</span><span class="n">messagestring</span><span class="o">&gt;</span> <span class="p">[</span><span class="k">severity</span> <span class="o">&lt;</span><span class="n">severitylevel</span><span class="o">&gt;</span><span class="p">];</span>
+<div class="codehilite"><pre><span></span><span class="n">report</span> <span class="o">&lt;</span><span class="n">message_string</span><span class="o">&gt;</span> <span class="p">[</span><span class="k">severity</span> <span class="o">&lt;</span><span class="kt">severity_level</span><span class="o">&gt;</span><span class="p">];</span>
 </pre></div>
 
 
-<p>The message string obviously has to be a string. The severity level has the datatype <code>std.standard.severity_level</code>. Possible values are: <code>NOTE, WARNING, ERROR, FAILURE</code></p>
+<p>The message string obviously has to be a string. The severity level has the datatype <code>std.standard.severity_level</code>. Possible values are: <code>note, warning, error, failure</code></p>
 <p>For example:</p>
-<div class="codehilite"><pre><span></span><span class="n">report</span> <span class="s">&quot;this is a message&quot;</span><span class="p">;</span>
+<div class="codehilite"><pre><span></span><span class="n">report</span> <span class="s">&quot;this is a message&quot;</span><span class="p">;</span> <span class="c1">-- severity note</span>
 <span class="c1">-- or:</span>
 <span class="n">report</span> <span class="s">&quot;this is a serious message&quot;</span> <span class="k">severity</span> <span class="n">warning</span><span class="p">;</span>
 </pre></div>
 
 
-<p>Report statements are <mark>sequential</mark> statements. This means they can only be in sequential regions, like inside the statements part of  process or a procedure. They can not be by themselves in an architecture.</p>
+<p>If the <code>severity_level</code> clause is omitted in a report statement it is implicitly assumed to be <code>note</code>.
+Report statements are <mark>sequential</mark> statements. This means they can only be in sequential regions, like inside the statements part of  process or a procedure. They can not be by themselves in an architecture.</p>
 <div class="codehilite"><pre><span></span><span class="k">entity</span> <span class="nc">e0</span> <span class="k">is</span>
 <span class="k">end</span> <span class="k">entity</span> <span class="nc">e0</span><span class="p">;</span>
 <span class="k">architecture</span> <span class="nc">demo</span> <span class="k">of</span> <span class="nc">e0</span> <span class="k">is</span>
@@ -2076,11 +2077,18 @@ Insights<span style="color:#f47920">.</span>							</p>
 </pre></div>
 
 
-<p>These are the allowed ways of writing a VHDL assert statement, where <code>condition</code> has the datatype <code>boolean</code>.</p>
+<p>These are several ways of writing a VHDL assert statement, where <code>condition</code> is of <code>boolean</code> type.</p>
 <div class="codehilite"><pre><span></span>    <span class="k">assert</span> <span class="o">&lt;</span><span class="n">condition</span><span class="o">&gt;</span><span class="p">;</span>
-    <span class="k">assert</span> <span class="o">&lt;</span><span class="n">condition</span><span class="o">&gt;</span> <span class="k">severity</span> <span class="o">&lt;</span><span class="n">severitylevel</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="k">assert</span> <span class="o">&lt;</span><span class="n">condition</span><span class="o">&gt;</span> <span class="k">severity</span> <span class="o">&lt;</span><span class="kt">severity_level</span><span class="o">&gt;</span><span class="p">;</span>
     <span class="k">assert</span> <span class="o">&lt;</span><span class="n">condition</span><span class="o">&gt;</span> <span class="n">report</span> <span class="o">&lt;</span><span class="n">message_string</span><span class="o">&gt;</span><span class="p">;</span>
-    <span class="k">assert</span> <span class="o">&lt;</span><span class="n">condition</span><span class="o">&gt;</span> <span class="n">report</span> <span class="o">&lt;</span><span class="n">message_string</span><span class="o">&gt;</span> <span class="k">severity</span> <span class="o">&lt;</span><span class="n">severitylevel</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="k">assert</span> <span class="o">&lt;</span><span class="n">condition</span><span class="o">&gt;</span> <span class="n">report</span> <span class="o">&lt;</span><span class="n">message_string</span><span class="o">&gt;</span> <span class="k">severity</span> <span class="o">&lt;</span><span class="kt">severity_level</span><span class="o">&gt;</span><span class="p">;</span>
+</pre></div>
+
+
+<p>If no <code>message_string</code> specified then <mark>"Assertion violation."</mark> will be used by default. If the <code>severity_level</code> clause is omitted in an assert statement it is implicitly assumed to be <code>error</code>.</p>
+<div class="codehilite"><pre><span></span>    <span class="k">assert</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="k">assert</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="n">report</span> <span class="s">&quot;Assertion violation.&quot;</span><span class="p">;</span>
+    <span class="k">assert</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="n">report</span> <span class="s">&quot;Assertion violation.&quot;</span> <span class="k">severity</span> <span class="n">error</span><span class="p">;</span>
 </pre></div>
 
 
@@ -2143,7 +2151,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2017-04-05 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2017-04-10 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
