@@ -1884,6 +1884,9 @@ Insights<span style="color:#f47920">.</span>							</p>
 			<a href="/releasenotes/" class="dropdown-toggle" data-toggle="dropdown">Release Notes <b class="caret"></b></a>
 			<ul class="dropdown-menu">
 				<li>
+					<a href="/releasenotes/sigasi-3.05.html">Sigasi Studio 3.5</a>
+				</li>
+				<li>
 					<a href="/releasenotes/sigasi-3.04.html">Sigasi Studio 3.4</a>
 				</li>
 				<li>
@@ -2069,10 +2072,13 @@ clicking hyperlinks. If you press and hold the <strong>Ctrl</strong> key, hyperl
 Sigasi offers following links:</p>
 <ul>
 <li>Link to <strong>Declaration</strong>: this has the same behaviour as <strong>Open Declaration</strong> (<strong>F3</strong>)</li>
-<li>Link to <strong>Matching Entity</strong> [VHDL]: this links a <strong>component</strong> declaration of instantiation to the matching entity declaration. This also works for component <strong>generics</strong> and <strong>ports</strong> (<strong>Shift+F3</strong>).</li>
-<li>Link to <strong>Matching When Clause</strong> [VHDL]: in finite state machines (FSMs) you can jump directly to the matching <em>when</em> part of your case statement from state transitions (<strong>Shift+F3</strong>).</li>
-<li>Link to <strong>Open Declaration in Package Body</strong> [VHDL]: in packages you can jump directly to the matching <em>declaration</em> in the package body (<strong>Shift+F3</strong>). This also works in the opposite direction, <strong>Open Declaration in Package Body</strong>.</li>
-<li>Link to <strong>Open Declaration in Protected Type Body</strong> [VHDL]: in protected types you can jump directly to the matching <em>declaration</em> in the protected type body. This also works in the opposite direction, <strong>Open Declaration in Protected Type</strong>.</li>
+<li>Link to <strong>Matching Entity</strong> [VHDL]: this links a <strong>component</strong> declaration of instantiation to the matching entity declaration. This also works for component <strong>generics</strong> and <strong>ports</strong> (<strong>Shift+F3</strong>)</li>
+<li>Link to <strong>Matching Architecture</strong> for entity declarations [VHDL]</li>
+<li>Link to <strong>Matching When Clause</strong> [VHDL]: in finite state machines (FSMs) you can jump directly to the matching <em>when</em> part of your case statement from state transitions (<strong>Shift+F3</strong>)</li>
+<li>Link to <strong>Open Declaration in Package Body</strong> [VHDL]: in packages you can jump directly to the matching <em>declaration</em> in the package body (<strong>Shift+F3</strong>). This also works in the opposite direction, <strong>Open Declaration in Package Body</strong></li>
+<li>Link to <strong>Open Declaration in Protected Type Body</strong> [VHDL]: in protected types you can jump directly to the matching <em>declaration</em> in the protected type body. This also works in the opposite direction, <strong>Open Declaration in Protected Type</strong></li>
+<li>Link to <strong>Include files</strong> in SystemVerilog sources (<strong>F3</strong>)</li>
+<li>Link to <strong>Macro definition</strong> in SystemVerilog sources</li>
 <li>URLs in <strong>comments</strong></li>
 </ul>
 <h3 id="hover">Hover</h3>
@@ -2101,7 +2107,7 @@ autocompletion based on the VHDL language. However, it goes much
 further. It also provides autocompletion based on the design context. It can provide this additional level of intelligence as it knows all
 objects that have been declared in the design.</p>
 <h4 id="autocompletion-interface">Autocompletion interface</h4>
-<p>Autocompletions may come from different sources, as will be discussed in the following sections. However, the user interface to initiate them is always the same. At any point as you are entering code, you can press <strong>CTRL+SPACE</strong> and the tool will suggest appropriate autocompletions.</p>
+<p>Autocompletions may come from different sources, as will be discussed in the following sections. However, the user interface to initiate them is always the same. At any point as you are entering code, you can press <strong>Ctrl+Space</strong> and the tool will suggest appropriate autocompletions.</p>
 <p>Some autocompletions are templates which require further user input. In such a case, the editor goes into a special <em>template editing</em> mode after the autocompletion has been performed. You can use TAB to cycle through the items that have to be modified or completed. When done, you can press ENTER to return to the normal editing mode. The cursor will be placed at an appropriate position to continue working.</p>
 <h4 id="based-on-templates">Based on templates</h4>
 <p>Sigasi can help you to declare VHDL and Verilog objects, using autocompletion based on templates. Sigasi comes preconfigured with templates for all common declarations and statements, including (for VHDL):</p>
@@ -2139,7 +2145,10 @@ autocompletion candidates.</p>
 <p><img alt="Code Folding" src="images/code_folding.png" /></p>
 <p>You can also enable/disable code folding and perform other actions by right-clicking in the gutter (the small column to the left of your code) and selecting <strong>Folding</strong>.</p>
 <p><img alt="Configure Code Folding" src="images/configure_folding.png" /></p>
+<h4 id="rename-refactoring">Rename refactoring</h4>
+<p>Right click on any identifier (VHDL or SystemVerilog) and select <strong>Refactor &gt; Rename element</strong> (<strong>Ctrl+Shift+R</strong>) to change the name of the declaration and all its references. If you press <strong>Ctrl+Shift+R</strong> twice, you can preview the rename before applying it.</p>
 <h4 id="full-screen-view">Full screen view</h4>
+<p>Double click on the editor tab to make it full screen.</p>
 <h4 id="block-select">Block selection</h4>
 <p><strong>Note:</strong> In other tools, this feature may be known as <em>column editing</em>
 or <em>column select</em>.</p>
@@ -2177,6 +2186,14 @@ selection by pressing: <strong>Ctrl+Alt+Down</strong>.</p>
 <li>Previous versions (local history or version control)</li>
 <li>Comparing two files</li>
 </ul>
+<h3 id="opening-project-files">Opening project files</h3>
+<p>The default way to open files in the VHDL and SystemVerilog editor, is to double click the files in the <a href="/manual/views.html#explorer" title="Views">Project Explorer</a>. But there are more methods to open files in your projects.</p>
+<h4 id="open-resource">Open Resource</h4>
+<p>When you press <strong>Ctrl+Shift+R</strong> the <strong>Open Resource</strong> dialog opens. In this dialog you can type a name or pattern to open a specific file name.</p>
+<h4 id="open-design-unit">Open Design Unit</h4>
+<p>When you press <strong>Ctrl+Shift+D</strong> the <strong>Open Design Unit</strong> dialog opens. In this dialog you can type a name or pattern to open a specific VHDL or SystemVerilog design unit name.</p>
+<p><img alt="Open Design Unit Dialog" src="images/open-design-unit.png" /></p>
+<p>Note that <a href="/manual/libraries.html#libraries-mapping" title="Libraries"><strong>excluded</strong> design files</a> do not appear in this list.</p>
 <h2 id="vhdl-specific">VHDL Specific</h2>
 <p>In addition to the powerful features of an Eclipse editor, the VHDL
 editor that comes with Sigasi supports a number of advanced editing
@@ -2360,9 +2377,11 @@ according to your preferences.</p>
 <p>When you hover over a Verilog preprocessor directive (e.g. <code>include ...</code>), Sigasi presents you the preprocessed text. This hover also shows you, at the bottom, a convenient link to open the <a href="/manual/views.html#preprocessor-view" title="Views">Preprocessor View</a>.</p>
 <p><img alt="" src="images/preprocessor-hover.png" /></p>
 <p>In the <a href="/manual/views.html#preprocessor-view" title="Views">Preprocessor View</a>, you can preview the expanded version of your preprocessed Verilog source files.</p>
-<p>You can configure the include paths of your Verilog projects in the Verilog Preprocessor Property page. You can open this page by right clicking your Verilog project and selecting <strong>Properties &gt; Verilog Preprocessor</strong>.</p>
-<p><img alt="" src="images/preprocessor-property-page.png" /></p>
+<p>You can configure the include paths of your Verilog projects in the Verilog Preprocessor Property page. You can open this page by right clicking your Verilog project and selecting <strong>Properties &gt; Verilog Preprocessor</strong>.
+<img alt="" src="images/preprocessor-property-page.png" /></p>
 <p>You can specify multiple include paths by separating them with a <code>;</code>. All paths are relative to the project folder. You can add the main project folder as include path by entering <code>.</code>.</p>
+<p>You can also add an include path by running the quickfix on `<code>include</code> errors.</p>
+<p><strong>Ctrl+Click</strong> on <mark>`defines</mark> (or <strong>F3</strong>) will lead you to the corresponding declaration. Autocomplete will also offer you a list of all visible <mark>`defines</mark>.</p>
 
       </div>
     </div>
@@ -2394,6 +2413,7 @@ according to your preferences.</p>
 </li>
 <li><a href="#other-editor-features">Other editor features</a><ul>
 <li><a href="#code-folding">Code folding</a></li>
+<li><a href="#rename-refactoring">Rename refactoring</a></li>
 <li><a href="#full-screen-view">Full screen view</a></li>
 <li><a href="#block-select">Block selection</a></li>
 <li><a href="#structured-selection">Structured selection</a></li>
@@ -2405,6 +2425,11 @@ according to your preferences.</p>
 <li><a href="#customize-color-preferences">Customize color preferences</a></li>
 <li><a href="#multiple-screen-support">Multiple Screen Support</a></li>
 <li><a href="#side-by-side-diff">Side-by-side Diff</a></li>
+</ul>
+</li>
+<li><a href="#opening-project-files">Opening project files</a><ul>
+<li><a href="#open-resource">Open Resource</a></li>
+<li><a href="#open-design-unit">Open Design Unit</a></li>
 </ul>
 </li>
 </ul>
@@ -2452,8 +2477,6 @@ according to your preferences.</p>
   </div>
 
   <ul class="pager">
-    <li class="previous"><a href="/manual/views.html">&larr; Views</a></li>
-    <li class="next"><a href="/manual/mixed.html">Mixed language projects &rarr;</a></li>
   </ul>
       
 </div>
@@ -2475,7 +2498,7 @@ according to your preferences.</p>
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2017-05-31 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2017-06-14 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

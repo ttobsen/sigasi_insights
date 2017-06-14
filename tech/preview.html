@@ -3,7 +3,7 @@
 	<!--// OPEN HEAD //-->
 	<head>
 		<!--// SITE TITLE //-->
-		<title>Sigasi Studio Preview (3.5) - Sigasi</title>
+		<title>Sigasi Studio Preview (3.6) - Sigasi</title>
 		<!--// SITE META //-->
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -27,11 +27,11 @@
 		<link rel="canonical" href="http://insights.sigasi.com//tech/preview.html" />
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="Sigasi Studio Preview (3.5) - Sigasi" />
+		<meta property="og:title" content="Sigasi Studio Preview (3.6) - Sigasi" />
 		<meta property="og:url" content="http://insights.sigasi.com//tech/preview.html" />
 		<meta property="og:site_name" content="Sigasi" />
 		<meta name="twitter:card" content="summary"/>
-		<meta name="twitter:title" content="Sigasi Studio Preview (3.5) - Sigasi"/>
+		<meta name="twitter:title" content="Sigasi Studio Preview (3.6) - Sigasi"/>
 		<!-- / Yoast SEO plugin. -->
 		<script type="text/javascript">
 			window._wpemojiSettings = {
@@ -1816,7 +1816,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 <div class="page-heading page-heading-hidden clearfix">
 	<div class="container">
 		<div class="heading-text">
-			<h1 class="entry-title" >Sigasi Studio Preview (3.5)</h1>
+			<h1 class="entry-title" >Sigasi Studio Preview (3.6)</h1>
 		</div>
 	</div>
 </div>
@@ -1883,6 +1883,9 @@ Insights<span style="color:#f47920">.</span>							</p>
 		<li class="dropdown">
 			<a href="/releasenotes/" class="dropdown-toggle" data-toggle="dropdown">Release Notes <b class="caret"></b></a>
 			<ul class="dropdown-menu">
+				<li>
+					<a href="/releasenotes/sigasi-3.05.html">Sigasi Studio 3.5</a>
+				</li>
 				<li>
 					<a href="/releasenotes/sigasi-3.04.html">Sigasi Studio 3.4</a>
 				</li>
@@ -2018,7 +2021,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 <div class="container">
   <div class="page-header">
     <div>
-        <h1 style="margin-bottom: 0px;margin-top: 30px;">Sigasi Studio Preview (3.5)</h1>
+        <h1 style="margin-bottom: 0px;margin-top: 30px;">Sigasi Studio Preview (3.6)</h1>
     </div>
         
     <div style="margin: 10px 0 10px">
@@ -2036,64 +2039,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 <p>Although these preview releases are less rigorously tested than than the official releases, they are stable enough for daily use.</p>
 <p><mark>If you run into any problems, please let us know</mark>.</p>
 <h2 id="current-preview-release">Current preview release</h2>
-<p>These features are available in the current preview release.</p>
-<h3 id="systemverilog-improvements">SystemVerilog improvements</h3>
-<p>All SystemVerilog is processed in a predictable order and Sigasi keeps track of the preprocessor state. This avoids problems with the <code>`ifndef ... `define  ...</code> pattern. This also allows us to offer <strong>full support for include files</strong>. You can edit include files <mark>as if they were included in a Verilog file</mark>. This requires no extra configuration, except for <a href="/manual/editor.html#verilog-preprocessingmacros" title="Sigasi Studio Editor">setting your include paths</a>.</p>
-<div class="wistia_responsive_padding" style="padding:118.13% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><iframe src="//fast.wistia.net/embed/iframe/wu2qqrjhu0?videoFoam=true" title="Wistia video player" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="100%" height="100%"></iframe></div></div>
-
-<script src="//fast.wistia.net/assets/external/E-v1.js" async></script>
-
-<h4 id="what-features-are-already-supported">What features are already supported?</h4>
-<ul>
-<li>Syntax error feedback: <strong>All</strong> valid SystemVerilog-2012 code should be accepted as valid code. Most syntax errors should be flagged.<br />
-   This works for both <strong>SystemVerilog</strong> <mark>and</mark> <strong>Include</strong> files.</li>
-<li>Preprocessor/Macros: Macros are fully supported. You can preview the text expansion with a hover or in the “Preprocessor View”.</li>
-<li>Include paths can be specified by right clicking a project, selecting <strong>Properties</strong>, and opening the <strong>Verilog Preprocessor page</strong>. Currently, only project-relative paths are supported.</li>
-<li>Open Declaration and Find References (for regular Verilog Code).</li>
-<li>Autocomplete (Ctrl+Space):<ul>
-<li>Syntax: autocomplete for keywords and identifiers</li>
-<li>Fixed Templates: these templates can be modified</li>
-<li>Smart Templates: module instantiations</li>
-</ul>
-</li>
-<li>Integration with an external compiler (Riviera-Pro, ModelSim, NCsim).</li>
-<li>We have a first version of SV formatting. <strong>Clean Indentation</strong> (<strong>Ctrl+Shift+F</strong>). Note that this formats the entire file in the editor; formatting selections is not supported yet.</li>
-</ul>
-<h4 id="what-systemverilog-features-are-we-currently-working-on">What SystemVerilog features are we currently working on?</h4>
-<p>We are currently implementing the scoping rules of SystemVerilog. This will result in better <strong>semantic highlighting</strong>, <strong>Find References</strong> and <strong>Open Declaration</strong> for all SystemVerilog code.</p>
-<p>We are also working on <strong>autocomplete</strong>. We are making autocomplete more accurate and a lot faster.</p>
-<p><strong>Libraries View</strong> for SystemVerilog</p>
-<h3 id="vhdl">VHDL</h3>
-<p>In Sigasi 3.4 we introduced a new formatter. In some cases the behavior was different than the previous version. Sigasi Studio 3.5 will contain fixes for the reported issues.</p>
-<h4 id="state-machine-viewer">State Machine Viewer</h4>
-<ul>
-<li>Improved looks ('bubbles') and layout</li>
-<li>All statemachines on same page (no more tabs)</li>
-<li>Show (simple) conditions on edges</li>
-</ul>
-<p><img alt="New State Machine View" src="preview/new-statemachines.png" /></p>
-<h4 id="configurations">Configurations</h4>
-<ul>
-<li>Better autocomplete</li>
-<li>Better validations</li>
-</ul>
-<h3 id="others">Others</h3>
-<ul>
-<li>Quickfix all undeclared signals in a port map:</li>
-</ul>
-<p><img alt="Quick fix all signals in port map" src="preview/quick-fix-all-signals-in-port-map.png" /></p>
-<ul>
-<li><strong>Open Design Unit</strong> dialog (Ctrl+Shift+D)</li>
-</ul>
-<p><img alt="Open Design Unit Dialog" src="preview/open-design-unit.png" /></p>
-<ul>
-<li>Hyperlink from Entity to its architectures</li>
-</ul>
-<p><img alt="Open Design Unit Dialog" src="preview/open-matching-architecture.png" /></p>
-<ul>
-<li><strong>Set toplevel</strong> action in Libraries View</li>
-</ul>
-<p><img alt="Open Design Unit Dialog" src="preview/libraries-view-set-toplevel.png" /></p>
+<p>We just released <a href="/releasenotes/sigasi-3.05.html" title="Sigasi Studio 3.5">Sigasi Studio 3.5</a>, so there is nothing to mention here yet.</p>
 <h2 id="update-or-install">Update or install?</h2>
 <p>You can download the Stand-alone version of the latest preview version from:</p>
 <ul>
@@ -2127,23 +2073,10 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
       <nav class="hidden-print hidden-xs hidden-sm">
         <div class="sidebar" data-spy="affix" data-offset-top="510" >
           <div class="well">
-            <a href="#"><strong>Sigasi Studio Preview (3.5)</strong></a>
+            <a href="#"><strong>Sigasi Studio Preview (3.6)</strong></a>
             <div class="toc">
 <ul>
-<li><a href="#current-preview-release">Current preview release</a><ul>
-<li><a href="#systemverilog-improvements">SystemVerilog improvements</a><ul>
-<li><a href="#what-features-are-already-supported">What features are already supported?</a></li>
-<li><a href="#what-systemverilog-features-are-we-currently-working-on">What SystemVerilog features are we currently working on?</a></li>
-</ul>
-</li>
-<li><a href="#vhdl">VHDL</a><ul>
-<li><a href="#state-machine-viewer">State Machine Viewer</a></li>
-<li><a href="#configurations">Configurations</a></li>
-</ul>
-</li>
-<li><a href="#others">Others</a></li>
-</ul>
-</li>
+<li><a href="#current-preview-release">Current preview release</a></li>
 <li><a href="#update-or-install">Update or install?</a><ul>
 <li><a href="#feedback">Feedback</a></li>
 </ul>
@@ -2159,6 +2092,8 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
   </div>
 
   <ul class="pager">
+    <li class="previous"><a href="/tech/systemverilog-project-demo.html">&larr; How to setup a SystemVerilog project in Sigasi Studio</a></li>
+    <li class="next"><a href="/tech/psl.ebnf.html">Property Specification Language (PSL) Grammar &rarr;</a></li>
   </ul>
       
 </div>
@@ -2180,7 +2115,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2017-05-31 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2017-06-14 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
