@@ -536,6 +536,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>http://insights.sigasi.com/tag/uvm/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>http://insights.sigasi.com/tag/modelsim/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -647,6 +652,11 @@
     </url>
     <url>
         <loc>http://insights.sigasi.com/tag/eda2.0/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>http://insights.sigasi.com/screencasts/verilog-smart-indent.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1711,7 +1721,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/screencasts/verilog-smart-indent.html</loc>
+        <loc>http://insights.sigasi.com/tech/systemverilog-uvm-demo.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
