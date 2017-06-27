@@ -2270,6 +2270,14 @@ lmutil[.exe] lmdiag -c "&lt;port&gt;@&lt;server&gt;" -n</code></li>
 <ul>
 <li>There seems to be a bug in <code>lmtools.exe</code> version 11 on some systems. You can work around this issue by configuring the (latest) Sigasi daemon with an older version of lmtools (<a href="http://download.sigasi.com/flexnet/lmtools.zip">Download here</a>). </li>
 </ul>
+<blockquote>
+<p>(lmgrd) license manager: can't initialize:No SERVER lines in license file.<br />
+(lmgrd) License Path: "C:\FlexLM\sigasi\license.dat"<br />
+(lmgrd) FlexNet Licensing error:-13,66</p>
+</blockquote>
+<ul>
+<li>If you see this error message. Double check you license file contains line with <code>USE_SERVER</code>.</li>
+</ul>
 
       </div>
     </div>
@@ -2317,8 +2325,6 @@ lmutil[.exe] lmdiag -c "&lt;port&gt;@&lt;server&gt;" -n</code></li>
   </div>
 
   <ul class="pager">
-    <li class="previous"><a href="/manual/config.html">&larr; Configuring Your Design Environment</a></li>
-    <li class="next"><a href="/manual/talkback.html">Sigasi Talkback &rarr;</a></li>
   </ul>
       
 </div>
