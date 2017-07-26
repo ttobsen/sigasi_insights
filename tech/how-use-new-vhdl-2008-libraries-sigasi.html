@@ -2029,7 +2029,6 @@ Insights<span style="color:#f47920">.</span>							</p>
         Tagged as: 
               <a href="/tag/VHDL-2008/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">VHDL-2008</a>
               <a href="/tag/Sigasi/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">Sigasi</a>
-              <a href="/tag/hdt-2.0/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">hdt-2.0</a>
         </span>
     </div>
   </div>
@@ -2040,56 +2039,13 @@ Insights<span style="color:#f47920">.</span>							</p>
 
     <div class="content">
       <div class="col-md-9" role="main">
-        <p>The VHDL 2008 standard (1076-2008) revises and adds extra functionality to the STD and IEEE libraries. In an upcoming release, Sigasi will ship these revised libraries with the Sigasi VHDL tool. Until that time, you have to jump a few hoops to get everything to work with the latest libraries. This blog post describes how.</p>
+        <p>If your project contains VHDL 2008 files, you also have to use the 2008 version of the STD and IEEE libraries. </p>
 <ol>
-<li>Make sure Sigas is set to VHDL 2008 (<strong>Window &gt; Preferences &gt; VHDL &gt; VHDL version</strong>)</li>
-<li>Library IEEE<ol>
-<li>Delete the old <strong>IEEE</strong> folder in the <strong>Common Libraries</strong> folder of your Sigasi project.</li>
-<li>Download the IEEE library from the <a href="http://standards.ieee.org/downloads/1076/1076-2008">IEEE website</a></li>
-<li>Unzip and add the <strong>IEEE</strong> folder to your project</li>
-<li>Map this folder to IEEE (right click <strong>Library mapping &gt; ieee</strong>)</li>
+<li>Make sure your project is set to VHDL 2008 :<br />
+   Right click your project and select <strong>Properties &gt; VHDL version</strong></li>
+<li>Right click the <strong>Common Libraries</strong> folder of your Sigasi project and select <strong>Set Library &gt; Reset Common Libraries</strong></li>
 </ol>
-</li>
-<li>Library STD<ol>
-<li>Add a folder <strong>STD</strong> to your project</li>
-<li>Map this folder to STD (right click <strong>Library mapping &gt; std</strong>)</li>
-<li>Create a new file in this folder: <code>workaround.vhd</code> and add following content</li>
-</ol>
-</li>
-</ol>
-<div class="codehilite"><pre><span></span><span class="o">/*</span>
- <span class="o">*</span> <span class="n">Temporary</span> <span class="n">hack</span> <span class="k">to</span> <span class="n">add</span> <span class="n">extra</span> <span class="n">declarations</span> <span class="k">to</span> <span class="n">the</span> <span class="nn">std</span> <span class="k">library</span> 
- <span class="o">*/</span>
-
-<span class="k">package</span> <span class="n">standard</span> <span class="k">is</span>
-    <span class="k">type</span> <span class="n">BOOLEAN_VECTOR</span> <span class="k">is</span> <span class="k">array</span> <span class="p">(</span><span class="kt">NATURAL</span> <span class="k">range</span> <span class="o">&lt;&gt;</span><span class="p">)</span> <span class="k">of</span> <span class="kt">BOOLEAN</span><span class="p">;</span> 
-    <span class="k">type</span> <span class="n">INTEGER_VECTOR</span> <span class="k">is</span> <span class="k">array</span> <span class="p">(</span><span class="kt">NATURAL</span> <span class="k">range</span> <span class="o">&lt;&gt;</span><span class="p">)</span> <span class="k">of</span> <span class="kt">INTEGER</span><span class="p">;</span> 
-    <span class="k">type</span> <span class="n">REAL_VECTOR</span> <span class="k">is</span> <span class="k">array</span> <span class="p">(</span><span class="kt">NATURAL</span> <span class="k">range</span> <span class="o">&lt;&gt;</span><span class="p">)</span> <span class="k">of</span> <span class="n">REAL</span><span class="p">;</span> 
-    <span class="k">type</span> <span class="n">TIME_VECTOR</span> <span class="k">is</span> <span class="k">array</span> <span class="p">(</span><span class="kt">NATURAL</span> <span class="k">range</span> <span class="o">&lt;&gt;</span><span class="p">)</span> <span class="k">of</span> <span class="kt">TIME</span><span class="p">;</span> 
-<span class="k">end</span> <span class="nc">standard</span><span class="p">;</span>
-
-<span class="k">package</span> <span class="n">textio</span> <span class="k">is</span>
-    <span class="k">function</span> <span class="n">JUSTIFY</span> <span class="p">(</span><span class="n">VALUE</span> <span class="o">:</span> <span class="kt">STRING</span><span class="p">;</span> <span class="n">JUSTIFIED</span> <span class="o">:</span> <span class="n">SIDE</span> <span class="o">:=</span> <span class="n">right</span><span class="p">;</span> <span class="n">FIELD</span> <span class="o">:</span> <span class="n">WIDTH</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="kt">STRING</span><span class="p">;</span>
-
-    <span class="k">procedure</span> <span class="n">SREAD</span> <span class="p">(</span><span class="n">L</span>    <span class="o">:</span> <span class="k">inout</span> <span class="n">LINE</span><span class="p">;</span> <span class="n">VALUE</span> <span class="o">:</span> <span class="k">out</span> <span class="kt">STRING</span><span class="p">;</span> <span class="n">STRLEN</span> <span class="o">:</span> <span class="k">out</span> <span class="kt">NATURAL</span><span class="p">);</span>
-    <span class="k">alias</span> <span class="n">STRING_READ</span> <span class="k">is</span> <span class="n">SREAD</span> <span class="p">[</span><span class="n">LINE</span><span class="p">,</span> <span class="kt">STRING</span><span class="p">,</span> <span class="kt">NATURAL</span><span class="p">];</span>
-
-    <span class="k">alias</span> <span class="n">BREAD</span> <span class="k">is</span> <span class="n">READ</span> <span class="p">[</span><span class="n">LINE</span><span class="p">,</span> <span class="kt">BIT_VECTOR</span><span class="p">,</span> <span class="kt">BOOLEAN</span><span class="p">];</span>
-    <span class="k">alias</span> <span class="n">BREAD</span> <span class="k">is</span> <span class="n">READ</span> <span class="p">[</span><span class="n">LINE</span><span class="p">,</span> <span class="kt">BIT_VECTOR</span><span class="p">];</span>
-    <span class="k">alias</span> <span class="n">BINARY_READ</span> <span class="k">is</span> <span class="n">READ</span> <span class="p">[</span><span class="n">LINE</span><span class="p">,</span> <span class="kt">BIT_VECTOR</span><span class="p">,</span> <span class="kt">BOOLEAN</span><span class="p">];</span>
-    <span class="k">alias</span> <span class="n">BINARY_READ</span> <span class="k">is</span> <span class="n">READ</span> <span class="p">[</span><span class="n">LINE</span><span class="p">,</span> <span class="kt">BIT_VECTOR</span><span class="p">];</span>
-
-    <span class="k">procedure</span> <span class="n">OREAD</span> <span class="p">(</span><span class="n">L</span>    <span class="o">:</span> <span class="k">inout</span> <span class="n">LINE</span><span class="p">;</span> <span class="n">VALUE</span> <span class="o">:</span> <span class="k">out</span> <span class="kt">BIT_VECTOR</span><span class="p">;</span> <span class="n">GOOD</span> <span class="o">:</span> <span class="k">out</span> <span class="kt">BOOLEAN</span><span class="p">);</span>
-    <span class="k">procedure</span> <span class="n">OREAD</span> <span class="p">(</span><span class="n">L</span>    <span class="o">:</span> <span class="k">inout</span> <span class="n">LINE</span><span class="p">;</span> <span class="n">VALUE</span> <span class="o">:</span> <span class="k">out</span> <span class="kt">BIT_VECTOR</span><span class="p">);</span>
-    <span class="k">alias</span> <span class="n">OCTAL_READ</span> <span class="k">is</span> <span class="n">OREAD</span> <span class="p">[</span><span class="n">LINE</span><span class="p">,</span> <span class="kt">BIT_VECTOR</span><span class="p">,</span> <span class="kt">BOOLEAN</span><span class="p">];</span>
-    <span class="k">alias</span> <span class="n">OCTAL_READ</span> <span class="k">is</span> <span class="n">OREAD</span> <span class="p">[</span><span class="n">LINE</span><span class="p">,</span> <span class="kt">BIT_VECTOR</span><span class="p">];</span>
-
-    <span class="k">procedure</span> <span class="n">HREAD</span> <span class="p">(</span><span class="n">L</span>    <span class="o">:</span> <span class="k">inout</span> <span class="n">LINE</span><span class="p">;</span> <span class="n">VALUE</span> <span class="o">:</span> <span class="k">out</span> <span class="kt">BIT_VECTOR</span><span class="p">;</span> <span class="n">GOOD</span> <span class="o">:</span> <span class="k">out</span> <span class="kt">BOOLEAN</span><span class="p">);</span>
-    <span class="k">procedure</span> <span class="n">HREAD</span> <span class="p">(</span><span class="n">L</span>    <span class="o">:</span> <span class="k">inout</span> <span class="n">LINE</span><span class="p">;</span> <span class="n">VALUE</span> <span class="o">:</span> <span class="k">out</span> <span class="kt">BIT_VECTOR</span><span class="p">);</span>
-    <span class="k">alias</span> <span class="n">HEX_READ</span> <span class="k">is</span> <span class="n">HREAD</span> <span class="p">[</span><span class="n">LINE</span><span class="p">,</span> <span class="kt">BIT_VECTOR</span><span class="p">,</span> <span class="kt">BOOLEAN</span><span class="p">];</span>
-    <span class="k">alias</span> <span class="n">HEX_READ</span> <span class="k">is</span> <span class="n">HREAD</span> <span class="p">[</span><span class="n">LINE</span><span class="p">,</span> <span class="kt">BIT_VECTOR</span><span class="p">];</span>
-<span class="k">end</span> <span class="k">package</span> <span class="nc">textio</span><span class="p">;</span>
-</pre></div>
+<p>Sigasi Studio 3.6 will offer a quick-fix to make this easier.</p>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -2123,6 +2079,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
   </div>
 
   <ul class="pager">
+    <li class="next"><a href="/tech/systemverilog-uvm-demo.html">How to setup a SystemVerilog UVM project in Sigasi &rarr;</a></li>
   </ul>
       
 </div>
@@ -2144,7 +2101,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2017-07-20 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2017-07-26 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
