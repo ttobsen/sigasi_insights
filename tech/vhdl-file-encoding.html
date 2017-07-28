@@ -2039,7 +2039,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 <p>But suddenly, last week, I received two mails pointing out that Sigasi Studio shouldn't use UTF-8 by default. I was urged to use <strong>ISO-8859-1</strong> instead.</p>
 <p>As a dinosaur in this post-truth era, I decided to go old-school and research the facts for this topic.</p>
 <h3 id="utf-what">UTF-what?</h3>
-<p><a href="https://en.wikipedia.org/wiki/UTF-8">UTF-8</a> is character encoding standard that can encode all possible characters defined by Unicode. It encodes characters with <mark>variable length</mark>. Some characters are represented with one byte, others with more than one. <a href="https://en.wikipedia.org/wiki/ISO-8859-1">ISO-8859-1</a> uses a single byte to encode all characters. As a result, ISO-8859-1 can encode less characters than UTF-8.</p>
+<p><a href="https://en.wikipedia.org/wiki/UTF-8">UTF-8</a> is character encoding standard that can encode all possible characters defined by Unicode. It encodes characters with <em>variable length</em>. Some characters are represented with one byte, others with more than one. <a href="https://en.wikipedia.org/wiki/ISO-8859-1">ISO-8859-1</a> uses a single byte to encode all characters. As a result, ISO-8859-1 can encode less characters than UTF-8.</p>
 <p>The first 126 characters of both UTF-8 and ISO-8859-1 are the same, and map to the corresponding ASCII characters. The extra characters of ISO-8859-1 consist of characters of American, Western European, Oceanian and African languages.</p>
 <h3 id="what-does-the-lrm-say">What does the LRM say?</h3>
 <p>The LRM only mentions the following about character encoding:</p>
@@ -2060,10 +2060,10 @@ Insights<span style="color:#f47920">.</span>							</p>
 <p>You can choose only one encoding for your entire source file. You can not mix, as the LRM suggested. So let us check what VHDL simulators allow.</p>
 <p>I can think of 4 ways it can go wrong:</p>
 <ul>
-<li>Character literals with <mark>special</mark> characters</li>
-<li>Strings with <mark>special</mark> characters</li>
-<li>Extended identifiers with <mark>special</mark> characters</li>
-<li>Comments with <mark>special</mark> characters</li>
+<li>Character literals with <em>special</em> characters</li>
+<li>Strings with <em>special</em> characters</li>
+<li>Extended identifiers with <em>special</em> characters</li>
+<li>Comments with <em>special</em> characters</li>
 </ul>
 <p>I created snippets for each of these cases and tested them with both Riviera Pro and ModelSim.</p>
 <h4 id="iso-8859-1">ISO-8859-1</h4>
@@ -2111,7 +2111,7 @@ You can add German comments. But comments in languages like Greek and Japanese a
 </pre></div>
 
 
-<p>Both tools report a <mark>Syntax error</mark>:</p>
+<p>Both tools report a <em>Syntax error</em>:</p>
 <ul>
 <li>Riviera Pro:  </li>
 </ul>
@@ -2269,7 +2269,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2017-07-27 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2017-07-28 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

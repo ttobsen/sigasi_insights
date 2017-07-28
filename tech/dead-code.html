@@ -2054,10 +2054,10 @@ Insights<span style="color:#f47920">.</span>							</p>
 <h4 id="comments">Comments</h4>
 <p>Comments are meant to clarify things. If they are written well, they have their value. Keep useful comments.</p>
 <h4 id="unused-declarations">Unused declarations</h4>
-<p>Declarations of signals, data types, constants or other things that are never used later on have no value. They are confusing to the reader (<mark>Why is this here?</mark>) and should be avoided or removed from your code.</p>
+<p>Declarations of signals, data types, constants or other things that are never used later on have no value. They are confusing to the reader (<em>Why is this here?</em>) and should be avoided or removed from your code.</p>
 <h4 id="superfluous-others-in-case-statements">Superfluous "others" in case statements</h4>
-<p>In a state machine with enumerated states you usually cover all states explicitly in a <mark>case</mark> statement. If you do this, there is <a href="/tech/vhdl-case-statements-can-do-without-others.html">very little reason to add a <code>when others</code> clause</a>.
-The only reason for writing <code>when others</code> is your synthesis tool uses this information for recovering from an illegal state <mark>and</mark> you need this recovery for some reason. Ask yourself these questions: Does my design need to recover from an illegal state (usually military, safety-critical or radiation sensitive application)? Does my synthesis tool use the "others" clause for recovering? (Some do, some don't – read the documentation and/or inspect the synthesis results!). If you find yourself in a situation where you want to use a <code>when others</code> clause, make sure that there is recovery code there.</p>
+<p>In a state machine with enumerated states you usually cover all states explicitly in a <em>case</em> statement. If you do this, there is <a href="/tech/vhdl-case-statements-can-do-without-others.html">very little reason to add a <code>when others</code> clause</a>.
+The only reason for writing <code>when others</code> is your synthesis tool uses this information for recovering from an illegal state <em>and</em> you need this recovery for some reason. Ask yourself these questions: Does my design need to recover from an illegal state (usually military, safety-critical or radiation sensitive application)? Does my synthesis tool use the "others" clause for recovering? (Some do, some don't – read the documentation and/or inspect the synthesis results!). If you find yourself in a situation where you want to use a <code>when others</code> clause, make sure that there is recovery code there.</p>
 <h4 id="assertions">Assertions</h4>
 <p>Assertions are dead code if they are placed in unreachable places. This is actually a good thing. You are telling the reader that you expect that a certain condition will never occur. Even if the simulator or the synthesis tool never do anything with this code, it can be a good thing to have it there. In the following example, let's say there are six possible colors, but you expect the color of the pedestrian traffic light to be only red or green.</p>
 <div class="codehilite"><pre><span></span><span class="k">case</span> <span class="n">color</span> <span class="k">is</span>
@@ -2141,7 +2141,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2017-07-27 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2017-07-28 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

@@ -2039,9 +2039,9 @@ Insights<span style="color:#f47920">.</span>							</p>
 
     <div class="content">
       <div class="col-md-9" role="main">
-        <p>Sometimes, there is more than one way to do something in VHDL. OK, <mark>most of the time</mark>, you can do things in many ways in VHDL. Let's look at the situation where you want to assign different values to a signal, based on the value of another signal.</p>
+        <p>Sometimes, there is more than one way to do something in VHDL. OK, <em>most of the time</em>, you can do things in many ways in VHDL. Let's look at the situation where you want to assign different values to a signal, based on the value of another signal.</p>
 <h3 id="with-select">With / Select</h3>
-<p>The most specific way to do this is with as selected signal assignment. Based on several possible values of <code>a</code>, you assign a value to <code>b</code>. No redundancy in the code here. The official name for this VHDL with/select assignment is the <mark>selected signal assignment</mark>.</p>
+<p>The most specific way to do this is with as selected signal assignment. Based on several possible values of <code>a</code>, you assign a value to <code>b</code>. No redundancy in the code here. The official name for this VHDL with/select assignment is the <em>selected signal assignment</em>.</p>
 <div class="codehilite"><pre><span></span><span class="k">with</span> <span class="n">a</span> <span class="k">select</span> <span class="n">b</span> <span class="o">&lt;=</span>
     <span class="s">&quot;1000&quot;</span> <span class="k">when</span> <span class="s">&quot;00&quot;</span><span class="p">,</span>
     <span class="s">&quot;0100&quot;</span> <span class="k">when</span> <span class="s">&quot;01&quot;</span><span class="p">,</span>
@@ -2051,7 +2051,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 
 
 <h3 id="when-else-assignment">When / Else Assignment</h3>
-<p>The construct of a <mark>conditional signal assignment</mark> is a little more general. For each option, you have to give a condition. This means that you could write any boolean expression as a condition, which give you more freedom than equality checking. While this construct would give you more freedom, there is a bit more redundancy too. We had to write the equality check (<code>a =</code>) on every line. If you use a signal with a long name, this will make your code bulkier. Also, the separator that's used in the selected signal assignment was a comma. In the conditional signal assignment, you need the <code>else</code> keyword. More code for the same functionality. Official name for this VHDL when/else assignment is the <mark>conditional signal assignment</mark></p>
+<p>The construct of a <em>conditional signal assignment</em> is a little more general. For each option, you have to give a condition. This means that you could write any boolean expression as a condition, which give you more freedom than equality checking. While this construct would give you more freedom, there is a bit more redundancy too. We had to write the equality check (<code>a =</code>) on every line. If you use a signal with a long name, this will make your code bulkier. Also, the separator that's used in the selected signal assignment was a comma. In the conditional signal assignment, you need the <code>else</code> keyword. More code for the same functionality. Official name for this VHDL when/else assignment is the <em>conditional signal assignment</em></p>
 <div class="codehilite"><pre><span></span><span class="n">b</span> <span class="o">&lt;=</span> <span class="s">&quot;1000&quot;</span> <span class="k">when</span> <span class="n">a</span> <span class="o">=</span> <span class="s">&quot;00&quot;</span> <span class="k">else</span> 
      <span class="s">&quot;0100&quot;</span> <span class="k">when</span> <span class="n">a</span> <span class="o">=</span> <span class="s">&quot;01&quot;</span> <span class="k">else</span> 
      <span class="s">&quot;0010&quot;</span> <span class="k">when</span> <span class="n">a</span> <span class="o">=</span> <span class="s">&quot;10&quot;</span> <span class="k">else</span> 
@@ -2076,7 +2076,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 
 <p>While this last code snippet is the largest and perhaps most error-prone, it is probably also the most common. It uses two familiar and often-used constructs: the process and the case statements. </p>
 <h3 id="hard-to-remember">Hard to remember</h3>
-<p>The problem with the selected and conditional signal assignments is that there is no logic in their syntax. The meaning is <mark>almost</mark> identical, but the syntax is just different enough to throw you off. I know <mark>many</mark> engineers who permanenty have a copy of the Doulos Golden Reference Guide to VHDL lying on their desks. Which is good for Doulos, because their name gets mentioned all the time. But most people just memorize one way of getting the job done and stick with it.</p>
+<p>The problem with the selected and conditional signal assignments is that there is no logic in their syntax. The meaning is <em>almost</em> identical, but the syntax is just different enough to throw you off. I know <em>many</em> engineers who permanenty have a copy of the Doulos Golden Reference Guide to VHDL lying on their desks. Which is good for Doulos, because their name gets mentioned all the time. But most people just memorize one way of getting the job done and stick with it.</p>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -2143,7 +2143,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2017-07-27 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2017-07-28 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

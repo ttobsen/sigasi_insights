@@ -2041,7 +2041,7 @@ Insights<span style="color:#f47920">.</span>							</p>
       <div class="col-md-9" role="main">
         <p>Setting up a SystemVerilog project in Sigasi Studio is easy. First you add all your source files. Next you configure the include paths, and you're ready to go.</p>
 <p>Sigasi Studio follows the Eclipse approach in setting up projects. This means that there is a lot of flexibility, but in most cases it is a matter of pointing Sigasi Studio to the correct source folder. If you want to exclude some SystemVerilog source files from your project, right click on the source files and select <em>Exclude from build</em> (This also works for folders).</p>
-<p>If you are using Verilog Preprocessor includes, and the include files are not next to your source files, you also have to set <mark>include paths</mark>. The most convenient way to configure this, is with a <mark>Quick Fix</mark>: Open the source file with the <code>`include</code> directive, click on the error marker, and select the suggested fix.</p>
+<p>If you are using Verilog Preprocessor includes, and the include files are not next to your source files, you also have to set <em>include paths</em>. The most convenient way to configure this, is with a <em>Quick Fix</em>: Open the source file with the <code>`include</code> directive, click on the error marker, and select the suggested fix.</p>
 <h2 id="example-opening-the-scr1-open-source-risc-v-project-from-github">Example: Opening the SCR1, open-source RISC-V project from GitHub</h2>
 <p>To demonstrate how easy this is, I will guide you through opening the <a href="https://github.com/syntacore/scr1/tree/47a47a66c1f29b86103598e68883aeb2786b38a2">SCR1 project</a> in Sigasi Studio. SCR1 is an open-source RISC-V compatible MCU core, designed by Syntacore.</p>
 <h3 id="importing-a-checked-out-version-of-the-project">Importing a checked-out version of the project</h3>
@@ -2050,9 +2050,9 @@ Insights<span style="color:#f47920">.</span>							</p>
 <li>Select <strong>File &gt; Open Project from File System...</strong>, click <strong>Directory...</strong> and browse to the location of the source files (in my case this is <code>/Users/heeckhau/git/scr1</code>).
 <img alt="Import project" src="systemverilog-project-demo/import_wizard.png" /></li>
 <li>Click <strong>Finish</strong></li>
-<li>Open any SystemVerilog source file (e.g. <code>src/scr1_memory_tb_ahb.sv</code>) and confirm that you want to add <mark>Sigasi's (System)Verilog support</mark> to the project.
+<li>Open any SystemVerilog source file (e.g. <code>src/scr1_memory_tb_ahb.sv</code>) and confirm that you want to add <em>Sigasi's (System)Verilog support</em> to the project.
 <img alt="Add SystemVerilog support" src="systemverilog-project-demo/add_verilog_support.png" /></li>
-<li>Click on the error marker (with the light bulb decorator) next to the `include directive and select <mark>Add 'src/includes' to include paths.</mark>.
+<li>Click on the error marker (with the light bulb decorator) next to the `include directive and select <em>Add 'src/includes' to include paths.</em>.
 <img alt="Use the quickfix to configure the include path" src="systemverilog-project-demo/quickfix_include.png" /></li>
 </ol>
 <h3 id="clone-the-project-using-the-git-plugin">Clone the project using the Git plugin</h3>
@@ -2071,7 +2071,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 </ol>
 <h3 id="remarks">Remarks</h3>
 <ul>
-<li>In most cases it is recommended to <mark>exclude</mark> include files from the build, because often they are not real SystemVerilog design files. You can easily do this for the SCR1 project by right clicking the <code>src/includes</code> folder and selecting <strong>Exclude from build</strong>. (If you accidentaly exclude the wrong file, you can add it again by right clicking the file and selecting <strong>Set Library &gt; Work</strong>).</li>
+<li>In most cases it is recommended to <em>exclude</em> include files from the build, because often they are not real SystemVerilog design files. You can easily do this for the SCR1 project by right clicking the <code>src/includes</code> folder and selecting <strong>Exclude from build</strong>. (If you accidentally exclude the wrong file, you can add it again by right clicking the file and selecting <strong>Set Library &gt; Work</strong>).</li>
 <li>The project information is stored in:<ul>
 <li>The <code>.project</code> file, it describes which files belong to the project</li>
 <li>The <code>.library_mapping.xml</code> file, it describes the project's library information (and excluded files)</li>
@@ -2145,7 +2145,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2017-07-27 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2017-07-28 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

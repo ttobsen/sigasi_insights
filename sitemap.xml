@@ -331,6 +331,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>http://insights.sigasi.com/tag/vhdl-2017/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>http://insights.sigasi.com/screencasts/split-screen.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -746,6 +751,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>http://insights.sigasi.com/tag/psl/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>http://insights.sigasi.com/tech/keep-track-google-positions-your-keywords.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -1027,6 +1037,11 @@
     </url>
     <url>
         <loc>http://insights.sigasi.com/tech/dead-code.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>http://insights.sigasi.com/tag/ebnf/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>

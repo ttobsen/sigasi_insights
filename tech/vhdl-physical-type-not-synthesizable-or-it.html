@@ -2042,13 +2042,13 @@ Insights<span style="color:#f47920">.</span>							</p>
 
     <div class="content">
       <div class="col-md-9" role="main">
-        <p>Everybody who has been taught VHDL in college or in a company with senior colleagues has heard the following <mark>"wisdom"</mark>:</p>
+        <p>Everybody who has been taught VHDL in college or in a company with senior colleagues has heard the following <em>"wisdom"</em>:</p>
 <blockquote>
 <p><em>Pysical types are for simulation only. They cannot be synthesized.</em>
 [commonly heard claim – debunked in this article]</p>
 </blockquote>
 <p>This is the kind of knowledge was somehow made up in the latter years of the Cold War and was passed down from one generation of digital design engineers to the next. </p>
-<p>Before we investigate this claim, let's examine what VHDL physical types are. A physical type is defined by a range and a number of units. For example, the pre-defined <code>time</code> type can have any integer value (the <mark>range</mark>) and has <mark>units</mark> including <code>ns</code>, <code>us</code> (microseconds) and even <code>hr</code> for hours. Internally, physical values are treated as integers, but the compiler adds some extra checks to make sure you don't mix the wrong physical values. The language definition says that adding, substracting, multiplication and division are always defined on physical types. This means you can add or subtract two values of the same physical type and you can multiply a physical value with an integer value or devide d physical value by an integer value. The result will always be a physical value. If you divide a physical value by another physical value, you get an integer:</p>
+<p>Before we investigate this claim, let's examine what VHDL physical types are. A physical type is defined by a range and a number of units. For example, the pre-defined <code>time</code> type can have any integer value (the <em>range</em>) and has <em>units</em> including <code>ns</code>, <code>us</code> (microseconds) and even <code>hr</code> for hours. Internally, physical values are treated as integers, but the compiler adds some extra checks to make sure you don't mix the wrong physical values. The language definition says that adding, substracting, multiplication and division are always defined on physical types. This means you can add or subtract two values of the same physical type and you can multiply a physical value with an integer value or devide d physical value by an integer value. The result will always be a physical value. If you divide a physical value by another physical value, you get an integer:</p>
 <div class="codehilite"><pre><span></span><span class="k">assert</span> <span class="mi">1</span> <span class="n">sec</span> <span class="o">=</span> <span class="mi">1000</span> <span class="n">ms</span><span class="p">;</span> <span class="c1">-- convert units of the same physical type</span>
 <span class="k">assert</span> <span class="mi">1</span> <span class="n">sec</span> <span class="o">+</span> <span class="mi">20</span> <span class="n">ms</span> <span class="o">=</span> <span class="mi">1020</span> <span class="n">ms</span><span class="p">;</span> <span class="c1">-- add</span>
 <span class="k">assert</span> <span class="mi">2</span> <span class="n">sec</span> <span class="o">-</span> <span class="mi">100</span> <span class="n">ms</span> <span class="o">=</span> <span class="mi">1900</span> <span class="n">ms</span><span class="p">;</span> <span class="c1">-- subtract</span>
@@ -2129,7 +2129,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2017-07-27 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2017-07-28 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

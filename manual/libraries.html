@@ -2104,8 +2104,8 @@ project build. This is typically useful when you have stale copies of
 HDL files or folders lying around that you want simply to be ignored.</p>
 <h2 id="configuration-file">Configuration file</h2>
 <p>All library configuration information is stored in the <code>.library_mapping.xml</code> file in the root of your project.
-If you edit this file, your project will be cleared and rebuilt automatically (a so-called <mark>Clean Build</mark>).</p>
-<p>Sigasi only writes changes to this configuration file when you make changes to the library configuration with the context menu in the <mark>Project Explorer</mark>. When you do make changes, Sigasi first checks that all paths in the library configuration still exist. If a path no longer exists, is will be removed from the configuration file.
+If you edit this file, your project will be cleared and rebuilt automatically (a so-called <em>Clean Build</em>).</p>
+<p>Sigasi only writes changes to this configuration file when you make changes to the library configuration with the context menu in the <em>Project Explorer</em>. When you do make changes, Sigasi first checks that all paths in the library configuration still exist. If a path no longer exists, is will be removed from the configuration file.
 Note that the library configuration file is <strong>case-sensitive</strong>, even on Windows.</p>
 <h2 id="libraries-common">Common libraries</h2>
 <p>In any newly created VHDL project, the <code>Common Libraries</code> folder
@@ -2175,7 +2175,7 @@ and <code>/opt/altera</code> for Altera.</p>
 <p>For many common third party libraries, you can set up the library using
 a <a href="/manual/linting.html#quickfix-for-third-party-libraries" title="Linting and Quickfixes">Quickfix for third party libraries</a>.</p>
 <h3 id="xilinxcorelib">XilinxCoreLib</h3>
-<p>XilinxCoreLib is a very big library with more than a thousand entities and architectures. If you include all of these design units, it slows down the compilation phase of Sigasi Studio. In order to avoid that, Sigasi Studio only adds the packages with the component declarations to your project by default. It <mark>excludes</mark> the entities and architectures <mark>from compilation</mark>.</p>
+<p>XilinxCoreLib is a very big library with more than a thousand entities and architectures. If you include all of these design units, it slows down the compilation phase of Sigasi Studio. In order to avoid that, Sigasi Studio only adds the packages with the component declarations to your project by default. It <em>excludes</em> the entities and architectures <em>from compilation</em>.</p>
 <p>You can easily add selected entities (and architectures) to your project by right clicking the corresponding file (<code>filename = entity name.vhd</code>) in the <a href="/manual/views.html#explorer" title="Views">Project Explorer</a>, and selecting <strong>Set Library &gt; xilinxcorelib</strong>.</p>
 <h2 id="library-errors-from-external-compilers">Library errors from external compilers</h2>
 <p>If you are using the <a href="/manual/tools.html#external-compilers" title="Tool Integration">External Compilers</a>, the external compiler can also put error markers on library clauses. You can easily
@@ -2237,7 +2237,7 @@ verify this by checking the prefix of the error message (e.g. <code>vcom:</code>
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2017-07-27 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2017-07-28 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

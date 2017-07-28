@@ -2041,14 +2041,14 @@ Insights<span style="color:#f47920">.</span>							</p>
       <div class="col-md-9" role="main">
         <h2 id="what-are-deprecated-ieee-libraries">What are deprecated IEEE libraries?</h2>
 <p>Don't use <code>ieee.std_logic_unsigned</code> and similar libraries because they are not standardized. 
-Instead, <strong>use ieee.numeric_std.all</strong>.</p>
-<p><mark>Note</mark>: if you want to <strong>disable</strong> warnings for this in the Sigasi tool, select <strong>Window &gt; Preferences &gt; Sigasi&gt; VHDL &gt; Errors/Warnings</strong> and at the bottom of that page, set the severity of <strong>"Deprecated IEEE packages"</strong> to <strong>ignore</strong>.</p>
+Instead, <strong><code>use ieee.numeric_std.all</code></strong>.</p>
+<p><em>Note</em>: if you want to <strong>disable</strong> warnings for this in the Sigasi tool, select <strong>Window &gt; Preferences &gt; Sigasi&gt; VHDL &gt; Errors/Warnings</strong> and at the bottom of that page, set the severity of <strong>"Deprecated IEEE packages"</strong> to <strong>ignore</strong>.</p>
 <h2 id="why-is-that">Why is that?</h2>
-<p><mark>This article was originally published at <a href="http://tams-www.informatik.uni-hamburg.de/vhdl/doc/faq/FAQ1.html#4.11">http://tams-www.informatik.uni-hamburg.de/vhdl/doc/faq/FAQ1.html#4.11</a></mark></p>
+<p><em>This article was originally published at <a href="http://tams-www.informatik.uni-hamburg.de/vhdl/doc/faq/FAQ1.html#4.11">http://tams-www.informatik.uni-hamburg.de/vhdl/doc/faq/FAQ1.html#4.11</a></em></p>
 <p>The IEEE did not, originally, define a standard set of types and overloaded functions to handle vectors which contained coded numeric values. This meant that individual vendors were free to define their own types and functions.
-Synopsys produced three packages - std_logic_arith, std_logic_signed, and std_logic_unsigned. std_logic_signed/std_logic_unsigned operated on type std_logic_vector, and gave an implicit meaning to the contents of the vector. std_logic_arith, however, defined two new types, SIGNED and UNSIGNED, and operated on these types only. Unfortunately, Synopsys decided that these packages should be compiled into library IEEE. Other vendors, including Cadence and Mentor, now produced their own versions of std_logic_arith, which were not the same as Synopsys's. They also required their packages to be placed in library IEEE.</p>
-<p>Finally, the IEEE decided to standardize this situation, and produced packages numeric_bit and numeric_std (see Section 4.8 on how to obtain numeric_bit and numeric_std). numeric_bit is based on type bit, numeric_std on on type std_logic. Both packages followed Synopsys in defining new types, SIGNED and UNSIGNED. However, the package functions did not have the same names, or parameters, as the Synopsys functions.</p>
-<p>Currently many vendors support numeric_bit/numeric_std. Hence, for maximum portability, avoid using a package called std_logic_signed or std_logic_unsigned, and always use SIGNED or UNSIGNED types (or integers) for arithmetic. If you are using Synopsys, use std_logic_arith, and if you are not using Synopsys, use numeric_std (if it is supported). This is not completely portable, since the functions are still different (for example, TO_UNSIGNED vs. CONV_UNSIGNED), but it is a lot better than using different types in different environments.</p>
+Synopsys produced three packages - <code>std_logic_arith</code>, <code>std_logic_signed</code>, and <code>std_logic_unsigned</code>. <code>std_logic_signed</code>/<code>std_logic_unsigned</code> operated on type <code>std_logic_vector</code>, and gave an implicit meaning to the contents of the vector. <code>std_logic_arith</code>, however, defined two new types, SIGNED and UNSIGNED, and operated on these types only. Unfortunately, Synopsys decided that these packages should be compiled into library IEEE. Other vendors, including Cadence and Mentor, now produced their own versions of <code>std_logic_arith</code>, which were not the same as Synopsys's. They also required their packages to be placed in library IEEE.</p>
+<p>Finally, the IEEE decided to standardize this situation, and produced packages <code>numeric_bit</code> and <code>numeric_std</code> (see Section 4.8 on how to obtain <code>numeric_bit</code> and <code>numeric_std</code>). <code>numeric_bit</code> is based on type bit, <code>numeric_std</code> on on type std_logic. Both packages followed Synopsys in defining new types, SIGNED and UNSIGNED. However, the package functions did not have the same names, or parameters, as the Synopsys functions.</p>
+<p>Currently many vendors support <code>numeric_bit</code>/<code>numeric_std</code>. Hence, for maximum portability, avoid using a package called <code>std_logic_signed</code> or <code>std_logic_unsigned</code>, and always use SIGNED or UNSIGNED types (or integers) for arithmetic. If you are using Synopsys, use <code>std_logic_arith</code>, and if you are not using Synopsys, use <code>numeric_std</code> (if it is supported). This is not completely portable, since the functions are still different (for example, <code>TO_UNSIGNED</code> vs. <code>CONV_UNSIGNED</code>), but it is a lot better than using different types in different environments.</p>
 <p>Partially extracted from an article by Evan Shattock.</p>
 
 <div id="disqus_thread"></div>
@@ -2114,7 +2114,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2017-07-27 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2017-07-28 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

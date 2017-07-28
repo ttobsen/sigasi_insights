@@ -2040,9 +2040,9 @@ Insights<span style="color:#f47920">.</span>							</p>
     <div class="content">
       <div class="col-md-9" role="main">
         <p><strong>Disclaimer 1:</strong> This is in no way a crack; we're not messing with ModelSim! You'll need a legal copy and a valid license, which you can get from your Mentor Graphics sales rep, or (a limited version, free of charge) from the <a href="http://www.altera.com/products/software/quartus-ii/web-edition/qts-we-index.html">Altera website</a>.</p>
-<p><strong>Disclaimer 2:</strong> Consider this semi-advanced stuff. I'm sharing this idea because I think it will be useful to other people, it is <mark>not</mark> a supported Sigasi feature.</p>
+<p><strong>Disclaimer 2:</strong> Consider this semi-advanced stuff. I'm sharing this idea because I think it will be useful to other people, it is <em>not</em> a supported Sigasi feature.</p>
 <p><strong>Disclaimer 3:</strong> I hate disclaimers!</p>
-<p>We will need a computer with SSH acces that has a working version of ModelSim installed. I suggest you use a <mark>Linux</mark> computer because Mac OSX and Linux are both Unix-like systems. If you use a Windows compile server, you may run in to troubles with the path format (backslashes on Windows!). You can either use a remote computer, or set up a virtual machine (using something like <a href="http://www.parallels.com/products/desktop/">Parallels</a> or <a href="http://www.virtualbox.org/">VirtualBox</a> on your Mac.</p>
+<p>We will need a computer with SSH acces that has a working version of ModelSim installed. I suggest you use a <em>Linux</em> computer because Mac OSX and Linux are both Unix-like systems. If you use a Windows compile server, you may run in to troubles with the path format (backslashes on Windows!). You can either use a remote computer, or set up a virtual machine (using something like <a href="http://www.parallels.com/products/desktop/">Parallels</a> or <a href="http://www.virtualbox.org/">VirtualBox</a> on your Mac.</p>
 <p>You will need the following info:</p>
 <ul>
 <li>the host name (or IP address) of your build server</li>
@@ -2103,7 +2103,7 @@ ssh <span class="si">${</span><span class="nv">REMOTE_USER</span><span class="si
 
 <p>Now all you need to do, is tell Sigasi (or whatever tool you are using) to use <code>~/fakeModelSim</code> as path for the ModelSim executables.</p>
 <h3 id="other-tools-and-feedback">Other tools and Feedback</h3>
-<p>All of this will work just as well with <mark>Xilinx ISim</mark>, or with the <mark>Altera Quartus II</mark>, or for a million other EDA and non-EDA tools. You can extend the script to copy the compiled files back to your local computer, or you can use a shared folder instead of <code>rsync</code>. Feel free to improve and share.</p>
+<p>All of this will work just as well with <em>Xilinx ISim</em>, or with the <em>Altera Quartus II</em>, or for a million other EDA and non-EDA tools. You can extend the script to copy the compiled files back to your local computer, or you can use a shared folder instead of <code>rsync</code>. Feel free to improve and share.</p>
 <h3 id="setting-up-sigasi">Setting up Sigasi</h3>
 <p>If you want to let Sigasi work with Aldec RivieraPro or ModelSim, you can set up <a href="/manual/tools.html#save-time-compilation" title="Tool Integration">save-time-compilation</a> or you can generate a Makefile.</p>
 <p>Do you like this script? Do you like you Mac? Do you have a better way of designing hardware with your Mac? Talk to me in the comments section, below!</p>
@@ -2198,7 +2198,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2017-07-27 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2017-07-28 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

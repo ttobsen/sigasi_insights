@@ -2049,7 +2049,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 
 
 <p>If the <code>severity_level</code> clause is omitted in a report statement it is implicitly assumed to be <code>note</code>.
-Report statements are <mark>sequential</mark> statements. This means they can only be in sequential regions, like inside the statements part of  process or a procedure. They can not be by themselves in an architecture.</p>
+Report statements are <em>sequential</em> statements. This means they can only be in sequential regions, like inside the statements part of  process or a procedure. They can not be by themselves in an architecture.</p>
 <div class="codehilite"><pre><span></span><span class="k">entity</span> <span class="nc">e0</span> <span class="k">is</span>
 <span class="k">end</span> <span class="k">entity</span> <span class="nc">e0</span><span class="p">;</span>
 <span class="k">architecture</span> <span class="nc">demo</span> <span class="k">of</span> <span class="nc">e0</span> <span class="k">is</span>
@@ -2088,7 +2088,7 @@ Report statements are <mark>sequential</mark> statements. This means they can on
 </pre></div>
 
 
-<p>If no <code>message_string</code> specified then <mark>"Assertion violation."</mark> will be used by default. If the <code>severity_level</code> clause is omitted in an assert statement it is implicitly assumed to be <code>error</code>.</p>
+<p>If no <code>message_string</code> specified then <em>"Assertion violation."</em> will be used by default. If the <code>severity_level</code> clause is omitted in an assert statement it is implicitly assumed to be <code>error</code>.</p>
 <div class="codehilite"><pre><span></span>    <span class="k">assert</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="p">;</span>
     <span class="k">assert</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="n">report</span> <span class="s">&quot;Assertion violation.&quot;</span><span class="p">;</span>
     <span class="k">assert</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="n">report</span> <span class="s">&quot;Assertion violation.&quot;</span> <span class="k">severity</span> <span class="n">error</span><span class="p">;</span>
@@ -2152,7 +2152,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2017-07-27 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2017-07-28 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
