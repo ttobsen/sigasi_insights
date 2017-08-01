@@ -2044,8 +2044,7 @@ Copyright
 The IEEE Standards publication(s) ("Document") is approved by the IEEE Standards Association ("IEEE-SA") Standards Board and is published in accordance with established IEEE-SA Standards Board bylaws and operations procedures.</p>
 <p>IEEE owns the copyright to this Document in all forms of media. Copyright in the text retrieved, displayed or output from this Document is owned by IEEE and is protected by the copyright laws of the United States and by international treaties. IEEE reserves all rights not expressly granted.  </p>
 <p>Get the full Language Reference Manual, free of charge, at <a href="http://standards.ieee.org/getieee/1800/download/1800-2012.pdf">http://standards.ieee.org/getieee/1800/download/1800-2012.pdf</a></p>
-<p>Sigasi has created this browsable version of the grammar, hoping that it would be useful to you, but without any warranty whatsoever.</p>
-<p><a href="/tag/ebnf/" title="EBNF">More browsable grammars of Hardware Description and Verification languages</a>.
+<p>Sigasi has created this browsable version of the grammar, hoping that it would be useful to you, but without any warranty whatsoever.
 </em>  </p>
 <h3 id="source-text">Source text</h3>
 <h4 id="library-source-text">Library source text</h4>
@@ -4542,7 +4541,7 @@ The IEEE Standards publication(s) ("Document") is approved by the IEEE Standards
 <dt><strong id="bin_identifier">bin_identifier</strong></dt>
 <dd><a href="#identifier">identifier</a> </dd>
 <dt><strong id="c_identifier">c_identifier</strong><sup id="fnref:footnote_49"><a class="footnote-ref" href="#fn:footnote_49" rel="footnote">49</a></sup></dt>
-<dd><em>[a-zA-Z_]</em> { <em>[a-zA-Z0-9_]</em> }  </dd>
+<dd><em>[ a-zA-Z_ ]</em> { <em>[ a-zA-Z0-9_ ]</em> }  </dd>
 <dt><strong id="cell_identifier">cell_identifier</strong></dt>
 <dd><a href="#identifier">identifier</a> </dd>
 <dt><strong id="checker_identifier">checker_identifier</strong></dt>
@@ -4687,11 +4686,11 @@ The IEEE Standards publication(s) ("Document") is approved by the IEEE Standards
 <dt><strong id="signal_identifier">signal_identifier</strong></dt>
 <dd><a href="#identifier">identifier</a> </dd>
 <dt><strong id="simple_identifier">simple_identifier</strong><sup id="fnref:footnote_49"><a class="footnote-ref" href="#fn:footnote_49" rel="footnote">49</a></sup></dt>
-<dd><em>[a-zA-Z_]</em> { <em> [a-zA-Z0-9_$]</em> }  </dd>
+<dd><em>[ a-zA-Z_ ]</em> { <em> a-zA-Z0-9_$ ]</em> }  </dd>
 <dt><strong id="specparam_identifier">specparam_identifier</strong></dt>
 <dd><a href="#identifier">identifier</a> </dd>
 <dt><strong id="system_tf_identifier">system_tf_identifier</strong><sup id="fnref:footnote_50"><a class="footnote-ref" href="#fn:footnote_50" rel="footnote">50</a></sup></dt>
-<dd><font color="purple"><b>$</b></font> <em>[a-zA-Z0-9_$] { [a-zA-Z0-9_$] }</em></dd>
+<dd><font color="purple"><b>$</b></font> <em>[ a-zA-Z0-9_$ ] { [ a-zA-Z0-9_$ ] }</em></dd>
 <dt><strong id="task_identifier">task_identifier</strong></dt>
 <dd><a href="#identifier">identifier</a> </dd>
 <dt><strong id="tf_identifier">tf_identifier</strong></dt>
@@ -5020,6 +5019,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
   </div>
 
   <ul class="pager">
+    <li class="next"><a href="/tech/formatting_with_xtext_formatting2_api.html">Formatting VHDL with the Xtext formatting2 API &rarr;</a></li>
   </ul>
       
 </div>
@@ -5041,7 +5041,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2017-07-31 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2017-08-01 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
