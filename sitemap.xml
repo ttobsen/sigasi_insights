@@ -36,6 +36,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>http://insights.sigasi.com/tag/blockdiagram/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>http://insights.sigasi.com/screencasts/short_quick_fixes.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -336,6 +341,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>http://insights.sigasi.com/tag/graphics/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>http://insights.sigasi.com/opinion/opinion-why-ides-hardware-design-fail-published-ee-times.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -386,7 +396,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/ieee/</loc>
+        <loc>http://insights.sigasi.com/tag/statemachine/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -836,6 +846,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>http://insights.sigasi.com/tag/vhdl parser/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>http://insights.sigasi.com/tech/jedit-f3.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -1261,6 +1276,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>http://insights.sigasi.com/tech/graphics.ebnf.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>http://insights.sigasi.com/tech/generating-sigasi-project-vivado-project.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -1566,6 +1586,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>http://insights.sigasi.com/tag/ieee/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>http://insights.sigasi.com/tag/strategy/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -1736,7 +1761,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/vhdl parser/</loc>
+        <loc>http://insights.sigasi.com/tech/using-graphics-configuration.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
