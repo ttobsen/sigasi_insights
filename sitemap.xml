@@ -156,7 +156,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/editor/</loc>
+        <loc>http://insights.sigasi.com/tag/alint/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -847,6 +847,11 @@
     </url>
     <url>
         <loc>http://insights.sigasi.com/tag/vhdl parser/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>http://insights.sigasi.com/tag/editor/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1642,6 +1647,11 @@
     </url>
     <url>
         <loc>http://insights.sigasi.com/screencasts/sigasi_graphics_preview.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>http://insights.sigasi.com/tech/alint_pro_fedora.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
