@@ -1995,9 +1995,13 @@ Insights<span style="color:#f47920">.</span>							</p>
 
 <div class="container">
   <div class="page-header">
+    <div>
+        <h1 style="margin-bottom: 0px;margin-top: 30px;">Using Sigasi Studio's Graphics Configuration</h1>
+    </div>
+
     <div style="margin: 10px 0 10px">
         <span>
-          Posted on 2017&#8209;08&#8209;31
+            Posted on 2017&#8209;08&#8209;31
             by Titouan Vervack
         </span>
         <span style="padding-left:50px">
@@ -2007,11 +2011,9 @@ Insights<span style="color:#f47920">.</span>							</p>
               <a href="/tag/BlockDiagram/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">BlockDiagram</a>
               <a href="/tag/StateMachine/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">StateMachine</a>
         </span>
-        
+
     </div>
   </div>
-  
-  
 
   <div class="row">
 
@@ -2112,6 +2114,9 @@ For an example you can check out <code>4_state_machines.vhd</code> (in our VHDL 
 <li>StateMachine's only <code>Type</code> is <code>state</code> while BlockDiagram's <code>Type</code> contains <code>block, wire</code> and <code>port</code>.</li>
 <li>If you want to match pattern X and Y, use regex pattern <code>(?=X)Y</code></li>
 <li>If you want to match pattern X or Y, use regex pattern <code>(X|Y)</code></li>
+<li>If you want to match pattern X case insensitively, use regex pattern <code>(?i:X)</code></li>
+<li>To point to an identifier in your code, that is a keyword in the GraphicsConfiguration, e.g. state in FSM,
+you can prefix it with a <code>^</code>, e.g. <code>^state</code></li>
 </ul>
 
 <div id="disqus_thread"></div>
@@ -2160,10 +2165,10 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
   </div>
 
   <ul class="pager">
-    <li class="previous"><a href="/tech/graphics.ebnf.html">&larr; Sigasi Studio Graphics Configuration Grammar</a></li>
-    <li class="next"><a href="/tech/formatting_with_xtext_formatting2_api.html">Formatting VHDL with the Xtext formatting2 API &rarr;</a></li>
+    <li class="previous"><a href="/tech/alint_pro_fedora.html">&larr; Running ALINT-PRO on Fedora Linux 26</a></li>
+    <li class="next"><a href="/tech/graphics.ebnf.html">Sigasi Studio Graphics Configuration Grammar &rarr;</a></li>
   </ul>
-      
+
 </div>
 
 										</div>
@@ -2183,7 +2188,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2017-09-15 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2017-09-18 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
