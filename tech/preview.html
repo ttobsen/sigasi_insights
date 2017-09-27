@@ -1859,6 +1859,9 @@ Insights<span style="color:#f47920">.</span>							</p>
 			<a href="/releasenotes/" class="dropdown-toggle" data-toggle="dropdown">Release Notes <b class="caret"></b></a>
 			<ul class="dropdown-menu">
 				<li>
+					<a href="/releasenotes/sigasi-3.06.html">Sigasi Studio 3.6</a>
+				</li>
+				<li>
 					<a href="/releasenotes/sigasi-3.05.html">Sigasi Studio 3.5</a>
 				</li>
 				<li>
@@ -2016,75 +2019,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 <p>Although these preview releases are less rigorously tested than than the official releases, they are stable enough for daily use.</p>
 <p><em>If you run into any problems, please let us know</em>.</p>
 <h2 id="current-preview-release">Current preview release</h2>
-<h3 id="general-updates">General updates</h3>
-<p>We have updated our integrated JRE to 8u144. We have also updated our <a href="http://insights.sigasi.com/eula.html">EULA</a>.</p>
-<h3 id="improved-linting-and-quick-fixes">Improved linting and Quick Fixes</h3>
-<p>Some of these checks were developed in 3.3 but were not enabled, they are now!</p>
-<ul>
-<li>
-<p>New <a href="/manual/editions.html#creator" title="Sigasi Studio Creator">Sigasi Studio Creator</a> checks</p>
-<ul>
-<li>Quick fix when the VHDL version of the project is more recent than the version of the common libraries</li>
-</ul>
-</li>
-<li>
-<p>New <a href="/manual/editions.html#xl" title="Sigasi Studio XL">Sigasi Studio XL</a> checks</p>
-<ul>
-<li>Flag illegal output/input port connections</li>
-<li>Quick Fix when ports or generics are mapped in a different order than their declaration
-<img alt="Association order" src="/releasenotes/3.3/association_order.png" /></li>
-</ul>
-</li>
-</ul>
-<h3 id="improved-graphics">Improved graphics</h3>
-<ul>
-<li>We're introducing our GraphicsConfiguration Language which allows you to simplify your blockdiagrams and statemachines. Read more about it <a href="using-graphics-configuration.html">here</a>.</li>
-<li>We've reskinned our <a href="http://insights.sigasi.com/manual/views.html#dependencies">dependencies view</a>, it's visuals are now in line with blockdiagrams and statemachines<br />
-The old view:
-<img alt="Old dependencies view" src="/releasenotes/3.6/oldDependenciesView.png" /><br />
-The new view:
-<img alt="Reskinned dependencies view" src="/releasenotes/3.6/newDependenciesView.png" />  </li>
-</ul>
-<h3 id="toolchains">Toolchains</h3>
-<p>Sigasi Studio 3.6 now also offers following integrations:</p>
-<ul>
-<li>ALINT-PRO (2017.07) checks</li>
-<li>Vivado Xsim: compilation + simulation</li>
-</ul>
-<h3 id="rewrites">Rewrites</h3>
-<p>These are internal rewrites meant to keep our technical debt in check while making it easier to add new features and fix bugs.
-As an end-user you shouldn't notice anything different (if you do please <a href="mailto:support@sigasi.com">contact us</a>).</p>
-<ul>
-<li>We've rewritten the VHDL formatter's Preserve Newline function</li>
-</ul>
-<h3 id="bug-fixes">Bug fixes</h3>
-<h4 id="formatting-bug-fixes">Formatting bug fixes:</h4>
-<ul>
-<li>ticket 3891 : Formatter can't handle multiple replacements at the same offset</li>
-<li>ticket 3930 : Crashes in formatter with preserve newlines</li>
-<li>ticket 3932 : Comments before "when" get indented too much</li>
-<li>ticket 3961 : Formatting crashes when NBSP is used</li>
-<li>ticket 3968 : Formatting issue in case statement quick fix</li>
-<li>ticket 3979 : Report statement is not being formatted</li>
-<li>ticket 3980 : Package instantiation is formatted incorrectly</li>
-</ul>
-<h4 id="systemverilog-bug-fixes">SystemVerilog bug fixes:</h4>
-<ul>
-<li>ticket 3927 : Improve double click behaviour inside preprocessor code</li>
-<li>ticket 3943 : Non UTF-8 file encoding can cause preprocessor offset issues</li>
-<li>ticket 3956 : Fixed grammar issue with delay control</li>
-<li>ticket 3957 : Grammar &amp; linking support for import statements inside VerilogUnitHeader</li>
-<li>ticket 3959 : SystemVerilog parse error: import between module name and parameters</li>
-</ul>
-<h4 id="other-bug-fixes">Other bug fixes:</h4>
-<ul>
-<li>ticket 3929 : Use project relative paths in CSV export for linked files</li>
-<li>ticket 3935 : No icons in LibrariesView</li>
-<li>ticket 3940 : Use all relative paths in CSV export</li>
-<li>ticket 3945 : Hierarchy: some ProcedureCallStatements are actually ComponentInstantiatons</li>
-<li>ticket 3946 : Attribute "subtype" &amp; "base" should be available on all types</li>
-<li>ticket 3958 : Support VHDL 2008 constructs in State Machine View</li>
-</ul>
+<p>We just released <a href="/releasenotes/sigasi-3.06.html" title="Sigasi Studio 3.6">Sigasi Studio 3.6</a>, so there is nothing to mention here yet.</p>
 <h2 id="update-or-install">Update or install?</h2>
 <p>You can download the Stand-alone version of the latest preview version from:</p>
 <ul>
@@ -2121,20 +2056,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
             <a href="#"><strong>Sigasi Studio Preview (3.6)</strong></a>
             <div class="toc">
 <ul>
-<li><a href="#current-preview-release">Current preview release</a><ul>
-<li><a href="#general-updates">General updates</a></li>
-<li><a href="#improved-linting-and-quick-fixes">Improved linting and Quick Fixes</a></li>
-<li><a href="#improved-graphics">Improved graphics</a></li>
-<li><a href="#toolchains">Toolchains</a></li>
-<li><a href="#rewrites">Rewrites</a></li>
-<li><a href="#bug-fixes">Bug fixes</a><ul>
-<li><a href="#formatting-bug-fixes">Formatting bug fixes:</a></li>
-<li><a href="#systemverilog-bug-fixes">SystemVerilog bug fixes:</a></li>
-<li><a href="#other-bug-fixes">Other bug fixes:</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li><a href="#current-preview-release">Current preview release</a></li>
 <li><a href="#update-or-install">Update or install?</a><ul>
 <li><a href="#feedback">Feedback</a></li>
 </ul>
@@ -2173,7 +2095,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2017-09-19 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2017-09-27 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

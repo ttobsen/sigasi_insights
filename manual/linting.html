@@ -1859,6 +1859,9 @@ Insights<span style="color:#f47920">.</span>							</p>
 			<a href="/releasenotes/" class="dropdown-toggle" data-toggle="dropdown">Release Notes <b class="caret"></b></a>
 			<ul class="dropdown-menu">
 				<li>
+					<a href="/releasenotes/sigasi-3.06.html">Sigasi Studio 3.6</a>
+				</li>
+				<li>
 					<a href="/releasenotes/sigasi-3.05.html">Sigasi Studio 3.5</a>
 				</li>
 				<li>
@@ -2048,6 +2051,7 @@ in the design. Sigasi’s VHDL linter checks for the following problems:</p>
 <li>Order of generic and port associations</li>
 <li>Consistent capitalization of identifiers <a href="#capitalization-of-identifiers">link</a></li>
 <li>Advanced Configuration validation (component mismatch, missing binding, ...)</li>
+<li>Redundant boolean equality expressions (<code>boolean = true</code>)</li>
 </ul>
 <h3 id="linting-common-libraries">No Linting for Common Libraries</h3>
 <p>Common Libraries are considered to be production ready libraries.
@@ -2064,7 +2068,7 @@ quickfix.</p>
 <li>Switch to VHDL 2008 mode</li>
 <li>Correct signal/variable assignment operator</li>
 <li>Ignore deprecated libraries</li>
-<li>Configure Altera, Xilinx and ModelSim libraries</li>
+<li>Configure Altera, Xilinx, ModelSim and VUnit libraries</li>
 <li>Declare missing enumeration literal in case statements</li>
 <li>Add missing when clause in case statements</li>
 <li>Correct attribute entity class in attribute specifications</li>
@@ -2252,6 +2256,8 @@ warns about this.</p>
 <p>Although VHDL is not case sensitive, it is recommend to always use the same capitalization when referring to the same declaration. Since version 2.30, Sigasi warns when the capitalization of a reference differs from the capitalization of the declaration. Because external libraries can have different code styles, this linting only checks references in the same library as its declaration.</p>
 <p>Since <a href="/releasenotes/sigasi-2.31.html" title="Sigasi 2.31">Sigasi 2.31</a> this can easily be fixed with a quickfix.</p>
 <p><img alt="" src="images/captalization_references.png" /></p>
+<p>Since <a href="/releasenotes/sigasi-3.06.html" title="Sigasi Studio 3.6">Sigasi Studio 3.6</a> all capitalization issues in a file can be fixed in one click.</p>
+<p><img alt="" src="/releasenotes/3.6/capitalization_all.png" /></p>
 <h3 id="naming-conventions">Naming Conventions</h3>
 <p>On the <strong>Navigation conventions</strong> preference page (<strong>Window >
 Preferences > Sigasi > VHDL > Naming conventions</strong>) you can configure
@@ -2526,7 +2532,7 @@ You can override these setting by creating a settings file for your projects.</p
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2017-09-19 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2017-09-27 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

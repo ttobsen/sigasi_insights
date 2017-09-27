@@ -1859,6 +1859,9 @@ Insights<span style="color:#f47920">.</span>							</p>
 			<a href="/releasenotes/" class="dropdown-toggle" data-toggle="dropdown">Release Notes <b class="caret"></b></a>
 			<ul class="dropdown-menu">
 				<li>
+					<a href="/releasenotes/sigasi-3.06.html">Sigasi Studio 3.6</a>
+				</li>
+				<li>
 					<a href="/releasenotes/sigasi-3.05.html">Sigasi Studio 3.5</a>
 				</li>
 				<li>
@@ -2066,9 +2069,11 @@ If you're interested in the language's exact syntax, you can find it <a href="gr
 <ul>
 <li>Auto-complete (<strong>Ctrl+Space</strong>)</li>
 <li>Formatting (<strong>Shift+Ctrl+F</strong>)</li>
-<li>Show in BlockDiagram/StateMachine (on right of an identifier, to show it in the diagram)</li>
+<li>Quick outline (<strong>Ctrl+O</strong>)</li>
+<li>Show in BlockDiagram/StateMachine (<strong>Alt+Shift+W</strong>)</li>
 <li>Double-click on a diagram element to navigate to it in the code</li>
 <li>Navigate to declaration (<strong>Ctrl+click</strong> or <strong>F3</strong> on identifier)</li>
+<li>Hovering to show more information</li>
 </ul>
 <h3 id="show-me">Show me!</h3>
 <h4 id="blockdiagram">BlockDiagram</h4>
@@ -2080,7 +2085,8 @@ The file is then read from bottom to top. First you define all the groups, then 
 <p>We start by grouping all of the blocks that end in <code>nputSample</code>, and then creating a bunch of busses.
 The syntax for a group is as follows <code>def Type group ID (Identifiers)</code> where <code>Type</code> is <code>block</code> or <code>wire</code>.
 <code>ID</code> is the new name of the group and <code>Identifiers</code> is a comma separated list of existing <code>ID</code>s (Graphics Configuration or VHDL) or a regex.
-The syntax for a regex is <code>regex"regex_pattern"</code>. This uses <a href="https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html">Java regexes</a>, you can also find a cheat sheet <a href="http://files.zeroturnaround.com/pdf/zt_regular-expressions-cheat-sheet.pdf">here</a>.</p>
+The syntax for a regex is <code>regex"regex_pattern"</code>. This uses <a href="https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html">Java regexes</a>, you can also find a cheat sheet <a href="http://files.zeroturnaround.com/pdf/zt_regular-expressions-cheat-sheet.pdf">here</a>.
+You can also check what the regex matches by hovering over the query.</p>
 <p>Following this, we configure the leftover blocks, wires and ports as well as the block groups and buses we just created.
 The syntax for a configuration block is as follows: <code>Type Identifiers { ConfigurationItem* }</code> where <code>Type</code> is <code>block, wire</code> or <code>port</code>.</p>
 <p>The syntax for a ConfigurationItem is as follows: <code>hide | collapse | color GraphicsColor</code>. You can discover which colors are available <a href="graphics.ebnf.html#GraphicsColor">here</a> or through autocomplete.
@@ -2188,7 +2194,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2017-09-19 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2017-09-27 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
