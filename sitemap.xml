@@ -1121,6 +1121,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>http://insights.sigasi.com/tag/uvvm/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>http://insights.sigasi.com/tag/emf/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -1317,6 +1322,11 @@
     </url>
     <url>
         <loc>http://insights.sigasi.com/tag/synopsys/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>http://insights.sigasi.com/tech/using-uvvm-with-sigasi.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
