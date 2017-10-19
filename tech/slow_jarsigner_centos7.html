@@ -2030,8 +2030,8 @@ Insights<span style="color:#f47920">.</span>							</p>
 <p>Checking the speed of <code>/dev/random</code> revealed this:</p>
 <div class="codehilite"><pre><span></span><span class="o">[</span>heeckhau@bilal ~<span class="o">]</span>$ <span class="nb">time</span> dd <span class="k">if</span><span class="o">=</span>/dev/random <span class="nv">bs</span><span class="o">=</span>1k <span class="nv">count</span><span class="o">=</span><span class="m">1</span> 
 Q�P���0+1 records in
-<span class="m">0</span>+1 records out
-<span class="m">6</span> bytes <span class="o">(</span><span class="m">6</span> B<span class="o">)</span> copied, <span class="m">115</span>.772 s, <span class="m">0</span>.0 kB/s
+0+1 records out
+<span class="m">6</span> bytes <span class="o">(</span><span class="m">6</span> B<span class="o">)</span> copied, 115.772 s, 0.0 kB/s
 
 real    1m55.773s
 user    0m0.000s
@@ -2049,11 +2049,11 @@ systemctl <span class="nb">enable</span> rngd.service
 
 
 <p>New result of <code>time dd if=/dev/random bs=1k count=1</code>:</p>
-<div class="codehilite"><pre><span></span><span class="nb">time</span> dd <span class="k">if</span><span class="o">=</span>/dev/random <span class="nv">bs</span><span class="o">=</span>1k <span class="nv">count</span><span class="o">=</span><span class="m">1</span>
+<div class="codehilite"><pre><span></span><span class="nb">time</span> dd <span class="k">if</span><span class="o">=</span>/dev/random <span class="nv">bs</span><span class="o">=</span>1k <span class="nv">count</span><span class="o">=</span>1
 &gt;�a���5��C⬸�NHh��%�<span class="o">[</span>�dL����w
                             �#�/��?Ṡ��▒y:T�4�Y<span class="o">}{</span>pWdn&gt;<span class="o">)</span><span class="p">;</span>�F�*0+1 records in
-<span class="m">0</span>+1 records out
-<span class="m">78</span> bytes <span class="o">(</span><span class="m">78</span> B<span class="o">)</span> copied, <span class="m">7</span>.3129e-05 s, <span class="m">1</span>.1 MB/s
+0+1 records out
+<span class="m">78</span> bytes <span class="o">(</span><span class="m">78</span> B<span class="o">)</span> copied, 7.3129e-05 s, 1.1 MB/s
 
 real    0m0.001s
 user    0m0.000s
@@ -2116,7 +2116,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2017-10-18 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2017-10-19 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
