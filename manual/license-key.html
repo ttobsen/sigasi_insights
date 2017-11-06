@@ -2048,14 +2048,37 @@ INCREMENT com.sigasi.hdt sigasi 2.0 18-nov-2012 4 \
 
 
 <h3 id="configuring-floating-license-in-sigasi-studio-flexnet-client">Configuring Floating license in Sigasi Studio (Flexnet Client)</h3>
-<p>In order to use a floating license, Sigasi Studio needs to know how to contact the server.</p>
-<p>In the Sigasi Studio, navigate to the <strong>License Key</strong> preference page via:
-<strong>Window &gt; Preferences &gt; Sigasi &gt; License Key</strong> </p>
-<p>Next enter <code>&lt;port number&gt;@&lt;servername&gt;</code> (for example: <code>5050@myserver.example.com</code>) as license key in:  </p>
-<p>You can also set your license via an environment variable. Both <code>SIGASI_LM_LICENSE_FILE</code> and <code>LM_LICENSE_FILE</code> are supported. But when <code>SIGASI_LM_LICENSE_FILE</code> is set, <code>LM_LICENSE_FILE</code> is ignored.</p>
-<p>Note that if you want to use the environment variable, you can not enter a path in the License Key preference page. The value on this page has priority over environment variables. </p>
+<p>In order to use a floating license, Sigasi Studio needs to know how to contact the server.
+The license server can be configured in Sigasi Studio or using an environment variable.</p>
+<h4 id="configure-the-license-server-in-sigasi-studio">Configure the license server in Sigasi Studio</h4>
+<p>In Sigasi Studio, navigate to the <strong>License Key</strong> preference page via:
+<strong>Window &gt; Preferences &gt; Sigasi &gt; License Key</strong>.
+Next enter <code>&lt;portnumber&gt;@&lt;servername&gt;</code> in the <strong>License key path</strong>. For example:</p>
+<div class="codehilite"><pre><span></span>27000@myserver.example.com
+</pre></div>
+
+
+<p>If you have redundant license servers, enter each of the license servers separated by "&amp;".
+For example:</p>
+<div class="codehilite"><pre><span></span>27000@myserver1.example.com&amp;27000@myserver2.example.com&amp;27000@myserver3.example.com
+</pre></div>
+
+
+<p>If you leave the <strong>License key path</strong> empty, Sigasi Studio will try to use an environment variable
+to find the license server.</p>
+<h4 id="configure-the-license-server-in-an-environment-variable">Configure the license server in an environment variable</h4>
+<p>You can also set your license server via an environment variable instead of configuring it in Sigasi Studio.
+Both <code>SIGASI_LM_LICENSE_FILE</code> and <code>LM_LICENSE_FILE</code> are supported.
+When <code>SIGASI_LM_LICENSE_FILE</code> is set, <code>LM_LICENSE_FILE</code> is ignored.</p>
+<p>Note that if you want to use an environment variable, you can not enter a path in the License Key preference page. The value on this page has priority over environment variables. </p>
 <p>Linux Example:</p>
-<div class="codehilite"><pre><span></span>export SIGASI_LM_LICENSE_FILE=27000@flexnet.sigasi.com
+<div class="codehilite"><pre><span></span>export SIGASI_LM_LICENSE_FILE=27000@myserver.example.com
+</pre></div>
+
+
+<p>For redundant license servers, the servers should be separated using ":" on Linux and using ";" on Windows.</p>
+<p>Linux Example:</p>
+<div class="codehilite"><pre><span></span>export SIGASI_LM_LICENSE_FILE=&quot;27000@myserver1.example.com:27000@myserver2.example.com:27000@myserver3.example.com&quot;
 </pre></div>
 
 
@@ -2270,7 +2293,11 @@ INCREMENT com.sigasi.hdt sigasi 2.0 18-nov-2012 4 \
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#node-locked-licenses">Node locked licenses</a></li>
 <li><a href="#floating-licenses">Floating licenses</a><ul>
-<li><a href="#configuring-floating-license-in-sigasi-studio-flexnet-client">Configuring Floating license in Sigasi Studio (Flexnet Client)</a></li>
+<li><a href="#configuring-floating-license-in-sigasi-studio-flexnet-client">Configuring Floating license in Sigasi Studio (Flexnet Client)</a><ul>
+<li><a href="#configure-the-license-server-in-sigasi-studio">Configure the license server in Sigasi Studio</a></li>
+<li><a href="#configure-the-license-server-in-an-environment-variable">Configure the license server in an environment variable</a></li>
+</ul>
+</li>
 <li><a href="#license-server-setup">License server setup</a><ul>
 <li><a href="#download-flexnet-daemons">Download the FlexNet daemons</a></li>
 <li><a href="#customize-license-server-settings">Customize License Server settings</a></li>
@@ -2324,7 +2351,7 @@ INCREMENT com.sigasi.hdt sigasi 2.0 18-nov-2012 4 \
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2017-10-30 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2017-11-06 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
