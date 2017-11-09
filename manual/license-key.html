@@ -1804,7 +1804,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 			<a href="/manual/" class="dropdown-toggle" data-toggle="dropdown">Manual <b class="caret"></b></a>
 			<ul class="dropdown-menu">
 				<li>
-					<a href="/manual/setup.html">Setting Up Sigasi</a>
+					<a href="/manual/setup.html">Setting Up Sigasi Studio</a>
 				</li>
 				<li>
 					<a href="/manual/projectsetup.html">Setting Up a Project</a>
@@ -1849,7 +1849,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 					<a href="/manual/license-key.html">License Key Management</a>
 				</li>
 				<li>
-					<a href="/manual/talkback.html">Sigasi Talkback</a>
+					<a href="/manual/talkback.html">Sigasi Studio Talkback</a>
 				</li>
 			</ul>
 			</li>
@@ -2014,12 +2014,12 @@ Insights<span style="color:#f47920">.</span>							</p>
     <div class="content">
       <div class="col-md-9" role="main">
         <h2 id="introduction">Introduction</h2>
-<p>Sigasi's license key management system is based on the well known FlexNet (a.k.a. FlexLM) license manager.
-Sigasi supports both <em>node-locked</em> and <em>floating</em> license keys.</p>
+<p>Sigasi Studio's license key management system is based on the well known FlexNet (a.k.a. FlexLM) license manager.
+Sigasi Studio supports both <em>node-locked</em> and <em>floating</em> license keys.</p>
 <h2 id="node-locked-licenses">Node locked licenses</h2>
 <p>If you have a node-locked license, you can enter your license key directly in Sigasi Studio.</p>
 <ol>
-<li>Open the Sigasi License Key preference page: <strong>Window &gt; Preferences &gt; Sigasi &gt; License Key</strong></li>
+<li>Open the Sigasi Studio License Key preference page: <strong>Window &gt; Preferences &gt; Sigasi &gt; License Key</strong></li>
 <li>Click <strong>Edit License File</strong></li>
 <li>paste your key in the dialog</li>
 </ol>
@@ -2102,7 +2102,7 @@ When <code>SIGASI_LM_LICENSE_FILE</code> is set, <code>LM_LICENSE_FILE</code> is
 </ul>
 <h4 id="customize-license-server-settings">Customize License Server settings</h4>
 <p>You can change the port of the FlexNet and Sigasi daemon by changing the port numbers in the license key. By default ports <code>27000</code> and <code>27001</code> are used.</p>
-<p>The port of the Sigasi daemon is set on the <code>DAEMON</code> line. For example: <code>DAEMON sigasi port=27001</code>, forces the Sigasi to use port 27001. </p>
+<p>The port of the Sigasi daemon is set on the <code>DAEMON</code> line. For example: <code>DAEMON sigasi port=27001</code>, forces the Sigasi daemon to use port 27001. </p>
 <p>The port of the FlexNet daemon is set on the <code>SERVER</code> line For example: <code>SERVER your_server_name1 BD41FCF5DE27 27000</code>, forces FlexNet to use port 27000.</p>
 <p>You can change the ports and servername without breaking the signature.</p>
 <h4 id="starting-the-flexnet-and-sigasi-daemon-on-linux">Starting the Flexnet and Sigasi Daemon on Linux</h4>
@@ -2120,7 +2120,7 @@ When <code>SIGASI_LM_LICENSE_FILE</code> is set, <code>LM_LICENSE_FILE</code> is
 <li>Create a folder to hold the license manager software, in this example we will use <code>D:\Sigsi\license</code>.</li>
 <li>Unpack the zip file into the license folder  (<code>D:\Sigasi\license</code>)</li>
 <li>Run the license configuration tool <code>lmtools.exe</code> as administrator.</li>
-<li>Save the license file supplied for Sigasi to the license folder</li>
+<li>Save the license file supplied for Sigasi Studio to the license folder</li>
 <li>
 <p>Using a text editor edit the license file and replace <code>your_server_name1</code> with the name of the machine you are using, for example:
     From: <code>SERVER your_server_name1 74e50bb0911e</code>
@@ -2149,13 +2149,13 @@ When <code>SIGASI_LM_LICENSE_FILE</code> is set, <code>LM_LICENSE_FILE</code> is
 <p><img alt="" src="images/flexnet_windows_2.png" /></p>
 <h3 id="floating-license-options">Floating License options</h3>
 <h4 id="release-a-floating-license">Release a floating license</h4>
-<p>You can release a floating license (<em>check a license in</em>) without closing your Sigasi application or Eclipse application. This is useful if you use Eclipse to edit other files than VHDL files, like C or Tcl.</p>
+<p>You can release a floating license (<em>check a license in</em>) without closing your Sigasi Studio application or Eclipse application. This is useful if you use Eclipse to edit other files than VHDL files, like C or Tcl.</p>
 <p>First, make sure that all VHDL and Verilog files are closed and all VHDL and Verilog projects are closed. Next select  <strong>Help &gt; Sigasi &gt; Floating license &gt; Release Sigasi Floating Licenses</strong></p>
 <p>To get the license back (to check the license out), open the license dialog <strong>Help &gt; Sigasi &gt; Configure License...</strong> and press <strong>Apply</strong>.</p>
 <h4 id="how-to-block-sigasi-studio-from-checking-out-a-license">How to block Sigasi Studio from checking out a license?</h4>
-<p>If you have configured an environment variable with the location of a Flexnet license server, you can instruct Sigasi <strong>not</strong> to check out a license by setting the Sigasi Studio License key to <code>none</code>.</p>
+<p>If you have configured an environment variable with the location of a Flexnet license server, you can instruct Sigasi Studio <strong>not</strong> to check out a license by setting the Sigasi Studio License key to <code>none</code>.</p>
 <h4 id="mix-of-creator-and-xl-licenses">Mix of Creator and XL licenses</h4>
-<p>If your license server serves both Sigasi Studio <strong>Creator</strong> and <strong>XL</strong> licenses, you can configure Sigasi studio to only checkout Sigasi <strong>Creator</strong> licenses (and <strong>not</strong> XL licenses) by enabling the "<strong>Do not try to checkout floating Sigasi Studio XL licenses</strong>" option on <strong>Window &gt; Preferences &gt; Sigasi &gt; License Key &gt; Floating Options</strong></p>
+<p>If your license server serves both Sigasi Studio <strong>Creator</strong> and <strong>XL</strong> licenses, you can configure Sigasi Studio to only checkout Sigasi Studio <strong>Creator</strong> licenses (and <strong>not</strong> XL licenses) by enabling the "<strong>Do not try to checkout floating Sigasi Studio XL licenses</strong>" option on <strong>Window &gt; Preferences &gt; Sigasi &gt; License Key &gt; Floating Options</strong></p>
 <h4 id="checking-out-and-releasing-the-doc-addon-license">Checking out and releasing the Doc addon license</h4>
 <p>If you have licenses for Sigasi Studio XL Doc, this is actually licensed as Sigasi Studio XL, with a Doc add-on license. The XL license is checked out as described above.</p>
 <p>The Doc add-on is checked out automatically in the following cases:</p>
@@ -2170,7 +2170,7 @@ When <code>SIGASI_LM_LICENSE_FILE</code> is set, <code>LM_LICENSE_FILE</code> is
 <p>If your license key does not work, the first things to check are:</p>
 <ul>
 <li>Which version of the Sigasi license daemon are you using?<br />
-<strong>Note:</strong> The Sigasi 2 daemon needs to be updated to run Sigasi 3. Otherwise you will see an <code>License is not valid (Internal Flexlm Error)</code> error message in the Sigasi preference page.</li>
+<strong>Note:</strong> The Sigasi 2 daemon needs to be updated to run Sigasi 3. Otherwise you will see an <code>License is not valid (Internal Flexlm Error)</code> error message in the Sigasi Studio preference page.</li>
 <li>Is the MAC address correct?</li>
 <li>Are you on Arch Linux?<br />
   Make sure to install the "net-tools" package</li>
@@ -2217,7 +2217,7 @@ When <code>SIGASI_LM_LICENSE_FILE</code> is set, <code>LM_LICENSE_FILE</code> is
 </ul>
 </li>
 <li>You can not have spaces in the daemon path.</li>
-<li>Some users reported that specifying an arbitrary absolute path for the Sigasi daemon on Windows (e.g. <code>DAEMON sigasi C:\\sigasi.exe port=27021</code>) does not work. It only works if the sigasi daemon is in the <code>C:\Sigasi</code> folder.
+<li>Some users reported that specifying an arbitrary absolute path for the Sigasi daemon on Windows (e.g. <code>DAEMON sigasi C:\\sigasi.exe port=27021</code>) does not work. It only works if the Sigasi daemon is in the <code>C:\Sigasi</code> folder.
   Other users have reported that you are <em>not</em> allowed to have the directory name being the same as the daemon name. For example: <code>c:\flexlm\sigasi\sigasi.exe</code> is invalid, but <code>c:\flexlm\vhdl_editor\sigasi.exe</code> works fine.</li>
 <li>Make sure the environment variable is correct: <code>SIGASI_LM_LICENSE_FILE=&lt;port number&gt;@&lt;servername&gt;</code></li>
 <li>Verify that your server meets the <a href="/faq.html#what-are-the-system-requirements" title="FAQ">what-are-the-system-requirements</a>.<br />

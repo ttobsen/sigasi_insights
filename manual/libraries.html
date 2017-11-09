@@ -1804,7 +1804,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 			<a href="/manual/" class="dropdown-toggle" data-toggle="dropdown">Manual <b class="caret"></b></a>
 			<ul class="dropdown-menu">
 				<li>
-					<a href="/manual/setup.html">Setting Up Sigasi</a>
+					<a href="/manual/setup.html">Setting Up Sigasi Studio</a>
 				</li>
 				<li>
 					<a href="/manual/projectsetup.html">Setting Up a Project</a>
@@ -1849,7 +1849,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 					<a href="/manual/license-key.html">License Key Management</a>
 				</li>
 				<li>
-					<a href="/manual/talkback.html">Sigasi Talkback</a>
+					<a href="/manual/talkback.html">Sigasi Studio Talkback</a>
 				</li>
 			</ul>
 			</li>
@@ -2014,11 +2014,11 @@ Insights<span style="color:#f47920">.</span>							</p>
     <div class="content">
       <div class="col-md-9" role="main">
         <h2 id="introduction">Introduction</h2>
-<p>HDL libraries are a very powerful feature of the HDL languages. Sigasi
+<p>HDL libraries are a very powerful feature of the HDL languages. Sigasi Studio
 makes it easy to configure and use them. In this chapter, we assume that
 the basic concepts of VHDL libraries are understood. We will explain how
-they are implemented in Sigasi.</p>
-<p>Like with any HDL tool, Sigasi needs to know where the libraries are
+they are implemented in Sigasi Studio.</p>
+<p>Like with any HDL tool, Sigasi Studio needs to know where the libraries are
 located on the file system. We will describe how the library
 configuration can be examined and modified using the GUI.</p>
 <p>We will also present some use case about how to set up libraries with
@@ -2077,21 +2077,21 @@ mappings. You can do this by disabling the <strong>Project > Build
 Automatically</strong> option.</p>
 <p>To exclude a file from all libraries, the library mapping context menu
 provides an <code>Exclude from build</code> option. You can apply that to any file or folder in
-the project. Sigasi will then assume that the corresponding resource is
+the project. Sigasi Studio will then assume that the corresponding resource is
 not a part of the project and will not include that resource in a
 project build. This is typically useful when you have stale copies of
 HDL files or folders lying around that you want simply to be ignored.</p>
 <h2 id="configuration-file">Configuration file</h2>
 <p>All library configuration information is stored in the <code>.library_mapping.xml</code> file in the root of your project.
 If you edit this file, your project will be cleared and rebuilt automatically (a so-called <em>Clean Build</em>).</p>
-<p>Sigasi only writes changes to this configuration file when you make changes to the library configuration with the context menu in the <em>Project Explorer</em>. When you do make changes, Sigasi first checks that all paths in the library configuration still exist. If a path no longer exists, is will be removed from the configuration file.
+<p>Sigasi Studio only writes changes to this configuration file when you make changes to the library configuration with the context menu in the <em>Project Explorer</em>. When you do make changes, Sigasi Studio first checks that all paths in the library configuration still exist. If a path no longer exists, is will be removed from the configuration file.
 Note that the library configuration file is <strong>case-sensitive</strong>, even on Windows.</p>
 <h2 id="libraries-common">Common libraries</h2>
 <p>In any newly created VHDL project, the <code>Common Libraries</code> folder
 contains the VHDL files of the <code>IEEE</code> and <code>STD</code> libraries. This folder
 is special in the sense that its contents is not stored in regular files
 on your hard drive. Instead, the files’ contents is shipped as part of
-the Sigasi installation. Other than that, the <code>Common Libraries</code> folder
+the Sigasi Studio installation. Other than that, the <code>Common Libraries</code> folder
 behaves like any other folder. You can delete it, rename it, and apply a
 different library mapping. In most cases, however, the default
 configuration is just what you need.</p>
@@ -2103,7 +2103,7 @@ Right-click on your project in the explorer view and apply menu-entry
 <h2 id="ieee-vital">IEEE Vital</h2>
 <p>See <a href="/tech/how-can-i-use-the-ieee-vital-libraries-with-sigasi-pro.html" title="How can I use the IEEE Vital libraries with Sigasi Pro?">How can I use the IEEE Vital libraries with Sigasi Pro?</a></p>
 <h2 id="shared-libraries">Shared libraries</h2>
-<p>Sigasi allows you to share libraries between multiple projects. The
+<p>Sigasi Studio allows you to share libraries between multiple projects. The
 easiest way to do this, is to develop each library in a separate project
 and configure the <strong>Project Dependencies</strong> accordingly. To configure the
 project dependencies, right click the project (the one that uses the

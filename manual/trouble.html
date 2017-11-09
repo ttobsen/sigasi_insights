@@ -1804,7 +1804,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 			<a href="/manual/" class="dropdown-toggle" data-toggle="dropdown">Manual <b class="caret"></b></a>
 			<ul class="dropdown-menu">
 				<li>
-					<a href="/manual/setup.html">Setting Up Sigasi</a>
+					<a href="/manual/setup.html">Setting Up Sigasi Studio</a>
 				</li>
 				<li>
 					<a href="/manual/projectsetup.html">Setting Up a Project</a>
@@ -1849,7 +1849,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 					<a href="/manual/license-key.html">License Key Management</a>
 				</li>
 				<li>
-					<a href="/manual/talkback.html">Sigasi Talkback</a>
+					<a href="/manual/talkback.html">Sigasi Studio Talkback</a>
 				</li>
 			</ul>
 			</li>
@@ -2016,7 +2016,7 @@ Insights<span style="color:#f47920">.</span>							</p>
         <h2 id="ts-unresponsive">The user interface is unresponsive</h2>
 <p>If the user interface of Sigasi Studio is unresponsive, you can interrupt the internal compilation process by pressing the <strong>stop</strong> button in the progress view. To activate the progress view, select <strong>Window &gt; Show View &gt; Other... &gt; General &gt; Progress</strong>, or click the tiny conveyor belt icon <img alt="" src="icons/progressicon.png" />, on the right side of the status bar.</p>
 <h2 id="ts-refresh-editor">The editor displays old contents of a file</h2>
-<p>If you edit a file outside of Sigasi Studio with an external editor, Sigasi will normally notice the changes and ask if you want to load the changes. If
+<p>If you edit a file outside of Sigasi Studio with an external editor, Sigasi Studio will normally notice the changes and ask if you want to load the changes. If
 it doesn’t, you can refresh the editor’s content by pressing <strong>F5</strong> or by right-clicking a file or a project in the project explorer and
 selecting <strong>Refresh</strong>.</p>
 <h2 id="how-much-local-history-will-be-stored">How much local history will be stored?</h2>
@@ -2072,12 +2072,12 @@ selecting <strong>Refresh</strong>.</p>
 <p>Cause: Common libraries are not configured correctly.</p>
 <p>Resolution: Reset the common libraries: <strong>right-click the project &gt; Library Mapping &gt; Reset Library Mapping</strong></p>
 <h2 id="ts-stale-files">Sigasi Studio analyzes HDL files that I do not need</h2>
-<p>By default, Sigasi assumes that all VHDL or Verilog files are part of the project. However, some projects may contain multiple files with older or alternative definitions of a VHDL object. We call these <em>stale</em> files, because they are no longer used. In such a case you will want Sigasi Studio to ignore certain files.</p>
+<p>By default, Sigasi Studio assumes that all VHDL or Verilog files are part of the project. However, some projects may contain multiple files with older or alternative definitions of a VHDL object. We call these <em>stale</em> files, because they are no longer used. In such a case you will want Sigasi Studio to ignore certain files.</p>
 <p>To exclude files (or directories) from analysis, consult the <a href="/manual/libraries.html" title="Libraries">Libraries</a>.</p>
 <p>Ignored resources are decorated with a <img alt="" src="icons/ignoreicon.png" /> icon in the project explorer view.</p>
-<h2 id="sigasi-startup-fails-could-not-create-the-java-virtual-machine">Sigasi startup fails: "Could not create the Java virtual machine"</h2>
-<p>On some computers, the standalone version of Sigasi will fail to start with an error message similar to: "Could not create the Java virtual machine." This happens especially on 32-bit Windows machines with less than 2GB of physical memory. The reason is that the Java virtual machine tries to allocate more memory than what is available.</p>
-<p>In order to solve this, you can decrease the default heap size settings. You can do this by adding following lines to <code>sigasi.ini</code> or <code>eclipse.ini</code> in your Sigasi installation folder:</p>
+<h2 id="sigasi-studio-startup-fails-could-not-create-the-java-virtual-machine">Sigasi Studio startup fails: "Could not create the Java virtual machine"</h2>
+<p>On some computers, the standalone version of Sigasi Studio will fail to start with an error message similar to: "Could not create the Java virtual machine." This happens especially on 32-bit Windows machines with less than 2GB of physical memory. The reason is that the Java virtual machine tries to allocate more memory than what is available.</p>
+<p>In order to solve this, you can decrease the default heap size settings. You can do this by adding following lines to <code>sigasi.ini</code> or <code>eclipse.ini</code> in your Sigasi Studio installation folder:</p>
 <div class="codehilite"><pre><span></span>-vmargs
 -Xmx1000m
 </pre></div>
@@ -2086,7 +2086,7 @@ selecting <strong>Refresh</strong>.</p>
 <p>This sets the maximum heap size to 1000 MB (instead of the standard 1400MB).</p>
 <p><strong>Note:</strong> Do not use <code>eclipsec.exe</code>, as this will ignore all of the settings configured in the eclipse.ini file.</p>
 <h2 id="ts-clean">I want a clean restart</h2>
-<p>If you ever suspect that the state of your project is inconsistent in Sigasi, you can do one or all of the following things. Consider these
+<p>If you ever suspect that the state of your project is inconsistent in Sigasi Studio, you can do one or all of the following things. Consider these
 steps to be advanced usage; you should not need them during normal operation.</p>
 <h3 id="force-a-clean-compilation">Force a clean compilation</h3>
 <p>You can force a completely clean compilation by selecting: <strong>Project &gt; Clean … &gt; Clean All Projects &gt; OK</strong>.</p>
@@ -2095,7 +2095,7 @@ steps to be advanced usage; you should not need them during normal operation.</p
 <p>You can delete these stale markers from the Problems View: In the Problems View, select the markers and press <strong>DEL</strong> (or right-click and select <strong>Delete</strong>).</p>
 <p>Note that during the next build, the tool may generate new markers. If you want to suppress certain warnings, you can configure the <a href="/manual/config.html#configure-linting" title="Configuring Your Design Environment">configure-linting</a></p>
 <h3 id="remove-the-workspace-state">Remove the workspace state</h3>
-<p>Much of your configuration and cached data is stored in your workspace. By default, Sigasi’s workspace is located in <code>${HOME}/workspaceSigasi</code>.
+<p>Much of your configuration and cached data is stored in your workspace. By default, Sigasi Studio’s workspace is located in <code>${HOME}/workspaceSigasi</code>.
 A lot of this data is stored in the hidden <code>.metadata</code> directory. Sometimes, a part of your metadata can become corrupt. It can help to
 remove the <code>.metadata</code> directory (take a backup first!). This clears all of your workspace state.</p>
 <ul>
@@ -2109,7 +2109,7 @@ remove the <code>.metadata</code> directory (take a backup first!). This clears 
 <p>Project interface was created with an older, incompatible version of Quartus II.
 Is it OK to upgrade the project to match the installed version of Quartus II?</p>
 </blockquote>
-<p>Obviously, you should upgrade the project. If this message keeps popping up, you may want to check that Sigasi is using the correct version of Quartus II, in the Sigasi application: <strong>Window &gt; Preferences &gt; Sigasi &gt; Toolchains &gt; Altera Quartus II</strong>.</p>
+<p>Obviously, you should upgrade the project. If this message keeps popping up, you may want to check that Sigasi Studio is using the correct version of Quartus II, in the Sigasi Studio application: <strong>Window &gt; Preferences &gt; Sigasi &gt; Toolchains &gt; Altera Quartus II</strong>.</p>
 <h2 id="contact-support">Contact support</h2>
 <p>If this troubleshooting guide did not solve your problem, please <a href="mailto:support@sigasi.com" title="send us an email">send us an email</a>.</p>
 <p>Any of the following information will help us help you:</p>
@@ -2118,7 +2118,7 @@ Is it OK to upgrade the project to match the installed version of Quartus II?</p
 <li>Description of the expected behavior and the actual behavior.</li>
 <li>A <a href="/opinion/vetsmod-get-better-feedback-your-vhdl-code-snippets.html" title="VETSMOD">VETSMOD</a> code snippet.</li>
 <li>A screenshot</li>
-<li>The version number of your Sigasi tool: <strong>Help &gt; About Sigasi &gt; Installation details</strong> Note that the version number contains the date of the release. (For example, version <code>2.0.1.20110809…</code> was released on August 9, 2011.)</li>
+<li>The version number of your Sigasi Studio: <strong>Help &gt; About Sigasi &gt; Installation details</strong> Note that the version number contains the date of the release. (For example, version <code>2.0.1.20110809…</code> was released on August 9, 2011.)</li>
 <li>The log file: <strong>Help &gt; Open Log</strong></li>
 </ul>
 
@@ -2140,7 +2140,7 @@ Is it OK to upgrade the project to match the installed version of Quartus II?</p
 <li><a href="#ts-vhdl-support">Project does not have VHDL support</a></li>
 <li><a href="#ts-commonlib">Project does not have Common Libraries</a></li>
 <li><a href="#ts-stale-files">Sigasi Studio analyzes HDL files that I do not need</a></li>
-<li><a href="#sigasi-startup-fails-could-not-create-the-java-virtual-machine">Sigasi startup fails: "Could not create the Java virtual machine"</a></li>
+<li><a href="#sigasi-studio-startup-fails-could-not-create-the-java-virtual-machine">Sigasi Studio startup fails: "Could not create the Java virtual machine"</a></li>
 <li><a href="#ts-clean">I want a clean restart</a><ul>
 <li><a href="#force-a-clean-compilation">Force a clean compilation</a></li>
 <li><a href="#remove-stale-markers">Remove stale markers</a></li>
