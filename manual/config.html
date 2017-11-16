@@ -1636,9 +1636,6 @@
 				<div class="menu-sub_eng-container">
 					<ul id="menu-sub_eng" class="menu">
 							<li class="menu-item-11999 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children		parent">
-								<a href="http://www.sigasi.com/contact"><span class="menu-item-text">Contact</span></a>
-							</li>
-							<li class="menu-item-11999 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children		parent">
 								<a href="/support.html"><span class="menu-item-text">Support</span></a>
 							</li>
 							<li class="menu-item-11999 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children		parent">
@@ -1646,6 +1643,9 @@
 							</li>
 							<li class="menu-item-11999 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children		parent">
 								<a href="http://www.sigasi.com/category/news/"><span class="menu-item-text">News</span></a>
+							</li>
+							<li class="menu-item-11999 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children		parent">
+								<a href="http://www.sigasi.com/contact"><span class="menu-item-text">Contact</span></a>
 							</li>
 					</ul>
 				</div>
@@ -1975,8 +1975,9 @@ Insights<span style="color:#f47920">.</span>							</p>
 <p>The version information is stored in <code>&lt;project path&gt;/.settings/com.sigasi.hdt.vhdl.version.prefs</code> and <code>&lt;project path&gt;/.settings/com.sigasi.hdt.verilog.version.prefs</code>. We recommend you add this file to version control so you can share it with your team.</p>
 <p><strong>Notes</strong>:</p>
 <ul>
-<li><strong>VHDL libaries:</strong> Any new project that you create will have the common libraries (<code>STD</code> and <code>IEEE</code>) that correspond to your selected VHDL version. Your <em>existing project will <strong>not</strong> be modified</em>. If you want to update the common libraries for an existing project, right-click the project and select <strong>Library Mapping &gt; Reset Common Libraries</strong>. Since <a href="/releasenotes/sigasi-3.03.html" title="Sigasi Studio 3.3">Sigasi Studio 3.3</a>, you will get a warning if your common libraries do not match the VHDL version of you VHDL file. You can use the proposed quick fix to resolve the issue.</li>
+<li><strong>VHDL libaries:</strong> Any new project that you create will have the Common Libraries (<code>STD</code> and <code>IEEE</code>) that correspond to your selected VHDL version. Your <em>existing project will <strong>not</strong> be modified</em>. If you want to update the Common Libraries for an existing project, right-click the project and select <strong>Library Mapping &gt; Reset Common Libraries</strong>. Since <a href="/releasenotes/sigasi-3.03.html" title="Sigasi Studio 3.3">Sigasi Studio 3.3</a>, you will get a warning if your Common Libraries do not match the VHDL version of you VHDL file. You can use the proposed quick fix to resolve the issue.</li>
 <li>If you want to compile VHDL 87 code, you should select the “1993” option. There are no checks to warn about constructs that were not supported in 1987, but that were introduced in 1993.</li>
+<li>Sigasi Studio does not send the Common Libraries to an external compiler. It is expected that these libraries are pre-compiled.</li>
 </ul>
 <h2 id="configure-colors">Colors and Fonts</h2>
 <p>You can configure the code coloring by selecting <strong>Window &gt; Preferences &gt; Sigasi &gt; VHDL &gt; Syntax Coloring</strong>. For each class of semantic and syntactic elements, you can select the font, letter color, background color, style (bold, italic, underline, strike through).</p>
@@ -2073,8 +2074,6 @@ To export, go to <strong>File &gt; Export… &gt; General &gt; Preferences</stro
   </div>
 
   <ul class="pager">
-    <li class="previous"><a href="/manual/keyshortcuts.html">&larr; Keyboard Shortcuts</a></li>
-    <li class="next"><a href="/manual/license-key.html">License Key Management &rarr;</a></li>
   </ul>
 
 </div>

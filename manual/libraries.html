@@ -1636,9 +1636,6 @@
 				<div class="menu-sub_eng-container">
 					<ul id="menu-sub_eng" class="menu">
 							<li class="menu-item-11999 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children		parent">
-								<a href="http://www.sigasi.com/contact"><span class="menu-item-text">Contact</span></a>
-							</li>
-							<li class="menu-item-11999 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children		parent">
 								<a href="/support.html"><span class="menu-item-text">Support</span></a>
 							</li>
 							<li class="menu-item-11999 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children		parent">
@@ -1646,6 +1643,9 @@
 							</li>
 							<li class="menu-item-11999 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children		parent">
 								<a href="http://www.sigasi.com/category/news/"><span class="menu-item-text">News</span></a>
+							</li>
+							<li class="menu-item-11999 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children		parent">
+								<a href="http://www.sigasi.com/contact"><span class="menu-item-text">Contact</span></a>
 							</li>
 					</ul>
 				</div>
@@ -2040,12 +2040,14 @@ HDL files or folders lying around that you want simply to be ignored.</p>
 If you edit this file, your project will be cleared and rebuilt automatically (a so-called <em>Clean Build</em>).</p>
 <p>Sigasi Studio only writes changes to this configuration file when you make changes to the library configuration with the context menu in the <em>Project Explorer</em>. When you do make changes, Sigasi Studio first checks that all paths in the library configuration still exist. If a path no longer exists, is will be removed from the configuration file.
 Note that the library configuration file is <strong>case-sensitive</strong>, even on Windows.</p>
-<h2 id="libraries-common">Common libraries</h2>
+<h2 id="libraries-common">Common Libraries</h2>
 <p>In any newly created VHDL project, the <code>Common Libraries</code> folder
 contains the VHDL files of the <code>IEEE</code> and <code>STD</code> libraries. This folder
-is special in the sense that its contents is not stored in regular files
-on your hard drive. Instead, the files’ contents is shipped as part of
-the Sigasi Studio installation. Other than that, the <code>Common Libraries</code> folder
+is special in the sense that its contents are not stored in regular files
+on your hard drive. Instead, the files’ contents are shipped as part of
+the Sigasi Studio installation. These files are not sent to an
+external compiler since it is expected that the contents of the Common Libraries
+are pre-compiled. Other than that, the <code>Common Libraries</code> folder
 behaves like any other folder. You can delete it, rename it, and apply a
 different library mapping. In most cases, however, the default
 configuration is just what you need.</p>
@@ -2128,7 +2130,7 @@ verify this by checking the prefix of the error message (e.g. <code>vcom:</code>
 <li><a href="#libraries-examine">Examining the library configuration</a></li>
 <li><a href="#libraries-mapping">Modifying the library configuration</a></li>
 <li><a href="#configuration-file">Configuration file</a></li>
-<li><a href="#libraries-common">Common libraries</a></li>
+<li><a href="#libraries-common">Common Libraries</a></li>
 <li><a href="#ieee-vital">IEEE Vital</a></li>
 <li><a href="#shared-libraries">Shared libraries</a></li>
 <li><a href="#libraries-third-party">Using third party libraries</a><ul>
@@ -2147,8 +2149,6 @@ verify this by checking the prefix of the error message (e.g. <code>vcom:</code>
   </div>
 
   <ul class="pager">
-    <li class="previous"><a href="/manual/projectsetup.html">&larr; Setting Up a Project</a></li>
-    <li class="next"><a href="/manual/user_interface.html">User Interface &rarr;</a></li>
   </ul>
 
 </div>

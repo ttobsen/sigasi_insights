@@ -1636,9 +1636,6 @@
 				<div class="menu-sub_eng-container">
 					<ul id="menu-sub_eng" class="menu">
 							<li class="menu-item-11999 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children		parent">
-								<a href="http://www.sigasi.com/contact"><span class="menu-item-text">Contact</span></a>
-							</li>
-							<li class="menu-item-11999 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children		parent">
 								<a href="/support.html"><span class="menu-item-text">Support</span></a>
 							</li>
 							<li class="menu-item-11999 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children		parent">
@@ -1646,6 +1643,9 @@
 							</li>
 							<li class="menu-item-11999 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children		parent">
 								<a href="http://www.sigasi.com/category/news/"><span class="menu-item-text">News</span></a>
+							</li>
+							<li class="menu-item-11999 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children		parent">
+								<a href="http://www.sigasi.com/contact"><span class="menu-item-text">Contact</span></a>
 							</li>
 					</ul>
 				</div>
@@ -2000,7 +2000,7 @@ ln -s  remote_modelsim.sh vlib
 
 <span class="c1">#configuration</span>
 <span class="nv">REMOTE_USER</span><span class="o">=</span>john.doe
-<span class="nv">REMOTE_HOST</span><span class="o">=</span>122.22.22.221
+<span class="nv">REMOTE_HOST</span><span class="o">=</span><span class="m">122</span>.22.22.221
 <span class="nv">REMOTE_HOME</span><span class="o">=</span><span class="s1">&#39;/home/john.doe&#39;</span>
 <span class="nv">REMOTE_MODELSIM_DIR</span><span class="o">=</span><span class="s1">&#39;/opt/altera/10.0/modelsim_ase/bin&#39;</span>
 
@@ -2020,7 +2020,7 @@ ln -s  remote_modelsim.sh vlib
     rsync -r <span class="si">${</span><span class="nv">PWD</span><span class="si">}</span>/* <span class="si">${</span><span class="nv">REMOTE_USER</span><span class="si">}</span>@<span class="si">${</span><span class="nv">REMOTE_HOST</span><span class="si">}</span>:<span class="si">${</span><span class="nv">REMOTE_DIR</span><span class="si">}</span>
 <span class="o">}</span>
 <span class="k">function</span> createRemoteDir<span class="o">(){</span>
-    <span class="nb">echo</span> <span class="s2">&quot;rsync failed, probably because the remote directory </span><span class="nv">$REMOTE_DIR</span><span class="s2"> did not exits. Retrying.&quot;</span> &gt;<span class="p">&amp;</span>2
+    <span class="nb">echo</span> <span class="s2">&quot;rsync failed, probably because the remote directory </span><span class="nv">$REMOTE_DIR</span><span class="s2"> did not exits. Retrying.&quot;</span> &gt;<span class="p">&amp;</span><span class="m">2</span>
     ssh <span class="si">${</span><span class="nv">REMOTE_USER</span><span class="si">}</span>@<span class="si">${</span><span class="nv">REMOTE_HOST</span><span class="si">}</span> <span class="s2">&quot;mkdir -p </span><span class="si">${</span><span class="nv">REMOTE_DIR</span><span class="si">}</span><span class="s2">&quot;</span>
 <span class="o">}</span>
 try_rsync <span class="o">||</span> <span class="o">(</span> createRemoteDir <span class="o">&amp;&amp;</span> try_rsync <span class="o">)</span> <span class="o">||</span> <span class="nb">exit</span> -1
@@ -2048,7 +2048,7 @@ ssh <span class="si">${</span><span class="nv">REMOTE_USER</span><span class="si
 
 <span class="c1">#configuration</span>
 <span class="nv">REMOTE_USER</span><span class="o">=</span>john.doe
-<span class="nv">REMOTE_HOST</span><span class="o">=</span>10.211.55.6 
+<span class="nv">REMOTE_HOST</span><span class="o">=</span><span class="m">10</span>.211.55.6 
 <span class="nv">REMOTE_HOME</span><span class="o">=</span><span class="s1">&#39;/Users/john.doe&#39;</span>
 <span class="nv">REMOTE_MODELSIM_DIR</span><span class="o">=</span><span class="s1">&#39;/usr/local/riviera-pro-2012.02-x86_64/bin/&#39;</span>
 
