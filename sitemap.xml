@@ -451,6 +451,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>http://insights.sigasi.com/tag/quick fix/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>http://insights.sigasi.com/tech/code-review.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -1252,11 +1257,6 @@
     </url>
     <url>
         <loc>http://insights.sigasi.com/tag/indent/</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>http://insights.sigasi.com/tag/quickfix/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>

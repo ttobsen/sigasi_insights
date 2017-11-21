@@ -1781,7 +1781,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 					<a href="/manual/opening.html">Opening Files</a>
 				</li>
 				<li>
-					<a href="/manual/linting.html">Linting and Quickfixes</a>
+					<a href="/manual/linting.html">Linting and Quick Fixes</a>
 				</li>
 				<li>
 					<a href="/manual/tools.html">Tool Integration</a>
@@ -2108,12 +2108,12 @@ Insights<span style="color:#f47920">.</span>							</p>
 <h3 id="how-do-i-increase-the-heap-size-for-eclipse">How do I increase the heap size for Eclipse?</h3>
 <p>We recommend to increase the default heap size settings of Eclipse. You can do this by adding following lines to eclipse.ini in your Eclipse installation folder:</p>
 <div class="codehilite"><pre><span></span>-vmargs
--Xmx1400m
+-Xmx2400m
 </pre></div>
 
 
-<p>This sets the maximum heap size to 1400 MB. If you system has plenty of memory, you can even choose higher numbers.</p>
-<p><strong>Note</strong>: If your <code>eclipse.ini</code> already contains these arguments, you should not append these parameters again, but instead modify the existing values. If <code>-vmargs</code> is there already, but <code>-Xmx1400m</code> is not; you should add <code>-Xmx1400m</code> after the existing <code>-vmargs</code>.</p>
+<p>This sets the maximum heap size to 2400 MB. If you system has plenty of memory, you can even choose higher numbers.</p>
+<p><strong>Note</strong>: If your <code>eclipse.ini</code> already contains these arguments, you should not append these parameters again, but instead modify the existing values. If <code>-vmargs</code> is there already, but <code>-Xmx2400m</code> is not; you should add <code>-Xmx2400m</code> after the existing <code>-vmargs</code>.</p>
 <p><strong>Note</strong>: If you run the stand alone version of Sigasi Studio, this settings file is called <code>sigasi.ini</code> instead of <code>eclipse.ini</code></p>
 <p><strong>Note</strong>: If the settings do not change with the above methods, check if the following environment variables are set: <code>JAVA_TOOL_OPTIONS</code> or <code>_JAVA_OPTIONS</code>. [<a href="https://stackoverflow.com/questions/28327620/difference-between-java-options-java-tool-options-and-java-opts">More info</a>]</p>
 <h3 id="update">How can I update Sigasi?</h3>
@@ -2259,7 +2259,7 @@ You can open a new Window via <strong>Window &gt; New window</strong></p>
 <p>If you want to check more errors, enable the <a href="/manual/tools.html#save-time-compilation" title="Tool Integration">Save-time Compilation</a></p>
 <h3 id="how-to-quick-fix-multiple-problems-at-the-same-time">How to 'Quick Fix' multiple problems at the same time?</h3>
 <p>Quick Fixes are a really useful Sigasi Studio feature to resolve common problems. By default you apply a Quick Fix to one problem at a time.</p>
-<p>Although the procedure is not very elegant, there is a way to apply multiple Quick Fixes at the same time.</p>
+<p>Although the procedure is not very elegant, there is a way to apply multiple Quick Fixes at the same time. Note that this procedure is currently only supported for missing signal declarations.</p>
 <p>Procedure:</p>
 <ol>
 <li>Select all problems you want to fix in the problems view</li>
@@ -2488,7 +2488,7 @@ We have not had good results with FreeHDL or with Green Mountain VHDL. It seems 
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2017-11-20 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2017-11-21 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
