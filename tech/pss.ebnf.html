@@ -3,7 +3,7 @@
 	<!--// OPEN HEAD //-->
 	<head>
 		<!--// SITE TITLE //-->
-		<title>VITAL - Sigasi</title>
+		<title>PSS Early Adopter (EA) Portable Test and Stimulus Standard - Sigasi</title>
 		<!--// SITE META //-->
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -24,14 +24,14 @@
 			}
 		</script>
 		<!-- This site is optimized with the Yoast SEO plugin v3.0.6 - https://yoast.com/wordpress/plugins/seo/ -->
-		<link rel="canonical" href="http://insights.sigasi.com//tag/vital/" />
+		<link rel="canonical" href="http://insights.sigasi.com//tech/pss.ebnf.html" />
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="VITAL - Sigasi" />
-		<meta property="og:url" content="http://insights.sigasi.com//tag/vital/" />
+		<meta property="og:title" content="PSS Early Adopter (EA) Portable Test and Stimulus Standard - Sigasi" />
+		<meta property="og:url" content="http://insights.sigasi.com//tech/pss.ebnf.html" />
 		<meta property="og:site_name" content="Sigasi" />
 		<meta name="twitter:card" content="summary"/>
-		<meta name="twitter:title" content="VITAL - Sigasi"/>
+		<meta name="twitter:title" content="PSS Early Adopter (EA) Portable Test and Stimulus Standard - Sigasi"/>
 		<!-- / Yoast SEO plugin. -->
 		<link rel='stylesheet' id='wgs-css'  href='/css/wgs.css?ver=4.3.2' type='text/css' media='all' />
 		<link rel='stylesheet' id='ls-google-fonts-css'  href='https://fonts.googleapis.com/css?family=Lato:100,300,regular,700,900%7COpen+Sans:300%7CIndie+Flower:regular%7COswald:300,regular,700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
@@ -1598,7 +1598,7 @@
 					<li class="menu-item menu-item-type-post_type menu-item-object-page ">
 					<a href="/screencasts/">Screencasts</a>
 					</li>
-					<li class="menu-item menu-item-type-post_type menu-item-object-page ">
+					<li class="menu-item menu-item-type-post_type menu-item-object-page active">
 					<a href="/tech/">Tech Articles</a>
 					</li>
 					<li class="menu-item menu-item-type-post_type menu-item-object-page ">
@@ -1744,7 +1744,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 <div class="page-heading page-heading-hidden clearfix">
 	<div class="container">
 		<div class="heading-text">
-			<h1 class="entry-title" >VITAL</h1>
+			<h1 class="entry-title" >PSS Early Adopter (EA) Portable Test and Stimulus Standard</h1>
 		</div>
 	</div>
 </div>
@@ -1932,7 +1932,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 			</li>
 			<li>
 				<a href="/screencasts/">Screencasts</a></li>
-			<li>
+			<li class="active">
 				<a href="/tech/">Tech Articles</a></li>
 			<li>
 				<a href="/opinion/">Opinion</a></li>
@@ -1949,33 +1949,716 @@ Insights<span style="color:#f47920">.</span>							</p>
 									<div class="spb_content_element col-sm-12 spb_raw_html">
 										<div class="spb-asset-content">
 
-
-    <section class="container">
-      <div class="row">
-        <div class="spb_content_element col-sm-12 spb_text_column">
-          <div class="spb-asset-content" style="padding-top:0%;padding-bottom:0%;padding-left:0%;padding-right:0%;text-align: center;">
-<h1>Articles about : VITAL</h1>
-          </div>
-        </div>
-      </div>
-    </section>
+<div class="container">
+  <div class="page-header">
+    <div>
+        <h1 style="margin-bottom: 0px;margin-top: 30px;">PSS Early Adopter (EA) Portable Test and Stimulus Standard</h1>
+    </div>
 
     <div style="margin: 10px 0 10px">
+        <span>
+            Posted on 2017&#8209;12&#8209;03
+            by Sigasi
+        </span>
+        </br>
+
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="content">
+      <div class="col-md-9" role="main">
+        <p><em>
+Copyright © 2017 Accellera. All rights reserved.
+This is an unapproved Accellera Standards Draft, subject to change.</p>
+<p>Get the full Language Reference Manual, free of charge, at <a href="http://www.accellera.org/images/downloads/drafts-review/PSS_Early_Adopter_Release.pdf">http://www.accellera.org/images/downloads/drafts-review/PSS_Early_Adopter_Release.pdf</a></p>
+<p>Sigasi has created this browsable version of the grammar, hoping that it would be useful to you, but without any warranty whatsoever.</p>
+<p><a href="/tag/ebnf/" title="ebnf">More browsable grammars of Hardware Description and Verification languages</a>.
+</em>  </p>
+<h3 id="formal-syntax">Formal syntax</h3>
+<dl class="dl-horizontal">
+<dt><em>The PSS formal syntax is described using Backus-Naur Form (BNF). The syntax of the PSS source is derived from the starting symbol Model. If there is a conflict between a grammar element shown anywhere in this Standard and the material in this annex, the material shown in this annex shall take precedence.  </em></dt>
+<dt><strong id="Model">Model</strong></dt>
+<dd>{ <a href="#portable_stimulus_description">portable_stimulus_description</a>  }  </dd>
+<dt><strong id="portable_stimulus_description">portable_stimulus_description</strong></dt>
+<dd><a href="#package_body_item">package_body_item</a> <br />
+    | <a href="#package_declaration">package_declaration</a> <br />
+    | <a href="#component_declaration">component_declaration</a> </dd>
+</dl>
+<h3 id="b1-package-declarations">B.1 Package declarations</h3>
+<dl class="dl-horizontal">
+<dt><strong id="package_declaration">package_declaration</strong></dt>
+<dd><font color="purple"><b>package</b></font> <a href="#package_identifier">package_identifier</a> <font color="purple"><b>{</b></font>  { <a href="#package_body_item">package_body_item</a>  }  <font color="purple"><b>}</b></font>  [ <font color="purple"><b>;</b></font>  ]  </dd>
+<dt><strong id="package_body_item">package_body_item</strong></dt>
+<dd><a href="#abstract_action_declaration">abstract_action_declaration</a> <br />
+    | <a href="#struct_declaration">struct_declaration</a> <br />
+    | <a href="#enum_declaration">enum_declaration</a> <br />
+    | <a href="#coverspec_declaration">coverspec_declaration</a> <br />
+    | <a href="#import_method_decl">import_method_decl</a> <br />
+    | <a href="#import_class_decl">import_class_decl</a> <br />
+    | <a href="#import_method_qualifiers">import_method_qualifiers</a> <br />
+    | <a href="#export_action">export_action</a> <br />
+    | <a href="#typedef_declaration">typedef_declaration</a> <br />
+    | <a href="#bins_declaration">bins_declaration</a> <br />
+    | <a href="#import_stmt">import_stmt</a> <br />
+    | <a href="#extend_stmt">extend_stmt</a> </dd>
+<dt><strong id="import_stmt">import_stmt</strong></dt>
+<dd><font color="purple"><b>import</b></font> <a href="#package_import_pattern">package_import_pattern</a> <font color="purple"><b>;</b></font> </dd>
+<dt><strong id="package_import_pattern">package_import_pattern</strong></dt>
+<dd><a href="#type_identifier">type_identifier</a>  [ <font color="purple"><b>:: *</b></font>  ]  </dd>
+<dt><strong id="extend_stmt">extend_stmt</strong></dt>
+<dd><font color="purple"><b>extend</b></font> <font color="purple"><b>action</b></font> <a href="#type_identifier">type_identifier</a> <font color="purple"><b>{</b></font>  { <a href="#action_body_item">action_body_item</a>  }  <font color="purple"><b>}</b></font>  [ <font color="purple"><b>;</b></font>  ]  <br />
+    | <font color="purple"><b>extend</b></font> <font color="purple"><b>struct</b></font> <a href="#type_identifier">type_identifier</a> <font color="purple"><b>{</b></font>  { <a href="#struct_body_item">struct_body_item</a>  }  <font color="purple"><b>}</b></font>  [ <font color="purple"><b>;</b></font>  ]  <br />
+    | <font color="purple"><b>extend</b></font> <font color="purple"><b>enum</b></font> <a href="#type_identifier">type_identifier</a>  {  [ <a href="#enum_item">enum_item</a>  { <font color="purple"><b>,</b></font> <a href="#enum_item">enum_item</a>  }   ]   }   [ <font color="purple"><b>;</b></font>  ]  <br />
+    | <font color="purple"><b>extend</b></font> <font color="purple"><b>component</b></font> <a href="#type_identifier">type_identifier</a> <font color="purple"><b>{</b></font>  { <a href="#component_body_item">component_body_item</a>  }  <font color="purple"><b>}</b></font>  [ <font color="purple"><b>;</b></font>  ]  </dd>
+</dl>
+<h3 id="b2-action-declarations">B.2 Action declarations</h3>
+<dl class="dl-horizontal">
+<dt><strong id="action_declaration">action_declaration</strong></dt>
+<dd><font color="purple"><b>action</b></font> <a href="#action_identifier">action_identifier</a>  [ <a href="#action_super_spec">action_super_spec</a>  ]  <font color="purple"><b>{</b></font>  { <a href="#action_body_item">action_body_item</a>  }  <font color="purple"><b>}</b></font>  [ <font color="purple"><b>;</b></font>  ]  </dd>
+<dt><strong id="abstract_action_declaration">abstract_action_declaration</strong></dt>
+<dd><font color="purple"><b>abstract</b></font> <font color="purple"><b>action</b></font> <a href="#action_identifier">action_identifier</a>  [ <a href="#action_super_spec">action_super_spec</a>  ]  <font color="purple"><b>{</b></font>  { <a href="#action_body_item">action_body_item</a>  }  <font color="purple"><b>}</b></font>  [ <font color="purple"><b>;</b></font>  ]  </dd>
+<dt><strong id="action_super_spec">action_super_spec</strong></dt>
+<dd><font color="purple"><b>:</b></font> <a href="#type_identifier">type_identifier</a> </dd>
+<dt><strong id="action_body_item">action_body_item</strong></dt>
+<dd><a href="#activity_declaration">activity_declaration</a> <br />
+    | <a href="#overrides_declaration">overrides_declaration</a> <br />
+    | <a href="#constraint_declaration">constraint_declaration</a> <br />
+    | <a href="#action_field_declaration">action_field_declaration</a> <br />
+    | <a href="#bins_declaration">bins_declaration</a> <br />
+    | <a href="#symbol_declaration">symbol_declaration</a> <br />
+    | <a href="#coverspec_declaration">coverspec_declaration</a> <br />
+    | <a href="#exec_block_stmt">exec_block_stmt</a> </dd>
+<dt><strong id="activity_declaration">activity_declaration</strong></dt>
+<dd><font color="purple"><b>activity</b></font> <font color="purple"><b>{</b></font>  {  [ <a href="#identifier">identifier</a> <font color="purple"><b>:</b></font>  ]  <a href="#activity_stmt">activity_stmt</a>  }  <font color="purple"><b>}</b></font>  [ <font color="purple"><b>;</b></font>  ]  </dd>
+<dt><strong id="action_field_declaration">action_field_declaration</strong></dt>
+<dd>[ <a href="#action_field_modifier">action_field_modifier</a>  ]  <a href="#action_data_declaration">action_data_declaration</a> </dd>
+<dt><strong id="action_field_modifier">action_field_modifier</strong></dt>
+<dd><font color="purple"><b>rand</b></font> <br />
+    | <a href="#io_direction">io_direction</a> <br />
+    | <font color="purple"><b>lock</b></font> <br />
+    | <font color="purple"><b>share</b></font> <br />
+    | <font color="purple"><b>action</b></font> </dd>
+<dt><strong id="io_direction">io_direction</strong></dt>
+<dd><font color="purple"><b>input</b></font> <br />
+    | <font color="purple"><b>output</b></font> </dd>
+<dt><em> Exec blocks </em></dt>
+<dt><strong id="exec_block_stmt">exec_block_stmt</strong></dt>
+<dd><a href="#exec_block">exec_block</a> <br />
+    | <a href="#target_code_exec_block">target_code_exec_block</a> <br />
+    | <a href="#target_file_exec_block">target_file_exec_block</a> </dd>
+<dt><strong id="exec_block">exec_block</strong></dt>
+<dd><font color="purple"><b>exec</b></font> <a href="#exec_kind_identifier">exec_kind_identifier</a> <font color="purple"><b>{</b></font>  { <a href="#exec_body_stmt">exec_body_stmt</a>  }  <font color="purple"><b>}</b></font> </dd>
+<dt><strong id="exec_kind_identifier">exec_kind_identifier</strong></dt>
+<dd><font color="purple"><b>pre_solve</b></font> <br />
+    | <font color="purple"><b>post_solve</b></font> <br />
+    | <font color="purple"><b>body</b></font> <br />
+    | <font color="purple"><b>header</b></font> <br />
+    | <font color="purple"><b>declaration</b></font> <br />
+    | <font color="purple"><b>run_start</b></font> <br />
+    | <font color="purple"><b>run_end</b></font> <br />
+    | <font color="purple"><b>init</b></font> </dd>
+<dt><strong id="exec_body_stmt">exec_body_stmt</strong></dt>
+<dd><a href="#expression">expression</a>  [ <a href="#assign_op">assign_op</a> <a href="#expression">expression</a>  ]  <font color="purple"><b>;</b></font> </dd>
+<dt><strong id="assign_op">assign_op</strong></dt>
+<dd><font color="purple"><b>=</b></font> <br />
+    | <font color="purple"><b>+=</b></font> <br />
+    | <font color="purple"><b>-=</b></font> <br />
+    | <font color="purple"><b>&lt;&lt;=</b></font> <br />
+    | <font color="purple"><b>&gt;&gt;=</b></font> <br />
+    | <font color="purple"><b>|=</b></font> <br />
+    | <font color="purple"><b>&amp;=</b></font> </dd>
+<dt><strong id="target_code_exec_block">target_code_exec_block</strong></dt>
+<dd><font color="purple"><b>exec</b></font> <a href="#exec_kind_identifier">exec_kind_identifier</a> <a href="#language_identifier">language_identifier</a> <font color="purple"><b>=</b></font> <a href="#string">string</a> <font color="purple"><b>;</b></font> </dd>
+<dt><strong id="target_file_exec_block">target_file_exec_block</strong></dt>
+<dd><font color="purple"><b>exec</b></font> <font color="purple"><b>file</b></font> <a href="#filename_string">filename_string</a> <font color="purple"><b>=</b></font> <a href="#string">string</a> <font color="purple"><b>;</b></font> </dd>
+</dl>
+<h3 id="b3-struct-declarations">B.3 Struct declarations</h3>
+<dl class="dl-horizontal">
+<dt><strong id="struct_declaration">struct_declaration</strong></dt>
+<dd><a href="#struct_type">struct_type</a> <a href="#identifier">identifier</a>  [ <font color="purple"><b>:</b></font> <a href="#struct_identifier">struct_identifier</a>  ]  <font color="purple"><b>{</b></font>  { <a href="#struct_body_item">struct_body_item</a>  }  <font color="purple"><b>}</b></font>  [ <font color="purple"><b>;</b></font>  ]  </dd>
+<dt><strong id="struct_type">struct_type</strong></dt>
+<dd><font color="purple"><b>struct</b></font> <br />
+    | <a href="#struct_qualifier">struct_qualifier</a> </dd>
+<dt><strong id="struct_qualifier">struct_qualifier</strong></dt>
+<dd><font color="purple"><b>buffer</b></font> <br />
+    | <font color="purple"><b>stream</b></font> <br />
+    | <font color="purple"><b>state</b></font> <br />
+    | <font color="purple"><b>resource</b></font> </dd>
+<dt><strong id="struct_body_item">struct_body_item</strong></dt>
+<dd><a href="#constraint_declaration">constraint_declaration</a> <br />
+    | <a href="#struct_field_declaration">struct_field_declaration</a> <br />
+    | <a href="#typedef_declaration">typedef_declaration</a> <br />
+    | <a href="#bins_declaration">bins_declaration</a> <br />
+    | <a href="#coverspec_declaration">coverspec_declaration</a> <br />
+    | <a href="#exec_block_stmt">exec_block_stmt</a> </dd>
+<dt><strong id="struct_field_declaration">struct_field_declaration</strong></dt>
+<dd>[ <a href="#struct_field_modifier">struct_field_modifier</a>  ]  <a href="#data_declaration">data_declaration</a> </dd>
+<dt><strong id="struct_field_modifier">struct_field_modifier</strong></dt>
+<dd><font color="purple"><b>rand</b></font> </dd>
+</dl>
+<h3 id="b4-procedural-interface-pi">B.4 Procedural interface (PI)</h3>
+<dl class="dl-horizontal">
+<dt><strong id="import_method_decl">import_method_decl</strong></dt>
+<dd><font color="purple"><b>import</b></font> <a href="#method_prototype">method_prototype</a> </dd>
+<dt><strong id="method_prototype">method_prototype</strong></dt>
+<dd><a href="#method_return_type">method_return_type</a> <a href="#method_identifier">method_identifier</a> <a href="#method_parameter_list_prototype">method_parameter_list_prototype</a> </dd>
+<dt><strong id="method_return_type">method_return_type</strong></dt>
+<dd><font color="purple"><b>void</b></font> <br />
+    | <a href="#data_type">data_type</a> </dd>
+<dt><strong id="method_parameter_list_prototype">method_parameter_list_prototype</strong></dt>
+<dd><font color="purple"><b>(</b></font>  [ <a href="#method_parameter">method_parameter</a>  { <font color="purple"><b>,</b></font> <a href="#method_parameter">method_parameter</a>  }   ]  <font color="purple"><b>)</b></font> </dd>
+<dt><strong id="method_parameter">method_parameter</strong></dt>
+<dd>[ <a href="#method_parameter_dir">method_parameter_dir</a>  ]  <a href="#data_type">data_type</a> <a href="#identifier">identifier</a> </dd>
+<dt><strong id="method_parameter_dir">method_parameter_dir</strong></dt>
+<dd><font color="purple"><b>input</b></font> <br />
+    | <font color="purple"><b>output</b></font> <br />
+    | <font color="purple"><b>inout</b></font> </dd>
+<dt><strong id="import_method_qualifiers">import_method_qualifiers</strong></dt>
+<dd><a href="#import_method_phase_qualifiers">import_method_phase_qualifiers</a> <br />
+    | <a href="#import_method_target_template">import_method_target_template</a> </dd>
+<dt><strong id="import_method_phase_qualifiers">import_method_phase_qualifiers</strong></dt>
+<dd><font color="purple"><b>import</b></font> <a href="#import_function_qualifiers">import_function_qualifiers</a> <a href="#type_identifier">type_identifier</a> <font color="purple"><b>;</b></font> </dd>
+<dt><strong id="import_function_qualifiers">import_function_qualifiers</strong></dt>
+<dd><a href="#method_qualifiers">method_qualifiers</a>  [ <a href="#language_identifier">language_identifier</a>  ]  <br />
+    | <a href="#language_identifier">language_identifier</a> </dd>
+<dt><strong id="method_qualifiers">method_qualifiers</strong></dt>
+<dd><font color="purple"><b>target</b></font> <br />
+    | <font color="purple"><b>solve</b></font> </dd>
+<dt><strong id="import_method_target_template">import_method_target_template</strong></dt>
+<dd><font color="purple"><b>import</b></font> <a href="#language_identifier">language_identifier</a> <a href="#method_prototype">method_prototype</a> <font color="purple"><b>=</b></font> <a href="#string">string</a> <font color="purple"><b>;</b></font> </dd>
+<dt><strong id="method_parameter_list">method_parameter_list</strong></dt>
+<dd><font color="purple"><b>(</b></font>  [ <a href="#expression">expression</a>  { <font color="purple"><b>,</b></font> <a href="#expression">expression</a>  }   ]  <font color="purple"><b>)</b></font> </dd>
+</dl>
+<h4 id="b41-import-class-declaration">B.4.1 Import class declaration</h4>
+<dl class="dl-horizontal">
+<dt><strong id="import_class_decl">import_class_decl</strong></dt>
+<dd><font color="purple"><b>import</b></font> <font color="purple"><b>class</b></font> <a href="#import_class_identifier">import_class_identifier</a>  [ <a href="#import_class_extends">import_class_extends</a>  ]  <font color="purple"><b>{</b></font>  { <a href="#import_class_method_decl">import_class_method_decl</a>  }  <font color="purple"><b>}</b></font>  [ <font color="purple"><b>;</b></font>  ]  </dd>
+<dt><strong id="import_class_extends">import_class_extends</strong></dt>
+<dd><font color="purple"><b>:</b></font> <a href="#type_identifier">type_identifier</a>  { <font color="purple"><b>,</b></font> <a href="#type_identifier">type_identifier</a>  }  </dd>
+<dt><strong id="import_class_method_decl">import_class_method_decl</strong></dt>
+<dd><a href="#method_prototype">method_prototype</a> <font color="purple"><b>;</b></font> </dd>
+</dl>
+<h4 id="b42-export-action">B.4.2 Export action</h4>
+<dl class="dl-horizontal">
+<dt><strong id="export_action">export_action</strong></dt>
+<dd><font color="purple"><b>export</b></font>  [ <a href="#method_qualifiers">method_qualifiers</a>  ]  <a href="#action_type_identifier">action_type_identifier</a> <a href="#method_parameter_list_prototype">method_parameter_list_prototype</a> <font color="purple"><b>;</b></font> </dd>
+</dl>
+<h3 id="b5-component-declarations">B.5 Component declarations</h3>
+<dl class="dl-horizontal">
+<dt><strong id="component_declaration">component_declaration</strong></dt>
+<dd><font color="purple"><b>component</b></font> <a href="#component_identifier">component_identifier</a>  [ <font color="purple"><b>:</b></font> <a href="#component_super_spec">component_super_spec</a>  ]  <font color="purple"><b>{</b></font>  { <a href="#component_body_item">component_body_item</a>  }  <font color="purple"><b>}</b></font>  [ <font color="purple"><b>;</b></font>  ]  </dd>
+<dt><strong id="component_super_spec">component_super_spec</strong></dt>
+<dd><font color="purple"><b>:</b></font> <a href="#type_identifier">type_identifier</a> </dd>
+<dt><strong id="component_body_item">component_body_item</strong></dt>
+<dd><a href="#overrides_declaration">overrides_declaration</a> <br />
+    | <a href="#component_field_declaration">component_field_declaration</a> <br />
+    | <a href="#action_declaration">action_declaration</a> <br />
+    | <a href="#object_bind_stmt">object_bind_stmt</a> <br />
+    | <a href="#inline_type_object_declaration">inline_type_object_declaration</a> <br />
+    | <a href="#exec_block">exec_block</a> <br />
+    | <a href="#package_body_item">package_body_item</a> </dd>
+<dt><strong id="component_field_declaration">component_field_declaration</strong></dt>
+<dd><a href="#component_data_declaration">component_data_declaration</a> <br />
+    | <a href="#component_pool_declaration">component_pool_declaration</a> </dd>
+<dt><strong id="component_data_declaration">component_data_declaration</strong></dt>
+<dd><a href="#data_declaration">data_declaration</a> </dd>
+<dt><strong id="component_pool_declaration">component_pool_declaration</strong></dt>
+<dd><font color="purple"><b>pool</b></font>  [ <font color="purple"><b>[</b></font> <a href="#expression">expression</a> <font color="purple"><b>]</b></font>  ]  <a href="#type_identifier">type_identifier</a> <a href="#identifier">identifier</a> <font color="purple"><b>;</b></font> </dd>
+<dt><strong id="object_bind_stmt">object_bind_stmt</strong></dt>
+<dd><font color="purple"><b>bind</b></font> <a href="#hierarchical_id">hierarchical_id</a> <a href="#object_bind_item_or_list">object_bind_item_or_list</a> <font color="purple"><b>;</b></font> </dd>
+<dt><strong id="object_bind_item_or_list">object_bind_item_or_list</strong></dt>
+<dd><a href="#component_path">component_path</a> <br />
+    | <font color="purple"><b>{</b></font> <a href="#component_path">component_path</a>  { <font color="purple"><b>,</b></font> <a href="#component_path">component_path</a>  }  <font color="purple"><b>}</b></font> </dd>
+<dt><strong id="component_path">component_path</strong></dt>
+<dd><a href="#component_identifier">component_identifier</a>  { <font color="purple"><b>.</b></font> <a href="#component_path_elem">component_path_elem</a>  }  <br />
+    | <font color="purple"><b>*</b></font> </dd>
+<dt><strong id="component_path_elem">component_path_elem</strong></dt>
+<dd><a href="#component_action_identifier">component_action_identifier</a> <br />
+    | <font color="purple"><b>*</b></font> </dd>
+<dt><strong id="inline_type_object_declaration">inline_type_object_declaration</strong></dt>
+<dd><font color="purple"><b>pool</b></font>  [ <font color="purple"><b>[</b></font> <a href="#expression">expression</a> <font color="purple"><b>]</b></font>  ]  <a href="#struct_qualifier">struct_qualifier</a> <font color="purple"><b>struct</b></font> <a href="#identifier">identifier</a>  [ <font color="purple"><b>:</b></font> <a href="#struct_identifier">struct_identifier</a>  ]  <font color="purple"><b>{</b></font>  { <a href="#struct_body_item">struct_body_item</a>  }  <font color="purple"><b>}</b></font>  [ <font color="purple"><b>;</b></font>  ]  </dd>
+</dl>
+<h3 id="b6-activity-statements">B.6 Activity statements</h3>
+<dl class="dl-horizontal">
+<dt><strong id="activity_stmt">activity_stmt</strong></dt>
+<dd><a href="#activity_if_else_stmt">activity_if_else_stmt</a> <br />
+    | <a href="#activity_repeat_stmt">activity_repeat_stmt</a> <br />
+    | <a href="#activity_constraint_stmt">activity_constraint_stmt</a> <br />
+    | <a href="#activity_foreach_stmt">activity_foreach_stmt</a> <br />
+    | <a href="#activity_action_traversal_stmt">activity_action_traversal_stmt</a> <br />
+    | <a href="#activity_sequence_block_stmt">activity_sequence_block_stmt</a> <br />
+    | <a href="#activity_select_stmt">activity_select_stmt</a> <br />
+    | <a href="#activity_parallel_stmt">activity_parallel_stmt</a> <br />
+    | <a href="#activity_schedule_stmt">activity_schedule_stmt</a> <br />
+    | <a href="#activity_bind_stmt">activity_bind_stmt</a> </dd>
+<dt><strong id="activity_if_else_stmt">activity_if_else_stmt</strong></dt>
+<dd><font color="purple"><b>if</b></font> <font color="purple"><b>(</b></font> <a href="#expression">expression</a> <font color="purple"><b>)</b></font> <a href="#activity_stmt">activity_stmt</a>  [ <font color="purple"><b>else</b></font> <a href="#activity_stmt">activity_stmt</a>  ]  </dd>
+<dt><strong id="activity_repeat_stmt">activity_repeat_stmt</strong></dt>
+<dd><font color="purple"><b>repeat</b></font> <font color="purple"><b>while</b></font> <font color="purple"><b>(</b></font> <a href="#expression">expression</a> <font color="purple"><b>)</b></font> <a href="#activity_sequence_block_stmt">activity_sequence_block_stmt</a> <br />
+    | <font color="purple"><b>repeat</b></font> <font color="purple"><b>(</b></font>  [ <a href="#identifier">identifier</a> <font color="purple"><b>:</b></font>  ]  <a href="#expression">expression</a> <font color="purple"><b>)</b></font> <a href="#activity_sequence_block_stmt">activity_sequence_block_stmt</a> <br />
+    | <font color="purple"><b>repeat</b></font> <a href="#activity_sequence_block_stmt">activity_sequence_block_stmt</a>  [ <font color="purple"><b>while</b></font> <font color="purple"><b>(</b></font> <a href="#expression">expression</a> <font color="purple"><b>)</b></font> <font color="purple"><b>;</b></font>  ]  </dd>
+<dt><strong id="activity_sequence_block_stmt">activity_sequence_block_stmt</strong></dt>
+<dd>[ <font color="purple"><b>sequence</b></font>  ]  <font color="purple"><b>{</b></font>  { <a href="#activity_labeled_stmt">activity_labeled_stmt</a>  }  <font color="purple"><b>}</b></font> </dd>
+<dt><strong id="activity_constraint_stmt">activity_constraint_stmt</strong></dt>
+<dd><a href="#constraint">constraint</a> <font color="purple"><b>{</b></font>  { <a href="#constraint_body_item">constraint_body_item</a>  }  <font color="purple"><b>}</b></font> <br />
+    | <a href="#single_stmt_constraint">single_stmt_constraint</a> </dd>
+<dt><strong id="activity_foreach_stmt">activity_foreach_stmt</strong></dt>
+<dd><font color="purple"><b>foreach</b></font> <font color="purple"><b>(</b></font> <a href="#expression">expression</a> <font color="purple"><b>)</b></font> <a href="#activity_sequence_block_stmt">activity_sequence_block_stmt</a> </dd>
+<dt><strong id="activity_action_traversal_stmt">activity_action_traversal_stmt</strong></dt>
+<dd><a href="#identifier">identifier</a>  [ <a href="#inline_with_constraint">inline_with_constraint</a>  ]  <br />
+    | <font color="purple"><b>do</b></font> <a href="#type_identifier">type_identifier</a>  [ <a href="#inline_with_constraint">inline_with_constraint</a>  ]  <font color="purple"><b>;</b></font> </dd>
+<dt><strong id="inline_with_constraint">inline_with_constraint</strong></dt>
+<dd><font color="purple"><b>with</b></font> <font color="purple"><b>{</b></font>  { <a href="#constraint_body_item">constraint_body_item</a>  }  <font color="purple"><b>}</b></font> <br />
+    | <a href="#constant_expression">constant_expression</a> </dd>
+<dt><strong id="activity_select_stmt">activity_select_stmt</strong></dt>
+<dd><font color="purple"><b>select</b></font> <font color="purple"><b>{</b></font> <a href="#activity_labeled_stmt">activity_labeled_stmt</a> <a href="#activity_labeled_stmt">activity_labeled_stmt</a>  { <a href="#activity_labeled_stmt">activity_labeled_stmt</a>  }  <font color="purple"><b>}</b></font> </dd>
+<dt><strong id="activity_labeled_stmt">activity_labeled_stmt</strong></dt>
+<dd>[ <a href="#identifier">identifier</a> <font color="purple"><b>:</b></font>  ]  <a href="#activity_stmt">activity_stmt</a> </dd>
+<dt><strong id="activity_parallel_stmt">activity_parallel_stmt</strong></dt>
+<dd><font color="purple"><b>parallel</b></font> <font color="purple"><b>{</b></font>  { <a href="#activity_labeled_stmt">activity_labeled_stmt</a>  }  <font color="purple"><b>}</b></font>  [ <font color="purple"><b>;</b></font>  ]  </dd>
+<dt><strong id="activity_schedule_stmt">activity_schedule_stmt</strong></dt>
+<dd><font color="purple"><b>schedule</b></font> <font color="purple"><b>{</b></font>  { <a href="#activity_labeled_stmt">activity_labeled_stmt</a>  }  <font color="purple"><b>}</b></font>  [ <font color="purple"><b>;</b></font>  ]  </dd>
+<dt><strong id="activity_bind_stmt">activity_bind_stmt</strong></dt>
+<dd><font color="purple"><b>bind</b></font> <a href="#hierarchical_id">hierarchical_id</a> <a href="#activity_bind_item_or_list">activity_bind_item_or_list</a> <font color="purple"><b>;</b></font> </dd>
+<dt><strong id="activity_bind_item_or_list">activity_bind_item_or_list</strong></dt>
+<dd><a href="#hierarchical_id">hierarchical_id</a> <br />
+    | <font color="purple"><b>{</b></font> <a href="#hierarchical_id">hierarchical_id</a>  { <font color="purple"><b>,</b></font> <a href="#hierarchical_id">hierarchical_id</a>  }  <font color="purple"><b>}</b></font> </dd>
+<dt><strong id="symbol_declaration">symbol_declaration</strong></dt>
+<dd><font color="purple"><b>symbol</b></font> <a href="#identifier">identifier</a>  [ <font color="purple"><b>(</b></font> <a href="#symbol_paramlist">symbol_paramlist</a> <font color="purple"><b>)</b></font>  ]  <font color="purple"><b>=</b></font> <a href="#activity_stmt">activity_stmt</a> </dd>
+<dt><strong id="symbol_paramlist">symbol_paramlist</strong></dt>
+<dd>[ <a href="#symbol_param">symbol_param</a>  { <font color="purple"><b>,</b></font> <a href="#symbol_param">symbol_param</a>  }   ]  </dd>
+<dt><strong id="symbol_param">symbol_param</strong></dt>
+<dd><a href="#data_type">data_type</a> <a href="#identifier">identifier</a> </dd>
+</dl>
+<h3 id="b7-overrides">B.7 Overrides</h3>
+<dl class="dl-horizontal">
+<dt><strong id="overrides_declaration">overrides_declaration</strong></dt>
+<dd><font color="purple"><b>override</b></font> <font color="purple"><b>{</b></font>  { <a href="#override_stmt">override_stmt</a>  }  <font color="purple"><b>}</b></font> </dd>
+<dt><strong id="override_stmt">override_stmt</strong></dt>
+<dd><a href="#type_override">type_override</a> <br />
+    | <a href="#instance_override">instance_override</a> </dd>
+<dt><strong id="type_override">type_override</strong></dt>
+<dd><a href="#type">type</a> <a href="#identifier">identifier</a> <font color="purple"><b>with</b></font> <a href="#type_identifier">type_identifier</a> <font color="purple"><b>;</b></font> </dd>
+<dt><strong id="instance_override">instance_override</strong></dt>
+<dd><font color="purple"><b>instance</b></font> <a href="#hierarchical_id">hierarchical_id</a> <font color="purple"><b>with</b></font> <a href="#identifier">identifier</a> <font color="purple"><b>;</b></font> </dd>
+</dl>
+<h3 id="b8-data-declarations">B.8 Data declarations</h3>
+<dl class="dl-horizontal">
+<dt><strong id="data_declaration">data_declaration</strong></dt>
+<dd><a href="#data_type">data_type</a> <a href="#data_instantiation">data_instantiation</a>  { <font color="purple"><b>,</b></font> <a href="#data_instantiation">data_instantiation</a>  }  </dd>
+<dt><strong id="action_data_declaration">action_data_declaration</strong></dt>
+<dd><a href="#action_data_type">action_data_type</a> <a href="#data_instantiation">data_instantiation</a>  { <font color="purple"><b>,</b></font> <a href="#data_instantiation">data_instantiation</a>  }  <font color="purple"><b>;</b></font> </dd>
+<dt><strong id="data_instantiation">data_instantiation</strong></dt>
+<dd><a href="#identifier">identifier</a>  [ <font color="purple"><b>(</b></font> <a href="#coverspec_portmap_list">coverspec_portmap_list</a> <font color="purple"><b>)</b></font>  ]   [ <a href="#array_dim">array_dim</a>  ]   [ <font color="purple"><b>=</b></font> <a href="#constant_expression">constant_expression</a>  ]  </dd>
+<dt><strong id="coverspec_portmap_list">coverspec_portmap_list</strong></dt>
+<dd>[ <a href="#coverspec_portmap">coverspec_portmap</a>  { <font color="purple"><b>,</b></font> <a href="#coverspec_portmap">coverspec_portmap</a>  }  <br />
+     | <a href="#hierarchical_id">hierarchical_id</a>  { <font color="purple"><b>,</b></font> <a href="#hierarchical_id">hierarchical_id</a>  }   ]  </dd>
+<dt><strong id="coverspec_portmap">coverspec_portmap</strong></dt>
+<dd><font color="purple"><b>.</b></font> <a href="#identifier">identifier</a> <font color="purple"><b>(</b></font> <a href="#hierarchical_id">hierarchical_id</a> <font color="purple"><b>)</b></font> </dd>
+<dt><strong id="array_dim">array_dim</strong></dt>
+<dd>[ <a href="#constant_expression">constant_expression</a>  ]  </dd>
+</dl>
+<h3 id="b9-data-types">B.9 Data types</h3>
+<dl class="dl-horizontal">
+<dt><strong id="data_type">data_type</strong></dt>
+<dd><a href="#scalar_data_type">scalar_data_type</a> <br />
+    | <a href="#user_defined_datatype">user_defined_datatype</a> </dd>
+<dt><strong id="action_data_type">action_data_type</strong></dt>
+<dd><a href="#scalar_data_type">scalar_data_type</a> <br />
+    | <a href="#user_defined_datatype">user_defined_datatype</a> <br />
+    | <a href="#action_type">action_type</a> </dd>
+<dt><strong id="scalar_data_type">scalar_data_type</strong></dt>
+<dd><a href="#chandle_type">chandle_type</a> <br />
+    | <a href="#integer_type">integer_type</a> <br />
+    | <a href="#string_type">string_type</a> <br />
+    | <a href="#bool_type">bool_type</a> </dd>
+<dt><strong id="chandle_type">chandle_type</strong></dt>
+<dd><font color="purple"><b>chandle</b></font> </dd>
+<dt><strong id="integer_type">integer_type</strong></dt>
+<dd><a href="#integer_atom_type">integer_atom_type</a>  [ <font color="purple"><b>[</b></font> <a href="#expression">expression</a>  [ <font color="purple"><b>:</b></font> <a href="#expression">expression</a> <br />
+      | <font color="purple"><b>,</b></font> <a href="#open_range_value">open_range_value</a>  { <font color="purple"><b>,</b></font> <a href="#open_range_value">open_range_value</a>  }  <br />
+      | <font color="purple"><b>..</b></font> <a href="#expression">expression</a>  { <font color="purple"><b>,</b></font> <a href="#open_range_value">open_range_value</a>  }   ]  <font color="purple"><b>]</b></font>  ]  </dd>
+<dt><strong id="integer_atom_type">integer_atom_type</strong></dt>
+<dd><font color="purple"><b>int</b></font> <br />
+    | <font color="purple"><b>bit</b></font> </dd>
+<dt><strong id="open_range_value">open_range_value</strong></dt>
+<dd><a href="#expression">expression</a>  [ <font color="purple"><b>..</b></font> <a href="#expression">expression</a>  ]  </dd>
+<dt><strong id="open_range_list">open_range_list</strong></dt>
+<dd><a href="#open_range_value">open_range_value</a>  { <font color="purple"><b>,</b></font> <a href="#open_range_value">open_range_value</a>  }  </dd>
+<dt><strong id="string_type">string_type</strong></dt>
+<dd><font color="purple"><b>string</b></font> </dd>
+<dt><strong id="bool_type">bool_type</strong></dt>
+<dd><font color="purple"><b>bool</b></font> </dd>
+<dt><strong id="user_defined_datatype">user_defined_datatype</strong></dt>
+<dd><a href="#type_identifier">type_identifier</a> </dd>
+<dt><strong id="action_type">action_type</strong></dt>
+<dd><a href="#type_identifier">type_identifier</a> </dd>
+<dt><strong id="struct_type">struct_type</strong></dt>
+<dd><a href="#type_identifier">type_identifier</a> </dd>
+<dt><strong id="enum_type">enum_type</strong></dt>
+<dd><a href="#type_identifier">type_identifier</a> </dd>
+<dt><strong id="enum_declaration">enum_declaration</strong></dt>
+<dd><font color="purple"><b>enum</b></font> <a href="#enum_identifier">enum_identifier</a>  {  [ <a href="#enum_item">enum_item</a>  { <font color="purple"><b>,</b></font> <a href="#enum_item">enum_item</a>  }   ]   }   [ <font color="purple"><b>;</b></font>  ]  </dd>
+<dt><strong id="enum_item">enum_item</strong></dt>
+<dd><a href="#identifier">identifier</a>  [ <font color="purple"><b>=</b></font> <a href="#constant_expression">constant_expression</a>  ]  </dd>
+<dt><strong id="typedef_type">typedef_type</strong></dt>
+<dd><a href="#type_identifier">type_identifier</a> </dd>
+<dt><strong id="typedef_declaration">typedef_declaration</strong></dt>
+<dd><font color="purple"><b>typedef</b></font> <a href="#data_type">data_type</a> <a href="#identifier">identifier</a> <font color="purple"><b>;</b></font> </dd>
+</dl>
+<h3 id="b10-constraint">B.10 Constraint</h3>
+<dl class="dl-horizontal">
+<dt><strong id="constraint_declaration">constraint_declaration</strong></dt>
+<dd>[ <font color="purple"><b>dynamic</b></font>  ]  <font color="purple"><b>constraint</b></font> <a href="#identifier">identifier</a> <font color="purple"><b>{</b></font>  { <a href="#constraint_body_item">constraint_body_item</a>  }  <font color="purple"><b>}</b></font> <br />
+    | <font color="purple"><b>constraint</b></font> <font color="purple"><b>{</b></font>  { <a href="#constraint_body_item">constraint_body_item</a>  }  <font color="purple"><b>}</b></font> <br />
+    | <font color="purple"><b>constraint</b></font> <a href="#single_stmt_constraint">single_stmt_constraint</a> </dd>
+<dt><strong id="constraint_body_item">constraint_body_item</strong></dt>
+<dd><a href="#expression_constraint_item">expression_constraint_item</a> <br />
+    | <a href="#foreach_constraint_item">foreach_constraint_item</a> <br />
+    | <a href="#if_constraint_item">if_constraint_item</a> <br />
+    | <a href="#unique_constraint_item">unique_constraint_item</a> </dd>
+<dt><strong id="expression_constraint_item">expression_constraint_item</strong></dt>
+<dd><a href="#expression">expression</a> <a href="#implicand_constraint_item">implicand_constraint_item</a> <br />
+    | <font color="purple"><b>;</b></font> </dd>
+<dt><strong id="implicand_constraint_item">implicand_constraint_item</strong></dt>
+<dd><font color="purple"><b>-&gt;</b></font> <a href="#constraint_set">constraint_set</a> </dd>
+<dt><strong id="constraint_set">constraint_set</strong></dt>
+<dd><a href="#constraint_body_item">constraint_body_item</a> <br />
+    | <a href="#constraint_block">constraint_block</a> </dd>
+<dt><strong id="constraint_block">constraint_block</strong></dt>
+<dd><font color="purple"><b>{</b></font>  { <a href="#constraint_body_item">constraint_body_item</a>  }  <font color="purple"><b>}</b></font> </dd>
+<dt><strong id="foreach_constraint_item">foreach_constraint_item</strong></dt>
+<dd><font color="purple"><b>foreach</b></font> <font color="purple"><b>(</b></font> <a href="#expression">expression</a> <font color="purple"><b>)</b></font> <a href="#constraint_set">constraint_set</a> </dd>
+<dt><strong id="if_constraint_item">if_constraint_item</strong></dt>
+<dd><font color="purple"><b>if</b></font> <font color="purple"><b>(</b></font> <a href="#expression">expression</a> <font color="purple"><b>)</b></font> <a href="#constraint_set">constraint_set</a>  [ <font color="purple"><b>else</b></font> <a href="#constraint_set">constraint_set</a>  ]  </dd>
+<dt><strong id="unique_constraint_item">unique_constraint_item</strong></dt>
+<dd><font color="purple"><b>unique</b></font> <font color="purple"><b>{</b></font> <a href="#hierarchical_id">hierarchical_id</a>  { <font color="purple"><b>,</b></font> <a href="#hierarchical_id">hierarchical_id</a>  }  <font color="purple"><b>}</b></font> <font color="purple"><b>;</b></font> </dd>
+<dt><strong id="single_stmt_constraint">single_stmt_constraint</strong></dt>
+<dd><a href="#expression_constraint_item">expression_constraint_item</a> <br />
+    | <a href="#unique_constraint_item">unique_constraint_item</a> </dd>
+<dt><strong id="scheduling_constraint">scheduling_constraint</strong></dt>
+<dd><font color="purple"><b>constraint</b></font> <font color="purple"><b>(</b></font> <font color="purple"><b>parallel</b></font> <br />
+    | <font color="purple"><b>sequence</b></font> <font color="purple"><b>)</b></font> <font color="purple"><b>{</b></font> <a href="#hierarchical_id">hierarchical_id</a> <font color="purple"><b>,</b></font> <a href="#hierarchical_id">hierarchical_id</a>  { <font color="purple"><b>,</b></font> <a href="#hierarchical_id">hierarchical_id</a>  }  <font color="purple"><b>}</b></font> <font color="purple"><b>;</b></font> </dd>
+</dl>
+<h3 id="b11-coverspec">B.11 Coverspec</h3>
+<dl class="dl-horizontal">
+<dt><strong id="coverspec_declaration">coverspec_declaration</strong></dt>
+<dd><font color="purple"><b>coverspec</b></font> <a href="#identifier">identifier</a> <font color="purple"><b>(</b></font> <a href="#coverspec_port">coverspec_port</a>  { <font color="purple"><b>,</b></font> <a href="#coverspec_port">coverspec_port</a>  }  <font color="purple"><b>)</b></font> <font color="purple"><b>{</b></font>  { <a href="#coverspec_body_item">coverspec_body_item</a>  }  <font color="purple"><b>}</b></font>  [ <font color="purple"><b>;</b></font>  ]  </dd>
+<dt><strong id="coverspec_port">coverspec_port</strong></dt>
+<dd><a href="#data_type">data_type</a> <a href="#identifier">identifier</a> </dd>
+<dt><strong id="coverspec_body_item">coverspec_body_item</strong></dt>
+<dd><a href="#coverspec_option">coverspec_option</a> <br />
+    | <a href="#coverspec_coverpoint">coverspec_coverpoint</a> <br />
+    | <a href="#coverspec_cross">coverspec_cross</a> <br />
+    | <a href="#constraint_declaration">constraint_declaration</a> </dd>
+<dt><strong id="coverspec_option">coverspec_option</strong></dt>
+<dd><a href="#option">option</a> <font color="purple"><b>.</b></font> <a href="#identifier">identifier</a> <font color="purple"><b>=</b></font> <a href="#constant_expression">constant_expression</a> <font color="purple"><b>;</b></font> </dd>
+<dt><strong id="coverspec_coverpoint">coverspec_coverpoint</strong></dt>
+<dd><a href="#coverpoint_identifier">coverpoint_identifier</a> <font color="purple"><b>:</b></font> <font color="purple"><b>coverpoint</b></font> <a href="#coverpoint_target_identifier">coverpoint_target_identifier</a> <font color="purple"><b>{</b></font>  { <a href="#coverspec_coverpoint_body_item">coverspec_coverpoint_body_item</a>  }  <font color="purple"><b>}</b></font>  [ <font color="purple"><b>;</b></font>  ]  <br />
+    | <font color="purple"><b>;</b></font> </dd>
+<dt><strong id="coverspec_coverpoint_body_item">coverspec_coverpoint_body_item</strong></dt>
+<dd><a href="#coverspec_option">coverspec_option</a> <br />
+    | <a href="#coverspec_coverpoint_binspec">coverspec_coverpoint_binspec</a> <br />
+    | <a href="#ignore_constraint">ignore_constraint</a> <br />
+    | <a href="#illegal_constraint">illegal_constraint</a> </dd>
+<dt><strong id="coverspec_coverpoint_binspec">coverspec_coverpoint_binspec</strong></dt>
+<dd><font color="purple"><b>bins</b></font> <a href="#identifier">identifier</a> <a href="#bin_specification">bin_specification</a> <br />
+    | <a href="#hierarchical_id">hierarchical_id</a> <font color="purple"><b>;</b></font> </dd>
+<dt><strong id="ignore_constraint">ignore_constraint</strong></dt>
+<dd><font color="purple"><b>ignore</b></font> <a href="#expression">expression</a> </dd>
+<dt><strong id="illegal_constraint">illegal_constraint</strong></dt>
+<dd><font color="purple"><b>illegal</b></font> <a href="#expression">expression</a> <font color="purple"><b>;</b></font> </dd>
+<dt><strong id="coverspec_cross">coverspec_cross</strong></dt>
+<dd><a href="#ID">ID</a> <font color="purple"><b>:</b></font> <font color="purple"><b>cross</b></font> <a href="#coverpoint_identifier">coverpoint_identifier</a>  { <font color="purple"><b>,</b></font> <a href="#coverpoint_identifier">coverpoint_identifier</a>  }  <font color="purple"><b>{</b></font>  { <a href="#coverspec_cross_body_item">coverspec_cross_body_item</a>  }  <font color="purple"><b>}</b></font> <br />
+    | <font color="purple"><b>;</b></font> </dd>
+<dt><strong id="coverspec_cross_body_item">coverspec_cross_body_item</strong></dt>
+<dd><a href="#coverspec_option">coverspec_option</a> <br />
+    | <a href="#ignore_constraint">ignore_constraint</a> <br />
+    | <a href="#illegal_constraint">illegal_constraint</a> </dd>
+<dt><em> Bins </em></dt>
+<dt><strong id="bins_declaration">bins_declaration</strong></dt>
+<dd><font color="purple"><b>bins</b></font> <a href="#identifier">identifier</a>  [ <a href="#variable_identifier">variable_identifier</a>  ]  <a href="#bin_specification">bin_specification</a> <font color="purple"><b>;</b></font> </dd>
+<dt><strong id="bin_specification">bin_specification</strong></dt>
+<dd><a href="#bin_specifier">bin_specifier</a>  { <a href="#bin_specifier">bin_specifier</a>  }   [ <a href="#bin_wildcard">bin_wildcard</a>  ]  </dd>
+<dt><strong id="bin_specifier">bin_specifier</strong></dt>
+<dd><a href="#explicit_bin_value">explicit_bin_value</a> <br />
+    | <a href="#explicit_bin_range">explicit_bin_range</a> <br />
+    | <a href="#bin_range_divide">bin_range_divide</a> <br />
+    | <a href="#bin_range_size">bin_range_size</a> </dd>
+<dt><strong id="explicit_bin_value">explicit_bin_value</strong></dt>
+<dd>[ <a href="#constant">constant</a>  ]  </dd>
+<dt><strong id="explicit_bin_range">explicit_bin_range</strong></dt>
+<dd>[ <a href="#constant">constant</a> <font color="purple"><b>..</b></font> <a href="#constant">constant</a>  ]  </dd>
+<dt><strong id="bin_range_divide">bin_range_divide</strong></dt>
+<dd><a href="#explicit_bin_range">explicit_bin_range</a> <font color="purple"><b>/</b></font> <a href="#constant">constant</a> </dd>
+<dt><strong id="bin_range_size">bin_range_size</strong></dt>
+<dd><a href="#explicit_bin_range">explicit_bin_range</a> <font color="purple"><b>:</b></font> <a href="#constant">constant</a> </dd>
+<dt><strong id="bin_wildcard">bin_wildcard</strong></dt>
+<dd>[ <font color="purple"><b>*</b></font>  ]  </dd>
+</dl>
+<h3 id="b12-expression">B.12 Expression</h3>
+<dl class="dl-horizontal">
+<dt><strong id="constant_expression">constant_expression</strong></dt>
+<dd><a href="#expression">expression</a> </dd>
+<dt><strong id="expression">expression</strong></dt>
+<dd><a href="#condition_expr">condition_expr</a> </dd>
+<dt><strong id="condition_expr">condition_expr</strong></dt>
+<dd><a href="#logical_or_expr">logical_or_expr</a>  { <font color="purple"><b>?</b></font> <a href="#logical_or_expr">logical_or_expr</a> <font color="purple"><b>:</b></font> <a href="#logical_or_expr">logical_or_expr</a>  }  </dd>
+<dt><strong id="logical_or_expr">logical_or_expr</strong></dt>
+<dd><a href="#logical_and_expr">logical_and_expr</a>  { <font color="purple"><b>||</b></font> <a href="#logical_and_expr">logical_and_expr</a>  }  </dd>
+<dt><strong id="logical_and_expr">logical_and_expr</strong></dt>
+<dd><a href="#binary_or_expr">binary_or_expr</a>  { <font color="purple"><b>&amp;&amp;</b></font> <a href="#binary_or_expr">binary_or_expr</a>  }  </dd>
+<dt><strong id="binary_or_expr">binary_or_expr</strong></dt>
+<dd><a href="#binary_xor_expr">binary_xor_expr</a>  { <font color="purple"><b>|</b></font> <a href="#binary_xor_expr">binary_xor_expr</a>  }  </dd>
+<dt><strong id="binary_xor_expr">binary_xor_expr</strong></dt>
+<dd><a href="#binary_and_expr">binary_and_expr</a>  { <font color="purple"><b>^</b></font> <a href="#binary_and_expr">binary_and_expr</a>  }  </dd>
+<dt><strong id="binary_and_expr">binary_and_expr</strong></dt>
+<dd><a href="#logical_equality_expr">logical_equality_expr</a>  { <font color="purple"><b>&amp;</b></font> <a href="#logical_equality_expr">logical_equality_expr</a>  }  </dd>
+<dt><strong id="logical_equality_expr">logical_equality_expr</strong></dt>
+<dd><a href="#logical_inequality_expr">logical_inequality_expr</a>  { <a href="#eq_neq_op">eq_neq_op</a> <a href="#logical_inequality_expr">logical_inequality_expr</a>  }  </dd>
+<dt><strong id="logical_inequality_expr">logical_inequality_expr</strong></dt>
+<dd><a href="#binary_shift_expr">binary_shift_expr</a>  { <font color="purple"><b>&lt;</b></font> <br />
+     | <font color="purple"><b>&lt;=</b></font> <br />
+     | <font color="purple"><b>&gt;</b></font> <br />
+     | <font color="purple"><b>&gt;=</b></font> <a href="#binary_shift_expr">binary_shift_expr</a> <br />
+     | <font color="purple"><b>inside</b></font>  [ <a href="#open_range_list">open_range_list</a>  ]   }  </dd>
+<dt><strong id="binary_shift_expr">binary_shift_expr</strong></dt>
+<dd><a href="#binary_add_sub_expr">binary_add_sub_expr</a>  { <a href="#shift_op">shift_op</a> <a href="#binary_add_sub_expr">binary_add_sub_expr</a>  }  </dd>
+<dt><strong id="binary_add_sub_expr">binary_add_sub_expr</strong></dt>
+<dd><a href="#binary_mul_div_mod_expr">binary_mul_div_mod_expr</a>  { <a href="#add_sub_op">add_sub_op</a> <a href="#binary_mul_div_mod_expr">binary_mul_div_mod_expr</a>  }  </dd>
+<dt><strong id="binary_mul_div_mod_expr">binary_mul_div_mod_expr</strong></dt>
+<dd><a href="#binary_exp_expr">binary_exp_expr</a>  { <a href="#mul_div_mod_op">mul_div_mod_op</a> <a href="#binary_exp_expr">binary_exp_expr</a>  }  </dd>
+<dt><strong id="binary_exp_expr">binary_exp_expr</strong></dt>
+<dd><a href="#unary_expr">unary_expr</a>  { <font color="purple"><b>**</b></font> <a href="#unary_expr">unary_expr</a>  }  </dd>
+<dt><strong id="unary_expr">unary_expr</strong></dt>
+<dd>[ <a href="#unary_op">unary_op</a>  ]  <a href="#primary">primary</a> </dd>
+<dt><strong id="unary_op">unary_op</strong></dt>
+<dd><font color="purple"><b>+</b></font> <br />
+    | <font color="purple"><b>-</b></font> <br />
+    | <font color="purple"><b>!</b></font> <br />
+    | <font color="purple"><b>~</b></font> <br />
+    | <font color="purple"><b>&amp;</b></font> <br />
+    | <font color="purple"><b>|</b></font> <br />
+    | <font color="purple"><b>^</b></font> </dd>
+<dt><strong id="primary">primary</strong></dt>
+<dd><a href="#number">number</a> <br />
+    | <a href="#bool_literal">bool_literal</a> <br />
+    | <a href="#paren_expr">paren_expr</a> <br />
+    | <a href="#string">string</a> <br />
+    | <a href="#variable_ref">variable_ref</a> <br />
+    | <a href="#method_function_call">method_function_call</a> </dd>
+<dt><strong id="paren_expr">paren_expr</strong></dt>
+<dd><font color="purple"><b>(</b></font> <a href="#expression">expression</a> <font color="purple"><b>)</b></font> </dd>
+<dt><strong id="variable_ref">variable_ref</strong></dt>
+<dd><a href="#hierarchical_id">hierarchical_id</a>  [ <font color="purple"><b>[</b></font> <a href="#expression">expression</a>  [ <font color="purple"><b>:</b></font> <a href="#expression">expression</a> <font color="purple"><b>]</b></font>  ]   ]  </dd>
+<dt><strong id="method_function_call">method_function_call</strong></dt>
+<dd><a href="#method_call">method_call</a> <br />
+    | <a href="#function_call">function_call</a> </dd>
+<dt><strong id="method_call">method_call</strong></dt>
+<dd><a href="#hierarchical_id">hierarchical_id</a> <a href="#method_parameter_list">method_parameter_list</a> </dd>
+<dt><strong id="function_call">function_call</strong></dt>
+<dd><a href="#ID">ID</a>  [ <font color="purple"><b>::</b></font> <a href="#ID">ID</a>  [ <font color="purple"><b>::</b></font> <a href="#ID">ID</a>  ]   ]  <a href="#method_parameter_list">method_parameter_list</a> </dd>
+<dt><strong id="mul_div_mod_op">mul_div_mod_op</strong></dt>
+<dd><font color="purple"><b>*</b></font> <br />
+    | <font color="purple"><b>/</b></font> <br />
+    | <font color="purple"><b>%</b></font> </dd>
+<dt><strong id="add_sub_op">add_sub_op</strong></dt>
+<dd><font color="purple"><b>+</b></font> <br />
+    | <font color="purple"><b>-</b></font> </dd>
+<dt><strong id="shift_op">shift_op</strong></dt>
+<dd><font color="purple"><b>&lt;&lt;</b></font> <br />
+    | <font color="purple"><b>&gt;&gt;</b></font> </dd>
+<dt><strong id="eq_neq_op">eq_neq_op</strong></dt>
+<dd><font color="purple"><b>==</b></font> <br />
+    | <font color="purple"><b>!=</b></font> </dd>
+</dl>
+<h3 id="b13-identifiers-and-literals">B.13 Identifiers and literals</h3>
+<dl class="dl-horizontal">
+<dt><strong id="constant">constant</strong></dt>
+<dd><a href="#number">number</a> <br />
+    | <a href="#identifier">identifier</a> </dd>
+<dt><strong id="identifier">identifier</strong></dt>
+<dd><a href="#ID">ID</a> <br />
+    | <a href="#ESCAPED_ID">ESCAPED_ID</a> </dd>
+<dt><strong id="hierarchical_id">hierarchical_id</strong></dt>
+<dd><a href="#identifier">identifier</a>  { <font color="purple"><b>.</b></font> <a href="#identifier">identifier</a>  }  </dd>
+<dt><strong id="action_type_identifier">action_type_identifier</strong></dt>
+<dd><a href="#type_identifier">type_identifier</a> </dd>
+<dt><strong id="type_identifier">type_identifier</strong></dt>
+<dd><a href="#ID">ID</a>  { <font color="purple"><b>::</b></font> <a href="#ID">ID</a>  }  </dd>
+<dt><strong id="hierarchical_type_identifier">hierarchical_type_identifier</strong></dt>
+<dd><a href="#ID">ID</a> <font color="purple"><b>::</b></font> <a href="#ID">ID</a>  { <font color="purple"><b>::</b></font> <a href="#ID">ID</a>  }  </dd>
+<dt><strong id="package_identifier">package_identifier</strong></dt>
+<dd><a href="#hierarchical_id">hierarchical_id</a> </dd>
+<dt><strong id="coverpoint_target_identifier">coverpoint_target_identifier</strong></dt>
+<dd><a href="#hierarchical_id">hierarchical_id</a> </dd>
+<dt><strong id="action_identifier">action_identifier</strong></dt>
+<dd><a href="#identifier">identifier</a> </dd>
+<dt><strong id="struct_identifier">struct_identifier</strong></dt>
+<dd><a href="#identifier">identifier</a> </dd>
+<dt><strong id="component_identifier">component_identifier</strong></dt>
+<dd><a href="#identifier">identifier</a> </dd>
+<dt><strong id="component_action_identifier">component_action_identifier</strong></dt>
+<dd><a href="#identifier">identifier</a> </dd>
+<dt><strong id="coverpoint_identifier">coverpoint_identifier</strong></dt>
+<dd><a href="#identifier">identifier</a> </dd>
+<dt><strong id="enum_identifier">enum_identifier</strong></dt>
+<dd><a href="#identifier">identifier</a> </dd>
+<dt><strong id="import_class_identifier">import_class_identifier</strong></dt>
+<dd><a href="#identifier">identifier</a> </dd>
+<dt><strong id="language_identifier">language_identifier</strong></dt>
+<dd><a href="#identifier">identifier</a> </dd>
+<dt><strong id="method_identifier">method_identifier</strong></dt>
+<dd><a href="#identifier">identifier</a> </dd>
+<dt><strong id="pool_identifier">pool_identifier</strong></dt>
+<dd><a href="#identifier">identifier</a> </dd>
+<dt><strong id="variable_identifier">variable_identifier</strong></dt>
+<dd><a href="#identifier">identifier</a> </dd>
+<dt><strong id="bin_identifier">bin_identifier</strong></dt>
+<dd><a href="#identifier">identifier</a> </dd>
+<dt><strong id="exec_kind_identifier">exec_kind_identifier</strong></dt>
+<dd><a href="#identifier">identifier</a> </dd>
+<dt><strong id="filename_string">filename_string</strong></dt>
+<dd><a href="#DOUBLE_QUOTED_STRING">DOUBLE_QUOTED_STRING</a> </dd>
+<dt><strong id="bool_literal">bool_literal</strong></dt>
+<dd><font color="purple"><b>true</b></font> <br />
+    | <font color="purple"><b>false</b></font> </dd>
+</dl>
+<h3 id="b14-numbers">B.14 Numbers</h3>
+<dl class="dl-horizontal">
+<dt><strong id="number">number</strong></dt>
+<dd><a href="#based_hex_number">based_hex_number</a> <br />
+    | <a href="#based_dec_number">based_dec_number</a> <br />
+    | <a href="#based_bin_number">based_bin_number</a> <br />
+    | <a href="#based_oct_number">based_oct_number</a> <br />
+    | <a href="#dec_number">dec_number</a> <br />
+    | <a href="#oct_number">oct_number</a> <br />
+    | <a href="#hex_number">hex_number</a> </dd>
+<dt><strong id="based_hex_number">based_hex_number</strong></dt>
+<dd>[ <a href="#DEC_LITERAL">DEC_LITERAL</a>  ]  <a href="#BASED_HEX_LITERAL">BASED_HEX_LITERAL</a> </dd>
+<dt><strong id="DEC_LITERAL">DEC_LITERAL</strong></dt>
+<dd>[ <em>1-9</em> ]   {  [ <em>0-9</em> ]  <br />
+     | <font color="purple"><b>_</b></font>  }  </dd>
+<dt><strong id="BASED_HEX_LITERAL">BASED_HEX_LITERAL</strong></dt>
+<dd><font color="purple"><b>'</b></font>  [ <em>s|S</em> ]  <em>h|H</em> [ <em>0-9</em> ]  <br />
+    |  [ <em>a-f</em> ]  <br />
+    |  [ <em>A-F</em> ]   {  [ <em>0-9</em> ]  <br />
+     |  [ <em>a-f</em> ]  <br />
+     |  [ <em>A-F</em> ]  <br />
+     | <font color="purple"><b>_</b></font>  }  </dd>
+<dt><strong id="based_dec_number">based_dec_number</strong></dt>
+<dd>[ <a href="#DEC_LITERAL">DEC_LITERAL</a>  ]  <a href="#BASED_DEC_LITERAL">BASED_DEC_LITERAL</a> </dd>
+<dt><strong id="BASED_DEC_LITERAL">BASED_DEC_LITERAL</strong></dt>
+<dd>[ <em>s|S</em> ]  <em>d|D</em> [ <em>0-9</em> ]   {  [ <em>0-9</em> ]  <br />
+     | <font color="purple"><b>_</b></font>  }  </dd>
+<dt><strong id="based_bin_number">based_bin_number</strong></dt>
+<dd>[ <a href="#DEC_LITERAL">DEC_LITERAL</a>  ]  <a href="#BASED_BIN_LITERAL">BASED_BIN_LITERAL</a> </dd>
+<dt><strong id="BASED_BIN_LITERAL">BASED_BIN_LITERAL</strong></dt>
+<dd><font color="purple"><b>'</b></font>  [ <em>s|S</em> ]  <em>b|B</em> [ <em>0-1</em> ]   {  [ <em>0-1</em> ]  <br />
+     | <font color="purple"><b>_</b></font>  }  </dd>
+<dt><strong id="based_oct_number">based_oct_number</strong></dt>
+<dd>[ <a href="#DEC_LITERAL">DEC_LITERAL</a>  ]  <a href="#BASED_OCT_LITERAL">BASED_OCT_LITERAL</a> </dd>
+<dt><strong id="BASED_OCT_LITERAL">BASED_OCT_LITERAL</strong></dt>
+<dd><font color="purple"><b>'</b></font>  [ <em>s|S</em> ]  <em>o|O</em> [ <em>0-7</em> ]   {  [ <em>0-7</em> ]  <br />
+     | <font color="purple"><b>_</b></font>  }  </dd>
+<dt><strong id="dec_number">dec_number</strong></dt>
+<dd><a href="#DEC_LITERAL">DEC_LITERAL</a> </dd>
+<dt><strong id="oct_number">oct_number</strong></dt>
+<dd><a href="#OCT_LITERAL">OCT_LITERAL</a> </dd>
+<dt><strong id="OCT_LITERAL">OCT_LITERAL</strong></dt>
+<dd><font color="purple"><b>0</b></font>  [ <em>0-7</em> ]  </dd>
+<dt><strong id="hex_number">hex_number</strong></dt>
+<dd><a href="#HEX_LITERAL">HEX_LITERAL</a> </dd>
+<dt><strong id="HEX_LITERAL">HEX_LITERAL</strong></dt>
+<dd><em>0x</em> [ <em>0-9</em> ]  <br />
+    |  [ <em>a-f</em> ]  <br />
+    |  [ <em>A-F</em> ]   {  [ <em>0-9</em> ]  <br />
+     |  [ <em>a-f</em> ]  <br />
+     |  [ <em>A-F</em> ]  <br />
+     | <font color="purple"><b>_</b></font>  }  </dd>
+</dl>
+<h3 id="b15-comments">B.15 Comments</h3>
+<dl class="dl-horizontal">
+<dt><strong id="SL_COMMENT">SL_COMMENT</strong></dt>
+<dd><font color="purple"><b>//</b></font> <em>{any_ASCII_character_except_newline}\n</em></dd>
+<dt><strong id="ML_COMMENT">ML_COMMENT</strong></dt>
+<dd><font color="purple"><b>/*</b></font>  { <em>any_ASCII_character</em> }  <font color="purple"><b>*/</b></font> </dd>
+<dt><strong id="string">string</strong></dt>
+<dd><a href="#DOUBLE_QUOTED_STRING">DOUBLE_QUOTED_STRING</a> <br />
+    | <a href="#TRIPLE_DOUBLE_QUOTED_STRING">TRIPLE_DOUBLE_QUOTED_STRING</a> </dd>
+<dt><strong id="DOUBLE_QUOTED_STRING">DOUBLE_QUOTED_STRING</strong></dt>
+<dd><font color="purple"><b>"</b></font>  { <em>|!|"</em> }  <font color="purple"><b>"</b></font> </dd>
+<dt><strong id="TRIPLE_DOUBLE_QUOTED_STRING">TRIPLE_DOUBLE_QUOTED_STRING</strong></dt>
+<dd><font color="purple"><b>"""</b></font>  { <em>any_ASCII_character</em> }  <font color="purple"><b>"""</b></font> </dd>
+<dt><strong id="ID">ID</strong></dt>
+<dd>[ <em>a-z</em> ]  <br />
+    |  [ <em>A-Z</em> ]  <br />
+    | <em>_</em> {  [ <em>a-z</em> ]  <br />
+     |  [ <em>A-Z</em> ]  <br />
+     | <em>_</em><br />
+     |  [ <em>0-9</em> ]   }  </dd>
+<dt><strong id="ESCAPED_ID">ESCAPED_ID</strong></dt>
+<dd><font color="purple"><b>\</b></font>  { <em>any_ASCII_character_except_whitespace</em> }  <em>whitespace</em></dd>
+</dl>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+var disqus_shortname = 'sigasi';
+var disqus_developer = 1;
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>      </div>
     </div>
 
-<div class="container">
-    
-    <div class="row">
-      <div class="col-md-offset-0 col-md-6" >
-      </div>
-      <div class="col-md-offset-0 col-md-6" >
-        <p style="margin-bottom: 10px"><a href="/tech/how-can-i-use-the-ieee-vital-libraries-with-sigasi-pro.html" title="How can I use the IEEE Vital libraries with Sigasi Pro?">How can I use the IEEE Vital libraries with Sigasi...</a>
-          <small>2011&#8209;11&#8209;11</small>
-        </p>
-      </div>
-    </div>
+    <div class="col-md-3" role="complementary">
+      <nav class="hidden-print hidden-xs hidden-sm">
+        <div class="sidebar" data-spy="affix" data-offset-top="510" >
+          <div class="well">
+            <a href="#"><strong>PSS Early Adopter (EA) Portable Test and Stimulus Standard</strong></a>
+            <div class="toc">
+<ul>
+<li><a href="#formal-syntax">Formal syntax</a></li>
+<li><a href="#b1-package-declarations">B.1 Package declarations</a></li>
+<li><a href="#b2-action-declarations">B.2 Action declarations</a></li>
+<li><a href="#b3-struct-declarations">B.3 Struct declarations</a></li>
+<li><a href="#b4-procedural-interface-pi">B.4 Procedural interface (PI)</a><ul>
+<li><a href="#b41-import-class-declaration">B.4.1 Import class declaration</a></li>
+<li><a href="#b42-export-action">B.4.2 Export action</a></li>
+</ul>
+</li>
+<li><a href="#b5-component-declarations">B.5 Component declarations</a></li>
+<li><a href="#b6-activity-statements">B.6 Activity statements</a></li>
+<li><a href="#b7-overrides">B.7 Overrides</a></li>
+<li><a href="#b8-data-declarations">B.8 Data declarations</a></li>
+<li><a href="#b9-data-types">B.9 Data types</a></li>
+<li><a href="#b10-constraint">B.10 Constraint</a></li>
+<li><a href="#b11-coverspec">B.11 Coverspec</a></li>
+<li><a href="#b12-expression">B.12 Expression</a></li>
+<li><a href="#b13-identifiers-and-literals">B.13 Identifiers and literals</a></li>
+<li><a href="#b14-numbers">B.14 Numbers</a></li>
+<li><a href="#b15-comments">B.15 Comments</a></li>
+</ul>
 </div>
 
+          </div>
+        </div>
+      </nav>
+    </div>
+
+  </div>
+
+  <ul class="pager">
+    <li class="next"><a href="/tech/wallpapers.html">Wallpapers for fans of Sigasi Studio &rarr;</a></li>
+  </ul>
+
+</div>
 
 										</div>
 									</div>
