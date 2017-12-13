@@ -2007,7 +2007,7 @@ in the design. Sigasi Studio’s VHDL linter checks for the following problems:<
 <li>Port, signal, variable, constant or generic declarations that are never read or written</li>
 <li>Invalid port associations (incompatible port modes in instantiations)</li>
 <li>Order of generic and port associations</li>
-<li>Consistent capitalization of identifiers <a href="#capitalization-of-identifiers">link</a></li>
+<li><a href="#capitalization-of-identifiers">Consistent capitalization of identifiers</a></li>
 <li>Advanced Configuration validation (component mismatch, missing binding, ...)</li>
 <li>Redundant boolean equality expressions (<code>boolean = true</code>)</li>
 </ul>
@@ -2045,33 +2045,33 @@ Errors/Warnings</strong>.</p>
 <h4 id="basic-vhdl-coding-rules">Basic VHDL coding rules</h4>
 <p><a href="/manual/editions.html#creator" title="[Needs Sigasi Studio Creator or XL license]">[Needs Sigasi Studio Creator or XL license]</a></p>
 <ul>
-<li>NULL_RANGE_ERROR <a href="#null-range">link</a></li>
-<li>DEPRECATED_PACKAGE <a href="#deprecated-ieee-packages-non-standard-packages">link</a>
+<li><a href="#null-range">NULL_RANGE_ERROR</a></li>
+<li><a href="#deprecated-ieee-packages-non-standard-packages">DEPRECATED_PACKAGE</a>
  <!--* REDUNDANT_CHOICES --></li>
-<li>REDUNDANT_OTHERS <a href="#redundant-others">link</a></li>
+<li><a href="#redundant-others">REDUNDANT_OTHERS</a></li>
 <li>Subprograms in packages (e.g. function body in a package, rather than in the package body)</li>
 <li>Infinite loops in simulations:<ul>
 <li>INFINTE_LOOP_STATEMENT</li>
 <li>PROCESS_WITHOUT_SENSITIVITY_AND_WAIT</li>
 </ul>
 </li>
-<li>NUMERIC_LITERAL_WHITESPACE_BEFORE_UNIT <a href="#space-physical-unit">link</a></li>
-<li>SUPERFLUOUS_LIBRARY <a href="#/manual/superfluous-library-clause">link</a>
+<li><a href="#space-physical-unit">NUMERIC_LITERAL_WHITESPACE_BEFORE_UNIT</a></li>
+<li><a href="#superfluous-library-clause">SUPERFLUOUS_LIBRARY</a>
  <!-- * MISSING_LIBRARY --></li>
-<li>UNUSED_DECLARATION: PORT, GENERIC, SIGNAL, ...  <a href="#dead-code-lint">link</a>
+<li><a href="#dead-code-lint">UNUSED_DECLARATION: PORT, GENERIC, SIGNAL, ... </a>
  <!--* BITSTRING_STD_LOGIC: invalid characters in bit string--></li>
-<li>SENSITIVITY_LIST <a href="#sensitivity-list">link</a></li>
+<li><a href="#sensitivity-list">SENSITIVITY_LIST</a></li>
 </ul>
 <h4 id="advanced-vhdl-coding-rules">Advanced VHDL coding rules</h4>
 <p><a href="/manual/editions.html#xl" title="[Only in Sigasi Studio XL]">[Only in Sigasi Studio XL]</a></p>
 <ul>
 <li>FSM_DEAD_STATE</li>
-<li>DEAD_CODE (unreachable statements) <a href="#dead-code">link</a></li>
+<li><a href="#dead-code">DEAD_CODE (unreachable statements)</a></li>
 <li>NEVER_WRITTEN / NEVER_READs</li>
 <li><a href="/manual/linting.html#naming-conventions" title="Linting and Quick Fixes">naming-conventions</a></li>
-<li>INCOMPLETE_ASSOCIATIVE_OPTIONAL <a href="#incomplete-port-maps-and-generic-maps">link</a></li>
-<li>POSITIONAL_ASSOCIATION_IN_INSTANTIATIONS <a href="#posititional-association-in-instantiations">link</a></li>
-<li>CASE_REFERENCES <a href="#capitalization-of-identifiers">link</a></li>
+<li><a href="#incomplete-port-maps-and-generic-maps">INCOMPLETE_ASSOCIATIVE_OPTIONAL</a></li>
+<li><a href="#posititional-association-in-instantiations">POSITIONAL_ASSOCIATION_IN_INSTANTIATIONS</a></li>
+<li><a href="#capitalization-of-identifiers">CASE_REFERENCES</a></li>
 <li>Check for component/entity mismatch</li>
 </ul>
 <h2 id="list-of-vhdl-code-rules">List of VHDL code rules</h2>
@@ -2174,7 +2174,7 @@ earlier saves time and lets you catch the problem early.</p>
 <li><strong>Superfluous signals in sensitivity list</strong></li>
 <li><strong>Duplicate signals in sensitivity list</strong></li>
 </ul>
-<h3 id="superfluous-library-clause">Superfluous Library Clause</h3>
+<h3 id="superfluous-library-clause" superfluous-library-clause="superfluous-library-clause">Superfluous Library Clause</h3>
 <p>The VHDL language reference manual states that:</p>
 <p><em>Every design unit except package STANDARD is assumed to contain the following implicit context items as part of its context clause:</em></p>
 <div class="codehilite"><pre><span></span>    <span class="k">library</span> <span class="nn">STD</span><span class="p">,</span> <span class="nn">WORK</span><span class="p">;</span>
@@ -2192,14 +2192,14 @@ warning.</p>
 <p>If the Sigasi Studio analyzer can determine that a condition is always false,
 it will mark the if-statement because it contains dead code.</p>
 <p><img alt="" src="images/unreachable_code.png" /></p>
-<h3 id="null-range-empty-range-nullrange">Null Range (empty range) (#nullRange)</h3>
+<h3 id="null-range">Null Range (empty range)</h3>
 <p>In VHDL, you can use ranges with <code>to</code> and <code>downto</code>. But, if you use the
 wrong direction, you get an empty range, which is usually not what you
 want: <code>7 downto 0</code> is a range of eight. <code>7 to 0</code> is an null range.
 We have a lint check that warns about this, even if you use constants
 (or some simple arithmetic).</p>
 <p><img alt="" src="images/nullrange.png" /></p>
-<h3 id="space-before-the-physical-unit">Space Before the Physical Unit</h3>
+<h3 id="space-physical-unit">Space Before the Physical Unit</h3>
 <p>If you type a numeric literal with a physical unit, there should be a
 space between the number and the unit.</p>
 <div class="codehilite"><pre><span></span>    <span class="n">T</span> <span class="o">:=</span> <span class="mi">25</span><span class="n">ns</span><span class="p">;</span> <span class="c1">-- ILLEGAL, but accepted by ModelSim</span>
@@ -2461,8 +2461,8 @@ You can override these setting by creating a settings file for your projects.</p
 </li>
 <li><a href="#superfluous-library-clause">Superfluous Library Clause</a></li>
 <li><a href="#dead-code-unreachable-code">Dead Code (unreachable code)</a></li>
-<li><a href="#null-range-empty-range-nullrange">Null Range (empty range) (#nullRange)</a></li>
-<li><a href="#space-before-the-physical-unit">Space Before the Physical Unit</a></li>
+<li><a href="#null-range">Null Range (empty range)</a></li>
+<li><a href="#space-physical-unit">Space Before the Physical Unit</a></li>
 <li><a href="#capitalization-of-identifiers">Capitalization of Identifiers</a></li>
 <li><a href="#naming-conventions">Naming Conventions</a></li>
 <li><a href="#vector-width-in-assignments-and-port-maps">Vector width in assignments and port maps</a></li>
@@ -2485,8 +2485,6 @@ You can override these setting by creating a settings file for your projects.</p
   </div>
 
   <ul class="pager">
-    <li class="previous"><a href="/manual/opening.html">&larr; Opening Files</a></li>
-    <li class="next"><a href="/manual/tools.html">Tool Integration &rarr;</a></li>
   </ul>
 
 </div>
