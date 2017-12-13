@@ -1812,6 +1812,9 @@ Insights<span style="color:#f47920">.</span>							</p>
 			<a href="/releasenotes/" class="dropdown-toggle" data-toggle="dropdown">Release Notes <b class="caret"></b></a>
 			<ul class="dropdown-menu">
 				<li>
+					<a href="/releasenotes/sigasi-3.07.html">Sigasi Studio 3.7</a>
+				</li>
+				<li>
 					<a href="/releasenotes/sigasi-3.06.html">Sigasi Studio 3.6</a>
 				</li>
 				<li>
@@ -1994,6 +1997,7 @@ in the design. Sigasi Studio’s VHDL linter checks for the following problems:<
 <li>Assignment validation</li>
 <li>Case statement validation</li>
 <li>Instantiation statement validation</li>
+<li>Component validation (Entity/Component mismatch)</li>
 <li>Library validation</li>
 <li>Range validation</li>
 <li>Deprecated and non-standard packages</li>
@@ -2029,6 +2033,7 @@ Quick Fix.</p>
 <li>Add missing signals to sensitivity list</li>
 <li>Fix capitalization of identifier to correspond to its declaration</li>
 <li>Match order of generic and port associations with declaration order</li>
+<li>Update component declaration when the entity declaration has changed</li>
 </ul>
 <h3 id="linting-severity-level">Configuring the Severity Level</h3>
 <p>The Sigasi Studio VHDL linter has reasonable defaults for the severity level of
@@ -2067,6 +2072,7 @@ Errors/Warnings</strong>.</p>
 <li>INCOMPLETE_ASSOCIATIVE_OPTIONAL <a href="#incomplete-port-maps-and-generic-maps">link</a></li>
 <li>POSITIONAL_ASSOCIATION_IN_INSTANTIATIONS <a href="#posititional-association-in-instantiations">link</a></li>
 <li>CASE_REFERENCES <a href="#capitalization-of-identifiers">link</a></li>
+<li>Check for component/entity mismatch</li>
 </ul>
 <h2 id="list-of-vhdl-code-rules">List of VHDL code rules</h2>
 <p>This is the list of VHDL coding rules that can be checked automatically
@@ -2226,6 +2232,9 @@ you would specify <code>.*_v</code> pattern in the <strong>Variable name</strong
 <h3 id="order-of-assocations">Order of assocations</h3>
 <p>Sigasi Studio gives a warning when the <strong>order</strong> of generics or ports in a <code>map</code> differs from the original generics or ports declaration order.</p>
 <p><img alt="" src="images/linting_vector_width.png" /></p>
+<h3 id="check-for-componententity-mismatch">Check for component/entity mismatch</h3>
+<p>Sigasi Studio gives a warning if a component declaration is not equal to its matching entity. You can easily fix this by applying the quick fix.</p>
+<p><img alt="" src="images/linting_component_entity.png" /></p>
 <h2 id="project-specific-linting-settings">Project specific Linting settings</h2>
 <p>The default way to configure the severity of the Sigasi Studio linting checks is to set their severity in the <strong>Errors/Warnings</strong> preference page.
 You can override these setting by creating a settings file for your projects.</p>
@@ -2404,6 +2413,18 @@ You can override these setting by creating a settings file for your projects.</p
 <td>177</td>
 <td>Order of generic and port associations</td>
 </tr>
+<tr>
+<td>185</td>
+<td>Redundant boolean equality check with true"</td>
+</tr>
+<tr>
+<td>186</td>
+<td>Boolean equality check with false</td>
+</tr>
+<tr>
+<td>187</td>
+<td>Check for component/entity mismatch"</td>
+</tr>
 </tbody>
 </table>
 
@@ -2446,6 +2467,7 @@ You can override these setting by creating a settings file for your projects.</p
 <li><a href="#naming-conventions">Naming Conventions</a></li>
 <li><a href="#vector-width-in-assignments-and-port-maps">Vector width in assignments and port maps</a></li>
 <li><a href="#order-of-assocations">Order of assocations</a></li>
+<li><a href="#check-for-componententity-mismatch">Check for component/entity mismatch</a></li>
 </ul>
 </li>
 <li><a href="#project-specific-linting-settings">Project specific Linting settings</a><ul>
@@ -2484,7 +2506,7 @@ You can override these setting by creating a settings file for your projects.</p
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2017-12-12 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2017-12-13 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
