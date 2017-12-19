@@ -2006,7 +2006,7 @@ in the design. Sigasi Studio’s VHDL linter checks for the following problems:<
 <li>Missing, unnecessary and duplicate signals in the sensitivity list</li>
 <li>Port, signal, variable, constant or generic declarations that are never read or written</li>
 <li>Invalid port associations (incompatible port modes in instantiations)</li>
-<li>Order of generic and port associations</li>
+<li><a href="#order-of-associations">Order of generic and port associations</a></li>
 <li><a href="#capitalization-of-identifiers">Consistent capitalization of identifiers</a></li>
 <li>Advanced Configuration validation (component mismatch, missing binding, ...)</li>
 <li>Redundant boolean equality expressions (<code>boolean = true</code>)</li>
@@ -2026,7 +2026,7 @@ Quick Fix.</p>
 <li>Switch to VHDL 2008 mode</li>
 <li>Correct signal/variable assignment operator</li>
 <li>Ignore deprecated libraries</li>
-<li>Configure Altera, Xilinx, ModelSim and VUnit libraries</li>
+<li><a href="#quick-fix-for-third-party-libraries">Configure Altera, Xilinx, ModelSim and VUnit libraries</a></li>
 <li>Declare missing enumeration literal in case statements</li>
 <li>Add missing when clause in case statements</li>
 <li>Correct attribute entity class in attribute specifications</li>
@@ -2046,7 +2046,7 @@ Errors/Warnings</strong>.</p>
 <p><a href="/manual/editions.html#creator" title="[Needs Sigasi Studio Creator or XL license]">[Needs Sigasi Studio Creator or XL license]</a></p>
 <ul>
 <li><a href="#null-range">NULL_RANGE_ERROR</a></li>
-<li><a href="#deprecated-ieee-packages-non-standard-packages">DEPRECATED_PACKAGE</a>
+<li><a href="#deprecated-ieee-packages-non-standard-packages">Deprecated Packages</a>
  <!--* REDUNDANT_CHOICES --></li>
 <li><a href="#redundant-others">REDUNDANT_OTHERS</a></li>
 <li>Subprograms in packages (e.g. function body in a package, rather than in the package body)</li>
@@ -2069,15 +2069,16 @@ Errors/Warnings</strong>.</p>
 <li><a href="#dead-code">DEAD_CODE (unreachable statements)</a></li>
 <li>NEVER_WRITTEN / NEVER_READs</li>
 <li><a href="/manual/linting.html#naming-conventions" title="Linting and Quick Fixes">naming-conventions</a></li>
-<li><a href="#incomplete-port-maps-and-generic-maps">INCOMPLETE_ASSOCIATIVE_OPTIONAL</a></li>
-<li><a href="#posititional-association-in-instantiations">POSITIONAL_ASSOCIATION_IN_INSTANTIATIONS</a></li>
-<li><a href="#capitalization-of-identifiers">CASE_REFERENCES</a></li>
-<li>Check for component/entity mismatch</li>
+<li><a href="#incomplete-port-maps-and-generic-maps">Incomplete Port Maps and Generic Maps</a></li>
+<li><a href="#posititional-association-in-instantiations">Posititional Association in Instantiations</a></li>
+<li><a href="#capitalization-of-identifiers">Capitalization of Identifiers</a></li>
+<li><a href="#vector-width">Vector width in assignments and port maps</a></li>
+<li><a href="#component-entity">Check for component/entity mismatch</a></li>
 </ul>
 <h2 id="list-of-vhdl-code-rules">List of VHDL code rules</h2>
 <p>This is the list of VHDL coding rules that can be checked automatically
 by Sigasi Studio.</p>
-<h3 id="dead-code">Dead Code lint</h3>
+<h3 id="dead-code-lint">Dead Code lint</h3>
 <p>Dead code is code that is does have any effect in your simulation or
 synthesis. Examples of dead code are signals that are never used, or
 conditions that are never triggered.</p>
@@ -2156,7 +2157,7 @@ hardware, the fallback state is the same as the reset state (for most
 synthesis tools). Check the manual of your synthesis tools and run some
 experiments.
 For more information, see <a href="/tech/vhdl-case-statements-can-do-without-others.html" title="VHDL case statements can do without the &quot;others&quot;">VHDL case statements can do without the "others"</a></p>
-<h4 id="sensitivity-list">Sensitivity List</h4>
+<h3 id="sensitivity-list">Sensitivity List</h3>
 <p>VHDL requires a sensitivity list for each process (or wait statements in
 the project).</p>
 <p>Since VHDL-2008, you can write <code>process (all)</code> to make sure you have all
@@ -2188,7 +2189,7 @@ anybody would type the use clause, but quite some people start all of
 their files with two extra library clauses. Sigasi Studio flags this as
 warning.</p>
 <p><img alt="" src="images/warn-superfluous-library.png" /></p>
-<h3 id="dead-code-unreachable-code">Dead Code (unreachable code)</h3>
+<h3 id="dead-code">Dead Code (unreachable code)</h3>
 <p>If the Sigasi Studio analyzer can determine that a condition is always false,
 it will mark the if-statement because it contains dead code.</p>
 <p><img alt="" src="images/unreachable_code.png" /></p>
@@ -2227,12 +2228,12 @@ configured with <a href="http://www.vogella.com/tutorials/JavaRegularExpressions
 omitted.</p>
 <p><strong>Example:</strong> to enforce a style where all variables have a <code>_v</code> suffix,
 you would specify <code>.*_v</code> pattern in the <strong>Variable name</strong> field.</p>
-<h3 id="vector-width-in-assignments-and-port-maps">Vector width in assignments and port maps</h3>
+<h3 id="vector-width">Vector width in assignments and port maps</h3>
 <p>Sigasi Studio checks the vector size in assignments (Since <a href="/releasenotes/sigasi-2.28.html" title="Sigasi 2.28">Sigasi 2.28</a>) and port maps (Since <a href="/releasenotes/sigasi-3.01.html" title="Sigasi Studio 3.1">Sigasi Studio 3.1</a>). This check works at type-time and takes the (symbolic) value of generics into account.</p>
-<h3 id="order-of-assocations">Order of assocations</h3>
+<h3 id="order-of-associations">Order of associations</h3>
 <p>Sigasi Studio gives a warning when the <strong>order</strong> of generics or ports in a <code>map</code> differs from the original generics or ports declaration order.</p>
 <p><img alt="" src="images/linting_vector_width.png" /></p>
-<h3 id="check-for-componententity-mismatch">Check for component/entity mismatch</h3>
+<h3 id="component-entity">Check for component/entity mismatch</h3>
 <p>Sigasi Studio gives a warning if a component declaration is not equal to its matching entity. You can easily fix this by applying the quick fix.</p>
 <p><img alt="" src="images/linting_component_entity.png" /></p>
 <h2 id="project-specific-linting-settings">Project specific Linting settings</h2>
@@ -2450,24 +2451,22 @@ You can override these setting by creating a settings file for your projects.</p
 </ul>
 </li>
 <li><a href="#list-of-vhdl-code-rules">List of VHDL code rules</a><ul>
-<li><a href="#dead-code">Dead Code lint</a></li>
+<li><a href="#dead-code-lint">Dead Code lint</a></li>
 <li><a href="#deprecated-ieee-packages-non-standard-packages">Deprecated IEEE Packages, Non-Standard Packages</a></li>
 <li><a href="#incomplete-port-maps-and-generic-maps">Incomplete Port Maps and Generic Maps</a></li>
 <li><a href="#posititional-association-in-instantiations">Posititional Association in Instantiations</a></li>
 <li><a href="#quick-fix-for-third-party-libraries">Quick Fix for Third Party Libraries</a></li>
-<li><a href="#redundant-others">Redundant "others"</a><ul>
+<li><a href="#redundant-others">Redundant "others"</a></li>
 <li><a href="#sensitivity-list">Sensitivity List</a></li>
-</ul>
-</li>
 <li><a href="#superfluous-library-clause">Superfluous Library Clause</a></li>
-<li><a href="#dead-code-unreachable-code">Dead Code (unreachable code)</a></li>
+<li><a href="#dead-code">Dead Code (unreachable code)</a></li>
 <li><a href="#null-range">Null Range (empty range)</a></li>
 <li><a href="#space-physical-unit">Space Before the Physical Unit</a></li>
 <li><a href="#capitalization-of-identifiers">Capitalization of Identifiers</a></li>
 <li><a href="#naming-conventions">Naming Conventions</a></li>
-<li><a href="#vector-width-in-assignments-and-port-maps">Vector width in assignments and port maps</a></li>
-<li><a href="#order-of-assocations">Order of assocations</a></li>
-<li><a href="#check-for-componententity-mismatch">Check for component/entity mismatch</a></li>
+<li><a href="#vector-width">Vector width in assignments and port maps</a></li>
+<li><a href="#order-of-associations">Order of associations</a></li>
+<li><a href="#component-entity">Check for component/entity mismatch</a></li>
 </ul>
 </li>
 <li><a href="#project-specific-linting-settings">Project specific Linting settings</a><ul>
@@ -2506,7 +2505,7 @@ You can override these setting by creating a settings file for your projects.</p
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2017-12-13 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2017-12-19 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
