@@ -2549,34 +2549,12 @@ This is an unapproved Accellera Standards Draft, subject to change.</p>
 <dd>[ <em>1-9</em> ]   {  [ <em>0-9</em> ]  <br />
      | <font color="purple"><b>_</b></font>  }  </dd>
 <dt><strong id="BASED_HEX_LITERAL">BASED_HEX_LITERAL</strong></dt>
-<dd>
-<table class="table">
-<thead>
-<tr>
-<th><font color="purple"><b>'</b></font>  [ <em>s</th>
-<th>S</em> ]  <em>h</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td>[ <em>A-F</em> ]   {  [ <em>0-9</em> ]</td>
-</tr>
-<tr>
-<td></td>
-<td>[ <em>a-f</em> ]</td>
-</tr>
-<tr>
-<td></td>
-<td>[ <em>A-F</em> ]</td>
-</tr>
-<tr>
-<td></td>
-<td><font color="purple"><b>_</b></font>  }</td>
-</tr>
-</tbody>
-</table>
-</dd>
+<dd><font color="purple"><b>'</b></font>  [ <em>s|S</em> ]  <em>h|H</em> [ <em>0-9</em> ]  <br />
+    |  [ <em>a-f</em> ]  <br />
+    |  [ <em>A-F</em> ]   {  [ <em>0-9</em> ]  <br />
+     |  [ <em>a-f</em> ]  <br />
+     |  [ <em>A-F</em> ]  <br />
+     | <font color="purple"><b>_</b></font>  }  </dd>
 <dt><strong id="based_dec_number">based_dec_number</strong></dt>
 <dd>[ <a href="#DEC_LITERAL">DEC_LITERAL</a>  ]  <a href="#BASED_DEC_LITERAL">BASED_DEC_LITERAL</a> </dd>
 <dt><strong id="BASED_DEC_LITERAL">BASED_DEC_LITERAL</strong></dt>
@@ -2618,7 +2596,7 @@ This is an unapproved Accellera Standards Draft, subject to change.</p>
 <dd><a href="#DOUBLE_QUOTED_STRING">DOUBLE_QUOTED_STRING</a> <br />
     | <a href="#TRIPLE_DOUBLE_QUOTED_STRING">TRIPLE_DOUBLE_QUOTED_STRING</a> </dd>
 <dt><strong id="DOUBLE_QUOTED_STRING">DOUBLE_QUOTED_STRING</strong></dt>
-<dd><font color="purple"><b>"</b></font>  { <em>\|!\|"</em> }  <font color="purple"><b>"</b></font> </dd>
+<dd><font color="purple"><b>"</b></font>  { <em>|!|"</em> }  <font color="purple"><b>"</b></font> </dd>
 <dt><strong id="TRIPLE_DOUBLE_QUOTED_STRING">TRIPLE_DOUBLE_QUOTED_STRING</strong></dt>
 <dd><font color="purple"><b>"""</b></font>  { <em>any_ASCII_character</em> }  <font color="purple"><b>"""</b></font> </dd>
 <dt><strong id="ID">ID</strong></dt>
@@ -2713,7 +2691,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2018-01-08 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2018-01-10 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
