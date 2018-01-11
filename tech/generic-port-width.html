@@ -1983,7 +1983,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 <p><img alt="Incorrect array size warning" src="generic-port-width/warning_message.png" title="Incorrect array size warning" /></p>
 <p>Declarations for data_out and result:</p>
 <div class="codehilite"><pre><span></span><span class="k">entity</span> <span class="nc">with_generic</span> <span class="k">is</span>
-  <span class="k">generic</span><span class="p">(</span><span class="n">datawidth</span> <span class="o">:</span> <span class="kt">natural</span> <span class="o">:=</span> <span class="mi">8</span><span class="p">);</span>
+  <span class="k">generic</span><span class="p">(</span><span class="n">datawidth</span> <span class="o">:</span> <span class="kt">natural</span><span class="p">);</span>
   <span class="k">port</span><span class="p">(</span><span class="n">data_out</span> <span class="o">:</span> <span class="k">out</span> <span class="kt">std_logic_vector</span><span class="p">(</span><span class="n">datawidth</span> <span class="o">-</span> <span class="mi">1</span> <span class="k">downto</span> <span class="mi">0</span><span class="p">));</span>
 <span class="k">end</span> <span class="k">entity</span> <span class="nc">with_generic</span><span class="p">;</span>
 
@@ -2007,7 +2007,7 @@ the code will break.</p>
 <p>In order to resolve the warning above, the array size should be written in terms of datawidth
 so that the code remains valid for other values of the generic.</p>
 <div class="codehilite"><pre><span></span><span class="k">entity</span> <span class="nc">with_generic</span> <span class="k">is</span>
-  <span class="k">generic</span><span class="p">(</span><span class="n">datawidth</span> <span class="o">:</span> <span class="kt">natural</span> <span class="o">:=</span> <span class="mi">8</span><span class="p">);</span>
+  <span class="k">generic</span><span class="p">(</span><span class="n">datawidth</span> <span class="o">:</span> <span class="kt">natural</span><span class="p">);</span>
   <span class="k">port</span><span class="p">(</span><span class="n">data_out</span> <span class="o">:</span> <span class="k">out</span> <span class="kt">std_logic_vector</span><span class="p">(</span><span class="n">datawidth</span> <span class="o">-</span> <span class="mi">1</span> <span class="k">downto</span> <span class="mi">0</span><span class="p">));</span>
 <span class="k">end</span> <span class="k">entity</span> <span class="nc">with_generic</span><span class="p">;</span>
 
@@ -2113,7 +2113,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2018-01-10 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2018-01-11 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
