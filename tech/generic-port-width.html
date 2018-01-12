@@ -1992,10 +1992,10 @@ Insights<span style="color:#f47920">.</span>							</p>
 </pre></div>
 
 
-<p>This linting message tells us that the array sizes in an assignment do not match.
+<p>This linting message tells that array sizes in an assignment do not match.
 Typically, one side of the assignment is a port and the other side an internal signal.
-A generic defines the width of the port, while the signal width is defined by a constant value.</p>
-<p>The core question asked is:<br />
+A generic defines the width of the port while the signal width is defined by a constant value.</p>
+<p>The core question asked is
 <em>Why does Sigasi Studio not take into account the value of the generic when calculating the array sizes?
 After all, in the instantiation the value of the generic was set to match the constant value.</em></p>
 <h3 id="improving-reusabiliy">Improving reusabiliy</h3>
@@ -2020,7 +2020,7 @@ so that the code remains valid for other values of the generic.</p>
 <p>Taking this a step further, the warning could be interpreted more bluntly:
 <em>stop using the generic since it only gives a false sense of re-usability</em>.</p>
 <p>Why would generics be needed to define port or signal widths?
-VHDL allows us to write code without using generics or fixed port widths like in the code example below.</p>
+VHDL allows to write code without using generics or fixed port widths like in the code example below.</p>
 <div class="codehilite"><pre><span></span><span class="k">library</span> <span class="nn">ieee</span><span class="p">;</span>
 <span class="k">use</span> <span class="nn">ieee.std_logic_1164.</span><span class="k">all</span><span class="p">;</span>
 
@@ -2041,7 +2041,7 @@ VHDL allows us to write code without using generics or fixed port widths like in
 
 
 <p>The actual port and signal widths are only defined once this design unit is instantiated.
-No constants or generics are involved, allowing us to write less and cleaner code.</p>
+No constants or generics are involved, allowing to write less and cleaner code.</p>
 <p>Generics can be used to express relations between ports that are checked at compilation
 or at elaboration time. You can express these relations also with asserts:</p>
 <div class="codehilite"><pre><span></span><span class="k">assert</span> <span class="n">data_out</span><span class="na">&#39;length</span> <span class="o">=</span> <span class="n">data_in</span><span class="na">&#39;length</span> <span class="n">report</span> <span class="s">&quot;port width mismatch&quot;</span> <span class="k">severity</span> <span class="n">failure</span><span class="p">;</span>
