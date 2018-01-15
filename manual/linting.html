@@ -1976,64 +1976,18 @@ semantic problems (<strong>Linting</strong>, or <strong>Linter checks</strong>).
 problems can be automatically resolved with <strong>Quick Fixes</strong>. Both syntax
 checking and linting happen at type-time: new markers appear <em>as you are
 typing</em> your code.</p>
-<h2 id="linting-icons">Marker Icons</h2>
+<h2 id="linting-linting">Linting</h2>
+<p>VHDL code <strong>Lint</strong> is defined as code that is strictly correct according
+to the language definition, but still suspicious or problematic.
+Sigasi Studio has a built-in VHDL linter, which provides info about code lint
+in the design.</p>
+<h3 id="linting-icons">Marker Icons</h3>
 <ul>
 <li><img alt="" src="icons/info.png" /> marks an info message.</li>
 <li><img alt="" src="icons/warning_lightbulb.png" /> marks a warning that can be resolved automatically with a Quick Fix.</li>
 <li><img alt="" src="icons/warning.png" /> marks a warning that cannot be resolved automatically.</li>
 <li><img alt="" src="icons/error_lightbulb.png" /> marks an error that can be resolved automatically with a Quick Fix.</li>
 <li><img alt="" src="icons/error.png" /> marks an error that cannot be resolved automatically.</li>
-</ul>
-<h2 id="linting-linting">Linting</h2>
-<p>VHDL code <strong>Lint</strong> is defined as code that is strictly correct according
-to the language definition, but still suspicious or problematic.
-Sigasi Studio has a built-in VHDL linter, which provides info about code lint
-in the design. Sigasi Studio’s VHDL linter checks for the following problems:</p>
-<ul>
-<li>Unused declarations</li>
-<li>Duplicate declarations</li>
-<li>Declaration could not be found</li>
-<li>VHDL 2008 features in VHDL 93 mode (Learn about <a href="/manual/config.html#configure-version" title="Configuring Your Design Environment">choosing your VHDL version</a>)</li>
-<li>Assignment validation</li>
-<li>Case statement validation</li>
-<li>Instantiation statement validation</li>
-<li>Component validation (Entity/Component mismatch)</li>
-<li>Library validation</li>
-<li>Range validation</li>
-<li>Deprecated and non-standard packages</li>
-<li>Duplicate, conflicting design unit names</li>
-<li>Missing return statement in function bodies</li>
-<li>Missing, unnecessary and duplicate signals in the sensitivity list</li>
-<li>Port, signal, variable, constant or generic declarations that are never read or written</li>
-<li>Invalid port associations (incompatible port modes in instantiations)</li>
-<li><a href="#order-of-associations">Order of generic and port associations</a></li>
-<li><a href="#capitalization-of-identifiers">Consistent capitalization of identifiers</a></li>
-<li>Advanced Configuration validation (component mismatch, missing binding, ...)</li>
-<li>Redundant boolean equality expressions (<code>boolean = true</code>)</li>
-</ul>
-<h3 id="linting-common-libraries">No Linting for Common Libraries</h3>
-<p>Common Libraries are considered to be production ready libraries.
-Linting is skipped for all files in the Common Libraries folder.</p>
-<h3 id="linting-quick-fix">Quick Fixes</h3>
-<p>Some of the VHDL lint problems can be automatically resolved with
-<em>Quick Fixes</em>. These problems have <em>markers</em> annotated with a lightbulb
-icon (like <img alt="" src="icons/warning_lightbulb.png" />). To trigger
-a Quick Fix, click the problem marker or press <strong>Ctrl-1</strong> and select the
-Quick Fix.</p>
-<ul>
-<li>Remove unused declaration</li>
-<li>Declare signals and constants</li>
-<li>Switch to VHDL 2008 mode</li>
-<li>Correct signal/variable assignment operator</li>
-<li>Ignore deprecated libraries</li>
-<li><a href="#quick-fix-for-third-party-libraries">Configure Altera, Xilinx, ModelSim and VUnit libraries</a></li>
-<li>Declare missing enumeration literal in case statements</li>
-<li>Add missing when clause in case statements</li>
-<li>Correct attribute entity class in attribute specifications</li>
-<li>Add missing signals to sensitivity list</li>
-<li>Fix capitalization of identifier to correspond to its declaration</li>
-<li>Match order of generic and port associations with declaration order</li>
-<li>Update component declaration when the entity declaration has changed</li>
 </ul>
 <h3 id="linting-severity-level">Configuring the Severity Level</h3>
 <p>The Sigasi Studio VHDL linter has reasonable defaults for the severity level of
@@ -2042,42 +1996,346 @@ of lint is configurable for additional flexibility. The configuration
 interface is available in <strong>Window > Preferences > VHDL >
 Errors/Warnings</strong>.</p>
 <p><img alt="Configuring the severity of Sigasi Studio linting checks" src="images/problemseveritypreferencepage.png" title="Configuring the severity of Sigasi Studio linting checks" /></p>
-<h4 id="basic-vhdl-coding-rules">Basic VHDL coding rules</h4>
-<p><a href="/manual/editions.html#creator" title="[Needs Sigasi Studio Creator or XL license]">[Needs Sigasi Studio Creator or XL license]</a></p>
-<ul>
-<li><a href="#null-range">NULL_RANGE_ERROR</a></li>
-<li><a href="#deprecated-ieee-packages-non-standard-packages">Deprecated Packages</a>
- <!--* REDUNDANT_CHOICES --></li>
-<li><a href="#redundant-others">REDUNDANT_OTHERS</a></li>
-<li>Subprograms in packages (e.g. function body in a package, rather than in the package body)</li>
-<li>Infinite loops in simulations:<ul>
-<li>INFINTE_LOOP_STATEMENT</li>
-<li>PROCESS_WITHOUT_SENSITIVITY_AND_WAIT</li>
-</ul>
-</li>
-<li><a href="#space-physical-unit">NUMERIC_LITERAL_WHITESPACE_BEFORE_UNIT</a></li>
-<li><a href="#superfluous-library-clause">SUPERFLUOUS_LIBRARY</a>
- <!-- * MISSING_LIBRARY --></li>
-<li><a href="#dead-code-lint">UNUSED_DECLARATION: PORT, GENERIC, SIGNAL, ... </a>
- <!--* BITSTRING_STD_LOGIC: invalid characters in bit string--></li>
-<li><a href="#sensitivity-list">SENSITIVITY_LIST</a></li>
-</ul>
-<h4 id="advanced-vhdl-coding-rules">Advanced VHDL coding rules</h4>
-<p><a href="/manual/editions.html#xl" title="[Only in Sigasi Studio XL]">[Only in Sigasi Studio XL]</a></p>
-<ul>
-<li>FSM_DEAD_STATE</li>
-<li><a href="#dead-code">DEAD_CODE (unreachable statements)</a></li>
-<li>NEVER_WRITTEN / NEVER_READs</li>
-<li><a href="/manual/linting.html#naming-conventions" title="Linting and Quick Fixes">naming-conventions</a></li>
-<li><a href="#incomplete-port-maps-and-generic-maps">Incomplete Port Maps and Generic Maps</a></li>
-<li><a href="#posititional-association-in-instantiations">Posititional Association in Instantiations</a></li>
-<li><a href="#capitalization-of-identifiers">Capitalization of Identifiers</a></li>
-<li><a href="#vector-width">Vector width in assignments and port maps</a></li>
-<li><a href="#component-entity">Check for component/entity mismatch</a></li>
-</ul>
+<h3 id="linting-common-libraries">No Linting for Common Libraries</h3>
+<p>Common Libraries are considered to be production ready libraries.
+Linting is skipped for all files in the Common Libraries folder.</p>
+<h2 id="linting-quick-fix">Quick Fixes</h2>
+<p>Some of the VHDL lint problems can be automatically resolved with <em>Quick Fixes</em>.
+These problems have <em>markers</em> annotated with a lightbulb icon (like <img alt="" src="icons/warning_lightbulb.png" />).
+To trigger a Quick Fix, click the problem marker or press <strong>Ctrl-1</strong> and select the Quick Fix.</p>
 <h2 id="list-of-vhdl-code-rules">List of VHDL code rules</h2>
-<p>This is the list of VHDL coding rules that can be checked automatically
-by Sigasi Studio.</p>
+<p>The table below lists the VHDL code rules that can be checked automatically by Sigasi Studio.
+The availability of code rules depends on the license requirements.</p>
+<ul>
+<li>ST code rules are available for all licenses including <a href="/manual/editions.html#starter" title="Sigasi Studio Starter">Sigasi Studio Starter</a></li>
+<li>CR code rules require at least a <a href="/manual/editions.html#creator" title="Sigasi Studio Creator">Sigasi Studio Creator</a> license.</li>
+<li>XL code rules are only available with a <a href="/manual/editions.html#xl" title="Sigasi Studio XL">Sigasi Studio XL</a> license.</li>
+</ul>
+<table class="table">
+<thead>
+<tr>
+<th>License</th>
+<th>Quick Fix</th>
+<th>Description</th>
+<th align="right">ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ST</td>
+<td><img alt="" src="icons/warning_lightbulb.png" /></td>
+<td>Declaration could not be found</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>ST</td>
+<td></td>
+<td>Duplicate declarations</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>ST</td>
+<td><img alt="" src="icons/warning_lightbulb.png" /></td>
+<td>Signal/variable assignment operator</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>ST</td>
+<td><img alt="" src="icons/warning_lightbulb.png" /></td>
+<td>Case statement does not cover all choices</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>ST</td>
+<td><img alt="" src="icons/warning_lightbulb.png" /></td>
+<td>Missing enumeration literal in case statements</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>ST</td>
+<td></td>
+<td>Instantiation statement validation</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>ST</td>
+<td></td>
+<td>Library validation</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>ST</td>
+<td></td>
+<td>Subprograms in packages (e.g. function body in a package, rather than in the package body)</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>ST</td>
+<td></td>
+<td>Missing return statement in function bodies</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>ST</td>
+<td><img alt="" src="icons/warning_lightbulb.png" /></td>
+<td>Correct attribute entity class in attribute specifications</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>ST</td>
+<td><img alt="" src="icons/warning_lightbulb.png" /></td>
+<td>VHDL 2008 features in VHDL 93 mode (Learn about <a href="/manual/config.html#configure-version" title="Configuring Your Design Environment">choosing your VHDL version</a>)</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>CR</td>
+<td><img alt="" src="icons/warning_lightbulb.png" /></td>
+<td><a href="#deprecated-ieee-packages-non-standard-packages">Deprecated IEEE packages</a></td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>CR</td>
+<td><img alt="" src="icons/warning_lightbulb.png" /></td>
+<td><a href="#deprecated-ieee-packages-non-standard-packages">Non-standard packages</a></td>
+<td align="right">37</td>
+</tr>
+<tr>
+<td>CR</td>
+<td><img alt="" src="icons/warning_lightbulb.png" /></td>
+<td><a href="#sensitivity-list">A process must either have a sensitivity list or contain one or more wait statements</a></td>
+<td align="right">38</td>
+</tr>
+<tr>
+<td>CR</td>
+<td></td>
+<td><a href="#space-physical-unit">There has to be a whitespace before physical units</a></td>
+<td align="right">47</td>
+</tr>
+<tr>
+<td>CR</td>
+<td></td>
+<td><a href="#superfluous-library-clause">Superfluous library clause</a></td>
+<td align="right">49</td>
+</tr>
+<tr>
+<td>CR</td>
+<td><img alt="" src="icons/warning_lightbulb.png" /></td>
+<td>Library is not available <a href="#quick-fix-for-third-party-libraries">Configure Altera, Xilinx, ModelSim and VUnit libraries</a></td>
+<td align="right">50</td>
+</tr>
+<tr>
+<td>CR</td>
+<td><img alt="" src="icons/warning_lightbulb.png" /></td>
+<td><a href="#dead-code-lint">Find unused declarations</a></td>
+<td align="right">55</td>
+</tr>
+<tr>
+<td>CR</td>
+<td></td>
+<td>Bitstrings may only contain std_logic metavalues</td>
+<td align="right">57</td>
+</tr>
+<tr>
+<td>CR</td>
+<td></td>
+<td>Duplicate, conflicting design unit names</td>
+<td align="right">64</td>
+</tr>
+<tr>
+<td>CR</td>
+<td></td>
+<td><a href="#dead-code-lint">Find unused ports</a></td>
+<td align="right">67</td>
+</tr>
+<tr>
+<td>CR</td>
+<td></td>
+<td><a href="#dead-code-lint">Find unused generics</a></td>
+<td align="right">68</td>
+</tr>
+<tr>
+<td>CR</td>
+<td><img alt="" src="icons/warning_lightbulb.png" /></td>
+<td><a href="#sensitivity-list">Find incomplete sensitivity lists</a></td>
+<td align="right">72</td>
+</tr>
+<tr>
+<td>CR</td>
+<td></td>
+<td><a href="#sensitivity-list">Find superfluous signals in sensitivity lists</a></td>
+<td align="right">73</td>
+</tr>
+<tr>
+<td>CR</td>
+<td></td>
+<td>Report encrypted files</td>
+<td align="right">84</td>
+</tr>
+<tr>
+<td>CR</td>
+<td></td>
+<td><a href="#sensitivity-list">Find duplicate signals in sensitivity lists</a></td>
+<td align="right">85</td>
+</tr>
+<tr>
+<td>CR</td>
+<td></td>
+<td>Incorrect use of keyword all</td>
+<td align="right">184</td>
+</tr>
+<tr>
+<td>XL</td>
+<td></td>
+<td><a href="#null-range">Null range: The left argument is strictly larger than the right</a></td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>XL</td>
+<td></td>
+<td>Case alternative contains redundant choices</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>XL</td>
+<td></td>
+<td><a href="#redundant-others">Case statement contains all choices explicitly. You can safely remove the redundant 'others'</a></td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td>XL</td>
+<td></td>
+<td>Infinite loop. Loop is missing a wait</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td>XL</td>
+<td></td>
+<td><a href="#null-range">Null range: The left argument is strictly smaller than the right</a></td>
+<td align="right">26</td>
+</tr>
+<tr>
+<td>XL</td>
+<td></td>
+<td>Unbound component instantiations</td>
+<td align="right">48</td>
+</tr>
+<tr>
+<td>XL</td>
+<td></td>
+<td><a href="#dead-code">Find dead states in state machines</a></td>
+<td align="right">71</td>
+</tr>
+<tr>
+<td>XL</td>
+<td></td>
+<td><a href="#dead-code">Find dead code (unreachable statements)</a></td>
+<td align="right">79</td>
+</tr>
+<tr>
+<td>XL</td>
+<td></td>
+<td>Detect signals and variables that are never written</td>
+<td align="right">88</td>
+</tr>
+<tr>
+<td>XL</td>
+<td></td>
+<td>Detect signals and variables that are never read</td>
+<td align="right">89</td>
+</tr>
+<tr>
+<td>XL</td>
+<td></td>
+<td>None or multiple matching entities for component</td>
+<td align="right">90</td>
+</tr>
+<tr>
+<td>XL</td>
+<td></td>
+<td><a href="#naming-conventions">Check naming conventions</a></td>
+<td align="right">92</td>
+</tr>
+<tr>
+<td>XL</td>
+<td><img alt="" src="icons/warning_lightbulb.png" /></td>
+<td><a href="#incomplete-port-maps-and-generic-maps">Incomplete port map or generic map</a></td>
+<td align="right">94</td>
+</tr>
+<tr>
+<td>XL</td>
+<td></td>
+<td><a href="#vector-width">Vector width in assignments and port maps</a></td>
+<td align="right">144</td>
+</tr>
+<tr>
+<td>XL</td>
+<td><img alt="" src="icons/warning_lightbulb.png" /></td>
+<td><a href="#capitalization-of-identifiers">All references must have the same capitalization as their declaration</a></td>
+<td align="right">163</td>
+</tr>
+<tr>
+<td>XL</td>
+<td><img alt="" src="icons/warning_lightbulb.png" /></td>
+<td><a href="#positional-association-in-instantiations">Check for positional associations in instantiations</a></td>
+<td align="right">164</td>
+</tr>
+<tr>
+<td>XL</td>
+<td></td>
+<td>Invalid port associations (incompatible port modes in instantiations)</td>
+<td align="right">169</td>
+</tr>
+<tr>
+<td>XL</td>
+<td><img alt="" src="icons/warning_lightbulb.png" /></td>
+<td><a href="#order-of-associations">Order of generic and port associations</a></td>
+<td align="right">177</td>
+</tr>
+<tr>
+<td>XL</td>
+<td></td>
+<td>Incorrect component name in configuration</td>
+<td align="right">180</td>
+</tr>
+<tr>
+<td>XL</td>
+<td></td>
+<td>Incorrect instantiation statement label in configuration</td>
+<td align="right">181</td>
+</tr>
+<tr>
+<td>XL</td>
+<td></td>
+<td>Missing or incorrect binding indication</td>
+<td align="right">182</td>
+</tr>
+<tr>
+<td>XL</td>
+<td></td>
+<td>Incorrect name in binding indication</td>
+<td align="right">183</td>
+</tr>
+<tr>
+<td>XL</td>
+<td></td>
+<td>Redundant boolean equality check with true</td>
+<td align="right">185</td>
+</tr>
+<tr>
+<td>XL</td>
+<td></td>
+<td>Boolean equality check with false</td>
+<td align="right">186</td>
+</tr>
+<tr>
+<td>XL</td>
+<td><img alt="" src="icons/warning_lightbulb.png" /></td>
+<td><a href="#component-entity">Check for component/entity mismatch</a></td>
+<td align="right">187</td>
+</tr>
+</tbody>
+</table>
+<h2 id="detailed-explanation-of-vhdl-code-rules">Detailed explanation of VHDL code rules</h2>
 <h3 id="dead-code-lint">Dead Code lint</h3>
 <p>Dead code is code that is does have any effect in your simulation or
 synthesis. Examples of dead code are signals that are never used, or
@@ -2093,7 +2351,7 @@ is a form of technological debt that should be avoided.</p>
 <li>unused or unnecessary library and use clauses,</li>
 <li>unused declarations (signals, constants, …)</li>
 <li>unused ports</li>
-<li>unreachable statements</li>
+<li>unreachable statements (see <a href="#dead-code">Dead code</a>)</li>
 </ul>
 <p>For unused declarations, there is also a Quick Fix to help you remove
 unused declarations fast.</p>
@@ -2124,7 +2382,7 @@ will all other tools.</p>
 do not need to be assigned explicitly. However, this is often not
 intended. For that reason, Sigasi Studio can warn you about this.</p>
 <p><img alt="" src="images/warn-incomplete-map.png" /></p>
-<h3 id="posititional-association-in-instantiations">Posititional Association in Instantiations</h3>
+<h3 id="positional-association-in-instantiations">Positional Association in Instantiations</h3>
 <p>Available since Sigasi 2.30</p>
 <p>Most VHDL designers prefer named associations in port and generic maps in instantiations. This makes it a lot easier to spot wrong connections.
 By default Sigasi Studio warns when positional associations are used. You can change the severity of this check via <strong>Preferences &gt; Sigasi &gt; VHDL &gt; Errors/Warnings</strong> in the <strong>Instantiation statement valiadation</strong> section.</p>
@@ -2231,6 +2489,7 @@ you would specify <code>.*_v</code> pattern in the <strong>Variable name</strong
 <h3 id="vector-width">Vector width in assignments and port maps</h3>
 <p>Sigasi Studio checks the vector size in assignments (Since <a href="/releasenotes/sigasi-2.28.html" title="Sigasi 2.28">Sigasi 2.28</a>) and port maps (Since <a href="/releasenotes/sigasi-3.01.html" title="Sigasi Studio 3.1">Sigasi Studio 3.1</a>). This check works at type-time and takes the (symbolic) value of generics into account.</p>
 <p><img alt="" src="images/linting_vector_width.png" /></p>
+<p>Sigasi Studio will not take into account the value assigned to a generic in instantiations. The reasoning begind this is explained in <a href="/tech/generic-port-width.html" title="Array size mismatches with generic port widths">Array size mismatches with generic port widths</a>.</p>
 <h3 id="order-of-associations">Order of associations</h3>
 <p>Sigasi Studio gives a warning when the <strong>order</strong> of generics or ports in a <code>map</code> differs from the original generics or ports declaration order.</p>
 <h3 id="component-entity">Check for component/entity mismatch</h3>
@@ -2276,159 +2535,6 @@ You can override these setting by creating a settings file for your projects.</p
     all/severity/&lt;project&gt;=IGNORE
 </pre></div>
 
-
-<h3 id="validation-ids">Validation IDs</h3>
-<table class="table">
-<thead>
-<tr>
-<th>Validation ID</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>50</td>
-<td>Library is not available</td>
-</tr>
-<tr>
-<td>64</td>
-<td>Duplicate design units</td>
-</tr>
-<tr>
-<td>84</td>
-<td>Report encrypted files</td>
-</tr>
-<tr>
-<td>8</td>
-<td>Deprecated IEEE packages</td>
-</tr>
-<tr>
-<td>37</td>
-<td>Non-standard packages</td>
-</tr>
-<tr>
-<td>38</td>
-<td>A process must either have a sensitivity list or contain one or more wait statements</td>
-</tr>
-<tr>
-<td>47</td>
-<td>There has to be a whitespace before physical units</td>
-</tr>
-<tr>
-<td>49</td>
-<td>Superfluous library clause</td>
-</tr>
-<tr>
-<td>55</td>
-<td>Find unused declarations</td>
-</tr>
-<tr>
-<td>57</td>
-<td>Bitstrings may only contain std_logic metavalues</td>
-</tr>
-<tr>
-<td>67</td>
-<td>Find unused ports</td>
-</tr>
-<tr>
-<td>68</td>
-<td>Find unused generics</td>
-</tr>
-<tr>
-<td>72</td>
-<td>Find incomplete sensitivity lists</td>
-</tr>
-<tr>
-<td>73</td>
-<td>Find superfluous signals in sensitivity lists</td>
-</tr>
-<tr>
-<td>85</td>
-<td>Find duplicate signals in sensitivity lists</td>
-</tr>
-<tr>
-<td>1</td>
-<td>Null range: The left argument is strictly larger than the right</td>
-</tr>
-<tr>
-<td>12</td>
-<td>Case alternative contains redundant choices</td>
-</tr>
-<tr>
-<td>13</td>
-<td>Case statement contains all choices explicitly. You can safely remove the redundant 'others'</td>
-</tr>
-<tr>
-<td>20</td>
-<td>Infinite loop. Loop is missing a wait</td>
-</tr>
-<tr>
-<td>26</td>
-<td>Null range: The left argument is strictly smaller than the right</td>
-</tr>
-<tr>
-<td>48</td>
-<td>Unbound component instantiations</td>
-</tr>
-<tr>
-<td>71</td>
-<td>Find dead states in state machines</td>
-</tr>
-<tr>
-<td>79</td>
-<td>Find dead code</td>
-</tr>
-<tr>
-<td>88</td>
-<td>Detect signals and variables that are never written</td>
-</tr>
-<tr>
-<td>89</td>
-<td>Detect signals and variables that are never read</td>
-</tr>
-<tr>
-<td>92</td>
-<td>Check naming conventions</td>
-</tr>
-<tr>
-<td>94</td>
-<td>Incomplete port map or generic map</td>
-</tr>
-<tr>
-<td>144</td>
-<td>Array assignment validation</td>
-</tr>
-<tr>
-<td>163</td>
-<td>All references must have the same capitalization as their declaration</td>
-</tr>
-<tr>
-<td>164</td>
-<td>Check for positional associations in instantiations</td>
-</tr>
-<tr>
-<td>169</td>
-<td>Invalid port association</td>
-</tr>
-<tr>
-<td>177</td>
-<td>Order of generic and port associations</td>
-</tr>
-<tr>
-<td>185</td>
-<td>Redundant boolean equality check with true"</td>
-</tr>
-<tr>
-<td>186</td>
-<td>Boolean equality check with false</td>
-</tr>
-<tr>
-<td>187</td>
-<td>Check for component/entity mismatch"</td>
-</tr>
-</tbody>
-</table>
-
       </div>
     </div>
 
@@ -2439,22 +2545,19 @@ You can override these setting by creating a settings file for your projects.</p
             <a href="#"><strong>Linting and Quick Fixes</strong></a>
             <div class="toc">
 <ul>
-<li><a href="#linting-icons">Marker Icons</a></li>
 <li><a href="#linting-linting">Linting</a><ul>
+<li><a href="#linting-icons">Marker Icons</a></li>
+<li><a href="#linting-severity-level">Configuring the Severity Level</a></li>
 <li><a href="#linting-common-libraries">No Linting for Common Libraries</a></li>
+</ul>
+</li>
 <li><a href="#linting-quick-fix">Quick Fixes</a></li>
-<li><a href="#linting-severity-level">Configuring the Severity Level</a><ul>
-<li><a href="#basic-vhdl-coding-rules">Basic VHDL coding rules</a></li>
-<li><a href="#advanced-vhdl-coding-rules">Advanced VHDL coding rules</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#list-of-vhdl-code-rules">List of VHDL code rules</a><ul>
+<li><a href="#list-of-vhdl-code-rules">List of VHDL code rules</a></li>
+<li><a href="#detailed-explanation-of-vhdl-code-rules">Detailed explanation of VHDL code rules</a><ul>
 <li><a href="#dead-code-lint">Dead Code lint</a></li>
 <li><a href="#deprecated-ieee-packages-non-standard-packages">Deprecated IEEE Packages, Non-Standard Packages</a></li>
 <li><a href="#incomplete-port-maps-and-generic-maps">Incomplete Port Maps and Generic Maps</a></li>
-<li><a href="#posititional-association-in-instantiations">Posititional Association in Instantiations</a></li>
+<li><a href="#positional-association-in-instantiations">Positional Association in Instantiations</a></li>
 <li><a href="#quick-fix-for-third-party-libraries">Quick Fix for Third Party Libraries</a></li>
 <li><a href="#redundant-others">Redundant "others"</a></li>
 <li><a href="#sensitivity-list">Sensitivity List</a></li>
@@ -2469,10 +2572,7 @@ You can override these setting by creating a settings file for your projects.</p
 <li><a href="#component-entity">Check for component/entity mismatch</a></li>
 </ul>
 </li>
-<li><a href="#project-specific-linting-settings">Project specific Linting settings</a><ul>
-<li><a href="#validation-ids">Validation IDs</a></li>
-</ul>
-</li>
+<li><a href="#project-specific-linting-settings">Project specific Linting settings</a></li>
 </ul>
 </div>
 
@@ -2505,7 +2605,7 @@ You can override these setting by creating a settings file for your projects.</p
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2018-01-12 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2018-01-15 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
