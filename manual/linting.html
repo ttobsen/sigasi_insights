@@ -2393,7 +2393,7 @@ to do this for you.</p>
 <p><img alt="" src="images/alteraquickfix.png" /></p>
 <p>The <code>library</code> statement that tries to import a missing library (like
 <code>altera</code>) will be have a yellow warning marker next to it. Click this
-marker and select <strong>Configure library altera</strong>. If the path tho your
+marker and select <strong>Configure library altera</strong>. If the path to your
 Altera Quartus (or Xilinx ISE) installation is not yet set, Sigasi Studio will
 ask to set the path now. You can always change these paths in <strong>Window
 > Preferences > Sigasi > Toolchains</strong>.
@@ -2481,7 +2481,7 @@ warns about this.</p>
 <p>On the <strong>Navigation conventions</strong> preference page (<strong>Window >
 Preferences > Sigasi > VHDL > Naming conventions</strong>) you can configure
 patterns to check correct naming of your VHDL identifiers. Patterns are
-configured with <a href="http://www.vogella.com/tutorials/JavaRegularExpressions/article.html">Java regex syntax</a></p>
+configured with <a href="http://www.vogella.com/tutorials/JavaRegularExpressions/article.html">Java regex syntax</a>.</p>
 <p>Only names with a specified pattern are checked. Empty patterns are
 omitted.</p>
 <p><strong>Example:</strong> to enforce a style where all variables have a <code>_v</code> suffix,
@@ -2496,6 +2496,7 @@ you would specify <code>.*_v</code> pattern in the <strong>Variable name</strong
 <p>Sigasi Studio gives a warning if a component declaration is not equal to its matching entity. You can easily fix this by applying the quick fix.</p>
 <p><img alt="" src="images/linting_component_entity.png" /></p>
 <h2 id="project-specific-linting-settings">Project specific Linting settings</h2>
+<h3 id="severity-of-linting-checks">Severity of Linting checks</h3>
 <p>The default way to configure the severity of the Sigasi Studio linting checks is to set their severity in the <strong>Errors/Warnings</strong> preference page.
 You can override these setting by creating a settings file for your projects.</p>
 <p>In each project, you can override the coding rules settings. You can override rules for the <strong>entire project</strong>, for <strong>folders</strong> in the project, or for individual <strong>files</strong>.</p>
@@ -2514,9 +2515,11 @@ You can override these setting by creating a settings file for your projects.</p
 <li>the number of the validation ID (e.g. 140)</li>
 <li><code>all</code> to specify all validation ids in one rule</li>
 </ul>
+<p>Validation ID numbers are listed in the <a href="#list-of-vhdl-code-rules">List of VHDL code rules</a>
+and can also be found in the <strong>Project Properties</strong> under <strong>VHDL Errors/Warnings</strong>.</p>
 <p>Where <code>${path}</code> can be:</p>
 <ul>
-<li><code>&lt;project&gt;</code> (literally, with brackets!)  to set the severity of the entire project</li>
+<li><code>&lt;project&gt;</code> (literally, with brackets!) to set the severity of the entire project</li>
 <li><code>/path/to/folder</code> to set the severity of an entire folder</li>
 <li><code>/path/to/file.vhd</code> to set the severity of a specific file</li>
 </ul>
@@ -2534,6 +2537,58 @@ You can override these setting by creating a settings file for your projects.</p
     72/severity//test/top.vhd=WARNING
     all/severity/&lt;project&gt;=IGNORE
 </pre></div>
+
+
+<h3 id="naming-conventions-per-project">Naming Conventions per project</h3>
+<p>While <a href="#naming-conventions">Naming Conventions</a> can be configured
+globally for a workspace, they can also be defined per project.
+The project-specific Naming Conventions are stored in this settings file:</p>
+<div class="codehilite"><pre><span></span>    ${project location}/.settings/com.sigasi.hdt.vhdl.linting.prefs
+</pre></div>
+
+
+<p>The validation ID for Naming Conventions is <em>92</em>.
+Therefore all lines that configure Naming Conventions should start
+with <em>92</em> and are of this format:</p>
+<div class="codehilite"><pre><span></span>    92/params/${identifier}/${lib}=${convention}
+</pre></div>
+
+
+<p>Valid <code>${identifier}</code> values are:</p>
+<div class="codehilite"><pre><span></span>    architecture_name
+    configuration_name
+    constant_name
+    entity_name
+    generate_statement_name
+    generic_name
+    instantiation_statement_name
+    label
+    package_name
+    port_name
+    process_statement_name
+    signal_name
+    type_name
+    variable_name
+</pre></div>
+
+
+<p>Naming Conventions can be restricted to a specific library using <code>${lib}</code>.
+Possible values are:</p>
+<ul>
+<li><code>&lt;project&gt;</code> (literally, with brackets!) to set Naming Conventions for the entire project</li>
+<li>the library name to which the Naming Convention should be apply</li>
+</ul>
+<p>The pattern that defines the Naming Convention is set in <code>${convention}</code>.
+Patterns are configured with <a href="http://www.vogella.com/tutorials/JavaRegularExpressions/article.html">Java regex syntax</a>.</p>
+<p>Naming Conventions for a project and setting the severity of the linting checks
+are configured in the same settings file. Examples:</p>
+<div class="codehilite"><pre><span></span>    92/severity/&lt;project&gt;=INFO
+    92/params/constant_name/&lt;project&gt;=c_.*
+    92/params/entity_name/my_lib=e_([A-Z_0-9])*
+</pre></div>
+
+
+<p>Errors in the patterns will be reported in the log file: <strong>Help &gt; Open Log</strong>.</p>
 
       </div>
     </div>
@@ -2572,7 +2627,11 @@ You can override these setting by creating a settings file for your projects.</p
 <li><a href="#component-entity">Check for component/entity mismatch</a></li>
 </ul>
 </li>
-<li><a href="#project-specific-linting-settings">Project specific Linting settings</a></li>
+<li><a href="#project-specific-linting-settings">Project specific Linting settings</a><ul>
+<li><a href="#severity-of-linting-checks">Severity of Linting checks</a></li>
+<li><a href="#naming-conventions-per-project">Naming Conventions per project</a></li>
+</ul>
+</li>
 </ul>
 </div>
 
