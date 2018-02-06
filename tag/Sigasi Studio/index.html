@@ -3,7 +3,7 @@
 	<!--// OPEN HEAD //-->
 	<head>
 		<!--// SITE TITLE //-->
-		<title>How to set up the UVVM Library in Sigasi Studio - Sigasi</title>
+		<title>Sigasi Studio - Sigasi</title>
 		<!--// SITE META //-->
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -24,14 +24,14 @@
 			}
 		</script>
 		<!-- This site is optimized with the Yoast SEO plugin v3.0.6 - https://yoast.com/wordpress/plugins/seo/ -->
-		<link rel="canonical" href="http://insights.sigasi.com//tech/using-uvvm-with-sigasi.html" />
+		<link rel="canonical" href="http://insights.sigasi.com//tag/Sigasi Studio/" />
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="How to set up the UVVM Library in Sigasi Studio - Sigasi" />
-		<meta property="og:url" content="http://insights.sigasi.com//tech/using-uvvm-with-sigasi.html" />
+		<meta property="og:title" content="Sigasi Studio - Sigasi" />
+		<meta property="og:url" content="http://insights.sigasi.com//tag/Sigasi Studio/" />
 		<meta property="og:site_name" content="Sigasi" />
 		<meta name="twitter:card" content="summary"/>
-		<meta name="twitter:title" content="How to set up the UVVM Library in Sigasi Studio - Sigasi"/>
+		<meta name="twitter:title" content="Sigasi Studio - Sigasi"/>
 		<!-- / Yoast SEO plugin. -->
 		<link rel='stylesheet' id='wgs-css'  href='/css/wgs.css?ver=4.3.2' type='text/css' media='all' />
 		<link rel='stylesheet' id='ls-google-fonts-css'  href='https://fonts.googleapis.com/css?family=Lato:100,300,regular,700,900%7COpen+Sans:300%7CIndie+Flower:regular%7COswald:300,regular,700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
@@ -1575,7 +1575,7 @@
 					<li class="menu-item menu-item-type-post_type menu-item-object-page ">
 					<a href="/screencasts/">Screencasts</a>
 					</li>
-					<li class="menu-item menu-item-type-post_type menu-item-object-page active">
+					<li class="menu-item menu-item-type-post_type menu-item-object-page ">
 					<a href="/tech/">Tech Articles</a>
 					</li>
 					<li class="menu-item menu-item-type-post_type menu-item-object-page ">
@@ -1721,7 +1721,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 <div class="page-heading page-heading-hidden clearfix">
 	<div class="container">
 		<div class="heading-text">
-			<h1 class="entry-title" >How to set up the UVVM Library in Sigasi Studio</h1>
+			<h1 class="entry-title" >Sigasi Studio</h1>
 		</div>
 	</div>
 </div>
@@ -1912,7 +1912,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 			</li>
 			<li>
 				<a href="/screencasts/">Screencasts</a></li>
-			<li class="active">
+			<li>
 				<a href="/tech/">Tech Articles</a></li>
 			<li>
 				<a href="/opinion/">Opinion</a></li>
@@ -1929,117 +1929,48 @@ Insights<span style="color:#f47920">.</span>							</p>
 									<div class="spb_content_element col-sm-12 spb_raw_html">
 										<div class="spb-asset-content">
 
-<div class="container">
-  <div class="page-header">
-    <div>
-        <h1 style="margin-bottom: 0px;margin-top: 30px;">How to set up the UVVM Library in Sigasi Studio</h1>
-    </div>
+
+    <section class="container">
+      <div class="row">
+        <div class="spb_content_element col-sm-12 spb_text_column">
+          <div class="spb-asset-content" style="padding-top:0%;padding-bottom:0%;padding-left:0%;padding-right:0%;text-align: center;">
+<h1>Articles about : Sigasi Studio</h1>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <div style="margin: 10px 0 10px">
-        <span>
-            Posted on 2017&#8209;10&#8209;18
-            by Bart Brosens
-        </span>
-        </br>
-        <span>
-        Tagged as: 
-              <a href="/tag/Sigasi Studio/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">Sigasi Studio</a>
-              <a href="/tag/UVVM/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">UVVM</a>
-              <a href="/tag/Verification/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">Verification</a>
-              <a href="/tag/VHDL/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">VHDL</a>
-        </span>
-
-    </div>
-  </div>
-
-  <div class="row">
-
-    <div class="content">
-      <div class="col-md-9" role="main">
-        <p>UVVM is a popular Open Source VHDL Verification Component Framework for making structured VHDL testbenches for verification of FPGA and ASIC.
-When adding the <a href="https://github.com/UVVM/UVVM_All">UVVM_All</a> framework into a Sigasi project, it takes some configuration to map all files in the correct libraries.</p>
-<h2 id="installation">Installation</h2>
-<p>For this example, we'll open the UVVM_All framework in a separate project. You can also clone the UVVM_All framework into your own project and modify the steps here accordingly.</p>
-<ul>
-<li>Download the <a href="https://github.com/UVVM/UVVM_All">UVVM_All</a> framework.</li>
-<li>In Sigasi Studio, create a new VHDL project: <strong>File &gt; New &gt; VHDL Project</strong>, uncheck <strong>Use default location</strong> and <strong>Browse...</strong> to the location of the UVVM_All framework.</li>
-</ul>
-<p>Once Sigasi Studio finishes building the workspace, you'll notice a lot of error messages caused by incorrect library mappings.</p>
-<h2 id="configuring-the-library-mappings">Configuring the library mappings</h2>
-<p>By default Sigasi Studio maps all files to library <em>work</em>. This is not what the UVVM_All framework expects so we need to take following steps to correct the library mapping for UVVM_All.</p>
-<ul>
-<li>Make sure the VHDL version is set to 2008.<ul>
-<li>In the Project Explorer, right click the project and select <strong>Properties &gt; VHDL Version</strong>.</li>
-<li>In the drop-down menu select <strong>VHDL 2008</strong> and press <strong>Apply and Close</strong>.</li>
-<li>In your project, right click <strong>Common Libraries</strong> and select <strong>Set Library &gt; Reset Common Libraries</strong>.</li>
-</ul>
-</li>
-<li>Select all folders in the project, right click and choose <strong>Set Library &gt; Map folders to folder name</strong>.
-<img alt="Map folders to folder name" src="using-uvvm-with-sigasi/folder-names.png" /></li>
-<li>Go into the <em>uvvm_vvc_framework</em> folder, right click on <em>src_target_dependent</em> and select <strong>Exclude from build</strong>.</li>
-<li>Next, we need to add symbolic links to the <em>src_target_dependent</em> folder in all of the <em>bitvis_vip_</em> folders. We'll create the symbolic link once and then copy and paste it into the other folders.<ul>
-<li>Click and drag the <em>src_target_dependent</em> folder onto one of the <strong>bitvis_vip_</strong> folders while pressing the <strong>Ctrl</strong> key.</li>
-<li>After dropping the folder the <strong>File and Folder Operations</strong> dialog opens. Here you set the radio button to <strong>Link to files and folders</strong> and make sure the link locations are created relative to <strong>PROJECT_LOC</strong>. Then press <strong>OK</strong>.<br />
-<img alt="Symbolic link to folder" src="using-uvvm-with-sigasi/symbolic-link.png" /></li>
-<li>You now can right click on the linked folder and select <strong>Copy</strong>.</li>
-<li>Right click each of the remaining <em>bitvis_vip_</em> folders and select <strong>Paste</strong>.</li>
-</ul>
-</li>
-</ul>
-<h2 id="conclusion">Conclusion</h2>
-<p>The UVVM framework is now mapped correctly in Sigasi Studio. There are two testbenches that can be set as toplevel and used to start a simulation.</p>
-<ul>
-<li><em>bitvis_irq/tb/irqc_tb.vhd</em></li>
-<li><em>bitvis_uart/tb/uart_vvc_tb.vhd</em></li>
-</ul>
-<p>To define a toplevel, open one of these files and right click on an architecture, entity or configuration. Then click <strong>Set as Top Level</strong>.</p>
-<p>If you want to skip all these steps, you can also download the UVVM_All framework including project files from <a href="https://github.com/sigasi/UVVM_All">where we cloned it</a>. Then you can just import the existing VHDL Project.</p>
-
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-var disqus_shortname = 'sigasi';
-var disqus_developer = 1;
-/* * * DON'T EDIT BELOW THIS LINE * * */
-(function() {
-var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-<noscript>Please enable JavaScript to view the comments.</noscript>      </div>
     </div>
 
-    <div class="col-md-3" role="complementary">
-      <nav class="hidden-print hidden-xs hidden-sm">
-        <div class="sidebar" data-spy="affix" data-offset-top="510" data-offset-bottom="200">
-          <div class="well">
-            <a href="#"><strong>How to set up the UVVM Library in Sigasi Studio</strong></a>
-            <div class="toc">
-<ul>
-<li><a href="#installation">Installation</a></li>
-<li><a href="#configuring-the-library-mappings">Configuring the library mappings</a></li>
-<li><a href="#conclusion">Conclusion</a></li>
-</ul>
+<div class="container">
+    
+    <div class="row">
+      <div class="col-md-offset-0 col-md-6" >
+        <p style="margin-bottom: 10px"><a href="/tech/vivado-unisim.html" title="Choose your version of the Vivado UNISIM.VComponents package">Choose your version of the Vivado UNISIM.VComponen...</a>
+          <small>2018&#8209;02&#8209;06</small>
+        </p>
+        <p style="margin-bottom: 10px"><a href="/tech/generic-port-width.html" title="Array size mismatches with generic port widths">Array size mismatches with generic port widths</a>
+          <small>2018&#8209;01&#8209;09</small>
+        </p>
+        <p style="margin-bottom: 10px"><a href="/tech/systemverilog-project-demo.html" title="How to setup a SystemVerilog project in Sigasi Studio">How to setup a SystemVerilog project in Sigasi Stu...</a>
+          <small>2017&#8209;12&#8209;06</small>
+        </p>
+      </div>
+      <div class="col-md-offset-0 col-md-6" >
+        <p style="margin-bottom: 10px"><a href="/tech/systemverilog-uvm-demo.html" title="How to setup a SystemVerilog UVM project in Sigasi">How to setup a SystemVerilog UVM project in Sigasi</a>
+          <small>2017&#8209;12&#8209;06</small>
+        </p>
+        <p style="margin-bottom: 10px"><a href="/tech/wallpapers.html" title="Wallpapers for fans of Sigasi Studio">Wallpapers for fans of Sigasi Studio</a>
+          <small>2017&#8209;11&#8209;30</small>
+        </p>
+        <p style="margin-bottom: 10px"><a href="/tech/using-uvvm-with-sigasi.html" title="How to set up the UVVM Library in Sigasi Studio">How to set up the UVVM Library in Sigasi Studio</a>
+          <small>2017&#8209;10&#8209;18</small>
+        </p>
+      </div>
+    </div>
 </div>
 
-          </div>
-<a href="http://www.sigasi.com/try-form?utm_source=Insights&utm_medium=Button&utm_campaign=Download">
-<div style="width:100%;background-color:#262262;color:white;padding:5px;font:lato;text-align:center">
- 	<p style="font-size:30px;font-weight:700;font:lato;padding:10px;margin:0px">
-		Evaluate Sigasi&nbsp;Studio
-	</p>
-</div> </a>        </div>
-      </nav>
-    </div>
-
-  </div>
-
-  <ul class="pager">
-    <li class="previous"><a href="/tech/taming_complex_chip_designs_with_beautiful_diagrams.html">&larr; Taming complex chip designs with beautiful diagrams</a></li>
-    <li class="next"><a href="/tech/vunit-quickfix.html">VUnit projects in Sigasi &rarr;</a></li>
-  </ul>
-
-</div>
 
 										</div>
 									</div>
