@@ -3,7 +3,7 @@
 	<!--// OPEN HEAD //-->
 	<head>
 		<!--// SITE TITLE //-->
-		<title>PSS Early Adopter (EA) Portable Test and Stimulus Standard - Sigasi</title>
+		<title>Portable Test and Stimulus Standard, PSS Beta - Sigasi</title>
 		<!--// SITE META //-->
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -27,11 +27,11 @@
 		<link rel="canonical" href="http://insights.sigasi.com//tech/pss.ebnf.html" />
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="PSS Early Adopter (EA) Portable Test and Stimulus Standard - Sigasi" />
+		<meta property="og:title" content="Portable Test and Stimulus Standard, PSS Beta - Sigasi" />
 		<meta property="og:url" content="http://insights.sigasi.com//tech/pss.ebnf.html" />
 		<meta property="og:site_name" content="Sigasi" />
 		<meta name="twitter:card" content="summary"/>
-		<meta name="twitter:title" content="PSS Early Adopter (EA) Portable Test and Stimulus Standard - Sigasi"/>
+		<meta name="twitter:title" content="Portable Test and Stimulus Standard, PSS Beta - Sigasi"/>
 		<!-- / Yoast SEO plugin. -->
 		<link rel='stylesheet' id='wgs-css'  href='/css/wgs.css?ver=4.3.2' type='text/css' media='all' />
 		<link rel='stylesheet' id='ls-google-fonts-css'  href='https://fonts.googleapis.com/css?family=Lato:100,300,regular,700,900%7COpen+Sans:300%7CIndie+Flower:regular%7COswald:300,regular,700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
@@ -1721,7 +1721,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 <div class="page-heading page-heading-hidden clearfix">
 	<div class="container">
 		<div class="heading-text">
-			<h1 class="entry-title" >PSS Early Adopter (EA) Portable Test and Stimulus Standard</h1>
+			<h1 class="entry-title" >Portable Test and Stimulus Standard, PSS Beta</h1>
 		</div>
 	</div>
 </div>
@@ -1932,12 +1932,12 @@ Insights<span style="color:#f47920">.</span>							</p>
 <div class="container">
   <div class="page-header">
     <div>
-        <h1 style="margin-bottom: 0px;margin-top: 30px;">PSS Early Adopter (EA) Portable Test and Stimulus Standard</h1>
+        <h1 style="margin-bottom: 0px;margin-top: 30px;">Portable Test and Stimulus Standard, PSS Beta</h1>
     </div>
 
     <div style="margin: 10px 0 10px">
         <span>
-            Posted on 2017&#8209;12&#8209;11
+            Posted on 2018&#8209;03&#8209;02
             by Sigasi
         </span>
         </br>
@@ -1950,9 +1950,9 @@ Insights<span style="color:#f47920">.</span>							</p>
     <div class="content">
       <div class="col-md-9" role="main">
         <p><em>
-Copyright © 2017 Accellera. All rights reserved.
+Copyright © 2017 - 2018 Accellera. All rights reserved.
 This is an unapproved Accellera Standards Draft, subject to change.</p>
-<p>Get the full Language Reference Manual, free of charge, at <a href="http://www.accellera.org/images/downloads/drafts-review/PSS_Early_Adopter_Release.pdf">http://www.accellera.org/images/downloads/drafts-review/PSS_Early_Adopter_Release.pdf</a></p>
+<p>Get the full Language Reference Manual, free of charge, at <a href="http://www.accellera.org/images/downloads/drafts-review/PSS_Beta_Feb_21_2018_Public_Review.pdf">http://www.accellera.org/images/downloads/drafts-review/PSS_Beta_Feb_21_2018_Public_Review.pdf</a></p>
 <p>Sigasi has created this browsable version of the grammar, hoping that it would be useful to you, but without any warranty whatsoever.</p>
 <p><a href="/tag/ebnf/" title="ebnf">More browsable grammars of Hardware Description and Verification languages</a>.
 </em>  </p>
@@ -1975,12 +1975,11 @@ This is an unapproved Accellera Standards Draft, subject to change.</p>
     | <a href="#struct_declaration">struct_declaration</a> <br />
     | <a href="#enum_declaration">enum_declaration</a> <br />
     | <a href="#coverspec_declaration">coverspec_declaration</a> <br />
-    | <a href="#import_method_decl">import_method_decl</a> <br />
+    | <a href="#function_decl">function_decl</a> <br />
     | <a href="#import_class_decl">import_class_decl</a> <br />
-    | <a href="#import_method_qualifiers">import_method_qualifiers</a> <br />
+    | <a href="#function_qualifiers">function_qualifiers</a> <br />
     | <a href="#export_action">export_action</a> <br />
     | <a href="#typedef_declaration">typedef_declaration</a> <br />
-    | <a href="#bins_declaration">bins_declaration</a> <br />
     | <a href="#import_stmt">import_stmt</a> <br />
     | <a href="#extend_stmt">extend_stmt</a> </dd>
 <dt><strong id="import_stmt">import_stmt</strong></dt>
@@ -2006,7 +2005,6 @@ This is an unapproved Accellera Standards Draft, subject to change.</p>
     | <a href="#overrides_declaration">overrides_declaration</a> <br />
     | <a href="#constraint_declaration">constraint_declaration</a> <br />
     | <a href="#action_field_declaration">action_field_declaration</a> <br />
-    | <a href="#bins_declaration">bins_declaration</a> <br />
     | <a href="#symbol_declaration">symbol_declaration</a> <br />
     | <a href="#coverspec_declaration">coverspec_declaration</a> <br />
     | <a href="#exec_block_stmt">exec_block_stmt</a> </dd>
@@ -2023,9 +2021,7 @@ This is an unapproved Accellera Standards Draft, subject to change.</p>
 <dt><strong id="io_direction">io_direction</strong></dt>
 <dd><font color="purple"><b>input</b></font> <br />
     | <font color="purple"><b>output</b></font> </dd>
-</dl>
-<h4 id="exec-blocks">Exec blocks</h4>
-<dl class="dl-horizontal">
+<dt><em> Exec blocks </em></dt>
 <dt><strong id="exec_block_stmt">exec_block_stmt</strong></dt>
 <dd><a href="#exec_block">exec_block</a> <br />
     | <a href="#target_code_exec_block">target_code_exec_block</a> <br />
@@ -2072,7 +2068,6 @@ This is an unapproved Accellera Standards Draft, subject to change.</p>
 <dd><a href="#constraint_declaration">constraint_declaration</a> <br />
     | <a href="#struct_field_declaration">struct_field_declaration</a> <br />
     | <a href="#typedef_declaration">typedef_declaration</a> <br />
-    | <a href="#bins_declaration">bins_declaration</a> <br />
     | <a href="#coverspec_declaration">coverspec_declaration</a> <br />
     | <a href="#exec_block_stmt">exec_block_stmt</a> </dd>
 <dt><strong id="struct_field_declaration">struct_field_declaration</strong></dt>
@@ -2082,8 +2077,8 @@ This is an unapproved Accellera Standards Draft, subject to change.</p>
 </dl>
 <h3 id="b4-procedural-interface-pi">B.4 Procedural interface (PI)</h3>
 <dl class="dl-horizontal">
-<dt><strong id="import_method_decl">import_method_decl</strong></dt>
-<dd><font color="purple"><b>import</b></font> <a href="#method_prototype">method_prototype</a> <font color="purple"><b>;</b></font> </dd>
+<dt><strong id="function_decl">function_decl</strong></dt>
+<dd><font color="purple"><b>function</b></font> <a href="#method_prototype">method_prototype</a> <font color="purple"><b>;</b></font> </dd>
 <dt><strong id="method_prototype">method_prototype</strong></dt>
 <dd><a href="#method_return_type">method_return_type</a> <a href="#method_identifier">method_identifier</a> <a href="#method_parameter_list_prototype">method_parameter_list_prototype</a> </dd>
 <dt><strong id="method_return_type">method_return_type</strong></dt>
@@ -2097,11 +2092,8 @@ This is an unapproved Accellera Standards Draft, subject to change.</p>
 <dd><font color="purple"><b>input</b></font> <br />
     | <font color="purple"><b>output</b></font> <br />
     | <font color="purple"><b>inout</b></font> </dd>
-<dt><strong id="import_method_qualifiers">import_method_qualifiers</strong></dt>
-<dd><a href="#import_method_phase_qualifiers">import_method_phase_qualifiers</a> <br />
-    | <a href="#import_method_target_template">import_method_target_template</a> </dd>
-<dt><strong id="import_method_phase_qualifiers">import_method_phase_qualifiers</strong></dt>
-<dd><font color="purple"><b>import</b></font> <a href="#import_function_qualifiers">import_function_qualifiers</a> <a href="#type_identifier">type_identifier</a> <font color="purple"><b>;</b></font> </dd>
+<dt><strong id="function_qualifiers">function_qualifiers</strong></dt>
+<dd><font color="purple"><b>import</b></font> <a href="#import_function_qualifiers">import_function_qualifiers</a> <font color="purple"><b>function</b></font> <a href="#type_identifier">type_identifier</a> <font color="purple"><b>;</b></font> </dd>
 <dt><strong id="import_function_qualifiers">import_function_qualifiers</strong></dt>
 <dd><a href="#method_qualifiers">method_qualifiers</a>  [ <a href="#language_identifier">language_identifier</a>  ]  <br />
     | <a href="#language_identifier">language_identifier</a> </dd>
@@ -2109,7 +2101,7 @@ This is an unapproved Accellera Standards Draft, subject to change.</p>
 <dd><font color="purple"><b>target</b></font> <br />
     | <font color="purple"><b>solve</b></font> </dd>
 <dt><strong id="import_method_target_template">import_method_target_template</strong></dt>
-<dd><font color="purple"><b>import</b></font> <a href="#language_identifier">language_identifier</a> <a href="#method_prototype">method_prototype</a> <font color="purple"><b>=</b></font> <a href="#string">string</a> <font color="purple"><b>;</b></font> </dd>
+<dd><font color="purple"><b>target</b></font> <a href="#language_identifier">language_identifier</a> <font color="purple"><b>function</b></font> <a href="#method_prototype">method_prototype</a> <font color="purple"><b>=</b></font> <a href="#string">string</a> <font color="purple"><b>;</b></font> </dd>
 <dt><strong id="method_parameter_list">method_parameter_list</strong></dt>
 <dd><font color="purple"><b>(</b></font>  [ <a href="#expression">expression</a>  { <font color="purple"><b>,</b></font> <a href="#expression">expression</a>  }   ]  <font color="purple"><b>)</b></font> </dd>
 </dl>
@@ -2185,7 +2177,7 @@ This is an unapproved Accellera Standards Draft, subject to change.</p>
 <dd>[ <font color="purple"><b>sequence</b></font>  ]  <font color="purple"><b>{</b></font>  { <a href="#activity_labeled_stmt">activity_labeled_stmt</a>  }  <font color="purple"><b>}</b></font> </dd>
 <dt><strong id="activity_constraint_stmt">activity_constraint_stmt</strong></dt>
 <dd><font color="purple"><b>constraint</b></font> <font color="purple"><b>{</b></font>  { <a href="#constraint_body_item">constraint_body_item</a>  }  <font color="purple"><b>}</b></font> <br />
-    | <a href="#single_stmt_constraint">single_stmt_constraint</a> </dd>
+    | <font color="purple"><b>constraint</b></font> <a href="#single_stmt_constraint">single_stmt_constraint</a> </dd>
 <dt><strong id="activity_foreach_stmt">activity_foreach_stmt</strong></dt>
 <dd><font color="purple"><b>foreach</b></font> <font color="purple"><b>(</b></font> <a href="#expression">expression</a> <font color="purple"><b>)</b></font> <a href="#activity_sequence_block_stmt">activity_sequence_block_stmt</a> </dd>
 <dt><strong id="activity_action_traversal_stmt">activity_action_traversal_stmt</strong></dt>
@@ -2193,7 +2185,7 @@ This is an unapproved Accellera Standards Draft, subject to change.</p>
     | <font color="purple"><b>do</b></font> <a href="#type_identifier">type_identifier</a>  [ <a href="#inline_with_constraint">inline_with_constraint</a>  ]  <font color="purple"><b>;</b></font> </dd>
 <dt><strong id="inline_with_constraint">inline_with_constraint</strong></dt>
 <dd><font color="purple"><b>with</b></font> <font color="purple"><b>{</b></font>  { <a href="#constraint_body_item">constraint_body_item</a>  }  <font color="purple"><b>}</b></font> <br />
-    | <a href="#constant_expression">constant_expression</a> </dd>
+    | <font color="purple"><b>with</b></font> <a href="#constant_expression">constant_expression</a> </dd>
 <dt><strong id="activity_select_stmt">activity_select_stmt</strong></dt>
 <dd><font color="purple"><b>select</b></font> <font color="purple"><b>{</b></font> <a href="#activity_labeled_stmt">activity_labeled_stmt</a> <a href="#activity_labeled_stmt">activity_labeled_stmt</a>  { <a href="#activity_labeled_stmt">activity_labeled_stmt</a>  }  <font color="purple"><b>}</b></font> </dd>
 <dt><strong id="activity_labeled_stmt">activity_labeled_stmt</strong></dt>
@@ -2229,7 +2221,7 @@ This is an unapproved Accellera Standards Draft, subject to change.</p>
 <h3 id="b8-data-declarations">B.8 Data declarations</h3>
 <dl class="dl-horizontal">
 <dt><strong id="data_declaration">data_declaration</strong></dt>
-<dd><a href="#data_type">data_type</a> <a href="#data_instantiation">data_instantiation</a>  { <font color="purple"><b>,</b></font> <a href="#data_instantiation">data_instantiation</a>  }  </dd>
+<dd><a href="#data_type">data_type</a> <a href="#data_instantiation">data_instantiation</a>  { <font color="purple"><b>,</b></font> <a href="#data_instantiation">data_instantiation</a>  }  <font color="purple"><b>;</b></font> </dd>
 <dt><strong id="action_data_declaration">action_data_declaration</strong></dt>
 <dd><a href="#action_data_type">action_data_type</a> <a href="#data_instantiation">data_instantiation</a>  { <font color="purple"><b>,</b></font> <a href="#data_instantiation">data_instantiation</a>  }  <font color="purple"><b>;</b></font> </dd>
 <dt><strong id="data_instantiation">data_instantiation</strong></dt>
@@ -2240,7 +2232,7 @@ This is an unapproved Accellera Standards Draft, subject to change.</p>
 <dt><strong id="coverspec_portmap">coverspec_portmap</strong></dt>
 <dd><font color="purple"><b>.</b></font> <a href="#identifier">identifier</a> <font color="purple"><b>(</b></font> <a href="#hierarchical_id">hierarchical_id</a> <font color="purple"><b>)</b></font> </dd>
 <dt><strong id="array_dim">array_dim</strong></dt>
-<dd>[ <a href="#constant_expression">constant_expression</a>  ]  </dd>
+<dd><font color="purple"><b>[</b></font> <a href="#constant_expression">constant_expression</a> <font color="purple"><b>]</b></font> </dd>
 </dl>
 <h3 id="b9-data-types">B.9 Data types</h3>
 <dl class="dl-horizontal">
@@ -2259,16 +2251,17 @@ This is an unapproved Accellera Standards Draft, subject to change.</p>
 <dt><strong id="chandle_type">chandle_type</strong></dt>
 <dd><font color="purple"><b>chandle</b></font> </dd>
 <dt><strong id="integer_type">integer_type</strong></dt>
-<dd><a href="#integer_atom_type">integer_atom_type</a>  [ <font color="purple"><b>[</b></font> <a href="#expression">expression</a>  [ <font color="purple"><b>:</b></font> <a href="#expression">expression</a> <br />
-      | <font color="purple"><b>,</b></font> <a href="#open_range_value">open_range_value</a>  { <font color="purple"><b>,</b></font> <a href="#open_range_value">open_range_value</a>  }  <br />
-      | <font color="purple"><b>..</b></font> <a href="#expression">expression</a>  { <font color="purple"><b>,</b></font> <a href="#open_range_value">open_range_value</a>  }   ]  <font color="purple"><b>]</b></font>  ]  </dd>
+<dd><a href="#integer_atom_type">integer_atom_type</a>  [ <font color="purple"><b>[</b></font> <a href="#expression">expression</a>  [ <font color="purple"><b>:</b></font> <a href="#expression">expression</a>  ]  <font color="purple"><b>]</b></font>  ]   [ <font color="purple"><b>in</b></font> <font color="purple"><b>[</b></font> <a href="#open_range_list">open_range_list</a> <font color="purple"><b>]</b></font>  ]  </dd>
 <dt><strong id="integer_atom_type">integer_atom_type</strong></dt>
 <dd><font color="purple"><b>int</b></font> <br />
     | <font color="purple"><b>bit</b></font> </dd>
-<dt><strong id="open_range_value">open_range_value</strong></dt>
-<dd><a href="#expression">expression</a>  [ <font color="purple"><b>..</b></font> <a href="#expression">expression</a>  ]  </dd>
 <dt><strong id="open_range_list">open_range_list</strong></dt>
 <dd><a href="#open_range_value">open_range_value</a>  { <font color="purple"><b>,</b></font> <a href="#open_range_value">open_range_value</a>  }  </dd>
+<dt><strong id="open_range_value">open_range_value</strong></dt>
+<dd><a href="#expression">expression</a>  [ <font color="purple"><b>..</b></font> <a href="#expression">expression</a>  ]  <br />
+    | <a href="#expression">expression</a> <font color="purple"><b>..</b></font> <br />
+    | <font color="purple"><b>..</b></font> <a href="#expression">expression</a> <br />
+    | <a href="#expression">expression</a> </dd>
 <dt><strong id="string_type">string_type</strong></dt>
 <dd><font color="purple"><b>string</b></font> </dd>
 <dt><strong id="bool_type">bool_type</strong></dt>
@@ -2285,8 +2278,6 @@ This is an unapproved Accellera Standards Draft, subject to change.</p>
 <dd><font color="purple"><b>enum</b></font> <a href="#enum_identifier">enum_identifier</a> <font color="purple"><b>{</b></font>  [ <a href="#enum_item">enum_item</a>  { <font color="purple"><b>,</b></font> <a href="#enum_item">enum_item</a>  }   ]  <font color="purple"><b>}</b></font>  [ <font color="purple"><b>;</b></font>  ]  </dd>
 <dt><strong id="enum_item">enum_item</strong></dt>
 <dd><a href="#identifier">identifier</a>  [ <font color="purple"><b>=</b></font> <a href="#constant_expression">constant_expression</a>  ]  </dd>
-<dt><strong id="typedef_type">typedef_type</strong></dt>
-<dd><a href="#type_identifier">type_identifier</a> </dd>
 <dt><strong id="typedef_declaration">typedef_declaration</strong></dt>
 <dd><font color="purple"><b>typedef</b></font> <a href="#data_type">data_type</a> <a href="#identifier">identifier</a> <font color="purple"><b>;</b></font> </dd>
 </dl>
@@ -2303,7 +2294,7 @@ This is an unapproved Accellera Standards Draft, subject to change.</p>
     | <a href="#unique_constraint_item">unique_constraint_item</a> </dd>
 <dt><strong id="expression_constraint_item">expression_constraint_item</strong></dt>
 <dd><a href="#expression">expression</a> <a href="#implicand_constraint_item">implicand_constraint_item</a> <br />
-    | <font color="purple"><b>;</b></font> </dd>
+    | <a href="#expression">expression</a> <font color="purple"><b>;</b></font> </dd>
 <dt><strong id="implicand_constraint_item">implicand_constraint_item</strong></dt>
 <dd><font color="purple"><b>-&gt;</b></font> <a href="#constraint_set">constraint_set</a> </dd>
 <dt><strong id="constraint_set">constraint_set</strong></dt>
@@ -2321,8 +2312,8 @@ This is an unapproved Accellera Standards Draft, subject to change.</p>
 <dd><a href="#expression_constraint_item">expression_constraint_item</a> <br />
     | <a href="#unique_constraint_item">unique_constraint_item</a> </dd>
 <dt><strong id="scheduling_constraint">scheduling_constraint</strong></dt>
-<dd><font color="purple"><b>constraint</b></font> <font color="purple"><b>(</b></font> <font color="purple"><b>parallel</b></font> <br />
-    | <font color="purple"><b>sequence</b></font> <font color="purple"><b>)</b></font> <font color="purple"><b>{</b></font> <a href="#hierarchical_id">hierarchical_id</a> <font color="purple"><b>,</b></font> <a href="#hierarchical_id">hierarchical_id</a>  { <font color="purple"><b>,</b></font> <a href="#hierarchical_id">hierarchical_id</a>  }  <font color="purple"><b>}</b></font> <font color="purple"><b>;</b></font> </dd>
+<dd><font color="purple"><b>constraint</b></font>  ( <font color="purple"><b>parallel</b></font> <br />
+     | <font color="purple"><b>sequence</b></font>  )  <font color="purple"><b>{</b></font> <a href="#hierarchical_id">hierarchical_id</a> <font color="purple"><b>,</b></font> <a href="#hierarchical_id">hierarchical_id</a>  { <font color="purple"><b>,</b></font> <a href="#hierarchical_id">hierarchical_id</a>  }  <font color="purple"><b>}</b></font> <font color="purple"><b>;</b></font> </dd>
 </dl>
 <h3 id="b11-coverspec">B.11 Coverspec</h3>
 <dl class="dl-horizontal">
@@ -2339,33 +2330,28 @@ This is an unapproved Accellera Standards Draft, subject to change.</p>
 <dd><font color="purple"><b>option</b></font> <font color="purple"><b>.</b></font> <a href="#identifier">identifier</a> <font color="purple"><b>=</b></font> <a href="#constant_expression">constant_expression</a> <font color="purple"><b>;</b></font> </dd>
 <dt><strong id="coverspec_coverpoint">coverspec_coverpoint</strong></dt>
 <dd><a href="#coverpoint_identifier">coverpoint_identifier</a> <font color="purple"><b>:</b></font> <font color="purple"><b>coverpoint</b></font> <a href="#coverpoint_target_identifier">coverpoint_target_identifier</a> <font color="purple"><b>{</b></font>  { <a href="#coverspec_coverpoint_body_item">coverspec_coverpoint_body_item</a>  }  <font color="purple"><b>}</b></font>  [ <font color="purple"><b>;</b></font>  ]  <br />
-    | <font color="purple"><b>;</b></font> </dd>
+    | <a href="#coverpoint_identifier">coverpoint_identifier</a> <font color="purple"><b>:</b></font> <font color="purple"><b>coverpoint</b></font> <a href="#coverpoint_target_identifier">coverpoint_target_identifier</a> <font color="purple"><b>;</b></font> </dd>
 <dt><strong id="coverspec_coverpoint_body_item">coverspec_coverpoint_body_item</strong></dt>
 <dd><a href="#coverspec_option">coverspec_option</a> <br />
-    | <a href="#coverspec_coverpoint_binspec">coverspec_coverpoint_binspec</a> <br />
-    | <a href="#ignore_constraint">ignore_constraint</a> <br />
-    | <a href="#illegal_constraint">illegal_constraint</a> </dd>
+    | <a href="#coverspec_coverpoint_binspec">coverspec_coverpoint_binspec</a> </dd>
 <dt><strong id="coverspec_coverpoint_binspec">coverspec_coverpoint_binspec</strong></dt>
-<dd><font color="purple"><b>bins</b></font> <a href="#identifier">identifier</a> <a href="#bin_specification">bin_specification</a> <br />
-    | <a href="#hierarchical_id">hierarchical_id</a> <font color="purple"><b>;</b></font> </dd>
-<dt><strong id="ignore_constraint">ignore_constraint</strong></dt>
-<dd><font color="purple"><b>ignore</b></font> <a href="#expression">expression</a> </dd>
-<dt><strong id="illegal_constraint">illegal_constraint</strong></dt>
-<dd><font color="purple"><b>illegal</b></font> <a href="#expression">expression</a> <font color="purple"><b>;</b></font> </dd>
+<dd><a href="#bins_keyword">bins_keyword</a> <a href="#identifier">identifier</a> <a href="#bin_specification">bin_specification</a> <br />
+    | <a href="#bins_keyword">bins_keyword</a> <a href="#identifier">identifier</a> <a href="#hierarchical_id">hierarchical_id</a> <font color="purple"><b>;</b></font> </dd>
+<dt><strong id="bins_keyword">bins_keyword</strong></dt>
+<dd><font color="purple"><b>bins</b></font> <br />
+    | <font color="purple"><b>ignore_bins</b></font> <br />
+    | <font color="purple"><b>illegal_bins</b></font> </dd>
 <dt><strong id="coverspec_cross">coverspec_cross</strong></dt>
 <dd><a href="#ID">ID</a> <font color="purple"><b>:</b></font> <font color="purple"><b>cross</b></font> <a href="#coverpoint_identifier">coverpoint_identifier</a>  { <font color="purple"><b>,</b></font> <a href="#coverpoint_identifier">coverpoint_identifier</a>  }  <font color="purple"><b>{</b></font>  { <a href="#coverspec_cross_body_item">coverspec_cross_body_item</a>  }  <font color="purple"><b>}</b></font> <br />
-    | <font color="purple"><b>;</b></font> </dd>
+    | <a href="#ID">ID</a> <font color="purple"><b>:</b></font> <font color="purple"><b>cross</b></font> <a href="#coverpoint_identifier">coverpoint_identifier</a>  { <font color="purple"><b>,</b></font> <a href="#coverpoint_identifier">coverpoint_identifier</a>  }  <font color="purple"><b>;</b></font> </dd>
 <dt><strong id="coverspec_cross_body_item">coverspec_cross_body_item</strong></dt>
-<dd><a href="#coverspec_option">coverspec_option</a> <br />
-    | <a href="#ignore_constraint">ignore_constraint</a> <br />
-    | <a href="#illegal_constraint">illegal_constraint</a> </dd>
-</dl>
-<h4 id="bins">Bins</h4>
-<dl class="dl-horizontal">
+<dd><a href="#coverspec_option">coverspec_option</a> </dd>
+<dt><em> Bins </em></dt>
 <dt><strong id="bins_declaration">bins_declaration</strong></dt>
 <dd><font color="purple"><b>bins</b></font> <a href="#identifier">identifier</a>  [ <a href="#variable_identifier">variable_identifier</a>  ]  <a href="#bin_specification">bin_specification</a> <font color="purple"><b>;</b></font> </dd>
 <dt><strong id="bin_specification">bin_specification</strong></dt>
-<dd><a href="#bin_specifier">bin_specifier</a>  { <a href="#bin_specifier">bin_specifier</a>  }   [ <a href="#bin_wildcard">bin_wildcard</a>  ]  </dd>
+<dd><a href="#bin_specifier">bin_specifier</a>  { <a href="#bin_specifier">bin_specifier</a>  }   [ <a href="#bin_wildcard">bin_wildcard</a>  ]  <br />
+    | <font color="purple"><b>with</b></font> <font color="purple"><b>(</b></font> <a href="#expression">expression</a> <font color="purple"><b>)</b></font> </dd>
 <dt><strong id="bin_specifier">bin_specifier</strong></dt>
 <dd><a href="#explicit_bin_value">explicit_bin_value</a> <br />
     | <a href="#explicit_bin_range">explicit_bin_range</a> <br />
@@ -2403,11 +2389,19 @@ This is an unapproved Accellera Standards Draft, subject to change.</p>
 <dt><strong id="logical_equality_expr">logical_equality_expr</strong></dt>
 <dd><a href="#logical_inequality_expr">logical_inequality_expr</a>  { <a href="#eq_neq_op">eq_neq_op</a> <a href="#logical_inequality_expr">logical_inequality_expr</a>  }  </dd>
 <dt><strong id="logical_inequality_expr">logical_inequality_expr</strong></dt>
-<dd><a href="#binary_shift_expr">binary_shift_expr</a>  { <font color="purple"><b>&lt;</b></font> <br />
-     | <font color="purple"><b>&lt;=</b></font> <br />
-     | <font color="purple"><b>&gt;</b></font> <br />
-     | <font color="purple"><b>&gt;=</b></font> <a href="#binary_shift_expr">binary_shift_expr</a> <br />
-     | <font color="purple"><b>inside</b></font>  [ <a href="#open_range_list">open_range_list</a>  ]   }  </dd>
+<dd><a href="#binary_shift_expr">binary_shift_expr</a>  { <a href="#logical_inequality_rhs">logical_inequality_rhs</a>  }  </dd>
+<dt><strong id="logical_inequality_rhs">logical_inequality_rhs</strong></dt>
+<dd><a href="#inequality_expr_term">inequality_expr_term</a> <br />
+    | <a href="#inside_expr_term">inside_expr_term</a> </dd>
+<dt><strong id="inequality_expr_term">inequality_expr_term</strong></dt>
+<dd><a href="#logical_inequality_op">logical_inequality_op</a> <a href="#binary_shift_expr">binary_shift_expr</a> </dd>
+<dt><strong id="logical_inequality_op">logical_inequality_op</strong></dt>
+<dd><font color="purple"><b>&lt;</b></font> <br />
+    | <font color="purple"><b>&lt;=</b></font> <br />
+    | <font color="purple"><b>&gt;</b></font> <br />
+    | <font color="purple"><b>&gt;=</b></font> </dd>
+<dt><strong id="inside_expr_term">inside_expr_term</strong></dt>
+<dd><font color="purple"><b>in</b></font>  [ <a href="#open_range_list">open_range_list</a>  ]  </dd>
 <dt><strong id="binary_shift_expr">binary_shift_expr</strong></dt>
 <dd><a href="#binary_add_sub_expr">binary_add_sub_expr</a>  { <a href="#shift_op">shift_op</a> <a href="#binary_add_sub_expr">binary_add_sub_expr</a>  }  </dd>
 <dt><strong id="binary_add_sub_expr">binary_add_sub_expr</strong></dt>
@@ -2431,12 +2425,14 @@ This is an unapproved Accellera Standards Draft, subject to change.</p>
     | <a href="#bool_literal">bool_literal</a> <br />
     | <a href="#paren_expr">paren_expr</a> <br />
     | <a href="#string">string</a> <br />
-    | <a href="#variable_ref">variable_ref</a> <br />
+    | <a href="#variable_ref_path">variable_ref_path</a> <br />
     | <a href="#method_function_call">method_function_call</a> </dd>
 <dt><strong id="paren_expr">paren_expr</strong></dt>
 <dd><font color="purple"><b>(</b></font> <a href="#expression">expression</a> <font color="purple"><b>)</b></font> </dd>
+<dt><strong id="variable_ref_path">variable_ref_path</strong></dt>
+<dd><a href="#variable_ref">variable_ref</a>  { <font color="purple"><b>.</b></font> <a href="#variable_ref">variable_ref</a>  }  </dd>
 <dt><strong id="variable_ref">variable_ref</strong></dt>
-<dd><a href="#hierarchical_id">hierarchical_id</a>  [ <font color="purple"><b>[</b></font> <a href="#expression">expression</a>  [ <font color="purple"><b>:</b></font> <a href="#expression">expression</a> <font color="purple"><b>]</b></font>  ]   ]  </dd>
+<dd><a href="#identifier">identifier</a>  [ <font color="purple"><b>[</b></font> <a href="#expression">expression</a>  [ <font color="purple"><b>:</b></font> <a href="#expression">expression</a>  ]  <font color="purple"><b>]</b></font>  ]  </dd>
 <dt><strong id="method_function_call">method_function_call</strong></dt>
 <dd><a href="#method_call">method_call</a> <br />
     | <a href="#function_call">function_call</a> </dd>
@@ -2472,8 +2468,6 @@ This is an unapproved Accellera Standards Draft, subject to change.</p>
 <dd><a href="#type_identifier">type_identifier</a> </dd>
 <dt><strong id="type_identifier">type_identifier</strong></dt>
 <dd><a href="#ID">ID</a>  { <font color="purple"><b>::</b></font> <a href="#ID">ID</a>  }  </dd>
-<dt><strong id="hierarchical_type_identifier">hierarchical_type_identifier</strong></dt>
-<dd><a href="#ID">ID</a> <font color="purple"><b>::</b></font> <a href="#ID">ID</a>  { <font color="purple"><b>::</b></font> <a href="#ID">ID</a>  }  </dd>
 <dt><strong id="package_identifier">package_identifier</strong></dt>
 <dd><a href="#hierarchical_id">hierarchical_id</a> </dd>
 <dt><strong id="coverpoint_target_identifier">coverpoint_target_identifier</strong></dt>
@@ -2496,11 +2490,7 @@ This is an unapproved Accellera Standards Draft, subject to change.</p>
 <dd><a href="#identifier">identifier</a> </dd>
 <dt><strong id="method_identifier">method_identifier</strong></dt>
 <dd><a href="#identifier">identifier</a> </dd>
-<dt><strong id="pool_identifier">pool_identifier</strong></dt>
-<dd><a href="#identifier">identifier</a> </dd>
 <dt><strong id="variable_identifier">variable_identifier</strong></dt>
-<dd><a href="#identifier">identifier</a> </dd>
-<dt><strong id="bin_identifier">bin_identifier</strong></dt>
 <dd><a href="#identifier">identifier</a> </dd>
 <dt><strong id="exec_kind_identifier">exec_kind_identifier</strong></dt>
 <dd><a href="#identifier">identifier</a> </dd>
@@ -2605,15 +2595,12 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
       <nav class="hidden-print hidden-xs hidden-sm">
         <div class="sidebar" data-spy="affix" data-offset-top="510" data-offset-bottom="200">
           <div class="well">
-            <a href="#"><strong>PSS Early Adopter (EA) Portable Test and Stimulus Standard</strong></a>
+            <a href="#"><strong>Portable Test and Stimulus Standard, PSS Beta</strong></a>
             <div class="toc">
 <ul>
 <li><a href="#formal-syntax">Formal syntax</a></li>
 <li><a href="#b1-package-declarations">B.1 Package declarations</a></li>
-<li><a href="#b2-action-declarations">B.2 Action declarations</a><ul>
-<li><a href="#exec-blocks">Exec blocks</a></li>
-</ul>
-</li>
+<li><a href="#b2-action-declarations">B.2 Action declarations</a></li>
 <li><a href="#b3-struct-declarations">B.3 Struct declarations</a></li>
 <li><a href="#b4-procedural-interface-pi">B.4 Procedural interface (PI)</a><ul>
 <li><a href="#b41-import-class-declaration">B.4.1 Import class declaration</a></li>
@@ -2626,10 +2613,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 <li><a href="#b8-data-declarations">B.8 Data declarations</a></li>
 <li><a href="#b9-data-types">B.9 Data types</a></li>
 <li><a href="#b10-constraint">B.10 Constraint</a></li>
-<li><a href="#b11-coverspec">B.11 Coverspec</a><ul>
-<li><a href="#bins">Bins</a></li>
-</ul>
-</li>
+<li><a href="#b11-coverspec">B.11 Coverspec</a></li>
 <li><a href="#b12-expression">B.12 Expression</a></li>
 <li><a href="#b13-identifiers-and-literals">B.13 Identifiers and literals</a></li>
 <li><a href="#b14-numbers">B.14 Numbers</a></li>
@@ -2645,8 +2629,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
   </div>
 
   <ul class="pager">
-    <li class="previous"><a href="/tech/preview.html">&larr; Sigasi Studio Preview (3.8)</a></li>
-    <li class="next"><a href="/tech/systemverilog-project-demo.html">How to setup a SystemVerilog project in Sigasi Studio &rarr;</a></li>
+    <li class="next"><a href="/tech/xsim-xps.html">Common error from XSim with XPM library &rarr;</a></li>
   </ul>
 
 </div>
@@ -2705,7 +2688,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2018-02-23 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2018-03-02 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
