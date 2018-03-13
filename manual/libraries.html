@@ -1950,7 +1950,7 @@ Insights<span style="color:#f47920">.</span>							</p>
         <h2 id="introduction">Introduction</h2>
 <p>HDL libraries are a very powerful feature of the HDL languages. Sigasi Studio
 makes it easy to configure and use them. In this chapter, we assume that
-the basic concepts of VHDL libraries are understood. We will explain how
+the basic concepts of HDL libraries are understood. We will explain how
 they are implemented in Sigasi Studio.</p>
 <p>Like with any HDL tool, Sigasi Studio needs to know where the libraries are
 located on the file system. We will describe how the library
@@ -1959,10 +1959,9 @@ configuration can be examined and modified using the GUI.</p>
 Sigasi Studio to organize your projects.</p>
 <h2 id="libraries-examine">Examining the library configuration</h2>
 <p>You can examine the library configuration in the <a href="/manual/views.html#libraries" title="Views">libraries</a>
-and in the <a href="/manual/views.html#explorer" title="Views">explorer</a>
-view. The Libraries view shows how
+and in the <a href="/manual/views.html#explorer" title="Views">explorer</a> view. The Libraries view shows how
 <em>design units</em> are mapped. The Project Explorer view show how VHDL or
-Verilog <em>files</em> are mapped.</p>
+SystemVerilog <em>files</em> are mapped.</p>
 <p>In the Libraries view you can see a tree of all libraries in your
 projects. You can open each library to see all contained design units.</p>
 <p><img alt="" src="images/librariesview.png" /></p>
@@ -1970,12 +1969,13 @@ projects. You can open each library to see all contained design units.</p>
 with the library it belongs to, between square brackets:</p>
 <p><img alt="" src="images/librarymappinginitialview.png" /></p>
 <p>What you see here is the initial library mapping of a demo project (you
-can create such a project by selecting <strong>File > New > Other > Demo
-Vhdl project</strong>). We see a project called Demo, with a folder named
+can create such a project by selecting <strong>File > New > Other > Tutorial
+VHDL Project</strong> or <strong>Tutorial SystemVerilog Project</strong>).<br />
+In the screenshot we see a project called Demo, with a folder named
 <code>Common Libraries</code>. In that folder, you see the typical standard
 libraries (<code>std</code> and <code>ieee</code>) upon which all VHDL projects depend. The
 demo project itself consists of a few VHDL files.</p>
-<p>Next to the project’s name, <code>Demo</code>, is the annotation <code>work</code>. This means
+<p>Next to the project’s name <code>Demo</code>, is the annotation <code>work</code>. This means
 that, barring any overrides, everything in the project will be stored
 inside the <code>work</code> library.</p>
 <p>Lower down, we see overrides. For example, the <code>STD</code> folder has an
@@ -1991,9 +1991,10 @@ and Project Explorer view.</p>
 <p><img alt="" src="images/librarymappingcontextmenu.png" /></p>
 <p>You get a <code>Set Library</code> context menu, with a number of options:</p>
 <ul>
-<li>Select the name of an existing library to map the file or folder to that library</li>
 <li>Select <strong>Exclude from build</strong> to exclude the file or folder from any library</li>
-<li>Select <strong>New Library</strong> to define a new library and map the file or folder to it</li>
+<li>Select <strong>New Library...</strong> to define a new library and map the file or folder to it</li>
+<li>If one ore more folders are selected, the folder can be added to a library with the folder name(s)</li>
+<li>Select the name of an existing library to map the file or folder to that library</li>
 </ul>
 <p>When you map a file into a library, only that file is affected. However,
 when you map a folder into a library, then everything in that folder
@@ -2016,25 +2017,59 @@ not a part of the project and will not include that resource in a
 project build. This is typically useful when you have stale copies of
 HDL files or folders lying around that you want simply to be ignored.</p>
 <h2 id="configuration-file">Configuration file</h2>
-<p>All library configuration information is stored in the <code>.library_mapping.xml</code> file in the root of your project.
-If you edit this file, your project will be cleared and rebuilt automatically (a so-called <em>Clean Build</em>).</p>
-<p>Sigasi Studio only writes changes to this configuration file when you make changes to the library configuration with the context menu in the <em>Project Explorer</em>. When you do make changes, Sigasi Studio first checks that all paths in the library configuration still exist. If a path no longer exists, is will be removed from the configuration file.
+<p>All library configuration information is stored in the <code>.library_mapping.xml</code>
+file in the root of your project.
+If you edit this file, your project will be cleared and rebuilt automatically
+(a so-called <em>Clean Build</em>).</p>
+<p>Sigasi Studio only writes changes to this configuration file when you make
+changes to the library configuration with the context menu in the
+<em>Project Explorer</em>.
+When you do make changes, Sigasi Studio first checks that all paths in the
+library configuration still exist. If a path no longer exists, is will be
+removed from the configuration file.
 Note that the library configuration file is <strong>case-sensitive</strong>, even on Windows.</p>
 <h2 id="libraries-common">Common Libraries</h2>
+<p>Each VHDL project has a folder called <code>Common Libraries</code>.
+This is where reusable libraries go: either vendor libraries, third party IP
+libraries or your own reusable libraries. By default, the <code>STD</code> and <code>IEEE</code>
+libraries are added to this folder.
+The <code>Common Libraries</code> folder behaves like any other folder.
+You can delete it, rename it and apply a different library mapping.
+In most cases, however, the default configuration is just what you need.</p>
+<h3 id="how-to-add-files-to-common-libraries">How to add files to Common Libraries ?</h3>
 <p>In any newly created VHDL project, the <code>Common Libraries</code> folder
-contains the VHDL files of the <code>IEEE</code> and <code>STD</code> libraries. This folder
-is special in the sense that its contents are not stored in regular files
-on your hard drive. Instead, the files’ contents are shipped as part of
-the Sigasi Studio installation. These files are not sent to an
-external compiler since it is expected that the contents of the Common Libraries
-are pre-compiled. Other than that, the <code>Common Libraries</code> folder
-behaves like any other folder. You can delete it, rename it, and apply a
-different library mapping. In most cases, however, the default
-configuration is just what you need.</p>
+contains the VHDL files of the <code>IEEE</code> and <code>STD</code> libraries.
+To add files to the Common Libraries folder, locate a folder with VHDL files
+on your file system using the Project Explorer or the file explorer of your OS
+and drag the folder with VHDL files to the Common Libraries folder.</p>
+<h3 id="how-is-common-libraries-different-from-another-folder">How is Common Libraries different from another folder ?</h3>
+<ul>
+<li>
+<p><code>Common Libraries</code> is a <em>virtual</em> folder. This means that it is not a real
+folder in the project directory and it can only contain references to folders
+on your file system.</p>
+</li>
+<li>
+<p>Files in <code>Common Libraries</code> are supposed to be error free. Sigasi Studio
+will not mark errors or warnings in these files.</p>
+</li>
+<li>
+<p>While you work on your project, you don't want to edit the files in the
+<code>Common Libraries</code>, but you need them to compile your project.</p>
+</li>
+<li>
+<p>Files in <code>Common Libraries</code> are supposed to be pre-compiled. If you tell
+Sigasi Studio to compile your project using an external compiler, the
+Common Libraries are skipped. You need to pre-compile them yourself and let
+your compiler know where the compiled libraries are. For ModelSim, you can
+use the "modelsim.ini" file for this.</p>
+</li>
+</ul>
+<h3 id="what-if-i-broke-my-common-libraries-folder">What if I broke my Common Libraries folder?</h3>
 <p>If you have modified the <code>Common Libraries</code> folder, you can always
 revert it back to the original state.
-Right-click on your project in the explorer view and apply menu-entry
-<strong>Reset Library Mapping</strong>.</p>
+Right-click on the Common Libraries folder of your project in the explorer
+view and apply menu-entry <strong>Set Library &gt; Reset Common Libraries</strong>.</p>
 <p><img alt="" src="images/librarymappingrestorecommonlibraries.png" /></p>
 <h2 id="ieee-vital">IEEE Vital</h2>
 <p>See <a href="/tech/how-can-i-use-the-ieee-vital-libraries-with-sigasi-pro.html" title="How can I use the IEEE Vital libraries with Sigasi Pro?">How can I use the IEEE Vital libraries with Sigasi Pro?</a></p>
@@ -2090,11 +2125,22 @@ and <code>/opt/altera</code> for Altera.</p>
 <p>For many common third party libraries, you can set up the library using
 a <a href="/manual/linting.html#quick-fix-for-third-party-libraries" title="Linting and Quick Fixes">Quick Fix for third party libraries</a>.</p>
 <h3 id="xilinxcorelib">XilinxCoreLib</h3>
-<p>XilinxCoreLib is a very big library with more than a thousand entities and architectures. If you include all of these design units, it slows down the compilation phase of Sigasi Studio. In order to avoid that, Sigasi Studio only adds the packages with the component declarations to your project by default. It <em>excludes</em> the entities and architectures <em>from compilation</em>.</p>
-<p>You can easily add selected entities (and architectures) to your project by right clicking the corresponding file (<code>filename = entity name.vhd</code>) in the <a href="/manual/views.html#explorer" title="Views">Project Explorer</a>, and selecting <strong>Set Library &gt; xilinxcorelib</strong>.</p>
+<p>XilinxCoreLib is a very big library with more than a thousand entities and
+architectures. If you include all of these design units, it slows down the
+compilation phase of Sigasi Studio. In order to avoid that, Sigasi Studio
+only adds the packages with the component declarations to your project by
+default. It <em>excludes</em> the entities and architectures <em>from compilation</em>.</p>
+<p>You can easily add selected entities (and architectures) to your project by
+right clicking the corresponding file (<code>filename = entity name.vhd</code>) in the
+<a href="/manual/views.html#explorer" title="Views">Project Explorer</a>, and selecting
+<strong>Set Library &gt; xilinxcorelib</strong>.</p>
 <h2 id="library-errors-from-external-compilers">Library errors from external compilers</h2>
-<p>If you are using the <a href="/manual/tools.html#external-compilers" title="Tool Integration">External Compilers</a>, the external compiler can also put error markers on library clauses. You can easily
-verify this by checking the prefix of the error message (e.g. <code>vcom:</code> for vcom errors). Consult the <a href="/manual/tools.html#libraries" title="Tool Integration">Libraries</a> section of the external compiler integration for more information on configuring libraries for your external compiler.</p>
+<p>If you are using the <a href="/manual/tools.html#external-compilers" title="Tool Integration">External Compilers</a>, the external compiler
+can also put error markers on library clauses. You can easily verify this by
+checking the prefix of the error message (e.g. <code>vcom:</code> for vcom errors).
+Consult the <a href="/manual/tools.html#libraries" title="Tool Integration">Libraries</a> section of the external compiler
+integration for more information on configuring libraries for your external
+compiler.</p>
 
       </div>
     </div>
@@ -2110,7 +2156,12 @@ verify this by checking the prefix of the error message (e.g. <code>vcom:</code>
 <li><a href="#libraries-examine">Examining the library configuration</a></li>
 <li><a href="#libraries-mapping">Modifying the library configuration</a></li>
 <li><a href="#configuration-file">Configuration file</a></li>
-<li><a href="#libraries-common">Common Libraries</a></li>
+<li><a href="#libraries-common">Common Libraries</a><ul>
+<li><a href="#how-to-add-files-to-common-libraries">How to add files to Common Libraries ?</a></li>
+<li><a href="#how-is-common-libraries-different-from-another-folder">How is Common Libraries different from another folder ?</a></li>
+<li><a href="#what-if-i-broke-my-common-libraries-folder">What if I broke my Common Libraries folder?</a></li>
+</ul>
+</li>
 <li><a href="#ieee-vital">IEEE Vital</a></li>
 <li><a href="#shared-libraries">Shared libraries</a></li>
 <li><a href="#libraries-third-party">Using third party libraries</a><ul>
@@ -2189,7 +2240,7 @@ verify this by checking the prefix of the error message (e.g. <code>vcom:</code>
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2018-03-07 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2018-03-13 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
