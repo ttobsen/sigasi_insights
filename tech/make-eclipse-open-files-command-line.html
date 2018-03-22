@@ -1956,7 +1956,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 
     <div class="content">
       <div class="col-md-9" role="main">
-        <p>Since the release of Eclipse 3.6 it’s been possible <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.6-201006080911/eclipse-news-part1.html#Platform">to open files in Eclipse from the command line</a>. There are <a href="http://aniefer.blogspot.com/2010/05/opening-files-in-eclipse-from-command.html">a</a> <a href="http://dsdp.eclipse.org/help/latest/index.jsp?topic=/org.eclipse.platform.doc.isv/guide/product_open_file.htm">few</a> [blogs}(http://wiki.eclipse.org/Eclipse/OpenFileFeature) that explain in great detail how this feature can be implemented.  I however would like to show you the simplest way to make use of this feature in your RCP application.</p>
+        <p>Since the release of Eclipse 3.6 it’s been possible <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.6-201006080911/eclipse-news-part1.html#Platform">to open files in Eclipse from the command line</a>. There are <a href="http://aniefer.blogspot.com/2010/05/opening-files-in-eclipse-from-command.html">a</a> <a href="http://dsdp.eclipse.org/help/latest/index.jsp?topic=/org.eclipse.platform.doc.isv/guide/product_open_file.htm">few</a> <a href="http://wiki.eclipse.org/Eclipse/OpenFileFeature">blogs</a> that explain in great detail how this feature can be implemented.  I however would like to show you the simplest way to make use of this feature in your RCP application.</p>
 <p>My goal is to be able to write <code>./myapplication the_path_to/afile.txt</code> on the command line to open a file in my Eclipse application. We can achieve this quickly if the entrypoint of your application extends the <code>IDEApplication</code> class. Unfortunately <code>IDEApplication</code> is not a part of the public Eclipse API, it’s a class in an internal package. I use it to get things working without having to write pages of code, you can replace it later with your own implementation.</p>
 <p>There are two things left to configure.</p>
 <p>First you need to be careful with the name of your application and it's executable. The <code>appName</code> property in your <code>plugin.xml</code> file and the filename of your executable have to match. If the name of your executable is <code>myapplication</code> (or <code>myapplication.exe</code> on windows) then the <code>appName</code> property should be capitalized, so it becomes <code>Myapplication</code>.</p>
@@ -2067,7 +2067,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2018-03-16 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2018-03-22 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
