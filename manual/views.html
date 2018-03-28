@@ -1764,6 +1764,9 @@ Insights<span style="color:#f47920">.</span>							</p>
 					<a href="/manual/tools.html">Tool Integration</a>
 				</li>
 				<li>
+					<a href="/manual/documentation.html">Documentation Generation</a>
+				</li>
+				<li>
 					<a href="/manual/plugins.html">Third party plugins</a>
 				</li>
 				<li>
@@ -1788,6 +1791,9 @@ Insights<span style="color:#f47920">.</span>							</p>
 		<li class="dropdown">
 			<a href="/releasenotes/" class="dropdown-toggle" data-toggle="dropdown">Release Notes <b class="caret"></b></a>
 			<ul class="dropdown-menu">
+				<li>
+					<a href="/releasenotes/sigasi-3.08.html">Sigasi Studio 3.8</a>
+				</li>
 				<li>
 					<a href="/releasenotes/sigasi-3.07.html">Sigasi Studio 3.7</a>
 				</li>
@@ -2078,26 +2084,19 @@ You also have to option to <strong>Zoom In</strong>, <strong>Zoom Out</strong> o
 This view shows the relationships between your source files and makes it easy to see <em>top levels</em> and important <em>packages</em>.
 The Dependencies View also makes it easy to detect <em>orphaned files</em>.</p>
 <p>The view is <em>automatically updated</em> each time you save your files.</p>
-<p><img alt="Dependencies View" src="images/dependencies-view.png" title="Dependencies View" /></p>
-<p>To focus on the dependencies of the active editor only, uncheck the project button (<img alt="Dependencies View" src="images/dependencies-view_project.png" />).</p>
-<p>The dependencies view can help you navigate too. Double click a file name in the diagram to open the corresponding editor.</p>
-<p>The dependencies View can also be pinned. This prevents the diagram from changing when you switch editors.</p>
-<p>You can export this diagram for documentation by clicking the save icon.</p>
+<p><img alt="Dependencies View for a complete project with libraries and design units" src="/releasenotes/3.8/dependencies_project_libraries_units.png" title="Dependencies View for a complete project with libraries and design units" /></p>
+<p>The dependencies view has following options:</p>
+<ul>
+<li><img alt="" src="/releasenotes/3.8/icon_project.png" /> show dependencies of entire projct. Uncheck to focus on the dependencies of the active editor only.</li>
+<li><img alt="" src="/releasenotes/3.8/icon_libraries.png" /> Group design files per library</li>
+<li><img alt="" src="/releasenotes/3.8/icon_units.png" /> Show design units inside design files. The design units are prefixed with an abbreviation of their kind (<strong>a</strong>rchitecture, <strong>m</strong>odule, <strong>p</strong>ackage, ...)</li>
+</ul>
+<p>The dependencies view can help you <strong>navigate</strong> too. Double click a file name in the diagram to open the corresponding editor.</p>
+<p>The dependencies View can also be <strong>pinned</strong>. This prevents the diagram from changing when you switch editors.</p>
+<p>You can <strong>export</strong> this diagram for documentation by clicking the save icon.</p>
 <h2 id="documentation">Documentation View</h2>
-<p><a href="/manual/editions.html#xl_doc" title="[Only in Sigasi Studio XL Doc]">[Only in Sigasi Studio XL Doc]</a>,<a href="/manual/editions.html#vhdl" title="[Only for VHDL]">[Only for VHDL]</a></p>
-<p>The <strong>Documentation view</strong> gives you a live preview of the automatic
-documentation Sigasi Studio can generate for your project.</p>
+<p>The <strong>Documentation view</strong> gives you a live preview of the <a href="/manual/documentation.html" title="Documentation Generation">automatic documentation</a> Sigasi Studio can generate for your project.</p>
 <p><img alt="" src="images/documentationview.png" /></p>
-<p>You do not need to add any special annotations to your code. Sigasi Studio uses the same code/comment association as the hover provider (<a href="/manual/editor.html#comment-association" title="Sigasi Studio Editor">Comment Association</a>). So to document a <code>port</code>, you append a comment to a port declaration. To document an <code>architecture</code>, you put the comment just on top of the architecture.</p>
-<h3 id="export-documentation">Export Documentation</h3>
-<p><a href="/manual/editions.html#xl_doc" title="[Only in Sigasi Studio XL Doc]">[Only in Sigasi Studio XL Doc]</a>,<a href="/manual/editions.html#vhdl" title="[Only for VHDL]">[Only for VHDL]</a></p>
-<p>You can export documentation for the entire project to <strong>pdf</strong> by
-clicking the save icon or via the <strong>Export…</strong> menu.
-Since Sigasi 2.27 this export also saves the DocBook source code, if you
-have a <a href="/manual/editions.html#xl_doc" title="Sigasi Studio XL Doc">Sigasi Studio XL Doc</a> license. This enables you to customize the pdf
-generation flow to your liking.</p>
-<p>All errors are logged to the console view.</p>
-<p>Users without a XL Doc License can also export a (watermarked) pdf.</p>
 <h2 id="netsearch">Net Search View</h2>
 <p><a href="/manual/editions.html#xl" title="[Only in Sigasi Studio XL]">[Only in Sigasi Studio XL]</a>,<a href="/manual/editions.html#vhdl" title="[Only for VHDL]">[Only for VHDL]</a></p>
 <p>With <strong>Net search</strong>, you can you to find <em>loads</em> and <em>drivers</em> of a net.
@@ -2141,10 +2140,7 @@ This is a generic Eclipse view [<a href="https://help.eclipse.org/oxygen/index.j
 <li><a href="#block">Block Diagram View</a></li>
 <li><a href="#fsm">State Machine View</a></li>
 <li><a href="#dependencies">Dependencies View</a></li>
-<li><a href="#documentation">Documentation View</a><ul>
-<li><a href="#export-documentation">Export Documentation</a></li>
-</ul>
-</li>
+<li><a href="#documentation">Documentation View</a></li>
 <li><a href="#netsearch">Net Search View</a></li>
 <li><a href="#preprocessor-view">Preprocessor view</a></li>
 <li><a href="#console-view">Console view</a></li>
@@ -2219,7 +2215,7 @@ This is a generic Eclipse view [<a href="https://help.eclipse.org/oxygen/index.j
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2018-03-22 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2018-03-28 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

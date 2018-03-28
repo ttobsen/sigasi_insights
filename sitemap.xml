@@ -16,6 +16,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>http://insights.sigasi.com/manual/documentation.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>http://insights.sigasi.com/opinion/automatic-bug-reporting-sigasi-hdt.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -302,6 +307,11 @@
     </url>
     <url>
         <loc>http://insights.sigasi.com/opinion/and-winner-facebook.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>http://insights.sigasi.com/releasenotes/sigasi-3.08.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -682,6 +692,11 @@
     </url>
     <url>
         <loc>http://insights.sigasi.com/tag/EDA2.0/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>http://insights.sigasi.com/screencasts/comment_markdown.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1377,6 +1392,11 @@
     </url>
     <url>
         <loc>http://insights.sigasi.com/tech/installing-translations-eclipse.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>http://insights.sigasi.com/screencasts/comment_associations.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>

@@ -1764,6 +1764,9 @@ Insights<span style="color:#f47920">.</span>							</p>
 					<a href="/manual/tools.html">Tool Integration</a>
 				</li>
 				<li>
+					<a href="/manual/documentation.html">Documentation Generation</a>
+				</li>
+				<li>
 					<a href="/manual/plugins.html">Third party plugins</a>
 				</li>
 				<li>
@@ -1788,6 +1791,9 @@ Insights<span style="color:#f47920">.</span>							</p>
 		<li class="dropdown">
 			<a href="/releasenotes/" class="dropdown-toggle" data-toggle="dropdown">Release Notes <b class="caret"></b></a>
 			<ul class="dropdown-menu">
+				<li>
+					<a href="/releasenotes/sigasi-3.08.html">Sigasi Studio 3.8</a>
+				</li>
 				<li>
 					<a href="/releasenotes/sigasi-3.07.html">Sigasi Studio 3.7</a>
 				</li>
@@ -2061,6 +2067,12 @@ The availability of code rules depends on the license requirements.</p>
 <tr>
 <td>ST</td>
 <td><img alt="" src="icons/warning_lightbulb.png" /></td>
+<td>C-style equality and inequality operator (<code>=</code> and <code>/=</code> vs <code>==</code> and <code>!=</code>)</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>ST</td>
+<td><img alt="" src="icons/warning_lightbulb.png" /></td>
 <td>VHDL 2008 features in VHDL 93 mode (Learn about <a href="/manual/config.html#configure-version" title="Configuring Your Design Environment">choosing your VHDL version</a>)</td>
 <td align="right"></td>
 </tr>
@@ -2310,6 +2322,18 @@ The availability of code rules depends on the license requirements.</p>
 <td><a href="#component-entity">Check for component/entity mismatch</a></td>
 <td align="right">187</td>
 </tr>
+<tr>
+<td>XL</td>
+<td></td>
+<td><a href="#header-comment">Header comment check</a></td>
+<td align="right">188</td>
+</tr>
+<tr>
+<td>XL</td>
+<td></td>
+<td><a href="#file-name">Filename must contain primary unit name</a></td>
+<td align="right">189</td>
+</tr>
 </tbody>
 </table>
 <h2 id="detailed-explanation-of-vhdl-code-rules">Detailed explanation of VHDL code rules</h2>
@@ -2472,6 +2496,13 @@ you would specify <code>.*_v</code> pattern in the <strong>Variable name</strong
 <h3 id="component-entity">Check for component/entity mismatch</h3>
 <p>Sigasi Studio gives a warning if a component declaration is not equal to its matching entity. You can easily fix this by applying the quick fix.</p>
 <p><img alt="" src="images/linting_component_entity.png" /></p>
+<h3 id="header-comment">Check header comment</h3>
+<p>Sigasi Studio can check that the <strong>header comment</strong> matches a specified pattern. A <strong>header comment</strong> is the comment that starts at the first character of your file (<em>no leading whitespace</em>).</p>
+<p>The check can be enabled in <strong>Preferences &gt; Sigasi &gt; VHDL &gt; Naming conventions</strong>.  The pattern can be set on the same page.</p>
+<p><img alt="Check header comments" src="/releasenotes/3.8/header_comment.png" title="Check header comments" /></p>
+<h3 file-name="file-name" id="check-that-filename-contains-primary-unit-name">Check that filename contains primary unit name</h3>
+<p>Sigasi Studio can check that the filename contains the name of at least one of the design unit names inside that file.  Note that this check is <strong>ignored</strong> by default. You can enable it in the VHDL <strong>Errors/Warnings</strong> preference page (<strong>Style Validation &gt; Filename must contain primary name</strong>).</p>
+<p><img alt="Check file name" src="/releasenotes/3.8/filename_linting.png" title="Check file name" /></p>
 <h2 id="project-specific-linting-settings">Project specific Linting settings</h2>
 <h3 id="severity-of-linting-checks">Severity of Linting checks</h3>
 <p>The default way to configure the severity of the Sigasi Studio linting checks is to set their severity in the <strong>Errors/Warnings</strong> preference page.
@@ -2602,6 +2633,8 @@ are configured in the same settings file. Examples:</p>
 <li><a href="#vector-width">Vector width in assignments and port maps</a></li>
 <li><a href="#order-of-associations">Order of associations</a></li>
 <li><a href="#component-entity">Check for component/entity mismatch</a></li>
+<li><a href="#header-comment">Check header comment</a></li>
+<li><a href="#check-that-filename-contains-primary-unit-name">Check that filename contains primary unit name</a></li>
 </ul>
 </li>
 <li><a href="#project-specific-linting-settings">Project specific Linting settings</a><ul>
@@ -2680,7 +2713,7 @@ are configured in the same settings file. Examples:</p>
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2018-03-22 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2018-03-28 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
