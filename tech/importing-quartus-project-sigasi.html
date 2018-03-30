@@ -1966,8 +1966,8 @@ Insights<span style="color:#f47920">.</span>							</p>
       <div class="col-md-9" role="main">
         <p>For some time it has been possible to <a href="/manual/tools.html#altera-quartus-ii-integration">integrate Sigasi Studio in Altera Quartus</a>.
 Through feedback from our users, we have seen that this approach is good when starting a project or taking off with Sigasi Studio on an existing Altera Quartus project.
-However, as a project grows and when more of the development work happens in Sigasi Studio, keeping the link to the Altera Quartus project might be a limiting element.
-Switching to a separate Sigasi Studio project will for example allow to show the source files in a hierarchical way in the Project Explorer.</p>
+However, as a project grows and when more of the development work happens in Sigasi Studio, keeping the link to the Altera Quartus project often gets in the way.
+Switching to a separate Sigasi Studio project is more flexible. For example, this allows to show the source files in a hierarchical way in the Project Explorer.</p>
 <p>To make it easier to use Sigasi Studio based on a Quartus project, we have created a script to convert an Altera Quartus project to a Sigasi Studio project file.
 The script has been added to our <a href="https://github.com/sigasi/SigasiProjectCreator">SigasiProjectCreator Github project</a>.</p>
 <h2 id="how-to-generate-a-sigasi-studio-project-from-a-quartus-project">How to generate a Sigasi Studio project from a Quartus project?</h2>
@@ -1980,7 +1980,7 @@ The script has been added to our <a href="https://github.com/sigasi/SigasiProjec
 
 <p><a href="https://github.com/sigasi/SigasiProjectCreator/blob/master/src/convertQuartusProjectToCsv.tcl">This TCL script</a> creates a file <code>quartus_files.csv</code> which contains a list of HDL source files and their library information.</p>
 <h3 id="3-generate-the-sigasi-studio-project-files-from-the-list-of-source-files">3. Generate the Sigasi Studio project files from the list of source files</h3>
-<div class="codehilite"><pre><span></span>&lt;path to SigasiProjectCreator&gt;/src/convertCsvFileToTree.py project_1 quartus_files.csv
+<div class="codehilite"><pre><span></span>&lt;path to SigasiProjectCreator&gt;/src/convertCsvFileToTree.py &lt;project_name&gt; quartus_files.csv
 </pre></div>
 
 
