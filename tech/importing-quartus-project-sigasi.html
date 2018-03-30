@@ -3,7 +3,7 @@
 	<!--// OPEN HEAD //-->
 	<head>
 		<!--// SITE TITLE //-->
-		<title>Sigasi Studio 3.7 - Sigasi</title>
+		<title>Importing a Quartus project in Sigasi - Sigasi</title>
 		<!--// SITE META //-->
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -24,14 +24,14 @@
 			}
 		</script>
 		<!-- This site is optimized with the Yoast SEO plugin v3.0.6 - https://yoast.com/wordpress/plugins/seo/ -->
-		<link rel="canonical" href="http://insights.sigasi.com//releasenotes/sigasi-3.07.html" />
+		<link rel="canonical" href="http://insights.sigasi.com//tech/importing-quartus-project-sigasi.html" />
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="Sigasi Studio 3.7 - Sigasi" />
-		<meta property="og:url" content="http://insights.sigasi.com//releasenotes/sigasi-3.07.html" />
+		<meta property="og:title" content="Importing a Quartus project in Sigasi - Sigasi" />
+		<meta property="og:url" content="http://insights.sigasi.com//tech/importing-quartus-project-sigasi.html" />
 		<meta property="og:site_name" content="Sigasi" />
 		<meta name="twitter:card" content="summary"/>
-		<meta name="twitter:title" content="Sigasi Studio 3.7 - Sigasi"/>
+		<meta name="twitter:title" content="Importing a Quartus project in Sigasi - Sigasi"/>
 		<!-- / Yoast SEO plugin. -->
 		<link rel='stylesheet' id='wgs-css'  href='/css/wgs.css?ver=4.3.2' type='text/css' media='all' />
 		<link rel='stylesheet' id='ls-google-fonts-css'  href='https://fonts.googleapis.com/css?family=Lato:100,300,regular,700,900%7COpen+Sans:300%7CIndie+Flower:regular%7COswald:300,regular,700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
@@ -1569,13 +1569,13 @@
 					<li class="menu-item menu-item-type-post_type menu-item-object-page ">
 					<a href="/faq.html">FAQ</a>
 					</li>
-					<li class="menu-item menu-item-type-post_type menu-item-object-page active">
+					<li class="menu-item menu-item-type-post_type menu-item-object-page ">
 					<a href="/releasenotes/">Release Notes</a>
 					</li>
 					<li class="menu-item menu-item-type-post_type menu-item-object-page ">
 					<a href="/screencasts/">Screencasts</a>
 					</li>
-					<li class="menu-item menu-item-type-post_type menu-item-object-page ">
+					<li class="menu-item menu-item-type-post_type menu-item-object-page active">
 					<a href="/tech/">Tech Articles</a>
 					</li>
 					<li class="menu-item menu-item-type-post_type menu-item-object-page ">
@@ -1721,7 +1721,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 <div class="page-heading page-heading-hidden clearfix">
 	<div class="container">
 		<div class="heading-text">
-			<h1 class="entry-title" >Sigasi Studio 3.7</h1>
+			<h1 class="entry-title" >Importing a Quartus project in Sigasi</h1>
 		</div>
 	</div>
 </div>
@@ -1788,7 +1788,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 			</li>
 			<li>
 				<a href="/faq.html">FAQ</a></li>
-		<li class="active" class="dropdown">
+		<li class="dropdown">
 			<a href="/releasenotes/" class="dropdown-toggle" data-toggle="dropdown">Release Notes <b class="caret"></b></a>
 			<ul class="dropdown-menu">
 				<li>
@@ -1918,7 +1918,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 			</li>
 			<li>
 				<a href="/screencasts/">Screencasts</a></li>
-			<li>
+			<li class="active">
 				<a href="/tech/">Tech Articles</a></li>
 			<li>
 				<a href="/opinion/">Opinion</a></li>
@@ -1938,14 +1938,24 @@ Insights<span style="color:#f47920">.</span>							</p>
 <div class="container">
   <div class="page-header">
     <div>
-        <h1 style="margin-bottom: 0px;margin-top: 30px;">Sigasi Studio 3.7</h1>
+        <h1 style="margin-bottom: 0px;margin-top: 30px;">Importing a Quartus project in Sigasi</h1>
     </div>
 
     <div style="margin: 10px 0 10px">
         <span>
-            Released on 2017&#8209;12&#8209;13
+            Posted on 2018&#8209;03&#8209;30
+            by Bart Brosens
         </span>
         </br>
+        <span>
+        Tagged as: 
+              <a href="/tag/GitHub/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">GitHub</a>
+              <a href="/tag/hdt-2.0/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">hdt-2.0</a>
+              <a href="/tag/Python/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">Python</a>
+              <a href="/tag/Sigasi/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">Sigasi</a>
+              <a href="/tag/Altera/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">Altera</a>
+              <a href="/tag/Quartus/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">Quartus</a>
+        </span>
 
     </div>
   </div>
@@ -1954,95 +1964,29 @@ Insights<span style="color:#f47920">.</span>							</p>
 
     <div class="content">
       <div class="col-md-9" role="main">
-        <p>Sigasi Studio 3.7 brings type-time <strong>component/entity mismatch checking</strong> with associated <strong>Quick Fix</strong>,
-<strong>SystemVerilog improvements</strong>, <strong>GHDL</strong> support and many more new features and bug fixes.</p>
-<h2 id="check-for-componententity-mismatch-quick-fix">Check for component/entity mismatch + Quick Fix</h2>
-<p>Sigasi Studio now warns you if a <code>component</code> declaration and its matching <code>entity</code> get out of sync.
-This is a common annoyance in HDL design that is typically discovered late in the design flow.
-Sigasi Studio now reports mismatches immediately, at <strong>type time</strong>.</p>
-<p><img alt="Check component/entity mismatch" src="3.7/linting_component_entity.png" /></p>
-<p>You can easily update a component declaration to match its entity declaration by applying the Quick Fix.</p>
-<p><a href="/screencasts/component_entity_mismatch_check.html" title="Check for component/entity mismatch &amp; Quick Fix">Have a look at the demo video for this new feature.</a></p>
-<h2 id="systemverilog-improvements">SystemVerilog improvements</h2>
-<p>We significantly improved and optimized the way Sigasi Studio analyzes <strong>include files</strong>.
-We also reduced the <em>memory footprint</em> and improved the project <em>analysis time</em>.
-Because now all includer/included-relationships are tracked project-wide,
-Sigasi Studio can provide very accurate navigation <strong>without any extra configuration effort</strong> on your part.
-This allows you to focus on the code instead of having to track which parts of your design are in scope.</p>
-<p>For example, to add <strong>UVM</strong> support to your project, you now only have to:</p>
-<ol>
-<li>Drag and drop the source folder in your project</li>
-<li>Add the UVM source folder to your project's include path</li>
-</ol>
-<p>Next, Sigasi Studio figures out all relations automatically, allowing you to easily follow declarations, use autocomplete and preview preprocessor macro expansions.
-For more information, you should read the updated <a href="/tech/systemverilog-uvm-demo.html" title="How to setup a SystemVerilog UVM project in Sigasi">UVM example post</a>.</p>
-<p><img alt="UVM ubus project" src="3.7/uvm_ubus.png" /></p>
-<h2 id="dependencies-viewer-mixed-language">Dependencies Viewer (Mixed language)</h2>
-<p>The <em>Dependencies Viewer</em> can now display the dependencies of your entire project.
-This makes it very easy to recognize <em>top levels</em> and <em>orphaned files</em>.</p>
-<p><img alt="Dependencies Viewer for entire project" src="3.7/dependencies_project.png" /></p>
-<p><a href="/screencasts/dependencies_viewer.html" title="Dependencies Viewer">Have a look at the demo video for this new feature.</a></p>
-<h2 id="ghdl-support-vhdl">GHDL support (VHDL)</h2>
-<p>Especially for our educational users using Apple MacBooks, we added support for the open-source GHDL simulator.</p>
-<p><img alt="GHDL support" src="3.7/ghdl_support.png" /></p>
-<p>Make sure to <a href="https://github.com/tgingold/ghdl/releases">download the latest version of ghdl from GitHub</a>.
-Do not download the outdated version that <a href="http://ghdl.free.fr">http://ghdl.free.fr</a> links to.</p>
-<h2 id="autocomplete-performance-mixed-language">Autocomplete performance (Mixed language)</h2>
-<p>We did a thorough performance analysis of the SystemVerilog and VHDL autocomplete feature.
-This way we could vastly reduce the autocomplete latency, especially for larger projects.</p>
-<p><img alt="Faster autocomplete" src="3.7/faster_autocomplete.png" /></p>
-<h2 id="other-new-and-noteworthy-improvements">Other new and noteworthy improvements</h2>
-<ul>
-<li>Because some of our users did not realize Sigasi Studio is more powerful when you use it on projects, we made some UI changes to clarify this. When an external file is opened, we now show a warning bar at the top of editor to clearly indicate you are missing out on a lot of features<br />
-<img alt="editing an external file" src="3.7/external_file_banner.png" /></li>
-<li>Add "Export CSV file with dependencies" feature available as action in the hierarchy view<br />
-<img alt="export csv in hierarchy view" src="3.7/csv_hierarchy.png" /></li>
-<li>You can now open the <strong>Dependencies View</strong> via the "Show in" menu in the editor<br />
-<img alt="show in dependencies" src="3.7/show_in_dependencies.png" /></li>
-<li>The Riviera-Pro toolchain now has <code>-dbg</code> as default option</li>
-<li>[VHDL] Allow to simulate a <code>configuration</code> as toplevel</li>
-<li>[VHDL] Improved constant evaluation in hovers<br />
-<img alt="constant evaluation in hover" src="3.7/constant_evaluation_hover.png" /></li>
-<li>[VHDL] Renaming of procedure arguments in package or package body now correctly renames arguments everywhere<br />
-<img alt="rename procedure" src="3.7/rename_procedure_parameter.png" /></li>
-<li>[VHDL] Support VHDL 2008 tool directives (`)<br />
-<img alt="VHDL 2008 tool directives" src="3.7/vhdl2008_tool_directive.png" /></li>
-<li>[VHDL] Add autocomplete template for formatter tags<br />
-<img alt="formatter tags autocomplete" src="3.7/formatter_tags.png" /></li>
-<li>[VHDL] The Quick Fix for the <strong>Vivado Unisim</strong> library now uses the real Vivado library, and not the legacy ISE compatibility version</li>
-<li>[Graphics configuration] You can now also reference labeled assignments</li>
-<li>The <strong>Sigasi Starter</strong> perspective is no longer the default perspective</li>
-<li>The <strong>FlexNet</strong> floating license key checkout now <strong>times out faster</strong></li>
-<li>We updated the Eclipse Xtext dependency to <code>2.13.0</code></li>
-</ul>
-<h2 id="bug-fixes">Bug fixes</h2>
-<ul>
-<li>ticket 3765,3999 : [SystemVerilog] autocomplete: respect 'replace tabs with spaces' setting</li>
-<li>ticket 3789 : [VHDL] Scoping issue in configurations</li>
-<li>ticket 4016 : [SystemVerilog] Incorrect syntax error report in assertion variable declarations (Used in Tidal library)</li>
-<li>ticket 3993 : [SystemVerilog] Formatting issue in case generate statements</li>
-<li>ticket 4004, 4007, 4027 : [VHDL] "Sort associations" Quick Fix generates wrong VHDL code</li>
-<li>ticket 4088 : Project &gt; Export generating bogus diagrams when Sigasi Studio is installed as Eclipse plugin</li>
-<li>ticket 4071 : Rename issue in component, when matching entity is defined in a different library</li>
-<li>ticket 4084 : "Format on save" puts the cursor on line 1 after save</li>
-<li>ticket 4095 : "Unused declaration" should not consider a component end name as a 'usage' of the component.</li>
-<li>ticket 4030 : [VHDL Formatting] Comments before (generate) elsif/else are not indented correctly</li>
-<li>ticket 4030 : [VHDL Formatting] The formatter now stops formatting your HDL code when it encounters unrecoverable syntax errors (such as missing parenthesis, braces and <code>end</code> keywords)</li>
-<li>ticket 4069 : [VHDL Formatting] Preserve newlines fails when line breaks are different from OS-line breaks</li>
-<li>ticket 4107 : [Graphics configuration] Collapse wires in block diagram generates wrong identifier names</li>
-</ul>
-<h2 id="how-to-update">How to update?</h2>
-<p>If you have Sigasi Studio 3 installed, you can <a href="/manual/setup.html#software-updates" title="Setting Up Sigasi Studio">update</a> or <a href="http://www.sigasi.com/download" title="Download the Latest Version of Sigasi">download a fresh install of the latest version</a>.</p>
-<h2 id="sigasi-371-point-release">Sigasi 3.7.1 point release</h2>
-<p>On January 8th we released Sigasi Studio 3.7.1. This release fixes following reported issues:</p>
-<ul>
-<li>Fixed refresh when editing Graphics Configuration files</li>
-<li>Fixed error in Dependencies View when using project dependencies.</li>
-<li>Allow to use multiple arguments on the Vivado XSim preference page</li>
-<li>Solved plugin dependency issue in older (pre Oxygen) Eclipse versions</li>
-<li>Fixed showing constant values in hover</li>
-</ul>
-<p>Thanks for all bug reports and enabling Talkback.</p>
+        <p>For some time it has been possible to <a href="/manual/tools.html#altera-quartus-ii-integration">integrate Sigasi Studio in Altera Quartus</a>.
+Through feedback from our users, we have seen that this approach is good when starting a project or taking off with Sigasi Studio on an existing Altera Quartus project.
+However, as a project grows and when more of the development work happens in Sigasi Studio, keeping the link to the Altera Quartus project might be a limiting element.
+Switching to a separate Sigasi Studio project will for example allow to show the source files in a hierarchical way in the Project Explorer.</p>
+<p>To make it easier to use Sigasi Studio based on a Quartus project, we have created a script to convert an Altera Quartus project to a Sigasi Studio project file.
+The script has been added to our <a href="https://github.com/sigasi/SigasiProjectCreator">SigasiProjectCreator Github project</a>.</p>
+<h2 id="how-to-generate-a-sigasi-studio-project-from-a-quartus-project">How to generate a Sigasi Studio project from a Quartus project?</h2>
+<h3 id="1-download-scripts">1. Download scripts</h3>
+<p>You can either <a href="https://github.com/sigasi/SigasiProjectCreator">clone the GitHub repository</a> or <a href="https://github.com/sigasi/SigasiProjectCreator/archive/master.zip">download a snapshot</a></p>
+<h3 id="2-extract-a-list-of-source-files-from-your-quartus-project">2. Extract a list of source files from your Quartus project</h3>
+<div class="codehilite"><pre><span></span>quartus_sh -t &lt;path to SigasiProjectCreator&gt;/src/convertQuartusProjectToCsv.tcl &lt;path to qpf or qsf file&gt;
+</pre></div>
+
+
+<p><a href="https://github.com/sigasi/SigasiProjectCreator/blob/master/src/convertQuartusProjectToCsv.tcl">This TCL script</a> creates a file <code>quartus_files.csv</code> which contains a list of HDL source files and their library information.</p>
+<h3 id="3-generate-the-sigasi-studio-project-files-from-the-list-of-source-files">3. Generate the Sigasi Studio project files from the list of source files</h3>
+<div class="codehilite"><pre><span></span>&lt;path to SigasiProjectCreator&gt;/src/convertCsvFileToTree.py project_1 quartus_files.csv
+</pre></div>
+
+
+<p>This script generates the <code>.project</code> and <code>.library_mapping.xml</code> files that define the Sigasi Studio project.</p>
+<h2 id="note">Note</h2>
+<p>When you make changes to your Quartus project, you need to re-run these scripts.</p>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -2062,31 +2006,33 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
       <nav class="hidden-print hidden-xs hidden-sm">
         <div class="sidebar" data-spy="affix" data-offset-top="510" data-offset-bottom="200">
           <div class="well">
-            <a href="#"><strong>Sigasi Studio 3.7</strong></a>
+            <a href="#"><strong>Importing a Quartus project in Sigasi</strong></a>
             <div class="toc">
 <ul>
-<li><a href="#check-for-componententity-mismatch-quick-fix">Check for component/entity mismatch + Quick Fix</a></li>
-<li><a href="#systemverilog-improvements">SystemVerilog improvements</a></li>
-<li><a href="#dependencies-viewer-mixed-language">Dependencies Viewer (Mixed language)</a></li>
-<li><a href="#ghdl-support-vhdl">GHDL support (VHDL)</a></li>
-<li><a href="#autocomplete-performance-mixed-language">Autocomplete performance (Mixed language)</a></li>
-<li><a href="#other-new-and-noteworthy-improvements">Other new and noteworthy improvements</a></li>
-<li><a href="#bug-fixes">Bug fixes</a></li>
-<li><a href="#how-to-update">How to update?</a></li>
-<li><a href="#sigasi-371-point-release">Sigasi 3.7.1 point release</a></li>
+<li><a href="#how-to-generate-a-sigasi-studio-project-from-a-quartus-project">How to generate a Sigasi Studio project from a Quartus project?</a><ul>
+<li><a href="#1-download-scripts">1. Download scripts</a></li>
+<li><a href="#2-extract-a-list-of-source-files-from-your-quartus-project">2. Extract a list of source files from your Quartus project</a></li>
+<li><a href="#3-generate-the-sigasi-studio-project-files-from-the-list-of-source-files">3. Generate the Sigasi Studio project files from the list of source files</a></li>
+</ul>
+</li>
+<li><a href="#note">Note</a></li>
 </ul>
 </div>
 
           </div>
-        </div>
+<a href="http://www.sigasi.com/try-form?utm_source=Insights&utm_medium=Button&utm_campaign=Download">
+<div style="width:100%;background-color:#262262;color:white;padding:5px;font:lato;text-align:center">
+ 	<p style="font-size:30px;font-weight:700;font:lato;padding:10px;margin:0px">
+		Evaluate Sigasi&nbsp;Studio
+	</p>
+</div> </a>        </div>
       </nav>
     </div>
 
   </div>
 
   <ul class="pager">
-    <li class="previous"><a href="/releasenotes/sigasi-3.08.html">&larr; Sigasi Studio 3.8</a></li>
-    <li class="next"><a href="/releasenotes/sigasi-3.06.html">Sigasi Studio 3.6 &rarr;</a></li>
+    <li class="next"><a href="/tech/preview.html">Sigasi Studio Preview (3.9) &rarr;</a></li>
   </ul>
 
 </div>
