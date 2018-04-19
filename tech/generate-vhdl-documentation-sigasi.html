@@ -3,7 +3,7 @@
 	<!--// OPEN HEAD //-->
 	<head>
 		<!--// SITE TITLE //-->
-		<title>Generate VHDL documentation in Sigasi - Sigasi</title>
+		<title>Generate VHDL documentation in Sigasi Studio - Sigasi</title>
 		<!--// SITE META //-->
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -27,11 +27,11 @@
 		<link rel="canonical" href="http://insights.sigasi.com//tech/generate-vhdl-documentation-sigasi.html" />
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="Generate VHDL documentation in Sigasi - Sigasi" />
+		<meta property="og:title" content="Generate VHDL documentation in Sigasi Studio - Sigasi" />
 		<meta property="og:url" content="http://insights.sigasi.com//tech/generate-vhdl-documentation-sigasi.html" />
 		<meta property="og:site_name" content="Sigasi" />
 		<meta name="twitter:card" content="summary"/>
-		<meta name="twitter:title" content="Generate VHDL documentation in Sigasi - Sigasi"/>
+		<meta name="twitter:title" content="Generate VHDL documentation in Sigasi Studio - Sigasi"/>
 		<!-- / Yoast SEO plugin. -->
 		<link rel='stylesheet' id='wgs-css'  href='/css/wgs.css?ver=4.3.2' type='text/css' media='all' />
 		<link rel='stylesheet' id='ls-google-fonts-css'  href='https://fonts.googleapis.com/css?family=Lato:100,300,regular,700,900%7COpen+Sans:300%7CIndie+Flower:regular%7COswald:300,regular,700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
@@ -1721,7 +1721,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 <div class="page-heading page-heading-hidden clearfix">
 	<div class="container">
 		<div class="heading-text">
-			<h1 class="entry-title" >Generate VHDL documentation in Sigasi</h1>
+			<h1 class="entry-title" >Generate VHDL documentation in Sigasi Studio</h1>
 		</div>
 	</div>
 </div>
@@ -1938,7 +1938,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 <div class="container">
   <div class="page-header">
     <div>
-        <h1 style="margin-bottom: 0px;margin-top: 30px;">Generate VHDL documentation in Sigasi</h1>
+        <h1 style="margin-bottom: 0px;margin-top: 30px;">Generate VHDL documentation in Sigasi Studio</h1>
     </div>
 
     <div style="margin: 10px 0 10px">
@@ -1951,7 +1951,7 @@ Insights<span style="color:#f47920">.</span>							</p>
         Tagged as: 
               <a href="/tag/documentation/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">documentation</a>
               <a href="/tag/VHDL/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">VHDL</a>
-              <a href="/tag/Sigasi/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">Sigasi</a>
+              <a href="/tag/Sigasi Studio/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">Sigasi Studio</a>
         </span>
 
     </div>
@@ -1971,12 +1971,12 @@ Insights<span style="color:#f47920">.</span>							</p>
 <li>The output can be confusing: <em>"Inheritance diagram"</em>? <em>"The output for this <strong>class</strong> was generated ..."</em>? This terminology makes sense for C++ projects, but not for HDLs.</li>
 <li><strong>Long feedback loop</strong>: the documentation for the entire projects needs to generated before you can inspect the result.</li>
 </ul>
-<h3 id="sigasi-documentation-generator">Sigasi documentation Generator</h3>
+<h3 id="sigasi-studio-documentation-generator">Sigasi Studio documentation Generator</h3>
 <p>For these reasons, we developed an alternative, based on Sigasi Studio's internal VHDL analyzer. We stuck with the base idea, but followed a different approach to overcome the disadvantages.</p>
-<p>The new Sigasi documentation generator has following advantages:</p>
+<p>The new Sigasi Studio documentation generator has following advantages:</p>
 <ul>
-<li><strong>No special coding requirements</strong>: the plain comments in your code are extracted for the documentation, no need for special annotations. Sigasi uses the same code/comment association as the hover provider (See "<a href="/manual/documentation.html#comment-association" title="Documentation Generation">Comment Association</a>"). So to document a <code>port</code>, you append a comment to a port declaration. To document an <code>architecture</code>, you put the comment just on top of the architecture.</li>
-<li><strong>All included</strong>. All documentation processing is done in Sigasi/Eclipse. So you do <em>not</em> need to install extra tools.</li>
+<li><strong>No special coding requirements</strong>: the plain comments in your code are extracted for the documentation, no need for special annotations. Sigasi Studio uses the same code/comment association as the hover provider (See "<a href="/manual/documentation.html#comment-association" title="Documentation Generation">Comment Association</a>"). So to document a <code>port</code>, you append a comment to a port declaration. To document an <code>architecture</code>, you put the comment just on top of the architecture.</li>
+<li><strong>All included</strong>. All documentation processing is done in Sigasi Studio/Eclipse. So you do <em>not</em> need to install extra tools.</li>
 <li><strong>Fully hyperlinked PDF</strong>. If you export the documentation, you get a fully hyperlinked PDF.</li>
 <li><strong>Live preview</strong>: you can see what the documentation will look like while you type your code and comments.</li>
 </ul>
@@ -1984,7 +1984,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 <p>To get an idea of the output, I generated a <a href="resources/documentation.pdf">pdf</a> for a <a href="resources/DocumentationExample.zip">simple example project</a>:</p>
 <p><a href="resources/documentation.pdf"><img alt="Example output" src="images/sigasi-docgen-pdf.png" /></a></p>
 <h3 id="how-does-it-work">How does it work?</h3>
-<p>Sigasi creates a pdf with your project's documentation in multiple steps:</p>
+<p>Sigasi Studio creates a pdf with your project's documentation in multiple steps:</p>
 <ol>
 <li>Extract all relevant information (content, comments,...) into an intermediate model</li>
 <li>Generate all diagrams</li>
@@ -1992,10 +1992,10 @@ Insights<span style="color:#f47920">.</span>							</p>
 <li>Convert the DocBook file to a pdf.</li>
 </ol>
 <p><img alt="" src="images/sigasi-docgen.png" /></p>
-<p>If you have a full <a href="/manual/editions.html#xl_doc" title="Sigasi Studio XL Doc">Sigasi Studio XL Doc</a> license, Sigasi also makes the intermediate DocBook file available. This allows you to fully customize the pdf generation. With a custom DocBook→pdf-flow, you could for example apply your company's colors, add your and logo or append extra sections, etc.</p>
+<p>If you have a full <a href="/manual/editions.html#xl_doc" title="Sigasi Studio XL Doc">Sigasi Studio XL Doc</a> license, Sigasi Studio also makes the intermediate DocBook file available. This allows you to fully customize the pdf generation. With a custom DocBook→pdf-flow, you could for example apply your company's colors, add your and logo or append extra sections, etc.</p>
 <h3 id="future-work">Future work</h3>
 <ul>
-<li>Although Sigasi already uses templates internally, these templates are not really user-configurable. In a future release we want to make these templates customizable. This way the exact content of the documentation can be easily tweaked.</li>
+<li>Although Sigasi Studio already uses templates internally, these templates are not really user-configurable. In a future release we want to make these templates customizable. This way the exact content of the documentation can be easily tweaked.</li>
 <li>Add <a href="/manual/views.html#fsm" title="Views">state machine diagrams</a> to the documentation</li>
 <li>Add Markup support. The VHDL comments are currently copied verbatim to the output. In a future release, we need to come up with a way to add markup (e.g. paragraphs, bold, italic, lists, ...)</li>
 <li>Some users reported they actually prefer special comments (e.g. Doxygen's <code>!--</code>) to mark documentation. They like to explicitly indicate what text gets into the documentation (and what not). So in a future release, we may add the option to require special comments for documentation.</li>
@@ -2023,10 +2023,10 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
       <nav class="hidden-print hidden-xs hidden-sm">
         <div class="sidebar" data-spy="affix" data-offset-top="510" data-offset-bottom="200">
           <div class="well">
-            <a href="#"><strong>Generate VHDL documentation in Sigasi</strong></a>
+            <a href="#"><strong>Generate VHDL documentation in Sigasi Studio</strong></a>
             <div class="toc">
 <ul>
-<li><a href="#sigasi-documentation-generator">Sigasi documentation Generator</a></li>
+<li><a href="#sigasi-studio-documentation-generator">Sigasi Studio documentation Generator</a></li>
 <li><a href="#how-does-it-work">How does it work?</a></li>
 <li><a href="#future-work">Future work</a></li>
 <li><a href="#conclusion">Conclusion</a></li>
