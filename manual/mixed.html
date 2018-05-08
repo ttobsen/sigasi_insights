@@ -1955,26 +1955,26 @@ Insights<span style="color:#f47920">.</span>							</p>
       <div class="col-md-9" role="main">
         <p><a href="/manual/editions.html#xl" title="[Only in Sigasi Studio XL]">[Only in Sigasi Studio XL]</a></p>
 <p>You can create mixed language projects by adding both <strong>VHDL</strong> and
-<strong>Verilog</strong> support to your project: right click your project and select
-<strong>Configure > Add VHDL support</strong> and <strong>Configure > Add Verilog
-support</strong></p>
+<strong>Verilog</strong> or <strong>SystemVerilog</strong> support to your project: right click
+your project and select <strong>Configure > Add VHDL support</strong> and
+<strong>Configure > Add (System)Verilog support</strong>.</p>
 <h2 id="features">Features</h2>
 <p>In mixed language projects you can <strong>navigate</strong> from instantiation
 statements to the matching entity or module. This works for both VHDL
-entity instantiations in Verilog code and Verilog module instantiations
-in VHDL code. You can also open the declaration of ports and
-generics/parameters in mixed instantiations.</p>
+entity instantiations in (System)Verilog code and (System)Verilog module
+instantiations in VHDL code. You can also open the declaration of ports
+and generics/parameters in mixed instantiations.</p>
 <p>Other supported features:</p>
 <ul>
 <li><strong>Find references</strong> for entity names, modules, ports, generics and parameters.</li>
-<li><strong>Autocomplete</strong> Verilog module instantiations in VHDL code.</li>
+<li><strong>Autocomplete</strong> (System)Verilog module instantiations in VHDL code.</li>
 <li><strong>Error reporting</strong> of incorrect entity names, modules, ports, generics and parameters in instantiations in VHDL code.</li>
-<li>VHDL <strong>renames</strong> are refused if they need changes in Verilog code.</li>
+<li>VHDL <strong>renames</strong> are refused if they need changes in (System)Verilog code.</li>
 </ul>
 <p>Screencast : <a href="/screencasts/mixed_language_instantiation.html" title="Mixed languages: instantiating Verilog in VHDL code">Mixed languages: instantiating Verilog in VHDL code</a></p>
 <h2 id="using-two-languages-in-sigasi-studio">Using two languages in Sigasi Studio</h2>
 <p>If you don't have the correct license for mixed language projects, you can still create your designs using two separate languages. In this case, choose your main language and enable support for this language (in this example: VHDL). Now, the files in the other language (in this example: Verilog) can still be in your project. You can still edit them and you even get Sigasi Studio support inside any one Verilog file. What is disabled now are the references from and to any Verilog files, but they work within a single Verilog file.</p>
-<p>If you want to instantiate a Verilog module in VHDL you need to work with a component declaration so that the VHDL part know the interface of you Verilog module.</p>
+<p>If you want to instantiate a (System)Verilog module in VHDL you need to work with a component declaration so that the VHDL part know the interface of you (System)Verilog module.</p>
 
       </div>
     </div>
@@ -2059,7 +2059,7 @@ generics/parameters in mixed instantiations.</p>
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2018-04-19 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2018-05-08 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
