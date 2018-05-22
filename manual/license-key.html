@@ -1987,7 +1987,7 @@ INCREMENT com.sigasi.hdt sigasi 2.0 18-nov-2012 4 \
 </pre></div>
 
 
-<h3 id="configuring-floating-license-in-sigasi-studio-flexnet-client">Configuring Floating license in Sigasi Studio (Flexnet Client)</h3>
+<h3 id="configuring-floating-license-in-sigasi-studio-flexnet-client">Configuring Floating license in Sigasi Studio (FlexNet Client)</h3>
 <p>In order to use a floating license, Sigasi Studio needs to know how to contact the server.
 The license server can be configured in Sigasi Studio or using an environment variable.</p>
 <h4 id="configure-the-license-server-in-sigasi-studio">Configure the license server in Sigasi Studio</h4>
@@ -2035,7 +2035,7 @@ When <code>SIGASI_LM_LICENSE_FILE</code> is set, <code>LM_LICENSE_FILE</code> is
 <li><a href="http://download.sigasi.com/flexnet/sigasi-flexnet-win32.zip">Windows 32 bit</a></li>
 </ul>
 </li>
-<li>Solaris (on SPARC) [Deprecated. Last supported Sigasi Studio version will be 3.6]:<ul>
+<li>Solaris (on SPARC) [Deprecated. The last supported Sigasi Studio version is 3.6]:<ul>
 <li><a href="http://download.sigasi.com/flexnet/sigasi-flexnet-solaris64.zip">Solaris 64 bit</a></li>
 </ul>
 </li>
@@ -2045,8 +2045,8 @@ When <code>SIGASI_LM_LICENSE_FILE</code> is set, <code>LM_LICENSE_FILE</code> is
 <p>The port of the Sigasi daemon is set on the <code>DAEMON</code> line. For example: <code>DAEMON sigasi port=27001</code>, forces the Sigasi daemon to use port 27001. </p>
 <p>The port of the FlexNet daemon is set on the <code>SERVER</code> line For example: <code>SERVER your_server_name1 BD41FCF5DE27 27000</code>, forces FlexNet to use port 27000.</p>
 <p>You can change the ports and servername without breaking the signature.</p>
-<h4 id="starting-the-flexnet-and-sigasi-daemon-on-linux">Starting the Flexnet and Sigasi Daemon on Linux</h4>
-<p>the easiest way to start the Sigasi Flexnet Daemon is like this (on Linux)</p>
+<h4 id="starting-the-flexnet-and-sigasi-daemon-on-linux">Starting the FlexNet and Sigasi daemon on Linux</h4>
+<p>the easiest way to start the Sigasi FlexNet daemon is like this (on Linux)</p>
 <div class="codehilite"><pre><span></span><span class="ch">#!/bin/sh</span>
 <span class="nb">echo</span> <span class="s2">&quot;Starting the Sigasi floating license server&quot;</span>
 <span class="nv">LOCATION</span><span class="o">=</span>/home/flex/flexnet-sigasi
@@ -2054,7 +2054,7 @@ When <code>SIGASI_LM_LICENSE_FILE</code> is set, <code>LM_LICENSE_FILE</code> is
 </pre></div>
 
 
-<h4 id="starting-the-flexnet-and-sigasi-daemon-on-windows">Starting the Flexnet and Sigasi Daemon on Windows</h4>
+<h4 id="starting-the-flexnet-and-sigasi-daemon-on-windows">Starting the FlexNet and Sigasi daemon on Windows</h4>
 <ol>
 <li>Download the Sigasi daemon (see above)</li>
 <li>Create a folder to hold the license manager software, in this example we will use <code>D:\Sigsi\license</code>.</li>
@@ -2093,7 +2093,7 @@ When <code>SIGASI_LM_LICENSE_FILE</code> is set, <code>LM_LICENSE_FILE</code> is
 <p>First, make sure that all VHDL and Verilog files are closed and all VHDL and Verilog projects are closed. Next select  <strong>Help &gt; Sigasi &gt; Floating license &gt; Release Sigasi Floating Licenses</strong></p>
 <p>To get the license back (to check the license out), open the license dialog <strong>Help &gt; Sigasi &gt; Configure License...</strong> and press <strong>Apply</strong>.</p>
 <h4 id="how-to-block-sigasi-studio-from-checking-out-a-license">How to block Sigasi Studio from checking out a license?</h4>
-<p>If you have configured an environment variable with the location of a Flexnet license server, you can instruct Sigasi Studio <strong>not</strong> to check out a license by setting the Sigasi Studio License key to <code>none</code>.</p>
+<p>If you have configured an environment variable with the location of a FlexNet license server, you can instruct Sigasi Studio <strong>not</strong> to check out a license by setting the Sigasi Studio License key to <code>none</code>.</p>
 <h4 id="mix-of-creator-and-xl-licenses">Mix of Creator and XL licenses</h4>
 <p>If your license server serves both Sigasi Studio <strong>Creator</strong> and <strong>XL</strong> licenses, you can configure Sigasi Studio to only checkout Sigasi Studio <strong>Creator</strong> licenses (and <strong>not</strong> XL licenses) by enabling the "<strong>Do not try to checkout floating Sigasi Studio XL licenses</strong>" option on <strong>Window &gt; Preferences &gt; Sigasi &gt; License Key &gt; Floating Options</strong></p>
 <h4 id="checking-out-and-releasing-the-doc-addon-license">Checking out and releasing the Doc addon license</h4>
@@ -2143,7 +2143,7 @@ When <code>SIGASI_LM_LICENSE_FILE</code> is set, <code>LM_LICENSE_FILE</code> is
 </ul>
 </li>
 <li>Make sure the server name in the license key file is correct.</li>
-<li>Make sure both the Sigasi and Flexnet Daemon are the same version (i.e. from the same zip-file from the Sigasi download server).   </li>
+<li>Make sure both the Sigasi and FlexNet daemon are the same version (i.e. from the same zip-file from the Sigasi download server). If you need to mix versions, the FlexNet daemon version should be equal to or higher than the Sigasi daemon version.</li>
 <li><strong>Firewall</strong> problems:<ul>
 <li>make sure that the port for the Sigasi FlexLM license daemon is open</li>
 <li>you can force the port for the Sigasi license daemon by adding USE_SERVER and DAEMON sigasi port=<port number>to your license key</li>
@@ -2233,7 +2233,7 @@ When <code>SIGASI_LM_LICENSE_FILE</code> is set, <code>LM_LICENSE_FILE</code> is
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#node-locked-licenses">Node locked licenses</a></li>
 <li><a href="#floating-licenses">Floating licenses</a><ul>
-<li><a href="#configuring-floating-license-in-sigasi-studio-flexnet-client">Configuring Floating license in Sigasi Studio (Flexnet Client)</a><ul>
+<li><a href="#configuring-floating-license-in-sigasi-studio-flexnet-client">Configuring Floating license in Sigasi Studio (FlexNet Client)</a><ul>
 <li><a href="#configure-the-license-server-in-sigasi-studio">Configure the license server in Sigasi Studio</a></li>
 <li><a href="#configure-the-license-server-in-an-environment-variable">Configure the license server in an environment variable</a></li>
 </ul>
@@ -2241,8 +2241,8 @@ When <code>SIGASI_LM_LICENSE_FILE</code> is set, <code>LM_LICENSE_FILE</code> is
 <li><a href="#license-server-setup">License server setup</a><ul>
 <li><a href="#download-flexnet-daemons">Download the FlexNet daemons</a></li>
 <li><a href="#customize-license-server-settings">Customize License Server settings</a></li>
-<li><a href="#starting-the-flexnet-and-sigasi-daemon-on-linux">Starting the Flexnet and Sigasi Daemon on Linux</a></li>
-<li><a href="#starting-the-flexnet-and-sigasi-daemon-on-windows">Starting the Flexnet and Sigasi Daemon on Windows</a></li>
+<li><a href="#starting-the-flexnet-and-sigasi-daemon-on-linux">Starting the FlexNet and Sigasi daemon on Linux</a></li>
+<li><a href="#starting-the-flexnet-and-sigasi-daemon-on-windows">Starting the FlexNet and Sigasi daemon on Windows</a></li>
 </ul>
 </li>
 <li><a href="#floating-license-options">Floating License options</a><ul>
@@ -2330,7 +2330,7 @@ When <code>SIGASI_LM_LICENSE_FILE</code> is set, <code>LM_LICENSE_FILE</code> is
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2018-05-16 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2018-05-22 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
