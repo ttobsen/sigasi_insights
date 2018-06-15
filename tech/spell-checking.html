@@ -1955,7 +1955,8 @@ Insights<span style="color:#f47920">.</span>							</p>
 
     <div class="content">
       <div class="col-md-9" role="main">
-        <p>Sigasi Studio supports spelling checking in comments and strings, but you need to <strong>install a spell checking plugin</strong> first. Next you need to <strong>download</strong> and <strong>configure</strong> a <strong>dictionary</strong> for your language.</p>
+        <p>Sigasi Studio supports spelling checking in comments and strings, but you need to <strong>install a spell checking plugin</strong> first.
+Next you need to <strong>download</strong> and <strong>configure</strong> a <strong>dictionary</strong> for your language.</p>
 <h3 id="install-hunspell4eclipse">Install Hunspell4Eclipse</h3>
 <p>Install the <a href="http://code.google.com/p/hunspell4eclipse">Hunspell4Eclipse</a> plugin:</p>
 <ol>
@@ -1967,14 +1968,28 @@ Insights<span style="color:#f47920">.</span>							</p>
 <p><img alt="Install Hunspell4Eclipse" src="images/install_spelling.png" /></p>
 <h3 id="install-dictionary">Install Dictionary</h3>
 <p>The Hunspell plugin does not include any bundled dictionaries. You need to install dictionaries separately.</p>
-<p>You can download good dictionaries from the OpenOffice.org project, which also uses the Hunspell engine. There is a list of available dictionaries at <a href="http://extensions.services.openoffice.org/">http://extensions.services.openoffice.org/</a>.</p>
-<p>The file you downloaded will have an <code>.oxt</code> extension. If you rename this extension to <code>.zip</code>, you can unzip it. You need the <code>.dic</code> and <code>.aff</code> files for your language (e.g. <code>en_US.aff</code> and <code>en_US.dic</code> for <strong>American English</strong>). Copy these files to a safe location (the dictionary file path).</p>
+<p>You can download good dictionaries from the OpenOffice.org project, which also uses the Hunspell engine.
+There is a list of available dictionaries at <a href="http://extensions.services.openoffice.org/">http://extensions.services.openoffice.org/</a>.</p>
+<p>The file you downloaded will have an <code>.oxt</code> extension. If you rename this extension to <code>.zip</code>, you can unzip it.
+You need the <code>.dic</code> and <code>.aff</code> files for your language (e.g. <code>en_US.aff</code> and <code>en_US.dic</code> for <strong>American English</strong>).
+Copy these files to a safe location (the dictionary file path).</p>
 <h3 id="configure-the-dictionary">Configure the Dictionary</h3>
 <p>Open the Spelling preference page:
 <strong>Window &gt; Preferences &gt; General &gt; Editors &gt; Text Editors &gt; Spelling</strong>
 Next, enter the dictionary file path.</p>
 <h3 id="update-2017-09">Update 2017-09</h3>
-<p>Hunspell4Eclipse was originally hosted on the Google Code Project Hosting Service. Because this service was turned down in early 2016, we cloned the project's code on <a href="https://github.com/heeckhau/hunspell4eclipse">GitHub</a> and made binaries available on Sigasi's download server (<a href="http://download.sigasi.com/updates/hunspell4eclipse">http://download.sigasi.com/updates/hunspell4eclipse</a>).</p>
+<p>Hunspell4Eclipse was originally hosted on the Google Code Project Hosting Service.
+Because this service was turned down in early 2016, we cloned the project's code on
+<a href="https://github.com/heeckhau/hunspell4eclipse">GitHub</a> and made binaries available on
+Sigasi's download server (<a href="http://download.sigasi.com/updates/hunspell4eclipse">http://download.sigasi.com/updates/hunspell4eclipse</a>).</p>
+<h3 id="update-2018-06">Update 2018-06</h3>
+<p>If you already have hunspell installed on Linux, you can use the dictionary files from <em>/usr/share/myspell/</em>.</p>
+<p>If Sigasi Studio is installed on a read-only file system, you might see permission
+errors when temporary files can't be created.
+To avoid this, it is best to define a temporary directory for Java
+(-Djava.io.tmpdir=&lt;path to tmp dir>), e.g. somewhere in the user home directory,
+and pass that when starting Sigasi Studio, either on the command line or through
+the <strong>_JAVA_OPTIONS</strong> environment variable.</p>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -2001,6 +2016,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 <li><a href="#install-dictionary">Install Dictionary</a></li>
 <li><a href="#configure-the-dictionary">Configure the Dictionary</a></li>
 <li><a href="#update-2017-09">Update 2017-09</a></li>
+<li><a href="#update-2018-06">Update 2018-06</a></li>
 </ul>
 </div>
 
@@ -2077,7 +2093,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2018-06-05 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2018-06-15 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
