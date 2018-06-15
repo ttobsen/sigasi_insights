@@ -1966,7 +1966,7 @@ and open the project in the workspace.</p>
 <p>Note that the VHDL file you specify on the command line has to be in an
 <em>open Sigasi project</em> to enjoy all of Sigasi Studio’s powerful editing and
 navigation features. If the file you open from the command line is not
-in a Sigasi Studio project, Sigasi Studio opens the file as an <a href="#files-external">external
+in a Sigasi Studio project, Sigasi Studio opens the file as an <a href="#external-files">external
 file</a>. This is nevertheless really handy for quick
 edits.</p>
 <p>This feature enables you to configure Sigasi Studio as default editor for other
@@ -1993,6 +1993,18 @@ open <code>test.vhd</code> at line 10.</p>
 <li><code>-refresh</code> : force refresh of workspace</li>
 <li><code>-showLocation</code> : show workspace location in title bar</li>
 </ul>
+<h3 id="run-sigasi-studio-with-multiple-users-on-the-same-server">Run Sigasi Studio with multiple users on the same server</h3>
+<p>If Sigasi Studio (&gt;=3.8) is used on a server with multiple users concurrently, the following changes need to be made:</p>
+<ul>
+<li>Edit <code>sigasi/configuration/config.ini</code> and replace <code>eclipse.application=com.sigasi.runner.open</code> with <code>eclipse.application=org.eclipse.ui.ide.workbench</code></li>
+<li>In <code>sigasi/sigasi.ini</code> add following lines between <code>@noDefault</code> and <code>-vmargs</code>:</li>
+</ul>
+<div class="codehilite"><pre><span></span>--launcher.defaultAction
+openFile
+</pre></div>
+
+
+<p>This way Sigasi Studio uses the default Eclipse behaviour (instead of the <a href="http://insights.sigasi.com/tech/make-eclipse-open-files-command-line.html">custom sigasi runner</a>): <a href="https://wiki.eclipse.org/Eclipse/OpenFileFeature">more info</a></p>
 <h2 id="external-files">External Files</h2>
 <p>You can edit VHDL files without setting up a project.
 When a file that doesn't belong to a project is opened in Sigasi Studio, this
@@ -2099,6 +2111,7 @@ path, you need to enclose the path in curly braces . For example:<code>c:\\My\ A
 <li><a href="#files-command-line">Opening Files from the Command Line</a><ul>
 <li><a href="#eclipse-plugin">Eclipse Plugin</a></li>
 <li><a href="#other-command-line-options">Other command line options</a></li>
+<li><a href="#run-sigasi-studio-with-multiple-users-on-the-same-server">Run Sigasi Studio with multiple users on the same server</a></li>
 </ul>
 </li>
 <li><a href="#external-files">External Files</a></li>
