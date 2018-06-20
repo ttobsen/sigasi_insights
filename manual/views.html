@@ -1792,6 +1792,9 @@ Insights<span style="color:#f47920">.</span>							</p>
 			<a href="/releasenotes/" class="dropdown-toggle" data-toggle="dropdown">Release Notes <b class="caret"></b></a>
 			<ul class="dropdown-menu">
 				<li>
+					<a href="/releasenotes/sigasi-4.00.html">Sigasi Studio 4.0</a>
+				</li>
+				<li>
 					<a href="/releasenotes/sigasi-3.08.html">Sigasi Studio 3.8</a>
 				</li>
 				<li>
@@ -2006,11 +2009,10 @@ location in the editor.</p>
 element in the outline view, the corresponding code will be selected in
 the editor.</p>
 <h2 id="hierarchy">Hierarchy view</h2>
-<p><a href="/manual/editions.html#vhdl" title="[Only for VHDL]">[Only for VHDL]</a></p>
-<p>The Hierarchy view shows the VHDL design hierarchy starting at a selected top level object. To choose a top level, open a file and right-click on an architecture (or entity or configuration). Then click <strong>Set as Top Level</strong>. Alternatively you can click the <strong>Set Top</strong> button in the hierarchy view to open a hierarchy top level selection dialog. You can use the filter field to quickly search for a certain top level.</p>
+<p>The Hierarchy view shows the design hierarchy starting at a selected top level object. To choose a top level, open a file and right-click on an <code>architecture</code> (or <code>entity</code> or <code>configuration</code> or <code>module</code>). Then click <strong>Set as Top Level</strong>. Alternatively you can click the <strong>Set Top</strong> button in the hierarchy view to open a hierarchy top level selection dialog. You can use the filter field to quickly search for a certain top level.</p>
 <p>The hierarchy view automatically refreshes itself when you save your design files. If you have a really large design this could slow you down. You can turn the automatic refresh on and off by toggling the <strong>refresh</strong> button <img alt="" src="icons/refresh.gif" />.</p>
-<p>To highlight the current selection of the VHDL editor in the hierarchy view, enable the <strong>Link with Editor</strong> button <img alt="" src="icons/linkprojectexplorer.png" />. If the editor selection is part of the evaluated hierarchy tree, the corresponding hierarchy tree node will be selected.</p>
-<p>The hierarchy view also shows the <strong>generic and constants values</strong> of components in the hierarchy.
+<p>To highlight the current selection of the HDL editor in the hierarchy view, enable the <strong>Link with Editor</strong> button <img alt="" src="icons/linkprojectexplorer.png" />. If the editor selection is part of the evaluated hierarchy tree, the corresponding hierarchy tree node will be selected.</p>
+<p>The hierarchy view also shows the <strong>generic and constants values</strong> of VHDL components in the hierarchy.
 The internal compiler computes the generics and constants, even if they are passed down through the hierarchy, and even if arithmetic operations are used to define new values. If the value cannot be computed for some reason, the
 Hierarchy View will report the value to be <em>unknown</em>.</p>
 <p>When you <strong>double-click</strong> an object in the hierarchy, the Editor view is updated accordingly, possibly by displaying the contents of a different file.</p>
@@ -2050,29 +2052,29 @@ nice overview of all task markers in your workspace in the <strong>Task View</st
 <p>You can configure extra tags in the Task Tag preference page:
 <strong>Preferences > Sigasi > VHDL > Task Tags</strong></p>
 <h2 id="block">Block Diagram View</h2>
-<p><a href="/manual/editions.html#xl_doc" title="[Only in Sigasi Studio XL Doc]">[Only in Sigasi Studio XL Doc]</a>,<a href="/manual/editions.html#vhdl" title="[Only for VHDL]">[Only for VHDL]</a></p>
+<p><a href="/manual/editions.html#xprt" title="[Only in Sigasi Studio XPRT]">[Only in Sigasi Studio XPRT]</a></p>
 <p>The <strong>Block Diagram View</strong> displays a graphical (block diagram) view
-of all architectures and its instantiations in your current VHDL editor.</p>
+of all architectures, modules and their instantiations in your current VHDL or SystemVerilog editor.</p>
 <p>This viewer <strong>automatically updates</strong> when you <strong>save</strong> your code and
 gives a convenient way to visually inspect and navigate your code, even
 when your code is still unfinished or broken.</p>
 <p><img alt="" src="images/block_diagram.png" /></p>
 <p>You can open the block diagram view by right clicking in the editor and
 selecting <strong>Show In > Block Diagram</strong>. Alternatively you can open the
-view via <strong>Window > View > Other… > VHDL > Block Diagram</strong>.</p>
+view via <strong>Window > Show View > Other… > Sigasi > Block Diagram</strong>.</p>
 <p>You can also <strong>double click blocks</strong>, <strong>ports</strong> or <strong>wires</strong> to navigate
-to the corresponding VHDL code. If you want to <em>go into</em> a block, you
-have to <strong>select</strong> it, right click and click <strong>Open Entity Declaration</strong> or <strong>Open Architecture</strong>.</p>
+to the corresponding HDL code. If you want to <em>go into</em> a block, you
+have to <strong>select</strong> it, right click and click <strong>Open Entity Declaration</strong>, <strong>Open Architecture</strong> or <strong>Open Module</strong>.</p>
 <p>You can export the block diagram view to an image with the save
 <img alt="" src="icons/save.gif" /> button. Both <strong>SVG</strong> and <strong>PNG</strong> are supported. Choose a the *.svg filename for SVG export or a *.png filename for PNG export.</p>
 <p>You can also export <strong>all</strong> <em>block diagrams of an entire project</em> at once: Click <strong>Project &gt; Export... &gt; Sigasi &gt; Block Diagrams export</strong> and select your project. All SVGs will be created in <strong>diagrams/blockdiagrams/</strong> in your project.</p>
 <h2 id="fsm">State Machine View</h2>
-<p><a href="/manual/editions.html#xl_doc" title="[Only in Sigasi Studio XL Doc]">[Only in Sigasi Studio XL Doc]</a>,<a href="/manual/editions.html#vhdl" title="[Only for VHDL]">[Only for VHDL]</a></p>
-<p>The <strong>State Machine View</strong> displays a graphical (bubble diagram) view of all state machines in your current VHDL editor. This viewer automatically updates while you are editing your code and gives a convenient way to visually inspect and navigate your code, even when your code is still unfinished or broken.</p>
+<p><a href="/manual/editions.html#xprt" title="[Only in Sigasi Studio XPRT]">[Only in Sigasi Studio XPRT]</a></p>
+<p>The <strong>State Machine View</strong> displays a graphical (bubble diagram) view of all state machines in your current VHDL or SystemVerilog editor. This viewer automatically updates while you are editing your code and gives a convenient way to visually inspect and navigate your code, even when your code is still unfinished or broken.</p>
 <p><img alt="" src="images/statemachineviewer.png" /></p>
-<p>You can open the state machine view by right clicking in the editor and selecting <strong>Show In &gt; State Machines</strong>. Alternatively you can open the view via <strong>Window &gt; View &gt; Other... &gt; VHDL &gt; State Machines</strong>.</p>
+<p>You can open the state machine view by right clicking in the editor and selecting <strong>Show In &gt; State Machines</strong>. Alternatively you can open the view via <strong>Window > Show View > Other… > Sigasi > State Machines</strong>.</p>
 <p>If you have documented your state transitions (i.e. the assignments), the comments will be added as text to the transitions in the view.</p>
-<p>You can also <strong>double-click nodes</strong> or <strong>transitions</strong> to navigate to the corresponding VHDL code.</p>
+<p>You can also <strong>double-click nodes</strong> or <strong>transitions</strong> to navigate to the corresponding HDL code.</p>
 <p>With the <img alt="" src="icons/font.png" /> button, you can toggle the display of edge labels. These labels show the code comments of the transition statements.
 You also have to option to <strong>Zoom In</strong>, <strong>Zoom Out</strong> or <strong>Zoom to Fit</strong>.</p>
 <p>You can export the state machine view to an image with the save <img alt="" src="icons/save.gif" /> button. Both <strong>SVG</strong> and <strong>PNG</strong> are supported. Choose a the *.svg filename for SVG export or a *.png filename for PNG export.</p>
@@ -2114,7 +2116,8 @@ double-clicking the search results.</p>
 <h2 id="preprocessor-view">Preprocessor view</h2>
 <p><a href="/manual/editions.html#verilog" title="[Only for Verilog]">[Only for Verilog]</a></p>
 <p><img alt="" src="images/preprocessor-view.png" /></p>
-<p>In the preprocessor view you can preview the expanded text of Verilog macros. This view automatically synchronizes with the active editor.</p>
+<p>In the preprocessor view you can preview the expanded text of Verilog macros. This view automatically synchronizes with the active editor. 
+When you select text in the (System)Verilog editor, the expanded text will be highlighted in the Preprocessor view. This also works the other way: when you select text in the Preprocessor view, the corresponding, original source will be selected in the editor.</p>
 <h2 id="console-view">Console view</h2>
 <p>When Sigasi Studio launches external tools (e.g. external compiler, documentation generation,...) the output is logged to the console view.
 This is a generic Eclipse view [<a href="https://help.eclipse.org/oxygen/index.jsp?topic=%2Forg.eclipse.cdt.doc.user%2Freference%2Fcdt_u_console_view.htm">Documentation</a>].</p>
@@ -2215,7 +2218,7 @@ This is a generic Eclipse view [<a href="https://help.eclipse.org/oxygen/index.j
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2018-06-15 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2018-06-20 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
