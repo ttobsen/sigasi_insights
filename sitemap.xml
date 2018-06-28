@@ -391,7 +391,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tech/be-careful-vhdl-operator-precedence.html</loc>
+        <loc>http://insights.sigasi.com/screencasts/library_mapping.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -2201,6 +2201,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>http://insights.sigasi.com/tech/be-careful-vhdl-operator-precedence.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>http://insights.sigasi.com/screencasts/smart_indent_vhdl.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -2257,6 +2262,11 @@
     </url>
     <url>
         <loc>http://insights.sigasi.com/screencasts/hex-values.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>http://insights.sigasi.com/tag/Installation/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
