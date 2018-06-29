@@ -3,7 +3,7 @@
 	<!--// OPEN HEAD //-->
 	<head>
 		<!--// SITE TITLE //-->
-		<title>Using Autocomplete Templates in Sigasi 2 - Sigasi</title>
+		<title>The Graphics Configuration File - Sigasi</title>
 		<!--// SITE META //-->
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -24,14 +24,14 @@
 			}
 		</script>
 		<!-- This site is optimized with the Yoast SEO plugin v3.0.6 - https://yoast.com/wordpress/plugins/seo/ -->
-		<link rel="canonical" href="http://insights.sigasi.com//tech/using-autocomplete-templates-sigasi-2.html" />
+		<link rel="canonical" href="http://insights.sigasi.com//screencasts/graphics_configuration.html" />
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="Using Autocomplete Templates in Sigasi 2 - Sigasi" />
-		<meta property="og:url" content="http://insights.sigasi.com//tech/using-autocomplete-templates-sigasi-2.html" />
+		<meta property="og:title" content="The Graphics Configuration File - Sigasi" />
+		<meta property="og:url" content="http://insights.sigasi.com//screencasts/graphics_configuration.html" />
 		<meta property="og:site_name" content="Sigasi" />
 		<meta name="twitter:card" content="summary"/>
-		<meta name="twitter:title" content="Using Autocomplete Templates in Sigasi 2 - Sigasi"/>
+		<meta name="twitter:title" content="The Graphics Configuration File - Sigasi"/>
 		<!-- / Yoast SEO plugin. -->
 		<link rel='stylesheet' id='wgs-css'  href='/css/wgs.css?ver=4.3.2' type='text/css' media='all' />
 		<link rel='stylesheet' id='ls-google-fonts-css'  href='https://fonts.googleapis.com/css?family=Lato:100,300,regular,700,900%7COpen+Sans:300%7CIndie+Flower:regular%7COswald:300,regular,700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
@@ -1572,10 +1572,10 @@
 					<li class="menu-item menu-item-type-post_type menu-item-object-page ">
 					<a href="/releasenotes/">Release Notes</a>
 					</li>
-					<li class="menu-item menu-item-type-post_type menu-item-object-page ">
+					<li class="menu-item menu-item-type-post_type menu-item-object-page active">
 					<a href="/screencasts/">Screencasts</a>
 					</li>
-					<li class="menu-item menu-item-type-post_type menu-item-object-page active">
+					<li class="menu-item menu-item-type-post_type menu-item-object-page ">
 					<a href="/tech/">Tech Articles</a>
 					</li>
 					<li class="menu-item menu-item-type-post_type menu-item-object-page ">
@@ -1721,7 +1721,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 <div class="page-heading page-heading-hidden clearfix">
 	<div class="container">
 		<div class="heading-text">
-			<h1 class="entry-title" >Using Autocomplete Templates in Sigasi 2</h1>
+			<h1 class="entry-title" >The Graphics Configuration File</h1>
 		</div>
 	</div>
 </div>
@@ -1919,9 +1919,9 @@ Insights<span style="color:#f47920">.</span>							</p>
 				</li>
 			</ul>
 			</li>
-			<li>
-				<a href="/screencasts/">Screencasts</a></li>
 			<li class="active">
+				<a href="/screencasts/">Screencasts</a></li>
+			<li>
 				<a href="/tech/">Tech Articles</a></li>
 			<li>
 				<a href="/opinion/">Opinion</a></li>
@@ -1941,19 +1941,19 @@ Insights<span style="color:#f47920">.</span>							</p>
 <div class="container">
   <div class="page-header">
     <div>
-        <h1 style="margin-bottom: 0px;margin-top: 30px;">Using Autocomplete Templates in Sigasi 2</h1>
+        <h1 style="margin-bottom: 0px;margin-top: 30px;">The Graphics Configuration File</h1>
     </div>
 
     <div style="margin: 10px 0 10px">
         <span>
-            Posted on 2012&#8209;09&#8209;24
-            by Hendrik Eeckhaut
+            Posted on 2017&#8209;12&#8209;06
         </span>
         </br>
         <span>
         Tagged as: 
-              <a href="/tag/hdt-2.0/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">hdt-2.0</a>
-              <a href="/tag/templates/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">templates</a>
+              <a href="/tag/BlockDiagram/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">BlockDiagram</a>
+              <a href="/tag/StateMachine/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">StateMachine</a>
+              <a href="/tag/graphics/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">graphics</a>
         </span>
 
     </div>
@@ -1962,96 +1962,21 @@ Insights<span style="color:#f47920">.</span>							</p>
   <div class="row">
 
     <div class="content">
-      <div class="col-md-9" role="main">
-        <p>VHDL is a very <em>verbose language</em>. You have to type a lot to describe
-your design and there is often a lot of redundancy in what you write.
-One of the purposes of using Sigasi is to improve your productivity. So
-we developed a system to automatically type code for you: <strong>templates</strong>.</p>
-<p>Templates are pieces of code that occur frequently enough that you would
-like to be able to insert them with a few keystrokes. Templates result
-in <strong>small fragments of reusable code that have certain pieces left open
-for you to fill in</strong>.
-This might sound a bit complicated, but templates are actually <em>very
-simple to use</em>. I'll show the power of templates through the use of the
-built-in <code>process</code> template.</p>
-<p>This article is the first of two blog posts about Sigasi code templates.
-In this post I will explain what templates are and give an example. In
-the next post I will show you how to adapt templates and how to create
-custom templates.</p>
-<p>To demonstrate the power of templates I will walk through an
-autocomplete template <em>example</em> that is built-in in Sigasi: the
-<code>process</code> template.</p>
-<p>Writing a synchronous process in VHDL requires a lot of text that is
-always very similar. At the same time you have to be careful not to make
-any syntax mistakes. You can automate this by calling the <code>process</code>
-template. Simply <strong>start typing the name of the template</strong>, i.e. type
-<code>pr</code>, and press <strong>Ctrl+Space</strong>.</p>
-<p><em>Make sure your cursor is in the statements part of an architecture
-(between <code>begin</code> and <code>end</code>) when you try to add the process. Sigasi's
-template mechanism is <strong>context sensitive</strong>, so you will only be offered
-templates that make sense at your current cursor position.</em></p>
-<p>You will see a list of templates starting with 'pr'. When you
-double-click or select it with the <strong>Up</strong> or <strong>Down</strong> arrow keys and
-press <strong>Enter</strong>, the template will be inserted in your code.</p>
-<p><img alt="" src="images/template_1.png" /></p>
-<p>Once the template is inserted, you can see boxes around the process
-label and the clock and reset signal. These boxes indicate template
-variables that can further be edited. You can easily jump between the
-boxes by pressing the <strong>Tab</strong> key.</p>
-<p><img alt="" src="images/template_2.png" /></p>
-<p>If you edit the first box, the process label, you will see that the end
-label (all occurrences of the same template variable are highlighted
-with a background color) is updated accordingly.</p>
-<p><img alt="" src="images/template_3.png" /></p>
-<p>In my sample <code>dut</code> entity the clock signal is called <code>clock</code> instead of
-<code>clk</code> and reset is called <code>reset</code> instead of <code>rst</code>. You can easily
-update the inserted code by pressing <strong>Tab</strong> and changing <code>clk</code> to
-<code>clock</code> and another <strong>Tab</strong> to change <code>rst</code> to <code>reset</code>.</p>
-<p><img alt="" src="images/template_4.png" /></p>
-<p>You can end the template editing session by pressing <strong>Enter</strong>. The
-cursor than automatically jumps to where the small <em>green vertical
-marker</em> was. When you use template autocompletion the green marker is
-always at a specific position, waiting for you to press <strong>Enter</strong>.</p>
-<p>To see list of all templates open <strong>Window &gt; Preferences &gt; VHDL
-&gt; Templates</strong>. On this preference page you see a list of all
-available templates. To insert one in your code just start typing its
-<strong>name</strong> (not to be confused with its <strong>description</strong>). E.g. to insert
-an array type, start typing <code>type</code>, and not <code>arra</code>.</p>
-<p><img alt="" src="images/templates_preferences_process.png" /></p>
-<p>In a next post, <a href="/tech/using-custom-templates-sigasi-2.html" title="Using Custom Templates in Sigasi 2">Using Custom Templates in Sigasi 2</a>, I explain how to modify these templates to your custom needs.</p>
+  <div class="col-md-12" role="main">
+    <div class="container">
+      <center>
+        <iframe src="https://www.youtube.com/embed/ntppCPcF_SI?modestbranding=1&rel=0&showinfo=0" gesture="media" allow="encrypted-media" allowfullscreen="" width="640" height="360" frameborder="0">
+	</iframe>
+      </center>
+    </div>
+    
 
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-var disqus_shortname = 'sigasi';
-var disqus_developer = 1;
-/* * * DON'T EDIT BELOW THIS LINE * * */
-(function() {
-var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-<noscript>Please enable JavaScript to view the comments.</noscript>      </div>
+  </div>
     </div>
 
-    <div class="col-md-3" role="complementary">
-      <nav class="hidden-print hidden-xs hidden-sm">
-        <div class="sidebar" data-spy="affix" data-offset-top="510" data-offset-bottom="200">
-<a href="http://www.sigasi.com/try-form?utm_source=Insights&utm_medium=Button&utm_campaign=Download">
-<div style="width:100%;background-color:#262262;color:white;padding:5px;font:lato;text-align:center">
- 	<p style="font-size:30px;font-weight:700;font:lato;padding:10px;margin:0px">
-		Evaluate Sigasi&nbsp;Studio
-	</p>
-</div> </a>        </div>
-      </nav>
-    </div>
 
   </div>
 
-  <ul class="pager">
-    <li class="previous"><a href="/tech/using-custom-templates-sigasi-2.html">&larr; Using Custom Templates in Sigasi 2</a></li>
-    <li class="next"><a href="/tech/three-mistakes-three-error-markers.html">Three mistakes, three error markers &rarr;</a></li>
-  </ul>
 
 </div>
 
