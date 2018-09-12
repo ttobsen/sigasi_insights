@@ -816,6 +816,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>http://insights.sigasi.com/screencasts/hovers.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>http://insights.sigasi.com/tech/systemverilog-project-demo.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -1251,6 +1256,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>http://insights.sigasi.com/screencasts/vunit.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>http://insights.sigasi.com/screencasts/direct_feedback.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -1337,6 +1347,11 @@
     </url>
     <url>
         <loc>http://insights.sigasi.com/tech/graphics.ebnf.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>http://insights.sigasi.com/manual/graphics.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1841,6 +1856,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>http://insights.sigasi.com/manual/vunit.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>http://insights.sigasi.com/screencasts/quick_intro_to_sigasi.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -1992,6 +2012,11 @@
     </url>
     <url>
         <loc>http://insights.sigasi.com/tech/using-autocomplete-templates-sigasi-2.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>http://insights.sigasi.com/screencasts/naming-conventions.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -2351,6 +2376,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>http://insights.sigasi.com/tag/VUnit/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>http://insights.sigasi.com/tag/IDE/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -2441,6 +2471,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>http://insights.sigasi.com/tag/templates/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>http://insights.sigasi.com/opinion/jan/announce-jan-hdl-design.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -2471,7 +2506,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/templates/</loc>
+        <loc>http://insights.sigasi.com/screencasts/inspecting_constants_and_generics.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -2481,7 +2516,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/screencasts/inspecting_constants_and_generics.html</loc>
+        <loc>http://insights.sigasi.com/releasenotes/sigasi-4.01.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>

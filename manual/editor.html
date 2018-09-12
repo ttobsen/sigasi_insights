@@ -1764,7 +1764,13 @@ Insights<span style="color:#f47920">.</span>							</p>
 					<a href="/manual/tools.html">Tool Integration</a>
 				</li>
 				<li>
+					<a href="/manual/vunit.html">Sigasi Studio VUnit Integration</a>
+				</li>
+				<li>
 					<a href="/manual/documentation.html">Documentation Generation</a>
+				</li>
+				<li>
+					<a href="/manual/graphics.html">Graphics Configuration</a>
 				</li>
 				<li>
 					<a href="/manual/plugins.html">Third party plugins</a>
@@ -1791,6 +1797,9 @@ Insights<span style="color:#f47920">.</span>							</p>
 		<li class="dropdown">
 			<a href="/releasenotes/" class="dropdown-toggle" data-toggle="dropdown">Release Notes <b class="caret"></b></a>
 			<ul class="dropdown-menu">
+				<li>
+					<a href="/releasenotes/sigasi-4.01.html">Sigasi Studio 4.1</a>
+				</li>
 				<li>
 					<a href="/releasenotes/sigasi-4.00.html">Sigasi Studio 4.0</a>
 				</li>
@@ -2019,6 +2028,7 @@ mouse pointer over it. After about a second, a popup shows you the name and data
 <li>errors or warnings: a message, if the given identifier has an error or warning associated to it</li>
 <li>binary / decimal conversion: for hexadecimal, octal or binary values, the decimal equivalent</li>
 </ul>
+<p>Since <a href="/releasenotes/sigasi-4.01.html" title="Sigasi Studio 4.1">Sigasi Studio 4.1</a> the hovers also offer extra links that make it easy to navigate to the declaration, find references, ...</p>
 <h3 id="auto-complete-and-content-assist">Auto-complete and Content Assist</h3>
 <p>Sigasi Studio provides powerful autocompletion capabilities. This means
 that the tool can help you to complete identifiers and constructs as you are working on the code. Like other tools, the tool provides
@@ -2255,16 +2265,16 @@ Configurable settings currently include:</p>
 <p><img alt="" src="images/formatter_off.png" /></p>
 <h4 id="format-code-on-save">Format code on save</h4>
 <p>You can configure Sigasi Studio to automatically format your VHDL files when you save your source files via <strong>Preferences &gt; Sigasi &gt; VHDL</strong>, next enable <strong>Enable code format on save</strong>.</p>
-<h3 id="lightweight-editor-for-large-vhdl-files">Lightweight editor for large VHDL files</h3>
-<p>Sometimes you have to deal with very large VHDL files such as large
-concatenated library files and generated files. Unfortunately the Sigasi Studio
-VHDL editor can not cope with huge VHDL files yet. Large files stress
+<h3 id="lightweight-editor-for-large-vhdl-and-systemverilog-files">Lightweight editor for large VHDL and SystemVerilog files</h3>
+<p>Sometimes you have to deal with very large HDL files such as large
+concatenated library files, generated files or netlists. Unfortunately the Sigasi Studio
+VHDL and SystemVerilog editors can not cope with huge files yet. Large files stress
 the interactive compiler too much to give timely feedback.</p>
-<p>To allow you to edit large VHDL files the Sigasi Studio IDE contains a
-lightweight VHDL editor that can handle all files without problems. This
+<p>To allow you to edit large HDL files Sigasi Studio contains a
+lightweight VHDL and SystemVerilog editor that can handle all files without problems. This
 editor does not analyze your files a type time. It only offers syntax
 highlighting and the default Eclipse editing features. The lightweight
-VHDL editor will check for errors when you save your file.</p>
+editors will check for errors when you save your file.</p>
 <p>The current threshold VHDL file size that is used to switch to the
 lightweight editor is 1 MB.</p>
 <p>If you still want to edit large files using the Sigasi Studio VHDL editor,
@@ -2272,7 +2282,7 @@ this can be done following these steps:</p>
 <ul>
 <li>In the Project Explorer right-click the file and select
  <strong>Open With &gt; Other...</strong></li>
-<li>In the dialog select <strong>VHDL Editor</strong>.</li>
+<li>In the dialog select <strong>VHDL Editor</strong> or <strong>(System)Verilog Editor</strong>.</li>
 <li>A warning will show offering to open the file in read-only mode.
 Choose <strong>No</strong> if you want to edit the file.</li>
 </ul>
@@ -2391,7 +2401,7 @@ Autocomplete will also offer you a list of all visible <em>`defines</em>.</p>
 <li><a href="#format-code-on-save">Format code on save</a></li>
 </ul>
 </li>
-<li><a href="#lightweight-editor-for-large-vhdl-files">Lightweight editor for large VHDL files</a></li>
+<li><a href="#lightweight-editor-for-large-vhdl-and-systemverilog-files">Lightweight editor for large VHDL and SystemVerilog files</a></li>
 </ul>
 </li>
 <li><a href="#systemverilog-specific">SystemVerilog Specific</a><ul>
@@ -2473,7 +2483,7 @@ Autocomplete will also offer you a list of all visible <em>`defines</em>.</p>
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2018-08-20 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2018-09-12 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>

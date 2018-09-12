@@ -1764,7 +1764,13 @@ Insights<span style="color:#f47920">.</span>							</p>
 					<a href="/manual/tools.html">Tool Integration</a>
 				</li>
 				<li>
+					<a href="/manual/vunit.html">Sigasi Studio VUnit Integration</a>
+				</li>
+				<li>
 					<a href="/manual/documentation.html">Documentation Generation</a>
+				</li>
+				<li>
+					<a href="/manual/graphics.html">Graphics Configuration</a>
 				</li>
 				<li>
 					<a href="/manual/plugins.html">Third party plugins</a>
@@ -1791,6 +1797,9 @@ Insights<span style="color:#f47920">.</span>							</p>
 		<li class="dropdown">
 			<a href="/releasenotes/" class="dropdown-toggle" data-toggle="dropdown">Release Notes <b class="caret"></b></a>
 			<ul class="dropdown-menu">
+				<li>
+					<a href="/releasenotes/sigasi-4.01.html">Sigasi Studio 4.1</a>
+				</li>
 				<li>
 					<a href="/releasenotes/sigasi-4.00.html">Sigasi Studio 4.0</a>
 				</li>
@@ -2074,16 +2083,16 @@ Insights<span style="color:#f47920">.</span>							</p>
 <li>
 <p>Sigasi Studio Standalone is supported on:</p>
 <ul>
-<li>Windows: Windows 8 (32 bit and 64 bit) or newer</li>
+<li>Windows: Windows 10 (64 bit) or newer</li>
 <li>Mac OS X: latest version</li>
-<li>Linux: RedHat Enterprise Linux RHEL 6 (64 bit) or newer.<br />
+<li>Linux: RedHat Enterprise Linux RHEL 7.5 (64 bit) or newer.<br />
   We recommend at least <strong>2GB of memory</strong>, and you need <strong>about 300MB</strong> of free disk space.</li>
 </ul>
 </li>
 <li>
 <p>Sigasi Studio as Plugin in your own Eclipse installation:</p>
 <ul>
-<li>Eclipse 4.4 or higher</li>
+<li>Eclipse 4.5 or higher</li>
 <li>Java JRE 8 or higher  </li>
 <li>And all requirements from the standalone version</li>
 </ul>
@@ -2125,7 +2134,7 @@ More information about this file can be found at <a href="http://wiki.eclipse.or
 <strong>Help &gt; About Eclipse &gt; Plug-ins.</strong></p>
 <p>Here you can <strong>sort</strong> by Plug-in Id by clicking on the title of the "Plug-in Id" column, so that you can check all the plugins that start with "com.sigasi...."</p>
 <h3 id="can-i-use-the-features-of-the-upcoming-release">Can I use the features of the upcoming release?</h3>
-<p>Yes! You can find the details on <a href="/tech/preview.html" title="Sigasi Studio Preview (4.1)">Sigasi Studio Preview (4.1)</a>.</p>
+<p>Yes! You can find the details on <a href="/tech/preview.html" title="Sigasi Studio Preview (4.2)">Sigasi Studio Preview (4.2)</a>.</p>
 <h3 id="how-do-i-uninstall-sigasi-studio">How do I uninstall Sigasi Studio?</h3>
 <p>To uninstall the standalone Sigasi Studio app, it is sufficient to remove the
 extracted installation folder.
@@ -2209,7 +2218,7 @@ You can open a new Window via <strong>Window &gt; New window</strong></p>
 <p>There are two places where you can configure your own <strong>path variables</strong>: in the <strong>workspace</strong> and in your <strong>projects</strong>.</p>
 <p>The <strong>workspace path variables</strong> (set via preferences) are stored in: <code>&lt;workspace&gt;/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.core.resources.prefs</code> (e.g. <code>pathvariable.FOOBAR=/Users/heeckhau/tmp/foobar</code>)</p>
 <p>You can also set this per <strong>project</strong> (in the project properties). In that case the info is stored in the <code>.project</code> file.</p>
-<p>You can find more info on: <a href="https://www.sigasi.com/content/how-avoid-absolute-library-paths-your-sigasi-project-files">here</a> and <a href="https://help.eclipse.org/oxygen/index.jsp?topic=%2Forg.eclipse.platform.doc.user%2Fconcepts%2Fcpathvars.htm">here</a></p>
+<p>You can find more info on: <a href="https://www.sigasi.com/content/how-avoid-absolute-library-paths-your-sigasi-project-files">here</a> and <a href="https://help.eclipse.org/photon/index.jsp?topic=%2Forg.eclipse.platform.doc.user%2Fconcepts%2Fcpathvars.htm">here</a></p>
 <h3 id="can-i-use-a-dark-theme">Can I use a Dark Theme?</h3>
 <p>In <strong>Window &gt; Preferences &gt; General &gt; Appearance</strong>, select <strong>Dark</strong> in the <strong>Theme</strong> field. Restart to apply the settings in all windows.</p>
 <p>If you want a <em>fully black background in the editor</em>, right click in the editor view and select <strong>Preferences...</strong>, next navigate to <strong>General &gt; Editors &gt; Text Editors</strong>. In the <strong>Appearance color options</strong>, select <strong>Background color</strong> and next click the <strong>Color</strong> button to select your preferred editor background color.</p>
@@ -2293,7 +2302,7 @@ Inline PSL is not supported, but PSL in comments is safely ignored.</p>
 <h2 id="troubleshooting">Troubleshooting</h2>
 <h3 id="show-in-system-explorer-does-not-work-on-red-hat-linux-6">"Show In -&gt; System Explorer" does not work on Red Hat Linux 6</h3>
 <p>On preference page <strong>General &gt; Workspace</strong> you can configure the command that is used to open files with the System Explorer. The default Linux command does not work on older linux systems.
-On RedHat 6 linux, you can use the nautilus command: <code>nautilus "${selected_resource_parent_loc}"</code> (<a href="https://help.eclipse.org/oxygen/index.jsp?topic=%2Forg.eclipse.platform.doc.user%2Freference%2Fref-9.htm">More info</a>).</p>
+On RedHat 6 linux, you can use the nautilus command: <code>nautilus "${selected_resource_parent_loc}"</code> (<a href="https://help.eclipse.org/photon/index.jsp?topic=%2Forg.eclipse.platform.doc.user%2Freference%2Fref-9.htm">More info</a>).</p>
 <h3 id="sigasi-switches-my-keyboard-layout-did-i-find-a-bug">Sigasi switches my keyboard layout! Did I find a bug?</h3>
 <p>This sometimes happens on Windows. You have probably triggered a keyboard shortcut that switches your keyboard lay-out.
 Read Microsoft's documentation of the <a href="http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/langbar_keystroke_shortcuts.mspx?mfr=true" title="Language bar keyboard shortcuts">Language bar keyboard shortcuts</a>.
@@ -2396,7 +2405,7 @@ version=1
 <h3 id="i-really-like-vi-vim-gvim-do-you-have-a-vi-emulation-mode">I really like VI / VIM / gVIM. Do you have a VI emulation mode?</h3>
 <p>If you use Sigasi HDT as a plugin (meaning: not the standalone version), you can add a VI emulator plugin, called <a href="http://vrapper.sourceforge.net/home/" title="vrapper">vrapper</a>. Surely not the same as a genuine VI clone, but it will give you a warm and familiar feeling when you type <code>:q!</code>.</p>
 <h3 id="Emacs">Do you have an Emacs emulation mode so that I can use the Emacs key bindings?</h3>
-<p>All Eclipse products, including Sigasi HDT, can be configured to support <a href="http://help.eclipse.org/oxygen/topic/org.eclipse.platform.doc.user/concepts/accessibility/keyboardshortcuts.htm?cp=0_4_1_33" title="Emacs key bindings">Emacs key bindings</a>. While it is not the same as Emacs, you can keep your habit of pressing <em>CTRL-C</em> and <em>CTRL-X</em> all the time.</p>
+<p>All Eclipse products, including Sigasi HDT, can be configured to support <a href="http://help.eclipse.org/photon/topic/org.eclipse.platform.doc.user/concepts/accessibility/keyboardshortcuts.htm?cp=0_4_1_33" title="Emacs key bindings">Emacs key bindings</a>. While it is not the same as Emacs, you can keep your habit of pressing <em>CTRL-C</em> and <em>CTRL-X</em> all the time.</p>
 <h3 id="which-free-vhdl-simulator-can-i-use">Which free VHDL simulator can I use?</h3>
 <p>Sigasi does not offer simulators. If you don't have a VHDL simulator yet, we would recommend the following simulators. You can download them free of charge.</p>
 <table class="table">
@@ -2526,7 +2535,7 @@ We have not had good results with FreeHDL or with Green Mountain VHDL. It seems 
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2018-08-20 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2018-09-12 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
