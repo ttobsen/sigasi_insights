@@ -2298,9 +2298,11 @@ Sigasi Studio needs this path to find the Xilinx Vivado libraries.</p>
 <p>You can change the Xilinx ISE installation location by selecting <strong>Window &gt; Preferences &gt; Sigasi &gt; Toolchains &gt; Xilinx ISE</strong>.
 Sigasi Studio needs this path to find the Xilinx Vivado libraries and to run the ISim compiler and simulator.</p>
 <h2 id="export">Export</h2>
-<p>You can export a list of all VHDL files in your project, sorted in the correct compilation order.
+<p>You can export a list of all HDL files in your project, sorted in the correct compilation order.
 You can use your own simple scripts to manipulate such list and run any EDA tool, including simulators, synthesis and linter tools.</p>
-<p>To export a comma separated value (CSV) list of files in your project, right-click your project and select <strong>Export</strong>. In the <strong>Sigasi</strong> category, select <strong>CSV File</strong>. As a result, you get a file named <code>compilation_order.csv</code>, which lists the VHDL files in your project in a valid compile order.</p>
+<p>To export a comma separated value (CSV) list of files in your project, right-click your project and select <strong>Export...</strong>.
+In the <strong>Sigasi</strong> category, select <strong>CSV File</strong>. Then select the project you want to export.
+As a result, you get a file named <code>compilation_order.csv</code>, which lists the VHDL files in your project in a valid compile order.</p>
 <p>Example (for the tutorial project):</p>
 <div class="codehilite"><pre><span></span>work, dut.vhd
 work, clock_generator.vhd
@@ -2311,9 +2313,10 @@ work, testbench.vhd
 <p>This file will use relative paths, except when the file is on a different drive (on Windows).</p>
 <h3 id="auto-export">Auto-export</h3>
 <p>You can also configure Sigasi Studio to <strong>auto-export</strong> this CSV file, every time the dependencies change.</p>
-<p>Right click on the project you want to auto-export in the Project Explorer, and select <strong>Properties</strong> and <strong>VHDL auto export</strong>.</p>
+<p>Right click on the project you want to auto-export in the Project Explorer, and select <strong>Properties</strong> and <strong>Sigasi auto export</strong>.</p>
 <p><img alt="Auto export CSV file with dependencies" src="images/auto_export_property_page.png" title="Auto export CSV file with dependencies" /></p>
-<p>If you do not set a fixed top level name (i.e. empty <em>top level name</em> in the property page), Sigasi Studio will use the current top level in the <a href="/manual/views.html#hierarchy" title="Views">Hierarchy View</a> as input. Note that this only works if the top level belongs to the selected project.</p>
+<p>If you do not set a fixed top level name (i.e. empty <em>top level name</em> in the property page), Sigasi Studio will use the current top level in the <a href="/manual/views.html#hierarchy" title="Views">Hierarchy View</a> as input.
+Note that this only works if the top level belongs to the selected project.</p>
 <p>This information is stored in <code>.settings/com.sigasi.hdt.vhdl.ui.prefs</code> in your project.</p>
 
       </div>
