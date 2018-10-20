@@ -12,7 +12,6 @@
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<!--// PINGBACK & FAVICON //-->
-		<link rel="pingback" href="{{site.main_url}}/xmlrpc.php"/>
 		<link rel="shortcut icon" href="{{url_prefix}}/css/sigasi_favicon.png" />
 		<script>
 			writeCookie();
@@ -66,7 +65,6 @@
 		<script type='text/javascript' src='{{url_prefix}}/css/cookielawinfo.js?ver=1.5.3'></script>
 		<script type='text/javascript' src='{{url_prefix}}/css/revslider/js/jquery.themepunch.tools.min.js?ver=5.0.8.5'></script>
 		<script type='text/javascript' src='{{url_prefix}}/css/revslider/js/jquery.themepunch.revolution.min.js?ver=5.0.8.5'></script>
-		<link rel="EditURI" type="application/rsd+xml" title="RSD" href="{{site.main_url}}/xmlrpc.php?rsd" />
 		<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="{{site.main_url}}/wp-includes/wlwmanifest.xml" />
 		<link rel='shortlink' href='{{site.main_url}}/?p=12016' />
 		<script>
@@ -271,20 +269,9 @@
 		data-product-slider-vert-height="700"
 		data-quickview-text="Quickview"
 		data-cart-notification=""></div>
-		<div id="loveit-locale" data-ajaxurl="{{site.main_url}}/wp-admin/admin-ajax.php" data-nonce="da20e7d233"
-		data-alreadyloved="You have already loved this item." data-error="Sorry, there was a problem processing your request."
-		data-loggedin="false"></div>
 		{% if site.cookie_law_info %}
 			{% include 'cantilis/cookie-law-info.html' %}
 		{% endif %}
-		<script type='text/javascript'>
-			/* <![CDATA[ */
-			var scriptParams = {
-				"google_search_engine_id" : "009975466663169646839:5macv9ff3am"
-			};
-			/* ]]> */
-		</script>
-		<script type='text/javascript' src='{{url_prefix}}/css/google_cse_v2.js?ver=1'></script>
 		<script type='text/javascript' src='{{url_prefix}}/css/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
 		<script type='text/javascript'>
 			/* <![CDATA[ */
@@ -335,17 +322,6 @@
 			    });
 			}
                 </script>
-		<script type='text/javascript'>
-			/* <![CDATA[ */
-			var icl_vars = {
-				"current_language" : "en",
-				"icl_home" : "http:\/\/{{site.mainsite}}",
-				"ajax_url" : "http:\/\/{{site.mainsite}}\/wp-admin\/admin-ajax.php",
-				"url_type" : "3"
-			};
-			/* ]]> */
-		</script>
-		<script type='text/javascript' src='{{url_prefix}}/css/sitepress.js?ver=4.3.2'></script>
 		<!--// CLOSE BODY //-->
 		{% include 'cantilis/clicky.html' %}
 	</body>
