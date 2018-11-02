@@ -1985,11 +1985,12 @@ Insights<span style="color:#f47920">.</span>							</p>
 </ol>
 </li>
 <li>Right click the project (<code>ubus</code>), and select <strong>Configure &gt; Add (System)Verilog support</strong></li>
+<li>Make sure the project has a <strong><code>Common Libraries</code></strong> folder. If this folder is missing, right click the project and select <strong>New &gt; Folder</strong>. Keep <strong>ubus</strong> as the parent folder and enter <strong><code>Common Libraries</code></strong> as the Folder name. Optionally you can select this folder to be a <strong>Virtual Folder</strong> under the <strong>Advanced &gt;&gt;</strong> section.</li>
 <li>Use your files system explorer (Windows Explorer, Finder, Nautilus) and navigate to the UVM sources (in my case this is <code>/Users/heeckhau/demo/uvm-1.2/src/</code>) and <em>drag and drop</em> this folder into the <strong><code>Common Libraries</code></strong> folder<sup id="fnref:commonLibraries"><a class="footnote-ref" href="#fn:commonLibraries" rel="footnote">1</a></sup> of the <code>ubus</code> project.<br />
   Select <strong>Link to file and folders</strong> and <strong>OK</strong>
   <img alt="Link the UVM sources" src="systemverilog-uvm-demo/link_uvm_sources.png" /></li>
 <li>Add the <code>uvm</code> sources to the build: right click on <code>Common Libraries/src/</code> and select <strong>Add to build (library work)</strong>  </li>
-<li>Add the UVM sources to the include path: right click the project and select <strong>Properties &gt; (System)Verilog include path</strong>; enter <code>Common Libraris/src</code> as include path and confirm with <strong>OK</strong>.
+<li>Add the UVM sources to the include path: right click the project and select <strong>Properties &gt; (System)Verilog Preprocessor</strong>; enter <code>Common Libraries/src</code> as <em>Include path</em> and confirm with <strong>Apply and Close</strong>.
   <img alt="Set UVM include path" src="systemverilog-uvm-demo/uvm_include_path.png" /></li>
 <li>Open <code>examples/ubus_tb_top.sv</code> by double clicking the file in the project explorer. Notice the error markers on the <code>`include</code>s.</li>
 <li>Click on the error marker in the margin (with the small light bulb) and select <strong>Add sv to include paths</strong>. This automatically adds the <code>sv</code> folder to the include paths.</li>
@@ -2096,7 +2097,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2018-10-23 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2018-11-02 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
