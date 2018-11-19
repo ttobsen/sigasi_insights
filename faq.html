@@ -2342,6 +2342,7 @@ When Sigasi's default settings do not work on your Linux system, try the followi
 <ol>
 <li>Make sure the <code>webkitgtk</code> package is installed (<code>dnf install webkitgtk</code>)</li>
 <li>Replace <code>-Dorg.eclipse.swt.browser.DefaultType=mozilla</code> with <code>-Dorg.eclipse.swt.browser.UseWebKitGTK=true</code> in your sigasi.ini</li>
+<li>You might have to remove the line <code>-Dorg.eclipse.swt.browser.UseWebKitGTK=true</code> from your sigasi.ini or eclipse.ini file.</li>
 <li>On preference page <code>General &gt; Web Browser</code>, select <strong>Use internal web browser</strong></li>
 </ol>
 <p><a href="https://www.eclipse.org/swt/faq.php#browserplatforms">Complete info on Eclipse website</a></p>
@@ -2535,7 +2536,7 @@ We have not had good results with FreeHDL or with Green Mountain VHDL. It seems 
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2018-11-14 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2018-11-19 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
