@@ -2028,7 +2028,8 @@ Insights<span style="color:#f47920">.</span>							</p>
 </ul>
 </li>
 <li><a href="#troubleshooting">Troubleshooting</a><ul>
-<li><a href="#show-in-system-explorer-does-not-work-on-red-hat-linux-6">"Show In -&gt; System Explorer" does not work on Red Hat Linux 6</a></li>
+<li><a href="#show-in-system-explorer-does-not-work-on-redhat-linux-6">"Show In -&gt; System Explorer" does not work on RedHat Linux 6</a></li>
+<li><a href="#i-still-need-to-use-redhat-linux-6-how-can-i-run-sigasi-studio">I still need to use RedHat Linux 6. How can I run Sigasi Studio?</a></li>
 <li><a href="#sigasi-switches-my-keyboard-layout-did-i-find-a-bug">Sigasi switches my keyboard layout! Did I find a bug?</a></li>
 <li><a href="#i-dont-see-error-icons-in-the-project-explorer-or-i-dont-see-the-library-names-in-the-project-explorer">I don't see error icons in the Project Explorer, or I don't see the library names in the Project Explorer</a></li>
 <li><a href="#junk-files">I get lots of errors in files that are not even really a part of my project. Can I hide them?</a></li>
@@ -2092,7 +2093,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 <li>
 <p>Sigasi Studio as Plugin in your own Eclipse installation:</p>
 <ul>
-<li>Eclipse 4.6 or higher</li>
+<li>Eclipse 4.6 <em>Neon</em> or higher</li>
 <li>Java JRE 8 or higher  </li>
 <li>And all requirements from the standalone version</li>
 </ul>
@@ -2300,9 +2301,25 @@ Inline PSL is not supported, but PSL in comments is safely ignored.</p>
 <li><strong>Suppress one marker</strong>: Or you can suppress markers on a given line, using the <a href="/tech/eclipse-marker-manager.html" title="Eclipse Marker Manager">Eclipse Marker Manager</a> plugin.</li>
 </ul>
 <h2 id="troubleshooting">Troubleshooting</h2>
-<h3 id="show-in-system-explorer-does-not-work-on-red-hat-linux-6">"Show In -&gt; System Explorer" does not work on Red Hat Linux 6</h3>
+<h3 id="show-in-system-explorer-does-not-work-on-redhat-linux-6">"Show In -&gt; System Explorer" does not work on RedHat Linux 6</h3>
 <p>On preference page <strong>General &gt; Workspace</strong> you can configure the command that is used to open files with the System Explorer. The default Linux command does not work on older linux systems.
 On RedHat 6 linux, you can use the nautilus command: <code>nautilus "${selected_resource_parent_loc}"</code> (<a href="https://help.eclipse.org/photon/index.jsp?topic=%2Forg.eclipse.platform.doc.user%2Freference%2Fref-9.htm">More info</a>).</p>
+<h3 id="i-still-need-to-use-redhat-linux-6-how-can-i-run-sigasi-studio">I still need to use RedHat Linux 6. How can I run Sigasi Studio?</h3>
+<p>Since <a href="/releasenotes/sigasi-4.01.html#sigasi-studio-standalone-version-eclipse-photon-48" title="Sigasi Studio 4.1">Sigasi Studio 4.1</a>, the stand-alone Sigasi Studio application is built on top of Eclipse Photon (4.8).
+This version of Eclipse has dependencies that can't be met on RedHat Linux 6.
+To still be able to run Sigasi Studio on RedHat Linux 6, follow these steps:</p>
+<ul>
+<li>Install a version of Eclipse &lt; 4.8, e.g. <a href="https://www.eclipse.org/oxygen/">Eclipse Oxygen (4.7)</a>.</li>
+<li>Eclipse Oxygen and the Sigasi Studio Plugin require Java 8.</li>
+</ul>
+<div class="codehilite"><pre><span></span>yum install java-1.8.0-openjdk
+</pre></div>
+
+
+<ul>
+<li>Install the Sigasi Studio Plugin by following <a href="/manual/setup.html#installation-of-sigasi-studio-eclipse-plugin" title="Setting Up Sigasi Studio">these steps</a>.</li>
+</ul>
+<p>Note that over time Sigasi will probably discontinue support for Eclipse versions before Eclipse Photon. It is recommended to upgrade your OS.</p>
 <h3 id="sigasi-switches-my-keyboard-layout-did-i-find-a-bug">Sigasi switches my keyboard layout! Did I find a bug?</h3>
 <p>This sometimes happens on Windows. You have probably triggered a keyboard shortcut that switches your keyboard lay-out.
 Read Microsoft's documentation of the <a href="http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/langbar_keystroke_shortcuts.mspx?mfr=true" title="Language bar keyboard shortcuts">Language bar keyboard shortcuts</a>.
@@ -2539,7 +2556,7 @@ We have not had good results with FreeHDL or with Green Mountain VHDL. It seems 
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2018-12-04 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2018-12-05 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
