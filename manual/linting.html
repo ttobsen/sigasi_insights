@@ -1798,6 +1798,9 @@ Insights<span style="color:#f47920">.</span>							</p>
 			<a href="/releasenotes/" class="dropdown-toggle" data-toggle="dropdown">Release Notes <b class="caret"></b></a>
 			<ul class="dropdown-menu">
 				<li>
+					<a href="/releasenotes/sigasi-4.02.html">Sigasi Studio 4.2</a>
+				</li>
+				<li>
 					<a href="/releasenotes/sigasi-4.01.html">Sigasi Studio 4.1</a>
 				</li>
 				<li>
@@ -1991,6 +1994,14 @@ of lint is configurable for additional flexibility. The configuration
 interface is available in <strong>Window > Preferences > VHDL >
 Errors/Warnings</strong>.</p>
 <p><img alt="Configuring the severity of Sigasi Studio linting checks" src="images/problemseveritypreferencepage.png" title="Configuring the severity of Sigasi Studio linting checks" /></p>
+<p><a href="/manual/linting.html#project-specific-linting-settings" title="Linting and Quick Fixes">You can also configure the severity level per project</a></p>
+<h3 id="suppressing-warnings">Suppressing warnings</h3>
+<p>Specific warnings can be suppressed in your code by adding a <code>@suppress</code> comment (<code>-- @suppress</code> for VHDL, <code>// @suppress</code> for SystemVerilog), on the same line as the warning.</p>
+<p>You can limit the suppression to a specific warning by putting a prefix of the warning message between quotes after <code>@suppress</code>. Sigasi also recommends adding a reason why the warning was suppressed by adding an extra comment after <code>@suppress</code>:</p>
+<div class="codehilite"><pre><span></span>&lt;line with warning&gt; // @suppress &quot;Warning message prefix&quot; Reason why warning is supppressed
+</pre></div>
+
+
 <h3 id="linting-common-libraries">No Linting for Common Libraries</h3>
 <p>Common Libraries are considered to be production ready libraries.
 Linting is skipped for all files in the Common Libraries folder.</p>
@@ -1998,6 +2009,39 @@ Linting is skipped for all files in the Common Libraries folder.</p>
 <p>Some of the VHDL lint problems can be automatically resolved with <em>Quick Fixes</em>.
 These problems have <em>markers</em> annotated with a lightbulb icon (like <img alt="" src="icons/warning_lightbulb.png" />).
 To trigger a Quick Fix, click the problem marker or press <strong>Ctrl-1</strong> and select the Quick Fix.</p>
+<h2 id="list-of-systemverilog-code-rules">List of (System)Verilog code rules</h2>
+<p>The table below lists the (System)Verilog code rules that can be checked automatically by Sigasi Studio. These checks require a <a href="/manual/editions.html#xprt" title="Sigasi Studio XPRT">Sigasi Studio XPRT</a> license.</p>
+<table class="table">
+<thead>
+<tr>
+<th>Quick Fix</th>
+<th>Description</th>
+<th align="right">ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Null loops</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td></td>
+<td>Naming convention</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td><img alt="" src="icons/warning_lightbulb.png" /></td>
+<td>Disallow 'reg' datatype</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td></td>
+<td>VHDL keyword as module name</td>
+<td align="right">7</td>
+</tr>
+</tbody>
+</table>
 <h2 id="list-of-vhdl-code-rules">List of VHDL code rules</h2>
 <p>The table below lists the VHDL code rules that can be checked automatically by Sigasi Studio.
 The availability of code rules depends on the license requirements.</p>
@@ -2346,6 +2390,12 @@ The availability of code rules depends on the license requirements.</p>
 <td><a href="#file-name">Filename must contain primary unit name</a></td>
 <td align="right">189</td>
 </tr>
+<tr>
+<td>XL</td>
+<td></td>
+<td>Empty loop  statement</td>
+<td align="right">190</td>
+</tr>
 </tbody>
 </table>
 <h2 id="detailed-explanation-of-vhdl-code-rules">Detailed explanation of VHDL code rules</h2>
@@ -2519,11 +2569,15 @@ you would specify <code>.*_v</code> pattern in the <strong>Variable name</strong
 <p>The default way to configure the severity of the Sigasi Studio linting checks is to set their severity in the <strong>Errors/Warnings</strong> preference page.
 You can override these setting by creating a settings file for your projects.</p>
 <p>In each project, you can override the coding rules settings. You can override rules for the <strong>entire project</strong>, for <strong>folders</strong> in the project, or for individual <strong>files</strong>.</p>
-<p>Project settings are stored in this settings file:</p>
+<h3 id="graphical-configuration">Graphical configuration</h3>
+<p>To configure the severity level, right click the project (or file or folder) in the Project Explorer and select <strong>Properties &gt; VHDL Errors/Warnings</strong>.</p>
+<p><a href="images/linting_severity_per_project.png"><img alt="Configure linting severity per project" src="images/linting_severity_per_project.png" title="Configure linting severity per project" /></a>
+Project settings are stored in this settings file:</p>
 <div class="codehilite"><pre><span></span>    ${project location}/.settings/com.sigasi.hdt.vhdl.linting.prefs
 </pre></div>
 
 
+<h3 id="manual-configuration">Manual configuration</h3>
 <p>To configure the severity of validations, add a line for each validation:</p>
 <div class="codehilite"><pre><span></span>    ${validation id}/severity/${path}=${severity}
 </pre></div>
@@ -2622,10 +2676,12 @@ are configured in the same settings file. Examples:</p>
 <li><a href="#linting-linting">Linting</a><ul>
 <li><a href="#linting-icons">Marker Icons</a></li>
 <li><a href="#linting-severity-level">Configuring the Severity Level</a></li>
+<li><a href="#suppressing-warnings">Suppressing warnings</a></li>
 <li><a href="#linting-common-libraries">No Linting for Common Libraries</a></li>
 </ul>
 </li>
 <li><a href="#linting-quick-fix">Quick Fixes</a></li>
+<li><a href="#list-of-systemverilog-code-rules">List of (System)Verilog code rules</a></li>
 <li><a href="#list-of-vhdl-code-rules">List of VHDL code rules</a></li>
 <li><a href="#detailed-explanation-of-vhdl-code-rules">Detailed explanation of VHDL code rules</a><ul>
 <li><a href="#dead-code-lint">Dead Code lint</a></li>
@@ -2650,6 +2706,8 @@ are configured in the same settings file. Examples:</p>
 </li>
 <li><a href="#project-specific-linting-settings">Project specific Linting settings</a><ul>
 <li><a href="#severity-of-linting-checks">Severity of Linting checks</a></li>
+<li><a href="#graphical-configuration">Graphical configuration</a></li>
+<li><a href="#manual-configuration">Manual configuration</a></li>
 <li><a href="#naming-conventions-per-project">Naming Conventions per project</a></li>
 </ul>
 </li>
@@ -2724,7 +2782,7 @@ are configured in the same settings file. Examples:</p>
 			<a href="/LICENSE.html">Copyright Sigasi</a> | <a href="http://www.sigasi.com">www.sigasi.com</a> 
 		</div>
 		<div class="text-right">
-			This Sigasi Insights webpage was generated on 2018-12-06 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+			This Sigasi Insights webpage was generated on 2018-12-12 and is powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
 		</div>
 	</div>
 </footer>
