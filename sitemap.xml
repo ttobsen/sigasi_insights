@@ -461,11 +461,6 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/opinion/emacs/room-improvement.html</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
         <loc>http://insights.sigasi.com/tech/taming_complex_chip_designs_with_beautiful_diagrams.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -896,7 +891,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/screencasts/quick_access.html</loc>
+        <loc>http://insights.sigasi.com/opinion/emacs/room-improvement.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1291,6 +1286,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>http://insights.sigasi.com/tech/xtext-resource-caching-loading-resources-5-times-faster.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>http://insights.sigasi.com/tag/case/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -1436,7 +1436,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tech/xtext-resource-caching-loading-resources-5-times-faster.html</loc>
+        <loc>http://insights.sigasi.com/screencasts/quickaccess.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
