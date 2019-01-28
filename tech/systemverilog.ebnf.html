@@ -2045,7 +2045,7 @@ The IEEE Standards publication(s) ("Document") is approved by the IEEE Standards
 <dt><strong id="program_nonansi_header">program_nonansi_header</strong></dt>
 <dd>{ <a href="#attribute_instance">attribute_instance</a>  }  <font color="purple"><b>program</b></font>  [ <a href="#lifetime">lifetime</a>  ]  <a href="#program_identifier">program_identifier</a>  { <a href="#package_import_declaration">package_import_declaration</a>  }   [ <a href="#parameter_port_list">parameter_port_list</a>  ]  <a href="#list_of_ports">list_of_ports</a> <font color="purple"><b>;</b></font> </dd>
 <dt><strong id="program_ansi_header">program_ansi_header</strong></dt>
-<dd>{ <a href="#attribute_instance">attribute_instance</a>  }  <font color="purple"><b>program</b></font>  [ <a href="#lifetime">lifetime</a>  ]  <a href="#program_identifier">program_identifier</a>  { <a href="#package_import_declaration">package_import_declaration</a>  }  <sup id="fnref2:footnote_1"><a class="footnote-ref" href="#fn:footnote_1" rel="footnote">1</a></sup>  [ <a href="#parameter_port_list">parameter_port_list</a>  ]   [ <a href="#list_of_port_declarations">list_of_port_declarations</a>  ]  <font color="purple"><b>;</b></font> </dd>
+<dd>{ <a href="#attribute_instance">attribute_instance</a>  }  <font color="purple"><b>program</b></font>  [ <a href="#lifetime">lifetime</a>  ]  <a href="#program_identifier">program_identifier</a>  { <a href="#package_import_declaration">package_import_declaration</a>  }  <sup id="fnref:footnote_1"><a class="footnote-ref" href="#fn:footnote_1" rel="footnote">1</a></sup>  [ <a href="#parameter_port_list">parameter_port_list</a>  ]   [ <a href="#list_of_port_declarations">list_of_port_declarations</a>  ]  <font color="purple"><b>;</b></font> </dd>
 <dt><strong id="checker_declaration">checker_declaration</strong></dt>
 <dd><font color="purple"><b>checker</b></font> <a href="#checker_identifier">checker_identifier</a>  [ <font color="purple"><b>(</b></font>  [ <a href="#checker_port_list">checker_port_list</a>  ]  <font color="purple"><b>)</b></font>  ]  <font color="purple"><b>;</b></font>  {  { <a href="#attribute_instance">attribute_instance</a>  }  <a href="#checker_or_generate_item">checker_or_generate_item</a>  }  <font color="purple"><b>endchecker</b></font>  [ <font color="purple"><b>:</b></font> <a href="#checker_identifier">checker_identifier</a>  ]  </dd>
 <dt><strong id="class_declaration">class_declaration</strong></dt>
@@ -2057,7 +2057,7 @@ The IEEE Standards publication(s) ("Document") is approved by the IEEE Standards
 <dt><strong id="interface_class_item">interface_class_item</strong></dt>
 <dd><a href="#type_declaration">type_declaration</a> <br />
     |  { <a href="#attribute_instance">attribute_instance</a>  }  <a href="#interface_class_method">interface_class_method</a> <br />
-    | <a href="#local_parameter_declaration">local_parameter_declaration</a> <sup id="fnref2:footnote_7"><a class="footnote-ref" href="#fn:footnote_7" rel="footnote">7</a></sup> <font color="purple"><b>;</b></font> <br />
+    | <a href="#local_parameter_declaration">local_parameter_declaration</a> <sup id="fnref:footnote_7"><a class="footnote-ref" href="#fn:footnote_7" rel="footnote">7</a></sup> <font color="purple"><b>;</b></font> <br />
     | <a href="#parameter_declaration">parameter_declaration</a> <font color="purple"><b>;</b></font> <br />
     | <font color="purple"><b>;</b></font> </dd>
 <dt><strong id="interface_class_method">interface_class_method</strong></dt>
@@ -2165,7 +2165,7 @@ The IEEE Standards publication(s) ("Document") is approved by the IEEE Standards
     | <a href="#program_declaration">program_declaration</a> <br />
     | <a href="#module_declaration">module_declaration</a> <br />
     | <a href="#interface_declaration">interface_declaration</a> <br />
-    | <a href="#timeunits_declaration">timeunits_declaration</a> <sup id="fnref4:footnote_3"><a class="footnote-ref" href="#fn:footnote_3" rel="footnote">3</a></sup> </dd>
+    | <a href="#timeunits_declaration">timeunits_declaration</a> <sup id="fnref:footnote_3"><a class="footnote-ref" href="#fn:footnote_3" rel="footnote">3</a></sup> </dd>
 <dt><strong id="parameter_override">parameter_override</strong></dt>
 <dd><font color="purple"><b>defparam</b></font> <a href="#list_of_defparam_assignments">list_of_defparam_assignments</a> <font color="purple"><b>;</b></font> </dd>
 <dt><strong id="bind_directive">bind_directive</strong><sup id="fnref:footnote_4"><a class="footnote-ref" href="#fn:footnote_4" rel="footnote">4</a></sup></dt>
@@ -2228,7 +2228,7 @@ The IEEE Standards publication(s) ("Document") is approved by the IEEE Standards
     | <a href="#interface_or_generate_item">interface_or_generate_item</a> <br />
     | <a href="#program_declaration">program_declaration</a> <br />
     | <a href="#interface_declaration">interface_declaration</a> <br />
-    | <a href="#timeunits_declaration">timeunits_declaration</a> <sup id="fnref3:footnote_3"><a class="footnote-ref" href="#fn:footnote_3" rel="footnote">3</a></sup> </dd>
+    | <a href="#timeunits_declaration">timeunits_declaration</a> <sup id="fnref:footnote_3"><a class="footnote-ref" href="#fn:footnote_3" rel="footnote">3</a></sup> </dd>
 </dl>
 <h3 id="program-items">Program items</h3>
 <dl class="dl-horizontal">
@@ -2241,7 +2241,7 @@ The IEEE Standards publication(s) ("Document") is approved by the IEEE Standards
     |  { <a href="#attribute_instance">attribute_instance</a>  }  <a href="#initial_construct">initial_construct</a> <br />
     |  { <a href="#attribute_instance">attribute_instance</a>  }  <a href="#final_construct">final_construct</a> <br />
     |  { <a href="#attribute_instance">attribute_instance</a>  }  <a href="#concurrent_assertion_item">concurrent_assertion_item</a> <br />
-    | <a href="#timeunits_declaration">timeunits_declaration</a> <sup id="fnref2:footnote_3"><a class="footnote-ref" href="#fn:footnote_3" rel="footnote">3</a></sup> <br />
+    | <a href="#timeunits_declaration">timeunits_declaration</a> <sup id="fnref:footnote_3"><a class="footnote-ref" href="#fn:footnote_3" rel="footnote">3</a></sup> <br />
     | <a href="#program_generate_item">program_generate_item</a> </dd>
 <dt><strong id="program_generate_item">program_generate_item</strong><sup id="fnref:footnote_5"><a class="footnote-ref" href="#fn:footnote_5" rel="footnote">5</a></sup></dt>
 <dd><a href="#loop_generate_construct">loop_generate_construct</a> <br />
@@ -2314,13 +2314,13 @@ The IEEE Standards publication(s) ("Document") is approved by the IEEE Standards
 <dd><font color="purple"><b>static</b></font> <br />
     | <font color="purple"><b>protected</b></font> <br />
     | <font color="purple"><b>local</b></font> </dd>
-<dt><strong id="property_qualifier">property_qualifier</strong><sup id="fnref2:footnote_8"><a class="footnote-ref" href="#fn:footnote_8" rel="footnote">8</a></sup></dt>
+<dt><strong id="property_qualifier">property_qualifier</strong><sup id="fnref:footnote_8"><a class="footnote-ref" href="#fn:footnote_8" rel="footnote">8</a></sup></dt>
 <dd><a href="#random_qualifier">random_qualifier</a> <br />
     | <a href="#class_item_qualifier">class_item_qualifier</a> </dd>
-<dt><strong id="random_qualifier">random_qualifier</strong><sup id="fnref3:footnote_8"><a class="footnote-ref" href="#fn:footnote_8" rel="footnote">8</a></sup></dt>
+<dt><strong id="random_qualifier">random_qualifier</strong><sup id="fnref:footnote_8"><a class="footnote-ref" href="#fn:footnote_8" rel="footnote">8</a></sup></dt>
 <dd><font color="purple"><b>rand</b></font> <br />
     | <font color="purple"><b>randc</b></font> </dd>
-<dt><strong id="method_qualifier">method_qualifier</strong><sup id="fnref4:footnote_8"><a class="footnote-ref" href="#fn:footnote_8" rel="footnote">8</a></sup></dt>
+<dt><strong id="method_qualifier">method_qualifier</strong><sup id="fnref:footnote_8"><a class="footnote-ref" href="#fn:footnote_8" rel="footnote">8</a></sup></dt>
 <dd>[ <font color="purple"><b>pure</b></font>  ]  <font color="purple"><b>virtual</b></font> <br />
     | <a href="#class_item_qualifier">class_item_qualifier</a> </dd>
 <dt><strong id="method_prototype">method_prototype</strong></dt>
@@ -2505,7 +2505,7 @@ The IEEE Standards publication(s) ("Document") is approved by the IEEE Standards
 <dt><strong id="enum_base_type">enum_base_type</strong></dt>
 <dd><a href="#integer_atom_type">integer_atom_type</a>  [ <a href="#signing">signing</a>  ]  <br />
     | <a href="#integer_vector_type">integer_vector_type</a>  [ <a href="#signing">signing</a>  ]   [ <a href="#packed_dimension">packed_dimension</a>  ]  <br />
-    | <a href="#type_identifier">type_identifier</a>  [ <a href="#packed_dimension">packed_dimension</a>  ]  <sup id="fnref2:footnote_14"><a class="footnote-ref" href="#fn:footnote_14" rel="footnote">14</a></sup> </dd>
+    | <a href="#type_identifier">type_identifier</a>  [ <a href="#packed_dimension">packed_dimension</a>  ]  <sup id="fnref:footnote_14"><a class="footnote-ref" href="#fn:footnote_14" rel="footnote">14</a></sup> </dd>
 <dt><strong id="enum_name_declaration">enum_name_declaration</strong></dt>
 <dd><a href="#enum_identifier">enum_identifier</a>  [ <font color="purple"><b>[</b></font> <a href="#integral_number">integral_number</a>  [ <font color="purple"><b>:</b></font> <a href="#integral_number">integral_number</a>  ]  <font color="purple"><b>]</b></font>  ]   [ <font color="purple"><b>=</b></font> <a href="#constant_expression">constant_expression</a>  ]  </dd>
 <dt><strong id="class_scope">class_scope</strong></dt>
@@ -2721,7 +2721,7 @@ The IEEE Standards publication(s) ("Document") is approved by the IEEE Standards
 <dd><font color="purple"><b>context</b></font> </dd>
 <dt><strong id="dpi_function_proto">dpi_function_proto</strong><sup id="fnref:footnote_21"><a class="footnote-ref" href="#fn:footnote_21" rel="footnote">21</a></sup>,<sup id="fnref:footnote_22"><a class="footnote-ref" href="#fn:footnote_22" rel="footnote">22</a></sup></dt>
 <dd><a href="#function_prototype">function_prototype</a> </dd>
-<dt><strong id="dpi_task_proto">dpi_task_proto</strong><sup id="fnref2:footnote_22"><a class="footnote-ref" href="#fn:footnote_22" rel="footnote">22</a></sup></dt>
+<dt><strong id="dpi_task_proto">dpi_task_proto</strong><sup id="fnref:footnote_22"><a class="footnote-ref" href="#fn:footnote_22" rel="footnote">22</a></sup></dt>
 <dd><a href="#task_prototype">task_prototype</a> </dd>
 </dl>
 <h4 id="task-declarations">Task declarations</h4>
@@ -3072,7 +3072,7 @@ The IEEE Standards publication(s) ("Document") is approved by the IEEE Standards
 <dd><a href="#covergroup_value_range">covergroup_value_range</a>  { <font color="purple"><b>,</b></font> <a href="#covergroup_value_range">covergroup_value_range</a>  }  </dd>
 <dt><strong id="covergroup_value_range">covergroup_value_range</strong></dt>
 <dd><a href="#covergroup_expression">covergroup_expression</a> <br />
-    | <font color="purple"><b>[</b></font> <a href="#covergroup_expression">covergroup_expression</a> <font color="purple"><b>:</b></font> <a href="#covergroup_expression">covergroup_expression</a> <font color="purple"><b>]</b></font> <sup id="fnref2:footnote_25"><a class="footnote-ref" href="#fn:footnote_25" rel="footnote">25</a></sup> </dd>
+    | <font color="purple"><b>[</b></font> <a href="#covergroup_expression">covergroup_expression</a> <font color="purple"><b>:</b></font> <a href="#covergroup_expression">covergroup_expression</a> <font color="purple"><b>]</b></font> <sup id="fnref:footnote_25"><a class="footnote-ref" href="#fn:footnote_25" rel="footnote">25</a></sup> </dd>
 <dt><strong id="with_covergroup_expression">with_covergroup_expression</strong></dt>
 <dd><a href="#covergroup_expression">covergroup_expression</a> <sup id="fnref:footnote_26"><a class="footnote-ref" href="#fn:footnote_26" rel="footnote">26</a></sup> </dd>
 <dt><strong id="set_covergroup_expression">set_covergroup_expression</strong></dt>
@@ -3193,7 +3193,7 @@ The IEEE Standards publication(s) ("Document") is approved by the IEEE Standards
 <dd><a href="#name_of_instance">name_of_instance</a> <font color="purple"><b>(</b></font>  [ <a href="#list_of_port_connections">list_of_port_connections</a>  ]  <font color="purple"><b>)</b></font> </dd>
 <dt><strong id="name_of_instance">name_of_instance</strong></dt>
 <dd><a href="#instance_identifier">instance_identifier</a>  { <a href="#unpacked_dimension">unpacked_dimension</a>  }  </dd>
-<dt><strong id="list_of_port_connections">list_of_port_connections</strong><sup id="fnref2:footnote_29"><a class="footnote-ref" href="#fn:footnote_29" rel="footnote">29</a></sup></dt>
+<dt><strong id="list_of_port_connections">list_of_port_connections</strong><sup id="fnref:footnote_29"><a class="footnote-ref" href="#fn:footnote_29" rel="footnote">29</a></sup></dt>
 <dd><a href="#ordered_port_connection">ordered_port_connection</a>  { <font color="purple"><b>,</b></font> <a href="#ordered_port_connection">ordered_port_connection</a>  }  <br />
     | <a href="#named_port_connection">named_port_connection</a>  { <font color="purple"><b>,</b></font> <a href="#named_port_connection">named_port_connection</a>  }  </dd>
 <dt><strong id="ordered_port_connection">ordered_port_connection</strong></dt>
@@ -3947,7 +3947,7 @@ The IEEE Standards publication(s) ("Document") is approved by the IEEE Standards
     | <a href="#specify_output_terminal_descriptor">specify_output_terminal_descriptor</a> </dd>
 <dt><strong id="edge_control_specifier">edge_control_specifier</strong></dt>
 <dd><font color="purple"><b>edge</b></font> <font color="purple"><b>[</b></font> <a href="#edge_descriptor">edge_descriptor</a>  { <font color="purple"><b>,</b></font> <a href="#edge_descriptor">edge_descriptor</a>  }  <font color="purple"><b>]</b></font> </dd>
-<dt><strong id="edge_descriptor">edge_descriptor</strong><sup id="fnref12:footnote_33"><a class="footnote-ref" href="#fn:footnote_33" rel="footnote">33</a></sup></dt>
+<dt><strong id="edge_descriptor">edge_descriptor</strong><sup id="fnref:footnote_33"><a class="footnote-ref" href="#fn:footnote_33" rel="footnote">33</a></sup></dt>
 <dd><font color="purple"><b>01</b></font> <br />
     | <font color="purple"><b>10</b></font> <br />
     | <a href="#z_or_x">z_or_x</a> <a href="#zero_or_one">zero_or_one</a> <br />
@@ -4174,7 +4174,7 @@ The IEEE Standards publication(s) ("Document") is approved by the IEEE Standards
     | <font color="purple"><b>$</b></font> <sup id="fnref:footnote_42"><a class="footnote-ref" href="#fn:footnote_42" rel="footnote">42</a></sup> <br />
     | <font color="purple"><b>null</b></font> </dd>
 <dt><strong id="class_qualifier">class_qualifier</strong></dt>
-<dd>[ <font color="purple"><b>local::</b></font> <sup id="fnref2:footnote_43"><a class="footnote-ref" href="#fn:footnote_43" rel="footnote">43</a></sup>  ]   [ <a href="#implicit_class_handle">implicit_class_handle</a> <font color="purple"><b>.</b></font> <br />
+<dd>[ <font color="purple"><b>local::</b></font> <sup id="fnref:footnote_43"><a class="footnote-ref" href="#fn:footnote_43" rel="footnote">43</a></sup>  ]   [ <a href="#implicit_class_handle">implicit_class_handle</a> <font color="purple"><b>.</b></font> <br />
      | <a href="#class_scope">class_scope</a>  ]  </dd>
 <dt><strong id="range_expression">range_expression</strong></dt>
 <dd><a href="#expression">expression</a> <br />
@@ -4194,7 +4194,7 @@ The IEEE Standards publication(s) ("Document") is approved by the IEEE Standards
     | <font color="purple"><b>ns</b></font> <br />
     | <font color="purple"><b>ps</b></font> <br />
     | <font color="purple"><b>fs</b></font> </dd>
-<dt><strong id="implicit_class_handle">implicit_class_handle</strong><sup id="fnref2:footnote_41"><a class="footnote-ref" href="#fn:footnote_41" rel="footnote">41</a></sup></dt>
+<dt><strong id="implicit_class_handle">implicit_class_handle</strong><sup id="fnref:footnote_41"><a class="footnote-ref" href="#fn:footnote_41" rel="footnote">41</a></sup></dt>
 <dd><font color="purple"><b>this</b></font> <br />
     | <font color="purple"><b>super</b></font> <br />
     | <font color="purple"><b>this</b></font> <font color="purple"><b>.</b></font> <font color="purple"><b>super</b></font> </dd>
@@ -4328,42 +4328,42 @@ The IEEE Standards publication(s) ("Document") is approved by the IEEE Standards
 <dt><strong id="non_zero_unsigned_number">non_zero_unsigned_number</strong><sup id="fnref:footnote_33"><a class="footnote-ref" href="#fn:footnote_33" rel="footnote">33</a></sup></dt>
 <dd><a href="#non_zero_decimal_digit">non_zero_decimal_digit</a>  { <font color="purple"><b>_</b></font> <br />
      | <a href="#decimal_digit">decimal_digit</a>  }  </dd>
-<dt><strong id="real_number">real_number</strong><sup id="fnref2:footnote_33"><a class="footnote-ref" href="#fn:footnote_33" rel="footnote">33</a></sup></dt>
+<dt><strong id="real_number">real_number</strong><sup id="fnref:footnote_33"><a class="footnote-ref" href="#fn:footnote_33" rel="footnote">33</a></sup></dt>
 <dd><a href="#fixed_point_number">fixed_point_number</a> <br />
     | <a href="#unsigned_number">unsigned_number</a>  [ <font color="purple"><b>.</b></font> <a href="#unsigned_number">unsigned_number</a>  ]  <a href="#exp">exp</a>  [ <a href="#sign">sign</a>  ]  <a href="#unsigned_number">unsigned_number</a> </dd>
-<dt><strong id="fixed_point_number">fixed_point_number</strong><sup id="fnref3:footnote_33"><a class="footnote-ref" href="#fn:footnote_33" rel="footnote">33</a></sup></dt>
+<dt><strong id="fixed_point_number">fixed_point_number</strong><sup id="fnref:footnote_33"><a class="footnote-ref" href="#fn:footnote_33" rel="footnote">33</a></sup></dt>
 <dd><a href="#unsigned_number">unsigned_number</a> <font color="purple"><b>.</b></font> <a href="#unsigned_number">unsigned_number</a> </dd>
 <dt><strong id="exp">exp</strong></dt>
 <dd><font color="purple"><b>e</b></font> <br />
     | <font color="purple"><b>E</b></font> </dd>
-<dt><strong id="unsigned_number">unsigned_number</strong><sup id="fnref4:footnote_33"><a class="footnote-ref" href="#fn:footnote_33" rel="footnote">33</a></sup></dt>
+<dt><strong id="unsigned_number">unsigned_number</strong><sup id="fnref:footnote_33"><a class="footnote-ref" href="#fn:footnote_33" rel="footnote">33</a></sup></dt>
 <dd><a href="#decimal_digit">decimal_digit</a>  { <font color="purple"><b>_</b></font> <br />
      | <a href="#decimal_digit">decimal_digit</a>  }  </dd>
-<dt><strong id="binary_value">binary_value</strong><sup id="fnref5:footnote_33"><a class="footnote-ref" href="#fn:footnote_33" rel="footnote">33</a></sup></dt>
+<dt><strong id="binary_value">binary_value</strong><sup id="fnref:footnote_33"><a class="footnote-ref" href="#fn:footnote_33" rel="footnote">33</a></sup></dt>
 <dd><a href="#binary_digit">binary_digit</a>  { <font color="purple"><b>_</b></font> <br />
      | <a href="#binary_digit">binary_digit</a>  }  </dd>
-<dt><strong id="octal_value">octal_value</strong><sup id="fnref6:footnote_33"><a class="footnote-ref" href="#fn:footnote_33" rel="footnote">33</a></sup></dt>
+<dt><strong id="octal_value">octal_value</strong><sup id="fnref:footnote_33"><a class="footnote-ref" href="#fn:footnote_33" rel="footnote">33</a></sup></dt>
 <dd><a href="#octal_digit">octal_digit</a>  { <font color="purple"><b>_</b></font> <br />
      | <a href="#octal_digit">octal_digit</a>  }  </dd>
-<dt><strong id="hex_value">hex_value</strong><sup id="fnref7:footnote_33"><a class="footnote-ref" href="#fn:footnote_33" rel="footnote">33</a></sup></dt>
+<dt><strong id="hex_value">hex_value</strong><sup id="fnref:footnote_33"><a class="footnote-ref" href="#fn:footnote_33" rel="footnote">33</a></sup></dt>
 <dd><a href="#hex_digit">hex_digit</a>  { <font color="purple"><b>_</b></font> <br />
      | <a href="#hex_digit">hex_digit</a>  }  </dd>
-<dt><strong id="decimal_base">decimal_base</strong><sup id="fnref8:footnote_33"><a class="footnote-ref" href="#fn:footnote_33" rel="footnote">33</a></sup></dt>
+<dt><strong id="decimal_base">decimal_base</strong><sup id="fnref:footnote_33"><a class="footnote-ref" href="#fn:footnote_33" rel="footnote">33</a></sup></dt>
 <dd><font color="purple"><b>'</b></font>  [ <font color="purple"><b>s</b></font> <br />
      | <font color="purple"><b>S</b></font>  ]  <font color="purple"><b>d</b></font> <br />
     | <font color="purple"><b>'</b></font>  [ <font color="purple"><b>s</b></font> <br />
      | <font color="purple"><b>S</b></font>  ]  <font color="purple"><b>D</b></font> </dd>
-<dt><strong id="binary_base">binary_base</strong><sup id="fnref9:footnote_33"><a class="footnote-ref" href="#fn:footnote_33" rel="footnote">33</a></sup></dt>
+<dt><strong id="binary_base">binary_base</strong><sup id="fnref:footnote_33"><a class="footnote-ref" href="#fn:footnote_33" rel="footnote">33</a></sup></dt>
 <dd><font color="purple"><b>'</b></font>  [ <font color="purple"><b>s</b></font> <br />
      | <font color="purple"><b>S</b></font>  ]  <font color="purple"><b>b</b></font> <br />
     | <font color="purple"><b>'</b></font>  [ <font color="purple"><b>s</b></font> <br />
      | <font color="purple"><b>S</b></font>  ]  <font color="purple"><b>B</b></font> </dd>
-<dt><strong id="octal_base">octal_base</strong><sup id="fnref10:footnote_33"><a class="footnote-ref" href="#fn:footnote_33" rel="footnote">33</a></sup></dt>
+<dt><strong id="octal_base">octal_base</strong><sup id="fnref:footnote_33"><a class="footnote-ref" href="#fn:footnote_33" rel="footnote">33</a></sup></dt>
 <dd><font color="purple"><b>'</b></font>  [ <font color="purple"><b>s</b></font> <br />
      | <font color="purple"><b>S</b></font>  ]  <font color="purple"><b>o</b></font> <br />
     | <font color="purple"><b>'</b></font>  [ <font color="purple"><b>s</b></font> <br />
      | <font color="purple"><b>S</b></font>  ]  <font color="purple"><b>O</b></font> </dd>
-<dt><strong id="hex_base">hex_base</strong><sup id="fnref11:footnote_33"><a class="footnote-ref" href="#fn:footnote_33" rel="footnote">33</a></sup></dt>
+<dt><strong id="hex_base">hex_base</strong><sup id="fnref:footnote_33"><a class="footnote-ref" href="#fn:footnote_33" rel="footnote">33</a></sup></dt>
 <dd><font color="purple"><b>'</b></font>  [ <font color="purple"><b>s</b></font> <br />
      | <font color="purple"><b>S</b></font>  ]  <font color="purple"><b>h</b></font> <br />
     | <font color="purple"><b>'</b></font>  [ <font color="purple"><b>s</b></font> <br />
@@ -4622,7 +4622,7 @@ The IEEE Standards publication(s) ("Document") is approved by the IEEE Standards
 <dd><a href="#identifier">identifier</a> </dd>
 <dt><strong id="signal_identifier">signal_identifier</strong></dt>
 <dd><a href="#identifier">identifier</a> </dd>
-<dt><strong id="simple_identifier">simple_identifier</strong><sup id="fnref2:footnote_49"><a class="footnote-ref" href="#fn:footnote_49" rel="footnote">49</a></sup></dt>
+<dt><strong id="simple_identifier">simple_identifier</strong><sup id="fnref:footnote_49"><a class="footnote-ref" href="#fn:footnote_49" rel="footnote">49</a></sup></dt>
 <dd><em>[a-zA-Z_]</em> { <em> [a-zA-Z0-9_$]</em> }  </dd>
 <dt><strong id="specparam_identifier">specparam_identifier</strong></dt>
 <dd><a href="#identifier">identifier</a> </dd>
@@ -4656,13 +4656,13 @@ The IEEE Standards publication(s) ("Document") is approved by the IEEE Standards
 <hr />
 <ol>
 <li id="fn:footnote_1">
-<p>(1) A package_import_declaration in a module_ansi_header, interface_ansi_header, or program_ansi_header shall be followed by a parameter_port_list or list_of_port_declarations, or both.&#160;<a class="footnote-backref" href="#fnref:footnote_1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:footnote_1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>(1) A package_import_declaration in a module_ansi_header, interface_ansi_header, or program_ansi_header shall be followed by a parameter_port_list or list_of_port_declarations, or both.&#160;<a class="footnote-backref" href="#fnref:footnote_1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:footnote_2">
 <p>(2) The list_of_port_declarations syntax is explained in 23.2.2.2, which also imposes various semantic restrictions, e.g., a ref port shall be of a variable type and an inout port shall not be. It shall be illegal to initialize a port that is not a variable output port or to specify a default value for a port that is not an input port.&#160;<a class="footnote-backref" href="#fnref:footnote_2" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 <li id="fn:footnote_3">
-<p>(3) A timeunits_declaration shall be legal as a non_port_module_item, non_port_interface_item, non_port_program_item, or package_item only if it repeats and matches a previous timeunits_declaration within the same time scope.&#160;<a class="footnote-backref" href="#fnref:footnote_3" rev="footnote" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:footnote_3" rev="footnote" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:footnote_3" rev="footnote" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:footnote_3" rev="footnote" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+<p>(3) A timeunits_declaration shall be legal as a non_port_module_item, non_port_interface_item, non_port_program_item, or package_item only if it repeats and matches a previous timeunits_declaration within the same time scope.&#160;<a class="footnote-backref" href="#fnref:footnote_3" rev="footnote" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
 <li id="fn:footnote_4">
 <p>(4) If the bind_target_scope is an interface_identifier or the bind_target_instance is an interface_instance_identifier, then the bind_instantiation shall be an interface_instantiation or a checker_instantiation.&#160;<a class="footnote-backref" href="#fnref:footnote_4" rev="footnote" title="Jump back to footnote 4 in the text">&#8617;</a></p>
@@ -4674,10 +4674,10 @@ The IEEE Standards publication(s) ("Document") is approved by the IEEE Standards
 <p>(6) It shall be illegal for a checker_generate_item to include any item that would be illegal in a checker_declaration outside a checker_generate_item.&#160;<a class="footnote-backref" href="#fnref:footnote_6" rev="footnote" title="Jump back to footnote 6 in the text">&#8617;</a></p>
 </li>
 <li id="fn:footnote_7">
-<p>(7) In a parameter_declaration that is a class_item, the parameter keyword shall be a synonym for the localparam keyword.&#160;<a class="footnote-backref" href="#fnref:footnote_7" rev="footnote" title="Jump back to footnote 7 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:footnote_7" rev="footnote" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+<p>(7) In a parameter_declaration that is a class_item, the parameter keyword shall be a synonym for the localparam keyword.&#160;<a class="footnote-backref" href="#fnref:footnote_7" rev="footnote" title="Jump back to footnote 7 in the text">&#8617;</a></p>
 </li>
 <li id="fn:footnote_8">
-<p>(8) In any one declaration, only one of protected or local is allowed, only one of rand or randc is allowed, and static and/or virtual can appear only once.&#160;<a class="footnote-backref" href="#fnref:footnote_8" rev="footnote" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:footnote_8" rev="footnote" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:footnote_8" rev="footnote" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:footnote_8" rev="footnote" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+<p>(8) In any one declaration, only one of protected or local is allowed, only one of rand or randc is allowed, and static and/or virtual can appear only once.&#160;<a class="footnote-backref" href="#fnref:footnote_8" rev="footnote" title="Jump back to footnote 8 in the text">&#8617;</a></p>
 </li>
 <li id="fn:footnote_9">
 <p>(9) The open_range_list in a uniqueness_constraint shall contain only expressions that denote scalar or array variables, as described in 18.5.5.&#160;<a class="footnote-backref" href="#fnref:footnote_9" rev="footnote" title="Jump back to footnote 9 in the text">&#8617;</a></p>
@@ -4695,7 +4695,7 @@ The IEEE Standards publication(s) ("Document") is approved by the IEEE Standards
 <p>(13) When a packed dimension is used with the struct or union keyword, the packed keyword shall also be used.&#160;<a class="footnote-backref" href="#fnref:footnote_13" rev="footnote" title="Jump back to footnote 13 in the text">&#8617;</a></p>
 </li>
 <li id="fn:footnote_14">
-<p>(14) When a type_reference is used in a net declaration, it shall be preceded by a net type keyword; and when it is used in a variable declaration, it shall be preceded by the var keyword.&#160;<a class="footnote-backref" href="#fnref:footnote_14" rev="footnote" title="Jump back to footnote 14 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:footnote_14" rev="footnote" title="Jump back to footnote 14 in the text">&#8617;</a></p>
+<p>(14) When a type_reference is used in a net declaration, it shall be preceded by a net type keyword; and when it is used in a variable declaration, it shall be preceded by the var keyword.&#160;<a class="footnote-backref" href="#fnref:footnote_14" rev="footnote" title="Jump back to footnote 14 in the text">&#8617;</a></p>
 </li>
 <li id="fn:footnote_15">
 <p>(15) A type_identifier shall be legal as an enum_base_type if it denotes an integer_atom_type, with which an additional packed dimension is not permitted, or an integer_vector_type.&#160;<a class="footnote-backref" href="#fnref:footnote_15" rev="footnote" title="Jump back to footnote 15 in the text">&#8617;</a></p>
@@ -4719,7 +4719,7 @@ The IEEE Standards publication(s) ("Document") is approved by the IEEE Standards
 <p>(21) dpi_function_proto return types are restricted to small values, per 35.5.5.&#160;<a class="footnote-backref" href="#fnref:footnote_21" rev="footnote" title="Jump back to footnote 21 in the text">&#8617;</a></p>
 </li>
 <li id="fn:footnote_22">
-<p>(22) Formals of dpi_function_proto and dpi_task_proto cannot use pass-by-reference mode, and class types cannot be passed at all; see 35.5.6 for a description of allowed types for DPI formal arguments.&#160;<a class="footnote-backref" href="#fnref:footnote_22" rev="footnote" title="Jump back to footnote 22 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:footnote_22" rev="footnote" title="Jump back to footnote 22 in the text">&#8617;</a></p>
+<p>(22) Formals of dpi_function_proto and dpi_task_proto cannot use pass-by-reference mode, and class types cannot be passed at all; see 35.5.6 for a description of allowed types for DPI formal arguments.&#160;<a class="footnote-backref" href="#fnref:footnote_22" rev="footnote" title="Jump back to footnote 22 in the text">&#8617;</a></p>
 </li>
 <li id="fn:footnote_23">
 <p>(23) In a tf_port_item, it shall be illegal to omit the explicit port_identifier except within a function_prototype or task_prototype.&#160;<a class="footnote-backref" href="#fnref:footnote_23" rev="footnote" title="Jump back to footnote 23 in the text">&#8617;</a></p>
@@ -4728,7 +4728,7 @@ The IEEE Standards publication(s) ("Document") is approved by the IEEE Standards
 <p>(24) The matches operator shall have higher precedence than the &amp;&amp; and || operators.&#160;<a class="footnote-backref" href="#fnref:footnote_24" rev="footnote" title="Jump back to footnote 24 in the text">&#8617;</a></p>
 </li>
 <li id="fn:footnote_25">
-<p>(25) It shall be legal to use the $ primary in an open_value_range or covergroup_value_range of the form [expression :$] or [$:expression].&#160;<a class="footnote-backref" href="#fnref:footnote_25" rev="footnote" title="Jump back to footnote 25 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:footnote_25" rev="footnote" title="Jump back to footnote 25 in the text">&#8617;</a></p>
+<p>(25) It shall be legal to use the $ primary in an open_value_range or covergroup_value_range of the form [expression :$] or [$:expression].&#160;<a class="footnote-backref" href="#fnref:footnote_25" rev="footnote" title="Jump back to footnote 25 in the text">&#8617;</a></p>
 </li>
 <li id="fn:footnote_26">
 <p>(26) The result of this expression shall be assignment compatible with an integral type.&#160;<a class="footnote-backref" href="#fnref:footnote_26" rev="footnote" title="Jump back to footnote 26 in the text">&#8617;</a></p>
@@ -4740,7 +4740,7 @@ The IEEE Standards publication(s) ("Document") is approved by the IEEE Standards
 <p>(28) This expression is restricted as described in 19.5.&#160;<a class="footnote-backref" href="#fnref:footnote_28" rev="footnote" title="Jump back to footnote 28 in the text">&#8617;</a></p>
 </li>
 <li id="fn:footnote_29">
-<p>(29) The .* token shall appear at most once in a list of port connections.&#160;<a class="footnote-backref" href="#fnref:footnote_29" rev="footnote" title="Jump back to footnote 29 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:footnote_29" rev="footnote" title="Jump back to footnote 29 in the text">&#8617;</a></p>
+<p>(29) The .* token shall appear at most once in a list of port connections.&#160;<a class="footnote-backref" href="#fnref:footnote_29" rev="footnote" title="Jump back to footnote 29 in the text">&#8617;</a></p>
 </li>
 <li id="fn:footnote_30">
 <p>(30) Within an interface_declaration, it shall only be legal for a generate_item to be an interface_or_generate_item. Within a module_declaration, except when also within an interface_declaration, it shall only be legal for a generate_item to be a module_or_generate_item. Within a checker_declaration, it shall only be legal for a generate_item to be a checker_or_generate_item.&#160;<a class="footnote-backref" href="#fnref:footnote_30" rev="footnote" title="Jump back to footnote 30 in the text">&#8617;</a></p>
@@ -4752,7 +4752,7 @@ The IEEE Standards publication(s) ("Document") is approved by the IEEE Standards
 <p>(32) In a constant_assignment_pattern_expression, all member expressions shall be constant expressions.&#160;<a class="footnote-backref" href="#fnref:footnote_32" rev="footnote" title="Jump back to footnote 32 in the text">&#8617;</a></p>
 </li>
 <li id="fn:footnote_33">
-<p>(33) Embedded spaces are illegal.&#160;<a class="footnote-backref" href="#fnref:footnote_33" rev="footnote" title="Jump back to footnote 33 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:footnote_33" rev="footnote" title="Jump back to footnote 33 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:footnote_33" rev="footnote" title="Jump back to footnote 33 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:footnote_33" rev="footnote" title="Jump back to footnote 33 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:footnote_33" rev="footnote" title="Jump back to footnote 33 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:footnote_33" rev="footnote" title="Jump back to footnote 33 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:footnote_33" rev="footnote" title="Jump back to footnote 33 in the text">&#8617;</a><a class="footnote-backref" href="#fnref8:footnote_33" rev="footnote" title="Jump back to footnote 33 in the text">&#8617;</a><a class="footnote-backref" href="#fnref9:footnote_33" rev="footnote" title="Jump back to footnote 33 in the text">&#8617;</a><a class="footnote-backref" href="#fnref10:footnote_33" rev="footnote" title="Jump back to footnote 33 in the text">&#8617;</a><a class="footnote-backref" href="#fnref11:footnote_33" rev="footnote" title="Jump back to footnote 33 in the text">&#8617;</a><a class="footnote-backref" href="#fnref12:footnote_33" rev="footnote" title="Jump back to footnote 33 in the text">&#8617;</a></p>
+<p>(33) Embedded spaces are illegal.&#160;<a class="footnote-backref" href="#fnref:footnote_33" rev="footnote" title="Jump back to footnote 33 in the text">&#8617;</a></p>
 </li>
 <li id="fn:footnote_34">
 <p>(34) In a multiple_concatenation, it shall be illegal for the multiplier not to be a constant_expression unless the type of the concatenation is string.&#160;<a class="footnote-backref" href="#fnref:footnote_34" rev="footnote" title="Jump back to footnote 34 in the text">&#8617;</a></p>
@@ -4776,13 +4776,13 @@ The IEEE Standards publication(s) ("Document") is approved by the IEEE Standards
 <p>(40) It shall be legal to use a type_reference constant_primary as the casting_type in a static cast. It shall be illegal for a type_reference constant_primary to be used with any operators except the equality/inequality and case equality/ inequality operators.&#160;<a class="footnote-backref" href="#fnref:footnote_40" rev="footnote" title="Jump back to footnote 40 in the text">&#8617;</a></p>
 </li>
 <li id="fn:footnote_41">
-<p>(41) implicit_class_handle shall only appear within the scope of a class_declaration or out-of-block method declaration.&#160;<a class="footnote-backref" href="#fnref:footnote_41" rev="footnote" title="Jump back to footnote 41 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:footnote_41" rev="footnote" title="Jump back to footnote 41 in the text">&#8617;</a></p>
+<p>(41) implicit_class_handle shall only appear within the scope of a class_declaration or out-of-block method declaration.&#160;<a class="footnote-backref" href="#fnref:footnote_41" rev="footnote" title="Jump back to footnote 41 in the text">&#8617;</a></p>
 </li>
 <li id="fn:footnote_42">
 <p>(42) The $ primary shall be legal only in a select for a queue variable, in an open_value_range, covergroup_value_range, integer_covergroup_expression, or as an entire sequence_actual_arg or property_actual_arg.&#160;<a class="footnote-backref" href="#fnref:footnote_42" rev="footnote" title="Jump back to footnote 42 in the text">&#8617;</a></p>
 </li>
 <li id="fn:footnote_43">
-<p>(43) The local:: qualifier shall only appear within the scope of an inline constraint block.&#160;<a class="footnote-backref" href="#fnref:footnote_43" rev="footnote" title="Jump back to footnote 43 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:footnote_43" rev="footnote" title="Jump back to footnote 43 in the text">&#8617;</a></p>
+<p>(43) The local:: qualifier shall only appear within the scope of an inline constraint block.&#160;<a class="footnote-backref" href="#fnref:footnote_43" rev="footnote" title="Jump back to footnote 43 in the text">&#8617;</a></p>
 </li>
 <li id="fn:footnote_44">
 <p>(44) The unsigned number or fixed-point number in time_literal shall not be followed by white_space.&#160;<a class="footnote-backref" href="#fnref:footnote_44" rev="footnote" title="Jump back to footnote 44 in the text">&#8617;</a></p>
@@ -4800,7 +4800,7 @@ The IEEE Standards publication(s) ("Document") is approved by the IEEE Standards
 <p>(48) The apostrophe ( ' ) in unbased_unsized_literal shall not be followed by white_space.&#160;<a class="footnote-backref" href="#fnref:footnote_48" rev="footnote" title="Jump back to footnote 48 in the text">&#8617;</a></p>
 </li>
 <li id="fn:footnote_49">
-<p>(49) A simple_identifier or c_identifier shall start with an alpha or underscore ( _ ) character, shall have at least one character, and shall not have any spaces.&#160;<a class="footnote-backref" href="#fnref:footnote_49" rev="footnote" title="Jump back to footnote 49 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:footnote_49" rev="footnote" title="Jump back to footnote 49 in the text">&#8617;</a></p>
+<p>(49) A simple_identifier or c_identifier shall start with an alpha or underscore ( _ ) character, shall have at least one character, and shall not have any spaces.&#160;<a class="footnote-backref" href="#fnref:footnote_49" rev="footnote" title="Jump back to footnote 49 in the text">&#8617;</a></p>
 </li>
 <li id="fn:footnote_50">
 <p>(50) The $ character in a system_tf_identifier shall not be followed by white_space. A system_tf_identifier shall not be escaped.&#160;<a class="footnote-backref" href="#fnref:footnote_50" rev="footnote" title="Jump back to footnote 50 in the text">&#8617;</a></p>

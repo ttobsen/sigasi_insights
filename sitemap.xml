@@ -41,7 +41,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/BlockDiagram/</loc>
+        <loc>http://insights.sigasi.com/tag/blockdiagram/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -136,7 +136,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/EDA/</loc>
+        <loc>http://insights.sigasi.com/tag/eda/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -146,17 +146,17 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/GHDL/</loc>
+        <loc>http://insights.sigasi.com/tag/ghdl/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/PoC/</loc>
+        <loc>http://insights.sigasi.com/tag/poc/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/ALINT/</loc>
+        <loc>http://insights.sigasi.com/tag/alint/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -181,7 +181,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/releasenotes/sigasi-2.30.html</loc>
+        <loc>http://insights.sigasi.com/opinion/verification/index.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -201,7 +201,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/Sigasi Studio/</loc>
+        <loc>http://insights.sigasi.com/tag/sigasi studio/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -216,17 +216,12 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/opinion/benefits-extracting-documentation-software-code.html</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
         <loc>http://insights.sigasi.com/screencasts/constants_in_hover.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/Design creation/</loc>
+        <loc>http://insights.sigasi.com/tag/design creation/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -251,6 +246,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>http://insights.sigasi.com/tech/scope-vhdl-use-clauses-and-vhdl-library-clauses.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>http://insights.sigasi.com/screencasts/datatype-checks-while-you-type.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -266,7 +266,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/screencasts/testbench.html</loc>
+        <loc>http://insights.sigasi.com/tech/how-do-you-organize-source-code-your-hardware-project.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -286,7 +286,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/releasenotes/sigasi-3.01.html</loc>
+        <loc>http://insights.sigasi.com/opinion/jan/the-biggest-eda-innovations-that-did-not-happen.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -341,7 +341,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/manual/talkback.html</loc>
+        <loc>http://insights.sigasi.com/releasenotes/sigasi-2.21.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -351,7 +351,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/VHDL-2017/</loc>
+        <loc>http://insights.sigasi.com/tag/vhdl-2017/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -372,6 +372,11 @@
     </url>
     <url>
         <loc>http://insights.sigasi.com/tech/index.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>http://insights.sigasi.com/releasenotes/sigasi-2.25.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -406,12 +411,12 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/opinion/jan/pitfalls-for-circuit-girls.html</loc>
+        <loc>http://insights.sigasi.com/opinion/emacs/index.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/StateMachine/</loc>
+        <loc>http://insights.sigasi.com/tag/statemachine/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -476,7 +481,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/Quick Fix/</loc>
+        <loc>http://insights.sigasi.com/tag/quick fix/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -491,7 +496,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/Screencast/</loc>
+        <loc>http://insights.sigasi.com/tag/screencast/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -526,7 +531,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/VHDL IDE/</loc>
+        <loc>http://insights.sigasi.com/tag/vhdl ide/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -536,7 +541,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/FPGA/</loc>
+        <loc>http://insights.sigasi.com/tag/fpga/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -551,12 +556,12 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/VITAL/</loc>
+        <loc>http://insights.sigasi.com/tag/vital/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/Quartus/</loc>
+        <loc>http://insights.sigasi.com/tag/quartus/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -586,7 +591,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/UVM/</loc>
+        <loc>http://insights.sigasi.com/tag/uvm/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -606,12 +611,12 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tech/eclipse-vhdl-plugin-vs-sigasi-application.html</loc>
+        <loc>http://insights.sigasi.com/tech/systemverilog-project-demo.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tech/using-custom-templates-sigasi-2.html</loc>
+        <loc>http://insights.sigasi.com/opinion/vhdl-why-oh-why-must-it-be-way.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -641,7 +646,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/VHDL compiler/</loc>
+        <loc>http://insights.sigasi.com/tag/vhdl compiler/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -651,17 +656,17 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/VHDL synthesis/</loc>
+        <loc>http://insights.sigasi.com/tag/vhdl synthesis/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/BeMicro/</loc>
+        <loc>http://insights.sigasi.com/tag/bemicro/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/</loc>
+        <loc>http://insights.sigasi.com/opinion/emacs/emacs-syntax-errors.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -681,7 +686,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/Hierarchy/</loc>
+        <loc>http://insights.sigasi.com/tag/hierarchy/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -701,7 +706,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tech/one-design-one-folder.html</loc>
+        <loc>http://insights.sigasi.com/manual/tools.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -711,7 +716,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/EDA2.0/</loc>
+        <loc>http://insights.sigasi.com/tag/eda2.0/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -721,12 +726,12 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tech/systemverilog-uvm-demo.html</loc>
+        <loc>http://insights.sigasi.com/screencasts/verilog-smart-indent.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/Guest Blog/</loc>
+        <loc>http://insights.sigasi.com/tag/guest blog/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -751,7 +756,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tech/announcing-sigasi-3.html</loc>
+        <loc>http://insights.sigasi.com/opinion/verification/verification-overview.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -766,7 +771,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/Thesis/</loc>
+        <loc>http://insights.sigasi.com/tag/thesis/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -776,7 +781,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/Wavedrom/</loc>
+        <loc>http://insights.sigasi.com/tech/swerv_riscv.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -796,12 +801,12 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/SystemVerilog/</loc>
+        <loc>http://insights.sigasi.com/tag/systemverilog/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/PSL/</loc>
+        <loc>http://insights.sigasi.com/tag/psl/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -826,7 +831,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tech/systemverilog-project-demo.html</loc>
+        <loc>http://insights.sigasi.com/tech/eclipse-vhdl-plugin-vs-sigasi-application.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -851,7 +856,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/releasenotes/sigasi-2.21.html</loc>
+        <loc>http://insights.sigasi.com/manual/talkback.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -867,11 +872,6 @@
     </url>
     <url>
         <loc>http://insights.sigasi.com/releasenotes/sigasi-2.24.html</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>http://insights.sigasi.com/releasenotes/sigasi-2.25.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -901,7 +901,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/VHDL Parser/</loc>
+        <loc>http://insights.sigasi.com/tag/vhdl parser/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -931,7 +931,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/VI/</loc>
+        <loc>http://insights.sigasi.com/tag/vi/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -941,7 +941,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/Register mapping/</loc>
+        <loc>http://insights.sigasi.com/tag/register mapping/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1026,7 +1026,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/VHDL-2008/</loc>
+        <loc>http://insights.sigasi.com/tag/vhdl-2008/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1037,11 +1037,6 @@
     </url>
     <url>
         <loc>http://insights.sigasi.com/tag/source code/</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>http://insights.sigasi.com/opinion/urubu.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1066,7 +1061,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/opinion/verification/index.html</loc>
+        <loc>http://insights.sigasi.com/releasenotes/sigasi-2.30.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1131,7 +1126,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/VHDL/</loc>
+        <loc>http://insights.sigasi.com/tag/vhdl/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1146,7 +1141,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/recovering VHDL parser/</loc>
+        <loc>http://insights.sigasi.com/tag/recovering vhdl parser/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1181,7 +1176,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/Emacs/</loc>
+        <loc>http://insights.sigasi.com/tag/emacs/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1191,7 +1186,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/UVVM/</loc>
+        <loc>http://insights.sigasi.com/tag/uvvm/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1206,7 +1201,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/Altera/</loc>
+        <loc>http://insights.sigasi.com/tag/altera/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1217,6 +1212,11 @@
     </url>
     <url>
         <loc>http://insights.sigasi.com/opinion/emacs/emacs-code-coloring-outdated.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>http://insights.sigasi.com/opinion/vetsmod-get-better-feedback-your-vhdl-code-snippets.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1266,7 +1266,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/opinion/emacs/emacs-syntax-errors.html</loc>
+        <loc>http://insights.sigasi.com/tag/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1311,17 +1311,22 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>http://insights.sigasi.com/tech/using-custom-templates-sigasi-2.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>http://insights.sigasi.com/opinion/are-vhdl-post-93-versions-used-real-life.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/Basic instruction/</loc>
+        <loc>http://insights.sigasi.com/tag/basic instruction/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tech/how-do-you-organize-source-code-your-hardware-project.html</loc>
+        <loc>http://insights.sigasi.com/screencasts/testbench.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1331,7 +1336,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/VHDL Libraries/</loc>
+        <loc>http://insights.sigasi.com/tag/vhdl libraries/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1341,7 +1346,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/opinion/emacs/index.html</loc>
+        <loc>http://insights.sigasi.com/opinion/jan/pitfalls-for-circuit-girls.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1371,7 +1376,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/VHDL code/</loc>
+        <loc>http://insights.sigasi.com/tag/vhdl code/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1391,7 +1396,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/Code generation/</loc>
+        <loc>http://insights.sigasi.com/tag/code generation/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1401,7 +1406,12 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/Synopsys/</loc>
+        <loc>http://insights.sigasi.com/tag/synopsys/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>http://insights.sigasi.com/opinion/urubu.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1486,7 +1496,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/screencasts/integration_with_xilinx_isim_hdl_simulator.html</loc>
+        <loc>http://insights.sigasi.com/opinion/jan/index.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1551,7 +1561,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/Preprocessor/</loc>
+        <loc>http://insights.sigasi.com/tag/preprocessor/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1571,7 +1581,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/screencasts/navigate-fsm.html</loc>
+        <loc>http://insights.sigasi.com/tech/installing-quartus-64-bit-linux-system.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1592,11 +1602,6 @@
     </url>
     <url>
         <loc>http://insights.sigasi.com/opinion/why-ghdl-currently-not-good-enough.html</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>http://insights.sigasi.com/opinion/vhdl-why-oh-why-must-it-be-way.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1646,7 +1651,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/manual/editions.html</loc>
+        <loc>http://insights.sigasi.com/opinion/jan/wasting-real-time-zero-time.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1661,7 +1666,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/IEEE/</loc>
+        <loc>http://insights.sigasi.com/tag/ieee/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1681,7 +1686,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/VIM/</loc>
+        <loc>http://insights.sigasi.com/tag/vim/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1716,12 +1721,12 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/opinion/jan/the-biggest-eda-innovations-that-did-not-happen.html</loc>
+        <loc>http://insights.sigasi.com/releasenotes/sigasi-3.01.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/Vivado/</loc>
+        <loc>http://insights.sigasi.com/tag/vivado/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1791,12 +1796,12 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/opinion/jan/index.html</loc>
+        <loc>http://insights.sigasi.com/screencasts/integration_with_xilinx_isim_hdl_simulator.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/gVIM/</loc>
+        <loc>http://insights.sigasi.com/tag/gvim/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1811,7 +1816,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/Mac/</loc>
+        <loc>http://insights.sigasi.com/tag/mac/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1846,7 +1851,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/manual/tools.html</loc>
+        <loc>http://insights.sigasi.com/tech/one-design-one-folder.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1866,7 +1871,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/screencasts/verilog-smart-indent.html</loc>
+        <loc>http://insights.sigasi.com/tech/systemverilog-uvm-demo.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1891,12 +1896,12 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tech/to-downto-ranges-vhdl.html</loc>
+        <loc>http://insights.sigasi.com/tech/opening-vhdl-files-sigasi-using-quartus.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/IP Core Library/</loc>
+        <loc>http://insights.sigasi.com/tag/ip core library/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -1971,7 +1976,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tech/installing-quartus-64-bit-linux-system.html</loc>
+        <loc>http://insights.sigasi.com/screencasts/navigate-fsm.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -2026,12 +2031,12 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tech/opening-vhdl-files-sigasi-using-quartus.html</loc>
+        <loc>http://insights.sigasi.com/tech/to-downto-ranges-vhdl.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/JanHDL/</loc>
+        <loc>http://insights.sigasi.com/tag/janhdl/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -2066,7 +2071,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/Verification/</loc>
+        <loc>http://insights.sigasi.com/tag/verification/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -2096,7 +2101,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/VHDL editor/</loc>
+        <loc>http://insights.sigasi.com/tag/vhdl editor/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -2106,7 +2111,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/Xilinx/</loc>
+        <loc>http://insights.sigasi.com/tag/xilinx/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -2131,17 +2136,12 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/opinion/vetsmod-get-better-feedback-your-vhdl-code-snippets.html</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
         <loc>http://insights.sigasi.com/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/opinion/jan/wasting-real-time-zero-time.html</loc>
+        <loc>http://insights.sigasi.com/manual/editions.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -2151,7 +2151,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/VHDL syntax/</loc>
+        <loc>http://insights.sigasi.com/tag/vhdl syntax/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -2171,7 +2171,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/Sigasi/</loc>
+        <loc>http://insights.sigasi.com/tag/sigasi/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -2186,7 +2186,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/opinion/verification/verification-overview.html</loc>
+        <loc>http://insights.sigasi.com/tech/announcing-sigasi-3.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -2206,7 +2206,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/Xtext/</loc>
+        <loc>http://insights.sigasi.com/tag/xtext/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -2236,7 +2236,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/opinion/jan/eda-20.html</loc>
+        <loc>http://insights.sigasi.com/opinion/opening-our-documentation.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -2251,12 +2251,12 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/VHDL simulator/</loc>
+        <loc>http://insights.sigasi.com/tag/vhdl simulator/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/GitHub/</loc>
+        <loc>http://insights.sigasi.com/tag/github/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -2306,7 +2306,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/Installation/</loc>
+        <loc>http://insights.sigasi.com/tag/installation/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -2356,7 +2356,12 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/Aldec/</loc>
+        <loc>http://insights.sigasi.com/tag/aldec/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>http://insights.sigasi.com/tag/wavedrom/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -2386,12 +2391,12 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/VUnit/</loc>
+        <loc>http://insights.sigasi.com/tag/vunit/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/IDE/</loc>
+        <loc>http://insights.sigasi.com/tag/ide/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -2416,7 +2421,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tag/Python/</loc>
+        <loc>http://insights.sigasi.com/tag/python/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -2431,12 +2436,12 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tutorial.html</loc>
+        <loc>http://insights.sigasi.com/empty.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/tech/scope-vhdl-use-clauses-and-vhdl-library-clauses.html</loc>
+        <loc>http://insights.sigasi.com/opinion/benefits-extracting-documentation-software-code.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -2461,7 +2466,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/opinion/opening-our-documentation.html</loc>
+        <loc>http://insights.sigasi.com/opinion/jan/eda-20.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -2501,7 +2506,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/empty.html</loc>
+        <loc>http://insights.sigasi.com/tutorial.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -2516,7 +2521,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/screencasts/inspecting_constants_and_generics.html</loc>
+        <loc>http://insights.sigasi.com/releasenotes/sigasi-4.01.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -2531,7 +2536,7 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://insights.sigasi.com/releasenotes/sigasi-4.01.html</loc>
+        <loc>http://insights.sigasi.com/screencasts/inspecting_constants_and_generics.html</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>

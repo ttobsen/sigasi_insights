@@ -3,7 +3,7 @@
 	<!--// OPEN HEAD //-->
 	<head>
 		<!--// SITE TITLE //-->
-		<title>How to set the update description of RCP product updates - Sigasi</title>
+		<title>Exploring an Open Source Risc-V core - Sigasi</title>
 		<!--// SITE META //-->
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -24,14 +24,14 @@
 			}
 		</script>
 		<!-- This site is optimized with the Yoast SEO plugin v3.0.6 - https://yoast.com/wordpress/plugins/seo/ -->
-		<link rel="canonical" href="http://insights.sigasi.com//tech/how-set-update-description-rcp-product-updates.html" />
+		<link rel="canonical" href="http://insights.sigasi.com//tech/swerv_riscv.html" />
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="How to set the update description of RCP product updates - Sigasi" />
-		<meta property="og:url" content="http://insights.sigasi.com//tech/how-set-update-description-rcp-product-updates.html" />
+		<meta property="og:title" content="Exploring an Open Source Risc-V core - Sigasi" />
+		<meta property="og:url" content="http://insights.sigasi.com//tech/swerv_riscv.html" />
 		<meta property="og:site_name" content="Sigasi" />
 		<meta name="twitter:card" content="summary"/>
-		<meta name="twitter:title" content="How to set the update description of RCP product updates - Sigasi"/>
+		<meta name="twitter:title" content="Exploring an Open Source Risc-V core - Sigasi"/>
 		<!-- / Yoast SEO plugin. -->
 		<link rel='stylesheet' id='wgs-css'  href='/css/wgs.css?ver=4.3.2' type='text/css' media='all' />
 		<link rel='stylesheet' id='ls-google-fonts-css'  href='https://fonts.googleapis.com/css?family=Lato:100,300,regular,700,900%7COpen+Sans:300%7CIndie+Flower:regular%7COswald:300,regular,700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
@@ -1721,7 +1721,7 @@ Insights<span style="color:#f47920">.</span>							</p>
 <div class="page-heading page-heading-hidden clearfix">
 	<div class="container">
 		<div class="heading-text">
-			<h1 class="entry-title" >How to set the update description of RCP product updates</h1>
+			<h1 class="entry-title" >Exploring an Open Source Risc-V core</h1>
 		</div>
 	</div>
 </div>
@@ -1953,20 +1953,15 @@ Insights<span style="color:#f47920">.</span>							</p>
 <div class="container">
   <div class="page-header">
     <div>
-        <h1 style="margin-bottom: 0px;margin-top: 30px;">How to set the update description of RCP product updates</h1>
+        <h1 style="margin-bottom: 0px;margin-top: 30px;">Exploring an Open Source Risc-V core</h1>
     </div>
 
     <div style="margin: 10px 0 10px">
         <span>
-            Posted on 2011&#8209;11&#8209;08
+            Posted on 2019&#8209;01&#8209;28
             by Hendrik Eeckhaut
         </span>
         </br>
-        <span>
-        Tagged as: 
-              <a href="/tag/eclipse/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">eclipse</a>
-              <a href="/tag/planeteclipse/" class="btn btn-default btn-xs" style="margin-bottom: 2px;">planeteclipse</a>
-        </span>
 
     </div>
   </div>
@@ -1975,17 +1970,39 @@ Insights<span style="color:#f47920">.</span>							</p>
 
     <div class="content">
       <div class="col-md-9" role="main">
-        <p>Thanks to Ian Bull on <a href="http://www.eclipsecon.org">Eclipse Con Europe</a> last week, I finally found out how to set the update description for an RCP product update. This was a tiny annoyance that has been itching since the first release of Sigasi. For the Eclipse plugin version of Sigasi, this never was a problem. The feature description is shown in the update dialog. But for the standalone version (RCP), there was always an empty description...</p>
-<p>So on my way home, I delved into it again and finally solved this issue.</p>
-<p><img alt="Product description in update dialog" src="images/update_dialog.png" /></p>
-<p>Ian told the original plan was to add a field to the Product Configuration Editor, but nobody ever came around to implement it. But the good news is that you can easily set the description via a  <a href="http://wiki.eclipse.org/Equinox/p2/Customizing_Metadata">p2 advice file</a>. This file (<code>p2.inf</code>) can be added next to the product definition and is used to tweak p2 operations. Note that if you build with <a href="http://www.eclipse.org/tycho">Maven Tycho</a>, this <code>p2.inf</code> needs to be prefixed with the product configuration file name. In our case the product configuration file is <code>sigasi.product</code>, so the p2 advice file must be named <code>sigasi.p2.inf</code> (<a href="http://wiki.eclipse.org/Tycho/Packaging_Types#eclipse-repository">more details</a>).</p>
-<p>To set the product update description add following lines to your p2 advise file:</p>
-<div class="codehilite"><pre><span></span><span class="na">properties.0.name</span> <span class="o">=</span> <span class="s">org.eclipse.equinox.p2.description</span>
-<span class="na">properties.0.value</span> <span class="o">=</span> <span class="s">Sigasi Standalone version update\nVisit http://www.sigasi.com/sigasi-updates for more information.</span>
+        <p>This weekend I read that Western Digital published the (System)Verilog sources of their Open Source Risc-V core on GitHub. Of course I wanted to try how easy it was to import this project in Sigasi Studio and test how well Sigasi Studio handles this code base.</p>
+<p>I started by cloning the project (<a href="https://github.com/westerndigitalcorporation/swerv_eh1/commit/11065d5bb7e8b7aa20cf7d8cb22b767b153f513c">commit 11065d5</a> at the time of writing) from
+<a href="https://github.com/westerndigitalcorporation/swerv_eh1">https://github.com/westerndigitalcorporation/swerv_eh1</a>.</p>
+<p>After importing the sources as SystemVerilog project in Sigasi Studio, the problem dialog lists 1542 errors. This might be challenging.</p>
+<p><img alt="Lots of errors" src="swerv_riscv/errors.png" /></p>
+<p>Opening <code>swerv_wrapper.sv</code>, the first error I see is a missing include file. When I add <code>design/includes</code> to the include path with the quick fix, I see the number of errors increases to 2301. <em>Am I on the right track?</em></p>
+<p><img alt="Fixing include files" src="swerv_riscv/quickfix_include.png" /></p>
+<p>I notice there are still a lot of errors because of undefined macro identifiers. With a quick textual search (<strong>Ctrl-H</strong>), I learn that these are not defined in any of the include files. <em>I should have read the <a href="https://github.com/westerndigitalcorporation/swerv_eh1/blob/11065d5bb7e8b7aa20cf7d8cb22b767b153f513c/README.md">README</a> file first.</em> There are some files that need to be generated:</p>
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> swerv_eh1
+
+<span class="c1">#Install the JSON Perl module</span>
+sudo cpan JSON
+
+<span class="c1">#export RV_ROOT (necessary for generation script)</span>
+<span class="nb">export</span> <span class="nv">RV_ROOT</span><span class="o">=</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>
+
+<span class="c1"># Run generation script</span>
+<span class="nv">$RV_ROOT</span>/configs/swerv.config
 </pre></div>
 
 
-<p>That looks a lot better.</p>
+<p>This generates extra include files in <code>configs/snapshots/default</code> with the missing definitions.
+This new location should be added to the include path.</p>
+<p>Because the generated files are not explicitly included in the (System)Verilog source files, we need to add one of them (<code>common_defines.vh</code>) to the <strong>Initial preprocessor definitions</strong> in the project's properties:</p>
+<p><img alt="Preprocessor definitions" src="swerv_riscv/include_paths.png" /></p>
+<p>Checking the Problems View, I notice there are only 4 errors left. <code>rvjtag_tap.v</code> is using SystemVerilog syntax (e.g. <code>always_comb</code>).
+We can easily fix this by analysing this file as SystemVerilog instead of Verilog 2005: right click the file and select <strong>Properties</strong>. Next on the <strong>(System)Verilog Version</strong> page replace <strong>Verilog</strong> with <strong>SystemVerilog</strong> and close the dialog with <strong>Apply and Close</strong>.</p>
+<p>No errors left!</p>
+<p>Exploring the hierarchy and block diagrams, I notice this core is a low level implementation with lots of bit twiddling. Unfortunately this project contains RTL code only, no test benches. I did spot some SV assertions though.</p>
+<p><img alt="hierarchy view" src="swerv_riscv/hierarchy.png" /></p>
+<p><img alt="Block Diagram" src="swerv_riscv/block_diagram.png" /></p>
+<p>To me, the intensive use of defines, the mix of tabs and spaces, and of comments prove the code was hand coded. I really wonder if all the bit twiddling makes the difference in power consumption and speed.</p>
+<p>It was fun exploring this project in Sigasi Studio. Browsing through the files went really smooth. The Hierarchy, Block Diagram and Dependencies View also helped a lot to get an overview on how the design was structured. I am really curious how this RISC-V project will evolve.</p>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -2016,8 +2033,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
   </div>
 
   <ul class="pager">
-    <li class="previous"><a href="/tech/how-can-i-use-the-ieee-vital-libraries-with-sigasi-pro.html">&larr; How can I use the IEEE Vital libraries with Sigasi Pro?</a></li>
-    <li class="next"><a href="/tech/vhdl-case-statements-can-do-without-others.html">VHDL case statements can do without the "others" &rarr;</a></li>
+    <li class="next"><a href="/tech/preview.html">Sigasi Studio Preview (4.3) &rarr;</a></li>
   </ul>
 
 </div>
